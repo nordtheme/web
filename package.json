@@ -6,9 +6,9 @@
   "author": {
     "name": "Arctic Ice Studio",
     "email": "development@arcticicestudio.com",
-    "url": "http://arcticicestudio.com"
+    "url": "https://arcticicestudio.com"
   },
-  "homepage": "http://nordtheme.com",
+  "homepage": "https://nordtheme.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arcticicestudio/nord-docs.git"
