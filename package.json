@@ -1,0 +1,22 @@
+{
+  "name": "nord-docs",
+  "title": "Nord Docs",
+  "version": "0.0.0",
+  "description": "The official Nord website and documentation",
+  "author": {
+    "name": "Arctic Ice Studio",
+    "email": "development@arcticicestudio.com",
+    "url": "http://arcticicestudio.com"
+  },
+  "homepage": "http://nordtheme.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcticicestudio/nord-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arcticicestudio/nord-docs/issues"
+  },
+  "private": true,
+  "license": "MIT",
+  "keywords": ["nord", "website", "documentation", "react", "arcticicestudio"]
+}
