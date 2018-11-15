@@ -1,3 +1,10 @@
+# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
+#
+# Project:    Nord Docs
+# Repository: https://github.com/arcticicestudio/nord-docs
+# License:    MIT
+
 # Configuration for the GitHub feature to automatically request reviews from the code owners when a pull request
 # changes any owned files.
 #
