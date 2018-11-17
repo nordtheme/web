@@ -16,8 +16,14 @@
  */
 
 module.exports = {
+  extends: "arcticicestudio",
   env: {
     browser: true,
     node: true
+  },
+  rules: {
+    "no-confusing-arrow": "off",
+    /* Suppress errors when importing development dependencies */
+    "import/no-extraneous-dependencies": ["error", { devDependencies: ["./.gatsby/**/*.js"] }]
   }
 };
