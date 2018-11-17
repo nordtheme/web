@@ -15,11 +15,21 @@
  * @see https://github.com/tc39/proposal-optional-chaining
  */
 
+const { resolve } = require("path");
+
 module.exports = {
   extends: "arcticicestudio",
   env: {
     browser: true,
     node: true
+  },
+  settings: {
+    "import/resolver": {
+      node: {
+        /* Resolve Webpack alias imports */
+        paths: [resolve(__dirname, "src"), resolve(__dirname, "src/components")]
+      }
+    }
   },
   rules: {
     "no-confusing-arrow": "off",
