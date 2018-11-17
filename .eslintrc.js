@@ -19,6 +19,7 @@ const { resolve } = require("path");
 
 module.exports = {
   extends: "arcticicestudio",
+  parser: "babel-eslint",
   env: {
     browser: true,
     node: true
