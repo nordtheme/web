@@ -20,9 +20,18 @@
   "license": "MIT",
   "keywords": ["nord", "website", "documentation", "react", "arcticicestudio"],
   "scripts": {
-    "lint:md": "remark --no-stdout . \"content/**/*.md\""
+    "format:fix": "eslint --fix --ext .js,.jsx .",
+    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:md": "remark --no-stdout ."
   },
   "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "eslint": "5.9.0",
+    "eslint-config-arcticicestudio": ">=0.4.0 <1.0.0",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.11.1",
     "remark-cli": "6.0.1",
     "remark-preset-lint-arcticicestudio": ">=0.2.0 <1.0.0"
   }
