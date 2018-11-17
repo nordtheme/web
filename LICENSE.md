@@ -1,7 +1,11 @@
 MIT License (MIT)
 
+<!-- lint disable no-auto-link-without-protocol -->
+
 Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com> (https://arcticicestudio.com)  
-Copyright (C) 2018-present Sven Greb <development@svengreb.de> (https://svengreb.de)
+Copyright (C) 2018-present Sven Greb <code@svengreb.de> (https://svengreb.de)
+
+<!-- lint enable no-auto-link-without-protocol -->
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
