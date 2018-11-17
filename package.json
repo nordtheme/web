@@ -18,9 +18,16 @@
   },
   "private": true,
   "license": "MIT",
-  "keywords": ["nord", "website", "documentation", "react", "arcticicestudio"],
+  "keywords": [
+    "nord",
+    "website",
+    "documentation",
+    "react",
+    "arcticicestudio"
+  ],
   "scripts": {
     "format:fix": "eslint --fix --ext .js,.jsx .",
+    "format:pretty": "prettier --write \"./**/*.{js,json,jsx,md,mdx,yml}\"",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark --no-stdout ."
   },
@@ -31,7 +38,9 @@
     "eslint-plugin-babel": "5.3.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-prettier": "3.0.0",
     "eslint-plugin-react": "7.11.1",
+    "prettier": "1.15.2",
     "remark-cli": "6.0.1",
     "remark-preset-lint-arcticicestudio": ">=0.2.0 <1.0.0"
   }

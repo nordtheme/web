@@ -25,7 +25,7 @@ Contributions related to a [Nord port project][gh-profile-repo-search] belong to
 
 ### Bug Reports
 
-A bug is a *demonstrable problem* that is caused by the code in the repository. This section guides you through submitting a bug report for Nord. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior and find related reports.
+A bug is a _demonstrable problem_ that is caused by the code in the repository. This section guides you through submitting a bug report for Nord. Following these guidelines helps maintainers and the community understand your report, reproduce the behavior and find related reports.
 
 **Do NOT report security vulnerabilities in public issues!** Please only contact one of the core team members or project owner in a responsible manner by [email][gh-mailmap] or via support@nordtheme.com. We will assess the issue as soon as possible on a best-effort basis and will give you an estimate for when we have a fix and release available for an eventual public disclosure.
 
@@ -100,7 +100,7 @@ Nord uses the [gitflow][gitflow] branching model. The repository consists of two
 - `master` - The source code of `HEAD` always reflects a tagged release version.
 - `develop` - The default branch where the source code of `HEAD` always reflects a state with the latest development state.
 
-**All [pull requests](#pull-requests) for the limited development lifecycle *story*/*topic* branches must be send against the `develop` branch**.
+**All [pull requests](#pull-requests) for the limited development lifecycle _story_/_topic_ branches must be send against the `develop` branch**.
 
 <!-- lint disable no-heading-punctuation -->
 
@@ -138,7 +138,7 @@ Nord adheres to the [Arctic Ice Studio Markdown Style Guide][gh-styleguide-markd
 
 ### Git Commit Messages
 
-A well-crafted Git commit message is the best way to communicate *context* about a change to the maintainers. The code will tell what changed, but only the commit message can properly tell why. Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to reducing it as much as possible.
+A well-crafted Git commit message is the best way to communicate _context_ about a change to the maintainers. The code will tell what changed, but only the commit message can properly tell why. Re-establishing the context of a piece of code is wasteful. We can't avoid it completely, so our efforts should go to reducing it as much as possible.
 
 Nord adheres to the [Arctic Ice Studio Git Style Guide][gh-styleguide-git].
 
@@ -156,7 +156,7 @@ When [reporting a bug](#bug-reports), sometimes even when [suggesting enhancemen
 - …Complete – Provide all parts needed to reproduce the behavior
 - …Verifiable – Test the code you're about to provide to make sure it reproduces the behavior
 
-A MCVE is a common practice like on [Stack Overflow][stackoverflow-mcve] and sometimes it is also called [SSCCE][sscce], a *Short, Self Contained, Correct (Compilable), Example*.
+A MCVE is a common practice like on [Stack Overflow][stackoverflow-mcve] and sometimes it is also called [SSCCE][sscce], a _Short, Self Contained, Correct (Compilable), Example_.
 
 The recommended way for GitHub based projects is to create it as [Gist][gh-gist] or new repository, but of course you can [attach it to issues and pull requests as files][ghh-attach-file], use any free code paste- or file hosting service or paste the code in [Markdown code blocks][ghh-markdown-code-blocks] into the issue.
 
@@ -177,7 +177,7 @@ Make sure all resources and code necessary to reproduce the behavior is included
 
 ### Verifiable
 
-To entirely understand your enhancement or bug report, developers will need to verify that it *exists*:
+To entirely understand your enhancement or bug report, developers will need to verify that it _exists_:
 
 - **Follow the contribution guidelines regarding the description and details**. Without information developers won't be able to understand and reproduce the behavior.
 - **Eliminate any issues that aren't relevant**. Ensure that there are no compile-time errors.
