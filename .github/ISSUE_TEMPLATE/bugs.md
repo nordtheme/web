@@ -1,7 +1,6 @@
 ---
 name: Bug Report
 about: Report a bug that is caused by the code in this repository
-
 ---
 
 <!-- Click on the "Preview" tab to render the instructions in a more readable format -->
@@ -14,9 +13,9 @@ This section and the instructions in the sections below are only part of this is
 
 Please do your best to provide as much information as possible and use a clear and descriptive title for your bug report to help maintainers and the community understand and reproduce the behavior, find related reports and to resolve the ticket faster.
 
-* **Ensure the bug has not already been reported by using the [GitHub Issues search](https://github.com/arcticicestudio/nord-docs/issues)** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one. If you find a closed issue that seems to be similar to this one, include a link to the original issue in the [metadata head](#metadata-head) section of this issue.
-* **Ensure your contribution belongs to the correct [main or port project repository](https://github.com/arcticicestudio?&tab=repositories&q=nord).**
-* **Ensure the bug is reproducible and has not already been fixed** — use the [latest version](https://github.com/arcticicestudio/nord-docs/releases/latest) and [`develop`](https://github.com/arcticicestudio/nord-docs/tree/develop) branch.
+- **Ensure the bug has not already been reported by using the [GitHub Issues search](https://github.com/arcticicestudio/nord-docs/issues)** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one. If you find a closed issue that seems to be similar to this one, include a link to the original issue in the [metadata head](#metadata-head) section of this issue.
+- **Ensure your contribution belongs to the correct [main or port project repository](https://github.com/arcticicestudio?&tab=repositories&q=nord).**
+- **Ensure the bug is reproducible and has not already been fixed** — use the [latest version](https://github.com/arcticicestudio/nord-docs/releases/latest) and [`develop`](https://github.com/arcticicestudio/nord-docs/tree/develop) branch.
 
 ## Metadata Head
 
@@ -30,9 +29,9 @@ Describe the bug as in many relevant details as possible with a clear and concis
 
 ### Steps to Reproduce
 
-1. Step One
-2. Step Two
-3. ...
+1.  Step One
+2.  Step Two
+3.  ...
 
 ### Expected Behavior
 
@@ -52,13 +51,13 @@ The recommended way is to upload it as [Gist](https://gist.github.com) or new re
 
 ## Environment and Versions
 
-* What is the version of Nord or the port project you are running?
-* What is the name and the version of your OS?
-  * Have you tried to reproduce it on different OS environments and if yes is the behavior the same for all?
-* If the problem is related to the runtime of the project (e.g. [Node.js](https://nodejs.org), [Go](https://golang.org) or [Java](https://java.com)) please provide the version you're running.
-  * Are you using any additional CLI arguments to run the project?
-* What is the version of the build tool (e.g. [npm](https://www.npmjs.com), [dep](https://golang.github.io/dep) or [Gradle](https://gradle.org)) you are running?
-  * Are you using any additional CLI arguments to start the build tool task/script other than defined by the project?
+- What is the version of Nord or the port project you are running?
+- What is the name and the version of your OS?
+  - Have you tried to reproduce it on different OS environments and if yes is the behavior the same for all?
+- If the problem is related to the runtime of the project (e.g. [Node.js](https://nodejs.org), [Go](https://golang.org) or [Java](https://java.com)) please provide the version you're running.
+  - Are you using any additional CLI arguments to run the project?
+- What is the version of the build tool (e.g. [npm](https://www.npmjs.com), [dep](https://golang.github.io/dep) or [Gradle](https://gradle.org)) you are running?
+  - Are you using any additional CLI arguments to start the build tool task/script other than defined by the project?
 
 If you've installed [Node.js](https://nodejs.org) on your system you can run [envinfo](https://www.npmjs.com/package/envinfo) via [npx](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) which will print environment information that help the the community to better reproduce the bug.
 

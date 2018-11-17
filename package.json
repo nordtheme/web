@@ -18,7 +18,13 @@
   },
   "private": true,
   "license": "MIT",
-  "keywords": ["nord", "website", "documentation", "react", "arcticicestudio"],
+  "keywords": [
+    "nord",
+    "website",
+    "documentation",
+    "react",
+    "arcticicestudio"
+  ],
   "scripts": {
     "format:fix": "eslint --fix --ext .js,.jsx .",
     "format:pretty": "prettier --write \"./**/*.{js,json,jsx,md,mdx,yml}\"",

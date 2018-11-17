@@ -1,7 +1,6 @@
 ---
 name: Enhancement Suggestions
 about: Submit an enhancement suggestion for new features or minor improvements to existing functionality
-
 ---
 
 <!-- Click on the "Preview" tab to render the instructions in a more readable format -->
@@ -14,9 +13,9 @@ This section and the instructions in the sections below are only part of this is
 
 Please do your best to provide as much information as possible and use a clear and descriptive title for your enhancement suggestion to help maintainers and the community understand and reproduce the behavior, find related reports and to resolve the ticket faster.
 
-* **Ensure the enhancement has not already been reported by using the [GitHub Issues search](https://github.com/arcticicestudio/nord-docs/issues)** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one. If you find a closed issue that seems to be similar to this one, include a link to the original issue in the [metadata head](#metadata-head) section of this issue.
-* **Ensure your contribution belongs to the correct [main or port project repository](https://github.com/arcticicestudio?&tab=repositories&q=nord).**
-* **Check if the enhancement has already been implemented** — use the [latest version](https://github.com/arcticicestudio/nord-docs/releases/latest) and [`develop`](https://github.com/arcticicestudio/nord-docs/tree/develop) branch to ensure that the feature or improvement has not already been added.
+- **Ensure the enhancement has not already been reported by using the [GitHub Issues search](https://github.com/arcticicestudio/nord-docs/issues)** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one. If you find a closed issue that seems to be similar to this one, include a link to the original issue in the [metadata head](#metadata-head) section of this issue.
+- **Ensure your contribution belongs to the correct [main or port project repository](https://github.com/arcticicestudio?&tab=repositories&q=nord).**
+- **Check if the enhancement has already been implemented** — use the [latest version](https://github.com/arcticicestudio/nord-docs/releases/latest) and [`develop`](https://github.com/arcticicestudio/nord-docs/tree/develop) branch to ensure that the feature or improvement has not already been added.
 
 ## Metadata Head
 
