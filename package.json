@@ -21,6 +21,7 @@
   "keywords": ["nord", "website", "documentation", "react", "arcticicestudio"],
   "scripts": {
     "format:fix": "eslint --fix --ext .js,.jsx .",
+    "format:pretty": "prettier --write \"./**/*.{js,json,jsx,md,mdx,yml}\"",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark --no-stdout ."
   },
