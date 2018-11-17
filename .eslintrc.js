@@ -19,6 +19,7 @@ const { resolve } = require("path");
 
 module.exports = {
   extends: "arcticicestudio",
+  plugins: ["babel"],
   parser: "babel-eslint",
   env: {
     browser: true,
@@ -35,6 +36,16 @@ module.exports = {
   rules: {
     "no-confusing-arrow": "off",
     /* Suppress errors when importing development dependencies */
-    "import/no-extraneous-dependencies": ["error", { devDependencies: ["./.gatsby/**/*.js"] }]
+    "import/no-extraneous-dependencies": ["error", { devDependencies: ["./.gatsby/**/*.js"] }],
+    /*
+     * Enable support for experimental features:
+     *
+     * - `babel/camelcase` - doesn't complain about optional chaining (`let foo = bar?.a_b;`).
+     * - `babel/no-unused-expressions` - doesn't fail when using `do` expressions or optional chaining (`a?.b()`).
+     */
+    "babel/camelcase": "error",
+    camelcase: "off",
+    "babel/no-unused-expressions": "error",
+    "no-unused-expressions": "off"
   }
 };
