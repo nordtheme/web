@@ -19,7 +19,7 @@ const { resolve } = require("path");
 
 module.exports = {
   extends: "arcticicestudio",
-  plugins: ["babel"],
+  plugins: ["babel", "prettier"],
   parser: "babel-eslint",
   env: {
     browser: true,
@@ -34,6 +34,7 @@ module.exports = {
     }
   },
   rules: {
+    "prettier/prettier": "error",
     "no-confusing-arrow": "off",
     /* Suppress errors when importing development dependencies */
     "import/no-extraneous-dependencies": ["error", { devDependencies: ["./.gatsby/**/*.js"] }],
