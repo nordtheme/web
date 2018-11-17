@@ -11,3 +11,7 @@ content/*
 **/node_modules/*
 public/*
 static/*
+!.gatsby
+!.eslintrc.js
+!.huskyrc.js
+!.remarkrc.js
