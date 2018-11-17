@@ -18,5 +18,9 @@
   },
   "private": true,
   "license": "MIT",
-  "keywords": ["nord", "website", "documentation", "react", "arcticicestudio"]
+  "keywords": ["nord", "website", "documentation", "react", "arcticicestudio"],
+  "devDependencies": {
+    "remark-cli": "6.0.1",
+    "remark-preset-lint-arcticicestudio": ">=0.2.0 <1.0.0"
+  }
 }
