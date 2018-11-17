@@ -20,7 +20,9 @@
   "license": "MIT",
   "keywords": ["nord", "website", "documentation", "react", "arcticicestudio"],
   "scripts": {
-    "lint:md": "remark --no-stdout . \"content/**/*.md\""
+    "format:fix": "eslint --fix --ext .js,.jsx .",
+    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:md": "remark --no-stdout ."
   },
   "devDependencies": {
     "babel-eslint": "10.0.1",
