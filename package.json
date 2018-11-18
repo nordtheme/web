@@ -54,6 +54,7 @@
     "gatsby-plugin-react-helmet": "3.0.2",
     "gatsby-plugin-remove-trailing-slashes": "2.0.5",
     "gatsby-source-filesystem": "2.0.8",
-    "gatsby-transformer-yaml": "2.1.5"
+    "gatsby-transformer-yaml": "2.1.5",
+    "nord": ">=0.2.1 <1.0.0"
   }
 }
