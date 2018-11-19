@@ -27,6 +27,8 @@
  * @since 0.1.0
  */
 const onCreateBabelConfig = ({ actions }) => {
+  const r = m => require.resolve(m);
+
   /*
    * Allows to use the "ES Class Fields & Static Properties" proposal to transforms static class properties as well as
    * properties declared with the experimental property initializer syntax.
@@ -78,6 +80,30 @@ const onCreateBabelConfig = ({ actions }) => {
     name: "@babel/plugin-proposal-optional-chaining",
     options: {
       loose: false
+    }
+  });
+
+  /*
+   * Removes unnecessary React `propTypes` from production builds.
+   *
+   * @see https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types
+   */
+  actions.setBabelOptions({
+    options: {},
+    config: {
+      env: {
+        production: {
+          plugins: [
+            [
+              r("babel-plugin-transform-react-remove-prop-types"),
+              {
+                removeImport: true,
+                ignoreFilenames: ["node_modules"]
+              }
+            ]
+          ]
+        }
+      }
     }
   });
 };
