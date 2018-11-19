@@ -17,20 +17,37 @@
  */
 
 const { resolve: resolvePath } = require("path");
+/* eslint-disable import/no-extraneous-dependencies */
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+/* eslint-enable import/no-extraneous-dependencies */
 
 const r = m => resolvePath(__dirname, m);
+
+/**
+ * Configuration for the `webpack-bundle-analyzer` plugin.
+ *
+ * @type {object}
+ * @since 0.1.0
+ */
+const bundleAnalyzerPluginConfig = {
+  analyzerMode: "static",
+  generateStatsFile: true,
+  openAnalyzer: false,
+  reportFilename: r("../build/reports/webpack-bundle-analyzer/index.html"),
+  statsFilename: r("../build/reports/webpack-bundle-analyzer/stats.json")
+};
 
 /**
  * Implementation of the Gatsby Node `onCreateWebpackConfig` API.
  *
  * @method onCreateWebpackConfig
  * @param  {object} actions Collection of functions provided by Gatsby used to manipulate the state of the build
- * process.
+ * @param  {string} stage The name of the current Gatsby build process stage.
  * @see https://gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
  * @see https://gatsbyjs.org/docs/actions/#setWebpackConfig
  * @since 0.1.0
  */
-const onCreateWebpackConfig = ({ actions }) => {
+const onCreateWebpackConfig = ({ actions, stage }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -50,6 +67,15 @@ const onCreateWebpackConfig = ({ actions }) => {
       }
     }
   });
+
+  switch (stage) {
+    case "build-html":
+    case "build-javascript":
+      actions.setWebpackConfig({
+        plugins: [new BundleAnalyzerPlugin(bundleAnalyzerPluginConfig)]
+      });
+      break;
+  }
 };
 
 module.exports = onCreateWebpackConfig;
