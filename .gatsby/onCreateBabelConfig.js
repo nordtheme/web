@@ -12,7 +12,6 @@
  * Allows to let plugins extend/mutate the project's Babel configuration.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://gatsbyjs.org/docs/node-apis/#onCreateBabelConfig
  * @see https://babeljs.io
  * @since 0.1.0
  */
@@ -21,7 +20,8 @@
  * Implementation of the Gatsby Node `onCreateBabelConfig` API.
  *
  * @method onCreateBabelConfig
- * @param  {object} actions Collection functions provided by Gatsby used to manipulate the state of the build process.
+ * @param  {object} actions Collection of functions provided by Gatsby used to manipulate the state of the build
+ * process.
  * @see https://gatsbyjs.org/docs/node-apis/#onCreateBabelConfig
  * @see https://gatsbyjs.org/docs/actions
  * @since 0.1.0

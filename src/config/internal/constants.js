@@ -17,7 +17,7 @@
 /**
  *  The absolute path of the content base directory starting from the project root.
  *
- * @constant {String}
+ * @constant {string}
  * @since 0.1.0
  */
 const BASE_DIR_CONTENT = "content";
@@ -65,9 +65,9 @@ const BASE_DIR_PAGES = `${BASE_DIR_SRC}/pages`;
 /**
  * The internal type for MDX nodes.
  *
- * @constant {String}
- * @since 0.1.0
+ * @constant {string}
  * @see https://github.com/mdx-js/mdx
+ * @since 0.1.0
  */
 const NODE_TYPE_MDX = "Mdx";
 
