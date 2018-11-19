@@ -18,7 +18,9 @@
 
 const { resolve: resolvePath } = require("path");
 /* eslint-disable import/no-extraneous-dependencies */
+const webpack = require("webpack");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+const GitRevisionPlugin = require("git-revision-webpack-plugin");
 /* eslint-enable import/no-extraneous-dependencies */
 
 const r = m => resolvePath(__dirname, m);
@@ -27,6 +29,7 @@ const r = m => resolvePath(__dirname, m);
  * Configuration for the `webpack-bundle-analyzer` plugin.
  *
  * @type {object}
+ * @see https://github.com/webpack-contrib/webpack-bundle-analyzer
  * @since 0.1.0
  */
 const bundleAnalyzerPluginConfig = {
@@ -35,6 +38,32 @@ const bundleAnalyzerPluginConfig = {
   openAnalyzer: false,
   reportFilename: r("../build/reports/webpack-bundle-analyzer/index.html"),
   statsFilename: r("../build/reports/webpack-bundle-analyzer/stats.json")
+};
+
+/**
+ * Configuration for the `git-revision-webpack-plugin` plugin.
+ *
+ * @type {object}
+ * @see https://github.com/pirelenito/git-revision-webpack-plugin
+ * @since 0.1.0
+ */
+const gitRevisionPluginConfig = {
+  branch: true
+};
+
+const gitRevisionPlugin = new GitRevisionPlugin(gitRevisionPluginConfig);
+
+/**
+ * Configuration for `webpack.DefinePlugin`.
+ *
+ * @type {object}
+ * @see https://webpack.js.org/plugins/define-plugin
+ * @since 0.1.0
+ */
+const definePluginConfig = {
+  "process.env.NORD_DOCS_GIT_VERSION": JSON.stringify(gitRevisionPlugin.version()),
+  "process.env.NORD_DOCS_GIT_COMMITHASH": JSON.stringify(gitRevisionPlugin.commithash()),
+  "process.env.NORD_DOCS_GIT_BRANCH": JSON.stringify(gitRevisionPlugin.branch())
 };
 
 /**
@@ -72,7 +101,16 @@ const onCreateWebpackConfig = ({ actions, stage }) => {
     case "build-html":
     case "build-javascript":
       actions.setWebpackConfig({
-        plugins: [new BundleAnalyzerPlugin(bundleAnalyzerPluginConfig)]
+        plugins: [
+          new BundleAnalyzerPlugin(bundleAnalyzerPluginConfig),
+          new GitRevisionPlugin(),
+          new webpack.DefinePlugin(definePluginConfig)
+        ]
+      });
+      break;
+    case "develop":
+      actions.setWebpackConfig({
+        plugins: [new webpack.DefinePlugin(definePluginConfig)]
       });
       break;
   }
