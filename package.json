@@ -75,6 +75,7 @@
     "gatsby-transformer-yaml": "2.1.5",
     "nord": ">=0.2.1 <1.0.0",
     "react": "16.6.3",
-    "react-dom": "16.6.3"
+    "react-dom": "16.6.3",
+    "react-helmet": "5.2.0"
   }
 }
