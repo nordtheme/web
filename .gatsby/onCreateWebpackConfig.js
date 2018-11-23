@@ -88,7 +88,7 @@ const onCreateWebpackConfig = ({ actions, stage }) => {
         layouts: r("../src/components/layouts/"),
         molecules: r("../src/components/molecules/"),
         organisms: r("../src/components/organisms/"),
-        pages: r("../src/components/pages/"),
+        pages: r("../src/pages/"),
         stores: r("../src/stores/"),
         styles: r("../src/styles/"),
         templates: r("../src/components/templates/"),
