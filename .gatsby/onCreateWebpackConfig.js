@@ -17,11 +17,10 @@
  */
 
 const { resolve: resolvePath } = require("path");
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 const webpack = require("webpack");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const GitRevisionPlugin = require("git-revision-webpack-plugin");
-/* eslint-enable import/no-extraneous-dependencies */
 
 const { BASE_DIR_BUILD_REPORTS } = require("../src/config/internal/constants");
 

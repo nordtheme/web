@@ -17,6 +17,11 @@
  */
 
 const { resolve } = require("path");
+/* eslint-disable import/no-extraneous-dependencies */
+const {
+  rules: { "import/no-extraneous-dependencies": noExtraneousDependencies }
+} = require("eslint-config-arcticicestudio-base/rules/import/helpful-warnings");
+/* eslint-enable import/no-extraneous-dependencies */
 
 module.exports = {
   extends: "arcticicestudio",
@@ -38,8 +43,13 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "no-confusing-arrow": "off",
-    /* Suppress errors when importing development dependencies */
-    "import/no-extraneous-dependencies": ["error", { devDependencies: ["./.gatsby/**/*.js"] }],
+    /* Also suppress errors when importing development dependencies in project specific scripts. */
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: noExtraneousDependencies[1].devDependencies.concat(["**/.gatsby/**"])
+      }
+    ],
     /*
      * Enable support for experimental features:
      *
