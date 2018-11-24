@@ -38,7 +38,10 @@
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark --no-stdout . \".github/**/*.md\"",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@babel/core": "7.1.6",
