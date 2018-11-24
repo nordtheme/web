@@ -6,21 +6,18 @@
  * Repository: https://github.com/arcticicestudio/nord-docs
  * License:    MIT
  */
-import React, { Fragment } from "react";
-
-import Root from "containers/core/Root";
 
 /**
- * The landing page component representing the root/index of the site.
- *
+ * @file The Babel configuration for Jest.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
+ * @see https://jestjs.io/docs/en/getting-started#using-babel
+ * @see https://www.gatsbyjs.org/docs/testing
  * @since 0.1.0
  */
-const Landing = () => (
-  <Root>
-    <Fragment />
-  </Root>
-);
 
-export default Landing;
+const jestBabelConfig = {
+  presets: ["babel-preset-gatsby"]
+};
+
+module.exports = require("babel-jest").createTransformer(jestBabelConfig);

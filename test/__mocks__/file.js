@@ -6,21 +6,13 @@
  * Repository: https://github.com/arcticicestudio/nord-docs
  * License:    MIT
  */
-import React, { Fragment } from "react";
-
-import Root from "containers/core/Root";
 
 /**
- * The landing page component representing the root/index of the site.
- *
+ * @file A mock for various asset file imports like stylesheets, media objects like images/videos and fonts.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
+ * @see https://jestjs.io/docs/en/manual-mocks
  * @since 0.1.0
  */
-const Landing = () => (
-  <Root>
-    <Fragment />
-  </Root>
-);
 
-export default Landing;
+module.exports = "test-file-mock-stub";

@@ -27,15 +27,14 @@
  * @since 0.1.0
  */
 const onCreateBabelConfig = ({ actions }) => {
-  const r = m => require.resolve(m);
+  const isProductionMode = () => process.env.NODE_ENV === "production";
 
   /*
    * Allows to use the "ES Class Fields & Static Properties" proposal to transforms static class properties as well as
    * properties declared with the experimental property initializer syntax.
    *
-   * References:
-   * - https://github.com/tc39/proposal-class-fields
-   * - https://babeljs.io/docs/en/babel-plugin-proposal-class-properties
+   * @see https://github.com/tc39/proposal-class-fields
+   * @see https://babeljs.io/docs/en/babel-plugin-proposal-class-properties
    */
   actions.setBabelPlugin({
     name: "@babel/plugin-proposal-class-properties",
@@ -47,9 +46,8 @@ const onCreateBabelConfig = ({ actions }) => {
   /*
    * Allows to use the experimental `export { default} from "mod"` proposal syntax.
    *
-   * References:
-   * - https://github.com/tc39/proposal-export-default-from
-   * - https://babeljs.io/docs/en/babel-plugin-proposal-export-default-from
+   * @see https://github.com/tc39/proposal-export-default-from
+   * @see https://babeljs.io/docs/en/babel-plugin-proposal-export-default-from
    */
   actions.setBabelPlugin({ name: "@babel/plugin-proposal-export-default-from" });
 
@@ -57,9 +55,8 @@ const onCreateBabelConfig = ({ actions }) => {
    * Allows to use the "Nullish Coalescing" proposal trhough the experimental `??` operator to combine with the
    * "Optional Chaining" proposal operator.
    *
-   * References:
-   * - https://github.com/tc39/proposal-nullish-coalescing
-   * - https://babeljs.io/docs/en/babel-plugin-proposal-nullish-coalescing-operator
+   * @see https://github.com/tc39/proposal-nullish-coalescing
+   * @see https://babeljs.io/docs/en/babel-plugin-proposal-nullish-coalescing-operator
    */
   actions.setBabelPlugin({
     name: "@babel/plugin-proposal-nullish-coalescing-operator",
@@ -72,9 +69,8 @@ const onCreateBabelConfig = ({ actions }) => {
    * Allows to use the "Optional Chaining" proposal through the experimental `?.` operator in combination with the
    * "Nullish Coalescing" proposal operator.
    *
-   * References:
-   * - https://github.com/tc39/proposal-optional-chaining
-   * - https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining
+   * @see https://github.com/tc39/proposal-optional-chaining
+   * @see https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining
    */
   actions.setBabelPlugin({
     name: "@babel/plugin-proposal-optional-chaining",
@@ -83,29 +79,39 @@ const onCreateBabelConfig = ({ actions }) => {
     }
   });
 
-  /*
-   * Removes unnecessary React `propTypes` from production builds.
-   *
-   * @see https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types
-   */
-  actions.setBabelOptions({
-    options: {},
-    config: {
-      env: {
-        production: {
-          plugins: [
-            [
-              r("babel-plugin-transform-react-remove-prop-types"),
-              {
-                removeImport: true,
-                ignoreFilenames: ["node_modules"]
-              }
-            ]
-          ]
-        }
+  if (isProductionMode) {
+    /*
+     * Removes unnecessary React `propTypes` from production builds to reduce bundle sizes and save bandwidth.
+     *
+     * @see https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types
+     */
+    actions.setBabelPlugin({
+      name: "babel-plugin-transform-react-remove-prop-types",
+      options: {
+        removeImport: true,
+        ignoreFilenames: ["node_modules"]
       }
-    }
-  });
+    });
+
+    /*
+     * Removes unnecessary React properties from production builds to reduce bundle sizes and save bandwidth.
+     *
+     * @see https://github.com/oliviertassinari/babel-plugin-react-remove-properties
+     */
+    actions.setBabelPlugin({
+      name: "babel-plugin-react-remove-properties",
+      options: {
+        properties: [
+          /*
+           * Remove all test IDs applied for `react-testing-library` to query elements in tests.
+           *
+           * @see https://github.com/kentcdodds/react-testing-library#getbytestid
+           */
+          "data-testid"
+        ]
+      }
+    });
+  }
 };
 
 module.exports = onCreateBabelConfig;

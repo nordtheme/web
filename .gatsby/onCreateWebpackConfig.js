@@ -23,6 +23,8 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const GitRevisionPlugin = require("git-revision-webpack-plugin");
 /* eslint-enable import/no-extraneous-dependencies */
 
+const { BASE_DIR_BUILD_REPORTS } = require("../src/config/internal/constants");
+
 const r = m => resolvePath(__dirname, m);
 
 /**
@@ -36,8 +38,8 @@ const bundleAnalyzerPluginConfig = {
   analyzerMode: "static",
   generateStatsFile: true,
   openAnalyzer: false,
-  reportFilename: r("../build/reports/webpack-bundle-analyzer/index.html"),
-  statsFilename: r("../build/reports/webpack-bundle-analyzer/stats.json")
+  reportFilename: r(`../${BASE_DIR_BUILD_REPORTS}/webpack-bundle-analyzer/index.html`),
+  statsFilename: r(`../${BASE_DIR_BUILD_REPORTS}/webpack-bundle-analyzer/stats.json`)
 };
 
 /**

@@ -15,7 +15,7 @@
  */
 
 /**
- *  The absolute path of the content base directory starting from the project root.
+ *  The relative path of the content base directory starting from the project root.
  *
  * @constant {string}
  * @since 0.1.0
@@ -23,7 +23,7 @@
 const BASE_DIR_CONTENT = "content";
 
 /**
- *  The absolute path of the sources base directory starting from the project root.
+ *  The relative path of the sources base directory starting from the project root.
  *
  * @constant {string}
  * @since 0.1.0
@@ -31,7 +31,7 @@ const BASE_DIR_CONTENT = "content";
 const BASE_DIR_SRC = "src";
 
 /**
- *  The absolute path of the assets base directory starting from the project root.
+ *  The relative path of the assets base directory starting from the project root.
  *
  * @constant {string}
  * @since 0.1.0
@@ -39,7 +39,7 @@ const BASE_DIR_SRC = "src";
 const BASE_DIR_ASSETS = `${BASE_DIR_SRC}/assets`;
 
 /**
- *  The absolute path of the assets directory for images starting from the project root.
+ *  The relative path of the assets directory for images starting from the project root.
  *
  * @constant {string}
  * @since 0.1.0
@@ -47,7 +47,31 @@ const BASE_DIR_ASSETS = `${BASE_DIR_SRC}/assets`;
 const BASE_DIR_ASSETS_IMAGES = `${BASE_DIR_ASSETS}/images`;
 
 /**
- *  The absolute path of the config base directory starting from the project root.
+ *  The relative path of the build base directory starting from the project root.
+ *
+ * @constant {string}
+ * @since 0.1.0
+ */
+const BASE_DIR_BUILD = "build";
+
+/**
+ *  The relative path of the build base directory for reports starting from the project root.
+ *
+ * @constant {string}
+ * @since 0.1.0
+ */
+const BASE_DIR_BUILD_REPORTS = `${BASE_DIR_BUILD}/reports`;
+
+/**
+ *  The relative path of the build base directory for coverage reports starting from the project root.
+ *
+ * @constant {string}
+ * @since 0.1.0
+ */
+const BASE_DIR_BUILD_REPORTS_COVERAGE = `${BASE_DIR_BUILD_REPORTS}/coverage`;
+
+/**
+ *  The relative path of the config base directory starting from the project root.
  *
  * @constant {string}
  * @since 0.1.0
@@ -55,7 +79,7 @@ const BASE_DIR_ASSETS_IMAGES = `${BASE_DIR_ASSETS}/images`;
 const BASE_DIR_CONFIG = `${BASE_DIR_SRC}/config`;
 
 /**
- *  The absolute path of the pages base directory starting from the project root.
+ *  The relative path of the pages base directory starting from the project root.
  *
  * @constant {string}
  * @since 0.1.0
@@ -82,6 +106,9 @@ const REGEX_BLOG_POST_DATE = /([0-9]+)\/([0-9]+)\/([0-9]+)\/(.+)/;
 module.exports = {
   BASE_DIR_ASSETS,
   BASE_DIR_ASSETS_IMAGES,
+  BASE_DIR_BUILD,
+  BASE_DIR_BUILD_REPORTS,
+  BASE_DIR_BUILD_REPORTS_COVERAGE,
   BASE_DIR_CONFIG,
   BASE_DIR_CONTENT,
   BASE_DIR_PAGES,

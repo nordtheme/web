@@ -13,6 +13,7 @@
  * @author Sven Greb <development@svengreb.de>
  * @see https://github.com/babel/eslint-plugin-babel#rules
  * @see https://github.com/tc39/proposal-optional-chaining
+ * @see https://eslint.org/docs/user-guide/configuring#specifying-environments
  */
 
 const { resolve } = require("path");
@@ -23,6 +24,7 @@ module.exports = {
   parser: "babel-eslint",
   env: {
     browser: true,
+    jest: true,
     node: true
   },
   settings: {
