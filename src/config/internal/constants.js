@@ -71,6 +71,14 @@ const BASE_DIR_BUILD_REPORTS = `${BASE_DIR_BUILD}/reports`;
 const BASE_DIR_BUILD_REPORTS_COVERAGE = `${BASE_DIR_BUILD_REPORTS}/coverage`;
 
 /**
+ *  The relative path of the build base directory for JUnit reports starting from the project root.
+ *
+ * @constant {string}
+ * @since 0.1.0
+ */
+const BASE_DIR_BUILD_REPORTS_JUNIT = `${BASE_DIR_BUILD_REPORTS}/junit`;
+
+/**
  *  The relative path of the config base directory starting from the project root.
  *
  * @constant {string}
@@ -109,6 +117,7 @@ module.exports = {
   BASE_DIR_BUILD,
   BASE_DIR_BUILD_REPORTS,
   BASE_DIR_BUILD_REPORTS_COVERAGE,
+  BASE_DIR_BUILD_REPORTS_JUNIT,
   BASE_DIR_CONFIG,
   BASE_DIR_CONTENT,
   BASE_DIR_PAGES,

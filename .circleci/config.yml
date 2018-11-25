@@ -31,6 +31,8 @@ commands:
           path: ./public
       - store_artifacts:
           path: ./node_modules.tgz
+      - store_test_results:
+          path: ./build/reports/junit
       - codecov/upload:
           file: ./build/reports/coverage/coverage-final.json
           flags: unit
@@ -79,8 +81,8 @@ commands:
           name: Lint
           command: npm run lint
       - run:
-          name: Run tests with coverage
-          command: npm run test:cov
+          name: Run tests with coverage in CI mode
+          command: npm run test:ci
 
 jobs:
   nodejs-v8:
@@ -115,6 +117,9 @@ workflows:
   version: 2.1
   build-multi-version:
     jobs:
-      - nodejs-v8
-      - nodejs-v10
-      - nodejs-latest
+      - nodejs-v8:
+          context: nord-docs-ctx
+      - nodejs-v10:
+          context: nord-docs-ctx
+      - nodejs-latest:
+          context: nord-docs-ctx
