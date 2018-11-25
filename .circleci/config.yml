@@ -1,0 +1,125 @@
+# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
+#
+# Project:    Nord Docs
+# Repository: https://github.com/arcticicestudio/nord-docs
+# License:    MIT
+
+# Configuration for Circle CI.
+#
+# References:
+# - https://circleci.com/docs/2.0
+# - https://circleci.com/docs/2.0/circleci-images
+# - https://circleci.com/docs/2.0/contexts
+
+version: 2.1
+
+commands:
+  build:
+    description: "Build a production bundle with Gatsby"
+    steps:
+      - run:
+          name: Build production bundle
+          command: npm run build:gatsby
+  post-process:
+    description: "Post-process the build"
+    steps:
+      - save-npm-cache
+      - store_artifacts:
+          path: ./build/reports
+      - store_artifacts:
+          path: ./public
+      - store_artifacts:
+          path: ./node_modules.tgz
+      - store_test_results:
+          path: ./build/reports/junit
+      - codecov/upload:
+          file: ./build/reports/coverage/coverage-final.json
+          flags: unit
+  pre-process:
+    description: "Pre-process the build"
+    steps:
+      - checkout
+      - print-env-info
+      - restore-npm-cache
+      - run:
+          name: Install dependencies
+          command: npm ci
+  print-env-info:
+    description: "Print build & environment information"
+    steps:
+      - run:
+          name: NPM and NodeJS Version Information
+          command: npm version
+      - run:
+          name: OS Information
+          command: uname -a
+      - run:
+          name: Git and Build Metadata
+          command: |
+            echo $CIRCLE_COMPARE_URL | cut -d/ -f7
+            echo "Git branch: $CIRCLE_BRANCH"
+            echo "Git commit: $CIRCLE_SHA1"
+            echo "Job: $CIRCLE_JOB"
+            echo "Build: $CIRCLE_BUILD_NUM"
+  restore-npm-cache:
+    steps:
+      - restore_cache:
+          keys:
+            - v1-npm-cache--{{ arch }}-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - v1-npm-cache--{{ arch }}-{{ .Branch }}
+            - v1-npm-cache--{{ arch }}
+  save-npm-cache:
+    steps:
+      - save_cache:
+          key: v1-npm-cache--{{ arch }}-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+  test:
+    steps:
+      - run:
+          name: Lint
+          command: npm run lint
+      - run:
+          name: Run tests with coverage in CI mode
+          command: npm run test:ci
+
+jobs:
+  nodejs-v8:
+    docker:
+      - image: node:8
+    steps:
+      - pre-process
+      - test
+      - build
+      - post-process
+  nodejs-v10:
+    docker:
+      - image: node:10
+    steps:
+      - pre-process
+      - test
+      - build
+      - post-process
+  nodejs-latest:
+    docker:
+      - image: node:latest
+    steps:
+      - pre-process
+      - test
+      - build
+      - post-process
+
+orbs:
+  codecov: codecov/codecov@1.0.1
+
+workflows:
+  version: 2.1
+  build-multi-version:
+    jobs:
+      - nodejs-v8:
+          context: nord-docs-ctx
+      - nodejs-v10:
+          context: nord-docs-ctx
+      - nodejs-latest:
+          context: nord-docs-ctx

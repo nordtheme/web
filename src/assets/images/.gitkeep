@@ -1,0 +1,1 @@
+A stub to prevent the "gatsby-source-filesystem" plugin to error on CI builds when this folder doesn't exist.

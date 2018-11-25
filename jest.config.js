@@ -13,10 +13,11 @@
  * @author Sven Greb <development@svengreb.de>
  * @see https://jestjs.io/docs/en/configuration
  * @see https://www.gatsbyjs.org/docs/testing
+ * @see https://circleci.com/docs/2.0/collect-test-data/#jest
  * @since 0.1.0
  */
 
-const { BASE_DIR_BUILD_REPORTS_COVERAGE } = require("./src/config/internal/constants");
+const { BASE_DIR_BUILD_REPORTS_COVERAGE, BASE_DIR_BUILD_REPORTS_JUNIT } = require("./src/config/internal/constants");
 
 module.exports = {
   /*
@@ -69,6 +70,20 @@ module.exports = {
    * specific utils which can then be imported like an aliased module.
    */
   modulePaths: ["<rootDir>/test/__utils__"],
+
+  /*
+   * An array of module names to specify which reporters will be used.
+   */
+  reporters: [
+    "default",
+    [
+      "jest-junit",
+      {
+        outputDirectory: `${BASE_DIR_BUILD_REPORTS_JUNIT}`,
+        outputName: "jest.xml"
+      }
+    ]
+  ],
 
   /*
    * The paths to modules that run some code to configure or set up the testing environment before each test.
