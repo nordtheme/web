@@ -12,4 +12,5 @@
 # +--------+
 # + Assets +
 # +--------+
+*.ai binary
 *.png binary
