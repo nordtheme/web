@@ -12,7 +12,7 @@
  *
  * @type {object}
  * @see https://www.gatsbyjs.org/docs/unit-testing/#setting-up-your-environment
- * @see since 0.1.0
+ * @since 0.1.0
  */
 /* eslint-disable-next-line no-underscore-dangle */
 global.___loader = {
