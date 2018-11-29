@@ -1,14 +1,14 @@
 {
   "name": "nord-docs",
   "title": "Nord Docs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The official Nord website and documentation",
   "author": {
     "name": "Arctic Ice Studio",
     "email": "development@arcticicestudio.com",
-    "url": "http://arcticicestudio.com"
+    "url": "https://arcticicestudio.com"
   },
-  "homepage": "http://nordtheme.com",
+  "homepage": "https://nordtheme.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arcticicestudio/nord-docs.git"
@@ -18,5 +18,79 @@
   },
   "private": true,
   "license": "MIT",
-  "keywords": ["nord", "website", "documentation", "react", "arcticicestudio"]
+  "keywords": [
+    "nord",
+    "website",
+    "documentation",
+    "react",
+    "arcticicestudio"
+  ],
+  "scripts": {
+    "build": "npm-run-all clean build:gatsby",
+    "build:gatsby": "gatsby build",
+    "clean": "del .cache/ build/ public/",
+    "dev": "gatsby develop",
+    "dev:fresh": "npm-run-all clean dev:local",
+    "dev:local": "gatsby develop -H 0.0.0.0",
+    "format": "npm-run-all format:pretty format:fix",
+    "format:fix": "eslint --fix --ext .js,.jsx .",
+    "format:pretty": "prettier --write \"./**/*.{js,json,jsx,md,mdx,yml}\"",
+    "lint": "npm-run-all lint:*",
+    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:md": "remark --no-stdout . \".github/**/*.md\"",
+    "report:js:junit": "eslint --ext .js,.jsx --format junit -o ./build/reports/junit/eslint.xml .",
+    "serve": "gatsby serve",
+    "test": "jest",
+    "test:ci": "jest --ci --coverage",
+    "test:cov": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "7.1.6",
+    "@babel/plugin-proposal-class-properties": "7.1.0",
+    "@babel/plugin-proposal-export-default-from": "7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "7.0.0",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "23.6.0",
+    "babel-plugin-react-remove-properties": "0.2.5",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.20",
+    "babel-preset-gatsby": "0.1.4",
+    "del-cli": "1.1.0",
+    "eslint": "5.9.0",
+    "eslint-config-arcticicestudio": ">=0.4.0 <1.0.0",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-react": "7.11.1",
+    "git-revision-webpack-plugin": "3.0.3",
+    "husky": "1.2.0",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "23.6.0",
+    "jest-dom": "2.1.1",
+    "jest-junit": "5.2.0",
+    "lint-staged": "8.1.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.15.2",
+    "react-testing-library": "5.3.0",
+    "remark-cli": "6.0.1",
+    "remark-preset-lint-arcticicestudio": ">=0.2.0 <1.0.0",
+    "webpack-bundle-analyzer": "3.0.3"
+  },
+  "dependencies": {
+    "gatsby": "2.0.55",
+    "gatsby-plugin-canonical-urls": "2.0.7",
+    "gatsby-plugin-catch-links": "2.0.8",
+    "gatsby-plugin-no-sourcemaps": "2.0.1",
+    "gatsby-plugin-react-helmet": "3.0.2",
+    "gatsby-plugin-remove-trailing-slashes": "2.0.5",
+    "gatsby-source-filesystem": "2.0.9",
+    "gatsby-transformer-yaml": "2.1.5",
+    "nord": ">=0.2.1 <1.0.0",
+    "prop-types": "15.6.2",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-helmet": "5.2.0"
+  }
 }
