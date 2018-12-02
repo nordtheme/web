@@ -11,6 +11,7 @@
  * @file Typefaces and font styles.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
+ * @see https://material.io/design/typography/understanding-typography.html
  * @since 0.2.0
  */
 
@@ -28,9 +29,9 @@
  */
 const typefaces = {
   main: "Rubik",
+  monospace: "Source Code Pro",
   straight: "Inter UI",
-  straightVariable: "Inter UI var",
-  monospace: "Source Code Pro"
+  straightVariable: "Inter UI var"
 };
 
 /**
@@ -43,8 +44,10 @@ const typefaces = {
  * @type {object}
  */
 const sizes = {
+  lineHeight: 1.5,
   msBase: 1,
-  msBaseUnit: "em",
+  msBaseUnit: "rem",
+  msName: "majorSecond",
   msRatio: 1.125,
   root: 16,
   rootUnit: "px",

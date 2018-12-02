@@ -8,18 +8,25 @@
  */
 
 /**
- * @file The global theme.
+ * @file Custom normalizations for browser default CSS styles.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.2.0
  */
 
-import global from "./global";
-import normalize from "./normalize";
-import typography from "./typography";
+import { css } from "styled-components";
 
-const theme = { typography };
+const normalize = css`
+  nav ol,
+  nav ul {
+    /* Don't decorate list items. */
+    list-style: none;
+  }
 
-export { global, normalize, typography };
+  textarea {
+    /* Only allow veritcal resizing to prevent layout shifting. */
+    resize: vertical;
+  }
+`;
 
-export default theme;
+export default normalize;
