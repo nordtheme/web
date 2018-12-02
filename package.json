@@ -87,10 +87,13 @@
     "gatsby-plugin-remove-trailing-slashes": "2.0.5",
     "gatsby-source-filesystem": "2.0.9",
     "gatsby-transformer-yaml": "2.1.5",
+    "inter-ui": "3.0.0",
     "nord": ">=0.2.1 <1.0.0",
     "prop-types": "15.6.2",
     "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-helmet": "5.2.0"
+    "react-helmet": "5.2.0",
+    "typeface-rubik": "0.0.54",
+    "typeface-source-code-pro": "0.0.54"
   }
 }
