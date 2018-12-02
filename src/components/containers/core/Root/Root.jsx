@@ -9,10 +9,10 @@
 
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { createGlobalStyle } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 import modernNormalize from "styled-modern-normalize";
 
-import { global, normalize } from "styles/theme";
+import theme, { global, normalize } from "styles/theme";
 
 /* eslint-disable import/extensions */
 import "inter-ui";
@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
 const Root = ({ children }) => (
   <Fragment>
     <GlobalStyle />
-    <Fragment>{children}</Fragment>
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
   </Fragment>
 );
 
