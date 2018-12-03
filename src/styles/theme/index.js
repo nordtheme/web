@@ -16,16 +16,21 @@
 
 import globals from "./globals";
 import normalize from "./normalize";
+import { themedMode, themedModeVariant } from "./utils";
 import typography from "./typography";
 import { MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST, THEME_KEY_MODE } from "./constants";
 
-const theme = {
+const theme = { typography };
+
+export {
+  globals,
+  normalize,
+  themedMode,
+  themedModeVariant,
   typography,
   MODE_BRIGHT_SNOW_FLURRY,
   MODE_DARK_NIGHT_FROST,
   THEME_KEY_MODE
 };
-
-export { globals, normalize, typography };
 
 export default theme;
