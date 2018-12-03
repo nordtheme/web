@@ -11,13 +11,12 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import modernNormalize from "styled-modern-normalize";
+
 import theme, { globals, normalize } from "styles/theme";
 
-/* eslint-disable import/extensions */
-import "inter-ui";
-import "typeface-rubik";
-import "typeface-source-code-pro";
-/* eslint-enable import/extensions */
+import "inter-ui/inter-ui.css";
+import "typeface-rubik/index.css";
+import "typeface-source-code-pro/index.css";
 
 /**
  * A React component that injects global CSS inline styles in page headers.
