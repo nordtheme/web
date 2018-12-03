@@ -17,8 +17,14 @@
 import globals from "./globals";
 import normalize from "./normalize";
 import typography from "./typography";
+import { MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST, THEME_KEY_MODE } from "./constants";
 
-const theme = { typography };
+const theme = {
+  typography,
+  MODE_BRIGHT_SNOW_FLURRY,
+  MODE_DARK_NIGHT_FROST,
+  THEME_KEY_MODE
+};
 
 export { globals, normalize, typography };
 
