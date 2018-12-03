@@ -31,6 +31,7 @@ module.exports = {
     ...metadataNordDocs
   },
   plugins: [
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-remove-trailing-slashes",
