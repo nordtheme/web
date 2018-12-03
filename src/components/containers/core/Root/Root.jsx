@@ -11,8 +11,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import modernNormalize from "styled-modern-normalize";
-
-import theme, { global, normalize } from "styles/theme";
+import theme, { globals, normalize } from "styles/theme";
 
 /* eslint-disable import/extensions */
 import "inter-ui";
@@ -28,7 +27,7 @@ import "typeface-source-code-pro";
  */
 const GlobalStyle = createGlobalStyle`
   ${modernNormalize};
-  ${global};
+  ${globals};
   ${normalize};
 `;
 

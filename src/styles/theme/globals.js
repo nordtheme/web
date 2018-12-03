@@ -18,7 +18,7 @@ import { css } from "styled-components";
 
 import typography from "./typography";
 
-const global = css`
+const globals = css`
   html {
     font-size: ${typography.sizes.root}px;
   }
@@ -32,4 +32,4 @@ const global = css`
   }
 `;
 
-export default global;
+export default globals;

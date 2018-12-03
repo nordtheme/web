@@ -14,12 +14,12 @@
  * @since 0.2.0
  */
 
-import global from "./global";
+import globals from "./globals";
 import normalize from "./normalize";
 import typography from "./typography";
 
 const theme = { typography };
 
-export { global, normalize, typography };
+export { globals, normalize, typography };
 
 export default theme;
