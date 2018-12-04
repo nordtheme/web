@@ -7,4 +7,7 @@
  * License:    MIT
  */
 
-export { default } from "./Root";
+import Root, { GlobalThemeMode } from "./Root";
+
+export { GlobalThemeMode };
+export default Root;
