@@ -6,6 +6,110 @@
 
 <p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/nord" alt="Nord">Nord</a> website and documentation</p>
 
+<!-- lint disable no-duplicate-headings -->
+
+# 0.2.0
+
+![Release Date: 2018-12-04](https://img.shields.io/badge/Release_Date-2018--12--04-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.2.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/4) [![Milestone](https://img.shields.io/badge/Milestone-0.2.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/2)
+
+This version focused on the [typography][gh-2], the [brand design & styling][gh-51] and _theme modes_ of _Nord Docs_. It includes the globally used [typefaces][gh-54], a React context [provider and consumer component for the available theme modes][gh-57] as well as some initial [global base styles][gh-59].
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48346100-5e762600-e67a-11e8-8f9d-86a633c69043.png" width="60%" /></p>
+
+**Typefaces** — #54 ⇄ #55 (⊶ 81a5b238)
+↠ Integrated globally available open source typefaces like documented in the [“Typograhpy” design concept][gh-2] and implemented the `typography` module to define style properties and configurations. The font size and units are based on the used [modular scale][modularscale-majorsecond] documented in #2.
+
+[Rubik][gf-rubik] — the main stylistic and visualization sans-serif font installed through through the [typeface-rubik][npm-typeface-rubik] package.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332499-28a7cb80-f5ae-11e8-976f-8dc2bbabaf94.png" width="60%"/></p>
+
+[Inter UI][inter-ui] — the sans-serif font for documentations as well as technical and factual content. It is installed through the [inter-ui][npm-inter-ui] package. Note that the font is currently not available through [Google Fonts][gf] yet, but might be added in the future very soon due to its large popularity and perfect implementation.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332633-e9c74500-f5b0-11e8-9690-2f473df739ba.png" width="60%"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332647-298e2c80-f5b1-11e8-8ba1-bbcc0f72c50d.png" width="60%"/> <img src="hhttps://user-images.githubusercontent.com/7836623/49332648-298e2c80-f5b1-11e8-8c75-29cf754d481e.png" width="60%"/> <img src="https://user-images.githubusercontent.com/7836623/49332649-298e2c80-f5b1-11e8-9fc8-a880fa0c78e1.png" width="60%"/></p>
+
+[Source Code Pro][gf-source-code-pro] — the main monospace font for all code elements installed through the [typeface-source-code-pro][npm-typeface-source-code-pro] package.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332718-93f39c80-f5b2-11e8-8be6-13755cb333eb.png" width="40%"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332737-ce5d3980-f5b2-11e8-95bb-5b32855f8322.png" width="60%"/></p>
+
+**Base Style & Theme Setup** — #53 ⇄ #56 (⊶ 85498ca0)
+↠ Implemented the basic style & theme setup like documented in the [“Brand Design & Styling” design concept][gh-51] using the CSS-in-JS library [styled-components][] for component representations. To use uniform global theme definitions and to simplify CSS styling, the [styled-theming][gh-styled-theming] and [polished][] libraries are also integrated next to some useful and required specific Babel & Gatsby plugins.
+
+##### Default Browser Style Normalization
+
+Integrated the great project [modern-normalize][gh-modern-normalize] that normalizes the default styles of browsers for a consistent appearance across different modern browsers. For the best usage with _styled-components_ the [npm-styled-modern-normalize][npm-styled-modern-normalize] project is used. It exports the styles via the `css` API and has been added to the created global styles component mentioned below.
+
+##### CSS Tools
+
+To simplify the CSS styling, the [polished][] package is used that provides a lightweight toolset for writing styles in JavaScript (CSS-in-JS).
+
+##### CSS Base Styles
+
+Global and normalization CSS styles have been implemented using _styled-components_ `css` API. They extend _modern-normalize_ and define, next to the browser normalization, styles of the available global themes like documented in the sections below.
+
+In order to use fonts in _Nord Docs_ style & themes (implemented in #54) the basic properties and values have been added and integrated into this CSS base styles.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48661206-c0fe6600-ea6e-11e8-8142-4c65c82b9927.png" /></p>
+
+##### Global Styles
+
+To inject global styles, _styled-components_ v4 [`createGlobalStyle`][stc-docs-api-cgs] API is used to create a `<GlobalStyle>` component to inject various styles globally.
+
+##### Global Themes
+
+To [provide the global theme][stc-docs-theming], the [`ThemeProvider`][stc-docs-api-thp] component has been added to the _Nord Docs_ [`Root` core container component][gh-36]. The global theme is now passed to the provider.
+
+##### Simplified Theme Usage
+
+To simplify the usage of _styled-theming's_ [`theme()`][gh-stth-api-th] and `theme.variants()` API functions, two utility functions have been implemented:
+
+- `themeMode(modeStyles : object)` — Shorthand function for the `theme` API to define styles based on the global theme mode(s).
+- `themedModeVariant(modeStyles : object, variantPropName : string)` — Shorthand function for the `theme.variants` API to define variant styles based on the global theme mode(s).
+
+##### Available Themes
+
+Initially _Nord Docs_ will be build with the “bright snow flurry” and “dark night frost” _theme modes_. The names have been implemented as constants with values `BRIGHT_SNOW_FLURRY` and `DARK_NIGHT_FROST` that are used with the utility functions mentioned above to define the styles of a component for each available global theme.
+
+##### Plugins
+
+[_styled-components_ great Babel plugin][stc-docs-tool-babel] adds support for server-side rendering, minification of styles, and a nicer debugging experience. It has been integrated via the [corresponding Gatsby's plugin][npm-gatsby-plugin-styled-components].
+
+##### Nord Colors
+
+Since the main [JavaScript implementation of Nord][gh-nord-36] is currently not completed and released yet, the colors and palettes have been provided "manually" via the `nord` and `palettes` modules. As soon as the implementation has been done they will be replaced through imports from the official package.
+
+##### Motion
+
+Some basic configurations for motion related styles like animations have been implemented, inspired by [Material Designs][md] great documentation and guide about [motion speed][md-motion-speed]. This includes values for speed like transition durations for the global theme modes. It'll be used to set the CSS transition for the base background and font color within the `globals` CSS style module.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49328407-a4832300-f570-11e8-8613-21c78267b558.png" width="20%" /></p>
+
+**Theme Mode Context** — #57 ⇄ #58 (⊶ 86edb920)
+↠ Implemented a [`React.Context` provider and consumer][react-docs-context] for the global theme modes. It provides the name of the currently active theme and a function to toggle through available themes.
+
+##### Context Provider & Consumer
+
+Both the context consumer and provider components have been implemented in the [`Root` core container component][gh-36]. The consumer is exported and can then be imported in any component to consume the provided values.
+
+The `Root` component has beene changed from a SFC to a class component to store the currently active state and handle the theme mode toggle logic through a function. It migrated the currently used simple [styled-component theme][stc-docs-theming] (provided through the `<ThemeProvider` component) to the [styled-theming theme][gh-styled-theming] that provides the initially implemented theme (#53).
+
+##### Session Storage
+
+To persist the current active theme mode when changing the route (which unmounts the `Root` component and therefore resets the state), the value is written to the browser's [session storage][mdn-ss]. The storage type has been preferred over the [local storage][mdn-ls] since this would persist the active theme mode even when the user closes the tab, but the desired behavior is to optimize the site for the “bright snow flurry” aura theme mode that is set as default theme.
+
+To simplify the read- and write handling as well as prevent possible errors due to wrong storage keys, two utility functions have also been implemented:
+
+- `readSessionCache(key : string)` — Reads the value of the given key from the session storage (if available).
+- `writeSessionCache(key : string, value : any)` — Writes the given key-value pair to the session storage (if available).
+
+**Theme Global Base Styles** — #59 ⇄ #60 (⊶ 2c545da1)
+↠ Implemented some basic theme styles like font and background colors. They are initially used in the global theme styles implemented in #53. This includes a transition for both attributes (`background-color` and `color`) to ensure a smooth theme mode transition.
+
 # 0.1.0
 
 ![Release Date: 2018-11-29](https://img.shields.io/badge/Release_Date-2018--11--29-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.1.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/3) [![Milestone](https://img.shields.io/badge/Milestone-0.1.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/1)
@@ -286,13 +390,21 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gatsby-docs-api-node]: https://www.gatsbyjs.org/docs/node-apis
 [gatsby-docs-config]: https://gatsbyjs.org/docs/gatsby-config
 [gatsby-docs-testing]: https://www.gatsbyjs.org/docs/testing
+[gf-rubik]: https://fonts.google.com/specimen/Rubik
+[gf-source-code-pro]: https://fonts.google.com/specimen/Source+Code+Pro
 [gh-1]: https://github.com/arcticicestudio/nord-docs/issues/1
+[gh-2]: https://github.com/arcticicestudio/nord-docs/issues/2
 [gh-24]: https://github.com/arcticicestudio/nord-docs/issues/24
 [gh-25]: https://github.com/arcticicestudio/nord-docs/issues/25
 [gh-26]: https://github.com/arcticicestudio/nord-docs/issues/26
+[gh-36]: https://github.com/arcticicestudio/nord-docs/issues/36
 [gh-38]: https://github.com/arcticicestudio/nord-docs/issues/38
 [gh-43]: https://github.com/arcticicestudio/nord-docs/issues/43
 [gh-46]: https://github.com/arcticicestudio/nord-docs/issues/46
+[gh-51]: https://github.com/arcticicestudio/nord-docs/issues/51
+[gh-54]: https://github.com/arcticicestudio/nord-docs/issues/54
+[gh-57]: https://github.com/arcticicestudio/nord-docs/issues/57
+[gh-59]: https://github.com/arcticicestudio/nord-docs/issues/59
 [gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
 [gh-help-coc]: https://help.github.com/articles/adding-a-code-of-conduct-to-your-project
@@ -314,7 +426,12 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [git-docs-gitattributes]: https://git-scm.com/docs/gitattributes
 [git-docs-gitignore]: https://git-scm.com/docs/gitignore
 [git-docs-mailmap]: https://git-scm.com/docs/git-shortlog#_mapping_authors
+[inter-ui]: https://rsms.me/inter
 [jest]: https://jestjs.io
+[md]: https://material.io
+[md-motion-speed]: https://material.io/design/motion/speed.html
+[mdn-ls]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[mdn-ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 [mit-lic]: https://opensource.org/licenses/MIT
 [mobx]: https://mobx.js.org
 [netlify]: https://www.netlify.com
@@ -333,8 +450,10 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [npm-remark-cli]: https://www.npmjs.com/package/remark-cli
 [ossg]: https://opensource.guide
 [ossg-contrib]: https://opensource.guide/how-to-contribute
+[polished]: https://polished.js.org
 [prettier]: https://prettier.io
 [react]: https://reactjs.org
+[react-docs-context]: https://reactjs.org/docs/context.html
 [react-docs-typecheck-pt]: https://reactjs.org/docs/typechecking-with-proptypes.html
 [remark]: https://remark.js.org
 [stc-docs-globstyle]: https://www.styled-components.com/docs/api#createglobalstyle
@@ -359,3 +478,21 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [shields.io]: https://shields.io
 [snyk-blog-malicious-event-stream]: https://snyk.io/blog/malicious-code-found-in-npm-package-event-stream
 [wikip-ai]: https://en.wikipedia.org/wiki/Adobe_Illustrator_Artwork
+
+<!-- v0.2.0 -->
+
+[gf]: https://fonts.google.com
+[gh-modern-normalize]: https://github.com/sindresorhus/modern-normalize
+[gh-nord-36]: https://github.com/arcticicestudio/nord/issues/36
+[gh-stth-api-th]: https://github.com/styled-components/styled-theming#themename-values
+[gh-styled-theming]: https://github.com/styled-components/styled-theming
+[modularscale-majorsecond]: https://www.modularscale.com/?1&em&1.125
+[npm-gatsby-plugin-styled-components]: https://www.npmjs.com/package/gatsby-plugin-styled-components
+[npm-inter-ui]: https://www.npmjs.com/package/inter-ui
+[npm-styled-modern-normalize]: https://www.npmjs.com/package/styled-modern-normalize
+[npm-typeface-rubik]: https://www.npmjs.com/package/typeface-rubik
+[npm-typeface-source-code-pro]: https://www.npmjs.com/package/typeface-source-code-pro
+[stc-docs-api-cgs]: https://www.styled-components.com/docs/api#createglobalstyle
+[stc-docs-api-thp]: https://www.styled-components.com/docs/api#themeprovider
+[stc-docs-theming]: https://www.styled-components.com/docs/advanced#theming
+[stc-docs-tool-babel]: https://www.styled-components.com/docs/tooling#babel-plugin
