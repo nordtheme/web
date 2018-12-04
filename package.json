@@ -1,7 +1,7 @@
 {
   "name": "nord-docs",
   "title": "Nord Docs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The official Nord website and documentation",
   "author": {
     "name": "Arctic Ice Studio",
@@ -54,6 +54,7 @@
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-plugin-react-remove-properties": "0.2.5",
+    "babel-plugin-styled-components": "1.9.2",
     "babel-plugin-transform-react-remove-prop-types": "0.4.20",
     "babel-preset-gatsby": "0.1.4",
     "del-cli": "1.1.0",
@@ -85,12 +86,20 @@
     "gatsby-plugin-no-sourcemaps": "2.0.1",
     "gatsby-plugin-react-helmet": "3.0.2",
     "gatsby-plugin-remove-trailing-slashes": "2.0.5",
+    "gatsby-plugin-styled-components": "3.0.4",
     "gatsby-source-filesystem": "2.0.9",
     "gatsby-transformer-yaml": "2.1.5",
+    "inter-ui": "3.0.0",
     "nord": ">=0.2.1 <1.0.0",
+    "polished": "2.3.1",
     "prop-types": "15.6.2",
     "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-helmet": "5.2.0"
+    "react-helmet": "5.2.0",
+    "styled-components": "4.1.2",
+    "styled-modern-normalize": ">=0.2.0 <1.0.0",
+    "styled-theming": "2.2.0",
+    "typeface-rubik": "0.0.54",
+    "typeface-source-code-pro": "0.0.54"
   }
 }
