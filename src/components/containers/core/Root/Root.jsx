@@ -12,7 +12,7 @@ import PropTypes from "prop-types";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import modernNormalize from "styled-modern-normalize";
 
-import theme, { globals, normalize } from "styles/theme";
+import theme, { globals, normalize, MODE_BRIGHT_SNOW_FLURRY } from "styles/theme";
 
 import "inter-ui/inter-ui.css";
 import "typeface-rubik/index.css";
@@ -29,6 +29,20 @@ const GlobalStyle = createGlobalStyle`
   ${globals};
   ${normalize};
 `;
+
+/**
+ * The context provider component for global theme mode consumers.
+ *
+ * @since 0.2.0
+ */
+const GlobalThemeModeContext = React.createContext(MODE_BRIGHT_SNOW_FLURRY);
+
+/**
+ * The context consumer component for the global theme mode.
+ *
+ * @since 0.2.0
+ */
+const GlobalThemeMode = GlobalThemeModeContext.Consumer;
 
 /**
  * The root container with injected global CSS styles.
