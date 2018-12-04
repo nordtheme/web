@@ -8,23 +8,20 @@
  */
 
 /**
- * @file Provides all available theme colors.
+ * @file Provides theme font colors.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.2.0
  */
 
-import background from "./background";
-import font from "./font";
 import nord from "./nord";
-import palettes from "./palettes";
+import { MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "../constants";
 
-const colors = {
-  background,
-  font,
-  ...nord,
-  ...palettes
+const base = {
+  [MODE_BRIGHT_SNOW_FLURRY]: nord.nord3,
+  [MODE_DARK_NIGHT_FROST]: nord.nord6
 };
 
-export { nord, palettes };
-export default colors;
+const font = { base };
+
+export default font;
