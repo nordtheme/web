@@ -14,7 +14,8 @@
  * @since 0.2.0
  */
 
+import generateMediaQuery from "./generateMediaQuery";
 import themedMode from "./themedMode";
 import themedModeVariant from "./themedModeVariant";
 
-export { themedMode, themedModeVariant };
+export { generateMediaQuery, themedMode, themedModeVariant };
