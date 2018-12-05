@@ -8,14 +8,17 @@
  */
 
 /**
- * @file Provides theme utilities.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.2.0
+ * @since 0.3.0
  */
 
-import generateMediaQuery from "./generateMediaQuery";
-import themedMode from "./themedMode";
-import themedModeVariant from "./themedModeVariant";
+/**
+ * Breakpoints for the "mobile-first" pattern based on and adjusted to the site content.
+ *
+ * @type {Object}
+ * @since 0.3.0
+ */
+const breakpoints = { minimal: 320 };
 
-export { generateMediaQuery, themedMode, themedModeVariant };
+export default breakpoints;
