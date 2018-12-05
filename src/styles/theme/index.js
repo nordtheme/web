@@ -14,15 +14,17 @@
  * @since 0.2.0
  */
 
+import breakpoints from "./breakpoints";
 import colors, { nord, palettes } from "./colors";
 import globals from "./globals";
+import media from "./media";
 import motion from "./motion";
 import normalize from "./normalize";
 import { generateMediaQuery, themedMode, themedModeVariant } from "./utils";
 import typography from "./typography";
 import { MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST, THEME_KEY_MODE } from "./constants";
 
-const theme = { colors, motion, typography };
+const theme = { breakpoints, colors, media, motion, typography };
 
 export {
   colors,
