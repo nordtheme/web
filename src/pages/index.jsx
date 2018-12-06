@@ -8,7 +8,7 @@
  */
 import React, { Fragment } from "react";
 
-import Root from "containers/core/Root";
+import BaseLayout from "layouts/core/BaseLayout";
 
 /**
  * The landing page component representing the root/index of the site.
@@ -18,9 +18,9 @@ import Root from "containers/core/Root";
  * @since 0.1.0
  */
 const Landing = () => (
-  <Root>
+  <BaseLayout>
     <Fragment />
-  </Root>
+  </BaseLayout>
 );
 
 export default Landing;
