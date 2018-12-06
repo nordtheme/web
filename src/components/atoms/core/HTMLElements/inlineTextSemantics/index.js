@@ -8,14 +8,14 @@
  */
 
 /**
- * @file Provides utility functions and classes.
+ * @file Provides components that represent basic HTML elements with inline text semantics functionality.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.2.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics
+ * @since 0.3.0
  */
 
-import isRouteInternal from "./isRouteInternal";
-import isRoutePartiallyMatch from "./isRoutePartiallyMatch";
-import { readSessionCache, writeSessionCache } from "./sessionCache";
+import A from "./A";
 
-export { isRouteInternal, isRoutePartiallyMatch, readSessionCache, writeSessionCache };
+/* eslint-disable-next-line import/prefer-default-export */
+export { A };
