@@ -37,6 +37,7 @@ module.exports = {
     "gatsby-plugin-remove-trailing-slashes",
     "gatsby-plugin-no-sourcemaps",
     "gatsby-transformer-yaml",
+    "gatsby-plugin-svgr",
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
