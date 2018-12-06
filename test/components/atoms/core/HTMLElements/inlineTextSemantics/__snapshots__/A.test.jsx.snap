@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot renders external URLs with \`href\` prop 1`] = `
+<div>
+  <a
+    class="sc-bdVaJa ccNLbx"
+    href="https://nordtheme.com"
+  >
+    Docs
+  </a>
+</div>
+`;
+
+exports[`snapshot renders external URLs with \`to\` prop 1`] = `
+<div>
+  <a
+    class="sc-bdVaJa ccNLbx"
+    href="https://nordtheme.com"
+  >
+    Docs
+  </a>
+</div>
+`;
+
+exports[`snapshot renders inernal URLs with \`href\` prop 1`] = `
+<div>
+  <a
+    class="sc-bdVaJa ccNLbx"
+    href="/docs"
+  >
+    Docs
+  </a>
+</div>
+`;
+
+exports[`snapshot renders inernal URLs with \`to\` prop 1`] = `
+<div>
+  <a
+    class="sc-bdVaJa ccNLbx"
+    href="/docs"
+  >
+    Docs
+  </a>
+</div>
+`;
