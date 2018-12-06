@@ -51,6 +51,14 @@ const ROOT = pathSeparator;
 const BLOG = "blog";
 
 /**
+ * The route name of the "community" page.
+ *
+ * @constant {string}
+ * @since 0.3.0
+ */
+const COMMUNITY = "community";
+
+/**
  * The route name of the "docs" page.
  *
  * @constant {string}
@@ -67,10 +75,20 @@ const DOCS = "docs";
  */
 const LANDING = "landing";
 
+/**
+ * The route name of the port projects page.
+ *
+ * @constant {string}
+ * @since 0.3.0
+ */
+const PORTS = "ports";
+
 module.exports = {
   BASE_PUBLIC_URL,
   BLOG,
+  COMMUNITY,
   DOCS,
   LANDING,
+  PORTS,
   ROOT
 };
