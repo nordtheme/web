@@ -23,7 +23,7 @@ const backgroundColor = themedMode({
  */
 const Page = styled.main`
   background-color: ${backgroundColor};
-  transition: background-color ${motion.speed.duration.transition.base.themeModeSwitch}s ease-in-out;
+  transition: background-color ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
 `;
 
 export default Page;

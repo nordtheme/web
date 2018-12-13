@@ -30,7 +30,7 @@ const themeModeFillColor = themedMode({
  */
 const themeModeFillColorStyles = css`
   fill: ${themeModeFillColor};
-  transition: fill ${motion.speed.duration.transition.base.themeModeSwitch}s ease-in-out;
+  transition: fill ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
 `;
 
 /* eslint-disable-next-line import/prefer-default-export */
