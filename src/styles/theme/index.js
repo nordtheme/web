@@ -20,7 +20,7 @@ import globals from "./globals";
 import media from "./media";
 import motion from "./motion";
 import normalize from "./normalize";
-import { generateMediaQuery, themedMode, themedModeVariant } from "./utils";
+import { generateMediaQuery, ms, themedMode, themedModeVariant } from "./utils";
 import typography from "./typography";
 import { MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST, THEME_KEY_MODE } from "./constants";
 
@@ -32,6 +32,7 @@ export {
   globals,
   media,
   motion,
+  ms,
   nord,
   normalize,
   palettes,

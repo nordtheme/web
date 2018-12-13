@@ -15,7 +15,8 @@
  */
 
 import generateMediaQuery from "./generateMediaQuery";
+import ms from "./ms";
 import themedMode from "./themedMode";
 import themedModeVariant from "./themedModeVariant";
 
-export { generateMediaQuery, themedMode, themedModeVariant };
+export { generateMediaQuery, ms, themedMode, themedModeVariant };
