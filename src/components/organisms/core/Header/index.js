@@ -7,4 +7,8 @@
  * License:    MIT
  */
 
-export { default } from "./BaseLayout";
+import { HEADER_HEIGHT, HEADER_HEIGHT_PINNED } from "./shared/styles";
+import Header from "./Header";
+
+export { HEADER_HEIGHT, HEADER_HEIGHT_PINNED };
+export default Header;
