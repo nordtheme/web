@@ -34,6 +34,9 @@ module.exports = {
   },
   settings: {
     "import/resolver": {
+      jest: {
+        jestConfigFile: resolve(__dirname, "jest.config.js")
+      },
       node: {
         /* Resolve Webpack alias imports */
         paths: [resolve(__dirname, "src"), resolve(__dirname, "src/components")]

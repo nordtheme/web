@@ -53,6 +53,7 @@ module.exports = {
     "^data(.*)$": "<rootDir>/src/data$1",
     "^layouts(.*)$": "<rootDir>/src/components/layouts$1",
     "^molecules(.*)$": "<rootDir>/src/components/molecules$1",
+    "^nord-docs-test-utils(.*)$": "<rootDir>/test/__utils__$1",
     "^organisms(.*)$": "<rootDir>/src/components/organisms$1",
     "^pages(.*)$": "<rootDir>/src/pages$1",
     "^stores(.*)$": "<rootDir>/src/stores$1",
