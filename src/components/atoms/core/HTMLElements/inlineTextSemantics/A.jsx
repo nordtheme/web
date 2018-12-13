@@ -16,11 +16,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { isRouteInternal } from "utils";
 
-const BaseComponent = styled.a`
+const baseStyles = css`
   color: inherit;
   cursor: pointer;
   text-decoration: none;
@@ -33,9 +33,22 @@ const BaseComponent = styled.a`
   }
 `;
 
+const BaseComponent = styled.a`
+  ${baseStyles};
+`;
+
+const BaseGatsbyLink = styled(Link)`
+  ${baseStyles}
+`;
+
 /**
  * A dynamic and failsafe component which either renders to a base HTML link `<a>` (anchor) or a "Gatsby Link" based on
  * the target/URL type, internal or external, passed to the `to` and `href` props.
+ *
+ * Note: The currently used version of "Gatsby Link" uses the `innerRef` prop to allow `ref` access to the underlying
+ * DOM element (necessary for animations). This legacy behavior is about to change in the future to the
+ * `React.forwardRef` API.
+ * See https://github.com/gatsbyjs/gatsby/pull/9892 for more details.
  *
  * @example <caption>Usage</caption>
  * <!-- The target is external so both will render to `<a>` with the `href` prop. -->
@@ -44,17 +57,25 @@ const BaseComponent = styled.a`
  * <!-- The target is internal so both will render to `<Link>` with the `to` prop. -->
  * <A to="/blog">Blog</A>
  * <A href="/blog">Blog</A>
+ * <!-- Allow ref access to the underlying "Gatsby Link" DOM element. -->
+ * const RefLink = React.forwardRef(({children, ...passProps}, ref) => (
+ *   <A innerRef={ref} {...passProps}>
+ *     {children}
+ *   </A>
+ * );
+ * <RefLink to="/blog">Blog</RefLink>
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
  * @see https://www.gatsbyjs.org/docs/gatsby-link
+ * @see https://github.com/gatsbyjs/gatsby/pull/9892
  * @since 0.3.0
  */
-const A = ({ children, href, to, ...passProps }) =>
+const A = ({ children, href, to, linkRef, ...passProps }) =>
   isRouteInternal(to) || isRouteInternal(href) ? (
-    <BaseComponent as={Link} to={to || href} {...passProps}>
+    <BaseGatsbyLink innerRef={linkRef} to={to || href} {...passProps}>
       {children}
-    </BaseComponent>
+    </BaseGatsbyLink>
   ) : (
-    <BaseComponent href={href || to} {...passProps}>
+    <BaseComponent ref={linkRef} href={href || to} {...passProps}>
       {children}
     </BaseComponent>
   );
@@ -66,4 +87,8 @@ A.propTypes = {
 
 A.defaultProps = { to: "" };
 
-export default A;
+export default React.forwardRef(({ children, ...passProps }, ref) => (
+  <A linkRef={ref} {...passProps}>
+    {children}
+  </A>
+));

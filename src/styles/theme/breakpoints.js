@@ -19,6 +19,12 @@
  * @type {Object}
  * @since 0.3.0
  */
-const breakpoints = { minimal: 320 };
+const breakpoints = {
+  phoneLandscapeUpperBoundary: 480,
+  tabletPortraitLowerBoundary: 600,
+  tabletLandscapeLowerBoundary: 900,
+  desktopLowerBoundary: 1200,
+  desktopPlusLowerBoundary: 1800
+};
 
 export default breakpoints;

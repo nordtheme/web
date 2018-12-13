@@ -20,9 +20,15 @@ import globals from "./globals";
 import media from "./media";
 import motion from "./motion";
 import normalize from "./normalize";
-import { generateMediaQuery, themedMode, themedModeVariant } from "./utils";
+import { generateMediaQuery, ms, themedMode, themedModeVariant, zIndexFor } from "./utils";
 import typography from "./typography";
-import { MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST, THEME_KEY_MODE } from "./constants";
+import {
+  MODE_BRIGHT_SNOW_FLURRY,
+  MODE_DARK_NIGHT_FROST,
+  THEME_KEY_MODE,
+  Z_INDEX_ELEMENTS,
+  Z_INDEX_ELEMENT_ORDER
+} from "./constants";
 
 const theme = { breakpoints, colors, media, motion, typography };
 
@@ -30,16 +36,21 @@ export {
   colors,
   generateMediaQuery,
   globals,
+  media,
   motion,
+  ms,
   nord,
   normalize,
   palettes,
   themedMode,
   themedModeVariant,
   typography,
+  zIndexFor,
   MODE_BRIGHT_SNOW_FLURRY,
   MODE_DARK_NIGHT_FROST,
-  THEME_KEY_MODE
+  THEME_KEY_MODE,
+  Z_INDEX_ELEMENTS,
+  Z_INDEX_ELEMENT_ORDER
 };
 
 export default theme;

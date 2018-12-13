@@ -18,10 +18,12 @@ import background from "./background";
 import font from "./font";
 import nord from "./nord";
 import palettes from "./palettes";
+import shadow from "./shadow";
 
 const colors = {
   background,
   font,
+  shadow,
   ...nord,
   ...palettes
 };

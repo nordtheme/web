@@ -19,6 +19,8 @@ import breakpoints from "./breakpoints";
 import typography from "./typography";
 import { generateMediaQuery } from "./utils";
 
+const query = value => em(value, typography.sizes.root);
+
 /**
  * Provides media query template functions based on the configured breakpoints.
  *
@@ -26,8 +28,12 @@ import { generateMediaQuery } from "./utils";
  * @since 0.3.0
  */
 const media = {
-  base: generateMediaQuery`(max-width: ${em(breakpoints.minimal - 1, typography.sizes.root)})`,
-  minimal: generateMediaQuery`(min-width: ${em(breakpoints.minimal, typography.sizes.root)})`,
+  phonePortrait: generateMediaQuery`(max-width: ${query(breakpoints.phoneLandscapeUpperBoundary - 1)})`,
+  phoneLandscape: generateMediaQuery`(min-width: ${query(breakpoints.phoneLandscapeUpperBoundary)})`,
+  tabletPortrait: generateMediaQuery`(min-width: ${query(breakpoints.tabletPortraitLowerBoundary)})`,
+  tabletLandscape: generateMediaQuery`(min-width: ${query(breakpoints.tabletLandscapeLowerBoundary)})`,
+  desktop: generateMediaQuery`(min-width: ${query(breakpoints.desktopLowerBoundary)})`,
+  desktopPlus: generateMediaQuery`(min-width: ${query(breakpoints.desktopPlus)})`,
   breakpoints
 };
 

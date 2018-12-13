@@ -44,8 +44,8 @@ const globals = css`
     line-height: ${typography.sizes.lineHeight};
     color: ${baseFontColor};
     background-color: ${baseBackgroundColor};
-    transition: color ${speed.duration.transition.base.themeModeSwitch}s ease-in-out,
-      background-color ${speed.duration.transition.base.themeModeSwitch}s ease-in-out;
+    transition: color ${speed.duration.transition.base.themeModeSwitch}ms ease-in-out,
+      background-color ${speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
     scroll-behavior: smooth;
   }
 `;

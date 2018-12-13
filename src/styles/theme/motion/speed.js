@@ -19,14 +19,22 @@
  * The values for motion durations.
  *
  * @type {object}
- * @see @see https://material.io/design/motion/speed.html#duration
+ * @see https://material.io/design/motion/speed.html#duration
  * @since 0.2.0
  */
 const duration = {
-  unit: "s",
+  unit: "ms",
+  exitReducerFactor: 0.8,
   transition: {
-    base: { themeModeSwitch: 0.4 },
-    area: { large: 0.4 }
+    base: { themeModeSwitch: 400 },
+    area: {
+      large: 300,
+      medium: 250,
+      small: 100
+    },
+    text: {
+      fade: 200
+    }
   }
 };
 

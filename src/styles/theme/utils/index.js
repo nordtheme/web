@@ -15,7 +15,9 @@
  */
 
 import generateMediaQuery from "./generateMediaQuery";
+import ms from "./ms";
 import themedMode from "./themedMode";
 import themedModeVariant from "./themedModeVariant";
+import zIndexFor from "./zIndexFor";
 
-export { generateMediaQuery, themedMode, themedModeVariant };
+export { generateMediaQuery, ms, themedMode, themedModeVariant, zIndexFor };
