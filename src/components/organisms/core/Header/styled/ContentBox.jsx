@@ -7,26 +7,21 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
+import Content from "containers/core/Content";
+
 /**
- * @file Provides all available theme colors.
+ * A flexbox container that vertically aligns the content in the center with dynamic space.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.2.0
+ * @since 0.3.0
  */
+const ContentBox = styled(Content)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
-import background from "./background";
-import font from "./font";
-import nord from "./nord";
-import palettes from "./palettes";
-import shadow from "./shadow";
-
-const colors = {
-  background,
-  font,
-  shadow,
-  ...nord,
-  ...palettes
-};
-
-export { nord, palettes };
-export default colors;
+export default ContentBox;

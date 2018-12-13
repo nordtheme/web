@@ -7,26 +7,26 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
+import { ms } from "styles/theme";
+
 /**
- * @file Provides all available theme colors.
+ * A flexbox list for slide menu navigation links with dynamic spacing.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.2.0
+ * @since 0.3.0
  */
+const SlideMenuNavList = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: ${ms(1)};
 
-import background from "./background";
-import font from "./font";
-import nord from "./nord";
-import palettes from "./palettes";
-import shadow from "./shadow";
+  * {
+    margin: 1em;
+  }
+`;
 
-const colors = {
-  background,
-  font,
-  shadow,
-  ...nord,
-  ...palettes
-};
-
-export { nord, palettes };
-export default colors;
+export default SlideMenuNavList;

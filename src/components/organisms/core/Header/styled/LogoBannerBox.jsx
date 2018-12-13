@@ -7,26 +7,18 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
 /**
- * @file Provides all available theme colors.
+ * A flexbox container for Nord's logo and caption components.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.2.0
+ * @since 0.3.0
  */
+const LogoBannerBox = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
-import background from "./background";
-import font from "./font";
-import nord from "./nord";
-import palettes from "./palettes";
-import shadow from "./shadow";
-
-const colors = {
-  background,
-  font,
-  shadow,
-  ...nord,
-  ...palettes
-};
-
-export { nord, palettes };
-export default colors;
+export default LogoBannerBox;
