@@ -30,6 +30,7 @@ export {
   colors,
   generateMediaQuery,
   globals,
+  media,
   motion,
   nord,
   normalize,
