@@ -16,4 +16,8 @@
  * @since 0.3.0
  */
 
-module.exports = { ReactComponent: "SvgrComponent" };
+import React from "react";
+
+const MockedSvg = props => <svg {...props} />;
+
+module.exports = { ReactComponent: MockedSvg };
