@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot 1`] = `
-<div>
-  <main
-    class="sc-bdVaJa fWIgbF"
-  />
-</div>
+.c0 {
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+}
+
+<main
+  class="c0"
+/>
 `;

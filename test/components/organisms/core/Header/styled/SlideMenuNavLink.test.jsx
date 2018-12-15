@@ -10,9 +10,11 @@
 import React from "react";
 
 import { renderWithTheme } from "nord-docs-test-utils";
-import Content from "containers/core/Content";
+import SlideMenuNavLink from "organisms/core/Header/styled/SlideMenuNavLink";
 
-test("snapshot", () => {
-  const { container } = renderWithTheme(<Content />);
-  expect(container.firstChild).toMatchSnapshot();
+describe("theme styles", () => {
+  test("matches the snapshot", () => {
+    const { container } = renderWithTheme(<SlideMenuNavLink>Nord</SlideMenuNavLink>);
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });

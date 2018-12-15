@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles has correct top position based on header height in unpinned mode 1`] = `
+.c0 {
+  position: absolute;
+  top: 5em;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  z-index: 3;
+  overflow-y: auto;
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    display: none;
+  }
+}
+
+<div
+  class="c0"
+  style="transform: none;"
+/>
+`;
+
+exports[`theme styles has correct top position based on the header height in pinned mode 1`] = `
+.c0 {
+  position: absolute;
+  top: 3.5em;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  z-index: 3;
+  overflow-y: auto;
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    display: none;
+  }
+}
+
+<div
+  class="c0"
+  style="transform: none;"
+/>
+`;

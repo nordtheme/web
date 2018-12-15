@@ -14,5 +14,5 @@ import Page from "containers/core/Page";
 
 test("snapshot", () => {
   const { container } = render(<Page />);
-  expect(container).toMatchSnapshot();
+  expect(container.firstChild).toMatchSnapshot();
 });

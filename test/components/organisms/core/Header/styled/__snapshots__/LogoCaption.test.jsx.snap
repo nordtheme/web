@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`behavior is invisible in pinned Mode 1`] = `
+.c0 {
+  font-size: 2.0272865295410156em;
+  font-weight: 500;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+  opacity: 0;
+  margin-left: 0.2775em;
+}
+
+<span
+  class="c0"
+/>
+`;
+
+exports[`behavior is visible in unpinned Mode 1`] = `
+.c0 {
+  font-size: 2.0272865295410156em;
+  font-weight: 500;
+  -webkit-transition: opacity 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
+  margin-left: 0.2775em;
+}
+
+<span
+  class="c0"
+/>
+`;

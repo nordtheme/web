@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles adjusts to passed header height in pinned mode 1`] = `
+.c0 {
+  fill: #4c566a;
+  -webkit-transition: fill 400ms ease-in-out;
+  transition: fill 400ms ease-in-out;
+  display: block;
+  width: 1.575em;
+  height: 1.575em;
+}
+
+<svg
+  class="c0"
+  size="56"
+/>
+`;
+
+exports[`theme styles adjusts to passed header height in unpinned mode 1`] = `
+.c0 {
+  fill: #4c566a;
+  -webkit-transition: fill 400ms ease-in-out;
+  transition: fill 400ms ease-in-out;
+  display: block;
+  width: 2.25em;
+  height: 2.25em;
+}
+
+<svg
+  class="c0"
+  size="80"
+/>
+`;

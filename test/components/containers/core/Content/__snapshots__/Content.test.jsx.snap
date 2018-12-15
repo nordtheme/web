@@ -1,9 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot 1`] = `
-<div>
-  <div
-    class="sc-bdVaJa fnJgZO"
-  />
-</div>
+.c0 {
+  width: 100%;
+}
+
+@media (min-width:75em) {
+  .c0 {
+    max-width: 75em;
+  }
+}
+
+<div
+  class="c0"
+/>
 `;
