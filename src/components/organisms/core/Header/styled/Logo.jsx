@@ -12,6 +12,8 @@ import { em } from "polished";
 
 import { Nord } from "atoms/core/vectors/logos";
 
+import { HEADER_BRAND_LOGO_SHRINK_FACTOR } from "../shared/styles";
+
 /**
  * Nord's logo as SVG vector graphic component with a dynamic size based on the given `size` prop.
  *
@@ -21,8 +23,8 @@ import { Nord } from "atoms/core/vectors/logos";
  */
 const Logo = styled(Nord)`
   display: block;
-  width: ${({ size }) => em(size * 0.45)};
-  height: ${({ size }) => em(size * 0.45)};
+  width: ${({ size }) => em(size * HEADER_BRAND_LOGO_SHRINK_FACTOR)};
+  height: ${({ size }) => em(size * HEADER_BRAND_LOGO_SHRINK_FACTOR)};
 `;
 
 export default Logo;

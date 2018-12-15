@@ -19,6 +19,13 @@ import { rgba } from "polished";
 import { colors, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
 
 /**
+ * The factor with which the branding logo is multiplied by the height of the header based on the pin mode.
+ *
+ * @type {number}
+ */
+const HEADER_BRAND_LOGO_SHRINK_FACTOR = 0.45;
+
+/**
  * The default height (in `px`) of the header when in unpinned mode.
  *
  * @type {number}
@@ -42,4 +49,10 @@ const linkBackgroundColorHover = themedMode({
   [MODE_DARK_NIGHT_FROST]: rgba(colors.nord3, 0.8)
 });
 
-export { backgroundColor, linkBackgroundColorHover, HEADER_HEIGHT, HEADER_HEIGHT_PINNED };
+export {
+  backgroundColor,
+  linkBackgroundColorHover,
+  HEADER_BRAND_LOGO_SHRINK_FACTOR,
+  HEADER_HEIGHT,
+  HEADER_HEIGHT_PINNED
+};

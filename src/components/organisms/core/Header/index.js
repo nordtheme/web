@@ -7,8 +7,8 @@
  * License:    MIT
  */
 
-import { HEADER_HEIGHT, HEADER_HEIGHT_PINNED } from "./shared/styles";
+import { HEADER_BRAND_LOGO_SHRINK_FACTOR, HEADER_HEIGHT, HEADER_HEIGHT_PINNED } from "./shared/styles";
 import Header from "./Header";
 
-export { HEADER_HEIGHT, HEADER_HEIGHT_PINNED };
+export { HEADER_BRAND_LOGO_SHRINK_FACTOR, HEADER_HEIGHT, HEADER_HEIGHT_PINNED };
 export default Header;
