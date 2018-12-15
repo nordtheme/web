@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles has correct height in pinned mode 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 3.5em;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(216,222,233,0.15);
+  -webkit-transition: height 250ms ease-in-out, box-shadow 250ms ease-in-out, background-color 400ms ease-in-out;
+  transition: height 250ms ease-in-out, box-shadow 250ms ease-in-out, background-color 400ms ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<header
+  class="c0"
+  height="80"
+/>
+`;
+
+exports[`theme styles has correct height in unpinned mode 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 5em;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+  -webkit-transition: height 250ms ease-in-out, box-shadow 250ms ease-in-out, background-color 400ms ease-in-out;
+  transition: height 250ms ease-in-out, box-shadow 250ms ease-in-out, background-color 400ms ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<header
+  class="c0"
+  height="80"
+/>
+`;

@@ -17,21 +17,21 @@ import { metadataNordDocs } from "data/project";
 describe("snapshot", () => {
   test("renders inernal URLs with `to` prop", () => {
     const { container } = render(<A to={ROUTE_DOCS}>Docs</A>);
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test("renders inernal URLs with `href` prop", () => {
     const { container } = render(<A href={ROUTE_DOCS}>Docs</A>);
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test("renders external URLs with `href` prop", () => {
     const { container } = render(<A href={metadataNordDocs.homepage}>Docs</A>);
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test("renders external URLs with `to` prop", () => {
     const { container } = render(<A to={metadataNordDocs.homepage}>Docs</A>);
-    expect(container).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
