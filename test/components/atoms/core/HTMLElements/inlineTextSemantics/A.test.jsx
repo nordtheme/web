@@ -14,7 +14,7 @@ import { A } from "atoms/core/HTMLElements";
 import { ROUTE_DOCS } from "config/routes/mappings";
 import { metadataNordDocs } from "data/project";
 
-describe("snapshot", () => {
+describe("logical behavior", () => {
   test("renders inernal URLs with `to` prop", () => {
     const { container } = render(<A to={ROUTE_DOCS}>Docs</A>);
     expect(container.firstChild).toMatchSnapshot();

@@ -8,14 +8,14 @@
  */
 
 /**
- * @file Provides components that represents basic HTML elements.
+ * @file Provides components that represent basic HTML elements with text content functionality.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Text_content
  * @since 0.3.0
  */
 
-import { A } from "./inline-text-semantics";
-import { P } from "./text-content";
+import P from "./P";
 
-export { A, P };
+/* eslint-disable-next-line import/prefer-default-export */
+export { P };

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snapshot renders external URLs with \`href\` prop 1`] = `
+exports[`logical behavior renders external URLs with \`href\` prop 1`] = `
 .c0 {
   color: inherit;
   cursor: pointer;
@@ -23,7 +23,7 @@ exports[`snapshot renders external URLs with \`href\` prop 1`] = `
 </a>
 `;
 
-exports[`snapshot renders external URLs with \`to\` prop 1`] = `
+exports[`logical behavior renders external URLs with \`to\` prop 1`] = `
 .c0 {
   color: inherit;
   cursor: pointer;
@@ -46,7 +46,7 @@ exports[`snapshot renders external URLs with \`to\` prop 1`] = `
 </a>
 `;
 
-exports[`snapshot renders inernal URLs with \`href\` prop 1`] = `
+exports[`logical behavior renders inernal URLs with \`href\` prop 1`] = `
 .c0 {
   color: inherit;
   cursor: pointer;
@@ -69,7 +69,7 @@ exports[`snapshot renders inernal URLs with \`href\` prop 1`] = `
 </a>
 `;
 
-exports[`snapshot renders inernal URLs with \`to\` prop 1`] = `
+exports[`logical behavior renders inernal URLs with \`to\` prop 1`] = `
 .c0 {
   color: inherit;
   cursor: pointer;
