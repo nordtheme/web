@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles matches the snapshot 1`] = `
+.c0 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+<p
+  class="c0"
+>
+  Nord
+</p>
+`;

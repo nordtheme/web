@@ -7,15 +7,19 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
 /**
- * @file Provides components that represents basic HTML elements.
+ * A base HTML component that represents a paragraph.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
  * @since 0.3.0
  */
+const P = styled.p`
+  margin-top: 0;
+  margin-bottom: 1em;
+`;
 
-import { A } from "./inline-text-semantics";
-import { P } from "./text-content";
-
-export { A, P };
+export default P;
