@@ -7,22 +7,20 @@
  * License:    MIT
  */
 
-import React from "react";
-
-import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/landing";
+import styled from "styled-components";
 
 /**
- * The landing page component representing the root/index of the site.
+ * The main wrapper component for all composed components.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.1.0
+ * @since 0.3.0
  */
-const Landing = () => (
-  <BaseLayout>
-    <SectionHero />
-  </BaseLayout>
-);
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+`;
 
-export default Landing;
+export default Wrapper;

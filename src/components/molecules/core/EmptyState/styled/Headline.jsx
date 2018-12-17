@@ -7,22 +7,17 @@
  * License:    MIT
  */
 
-import React from "react";
+import styled from "styled-components";
 
-import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/landing";
+import { H4 } from "atoms/core/HTMLElements";
 
 /**
- * The landing page component representing the root/index of the site.
+ * The headline to inform the user about the purpose of the illustration and the reason why it is currently shown.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.1.0
+ * @since 0.3.0
  */
-const Landing = () => (
-  <BaseLayout>
-    <SectionHero />
-  </BaseLayout>
-);
+const Headline = styled(H4)``;
 
-export default Landing;
+export default Headline;

@@ -24,7 +24,7 @@ const navigationItems = [
   { title: "Ports", url: ROUTE_PORTS },
   { title: "Docs", url: ROUTE_DOCS },
   { title: "Blog", url: ROUTE_BLOG },
-  { title: "Community", ROUTE_COMMUNITY }
+  { title: "Community", url: ROUTE_COMMUNITY }
 ];
 
 export default navigationItems;

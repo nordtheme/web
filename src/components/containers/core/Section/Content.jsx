@@ -7,22 +7,20 @@
  * License:    MIT
  */
 
-import React from "react";
+import styled from "styled-components";
 
-import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/landing";
+import CoreContent from "containers/core/Content";
 
 /**
- * The landing page component representing the root/index of the site.
+ * A container for content of the `Section` component.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.1.0
+ * @since 0.3.0
  */
-const Landing = () => (
-  <BaseLayout>
-    <SectionHero />
-  </BaseLayout>
-);
+const Content = styled(CoreContent)`
+  margin-top: ${({ compact }) => !compact && "5em"};
+  margin-bottom: ${({ compact }) => !compact && "5em"};
+`;
 
-export default Landing;
+export default Content;

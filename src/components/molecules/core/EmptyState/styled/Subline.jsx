@@ -7,22 +7,19 @@
  * License:    MIT
  */
 
-import React from "react";
+import styled from "styled-components";
 
-import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/landing";
+import { P } from "atoms/core/HTMLElements";
 
 /**
- * The landing page component representing the root/index of the site.
+ * The subline that includes information and helpful instructions in addition to the headline.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.1.0
+ * @since 0.3.0
  */
-const Landing = () => (
-  <BaseLayout>
-    <SectionHero />
-  </BaseLayout>
-);
+const Subline = styled(P)`
+  margin-top: 1em;
+`;
 
-export default Landing;
+export default Subline;
