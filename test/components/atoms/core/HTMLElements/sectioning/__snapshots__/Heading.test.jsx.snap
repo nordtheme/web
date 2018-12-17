@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles matches the snapshot 1`] = `
+.c0 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 2.0272865295410156em;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.802032470703125em;
+}
+
+.c2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.601806640625em;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.423828125em;
+}
+
+.c4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.265625em;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.125em;
+}
+
+<div>
+  <h1
+    class="c0"
+  >
+    Heading Level 1
+  </h1>
+  <h2
+    class="c1"
+  >
+    Heading Level 2
+  </h2>
+  <h3
+    class="c2"
+  >
+    Heading Level 3
+  </h3>
+  <h4
+    class="c3"
+  >
+    Heading Level 4
+  </h4>
+  <h5
+    class="c4"
+  >
+    Heading Level 5
+  </h5>
+  <h6
+    class="c5"
+  >
+    Heading Level 6
+  </h6>
+</div>
+`;
+
+exports[`theme styles matches the snapshot with adjusted margin 1`] = `
+.c0 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 2.0272865295410156em;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1.802032470703125em;
+}
+
+.c2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1.601806640625em;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1.423828125em;
+}
+
+.c4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1.265625em;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 1.125em;
+}
+
+<div>
+  <h1
+    class="c0"
+  >
+    Heading Level 1
+  </h1>
+  <h2
+    class="c1"
+  >
+    Heading Level 2
+  </h2>
+  <h3
+    class="c2"
+  >
+    Heading Level 3
+  </h3>
+  <h4
+    class="c3"
+  >
+    Heading Level 4
+  </h4>
+  <h5
+    class="c4"
+  >
+    Heading Level 5
+  </h5>
+  <h6
+    class="c5"
+  >
+    Heading Level 6
+  </h6>
+</div>
+`;

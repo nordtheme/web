@@ -8,15 +8,13 @@
  */
 
 /**
- * @file Provides components that represents basic HTML elements.
+ * @file Provides components that represent basic HTML elements with content sectioning functionality.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning
  * @since 0.3.0
  */
 
-import { A } from "./inline-text-semantics";
-import { H1, H2, H3, H4, H5, H6 } from "./sectioning";
-import { P } from "./text";
+import { H1, H2, H3, H4, H5, H6 } from "./Heading";
 
-export { A, H1, H2, H3, H4, H5, H6, P };
+export { H1, H2, H3, H4, H5, H6 };
