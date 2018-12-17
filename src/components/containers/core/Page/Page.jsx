@@ -9,20 +9,20 @@
 
 import styled from "styled-components";
 
-import { colors, motion, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
+import { motion } from "styles/theme";
 
-const backgroundColor = themedMode({
-  [MODE_BRIGHT_SNOW_FLURRY]: colors.background.base[MODE_BRIGHT_SNOW_FLURRY],
-  [MODE_DARK_NIGHT_FROST]: colors.background.base[MODE_DARK_NIGHT_FROST]
-});
+import { baseBackgroundColor } from "../shared/styles";
 
 /**
  * A basic wrapper component for page content.
  *
+ * @author Arctic Ice Studio <development@arcticicestudio.com>
+ * @author Sven Greb <development@svengreb.de>
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
  * @since 0.3.0
  */
 const Page = styled.main`
-  background-color: ${backgroundColor};
+  background-color: ${baseBackgroundColor};
   transition: background-color ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
 `;
 
