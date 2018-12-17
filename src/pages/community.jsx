@@ -10,19 +10,19 @@
 import React from "react";
 
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/landing";
+import { SectionLanding } from "organisms/page/community";
 
 /**
- * The landing page component representing the root/index of the site.
+ * The component that represents the community page.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.1.0
+ * @since 0.3.0
  */
-const Landing = () => (
-  <BaseLayout>
-    <SectionHero />
+const Community = props => (
+  <BaseLayout {...props}>
+    <SectionLanding />
   </BaseLayout>
 );
 
-export default Landing;
+export default Community;

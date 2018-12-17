@@ -7,8 +7,4 @@
  * License:    MIT
  */
 
-import Section from "./Section";
-import Content from "./Content";
-
-export { Content };
-export default Section;
+export { default } from "./SectionLanding";
