@@ -10,15 +10,17 @@
 import styled from "styled-components";
 
 /**
- * The wrapper component for the headline and subline.
+ * The main wrapper for all composed components.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const TextWrapper = styled.div`
-  text-align: center;
-  margin-top: 2em;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
 `;
 
-export default TextWrapper;
+export default Wrapper;
