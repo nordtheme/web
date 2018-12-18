@@ -8,6 +8,190 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.3.0
+
+![Release Date: 2018-12-18](https://img.shields.io/badge/Release_Date-2018--12--18-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.3.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/5) [![Milestone](https://img.shields.io/badge/Milestone-0.3.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/3)
+
+This version focused on the [responsive web design][gh-52], [core & base component][gh-63] as well as [base HTML elements as components][gh-69] of _Nord Docs_. It includes the [base layout][gh-66] which initially consists of the [header][gh-64] that provides the global navigation links.
+Another focus was the handling of exceptional & special states like [empty states][gh-78] and the [404 error state][gh-84].
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49325616-f1053900-f545-11e8-9725-0b8f5af8d1e2.png" width="12%" /></p>
+
+**Base Media Query Setup** — #61 ⇄ #62 (⊶ 6b78d691)
+↠ The basic setup for components with responsive styles through media queries has been implemented based on the [“Responsive Web Design” design concept][gh-52].
+
+### Media Query Generator
+
+To simplify the usage of [media queries][mdn-mq] with [styled-components][gh-51], a utility function to generate [media templates][stc-docs-mqt]has been implemented. It uses the `min-width` parameter to fulfill the used _mobile-first_ approach. The base size that is used has been implemented as theme property in [#54][gh-55-diff-r49].
+
+### Initial Media Queries
+
+> Always adjust media queries to the content individually and not vice-versa.
+> The design supports the content. Not the other way around.
+
+Like documented in the #52, _Nord Docs_ uses the _mobile-first_ pattern and follows the great [“Google Developer Responsive Web Design” guidelines][gdev-web-fund-rwd]. The recommended way is to create media queries not based on any device sizes but individually based on the content which is unique for each project. This is the best practice and, contrary to most popular CSS framework like Bootstrap, the correct way since each site is different and there are thousands of devices and in the future new sizes will appear.
+The following media query template functions have been implemented:
+
+- `phonePortrait` — `max-width: 479px`
+- `phoneLandscape` — `max-width: 480px`
+- `tabletPortrait` — `max-width: 600px`
+- `tabletLandscape` — `max-width: 900px`
+- `desktop` — `max-width: 1200px`
+- `desktopPlus` — `max-width: 1800px`
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="15%"/></p>
+
+**Core Layout Component: BaseLayout** — #66 ⇄ #68 (⊶ 208c9ac0)
+↠ Implemented the `BaseLayout` core layout component, the default layout of _Nord Docs_. It consists of the [`Root` core container][gh-36] as root element and the core components representing the [header][gh-64], the main [page container][gh-65] and in the future the _footer_.
+
+**Core Container Component: Page** — #65 ⇄ #67 (⊶ 701ec43d)
+↠ Implemented the core container component `Page`, the base wrapper for page content of _Nord Docs_. It renders the [HTML `<main>` element][mdn-html-el-main] to wrap page content and is used in layout components like [`BaseLayout`][gh-66].
+
+**Core Atom HTML Element: P** — #79 ⇄ #80 (⊶ ad995b0a)
+↠ Implemented the core atom `P` that represents the [text content][mdn-html-el-tc] HTML element [`<p>`][mdn-html-el-p]. It uses adjusted styles instead of browser defaults to match _Nord Docs_ brand style.
+
+**Core Atom HTML Element: Heading** — #81 ⇄ #82 (⊶ c4e1aa84)
+↠ Implemented the core atoms `H1`-`H6` that represent the [content sectioning][mdn-html-el-cs] HTML elements [`<h1>`-`<h6>`][mdn-html-el-h]. They use custom styles instead of browser defaults and allow to disable the bottom margin via the `noMargin` prop. The font style like size, modular scale and family adhere to the [“Typography” design concept][gh-2].
+
+**Core Atom HTML Element: A** — #70 ⇄ #71 (⊶ 75d0e49c)
+↠ Implemented the core atom `A` that represents the [inline text semantic][mdn-html-el-inl-txt-sem] HTML element [`<a>`][mdn-html-el-a]. This is a special dynamic and _failsafe_ component because it internally uses the [Gatsby `Link`][gatsby-docs-link] component to route within the site (internal links) while also being able to link to external data.
+
+### URL Routing Utilities
+
+To handle the logic of conditionally rendering a Gatsby `Link` or a basic `<a>`, based on the passed target URL (internal & external), utility functions has been implemented to evaluate the passed target.
+
+**Core Organism Component: Header** — #64 ⇄ #75 (⊶ d6f0fef2)
+↠ Implemented the essential core organism component `Header` that provides the main site navigation and a user action component to [toggle between the global theme modes][gh-57].
+
+### Layout
+
+The header uses the CSS _flexbox_ layout consisting of two container components with the maximum of flexible space between both. The containers contain the branding and the navigation components like described in the sections below.
+
+### Navigation
+
+To allow users to simply navigate around the site, the component provides the quickly accessible navigation. It is placed in the right-sided container and currently contains the following items:
+
+- “Ports” — links to `/ports`, the landing page for all Nord port projects.
+- “Docs” — links to `/docs`, the landing page for Nord's documentation.
+- “Blog” — links to `/blog`, the landing page for Nord's blog.
+- “Community” — links to `/community`, the landing page of the Nord community channels.
+
+### Branding
+
+To represent Nord's branding, the left-sided container contains the Nord logo with the caption. It links the landing page to allow quick access to the root (`/`) page.
+
+### Theme Mode Switcher
+
+The user action component mentioned in the introduction paragraph above allows to toggle between the available global theme modes. Both modes are represented through icons where a sun is used for the “bright snow flurry” and a moon for the “dark night frost” mode. They are implemented using the awesome [React Pose][react-pose] project to animate the switching. The icons “fly out and in” within the bounds of the component that takes the form of a button.
+
+Like documented in the [“Iconography” design concept][gh-74], the awesome [Eva Icons][eva-icons] project is for icons.
+
+### Responsive Design
+
+For reduced width views (responsive design) the header adjusts several styles and composed components.
+
+#### Slide Menu
+
+The main navigation link list will be hidden and replaced by a user action element (button) that toggles an animated slide down menu containing the navigation links. The drop down starts right below the header and takes up the available height and width to cover the full screen. As soon as the animation starts all scroll events will be removed from the underlying content (body) using the [body-scroll-lock][gh-bsl] project. This prevents users from scrolling the content below the menu when the menu itself overflows the Y-axis and shows a scroll bar.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49829535-fc026980-fd8e-11e8-9cba-d5d6e8149c10.png" width="15%"/></p>
+
+### Behavior
+
+To allow quick access while also being inconspicuous, the component is _sticky_ at the top of the site, but collapses as soon as the user scrolls down and only switches back into expanded mode when at top of the site.
+In expanded mode, the height of the header is larger and the caption of the logo is visible. As soon as switching into collapsed mode the height decreases and the logo caption fades out with a smooth transition animation.
+
+To achieve the resizing animation based on the scroll position the [subscribe-ui-event][gh-sue] project is used to listen to scroll events. It provides throttling by default, only calls `document.body.scrollTop` and `window.innerWidth` once and uses `requestAnimationFrame` for a better performance.
+
+**Empty State Component** — #78 ⇄ #83 (⊶ 2079c056)
+↠ Implemented the `EmptyState` molecule component to represent an [empty state][md-com-es]. It consists an vector illustration, a headline and the corresponding subline.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50157534-f696a900-02d1-11e9-9d04-80a813da9e6c.png" width="12%"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50157551-0615f200-02d2-11e9-898f-611ebd20621e.png" width="12%"/></p>
+
+There are initially 3 different illustrations available that can be selected through the `illustrationVariant` prop. The headline informs the user about the purpose of the illustration and the reason why it is currently shown while the subline can include additional information and helpful instructions.
+
+The empty state component has been placed within a base HTML component that represents a [`<section>`][mdn-html-el-sec] with multiple base style variants and is now initially used by the new base page components for the [header navigation links][gh-64].
+
+**404 Page Components** — #84 ⇄ #85 (⊶ a39649fa)
+↠ Implemented the [404][wiki-404] page and illustration components to handle requested but non-existing routes and resources.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50157486-d23acc80-02d1-11e9-9ed9-628174d012c9.png" width="15%"/></p>
+
+It aligns with _Nord Docs_ brand and can use a humorous image and tagline that conveys the purpose of the screen, without appearing actionable.
+Also see the [great Gatsby documentation about 404 pages][gatsby-docs-404] for more details.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49604267-bceaa780-f98d-11e8-932a-05ee4b952a83.png" width="15%" /></p>
+
+**SVGR Integration** — #72 ⇄ #73 (⊶ 39c13041)
+↠ Integrated [SVGR][], a transformer for SVG into ready to use React components. It is part of [create-react-app][cra] and makes SVG integration into React projects easy.
+
+All configurations are placed in the `svgr.config.js` file instead of passing them to the corresponding Gatsby plugin for the Webpack loader that is described in the section below.
+
+### Webpack Loader
+
+To directly import SVG's as React component the [@svgr/webpack][gh-svgr-wpl] package is used to simply integrate SVGR as Webpack plugin. It has been added through [gatsby-plugin-svgr][npm-gp-svgr] which adjusts the required Webpack configurations by adding the loader and removing the default `.svg` file loader/handler.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48661206-c0fe6600-ea6e-11e8-8142-4c65c82b9927.png" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48837384-7ab64900-ed85-11e8-829c-3fd6efe86c60.png" width="15%"/></p>
+
+**Jest utilities for Styled Components** — #76 ⇄ #77 (⊶ 47010b8c)
+↠ Integrated [jest-styled-components][gh-jsc], a set of utilities for testing [Styled Components][styled-components] with [Jest][] that improves the snapshot testing experience and provides a brand new matcher to make expectations on the style rules.
+Instead of storing the generated class names in snapshots it allows to track the actual CSS rules and attributes for **better comparison what changed** and **if the change is even really related to the affected component**.
+
+This is the officially [recommended library to use Jest with styled-components][stc-docs-tooling-jest].
+
+```js
+const Button = styled.button`
+  color: red;
+`;
+```
+
+```js
+exports[`snapshot`] = `
+<button
+  className="sc-bdVaJa rOCEJ"
+/>
+`;
+```
+
+**Before**
+
+```diff
+- Snapshot
++ Received
+
+ <button
+-  className="sc-bdVaJa rOCEJ"
++  className="sc-bdVaJa hUzqNt"
+ />
+```
+
+**After**
+
+```diff
+- Snapshot
++ Received
+
++.c0 {
++  color: green;
++}
++
+ <button
+-  className="sc-bdVaJa rOCEJ"
++  className="c0"
+ />
+```
+
+The package has been added in the setup file defined in Jest's `setupTestFrameworkScriptFile` field (#39) to enable all included features.
+
+### Custom Style Matcher
+
+The [custom `toHaveStyleRule` matcher][gh-jsc-matcher] is useful to test if a given rule is applied to a component. It is added to the extended global `except` object when the main package file is being imported.
+
 # 0.2.0
 
 ![Release Date: 2018-12-04](https://img.shields.io/badge/Release_Date-2018--12--04-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.2.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/4) [![Milestone](https://img.shields.io/badge/Milestone-0.2.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/2)
@@ -382,14 +566,19 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [babel-docs-plug]: https://babeljs.io/docs/en/plugins
 [circleci]: https://circleci.com
 [codecov]: https://codecov.io
+[cra]: https://facebook.github.io/create-react-app
 [editorconfig]: https://editorconfig.org
 [eslint]: https://eslint.org
 [eslint-docs-auto-fix]: https://eslint.org/docs/user-guide/command-line-interface#fixing-problems
 [eslint-r-import/no-extraneous-dependencies]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+[eva-icons]: https://akveo.github.io/eva-icons
 [flow]: https://flow.org
+[gatsby-docs-404]: https://www.gatsbyjs.org/docs/add-404-page
 [gatsby-docs-api-node]: https://www.gatsbyjs.org/docs/node-apis
 [gatsby-docs-config]: https://gatsbyjs.org/docs/gatsby-config
+[gatsby-docs-link]: https://www.gatsbyjs.org/docs/gatsby-link
 [gatsby-docs-testing]: https://www.gatsbyjs.org/docs/testing
+[gdev-web-fund-rwd]: https://developers.google.com/web/fundamentals/design-and-ux/responsive
 [gf-rubik]: https://fonts.google.com/specimen/Rubik
 [gf-source-code-pro]: https://fonts.google.com/specimen/Source+Code+Pro
 [gh-1]: https://github.com/arcticicestudio/nord-docs/issues/1
@@ -402,9 +591,19 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-43]: https://github.com/arcticicestudio/nord-docs/issues/43
 [gh-46]: https://github.com/arcticicestudio/nord-docs/issues/46
 [gh-51]: https://github.com/arcticicestudio/nord-docs/issues/51
+[gh-52]: https://github.com/arcticicestudio/nord-docs/issues/52
 [gh-54]: https://github.com/arcticicestudio/nord-docs/issues/54
 [gh-57]: https://github.com/arcticicestudio/nord-docs/issues/57
 [gh-59]: https://github.com/arcticicestudio/nord-docs/issues/59
+[gh-63]: https://github.com/arcticicestudio/nord-docs/issues/63
+[gh-64]: https://github.com/arcticicestudio/nord-docs/issues/64
+[gh-65]: https://github.com/arcticicestudio/nord-docs/issues/65
+[gh-66]: https://github.com/arcticicestudio/nord-docs/issues/66
+[gh-69]: https://github.com/arcticicestudio/nord-docs/issues/69
+[gh-74]: https://github.com/arcticicestudio/nord-docs/issues/74
+[gh-78]: https://github.com/arcticicestudio/nord-docs/issues/78
+[gh-84]: https://github.com/arcticicestudio/nord-docs/issues/84
+[gh-bsl]: https://github.com/willmcpo/body-scroll-lock
 [gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
 [gh-help-coc]: https://help.github.com/articles/adding-a-code-of-conduct-to-your-project
@@ -416,6 +615,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-help-pr-templ]: https://help.github.com/articles/creating-a-pull-request-template-for-your-repository
 [gh-husky]: https://github.com/typicode/husky
 [gh-jest-dom-matcher]: https://github.com/gnapse/jest-dom#custom-matchers
+[gh-jsc]: https://github.com/styled-components/jest-styled-components
 [gh-lint-staged]: https://github.com/okonet/lint-staged
 [gh-remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-remark-preset-lint-arcticicestudio]: https://github.com/arcticicestudio/remark-preset-lint-arcticicestudio
@@ -423,14 +623,25 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
 [gh-styleguide-js]: https://github.com/arcticicestudio/styleguide-javascript
 [gh-styleguide-md]: https://github.com/arcticicestudio/styleguide-markdown
+[gh-sue]: https://github.com/yahoo/subscribe-ui-event
 [git-docs-gitattributes]: https://git-scm.com/docs/gitattributes
 [git-docs-gitignore]: https://git-scm.com/docs/gitignore
 [git-docs-mailmap]: https://git-scm.com/docs/git-shortlog#_mapping_authors
 [inter-ui]: https://rsms.me/inter
 [jest]: https://jestjs.io
 [md]: https://material.io
+[md-com-es]: https://material.io/design/communication/empty-states.html
 [md-motion-speed]: https://material.io/design/motion/speed.html
+[mdn-html-el-a]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+[mdn-html-el-cs]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning
+[mdn-html-el-h]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+[mdn-html-el-inl-txt-sem]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics
+[mdn-html-el-main]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+[mdn-html-el-p]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+[mdn-html-el-sec]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
+[mdn-html-el-tc]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Text_content
 [mdn-ls]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[mdn-mq]: https://developer.mozilla.org/de/docs/Web/CSS/Media_Queries/Using_media_queries
 [mdn-ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 [mit-lic]: https://opensource.org/licenses/MIT
 [mobx]: https://mobx.js.org
@@ -455,15 +666,20 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [react]: https://reactjs.org
 [react-docs-context]: https://reactjs.org/docs/context.html
 [react-docs-typecheck-pt]: https://reactjs.org/docs/typechecking-with-proptypes.html
+[react-pose]: https://popmotion.io/pose
 [remark]: https://remark.js.org
 [stc-docs-globstyle]: https://www.styled-components.com/docs/api#createglobalstyle
+[stc-docs-mqt]: https://www.styled-components.com/docs/advanced#media-templates
 [stc-docs-thprov]: https://www.styled-components.com/docs/api#themeprovider
+[stc-docs-tooling-jest]: https://www.styled-components.com/docs/tooling#jest-integration
 [styled-components]: https://styled-components.com
 [styleguide-javascript]: https://arcticicestudio.github.io/styleguide-javascript
 [styleguide-markdown]: https://arcticicestudio.github.io/styleguide-markdown
+[svgr]: https://www.smooth-code.com/open-source/svgr
 [typescript]: https://www.typescriptlang.org
 [webpack]: https://webpack.js.org
 [webpack-docs-resv-alias]: https://webpack.js.org/configuration/resolve/#resolve-alias
+[wiki-404]: https://en.wikipedia.org/wiki/HTTP_404
 
 <!-- v0.1.0 -->
 
@@ -496,3 +712,10 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [stc-docs-api-thp]: https://www.styled-components.com/docs/api#themeprovider
 [stc-docs-theming]: https://www.styled-components.com/docs/advanced#theming
 [stc-docs-tool-babel]: https://www.styled-components.com/docs/tooling#babel-plugin
+
+<!-- v0.3.0 -->
+
+[gh-55-diff-r49]: https://github.com/arcticicestudio/nord-docs/pull/55/files#diff-90a2aa45c339ce4720a7fbbd23c65e3eR49
+[gh-jsc-matcher]: https://github.com/styled-components/jest-styled-components#tohavestylerule
+[gh-svgr-wpl]: https://github.com/smooth-code/svgr/tree/master/packages/webpack
+[npm-gp-svgr]: https://www.npmjs.com/package/gatsby-plugin-svgr
