@@ -30,7 +30,7 @@
     "build:gatsby": "gatsby build",
     "clean": "del .cache/ build/ public/",
     "dev": "gatsby develop",
-    "dev:fresh": "npm-run-all clean dev:local",
+    "dev:fresh": "npm-run-all clean dev",
     "dev:local": "gatsby develop -H 0.0.0.0",
     "format": "npm-run-all format:pretty format:fix",
     "format:fix": "eslint --fix --ext .js,.jsx .",

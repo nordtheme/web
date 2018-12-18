@@ -12,12 +12,27 @@ import { css } from "styled-components";
 import { media } from "styles/theme";
 
 const emptyStateIllustrationStyles = css`
-  width: 8em;
+  width: 7em;
 
-  ${media.phonePortrait`
-    width: 7em;
+  ${media.phoneLandscape`
+    width: 8em;
   `}
 `;
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { emptyStateIllustrationStyles };
+const errorState404IllustrationStyles = css`
+  width: 16em;
+
+  ${media.phoneLandscape`
+    width: 20em;
+  `}
+
+  ${media.tabletLandscape`
+    width: 25em;
+  `}
+
+  ${media.desktop`
+    width: 30em;
+  `}
+`;
+
+export { emptyStateIllustrationStyles, errorState404IllustrationStyles };
