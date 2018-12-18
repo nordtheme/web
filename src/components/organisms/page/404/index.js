@@ -7,18 +7,14 @@
  * License:    MIT
  */
 
-import styled from "styled-components";
-
 /**
- * The wrapper component for the headline and subline.
- *
+ * @file Provides the components for the 404 page.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const TextWrapper = styled.div`
-  text-align: center;
-  margin-top: 2em;
-`;
 
-export default TextWrapper;
+import SectionLanding from "./SectionLanding";
+
+/* eslint-disable-next-line import/prefer-default-export */
+export { SectionLanding };

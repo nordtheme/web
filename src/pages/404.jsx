@@ -7,18 +7,22 @@
  * License:    MIT
  */
 
-import styled from "styled-components";
+import React from "react";
+
+import BaseLayout from "layouts/core/BaseLayout";
+import { SectionLanding } from "organisms/page/404";
 
 /**
- * The wrapper component for the headline and subline.
+ * The component that represents the 404 page.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const TextWrapper = styled.div`
-  text-align: center;
-  margin-top: 2em;
-`;
+const Docs = props => (
+  <BaseLayout {...props}>
+    <SectionLanding />
+  </BaseLayout>
+);
 
-export default TextWrapper;
+export default Docs;

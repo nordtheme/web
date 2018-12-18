@@ -9,16 +9,15 @@
 
 import styled from "styled-components";
 
+import { H3 } from "atoms/core/HTMLElements";
+
 /**
- * The wrapper component for the headline and subline.
+ * The headline to inform the user about the purpose of the illustration and the reason why it is currently shown.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const TextWrapper = styled.div`
-  text-align: center;
-  margin-top: 2em;
-`;
+const Headline = styled(H3)``;
 
-export default TextWrapper;
+export default Headline;

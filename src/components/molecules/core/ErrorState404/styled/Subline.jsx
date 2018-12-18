@@ -9,16 +9,17 @@
 
 import styled from "styled-components";
 
+import { P } from "atoms/core/HTMLElements";
+
 /**
- * The wrapper component for the headline and subline.
+ * The subline that includes information and helpful instructions in addition to the headline.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const TextWrapper = styled.div`
-  text-align: center;
-  margin-top: 2em;
+const Subline = styled(P)`
+  margin-top: 1em;
 `;
 
-export default TextWrapper;
+export default Subline;
