@@ -95,6 +95,17 @@ const BASE_DIR_CONFIG = `${BASE_DIR_SRC}/config`;
 const BASE_DIR_PAGES = `${BASE_DIR_SRC}/pages`;
 
 /**
+ * The "Google Universal Analytics" tracking ID.
+ *
+ * @constant {string}
+ * @see https://analytics.google.com
+ * @see https://marketingplatform.google.com/about/analytics
+ * @see https://developers.google.com/analytics
+ * @since 0.4.0
+ */
+const GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID = "UA-131169071-1";
+
+/**
  * The internal type for MDX nodes.
  *
  * @constant {string}
@@ -121,6 +132,7 @@ module.exports = {
   BASE_DIR_CONFIG,
   BASE_DIR_CONTENT,
   BASE_DIR_PAGES,
+  GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID,
   NODE_TYPE_MDX,
   REGEX_BLOG_POST_DATE
 };
