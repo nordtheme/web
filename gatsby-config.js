@@ -21,7 +21,8 @@ const {
   BASE_DIR_CONTENT,
   BASE_DIR_ASSETS_IMAGES,
   BASE_DIR_CONFIG,
-  BASE_DIR_PAGES
+  BASE_DIR_PAGES,
+  GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID
 } = require("./src/config/internal/constants");
 const { BASE_PUBLIC_URL } = require("./src/config/routes/constants");
 
@@ -77,6 +78,33 @@ module.exports = {
       options: {
         name: "pages",
         path: `${__dirname}/${BASE_DIR_PAGES}/`
+      }
+    },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: {
+        /* The tracking IDs for all used "Google Marketing" products. */
+        trackingIds: [GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID],
+
+        /* The configuration that gets passed to the `gtag.js`'s `config` command. */
+        /* eslint-disable-next-line babel/camelcase */
+        gtagConfig: { anonymize_ip: true },
+
+        pluginConfig: {
+          /*
+           * Put the `gtag.js` tracking script in the HTML `<head>` instead of the `<body>` as recommended by Google.
+           *
+           * @see https://developers.google.com/analytics/devguides/collection/gtagjs
+           */
+          head: true,
+
+          /*
+           * Respect the 'Do Not Track' HTTP header.
+           *
+           * @see https://en.wikipedia.org/wiki/Do_Not_Track
+           */
+          respectDNT: true
+        }
       }
     }
   ]
