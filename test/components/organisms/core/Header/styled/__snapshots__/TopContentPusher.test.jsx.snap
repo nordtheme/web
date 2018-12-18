@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles has correct height based on header height in unpinned mode 1`] = `
+.c0 {
+  height: 5em;
+  position: relative;
+  background-color: transparent;
+}
+
+<div
+  class="c0"
+  height="80"
+/>
+`;
+
+exports[`theme styles has correct height based on the header height in pinned mode 1`] = `
+.c0 {
+  height: 3.5em;
+  position: relative;
+  background-color: transparent;
+}
+
+<div
+  class="c0"
+  height="56"
+/>
+`;

@@ -6,9 +6,11 @@
  * Repository: https://github.com/arcticicestudio/nord-docs
  * License:    MIT
  */
-import React, { Fragment } from "react";
 
-import Root from "containers/core/Root";
+import React from "react";
+
+import BaseLayout from "layouts/core/BaseLayout";
+import { SectionHero } from "organisms/page/landing";
 
 /**
  * The landing page component representing the root/index of the site.
@@ -18,9 +20,9 @@ import Root from "containers/core/Root";
  * @since 0.1.0
  */
 const Landing = () => (
-  <Root>
-    <Fragment />
-  </Root>
+  <BaseLayout>
+    <SectionHero />
+  </BaseLayout>
 );
 
 export default Landing;

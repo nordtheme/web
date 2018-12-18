@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles matches the snapshot 1`] = `
+.c1 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:focus,
+.c1:hover,
+.c1:visited {
+  outline: none;
+}
+
+.c0 {
+  border-radius: 0.25em;
+  padding: 0.15em 0.5em;
+  -webkit-transition: background-color 100ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
+}
+
+.c0:active,
+.c0:focus,
+.c0:hover {
+  background-color: rgba(236,239,244,0.4);
+}
+
+<a
+  class="c0 c1"
+  href=""
+  style="transform: none;"
+>
+  Nord
+</a>
+`;

@@ -14,7 +14,7 @@
  * @since 0.1.0
  */
 
-const { ROOT, BLOG, DOCS, LANDING } = require("./constants");
+const { BLOG, COMMUNITY, DOCS, LANDING, PORTS, ROOT } = require("./constants");
 
 /**
  * The root route mapping.
@@ -33,6 +33,14 @@ const ROUTE_ROOT = ROOT;
 const ROUTE_BLOG = ROUTE_ROOT + BLOG;
 
 /**
+ * The route mapping for the "community" page.
+ *
+ * @constant {string}
+ * @since 0.3.0
+ */
+const ROUTE_COMMUNITY = ROUTE_ROOT + COMMUNITY;
+
+/**
  * The route mapping for the "docs" page.
  *
  * @constant {string}
@@ -49,9 +57,19 @@ const ROUTE_DOCS = ROUTE_ROOT + DOCS;
  */
 const ROUTE_LANDING = ROUTE_ROOT + LANDING;
 
+/**
+ * The route mapping for the port projects page.
+ *
+ * @constant {string}
+ * @since 0.3.0
+ */
+const ROUTE_PORTS = ROUTE_ROOT + PORTS;
+
 module.exports = {
-  ROUTE_ROOT,
   ROUTE_BLOG,
+  ROUTE_COMMUNITY,
   ROUTE_DOCS,
-  ROUTE_LANDING
+  ROUTE_LANDING,
+  ROUTE_PORTS,
+  ROUTE_ROOT
 };

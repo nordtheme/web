@@ -38,4 +38,30 @@ const MODE_DARK_NIGHT_FROST = "DARK_NIGHT_FROST";
  */
 const THEME_KEY_MODE = "mode";
 
-export { MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST, THEME_KEY_MODE };
+/**
+ * The elements a `z-index` value is required for.
+ *
+ * @constant {Object}
+ * @since 0.3.0
+ */
+const Z_INDEX_ELEMENTS = {
+  CONTENT: "content",
+  HEADER: "header",
+  HEADER_COMPACT_SLIDE_MENU: "header-compact-slide-menu",
+  MAIN: "main"
+};
+
+/**
+ * The order of the available elements.
+ *
+ * @constant {Array<string>}
+ * @since 0.3.0
+ */
+const Z_INDEX_ELEMENT_ORDER = [
+  Z_INDEX_ELEMENTS.MAIN,
+  Z_INDEX_ELEMENTS.CONTENT,
+  Z_INDEX_ELEMENTS.HEADER,
+  Z_INDEX_ELEMENTS.HEADER_COMPACT_SLIDE_MENU
+];
+
+export { MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST, THEME_KEY_MODE, Z_INDEX_ELEMENTS, Z_INDEX_ELEMENT_ORDER };

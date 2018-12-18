@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles adjusts top and bottom margin to passed props 1`] = `
+.c0 {
+  width: 100%;
+}
+
+@media (min-width:75em) {
+  .c0 {
+    max-width: 75em;
+  }
+}
+
+<div
+  class="c0"
+>
+  Nord
+</div>
+`;
+
+exports[`theme styles has top and bottom margin 1`] = `
+.c0 {
+  width: 100%;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+@media (min-width:75em) {
+  .c0 {
+    max-width: 75em;
+  }
+}
+
+<div
+  class="c0"
+>
+  Nord
+</div>
+`;

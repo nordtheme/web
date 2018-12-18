@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logical behavior renders external URLs with \`href\` prop 1`] = `
+.c0 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:active,
+.c0:focus,
+.c0:hover,
+.c0:visited {
+  outline: none;
+}
+
+<a
+  class="c0"
+  href="https://nordtheme.com"
+>
+  Docs
+</a>
+`;
+
+exports[`logical behavior renders external URLs with \`to\` prop 1`] = `
+.c0 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:active,
+.c0:focus,
+.c0:hover,
+.c0:visited {
+  outline: none;
+}
+
+<a
+  class="c0"
+  href="https://nordtheme.com"
+>
+  Docs
+</a>
+`;
+
+exports[`logical behavior renders inernal URLs with \`href\` prop 1`] = `
+.c0 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:active,
+.c0:focus,
+.c0:hover,
+.c0:visited {
+  outline: none;
+}
+
+<a
+  class="c0"
+  href="/docs"
+>
+  Docs
+</a>
+`;
+
+exports[`logical behavior renders inernal URLs with \`to\` prop 1`] = `
+.c0 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:active,
+.c0:focus,
+.c0:hover,
+.c0:visited {
+  outline: none;
+}
+
+<a
+  class="c0"
+  href="/docs"
+>
+  Docs
+</a>
+`;

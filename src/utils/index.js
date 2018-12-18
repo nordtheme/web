@@ -14,6 +14,8 @@
  * @since 0.2.0
  */
 
+import isRouteInternal from "./isRouteInternal";
+import isRoutePartiallyMatch from "./isRoutePartiallyMatch";
 import { readSessionCache, writeSessionCache } from "./sessionCache";
 
-export { readSessionCache, writeSessionCache };
+export { isRouteInternal, isRoutePartiallyMatch, readSessionCache, writeSessionCache };

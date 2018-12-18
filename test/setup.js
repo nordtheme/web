@@ -13,6 +13,9 @@
  * @author Sven Greb <development@svengreb.de>
  * @see https://jestjs.io/docs/en/configuration
  * @see https://www.gatsbyjs.org/docs/testing
+ * @see https://github.com/gnapse/jest-dom#custom-matchers
+ * @see https://github.com/styled-components/jest-styled-components#tohavestylerule
+ * @see https://www.styled-components.com/docs/tooling#jest-integration
  * @since 0.1.0
  */
 
@@ -27,3 +30,12 @@ import "jest-dom/extend-expect";
  * Automatically execute `afterEach(cleanup)` for each test.
  */
 import "react-testing-library/cleanup-after-each";
+
+/*
+ * Add support and utilities for testing styled-somponents with Jest.
+ *
+ * @see https://github.com/styled-components/jest-styled-components#tohavestylerule
+ * @see https://www.styled-components.com/docs/tooling#jest-integration
+ * @since 0.3.0
+ */
+import "jest-styled-components";

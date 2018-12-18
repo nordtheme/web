@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles matches the snapshot 1`] = `
+.c0 {
+  position: relative;
+  background-color: #fff;
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+}
+
+.c1 {
+  position: relative;
+  background-color: #fbfbfc;
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+}
+
+.c2 {
+  position: relative;
+  background-color: #f8f9fb;
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+}
+
+<div>
+  <section
+    class="c0"
+  >
+    Section Base Background
+  </section>
+  <section
+    class="c1"
+  >
+    Section Primary Background
+  </section>
+  <section
+    class="c2"
+  >
+    Section Secondary Background
+  </section>
+</div>
+`;

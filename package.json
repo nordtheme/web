@@ -1,7 +1,7 @@
 {
   "name": "nord-docs",
   "title": "Nord Docs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "The official Nord website and documentation",
   "author": {
     "name": "Arctic Ice Studio",
@@ -30,7 +30,7 @@
     "build:gatsby": "gatsby build",
     "clean": "del .cache/ build/ public/",
     "dev": "gatsby develop",
-    "dev:fresh": "npm-run-all clean dev:local",
+    "dev:fresh": "npm-run-all clean dev",
     "dev:local": "gatsby develop -H 0.0.0.0",
     "format": "npm-run-all format:pretty format:fix",
     "format:fix": "eslint --fix --ext .js,.jsx .",
@@ -51,6 +51,7 @@
     "@babel/plugin-proposal-export-default-from": "7.0.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.0.0",
     "@babel/plugin-proposal-optional-chaining": "7.0.0",
+    "@svgr/webpack": "4.1.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
     "babel-plugin-react-remove-properties": "0.2.5",
@@ -60,6 +61,7 @@
     "del-cli": "1.1.0",
     "eslint": "5.9.0",
     "eslint-config-arcticicestudio": ">=0.4.0 <1.0.0",
+    "eslint-import-resolver-jest": "2.1.1",
     "eslint-plugin-babel": "5.3.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
@@ -71,6 +73,7 @@
     "jest": "23.6.0",
     "jest-dom": "2.1.1",
     "jest-junit": "5.2.0",
+    "jest-styled-components": "6.3.1",
     "lint-staged": "8.1.0",
     "npm-run-all": "4.1.5",
     "prettier": "1.15.2",
@@ -80,6 +83,7 @@
     "webpack-bundle-analyzer": "3.0.3"
   },
   "dependencies": {
+    "body-scroll-lock": "2.6.1",
     "gatsby": "2.0.55",
     "gatsby-plugin-canonical-urls": "2.0.7",
     "gatsby-plugin-catch-links": "2.0.8",
@@ -87,6 +91,7 @@
     "gatsby-plugin-react-helmet": "3.0.2",
     "gatsby-plugin-remove-trailing-slashes": "2.0.5",
     "gatsby-plugin-styled-components": "3.0.4",
+    "gatsby-plugin-svgr": "2.0.1",
     "gatsby-source-filesystem": "2.0.9",
     "gatsby-transformer-yaml": "2.1.5",
     "inter-ui": "3.0.0",
@@ -96,9 +101,11 @@
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-helmet": "5.2.0",
+    "react-pose": "4.0.4",
     "styled-components": "4.1.2",
     "styled-modern-normalize": ">=0.2.0 <1.0.0",
     "styled-theming": "2.2.0",
+    "subscribe-ui-event": "2.0.5",
     "typeface-rubik": "0.0.54",
     "typeface-source-code-pro": "0.0.54"
   }

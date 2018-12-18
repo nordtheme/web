@@ -46,13 +46,13 @@ module.exports = {
    */
   moduleNameMapper: {
     /* Reflect Webpack's `resolve.alias` configuration. */
-    "^assets(.*)$": "<rootDir>/src/assets$1",
     "^atoms(.*)$": "<rootDir>/src/components/atoms$1",
     "^config(.*)$": "<rootDir>/src/config$1",
     "^containers(.*)$": "<rootDir>/src/components/containers$1",
     "^data(.*)$": "<rootDir>/src/data$1",
     "^layouts(.*)$": "<rootDir>/src/components/layouts$1",
     "^molecules(.*)$": "<rootDir>/src/components/molecules$1",
+    "^nord-docs-test-utils(.*)$": "<rootDir>/test/__utils__$1",
     "^organisms(.*)$": "<rootDir>/src/components/organisms$1",
     "^pages(.*)$": "<rootDir>/src/pages$1",
     "^stores(.*)$": "<rootDir>/src/stores$1",
@@ -61,8 +61,10 @@ module.exports = {
     "^utils(.*)$": "<rootDir>/src/utils$1",
     /* Map all import stylesheets to the "identity object proxy" module. */
     ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/test/__mocks__/file.js"
+    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+      "<rootDir>/test/__mocks__/file.js",
+    /* Ensure React components loaded from SVG files are mocked correctly. */
+    ".+\\.svg$": "<rootDir>/test/__mocks__/svgr.jsx"
   },
 
   /*
