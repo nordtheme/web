@@ -85,11 +85,9 @@ module.exports = {
       options: {
         /* The tracking IDs for all used "Google Marketing" products. */
         trackingIds: [GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID],
-
         /* The configuration that gets passed to the `gtag.js`'s `config` command. */
         /* eslint-disable-next-line babel/camelcase */
         gtagConfig: { anonymize_ip: true },
-
         pluginConfig: {
           /*
            * Put the `gtag.js` tracking script in the HTML `<head>` instead of the `<body>` as recommended by Google.
@@ -97,7 +95,6 @@ module.exports = {
            * @see https://developers.google.com/analytics/devguides/collection/gtagjs
            */
           head: true,
-
           /*
            * Respect the 'Do Not Track' HTTP header.
            *
@@ -106,6 +103,8 @@ module.exports = {
           respectDNT: true
         }
       }
-    }
+    },
+    /* NOTE: The following plugins must be listed last in this array to work properly! */
+    "gatsby-plugin-netlify"
   ]
 };
