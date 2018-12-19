@@ -21,10 +21,11 @@ const {
   BASE_DIR_CONTENT,
   BASE_DIR_ASSETS_IMAGES,
   BASE_DIR_CONFIG,
-  BASE_DIR_PAGES,
-  GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID
+  BASE_DIR_PAGES
 } = require("./src/config/internal/constants");
 const { BASE_PUBLIC_URL } = require("./src/config/routes/constants");
+const gatsbyPluginGoogleGtagConfig = require("./.gatsby/plugins/google/gtag");
+const gatsbyPluginManifestConfig = require("./.gatsby/plugins/manifest");
 
 module.exports = {
   siteMetadata: {
@@ -82,29 +83,12 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-google-gtag",
-      options: {
-        /* The tracking IDs for all used "Google Marketing" products. */
-        trackingIds: [GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID],
-        /* The configuration that gets passed to the `gtag.js`'s `config` command. */
-        /* eslint-disable-next-line babel/camelcase */
-        gtagConfig: { anonymize_ip: true },
-        pluginConfig: {
-          /*
-           * Put the `gtag.js` tracking script in the HTML `<head>` instead of the `<body>` as recommended by Google.
-           *
-           * @see https://developers.google.com/analytics/devguides/collection/gtagjs
-           */
-          head: true,
-          /*
-           * Respect the 'Do Not Track' HTTP header.
-           *
-           * @see https://en.wikipedia.org/wiki/Do_Not_Track
-           */
-          respectDNT: true
-        }
-      }
+      options: gatsbyPluginGoogleGtagConfig
     },
-    /* NOTE: The following plugins must be listed last in this array to work properly! */
-    "gatsby-plugin-netlify"
+    /* NOTE: The following plugins rely on the order in this array and must be placed at last in order work properly! */
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: gatsbyPluginManifestConfig
+    }
   ]
 };
