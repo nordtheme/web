@@ -89,6 +89,11 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: gatsbyPluginManifestConfig
-    }
+    },
+    /*
+     * This plugin must definitely be listed last to ensure cache-able files like the web app manifest are included in
+     * the service worker!
+     */
+    "gatsby-plugin-offline"
   ]
 };
