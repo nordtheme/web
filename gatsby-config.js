@@ -26,6 +26,7 @@ const {
 const { BASE_PUBLIC_URL } = require("./src/config/routes/constants");
 const gatsbyPluginGoogleGtagConfig = require("./.gatsby/plugins/google/gtag");
 const gatsbyPluginManifestConfig = require("./.gatsby/plugins/manifest");
+const gatsbyPluginRobotsTxt = require("./.gatsby/plugins/robots-txt");
 
 module.exports = {
   siteMetadata: {
@@ -86,6 +87,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-gtag",
       options: gatsbyPluginGoogleGtagConfig
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: gatsbyPluginRobotsTxt
     },
     /* NOTE: The following plugins rely on the order in this array and must be placed at last in order work properly! */
     {
