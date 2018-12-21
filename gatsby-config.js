@@ -30,7 +30,8 @@ const gatsbyPluginManifestConfig = require("./.gatsby/plugins/manifest");
 module.exports = {
   siteMetadata: {
     nord: { ...metadataNord },
-    ...metadataNordDocs
+    ...metadataNordDocs,
+    siteUrl: metadataNordDocs.homepage
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -40,6 +41,7 @@ module.exports = {
     "gatsby-plugin-no-sourcemaps",
     "gatsby-transformer-yaml",
     "gatsby-plugin-svgr",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
