@@ -9,6 +9,7 @@
 
 import React from "react";
 
+import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
 import { SectionLanding } from "organisms/page/404";
 
@@ -19,10 +20,12 @@ import { SectionLanding } from "organisms/page/404";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const Docs = props => (
-  <BaseLayout {...props}>
+const HttpStatus404 = ({ location: { pathname } }) => (
+  <BaseLayout pathName={pathname}>
     <SectionLanding />
   </BaseLayout>
 );
 
-export default Docs;
+HttpStatus404.propTypes = locationPropTypes;
+
+export default HttpStatus404;

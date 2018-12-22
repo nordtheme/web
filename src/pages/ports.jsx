@@ -9,6 +9,7 @@
 
 import React from "react";
 
+import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
 import { SectionLanding } from "organisms/page/ports";
 
@@ -19,10 +20,12 @@ import { SectionLanding } from "organisms/page/ports";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const Ports = props => (
-  <BaseLayout {...props}>
+const Ports = ({ location: { pathname } }) => (
+  <BaseLayout pathName={pathname}>
     <SectionLanding />
   </BaseLayout>
 );
+
+Ports.propTypes = locationPropTypes;
 
 export default Ports;

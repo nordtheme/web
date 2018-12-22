@@ -9,6 +9,7 @@
 
 import React from "react";
 
+import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
 import { SectionBlogPosts } from "organisms/page/blog";
 
@@ -19,10 +20,12 @@ import { SectionBlogPosts } from "organisms/page/blog";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const Blog = props => (
-  <BaseLayout {...props}>
+const Blog = ({ location: { pathname } }) => (
+  <BaseLayout pathName={pathname}>
     <SectionBlogPosts />
   </BaseLayout>
 );
+
+Blog.propTypes = locationPropTypes;
 
 export default Blog;
