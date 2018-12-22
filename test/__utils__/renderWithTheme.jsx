@@ -20,6 +20,6 @@ import Root from "containers/core/Root";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const renderWithTheme = components => render(<Root>{components}</Root>);
+const renderWithTheme = (components, options = {}) => render(<Root>{components}</Root>, options);
 
 export default renderWithTheme;
