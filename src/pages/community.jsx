@@ -9,6 +9,7 @@
 
 import React from "react";
 
+import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
 import { SectionLanding } from "organisms/page/community";
 
@@ -19,10 +20,12 @@ import { SectionLanding } from "organisms/page/community";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const Community = props => (
-  <BaseLayout {...props}>
+const Community = ({ location: { pathname } }) => (
+  <BaseLayout pathName={pathname}>
     <SectionLanding />
   </BaseLayout>
 );
+
+Community.propTypes = locationPropTypes;
 
 export default Community;
