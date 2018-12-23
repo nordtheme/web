@@ -24,11 +24,15 @@ const {
   BASE_DIR_PAGES
 } = require("./src/config/internal/constants");
 const { BASE_PUBLIC_URL } = require("./src/config/routes/constants");
+const gatsbyPluginGoogleGtagConfig = require("./.gatsby/plugins/google/gtag");
+const gatsbyPluginManifestConfig = require("./.gatsby/plugins/manifest");
+const gatsbyPluginRobotsTxt = require("./.gatsby/plugins/robots-txt");
 
 module.exports = {
   siteMetadata: {
     nord: { ...metadataNord },
-    ...metadataNordDocs
+    ...metadataNordDocs,
+    siteUrl: metadataNordDocs.homepage
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -38,6 +42,7 @@ module.exports = {
     "gatsby-plugin-no-sourcemaps",
     "gatsby-transformer-yaml",
     "gatsby-plugin-svgr",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
@@ -78,6 +83,24 @@ module.exports = {
         name: "pages",
         path: `${__dirname}/${BASE_DIR_PAGES}/`
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-google-gtag",
+      options: gatsbyPluginGoogleGtagConfig
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: gatsbyPluginRobotsTxt
+    },
+    /* NOTE: The following plugins rely on the order in this array and must be placed at last in order work properly! */
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: gatsbyPluginManifestConfig
+    },
+    /*
+     * This plugin must definitely be listed last to ensure cache-able files like the web app manifest are included in
+     * the service worker!
+     */
+    "gatsby-plugin-offline"
   ]
 };

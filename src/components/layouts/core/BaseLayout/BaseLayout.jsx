@@ -13,6 +13,7 @@ import PropTypes from "prop-types";
 import Header from "organisms/core/Header";
 import Page from "containers/core/Page";
 import Root from "containers/core/Root";
+import SiteMetadata from "atoms/core/SiteMetadata";
 
 /**
  * The base page layout providing the main container that wraps the content.
@@ -21,9 +22,10 @@ import Root from "containers/core/Root";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const BaseLayout = ({ children }) => (
+const BaseLayout = ({ children, pathName }) => (
   <Root>
     <Fragment>
+      <SiteMetadata pathName={pathName} />
       <Header />
       <Page>{children}</Page>
     </Fragment>
@@ -31,7 +33,8 @@ const BaseLayout = ({ children }) => (
 );
 
 BaseLayout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  pathName: PropTypes.string.isRequired
 };
 
 export default BaseLayout;
