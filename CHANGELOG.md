@@ -8,6 +8,120 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.4.0
+
+![Release Date: 2018-12-23](https://img.shields.io/badge/Release_Date-2018--12--23-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.4.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/6) [![Milestone](https://img.shields.io/badge/Milestone-0.4.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/4)
+
+This version focused on [analytics & statistics][gh-86] as well as [SEO & social media representation][gh-100]. This includes the integration of [Google Analytics][gh-87], requirements of a [PWA][gdev-web-pwa] ([Progressive Web App][wiki-pwa]) like a [Web App Manifest][gh-91], _offline_ resistance and availability through a [service worker][gh-94] and [improved caching strategies and usage of advanced techniques like HTTP/2 server push][gh-89].
+
+Several implementation for SEO have been made with automated generation of web standard resources like the [sitemap.xml][gh-96] and [robots.txt][gh-98] files. A new [`SiteMetadata` component][gh-101] has been added to allow to provide metadata for several specifications like the [Open Graph Protocol][ogp], [Twitter Cards][tw-docs-cards] and [schema.org][].
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50167256-14bbd380-02e9-11e9-8aca-a31baf745cd8.png" width="12%" /></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50167593-c824c800-02e9-11e9-9b70-84b6fc40c05f.png " width="10%"/></p>
+
+**Google Analytics** — #87 ⇄ #88 (⊶ 7aed8952)
+↠ Integrated [Google Analytics][ga-mark] like documented in the [“Analytics & Statistics” design concept][gh-86] through the Gatsby plugin [gatsby-plugin-google-gtag][gh-gatsby-p-gtag].
+
+It is a stable and proven service tool to collect and analyze data with a lot of useful configurable features and a reliable persistence.
+
+_Nord Docs_ uses the latest and recommended [gtag.js][gdev-ga-gtag] library that optionally allows, next to Google Analytics itself, the integration of almost all Google Marketing services like e.g. [Google Tag Manager][gdev-tm].
+
+To protect the privacy of users and to be compatible with various privacy and data legal guidelines all [IP addresses are anonymized][gsup-ga-anonip].
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48661237-35d1a000-ea6f-11e8-8e16-f48948969be6.png" width="12%" /></p>
+
+**Gatsby Plugin "Netlify"** — #89 ⇄ #90 (⊶ b4a91fd9)
+↠ Added [gatsby-plugin-netlify][npm-gatsby-plugin-netlify] to automatically generate a `_headers` file and a `_redirects` file at the root of the public folder to configure [HTTP headers][netlify-docs-headers] and [redirects][netlify-docs-rd] on Netlify.
+One of the main advantages is that it also enables HTTP/2 server push of critical Gatsby assets through the `Link` headers. By default, the plugin adds HTTP/2 assets to server push the critical Gatsby scripts (ones that have the `preload` attribute already) and additionally adds basic security and caching headers.
+
+See the [“Hosting & Continuous Deployment” design concept][gh-46] for more details.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50234314-aee94d80-03b5-11e9-8eda-e56b9b632b22.png" width="12%" /></p>
+
+**Gatsby Plugin "Web App Manifest"** — #91 ⇄ #93 (⊶ 6415ddc5)
+↠ Integrated [gatsby-plugin-manifest][npm-gatsby-plugin-manifest] that adds support for generating and shipping a [web app (PWA) `manifest.webmanifest`][mdn-web-mf]. It allows users to save _Nord Docs_ as web application to their desktops / task bars and smartphone home screens so it behaves similar to native apps.
+
+See the great Google Developer documentation about [the web app manifest][gdev-fund-wamf] and the [official W3 Web App Manifest specification][w3-spec-mf].
+
+Note that it is **recommended to use this plugin together with** [gatsby-plugin-offline][npm-gatsby-plugin-offline] ([#94][gh-94]), but ensure that **this plugin is listed before the offline plugin** so that it can cache the created `manifest.webmanifest` file!
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50229928-b86db800-03ab-11e9-89ad-07075d659574.png" width="12%" /></p>
+
+**Gatsby Plugin "Offline" Service Worker** — #94 ⇄ #95 (⊶ e381f366)
+↠ Integrated [gatsby-plugin-offline][gh-gatsby-p-offline] that adds drop-in support for making a Gatsby site work offline and more resistant to bad network connections. It creates a service worker for the site using the great [Workbox][] project and loads the service worker into the client.
+
+Note that it is **recommended to use this plugin together with** [gatsby-plugin-manifest][gh-gatsby-p-manifest] ([#91][gh-94]), but ensure that **this plugin is listed after the offline plugin** so that the created `manifest.webmanifest` file can be included in the service worker!
+
+The plugin comes with optimal configurations out-of-the-box™. Note that the offline support can break when changing these options.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50330182-920a6280-04fa-11e9-825d-157168c2eb93.png" width="12%" /></p>
+
+**Gatsby Plugin "Sitemap"** — #96 ⇄ #97 (⊶ 1cf69f42)
+↠ Integrated [gatsby-plugin-sitemap][gh-gatsby-p-sitemap] that automatically generates a [sitemap.xml][wiki-sitemap] file including all of _Nord Docs_ pages, except the ones excluded by default and custom configured routes.
+
+Note that by default the plugin assumes that the default Gatsby config object field `siteMetadata.siteUrl` is set to the site's URL.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50345701-4ecae680-0530-11e9-9cff-7b42a99dd673.png" width="12%" /></p>
+
+**Gatsby Plugin "robots.txt"** — #98 ⇄ #99 (⊶ ca4ed675)
+↠ Integrated [gatsby-plugin-robots-txt][gh-gatsby-p-robots-txt] that automatically generates a [robots.txt][wiki-robotstxt] file.
+
+Note that by default the plugin assumes that the default Gatsby config object field `siteMetadata.siteUrl` is used and set to the site's URL. It also uses the default path `${siteMetadata.siteUrl/sitemap.xml}` for the sitemap file ([#96][gh-96]).
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50351078-59da4280-0541-11e9-97ec-b983c43bbedc.png" width="12%" /> <img src="https://user-images.githubusercontent.com/7836623/50351088-6199e700-0541-11e9-831d-0b9200abfbe9.png" width="12%" /></p>
+
+**Site Metadata Component** — #101 ⇄ #102 (⊶ a8fb8edd)
+↠ Implemented the core atom `SiteMetadata` that injects global metadata. Next to general data like the page title and canonical URL it will include data for the [Open Graph Protocol][ogp], [Twitter Cards][tw-docs-cards] and the [schema.org][] structured data format [JSON-LD][].
+The component doesn't render any UI, but injects the elements into the `<head>` using [React Helmet][gh-react-helmet].
+
+For more details read the [“SEO & Social Media Representation” design concept][gh-100] and the great documentation about [SEO with Gatsby][gatsby-docs-seo].
+
+## Tasks
+
+**Dependency Update December 2018** — #103 ⇄ #104 (⊶ 1c4ba796)
+↠ Performed the regular batch update for outdated dependencies which raises React to version [16.7.0][react-rln-16.7.0] to include an important performance bug fix for `React.lazy`.
+
+Babel has been updated to the latest minor version [7.2.0][babel-rln-7.2.0] (including official plugins) that comes with a lot of improvements and bug fixes for TypeScript and Flow as well as support for _private instance methods_ and “smart” pipeline operator parsing.
+
+The `babel-plugin-styled-components` plugin now also supports the new `css` prop of the also updated `styled-components` package.
+
+Gatsby and all plugins have been updated to the latest versions to include the latest improvements and bug fixes.
+
+Note that packages marked with an :exclamation: have been affected by the security incident!
+
+###### Production Dependencies
+
+- gatsby `2.0.55` ➔ `2.0.75`
+- gatsby-plugin-canonical-urls `2.0.7` ➔ `2.0.8`
+- gatsby-plugin-catch-links `2.0.8` ➔ `2.0.9`
+- gatsby-plugin-react-helmet `3.0.2` ➔ `3.0.5`
+- gatsby-plugin-remove-trailing-slashes `2.0.5` ➔ `2.0.6`
+- gatsby-source-filesystem `2.0.9` ➔ `2.0.12`
+- gatsby-transformer-yaml `2.1.5` ➔ `2.1.6`
+- inter-ui `3.0.0` ➔ `3.1.0`
+- react `16.6.3` ➔ `16.7.0`
+- react-dom `16.6.3` ➔ `16.7.0`
+- styled-components `4.1.2` ➔ `4.1.3`
+
+###### Development Dependencies
+
+- @babel/core `7.1.6` ➔ `7.2.2`
+- @babel/plugin-proposal-class-properties `7.1.0` ➔ `7.2.3`
+- @babel/plugin-proposal-export-default-from `7.0.0` ➔ `7.2.0`
+- @babel/plugin-proposal-nullish-coalescing-operator `7.0.0` ➔ `7.2.0`
+- @babel/plugin-proposal-optional-chaining `7.0.0` ➔ `7.2.0`
+- babel-plugin-styled-components `1.9.2` ➔ `1.10.0`
+- babel-plugin-transform-react-remove-prop-types `0.4.20` ➔ `0.4.21`
+- babel-preset-gatsby `0.1.4` ➔ `0.1.6`
+- eslint `5.9.0` ➔ `5.11.0`
+- husky `1.2.0` ➔ `1.2.1`
+- jest-dom `2.1.1` ➔ `3.0.0`
+- prettier `1.15.2` ➔ `1.15.3`
+- react-testing-library `5.3.0` ➔ `5.4.2`
+
 # 0.3.0
 
 ![Release Date: 2018-12-18](https://img.shields.io/badge/Release_Date-2018--12--18-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.3.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/5) [![Milestone](https://img.shields.io/badge/Milestone-0.3.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/3)
@@ -573,12 +687,18 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [eslint-r-import/no-extraneous-dependencies]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
 [eva-icons]: https://akveo.github.io/eva-icons
 [flow]: https://flow.org
+[ga-mark]: https://marketingplatform.google.com/about/analytics
 [gatsby-docs-404]: https://www.gatsbyjs.org/docs/add-404-page
 [gatsby-docs-api-node]: https://www.gatsbyjs.org/docs/node-apis
 [gatsby-docs-config]: https://gatsbyjs.org/docs/gatsby-config
 [gatsby-docs-link]: https://www.gatsbyjs.org/docs/gatsby-link
+[gatsby-docs-seo]: https://www.gatsbyjs.org/docs/seo
 [gatsby-docs-testing]: https://www.gatsbyjs.org/docs/testing
+[gdev-fund-wamf]: https://developers.google.com/web/fundamentals/web-app-manifest
+[gdev-ga-gtag]: https://developers.google.com/analytics/devguides/collection/gtagjs
+[gdev-tm]: https://developers.google.com/tag-manager
 [gdev-web-fund-rwd]: https://developers.google.com/web/fundamentals/design-and-ux/responsive
+[gdev-web-pwa]: https://developers.google.com/web/progressive-web-apps
 [gf-rubik]: https://fonts.google.com/specimen/Rubik
 [gf-source-code-pro]: https://fonts.google.com/specimen/Source+Code+Pro
 [gh-1]: https://github.com/arcticicestudio/nord-docs/issues/1
@@ -603,6 +723,15 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-74]: https://github.com/arcticicestudio/nord-docs/issues/74
 [gh-78]: https://github.com/arcticicestudio/nord-docs/issues/78
 [gh-84]: https://github.com/arcticicestudio/nord-docs/issues/84
+[gh-86]: https://github.com/arcticicestudio/nord-docs/issues/86
+[gh-87]: https://github.com/arcticicestudio/nord-docs/issues/87
+[gh-89]: https://github.com/arcticicestudio/nord-docs/issues/89
+[gh-91]: https://github.com/arcticicestudio/nord-docs/issues/91
+[gh-94]: https://github.com/arcticicestudio/nord-docs/issues/94
+[gh-96]: https://github.com/arcticicestudio/nord-docs/issues/96
+[gh-98]: https://github.com/arcticicestudio/nord-docs/issues/98
+[gh-100]: https://github.com/arcticicestudio/nord-docs/issues/100
+[gh-101]: https://github.com/arcticicestudio/nord-docs/issues/101
 [gh-bsl]: https://github.com/willmcpo/body-scroll-lock
 [gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
@@ -617,6 +746,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-jest-dom-matcher]: https://github.com/gnapse/jest-dom#custom-matchers
 [gh-jsc]: https://github.com/styled-components/jest-styled-components
 [gh-lint-staged]: https://github.com/okonet/lint-staged
+[gh-react-helmet]: https://github.com/nfl/react-helmet
 [gh-remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-remark-preset-lint-arcticicestudio]: https://github.com/arcticicestudio/remark-preset-lint-arcticicestudio
 [gh-rtl]: https://github.com/kentcdodds/react-testing-library
@@ -629,6 +759,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [git-docs-mailmap]: https://git-scm.com/docs/git-shortlog#_mapping_authors
 [inter-ui]: https://rsms.me/inter
 [jest]: https://jestjs.io
+[json-ld]: https://json-ld.org
 [md]: https://material.io
 [md-com-es]: https://material.io/design/communication/empty-states.html
 [md-motion-speed]: https://material.io/design/motion/speed.html
@@ -643,9 +774,12 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [mdn-ls]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [mdn-mq]: https://developer.mozilla.org/de/docs/Web/CSS/Media_Queries/Using_media_queries
 [mdn-ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+[mdn-web-mf]: https://developer.mozilla.org/en-US/docs/Web/Manifest
 [mit-lic]: https://opensource.org/licenses/MIT
 [mobx]: https://mobx.js.org
 [netlify]: https://www.netlify.com
+[netlify-docs-headers]: https://www.netlify.com/docs/headers-and-basic-auth
+[netlify-docs-rd]: https://www.netlify.com/docs/redirects
 [netlify-docs-toml-ref]: https://www.netlify.com/docs/netlify-toml-reference
 [npm-docs-lock]: https://docs.npmjs.com/files/package-locks
 [npm-docs-pkg]: https://docs.npmjs.com/files/package.json
@@ -659,6 +793,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [npm-react]: https://www.npmjs.com/package/react
 [npm-react-dom]: https://www.npmjs.com/package/react-dom
 [npm-remark-cli]: https://www.npmjs.com/package/remark-cli
+[ogp]: http://ogp.me
 [ossg]: https://opensource.guide
 [ossg-contrib]: https://opensource.guide/how-to-contribute
 [polished]: https://polished.js.org
@@ -668,6 +803,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [react-docs-typecheck-pt]: https://reactjs.org/docs/typechecking-with-proptypes.html
 [react-pose]: https://popmotion.io/pose
 [remark]: https://remark.js.org
+[schema.org]: https://schema.org
 [stc-docs-globstyle]: https://www.styled-components.com/docs/api#createglobalstyle
 [stc-docs-mqt]: https://www.styled-components.com/docs/advanced#media-templates
 [stc-docs-thprov]: https://www.styled-components.com/docs/api#themeprovider
@@ -676,10 +812,16 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [styleguide-javascript]: https://arcticicestudio.github.io/styleguide-javascript
 [styleguide-markdown]: https://arcticicestudio.github.io/styleguide-markdown
 [svgr]: https://www.smooth-code.com/open-source/svgr
+[tw-docs-cards]: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html
 [typescript]: https://www.typescriptlang.org
+[w3-spec-mf]: https://www.w3.org/TR/appmanifest
 [webpack]: https://webpack.js.org
 [webpack-docs-resv-alias]: https://webpack.js.org/configuration/resolve/#resolve-alias
 [wiki-404]: https://en.wikipedia.org/wiki/HTTP_404
+[wiki-pwa]: https://en.wikipedia.org/wiki/Progressive_web_applications
+[wiki-robotstxt]: https://en.wikipedia.org/wiki/Robots_exclusion_standard
+[wiki-sitemap]: https://en.wikipedia.org/wiki/Site_map
+[workbox]: https://developers.google.com/web/tools/workbox
 
 <!-- v0.1.0 -->
 
@@ -719,3 +861,17 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-jsc-matcher]: https://github.com/styled-components/jest-styled-components#tohavestylerule
 [gh-svgr-wpl]: https://github.com/smooth-code/svgr/tree/master/packages/webpack
 [npm-gp-svgr]: https://www.npmjs.com/package/gatsby-plugin-svgr
+
+<!-- v0.4.0 -->
+
+[babel-rln-7.2.0]: https://babeljs.io/blog/2018/12/03/7.2.0
+[gh-gatsby-p-gtag]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-google-gtag
+[gh-gatsby-p-manifest]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-manifest
+[gh-gatsby-p-offline]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline
+[gh-gatsby-p-robots-txt]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-robots-txt
+[gh-gatsby-p-sitemap]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sitemap
+[gsup-ga-anonip]: https://support.google.com/analytics/answer/2763052
+[npm-gatsby-plugin-manifest]: https://www.npmjs.com/package/gatsby-plugin-manifest
+[npm-gatsby-plugin-netlify]: https://www.npmjs.com/package/gatsby-plugin-netlify
+[npm-gatsby-plugin-offline]: https://www.npmjs.com/package/gatsby-plugin-offline
+[react-rln-16.7.0]: https://reactjs.org/blog/2018/12/19/react-v-16-7.html
