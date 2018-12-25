@@ -38,30 +38,37 @@ const links = {
       url: "https://spectrum.chat/arcticicestudio"
     }
   },
-  social: {
-    github: {
-      id: "arcticicestudio",
-      url: "https://github.com/arcticicestudio"
-    },
-    keybase: {
-      id: "arcticicestudio",
-      url: "https://keybase.io/arcticicestudio"
-    },
-    reddit: {
-      id: "arcticicestudio",
-      url: "https://www.reddit.com/user/arcticicestudio"
-    },
-    spectrum: {
-      id: "arcticicestudio",
-      url: "https://spectrum.chat/users/arcticicestudio"
-    },
-    stackoverflow: {
-      id: "4568698",
-      url: "https://stackoverflow.com/users/4568698/arctic-ice-studio"
-    },
-    twitter: {
-      id: "arcticicestudio",
-      url: "https://twitter.com/arcticicestudio"
+  organization: {
+    url: "https://arcticicestudio.com",
+    social: {
+      github: {
+        id: "arcticicestudio",
+        url: "https://github.com/arcticicestudio"
+      },
+      keybase: {
+        id: "arcticicestudio",
+        url: "https://keybase.io/arcticicestudio"
+      },
+      reddit: {
+        id: "arcticicestudio",
+        url: "https://www.reddit.com/user/arcticicestudio"
+      },
+      slack: {
+        id: "arcticicestudio",
+        url: "https://arcticicestudio.slack.com"
+      },
+      spectrum: {
+        id: "arcticicestudio",
+        url: "https://spectrum.chat/users/arcticicestudio"
+      },
+      stackoverflow: {
+        id: "4568698",
+        url: "https://stackoverflow.com/users/4568698/arctic-ice-studio"
+      },
+      twitter: {
+        id: "arcticicestudio",
+        url: "https://twitter.com/arcticicestudio"
+      }
     }
   }
 };

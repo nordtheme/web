@@ -26,7 +26,9 @@ const PureSiteMetadata = ({
           description,
           keywords: keywordsNord,
           links: {
-            social: { twitter }
+            organization: {
+              social: { twitter }
+            }
           },
           title
         },
@@ -110,9 +112,11 @@ const SiteMetadata = ({ pathName, ...passProp }) => (
               description
               keywords
               links {
-                social {
-                  twitter {
-                    id
+                organization {
+                  social {
+                    twitter {
+                      id
+                    }
                   }
                 }
               }

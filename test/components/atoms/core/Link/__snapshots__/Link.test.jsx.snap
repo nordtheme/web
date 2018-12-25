@@ -18,8 +18,8 @@ exports[`theme styles matches the snapshot with \`calmly\` variant 1`] = `
 .c0 {
   border-radius: 0.25em;
   color: #5e81ac;
-  -webkit-transition: color 0.2s ease-in-out,background-color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out,background-color 0.2s ease-in-out;
+  -webkit-transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
 .c0:hover,
@@ -55,8 +55,8 @@ exports[`theme styles matches the snapshot with \`decent\` variant 1`] = `
 .c0 {
   border-bottom: 1px solid #5e81ac;
   color: #2e3440;
-  -webkit-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
 }
 
 .c0:hover,
@@ -90,8 +90,8 @@ exports[`theme styles matches the snapshot with \`minimal\` variant 1`] = `
 
 .c0 {
   border-bottom: 1px solid #5e81ac;
-  -webkit-transition: border-bottom-color 0.2s ease-in-out;
-  transition: border-bottom-color 0.2s ease-in-out;
+  -webkit-transition: border-bottom-color 200ms ease-in-out;
+  transition: border-bottom-color 200ms ease-in-out;
 }
 
 .c0:hover,
@@ -126,8 +126,8 @@ exports[`theme styles matches the snapshot with default variant 1`] = `
 .c0 {
   border-radius: 0.25em;
   color: #5e81ac;
-  -webkit-transition: color 0.2s ease-in-out,background-color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out,background-color 0.2s ease-in-out;
+  -webkit-transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 
 .c0:hover,

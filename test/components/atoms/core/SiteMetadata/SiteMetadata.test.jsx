@@ -26,8 +26,10 @@ const staticQueryResultDataMock = {
         description: metadataNord.description,
         keywords: metadataNord.keywords,
         links: {
-          social: {
-            twitter: metadataNord.links.social.twitter
+          organization: {
+            social: {
+              twitter: metadataNord.links.organization.social.twitter
+            }
           }
         },
         title: metadataNord.title
@@ -98,7 +100,7 @@ describe("data consistency", () => {
         }),
         expect.objectContaining({
           name: "twitter:site",
-          content: expect.stringContaining(metadataNord.links.social.twitter.id)
+          content: expect.stringContaining(metadataNord.links.organization.social.twitter.id)
         }),
         expect.objectContaining({
           name: "twitter:description",
