@@ -15,7 +15,7 @@
  * @since 0.3.0
  */
 
+import ArcticIceStudio from "./ArcticIceStudio";
 import Nord from "./Nord";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { Nord };
+export { ArcticIceStudio, Nord };

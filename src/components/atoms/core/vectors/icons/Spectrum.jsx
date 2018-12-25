@@ -10,27 +10,27 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ReactComponent as MenuSVGOutline } from "assets/images/icons/eva-icons/menu-outline.svg";
+import { ReactComponent as SpectrumSVG } from "assets/images/icons/spectrum.svg";
 
 import { iconDefaultProps, iconPropTypes, themeModeFillColorStyles } from "../shared";
 
-const MenuIconOutline = styled(MenuSVGOutline)`
+const SpectrumIcon = styled(SpectrumSVG)`
   ${themeModeFillColorStyles};
 `;
 
 /**
- * The "menu" icon from "Eva Icons" as styled SVG vector graphic component.
+ * The "Spectrum" logo icon as styled SVG vector graphic component.
  * By default, it uses the fill color and transition based on the current active global theme mode.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://akveo.github.io/eva-icons
- * @since 0.3.0
+ * @see https://github.com/withspectrum/spectrum/blob/alpha/public/img/mark.svg
+ * @since 0.5.0
  */
-const Menu = ({ className, svgRef }) => <MenuIconOutline className={className} svgRef={svgRef} />;
+const Spectrum = ({ className, svgRef }) => <SpectrumIcon className={className} svgRef={svgRef} />;
 
-Menu.propTypes = iconPropTypes;
+Spectrum.propTypes = iconPropTypes;
 
-Menu.defaultProps = iconDefaultProps;
+Spectrum.defaultProps = iconDefaultProps;
 
-export default Menu;
+export default Spectrum;

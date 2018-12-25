@@ -10,27 +10,27 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ReactComponent as MenuSVGOutline } from "assets/images/icons/eva-icons/menu-outline.svg";
+import { ReactComponent as KeybaseSVG } from "assets/images/icons/simple-icons/keybase.svg";
 
 import { iconDefaultProps, iconPropTypes, themeModeFillColorStyles } from "../shared";
 
-const MenuIconOutline = styled(MenuSVGOutline)`
+const KeybaseIcon = styled(KeybaseSVG)`
   ${themeModeFillColorStyles};
 `;
 
 /**
- * The "menu" icon from "Eva Icons" as styled SVG vector graphic component.
+ * The "Keybase" logo icon from the "Simple Icons" project as styled SVG vector graphic component.
  * By default, it uses the fill color and transition based on the current active global theme mode.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://akveo.github.io/eva-icons
- * @since 0.3.0
+ * @see https://simpleicons.org
+ * @since 0.5.0
  */
-const Menu = ({ className, svgRef }) => <MenuIconOutline className={className} svgRef={svgRef} />;
+const Keybase = ({ className, svgRef }) => <KeybaseIcon className={className} svgRef={svgRef} />;
 
-Menu.propTypes = iconPropTypes;
+Keybase.propTypes = iconPropTypes;
 
-Menu.defaultProps = iconDefaultProps;
+Keybase.defaultProps = iconDefaultProps;
 
-export default Menu;
+export default Keybase;

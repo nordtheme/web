@@ -10,38 +10,38 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ReactComponent as MoonSVGFill } from "assets/images/icons/eva-icons/moon-fill.svg";
-import { ReactComponent as MoonSVGOutline } from "assets/images/icons/eva-icons/moon-outline.svg";
+import { ReactComponent as HeartSVGFill } from "assets/images/icons/eva-icons/heart-fill.svg";
+import { ReactComponent as HeartSVGOutline } from "assets/images/icons/eva-icons/heart-outline.svg";
 
 import { iconDefaultProps, iconPropTypes, themeModeFillColorStyles } from "../shared";
 
-const MoonIconFill = styled(MoonSVGFill)`
+const HeartIconFill = styled(HeartSVGFill)`
   ${themeModeFillColorStyles};
 `;
 
-const MoonIconOutline = styled(MoonSVGOutline)`
+const HeartIconOutline = styled(HeartSVGOutline)`
   ${themeModeFillColorStyles};
 `;
 
 /**
- * The "moon" icon from "Eva Icons" as styled SVG vector graphic component.
+ * The "heart" icon from "Eva Icons" as styled SVG vector graphic component.
  * The "outline" variant can be used by passing the `outlined` boolean prop.
  * By default, it uses the fill color and transition based on the current active global theme mode.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @see https://akveo.github.io/eva-icons
- * @since 0.3.0
+ * @since 0.5.0
  */
-const Moon = ({ className, outlined, svgRef }) =>
+const Heart = ({ className, outlined, svgRef }) =>
   outlined ? (
-    <MoonIconOutline className={className} svgRef={svgRef} />
+    <HeartIconOutline className={className} svgRef={svgRef} />
   ) : (
-    <MoonIconFill className={className} svgRef={svgRef} />
+    <HeartIconFill className={className} svgRef={svgRef} />
   );
 
-Moon.propTypes = iconPropTypes;
+Heart.propTypes = iconPropTypes;
 
-Moon.defaultProps = iconDefaultProps;
+Heart.defaultProps = iconDefaultProps;
 
-export default Moon;
+export default Heart;

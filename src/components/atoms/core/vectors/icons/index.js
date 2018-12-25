@@ -15,8 +15,17 @@
  * @since 0.3.0
  */
 
+import Discord from "./Discord";
+import GitHub from "./GitHub";
+import Heart from "./Heart";
+import Keybase from "./Keybase";
 import Menu from "./Menu";
 import Moon from "./Moon";
+import Reddit from "./Reddit";
+import Slack from "./Slack";
+import Spectrum from "./Spectrum";
+import StackOverflow from "./StackOverflow";
 import Sun from "./Sun";
+import Twitter from "./Twitter";
 
-export { Menu, Moon, Sun };
+export { Discord, GitHub, Heart, Keybase, Menu, Moon, Reddit, Slack, Spectrum, StackOverflow, Sun, Twitter };
