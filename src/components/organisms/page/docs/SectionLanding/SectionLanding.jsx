@@ -9,6 +9,7 @@
 
 import React from "react";
 
+import { WaveFooter } from "atoms/core/vectors/divider";
 import Section, { Content } from "containers/core/Section";
 import EmptyState from "molecules/core/EmptyState";
 
@@ -30,6 +31,7 @@ const SectionLanding = () => (
         subline="Please check back later, we're working hard on this page!"
       />
     </Content>
+    <WaveFooter />
   </Section>
 );
 

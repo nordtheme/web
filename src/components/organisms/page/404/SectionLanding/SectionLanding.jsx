@@ -9,6 +9,7 @@
 
 import React from "react";
 
+import { WaveFooter } from "atoms/core/vectors/divider";
 import Section, { Content } from "containers/core/Section";
 import ErrorState404 from "molecules/core/ErrorState404";
 
@@ -30,6 +31,7 @@ const SectionLanding = () => (
         subline="…but that's not the place to find the page you were looking for."
       />
     </Content>
+    <WaveFooter />
   </Section>
 );
 
