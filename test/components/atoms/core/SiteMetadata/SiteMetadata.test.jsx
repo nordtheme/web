@@ -132,17 +132,6 @@ describe("data consistency", () => {
     );
   });
 
-  test("contains Open Graph Protocol HTML schema `prefix` attribute", () => {
-    renderWithTheme(<SiteMetadata data={staticQueryResultDataMock} pathName="/" />);
-    const generatedHelmetData = Helmet.peek();
-
-    expect(generatedHelmetData.htmlAttributes).toEqual(
-      expect.objectContaining({
-        prefix: expect.stringContaining("ogp.me")
-      })
-    );
-  });
-
   test("contains JSON-LD schema linked data `script` tag", () => {
     renderWithTheme(<SiteMetadata data={staticQueryResultDataMock} pathName="/" />);
     const generatedHelmetData = Helmet.peek();
