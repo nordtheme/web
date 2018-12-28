@@ -9,18 +9,19 @@
 
 import styled from "styled-components";
 
-import CoreContent from "containers/core/Content";
-
 /**
- * A container for content of the `Section` component.
+ * A container for sitemap page links.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.5.0
  */
-const Content = styled(CoreContent)`
-  padding-top: ${({ compact }) => !compact && "5em"};
-  padding-bottom: ${({ compact }) => !compact && "5em"};
+const SitemapList = styled.div`
+  text-align: center;
+
+  ${({ theme }) => theme.media.tabletLandscape`
+    text-align: start;
+  `};
 `;
 
-export default Content;
+export default SitemapList;

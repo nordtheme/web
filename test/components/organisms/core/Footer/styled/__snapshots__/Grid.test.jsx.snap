@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles matches the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width:37.5em) {
+  .c0 {
+    display: grid;
+    grid-template-columns: repeat(,1fr);
+    grid-template-rows: auto;
+    grid-row-gap: 1em;
+  }
+}
+
+@media (min-width:56.25em) {
+  .c0 {
+    grid-template-columns: 30% repeat(,1fr);
+  }
+}
+
+<div
+  class="c0"
+/>
+`;

@@ -9,18 +9,24 @@
 
 import styled from "styled-components";
 
-import CoreContent from "containers/core/Content";
-
 /**
- * A container for content of the `Section` component.
+ * A container for the grid cell that contains metadata components.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.5.0
  */
-const Content = styled(CoreContent)`
-  padding-top: ${({ compact }) => !compact && "5em"};
-  padding-bottom: ${({ compact }) => !compact && "5em"};
+const Metadata = styled.div`
+  display: flex;
+  grid-column: span ${({ categoryCount }) => categoryCount};
+  flex-direction: column;
+  align-items: center;
+
+  ${({ theme }) => theme.media.tabletLandscape`
+    grid-column: unset;
+    justify-content: space-between;
+    align-items: unset;
+  `};
 `;
 
-export default Content;
+export default Metadata;

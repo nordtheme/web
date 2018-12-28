@@ -9,18 +9,17 @@
 
 import styled from "styled-components";
 
-import CoreContent from "containers/core/Content";
-
 /**
- * A container for content of the `Section` component.
+ * A container for the grid cell that contains branding components.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.5.0
  */
-const Content = styled(CoreContent)`
-  padding-top: ${({ compact }) => !compact && "5em"};
-  padding-bottom: ${({ compact }) => !compact && "5em"};
+const OrganizationBrand = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
 `;
 
-export default Content;
+export default OrganizationBrand;

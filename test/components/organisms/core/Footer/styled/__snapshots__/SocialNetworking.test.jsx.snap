@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles matches the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media (min-width:56.25em) {
+  .c0 {
+    -webkit-box-pack: unset;
+    -webkit-justify-content: unset;
+    -ms-flex-pack: unset;
+    justify-content: unset;
+  }
+
+  .c0 * {
+    margin: 0 0.625em;
+  }
+
+  .c0 *:last-child {
+    margin-right: 0;
+  }
+
+  .c0 *:first-child {
+    margin-left: 0;
+  }
+}
+
+<div
+  class="c0"
+/>
+`;

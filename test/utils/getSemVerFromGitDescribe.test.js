@@ -9,8 +9,6 @@
 
 import { getSemVerFromGitDescribe } from "utils";
 
-/* , "v0.1.0", "v0.1.0-123", "v0.1.0-123-abcd1234", "v0.1.0-abcd1234" */
-
 const CHANNEL_PRERELEASE = "pre-release";
 const CHANNEL_RELEASE = "release";
 const CHANNEL_SNAPSHOT = "snapshot";
