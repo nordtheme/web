@@ -8,6 +8,71 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.5.0
+
+![Release Date: 2018-12-29](https://img.shields.io/badge/Release_Date-2018--12--29-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.5.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/7) [![Milestone](https://img.shields.io/badge/Milestone-0.5.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/5)
+
+This version focused on the essential [footer][gh-106] as well as a styled [link component][gh-105]. It also includes the integration of the Webpack [size-plugin][gh-109] to print the gzipped sizes of assets and the changes since the last production build.
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+
+The following issues are related to the [“Components” design concept][gh-63].
+
+**Core Atom: “Link”** — #105 ⇄ #107 (⊶ cf1f1184)
+↠ Implemented the core atom `Link` that wraps the [base HTML element atom component the `A`][gh-70] and adds matching brand styles to it.
+
+**Core Organism Component: “Footer”** — #106 ⇄ #108 (⊶ 9a6c0496)
+↠ Implemented the core organism component `Footer` which represent the `<footer>` element and is an essential part of _Nord Docs_. It provides a sitemap, the Arctic Ice Studio organization branding logo and caption, networking & social media links as well as the copyright paragraph including version information.
+
+### Layout
+
+The footer uses a CSS [flexbox][mdn-flexbox] and [grid][mdn-grids] layout consisting of two container components with the maximum of flexible space between both. The left-side container contains the branding and link components while the right-side container contains the sitemap like documented in the sections below.
+
+#### Wave Divider
+
+For a nice and smooth transition between the last section/element of a page a new SVG vector graphic divider in form of multiple “overlapping waves” has been added. It must be rendered by the last component/element (in most cases a `Section`/`<section>`) to ensure the transparent background of the wave's container matches the last components background by rendering it in the bounds.
+
+#### Sitemap
+
+To allow users to simply navigate around the site, next to the main header, the component provides the quickly accessible sitemap. This container uses the [flexbox][mdn-flexbox] layout where each base route of the site is added as one category represented as a column. Each of these consists of an heading, the name of the route, and the corresponding sub-routes.
+
+As of now the following base routes are included:
+
+- “Nord” — links to `/` and includes all sections of the main landing page.
+- “Ports” — links to `/ports` and includes all sections of the Nord port projects.
+- “Docs” — links to `/docs` and includes all sections of Nord's documentation.
+- “Blog” — links to `/blog` and includes all sections of Nord's blog.
+- “Community” — links to `/community` and includes all sections of the Nord community channels.
+
+#### Organization Branding
+
+To represent Arctic Ice Studio's branding, the left-sided container contains the logo with the caption that'll link to the organization website. It is placed in one line with the category heading of the sitemap like documented in the section above.
+
+#### Social Media & Networking Links
+
+The left-side container also contains the social media & networking links where each link is represented through the icon of the corresponding site/service. They are placed in one line with a flexible layout to adust based on the available width.
+
+#### Version Information
+
+The last elements of the left-side container is a paragraph providing version information about the site like the currently running version (with _commits ahead_ metadata when required) and the build & deployment date. It also has additional Git metadata added as `data-` attributes and a `<time>` HTML element.
+
+<p align="center"><strong>Full Width</strong><br><img src="https://user-images.githubusercontent.com/7836623/50536955-88b47200-0b5a-11e9-9456-00e4253ae206.png" /></p>
+
+<p align="center"><strong>Reduced Width</strong><br><img src="https://user-images.githubusercontent.com/7836623/50536956-894d0880-0b5a-11e9-8cff-c8f03d8c2691.png" /></p>
+
+<p align="center"><strong>Small Width</strong><br><img src="https://user-images.githubusercontent.com/7836623/50536957-894d0880-0b5a-11e9-8328-de4c6efb7d23.png" /></p>
+
+### Responsive Design
+
+For reduced width views (responsive design) the footer adjusts several styles and composed components. For really small view ports the grid layout be switches to a flexbox layout.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50536175-ea241300-0b51-11e9-85d6-41350ce8017b.png" width="40%" /></p>
+
+**Core Organism Component: “Footer”** — #109 (⊶ 75435d07)
+↠ Integrated the Webpack [size-plugin][gh-sp] that prints the gzipped sizes of assets and the changes since the last build added through [gatsby-plugin-webpack-size][gh-gp-ws].
+
 # 0.4.0
 
 ![Release Date: 2018-12-23](https://img.shields.io/badge/Release_Date-2018--12--23-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.4.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/6) [![Milestone](https://img.shields.io/badge/Milestone-0.4.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/4)
@@ -720,6 +785,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-65]: https://github.com/arcticicestudio/nord-docs/issues/65
 [gh-66]: https://github.com/arcticicestudio/nord-docs/issues/66
 [gh-69]: https://github.com/arcticicestudio/nord-docs/issues/69
+[gh-70]: https://github.com/arcticicestudio/nord-docs/issues/70
 [gh-74]: https://github.com/arcticicestudio/nord-docs/issues/74
 [gh-78]: https://github.com/arcticicestudio/nord-docs/issues/78
 [gh-84]: https://github.com/arcticicestudio/nord-docs/issues/84
@@ -732,9 +798,13 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-98]: https://github.com/arcticicestudio/nord-docs/issues/98
 [gh-100]: https://github.com/arcticicestudio/nord-docs/issues/100
 [gh-101]: https://github.com/arcticicestudio/nord-docs/issues/101
+[gh-105]: https://github.com/arcticicestudio/nord-docs/issues/105
+[gh-106]: https://github.com/arcticicestudio/nord-docs/issues/106
+[gh-109]: https://github.com/arcticicestudio/nord-docs/issues/109
 [gh-bsl]: https://github.com/willmcpo/body-scroll-lock
 [gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
+[gh-gp-ws]: https://github.com/axe312ger/gatsby-plugin-webpack-size
 [gh-help-coc]: https://help.github.com/articles/adding-a-code-of-conduct-to-your-project
 [gh-help-code-owners]: https://help.github.com/articles/about-codeowners
 [gh-help-contrib-gl]: https://help.github.com/articles/setting-guidelines-for-repository-contributors
@@ -750,6 +820,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-remark-preset-lint-arcticicestudio]: https://github.com/arcticicestudio/remark-preset-lint-arcticicestudio
 [gh-rtl]: https://github.com/kentcdodds/react-testing-library
+[gh-sp]: https://github.com/GoogleChromeLabs/size-plugin
 [gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
 [gh-styleguide-js]: https://github.com/arcticicestudio/styleguide-javascript
 [gh-styleguide-md]: https://github.com/arcticicestudio/styleguide-markdown
@@ -762,6 +833,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [json-ld]: https://json-ld.org
 [md]: https://material.io
 [md-com-es]: https://material.io/design/communication/empty-states.html
+[mdn-flexbox]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+[mdn-grids]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
 [md-motion-speed]: https://material.io/design/motion/speed.html
 [mdn-html-el-a]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
 [mdn-html-el-cs]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning

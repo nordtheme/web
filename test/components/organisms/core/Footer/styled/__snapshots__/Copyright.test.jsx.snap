@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles matches the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.8em;
+  color: #7b88a1;
+  -webkit-transition: color 400ms ease-in-out;
+  transition: color 400ms ease-in-out;
+  margin-top: 1.125em;
+}
+
+@media (min-width:56.25em) {
+  .c0 {
+    display: block;
+    text-align: start;
+  }
+}
+
+<div
+  class="c0"
+/>
+`;

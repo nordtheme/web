@@ -24,7 +24,7 @@ const MoonIconOutline = styled(MoonSVGOutline)`
 `;
 
 /**
- * The "moon" icon from "Eva Icons" as SVG vector graphic component.
+ * The "moon" icon from "Eva Icons" as styled SVG vector graphic component.
  * The "outline" variant can be used by passing the `outlined` boolean prop.
  * By default, it uses the fill color and transition based on the current active global theme mode.
  *
@@ -33,8 +33,12 @@ const MoonIconOutline = styled(MoonSVGOutline)`
  * @see https://akveo.github.io/eva-icons
  * @since 0.3.0
  */
-const Moon = ({ outlined, svgRef }) =>
-  outlined ? <MoonIconOutline svgRef={svgRef} /> : <MoonIconFill svgRef={svgRef} />;
+const Moon = ({ className, outlined, svgRef }) =>
+  outlined ? (
+    <MoonIconOutline className={className} svgRef={svgRef} />
+  ) : (
+    <MoonIconFill className={className} svgRef={svgRef} />
+  );
 
 Moon.propTypes = iconPropTypes;
 

@@ -14,23 +14,23 @@ import { Content } from "containers/core/Section";
 import { renderWithTheme } from "nord-docs-test-utils";
 
 describe("theme styles", () => {
-  test("has top and bottom margin", () => {
+  test("has top and bottom padding", () => {
     const { container } = renderWithTheme(<Content>Nord</Content>);
-    const marginTop = stripUnit(getComputedStyle(container.firstChild).marginTop);
-    const marginBottom = stripUnit(getComputedStyle(container.firstChild).marginBottom);
+    const paddingTop = stripUnit(getComputedStyle(container.firstChild).paddingTop);
+    const paddingBottom = stripUnit(getComputedStyle(container.firstChild).paddingBottom);
 
-    expect(marginTop).toBeGreaterThan(0);
-    expect(marginBottom).toBeGreaterThan(0);
+    expect(paddingTop).toBeGreaterThan(0);
+    expect(paddingBottom).toBeGreaterThan(0);
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  test("adjusts top and bottom margin to passed props", () => {
+  test("adjusts top and bottom padding to passed props", () => {
     const { container } = renderWithTheme(<Content compact>Nord</Content>);
-    const marginTop = stripUnit(getComputedStyle(container.firstChild).marginTop);
-    const marginBottom = stripUnit(getComputedStyle(container.firstChild).marginBottom);
+    const paddingTop = stripUnit(getComputedStyle(container.firstChild).paddingTop);
+    const paddingBottom = stripUnit(getComputedStyle(container.firstChild).paddingBottom);
 
-    expect(marginTop).toBeFalsy();
-    expect(marginBottom).toBeFalsy();
+    expect(paddingTop).toBeFalsy();
+    expect(paddingBottom).toBeFalsy();
     expect(container.firstChild).toMatchSnapshot();
   });
 });

@@ -26,7 +26,9 @@ const PureSiteMetadata = ({
           description,
           keywords: keywordsNord,
           links: {
-            social: { twitter }
+            organization: {
+              social: { twitter }
+            }
           },
           title
         },
@@ -38,7 +40,7 @@ const PureSiteMetadata = ({
 }) => (
   <Fragment>
     <Helmet defaultTitle={title} titleTemplate={`${title} | %s`}>
-      <html lang="en" prefix="og: http://ogp.me/ns#" />
+      <html lang="en" />
       <meta content={description} name="description" />
       <meta content={author.name} name="author" />
       <meta content={Array.from(new Set([...keywordsNord, ...keywordsNordDocs]))} name="keywords" />
@@ -110,9 +112,11 @@ const SiteMetadata = ({ pathName, ...passProp }) => (
               description
               keywords
               links {
-                social {
-                  twitter {
-                    id
+                organization {
+                  social {
+                    twitter {
+                      id
+                    }
                   }
                 }
               }

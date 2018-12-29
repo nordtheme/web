@@ -19,8 +19,8 @@ import CoreContent from "containers/core/Content";
  * @since 0.3.0
  */
 const Content = styled(CoreContent)`
-  margin-top: ${({ compact }) => !compact && "5em"};
-  margin-bottom: ${({ compact }) => !compact && "5em"};
+  padding-top: ${({ compact }) => !compact && "5em"};
+  padding-bottom: ${({ compact }) => !compact && "5em"};
 `;
 
 export default Content;

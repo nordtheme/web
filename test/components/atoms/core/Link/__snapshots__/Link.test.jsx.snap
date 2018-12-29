@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles matches the snapshot with \`calmly\` variant 1`] = `
+.c1 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:focus,
+.c1:hover,
+.c1:visited {
+  outline: none;
+}
+
+.c0 {
+  border-radius: 0.25em;
+  color: #5e81ac;
+  -webkit-transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+
+.c0:hover,
+.c0:active,
+.c0:focus {
+  background-color: rgba(236,239,244,0.45);
+  color: #5e81ac;
+}
+
+<a
+  class="c0 c1"
+  href=""
+>
+  Nord
+</a>
+`;
+
+exports[`theme styles matches the snapshot with \`decent\` variant 1`] = `
+.c1 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:focus,
+.c1:hover,
+.c1:visited {
+  outline: none;
+}
+
+.c0 {
+  border-bottom: 1px solid #5e81ac;
+  color: #2e3440;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.c0:hover,
+.c0:active,
+.c0:focus {
+  color: #5e81ac;
+}
+
+<a
+  class="c0 c1"
+  href=""
+>
+  Nord
+</a>
+`;
+
+exports[`theme styles matches the snapshot with \`minimal\` variant 1`] = `
+.c1 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:focus,
+.c1:hover,
+.c1:visited {
+  outline: none;
+}
+
+.c0 {
+  border-bottom: 1px solid #5e81ac;
+  -webkit-transition: border-bottom-color 200ms ease-in-out;
+  transition: border-bottom-color 200ms ease-in-out;
+}
+
+.c0:hover,
+.c0:active,
+.c0:focus {
+  border-bottom-color: #2e3440;
+}
+
+<a
+  class="c0 c1"
+  href=""
+>
+  Nord
+</a>
+`;
+
+exports[`theme styles matches the snapshot with default variant 1`] = `
+.c1 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:focus,
+.c1:hover,
+.c1:visited {
+  outline: none;
+}
+
+.c0 {
+  border-radius: 0.25em;
+  color: #5e81ac;
+  -webkit-transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+
+.c0:hover,
+.c0:active,
+.c0:focus {
+  background-color: rgba(236,239,244,0.45);
+  color: #5e81ac;
+}
+
+<a
+  class="c0 c1"
+  href=""
+>
+  Nord
+</a>
+`;

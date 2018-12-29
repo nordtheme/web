@@ -17,7 +17,8 @@
  */
 
 const jestBabelConfig = {
-  presets: ["babel-preset-gatsby"]
+  presets: ["babel-preset-gatsby"],
+  plugins: ["@babel/plugin-proposal-optional-chaining", "@babel/plugin-proposal-export-default-from"]
 };
 
 module.exports = require("babel-jest").createTransformer(jestBabelConfig);
