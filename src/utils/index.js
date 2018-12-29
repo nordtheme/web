@@ -14,8 +14,9 @@
  * @since 0.2.0
  */
 
+import getSemVerFromGitDescribe from "./getSemVerFromGitDescribe";
 import isRouteInternal from "./isRouteInternal";
 import isRoutePartiallyMatch from "./isRoutePartiallyMatch";
 import { readSessionCache, writeSessionCache } from "./sessionCache";
 
-export { isRouteInternal, isRoutePartiallyMatch, readSessionCache, writeSessionCache };
+export { getSemVerFromGitDescribe, isRouteInternal, isRoutePartiallyMatch, readSessionCache, writeSessionCache };

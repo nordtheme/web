@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles has invisible border-bottom when not matching the active route 1`] = `
+.c0 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 1.125em;
+  color: #7b88a1;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 400ms ease-in-out, color 400ms ease-in-out;
+  transition: border-bottom 400ms ease-in-out, color 400ms ease-in-out;
+}
+
+<div
+  class="c0"
+>
+  Nord
+</div>
+`;
+
+exports[`theme styles has visible border-bottom when matching the active route 1`] = `
+.c0 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: 1.125em;
+  color: #4c566a;
+  border-bottom: 2px solid #4c566a;
+  -webkit-transition: border-bottom 400ms ease-in-out, color 400ms ease-in-out;
+  transition: border-bottom 400ms ease-in-out, color 400ms ease-in-out;
+}
+
+<div
+  class="c0"
+>
+  Nord
+</div>
+`;

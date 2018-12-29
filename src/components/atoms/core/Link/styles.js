@@ -17,7 +17,7 @@
 import { css } from "styled-components";
 import { lighten, rgba } from "polished";
 
-import { colors, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
+import { colors, motion, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
 
 const backgroundColorHover = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: rgba(colors.nord6, 0.45),
@@ -46,7 +46,8 @@ const fontColorHoverMinimal = themedMode({
 const calmly = css`
   border-radius: 0.25em;
   color: ${fontColor};
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: color ${motion.speed.duration.transition.text.fade}ms ease-in-out,
+    background-color ${motion.speed.duration.transition.text.fade}ms ease-in-out;
 
   &:hover,
   &:active,
@@ -59,7 +60,7 @@ const calmly = css`
 const decent = css`
   border-bottom: 1px solid ${fontColor};
   color: ${fontColorDecent};
-  transition: color 0.2s ease-in-out;
+  transition: color ${motion.speed.duration.transition.text.fade}ms ease-in-out;
 
   &:hover,
   &:active,
@@ -70,7 +71,7 @@ const decent = css`
 
 const minimal = css`
   border-bottom: 1px solid ${fontColor};
-  transition: border-bottom-color 0.2s ease-in-out;
+  transition: border-bottom-color ${motion.speed.duration.transition.text.fade}ms ease-in-out;
 
   &:hover,
   &:active,

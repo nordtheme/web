@@ -10,6 +10,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
+import Footer from "organisms/core/Footer";
 import Header from "organisms/core/Header";
 import Page from "containers/core/Page";
 import Root from "containers/core/Root";
@@ -28,6 +29,7 @@ const BaseLayout = ({ children, pathName }) => (
       <SiteMetadata pathName={pathName} />
       <Header />
       <Page>{children}</Page>
+      <Footer />
     </Fragment>
   </Root>
 );

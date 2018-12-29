@@ -24,7 +24,7 @@ const SunIconOutline = styled(SunSVGOutline)`
 `;
 
 /**
- * The "sun" icon from "Eva Icons" as SVG vector graphic component.
+ * The "sun" icon from "Eva Icons" as styled SVG vector graphic component.
  * The "outline" variant can be used by passing the `outlined` boolean prop.
  * By default, it uses the fill color and transition based on the current active global theme mode.
  *
@@ -33,7 +33,12 @@ const SunIconOutline = styled(SunSVGOutline)`
  * @see https://akveo.github.io/eva-icons
  * @since 0.3.0
  */
-const Sun = ({ outlined, svgRef }) => (outlined ? <SunIconOutline svgRef={svgRef} /> : <SunIconFill svgRef={svgRef} />);
+const Sun = ({ className, outlined, svgRef }) =>
+  outlined ? (
+    <SunIconOutline className={className} svgRef={svgRef} />
+  ) : (
+    <SunIconFill className={className} svgRef={svgRef} />
+  );
 
 Sun.propTypes = iconPropTypes;
 

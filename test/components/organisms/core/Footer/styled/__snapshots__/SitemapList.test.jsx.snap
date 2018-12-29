@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`theme styles matches the snapshot 1`] = `
+.c0 {
+  text-align: center;
+}
+
+@media (min-width:56.25em) {
+  .c0 {
+    text-align: start;
+  }
+}
+
+<div
+  class="c0"
+/>
+`;
