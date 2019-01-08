@@ -10,7 +10,7 @@
 import { css } from "styled-components";
 import { darken, lighten, rgba } from "polished";
 
-import { colors, themedModeVariant, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
+import { colors, motion, themedModeVariant, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
 
 const backgroundColor = themedModeVariant({
   primary: {
@@ -292,7 +292,10 @@ const styles = css`
   ${base};
   color: ${fontColor};
   background-color: ${({ ghost }) => !ghost && backgroundColor};
-  transition: background-color 0.2s ease-in, border-color 0.2s ease-in, box-shadow 0.2s ease-in, color 0.2s ease-in;
+  transition: background-color ${motion.speed.duration.transition.text.fade}ms ease-in,
+    border-color ${motion.speed.duration.transition.text.fade}ms ease-in,
+    box-shadow ${motion.speed.duration.transition.text.fade}ms ease-in,
+    color ${motion.speed.duration.transition.text.fade}ms ease-in;
   ${({ outlined }) =>
     outlined &&
     css`
