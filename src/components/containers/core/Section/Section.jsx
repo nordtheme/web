@@ -30,7 +30,6 @@ const variants = {
  * @since 0.3.0
  */
 const Section = styled.section`
-  position: relative;
   background-color: ${({ variant }) => variants[variant]};
   transition: background-color ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
 `;

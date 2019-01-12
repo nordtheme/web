@@ -15,7 +15,20 @@
  * @since 0.3.0
  */
 
+import SectionCommunity from "./SectionCommunity";
 import SectionHero from "./SectionHero";
+import SectionNativeColorSwatch from "./SectionNativeColorSwatch";
+import SectionPalettesContrast from "./SectionPalettesContrast";
+import SectionPalettesModularity from "./SectionPalettesModularity";
+import SectionPorts from "./SectionPorts";
+import SectionSyntax from "./SectionSyntax";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { SectionHero };
+export {
+  SectionCommunity,
+  SectionHero,
+  SectionNativeColorSwatch,
+  SectionPalettesContrast,
+  SectionPalettesModularity,
+  SectionPorts,
+  SectionSyntax
+};

@@ -38,6 +38,7 @@ exports[`logical behavior renders external URLs with \`href\` prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #4c566a;
   background-color: rgba(236,239,244,0.45);
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
@@ -115,6 +116,7 @@ exports[`logical behavior renders external URLs with \`to\` prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #4c566a;
   background-color: rgba(236,239,244,0.45);
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
@@ -192,6 +194,7 @@ exports[`logical behavior renders inernal URLs with \`href\` prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #4c566a;
   background-color: rgba(236,239,244,0.45);
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
@@ -270,6 +273,7 @@ exports[`logical behavior renders inernal URLs with \`to\` prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #4c566a;
   background-color: rgba(236,239,244,0.45);
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
@@ -334,6 +338,7 @@ exports[`theme styles has borders with 'dashed' and 'outlined' props 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #4c566a;
   background-color: rgba(236,239,244,0.45);
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
@@ -399,6 +404,7 @@ exports[`theme styles has borders with 'outlined' prop 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #4c566a;
   background-color: rgba(236,239,244,0.45);
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
@@ -464,6 +470,7 @@ exports[`theme styles matches the snapshot with 'primary' variant 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #3b4252;
   background-color: #88c0d0;
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
@@ -526,6 +533,7 @@ exports[`theme styles matches the snapshot with 'secondary' variant 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #3b4252;
   background-color: #81a1c1;
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
@@ -588,6 +596,7 @@ exports[`theme styles matches the snapshot with 'simple' variant 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #4c566a;
   background-color: rgba(236,239,244,0.45);
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
@@ -650,6 +659,7 @@ exports[`theme styles matches the snapshot with 'subtle' variant 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  line-height: 1.15;
   color: #5e81ac;
   background-color: transparent;
   -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;

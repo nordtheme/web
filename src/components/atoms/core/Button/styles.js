@@ -273,6 +273,8 @@ const base = css`
   background: none;
   padding: 0.375em 0.75em;
   user-select: none;
+  /* Ensure correct spacing when rendering as link element. */
+  line-height: 1.15;
 
   &:hover:not(:disabled) {
     cursor: pointer;

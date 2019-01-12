@@ -18,5 +18,13 @@ import getSemVerFromGitDescribe from "./getSemVerFromGitDescribe";
 import isRouteInternal from "./isRouteInternal";
 import isRoutePartiallyMatch from "./isRoutePartiallyMatch";
 import { readSessionCache, writeSessionCache } from "./sessionCache";
+import sectionIdFor from "./sectionIdFor";
 
-export { getSemVerFromGitDescribe, isRouteInternal, isRoutePartiallyMatch, readSessionCache, writeSessionCache };
+export {
+  getSemVerFromGitDescribe,
+  isRouteInternal,
+  isRoutePartiallyMatch,
+  readSessionCache,
+  sectionIdFor,
+  writeSessionCache
+};

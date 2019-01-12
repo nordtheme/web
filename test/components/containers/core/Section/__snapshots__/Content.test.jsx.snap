@@ -3,11 +3,13 @@
 exports[`theme styles adjusts top and bottom padding to passed props 1`] = `
 .c0 {
   width: 100%;
+  padding: 0 1.5em;
 }
 
 @media (min-width:75em) {
   .c0 {
     max-width: 75em;
+    padding: unset;
   }
 }
 
@@ -21,13 +23,22 @@ exports[`theme styles adjusts top and bottom padding to passed props 1`] = `
 exports[`theme styles has top and bottom padding 1`] = `
 .c0 {
   width: 100%;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding: 0 1.5em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
 
 @media (min-width:75em) {
   .c0 {
     max-width: 75em;
+    padding: unset;
+  }
+}
+
+@media (min-width:56.25em) {
+  .c0 {
+    padding-top: 5em;
+    padding-bottom: 5em;
   }
 }
 

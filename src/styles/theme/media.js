@@ -33,7 +33,7 @@ const media = {
   tabletPortrait: generateMediaQuery`(min-width: ${query(breakpoints.tabletPortraitLowerBoundary)})`,
   tabletLandscape: generateMediaQuery`(min-width: ${query(breakpoints.tabletLandscapeLowerBoundary)})`,
   desktop: generateMediaQuery`(min-width: ${query(breakpoints.desktopLowerBoundary)})`,
-  desktopPlus: generateMediaQuery`(min-width: ${query(breakpoints.desktopPlus)})`,
+  desktopPlus: generateMediaQuery`(min-width: ${query(breakpoints.desktopPlusLowerBoundary)})`,
   breakpoints
 };
 
