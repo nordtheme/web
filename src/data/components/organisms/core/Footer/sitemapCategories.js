@@ -8,6 +8,7 @@
  */
 
 import { ROUTE_BLOG, ROUTE_COMMUNITY, ROUTE_DOCS, ROUTE_PORTS, ROUTE_ROOT } from "config/routes/mappings";
+import { sectionIdFor } from "utils";
 
 /**
  * The mapping of categories for the sitemap.
@@ -20,7 +21,13 @@ const sitemapCategories = [
   {
     name: "Nord",
     url: ROUTE_ROOT,
-    links: []
+    links: [
+      { title: "Palettes", url: `#${sectionIdFor(ROUTE_ROOT, 1)}` },
+      { title: "Ports", url: `#${sectionIdFor(ROUTE_ROOT, 3)}` },
+      { title: "Swatches", url: `#${sectionIdFor(ROUTE_ROOT, 4)}` },
+      { title: "Syntax Highlighting", url: `#${sectionIdFor(ROUTE_ROOT, 5)}` },
+      { title: "Community", url: `#${sectionIdFor(ROUTE_ROOT, 6)}` }
+    ]
   },
   {
     name: "Ports",
