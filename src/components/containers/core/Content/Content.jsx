@@ -21,9 +21,11 @@ import { em } from "polished";
 const Content = styled.div`
   width: 100%;
   margin: ${({ centered }) => centered && "0 auto"};
+  padding: 0 1.5em;
 
   ${({ theme }) => theme.media.desktop`
-    max-width: ${em(theme.media.breakpoints.desktopLowerBoundary)}
+    max-width: ${em(theme.media.breakpoints.desktopLowerBoundary)};
+    padding: unset;
   `};
 `;
 
