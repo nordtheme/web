@@ -15,8 +15,8 @@
  * @since 0.3.0
  */
 
-import { A } from "./inline-text-semantics";
+import { A, Code } from "./inline-text-semantics";
 import { H1, H2, H3, H4, H5, H6 } from "./sectioning";
-import { P } from "./text";
+import { P, Pre } from "./text";
 
-export { A, H1, H2, H3, H4, H5, H6, P };
+export { A, Code, H1, H2, H3, H4, H5, H6, P, Pre };
