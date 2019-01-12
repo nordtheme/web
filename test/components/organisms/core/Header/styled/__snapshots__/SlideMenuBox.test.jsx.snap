@@ -7,7 +7,7 @@ exports[`theme styles has correct top position based on header height in unpinne
   width: 100%;
   background-color: #fff;
   text-align: center;
-  z-index: 3;
+  z-index: 4;
   overflow-y: auto;
   -webkit-transition: background-color 400ms ease-in-out;
   transition: background-color 400ms ease-in-out;
@@ -32,7 +32,7 @@ exports[`theme styles has correct top position based on the header height in pin
   width: 100%;
   background-color: #fff;
   text-align: center;
-  z-index: 3;
+  z-index: 4;
   overflow-y: auto;
   -webkit-transition: background-color 400ms ease-in-out;
   transition: background-color 400ms ease-in-out;

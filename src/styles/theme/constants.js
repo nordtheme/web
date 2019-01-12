@@ -46,6 +46,7 @@ const THEME_KEY_MODE = "mode";
  */
 const Z_INDEX_ELEMENTS = {
   CONTENT: "content",
+  DECORATIONS: "decorations",
   HEADER: "header",
   HEADER_COMPACT_SLIDE_MENU: "header-compact-slide-menu",
   MAIN: "main"
@@ -58,6 +59,7 @@ const Z_INDEX_ELEMENTS = {
  * @since 0.3.0
  */
 const Z_INDEX_ELEMENT_ORDER = [
+  Z_INDEX_ELEMENTS.DECORATIONS,
   Z_INDEX_ELEMENTS.MAIN,
   Z_INDEX_ELEMENTS.CONTENT,
   Z_INDEX_ELEMENTS.HEADER,

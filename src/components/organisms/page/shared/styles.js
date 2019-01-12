@@ -7,9 +7,17 @@
  * License:    MIT
  */
 
-import { css } from "styled-components";
+/**
+ * @file Provides shared styles for all page components.
+ * @author Arctic Ice Studio <development@arcticicestudio.com>
+ * @author Sven Greb <development@svengreb.de>
+ * @since 0.3.0
+ */
 
-import { media } from "styles/theme";
+import { css } from "styled-components";
+import { darken } from "polished";
+
+import { media, nord } from "styles/theme";
 
 const emptyStateIllustrationStyles = css`
   width: 7em;
@@ -35,4 +43,11 @@ const errorState404IllustrationStyles = css`
   `}
 `;
 
-export { emptyStateIllustrationStyles, errorState404IllustrationStyles };
+/**
+ * A darkened background color for landing page section components.
+ *
+ * @since 0.6.0
+ */
+const darkenedSectionBackgroundColor = darken(0.045, nord.nord0);
+
+export { darkenedSectionBackgroundColor, emptyStateIllustrationStyles, errorState404IllustrationStyles };
