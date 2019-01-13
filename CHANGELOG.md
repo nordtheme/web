@@ -8,6 +8,78 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.6.0
+
+![Release Date: 2019-01-13](https://img.shields.io/badge/Release_Date-2019--01--13-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/8) [![Milestone](https://img.shields.io/badge/Milestone-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/6)
+
+This version focused on the [sections of the landing page][gh-112] including the new [`Button` core atom component][gh-110] that represents the `<button>` HTML element.
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+
+The following issues are related to the [“Components” design concept][gh-63].
+
+**Core HTML Element Atom: “Button”** — #110 ⇄ #111 (⊶ 41ce16fa)
+↠ Implemented the core atom `Button` that represents a [`<button>`][mdn-button] base HTML element. It can also render as [core atom `A`][gh-70] with `Button` styles when the `href` or `to` props are passed with an internal and external URL.
+
+It provides multiple variations:
+
+- `primary` — uses the primary color `nord8` for background/border/text colorization.
+- `secondary` — uses the secondary color `nord9` for background/border/text colorization.
+- `simple` — uses the _Snow Storm_ and _Polar Night_ palettes for background/border/text colorization.
+- `subtle` — only colorizes the background on hover using the _Snow Storm_ and _Polar Night_ palettes for background/border/text colorization.
+
+Next to variations there are additional props to toggle more styles:
+
+- `dashed` — uses the `dashed` property for the CSS [`border-style`][mdn-css-bs] attribute.
+- `ghost` — only uses a border instead of a background color.
+- `outlined` — uses uses a border in addition to a background color.
+- `quiet` — keeps the initial text colorization on hover.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50845511-50d4d800-136d-11e9-98cf-7906148ff0ef.gif" width="30%"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50845521-57634f80-136d-11e9-9c85-68da2e9cab1c.gif" width="30%"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50845522-57634f80-136d-11e9-8b7b-f34c5445411c.gif" width="30%"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50845538-5fbb8a80-136d-11e9-84b0-b81d7d5c2e94.png" width="30%"/></p>
+
+**Landing Page Sections** — #112 ⇄ #113 (⊶ 339d3b8f)
+↠ Implemented the core atom `Button` that represents a [`<button>`][mdn-button] base HTML element. It can also render as [core atom `A`][gh-70] with `Button` styles when the `href` or `to` props are passed with an internal and external URL.
+
+Implemented all landing page sections including required dependencies, components and illustrations.
+All sections follow the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
+
+### Hero
+
+The first sections is the “hero” of the landing page that renders a short project description and the animated [Arctic Landscape][gh-arcland] SVG component. The animation will be triggered through the [React Waypoint][gh-rw] project.
+
+### Color Palettes
+
+The 2nd and 3rd sections are about Nord's color palettes and provide information about the modularity and contrast. All palettes are visualized through a new "color palette card" component that consists of the actual colors as small, rounded boxes and the associated color code as label using the hexadecimal format.
+
+### “Nordify”
+
+The 4th section presents Nord's port projects which can be used by users to “nordify” their favorite apps and platforms. It consists of the text content as well as a new illustration that might also be animated later on using a 3D parallax effect that reacts and moves based on the current mouse position in the section.
+
+### Color Swatches
+
+The 5th section is about Nord's “native” color swatches. It consists of the same elements like the 4th section, but renders a new non-animated illustration showing a application UI with Nord loaded as color palette.
+
+### Syntax Highlighting
+
+The 6th section is all about Nord's features to highlight code. Next to the text content and summary it renders a new and animated illustration, too.
+
+### Community
+
+The 7th and also last section presents details about Nord's communities. It renders the animated [Arctic Ocean Fractal][gh-arcocfrac] SVG component and a short summary about how to join, contribute and develop Nord's community.
+
+## Bug Fixes
+
+**Landing page decoration container blocks mouse pointer events** — #114 (⊶ 4ce828cb)
+↠ Fixed the container for decoration components of the landing page (implemented in #112) blocking all mouse/pointer events since it covers the whole section size. Therefore all underlying elements like buttons and links couldn't be clicked/pressed because the pointer was focused on the decoration container.
+
 # 0.5.0
 
 ![Release Date: 2018-12-29](https://img.shields.io/badge/Release_Date-2018--12--29-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.5.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/7) [![Milestone](https://img.shields.io/badge/Milestone-0.5.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/5)
@@ -801,6 +873,10 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-105]: https://github.com/arcticicestudio/nord-docs/issues/105
 [gh-106]: https://github.com/arcticicestudio/nord-docs/issues/106
 [gh-109]: https://github.com/arcticicestudio/nord-docs/issues/109
+[gh-110]: https://github.com/arcticicestudio/nord-docs/issues/110
+[gh-112]: https://github.com/arcticicestudio/nord-docs/issues/112
+[gh-arcland]: https://github.com/arcticicestudio/arctic-landscape
+[gh-arcocfrac]: https://www.npmjs.com/package/arctic-ocean-fractal
 [gh-bsl]: https://github.com/willmcpo/body-scroll-lock
 [gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
@@ -820,6 +896,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-remark-preset-lint-arcticicestudio]: https://github.com/arcticicestudio/remark-preset-lint-arcticicestudio
 [gh-rtl]: https://github.com/kentcdodds/react-testing-library
+[gh-rw]: https://github.com/brigade/react-waypoint
 [gh-sp]: https://github.com/GoogleChromeLabs/size-plugin
 [gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
 [gh-styleguide-js]: https://github.com/arcticicestudio/styleguide-javascript
@@ -833,6 +910,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [json-ld]: https://json-ld.org
 [md]: https://material.io
 [md-com-es]: https://material.io/design/communication/empty-states.html
+[mdn-button]: https://developer.mozilla.org/de/docs/Web/HTML/Element/button
+[mdn-css-bs]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-style
 [mdn-flexbox]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
 [mdn-grids]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
 [md-motion-speed]: https://material.io/design/motion/speed.html

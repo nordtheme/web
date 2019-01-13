@@ -19,7 +19,7 @@ const GLEAM_GRADIENT_ID = "frost-wind-gleam-gradient";
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @version 0.6.0
+ * @since 0.6.0
  */
 const GleamingFrostWind = props => (
   <svg {...props} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">

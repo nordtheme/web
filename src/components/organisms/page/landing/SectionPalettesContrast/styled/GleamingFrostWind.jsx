@@ -18,7 +18,7 @@ import { decorationBaseStyles } from "../../shared/styles";
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @version 0.6.0
+ * @since 0.6.0
  */
 const GleamingFrostWind = styled(CoreGleamingFrostWind)`
   ${decorationBaseStyles};
