@@ -17,6 +17,7 @@ import styled from "styled-components";
  * @since 0.6.0
  */
 const DecorationCanvas = styled.div`
+  pointer-events: none;
   position: absolute;
   top: 0;
   right: 0;
