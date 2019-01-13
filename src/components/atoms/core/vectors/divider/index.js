@@ -15,7 +15,12 @@
  * @since 0.5.0
  */
 
+import LinesWavyIntersecting from "./LinesWavyIntersecting";
 import WaveFooter from "./WaveFooter";
+import WaveRoaring from "./WaveRoaring";
+import WaveRough from "./WaveRough";
+import WaveSmooth from "./WaveSmooth";
+import WaveSmooth2 from "./WaveSmooth2";
+import WaveSmoothFlat from "./WaveSmoothFlat";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { WaveFooter };
+export { LinesWavyIntersecting, WaveFooter, WaveRoaring, WaveRough, WaveSmooth, WaveSmooth2, WaveSmoothFlat };

@@ -19,8 +19,13 @@ import CoreContent from "containers/core/Content";
  * @since 0.3.0
  */
 const Content = styled(CoreContent)`
-  padding-top: ${({ compact }) => !compact && "5em"};
-  padding-bottom: ${({ compact }) => !compact && "5em"};
+  padding-top: ${({ compact }) => !compact && "2.5em"};
+  padding-bottom: ${({ compact }) => !compact && "2.5em"};
+
+  ${({ theme }) => theme.media.tabletLandscape`
+    padding-top: ${({ compact }) => !compact && "5em"};
+    padding-bottom: ${({ compact }) => !compact && "5em"};
+  `};
 `;
 
 export default Content;

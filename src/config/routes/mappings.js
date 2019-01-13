@@ -65,11 +65,30 @@ const ROUTE_LANDING = ROUTE_ROOT + LANDING;
  */
 const ROUTE_PORTS = ROUTE_ROOT + PORTS;
 
+/**
+ * The per-route unique `id` attribute values of sections components.
+ *
+ * @constant {Object}
+ * @since 0.6.0
+ */
+const SECTION_COMPONENT_IDS = {
+  [ROUTE_ROOT]: [
+    "hero",
+    "palettes-modularity",
+    "palettes-contrast",
+    "ports",
+    "swatches",
+    "syntax-highlighting",
+    "community"
+  ]
+};
+
 module.exports = {
   ROUTE_BLOG,
   ROUTE_COMMUNITY,
   ROUTE_DOCS,
   ROUTE_LANDING,
   ROUTE_PORTS,
-  ROUTE_ROOT
+  ROUTE_ROOT,
+  SECTION_COMPONENT_IDS
 };

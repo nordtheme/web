@@ -3,11 +3,13 @@
 exports[`snapshot 1`] = `
 .c0 {
   width: 100%;
+  padding: 0 1.5em;
 }
 
 @media (min-width:75em) {
   .c0 {
     max-width: 75em;
+    padding: unset;
   }
 }
 

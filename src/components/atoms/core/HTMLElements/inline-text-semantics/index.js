@@ -16,6 +16,6 @@
  */
 
 import A from "./A";
+import Code from "./Code";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { A };
+export { A, Code };

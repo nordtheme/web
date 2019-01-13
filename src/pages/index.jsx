@@ -11,7 +11,15 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/landing";
+import {
+  SectionCommunity,
+  SectionHero,
+  SectionNativeColorSwatch,
+  SectionPalettesContrast,
+  SectionPalettesModularity,
+  SectionPorts,
+  SectionSyntax
+} from "organisms/page/landing";
 
 /**
  * The landing page component representing the root/index of the site.
@@ -23,6 +31,12 @@ import { SectionHero } from "organisms/page/landing";
 const Landing = ({ location: { pathname } }) => (
   <BaseLayout pathName={pathname}>
     <SectionHero />
+    <SectionPalettesModularity />
+    <SectionPalettesContrast />
+    <SectionPorts />
+    <SectionNativeColorSwatch />
+    <SectionSyntax />
+    <SectionCommunity />
   </BaseLayout>
 );
 

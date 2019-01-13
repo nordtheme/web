@@ -1,0 +1,699 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logical behavior renders external URLs with \`href\` prop 1`] = `
+.c1 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:focus,
+.c1:hover,
+.c1:visited {
+  outline: none;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #4c566a;
+  background-color: rgba(236,239,244,0.45);
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: rgba(236,239,244,0.65);
+}
+
+.c0:active:not(:disabled) {
+  background-color: rgba(236,239,244,0.85);
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+}
+
+<a
+  class="c0 c1"
+  href="https://nordtheme.com"
+>
+  Nord
+</a>
+`;
+
+exports[`logical behavior renders external URLs with \`to\` prop 1`] = `
+.c1 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:focus,
+.c1:hover,
+.c1:visited {
+  outline: none;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #4c566a;
+  background-color: rgba(236,239,244,0.45);
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: rgba(236,239,244,0.65);
+}
+
+.c0:active:not(:disabled) {
+  background-color: rgba(236,239,244,0.85);
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+}
+
+<a
+  class="c0 c1"
+  href="https://nordtheme.com"
+>
+  Nord
+</a>
+`;
+
+exports[`logical behavior renders inernal URLs with \`href\` prop 1`] = `
+.c1 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:focus,
+.c1:hover,
+.c1:visited {
+  outline: none;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #4c566a;
+  background-color: rgba(236,239,244,0.45);
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: rgba(236,239,244,0.65);
+}
+
+.c0:active:not(:disabled) {
+  background-color: rgba(236,239,244,0.85);
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+}
+
+<a
+  class="c0 c1"
+  href="/docs"
+  variant="simple"
+>
+  Nord
+</a>
+`;
+
+exports[`logical behavior renders inernal URLs with \`to\` prop 1`] = `
+.c1 {
+  color: inherit;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:active,
+.c1:focus,
+.c1:hover,
+.c1:visited {
+  outline: none;
+}
+
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #4c566a;
+  background-color: rgba(236,239,244,0.45);
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: rgba(236,239,244,0.65);
+}
+
+.c0:active:not(:disabled) {
+  background-color: rgba(236,239,244,0.85);
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+}
+
+<a
+  class="c0 c1"
+  href="/docs"
+  variant="simple"
+>
+  Nord
+</a>
+`;
+
+exports[`theme styles has borders with 'dashed' and 'outlined' props 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #4c566a;
+  background-color: rgba(236,239,244,0.45);
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  border: 0.0625em dashed rgba(76,86,106,0.75);
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: rgba(236,239,244,0.65);
+  border-color: #4c566a;
+}
+
+.c0:active:not(:disabled) {
+  background-color: rgba(236,239,244,0.85);
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+  border-color: rgba(76,86,106,0.4);
+}
+
+<button
+  class="c0"
+>
+  Nord
+</button>
+`;
+
+exports[`theme styles has borders with 'outlined' prop 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #4c566a;
+  background-color: rgba(236,239,244,0.45);
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  border: 0.0625em solid rgba(76,86,106,0.75);
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: rgba(236,239,244,0.65);
+  border-color: #4c566a;
+}
+
+.c0:active:not(:disabled) {
+  background-color: rgba(236,239,244,0.85);
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+  border-color: rgba(76,86,106,0.4);
+}
+
+<button
+  class="c0"
+>
+  Nord
+</button>
+`;
+
+exports[`theme styles matches the snapshot with 'primary' variant 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #3b4252;
+  background-color: #88c0d0;
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: #79b8ca;
+}
+
+.c0:active:not(:disabled) {
+  background-color: #6bb1c4;
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+}
+
+<button
+  class="c0"
+>
+  Nord
+</button>
+`;
+
+exports[`theme styles matches the snapshot with 'secondary' variant 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #3b4252;
+  background-color: #81a1c1;
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: #7397ba;
+}
+
+.c0:active:not(:disabled) {
+  background-color: #668db4;
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+}
+
+<button
+  class="c0"
+>
+  Nord
+</button>
+`;
+
+exports[`theme styles matches the snapshot with 'simple' variant 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #4c566a;
+  background-color: rgba(236,239,244,0.45);
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: rgba(236,239,244,0.65);
+}
+
+.c0:active:not(:disabled) {
+  background-color: rgba(236,239,244,0.85);
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+}
+
+<button
+  class="c0"
+>
+  Nord
+</button>
+`;
+
+exports[`theme styles matches the snapshot with 'subtle' variant 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: inherit;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: none;
+  border-radius: 0.25em;
+  background: none;
+  padding: 0.375em 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.15;
+  color: #5e81ac;
+  background-color: transparent;
+  -webkit-transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+  transition: background-color 200ms ease-in, border-color 200ms ease-in, box-shadow 200ms ease-in, color 200ms ease-in;
+}
+
+.c0:hover:not(:disabled) {
+  cursor: pointer;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover:not(:disabled) {
+  background-color: rgba(236,239,244,0.65);
+}
+
+.c0:active:not(:disabled) {
+  background-color: rgba(236,239,244,0.85);
+}
+
+.c0:disabled {
+  color: rgba(76,86,106,0.4);
+}
+
+<button
+  class="c0"
+>
+  Nord
+</button>
+`;

@@ -16,6 +16,6 @@
  */
 
 import P from "./P";
+import Pre from "./Pre";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { P };
+export { P, Pre };
