@@ -27,6 +27,16 @@ const sectioningSecondary = {
 };
 
 /**
+ * A darkened background color for landing page section components.
+ *
+ * @since 0.6.0
+ */
+const tertiarySecondary = {
+  [MODE_BRIGHT_SNOW_FLURRY]: lighten(0.08, nord.nord5),
+  [MODE_DARK_NIGHT_FROST]: darken(0.045, nord.nord0)
+};
+
+/**
  * Provides theme background colors.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
@@ -37,7 +47,8 @@ const background = {
   base,
   sectioning: {
     primary: sectioningPrimary,
-    secondary: sectioningSecondary
+    secondary: sectioningSecondary,
+    tertiary: tertiarySecondary
   }
 };
 

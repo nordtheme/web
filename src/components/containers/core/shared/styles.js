@@ -31,4 +31,9 @@ const secondaryBackgroundColor = themedMode({
   [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.secondary[MODE_DARK_NIGHT_FROST]
 });
 
-export { baseBackgroundColor, primaryBackgroundColor, secondaryBackgroundColor };
+const tertiaryBackgroundColor = themedMode({
+  [MODE_BRIGHT_SNOW_FLURRY]: colors.background.sectioning.tertiary[MODE_BRIGHT_SNOW_FLURRY],
+  [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.tertiary[MODE_DARK_NIGHT_FROST]
+});
+
+export { baseBackgroundColor, primaryBackgroundColor, secondaryBackgroundColor, tertiaryBackgroundColor };

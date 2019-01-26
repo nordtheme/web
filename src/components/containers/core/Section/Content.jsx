@@ -21,6 +21,7 @@ import CoreContent from "containers/core/Content";
 const Content = styled(CoreContent)`
   padding-top: ${({ compact }) => !compact && "2.5em"};
   padding-bottom: ${({ compact }) => !compact && "2.5em"};
+  position: ${({ decorated }) => decorated && "relative"};
 
   ${({ theme }) => theme.media.tabletLandscape`
     padding-top: ${({ compact }) => !compact && "5em"};
