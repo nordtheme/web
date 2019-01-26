@@ -29,7 +29,7 @@ const BaseButton = styled.button`
  * @since 0.6.0
  * @see https://developer.mozilla.org/de/docs/Web/HTML/Element/button
  */
-const Button = ({ children, dashed, disabled, ghost, href, onClick, outlined, quiet, to, variant }) => {
+const Button = ({ children, dashed, disabled, ghost, href, onClick, outlined, quiet, to, variant, ...passProps }) => {
   if (href) {
     return (
       <BaseButton
@@ -41,6 +41,7 @@ const Button = ({ children, dashed, disabled, ghost, href, onClick, outlined, qu
         outlined={outlined}
         quiet={quiet}
         variant={variant}
+        {...passProps}
       >
         {children}
       </BaseButton>
@@ -57,6 +58,7 @@ const Button = ({ children, dashed, disabled, ghost, href, onClick, outlined, qu
         quiet={quiet}
         to={to}
         variant={variant}
+        {...passProps}
       >
         {children}
       </BaseButton>
@@ -71,6 +73,7 @@ const Button = ({ children, dashed, disabled, ghost, href, onClick, outlined, qu
       outlined={outlined}
       quiet={quiet}
       variant={variant}
+      {...passProps}
     >
       {children}
     </BaseButton>
