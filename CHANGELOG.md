@@ -8,6 +8,69 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.7.0
+
+![Release Date: 2019-01-26](https://img.shields.io/badge/Release_Date-2019--01--26-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/9) [![Milestone](https://img.shields.io/badge/Milestone-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/7)
+
+This version mainly focused on the [sections of the community page][gh-115] to represent Nord's community chat channels as well as the content & knowledge bases.
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+
+The following issues are related to the [“Components” design concept][gh-63].
+
+**Community Page Sections** — #115 ⇄ #116 (⊶ 5fb775c7)
+↠ Implemented all community page sections including required dependencies, components and illustrations.
+All sections follow the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789079-bb677f80-2185-11e9-8069-782a098c3d50.png"/></p>
+
+### Hero
+
+The first section is the “hero” of the community page that renders a description about the page's purpose and an animated SVG component.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789084-bb677f80-2185-11e9-8f01-06d2d1b24b5a.png"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789085-bc001600-2185-11e9-8711-fc6c7a082405.png"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789098-da661180-2185-11e9-86af-cfafc58395f3.gif"/></p>
+
+### Chats
+
+The 2nd section is about Nord's community chats where each platform is represented as card rendered in a two-column grid layout. Each card contains the platforms official logo, colorized with colors of the respective brand guidelines, a short summary about the platform/service and a link component that'll forward to the community within the platform.
+Next to the official main channel each platform also provides sub-channels for all port projects
+
+As of now the following community chats of Nord are represented:
+
+- Arctic Ice Studio's official community on [Spectrum][spectrum-ais]
+- Nord's official [Keybase team chat][kb-chat-nord]
+- Nord's official [Slack][slack-ais] workspace
+- Nord's official [Discord][] space
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789080-bb677f80-2185-11e9-8c28-5d429bfa14e0.png"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789081-bb677f80-2185-11e9-9a81-b00b77af90e9.png"/></p>
+
+### Content
+
+The 3th and also currently last section presents platforms where the community can create content and ask questions for and about Nord. Next to the official documentation these content & knowledge bases are also powered by community.
+
+Like the chat platforms in the previous section each platform/service is represented as card including the same information, rendered by the same components, and also structured in a two-column grid layout.
+Next to this, each card includes the latest three items (questions, posts etc.) of the platform's community rendered as link component with the item's title and metadata like tags, the name of the author and the relative creation date/time.
+
+As of now the following community platforms of Nord are represented:
+
+- Latest questions from [Stack Overflow][stof-nord-tagged] tagged with `nord` or `nordtheme`
+- Nord's official [/r/nordtheme][] subreddit
+
+All data is fetched from the official REST APIs of the respective platform using [axios][gh-axios].
+The processing of any date/time data is handled with [date-fns][gh-date-fns], a modern and more lightweight ES6+ library with tree-shaking support that'll be used project-wide for Nord Docs to handle any other date/time data like e.g. blog posts metadata.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789082-bb677f80-2185-11e9-99f3-5cb9387fcefa.png"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789083-bb677f80-2185-11e9-9920-64914402da26.png"/></p>
+
 # 0.6.0
 
 ![Release Date: 2019-01-13](https://img.shields.io/badge/Release_Date-2019--01--13-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/8) [![Milestone](https://img.shields.io/badge/Milestone-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/6)
@@ -813,11 +876,13 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 <!-- Base Links -->
 
+[/r/nordtheme]: https://www.reddit.com/r/nordtheme
 [babel]: https://babeljs.io
 [babel-docs-plug]: https://babeljs.io/docs/en/plugins
 [circleci]: https://circleci.com
 [codecov]: https://codecov.io
 [cra]: https://facebook.github.io/create-react-app
+[discord]: https://discordapp.com
 [editorconfig]: https://editorconfig.org
 [eslint]: https://eslint.org
 [eslint-docs-auto-fix]: https://eslint.org/docs/user-guide/command-line-interface#fixing-problems
@@ -875,10 +940,13 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-109]: https://github.com/arcticicestudio/nord-docs/issues/109
 [gh-110]: https://github.com/arcticicestudio/nord-docs/issues/110
 [gh-112]: https://github.com/arcticicestudio/nord-docs/issues/112
+[gh-115]: https://github.com/arcticicestudio/nord-docs/issues/112
 [gh-arcland]: https://github.com/arcticicestudio/arctic-landscape
 [gh-arcocfrac]: https://www.npmjs.com/package/arctic-ocean-fractal
+[gh-axios]: https://github.com/axios/axios
 [gh-bsl]: https://github.com/willmcpo/body-scroll-lock
 [gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
+[gh-date-fns]: https://github.com/date-fns/date-fns
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
 [gh-gp-ws]: https://github.com/axe312ger/gatsby-plugin-webpack-size
 [gh-help-coc]: https://help.github.com/articles/adding-a-code-of-conduct-to-your-project
@@ -908,6 +976,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [inter-ui]: https://rsms.me/inter
 [jest]: https://jestjs.io
 [json-ld]: https://json-ld.org
+[kb-chat-nord]: https://keybase.io/team/nord.chat
 [md]: https://material.io
 [md-com-es]: https://material.io/design/communication/empty-states.html
 [mdn-button]: https://developer.mozilla.org/de/docs/Web/HTML/Element/button
@@ -956,10 +1025,13 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [react-pose]: https://popmotion.io/pose
 [remark]: https://remark.js.org
 [schema.org]: https://schema.org
+[slack-ais]: https://arcticicestudio.slack.com
+[spectrum-ais]: https://spectrum.chat/arcticicestudio
 [stc-docs-globstyle]: https://www.styled-components.com/docs/api#createglobalstyle
 [stc-docs-mqt]: https://www.styled-components.com/docs/advanced#media-templates
 [stc-docs-thprov]: https://www.styled-components.com/docs/api#themeprovider
 [stc-docs-tooling-jest]: https://www.styled-components.com/docs/tooling#jest-integration
+[stof-nord-tagged]: https://stackoverflow.com/questions/tagged/nord+or+nordtheme
 [styled-components]: https://styled-components.com
 [styleguide-javascript]: https://arcticicestudio.github.io/styleguide-javascript
 [styleguide-markdown]: https://arcticicestudio.github.io/styleguide-markdown
