@@ -12,11 +12,9 @@ import styled from "styled-components";
 import { WaveSmoothFlat } from "atoms/core/vectors/divider";
 import { colors, motion, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
 
-import { darkenedSectionBackgroundColor } from "../../../shared/styles";
-
 const fillColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.background.sectioning.primary[MODE_BRIGHT_SNOW_FLURRY],
-  [MODE_DARK_NIGHT_FROST]: darkenedSectionBackgroundColor
+  [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.tertiary[MODE_DARK_NIGHT_FROST]
 });
 
 /**

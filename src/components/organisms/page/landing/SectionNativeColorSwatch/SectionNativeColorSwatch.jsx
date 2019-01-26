@@ -12,7 +12,7 @@ import React from "react";
 import Button from "atoms/core/Button";
 import { Content } from "containers/core/Section";
 import { ReactComponent as ColorSwatches } from "assets/images/illustrations/color-swatches.svg";
-import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/landing/FeatureDuo";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { ROUTE_DOCS, ROUTE_ROOT } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
 

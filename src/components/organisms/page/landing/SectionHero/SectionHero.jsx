@@ -14,7 +14,7 @@ import ArcticLandscape, { POSE_DRAW, POSE_ERASE } from "arctic-landscape";
 import { Content } from "containers/core/Section";
 import Button from "atoms/core/Button";
 import { H1 } from "atoms/core/HTMLElements";
-import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/landing/FeatureDuo";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { ROUTE_DOCS, ROUTE_ROOT } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
 
