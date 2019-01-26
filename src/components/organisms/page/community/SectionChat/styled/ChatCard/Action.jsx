@@ -7,15 +7,22 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
+import { CardAction } from "../../../shared";
+
 /**
- * @file Provides the components for the community page.
+ * A container component for an card item action.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.7.0
  */
+const Action = styled(CardAction)`
+  ${({ theme }) => theme.media.tabletPortrait`
+    display: flex;
+    align-items: flex-end;
+  `};
+`;
 
-import SectionChat from "./SectionChat";
-import SectionContent from "./SectionContent";
-import SectionHero from "./SectionHero";
-
-export { SectionChat, SectionContent, SectionHero };
+export default Action;

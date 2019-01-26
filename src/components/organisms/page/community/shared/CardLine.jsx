@@ -7,15 +7,22 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
+import { Hr } from "atoms/core/HTMLElements";
+
 /**
- * @file Provides the components for the community page.
+ * A component that represents a horizontal line of a card component.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.7.0
  */
+const CardLine = styled(Hr)`
+  ${({ theme }) => theme.media.tabletPortrait`
+    grid-row: 3;
+    grid-column: 1 / span 2;
+  `};
+`;
 
-import SectionChat from "./SectionChat";
-import SectionContent from "./SectionContent";
-import SectionHero from "./SectionHero";
-
-export { SectionChat, SectionContent, SectionHero };
+export default CardLine;

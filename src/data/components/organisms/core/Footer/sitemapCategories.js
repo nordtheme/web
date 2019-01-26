@@ -47,7 +47,10 @@ const sitemapCategories = [
   {
     name: "Community",
     url: ROUTE_COMMUNITY,
-    links: []
+    links: [
+      { title: "Chats", url: `${ROUTE_COMMUNITY}#${sectionIdFor(ROUTE_COMMUNITY, 1)}` },
+      { title: "Content", url: `${ROUTE_COMMUNITY}#${sectionIdFor(ROUTE_COMMUNITY, 2)}` }
+    ]
   }
 ];
 

@@ -7,15 +7,29 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
 /**
- * @file Provides the components for the community page.
+ * A wrapper component for a card item.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.7.0
  */
+const CardItemWrapper = styled.div`
+  margin: 1.4em 0;
 
-import SectionChat from "./SectionChat";
-import SectionContent from "./SectionContent";
-import SectionHero from "./SectionHero";
+  &:first-child {
+    margin-top: 0;
+  }
 
-export { SectionChat, SectionContent, SectionHero };
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  ${({ theme }) => theme.media.tabletPortrait`
+    display: flex;
+  `};
+`;
+
+export default CardItemWrapper;

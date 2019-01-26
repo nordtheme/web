@@ -7,15 +7,22 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
 /**
- * @file Provides the components for the community page.
+ * A component that represents the logo of a card component.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.7.0
  */
+const CardLogo = styled.div`
+  margin: 0 auto;
+  margin-bottom: 1em;
+  width: 3em;
+  svg {
+    fill: ${({ logoColor }) => logoColor};
+  }
+`;
 
-import SectionChat from "./SectionChat";
-import SectionContent from "./SectionContent";
-import SectionHero from "./SectionHero";
-
-export { SectionChat, SectionContent, SectionHero };
+export default CardLogo;
