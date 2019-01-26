@@ -19,7 +19,7 @@ import { ROUTE_DOCS, ROUTE_ROOT } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
 
 import { Cloud1, Cloud2, Cloud3, DecorationCanvas, WaveDivider } from "./styled";
-import { Section } from "../shared";
+import { Section } from "../../shared";
 
 const SECTION_ID = sectionIdFor(ROUTE_ROOT, 0);
 

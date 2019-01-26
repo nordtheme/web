@@ -8,13 +8,13 @@
  */
 
 /**
- * @file Provides shared components for the landing page orgaism components.
+ * @file Provides shared components for the all page orgaism components.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
  */
 
-import ColorPaletteWrapper from "./ColorPaletteWrapper";
+import DecorationCanvas from "./DecorationCanvas";
+import Section from "./Section";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { ColorPaletteWrapper };
+export { DecorationCanvas, Section };

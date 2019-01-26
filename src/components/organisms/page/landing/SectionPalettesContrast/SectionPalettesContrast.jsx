@@ -25,7 +25,8 @@ import {
   MODE_DARK_NIGHT_FROST
 } from "styles/theme";
 
-import { ColorPaletteWrapper, DecorationCanvas, Section } from "../shared";
+import { DecorationCanvas, Section } from "../../shared";
+import { ColorPaletteWrapper } from "../shared";
 import { GleamingFrostWind, WaveDivider } from "./styled";
 
 const SECTION_ID = sectionIdFor(ROUTE_ROOT, 2);

@@ -16,7 +16,7 @@ import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "mol
 import { ROUTE_DOCS, ROUTE_ROOT } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
 
-import { Section } from "../shared";
+import { Section } from "../../shared";
 import { darkenedThemeModeBackgroundbackgroundColor } from "../shared/styles";
 import { DecorationCanvas, SketchTools, VectorDesignCollage, WaveDivider } from "./styled";
 
