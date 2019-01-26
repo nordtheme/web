@@ -12,11 +12,11 @@ import Waypoint from "react-waypoint";
 
 import Button from "atoms/core/Button";
 import { Content } from "containers/core/Section";
-import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/landing/FeatureDuo";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { ROUTE_DOCS, ROUTE_ROOT } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
 
-import { Section } from "../shared";
+import { Section } from "../../shared";
 import { CodeSyntaxLines, WaveDivider, POSE_DRAW, POSE_ERASE } from "./styled";
 
 const SECTION_ID = sectionIdFor(ROUTE_ROOT, 5);

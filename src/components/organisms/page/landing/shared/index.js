@@ -15,7 +15,6 @@
  */
 
 import ColorPaletteWrapper from "./ColorPaletteWrapper";
-import DecorationCanvas from "./DecorationCanvas";
-import Section from "./Section";
 
-export { ColorPaletteWrapper, DecorationCanvas, Section };
+/* eslint-disable-next-line import/prefer-default-export */
+export { ColorPaletteWrapper };

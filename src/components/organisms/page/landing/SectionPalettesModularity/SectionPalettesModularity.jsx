@@ -13,12 +13,13 @@ import { Content } from "containers/core/Section";
 import Button from "atoms/core/Button";
 import ColorPaletteCard from "atoms/core/ColorPaletteCard";
 import { Code } from "atoms/core/HTMLElements";
-import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/landing/FeatureDuo";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { ROUTE_DOCS, ROUTE_ROOT } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
 import { palettes } from "styles/theme";
 
-import { ColorPaletteWrapper, DecorationCanvas, Section } from "../shared";
+import { DecorationCanvas, Section } from "../../shared";
+import { ColorPaletteWrapper } from "../shared";
 import { NordicBackpack, NordicCompass, MapPathMarker, WaveDivider } from "./styled";
 
 const SECTION_ID = sectionIdFor(ROUTE_ROOT, 1);

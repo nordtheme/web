@@ -27,10 +27,8 @@ import {
   Z_INDEX_ELEMENTS
 } from "styles/theme";
 
-import { darkenedSectionBackgroundColor } from "../../shared/styles";
-
 const darkenedThemeModeBackgroundbackgroundColor = themedMode({
-  [MODE_DARK_NIGHT_FROST]: darkenedSectionBackgroundColor
+  [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.tertiary[MODE_DARK_NIGHT_FROST]
 });
 
 const decorationBaseStyles = css`

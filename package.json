@@ -1,7 +1,7 @@
 {
   "name": "nord-docs",
   "title": "Nord Docs",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "The official Nord website and documentation",
   "author": {
     "name": "Arctic Ice Studio",
@@ -85,7 +85,9 @@
   "dependencies": {
     "arctic-landscape": ">=0.1.0 <1.0.0",
     "arctic-ocean-fractal": ">=0.1.0 <1.0.0",
+    "axios": "0.18.0",
     "body-scroll-lock": "2.6.1",
+    "date-fns": "2.0.0-alpha.27",
     "gatsby": "2.0.75",
     "gatsby-plugin-canonical-urls": "2.0.8",
     "gatsby-plugin-catch-links": "2.0.9",

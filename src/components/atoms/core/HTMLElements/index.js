@@ -17,6 +17,6 @@
 
 import { A, Code } from "./inline-text-semantics";
 import { H1, H2, H3, H4, H5, H6 } from "./sectioning";
-import { P, Pre } from "./text";
+import { Hr, P, Pre } from "./text";
 
-export { A, Code, H1, H2, H3, H4, H5, H6, P, Pre };
+export { A, Code, H1, H2, H3, H4, H5, H6, Hr, P, Pre };

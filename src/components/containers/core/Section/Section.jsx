@@ -12,12 +12,18 @@ import styled from "styled-components";
 
 import { motion } from "styles/theme";
 
-import { baseBackgroundColor, primaryBackgroundColor, secondaryBackgroundColor } from "../shared/styles";
+import {
+  baseBackgroundColor,
+  primaryBackgroundColor,
+  secondaryBackgroundColor,
+  tertiaryBackgroundColor
+} from "../shared/styles";
 
 const variants = {
   base: baseBackgroundColor,
   primary: primaryBackgroundColor,
-  secondary: secondaryBackgroundColor
+  secondary: secondaryBackgroundColor,
+  tertiary: tertiaryBackgroundColor
 };
 
 /**
