@@ -15,7 +15,8 @@
  * @since 0.3.0
  */
 
+import Hr from "./Hr";
 import P from "./P";
 import Pre from "./Pre";
 
-export { P, Pre };
+export { Hr, P, Pre };
