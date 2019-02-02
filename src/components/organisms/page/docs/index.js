@@ -14,7 +14,8 @@
  * @since 0.3.0
  */
 
-import SectionLanding from "./SectionLanding";
+import DocsPage from "./DocsPage";
+import SectionContents from "./SectionContents";
+import SectionHero from "./SectionHero";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { SectionLanding };
+export { DocsPage, SectionContents, SectionHero };

@@ -20,7 +20,7 @@ import {
   Z_INDEX_ELEMENTS
 } from "styles/theme";
 
-import { backgroundColor } from "../shared/styles";
+import { backgroundColorVariants } from "../shared/styles";
 
 const dropShadow = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: `0 5px 10px 0 ${colors.shadow.minimal[MODE_BRIGHT_SNOW_FLURRY]}`,
@@ -42,7 +42,7 @@ const Header = styled.header`
   height: ${({ height, heightPinned, isPinned }) => (isPinned ? `${em(heightPinned)}` : `${em(height)}`)};
   width: 100%;
   z-index: ${zIndexFor(Z_INDEX_ELEMENTS.HEADER)};
-  background-color: ${backgroundColor};
+  background-color: ${({ variant }) => backgroundColorVariants[variant]};
   box-shadow: ${({ isPinned }) => isPinned && dropShadow};
   transition: height ${motion.speed.duration.transition.area.medium}ms ease-in-out,
     box-shadow ${motion.speed.duration.transition.area.medium}ms ease-in-out,

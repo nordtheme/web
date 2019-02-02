@@ -5,7 +5,7 @@ import { em } from "polished";
 import { motion, zIndexFor, Z_INDEX_ELEMENTS } from "styles/theme";
 import { HEADER_HEIGHT, HEADER_HEIGHT_PINNED } from "organisms/core/Header";
 
-import { backgroundColor } from "../shared/styles";
+import { backgroundColorVariants } from "../shared/styles";
 import { slideMenuNavigationPoseConfig } from "./poseConfig";
 
 /**
@@ -19,7 +19,7 @@ const SlideMenuBox = styled(posed.div(slideMenuNavigationPoseConfig))`
   position: absolute;
   top: ${({ isPinned }) => (isPinned ? em(HEADER_HEIGHT_PINNED) : em(HEADER_HEIGHT))};
   width: 100%;
-  background-color: ${backgroundColor};
+  background-color: ${({ variant }) => backgroundColorVariants[variant]};
   text-align: center;
   z-index: ${zIndexFor(Z_INDEX_ELEMENTS.HEADER_COMPACT_SLIDE_MENU)};
   overflow-y: auto;

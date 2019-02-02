@@ -16,6 +16,6 @@
  */
 
 import { iconDefaultProps, iconPropTypes } from "./propTypes";
-import { themeModeFillColorStyles } from "./styles";
+import { themeModeFillColorStyles, themeModeStrokeColorStyles } from "./styles";
 
-export { iconDefaultProps, iconPropTypes, themeModeFillColorStyles };
+export { iconDefaultProps, iconPropTypes, themeModeFillColorStyles, themeModeStrokeColorStyles };
