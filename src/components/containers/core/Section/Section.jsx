@@ -38,6 +38,7 @@ const variants = {
 const Section = styled.section`
   background-color: ${({ variant }) => variants[variant]};
   transition: background-color ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
+  position: ${({ decorated }) => decorated && "relative"};
 `;
 
 Section.propTypes = {
