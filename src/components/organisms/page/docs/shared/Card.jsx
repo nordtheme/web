@@ -7,15 +7,24 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
+import BaseCard from "./BaseCard";
+
 /**
- * @file Provides the components for the docs page.
+ * A styled card component.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.8.0
  */
+const Card = styled(BaseCard)`
+  ${({ theme }) => theme.media.tabletPortrait`
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 2em;
+    text-align: start;
+  `};
+`;
 
-import DocsPage from "./DocsPage";
-import SectionContents from "./SectionContents";
-import SectionHero from "./SectionHero";
-
-export { DocsPage, SectionContents, SectionHero };
+export default Card;

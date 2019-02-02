@@ -7,15 +7,21 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
 /**
- * @file Provides the components for the docs page.
+ * A wrapper component for card item content.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.8.0
  */
+const CardItemContent = styled.div`
+  ${({ theme }) => theme.media.tabletPortrait`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  `};
+`;
 
-import DocsPage from "./DocsPage";
-import SectionContents from "./SectionContents";
-import SectionHero from "./SectionHero";
-
-export { DocsPage, SectionContents, SectionHero };
+export default CardItemContent;

@@ -7,15 +7,17 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
 /**
- * @file Provides the components for the docs page.
+ * A content wrapper component that applies page specific styles.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.8.0
  */
+const DocsPage = styled.div`
+  font-family: ${({ theme }) => theme.typography.typefaces.straight};
+`;
 
-import DocsPage from "./DocsPage";
-import SectionContents from "./SectionContents";
-import SectionHero from "./SectionHero";
-
-export { DocsPage, SectionContents, SectionHero };
+export default DocsPage;

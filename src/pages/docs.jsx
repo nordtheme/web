@@ -11,7 +11,7 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionLanding } from "organisms/page/docs";
+import { DocsPage, SectionContents, SectionHero } from "organisms/page/docs";
 
 /**
  * The component that represents the docs page.
@@ -21,8 +21,11 @@ import { SectionLanding } from "organisms/page/docs";
  * @since 0.3.0
  */
 const Docs = ({ location: { pathname } }) => (
-  <BaseLayout pathName={pathname}>
-    <SectionLanding />
+  <BaseLayout headerVariant="tertiary" pathName={pathname}>
+    <DocsPage>
+      <SectionHero />
+      <SectionContents />
+    </DocsPage>
   </BaseLayout>
 );
 

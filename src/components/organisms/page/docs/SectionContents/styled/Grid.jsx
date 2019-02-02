@@ -7,15 +7,23 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
 /**
- * @file Provides the components for the docs page.
+ * A configurable and responsive grid for card components.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.8.0
  */
+const Grid = styled.div`
+  display: grid;
+  grid-gap: 4em;
 
-import DocsPage from "./DocsPage";
-import SectionContents from "./SectionContents";
-import SectionHero from "./SectionHero";
+  ${({ theme }) => theme.media.tabletLandscape`
+    grid-template-columns: repeat(2, 1fr);
+    ${({ isExtended }) => isExtended && "grid-template-rows: repeat(2, auto)"};
+  `};
+`;
 
-export { DocsPage, SectionContents, SectionHero };
+export default Grid;
