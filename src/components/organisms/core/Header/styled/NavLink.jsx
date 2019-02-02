@@ -12,7 +12,7 @@ import styled from "styled-components";
 import { A } from "atoms/core/HTMLElements";
 import { motion } from "styles/theme";
 
-import { linkBackgroundColorHover } from "../shared/styles";
+import { linkBackgroundColorHoverVariants } from "../shared/styles";
 
 /**
  * A navigation link.
@@ -29,7 +29,7 @@ const NavLink = styled(A)`
   &:active,
   &:focus,
   &:hover {
-    background-color: ${linkBackgroundColorHover};
+    background-color: ${({ variant }) => linkBackgroundColorHoverVariants[variant]};
   }
 `;
 

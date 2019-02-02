@@ -10,6 +10,8 @@
 import styled from "styled-components";
 import { em } from "polished";
 
+import { backgroundColorVariants } from "../shared/styles";
+
 /**
  * A spacing container to prevent content from slipping under the header.
  * It inherits the dynamic size of the header through the `height` prop to match the expanded and collapsed states.
@@ -21,7 +23,7 @@ import { em } from "polished";
 const TopContentPusher = styled.div`
   height: ${({ height }) => em(height)};
   position: relative;
-  background-color: transparent;
+  background-color: ${({ variant }) => backgroundColorVariants[variant]};
 `;
 
 export default TopContentPusher;

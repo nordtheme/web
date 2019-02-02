@@ -32,7 +32,7 @@ const sectioningSecondary = {
  * @since 0.6.0
  */
 const tertiarySecondary = {
-  [MODE_BRIGHT_SNOW_FLURRY]: lighten(0.08, nord.nord5),
+  [MODE_BRIGHT_SNOW_FLURRY]: lighten(0.08, nord.nord4),
   [MODE_DARK_NIGHT_FROST]: darken(0.045, nord.nord0)
 };
 

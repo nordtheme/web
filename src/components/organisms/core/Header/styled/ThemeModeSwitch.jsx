@@ -12,7 +12,7 @@ import { stripUnit } from "polished";
 
 import { motion, ms } from "styles/theme";
 
-import { linkBackgroundColorHover } from "../shared/styles";
+import { linkBackgroundColorHoverVariants } from "../shared/styles";
 
 /**
  * A button to toggle between the global theme modes.
@@ -41,7 +41,7 @@ const ThemeModeSwitch = styled.button`
   }
 
   &:hover:not(:disabled) {
-    background-color: ${linkBackgroundColorHover};
+    background-color: ${({ variant }) => linkBackgroundColorHoverVariants[variant]};
   }
 
   > * {
