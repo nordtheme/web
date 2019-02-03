@@ -37,7 +37,10 @@ const sitemapCategories = [
   {
     name: "Docs",
     url: ROUTE_DOCS,
-    links: []
+    links: [
+      { title: "Getting Started", url: `${ROUTE_DOCS}#${sectionIdFor(ROUTE_DOCS, 1)}` },
+      { title: "References", url: `${ROUTE_DOCS}#${sectionIdFor(ROUTE_DOCS, 1)}` }
+    ]
   },
   {
     name: "Blog",

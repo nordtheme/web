@@ -8,6 +8,34 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.8.0
+
+![Release Date: 2019-02-03](https://img.shields.io/badge/Release_Date-2019--02--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/10) [![Milestone](https://img.shields.io/badge/Milestone-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/8)
+
+This version mainly focused on the [sections of the docs page][gh-117] to represent Nord's documentation categories and their topics. The implementation was limited to the “landing” page components and style and currently doesn't include any documentation, the actual docs will be implemented and imported later on using the [GraphQL API and MDX][gh-24].
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+
+The following issues are related to the [“Components” design concept][gh-63].
+
+**Community Page Sections** — #117 ⇄ #118 (⊶ a0b9f5bc)
+↠ Implemented all docs page sections including required changes to other components.
+All sections follow the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/52166394-eb2a0080-270c-11e9-9979-17aeee02043d.png"/></p>
+
+### Hero
+
+The first section is the “hero” of the docs page that renders a description about the page's purpose.
+
+### Contents Cards
+
+The 2nd section is about Nord's documentation contents where each category is represented as card rendered in a two-column grid layout. Each card contains a topic icon, colorized with a accent color from Nord's palettes and a short summary about the topic's links.
+
+As of now there are two cards for the categories “Getting Started” and “References” that provide links to the various topics.
+
 # 0.7.0
 
 ![Release Date: 2019-01-26](https://img.shields.io/badge/Release_Date-2019--01--26-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/9) [![Milestone](https://img.shields.io/badge/Milestone-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/7)
@@ -941,6 +969,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-110]: https://github.com/arcticicestudio/nord-docs/issues/110
 [gh-112]: https://github.com/arcticicestudio/nord-docs/issues/112
 [gh-115]: https://github.com/arcticicestudio/nord-docs/issues/112
+[gh-117]: https://github.com/arcticicestudio/nord-docs/issues/117
 [gh-arcland]: https://github.com/arcticicestudio/arctic-landscape
 [gh-arcocfrac]: https://www.npmjs.com/package/arctic-ocean-fractal
 [gh-axios]: https://github.com/axios/axios
