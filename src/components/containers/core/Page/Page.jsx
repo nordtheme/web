@@ -11,7 +11,19 @@ import styled from "styled-components";
 
 import { motion } from "styles/theme";
 
-import { baseBackgroundColor } from "../shared/styles";
+import {
+  baseBackgroundColor,
+  primaryBackgroundColor,
+  secondaryBackgroundColor,
+  tertiaryBackgroundColor
+} from "../shared/styles";
+
+const variants = {
+  base: baseBackgroundColor,
+  primary: primaryBackgroundColor,
+  secondary: secondaryBackgroundColor,
+  tertiary: tertiaryBackgroundColor
+};
 
 /**
  * A basic wrapper component for page content.
@@ -22,7 +34,7 @@ import { baseBackgroundColor } from "../shared/styles";
  * @since 0.3.0
  */
 const Page = styled.main`
-  background-color: ${baseBackgroundColor};
+  background-color: ${({ variant }) => variants[variant]};
   transition: background-color ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
 `;
 

@@ -23,12 +23,12 @@ import SiteMetadata from "atoms/core/SiteMetadata";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const BaseLayout = ({ children, pathName }) => (
+const BaseLayout = ({ children, headerVariant, pathName }) => (
   <Root>
     <Fragment>
       <SiteMetadata pathName={pathName} />
-      <Header />
-      <Page>{children}</Page>
+      <Header variant={headerVariant} />
+      <Page variant={headerVariant}>{children}</Page>
       <Footer />
     </Fragment>
   </Root>
@@ -36,7 +36,12 @@ const BaseLayout = ({ children, pathName }) => (
 
 BaseLayout.propTypes = {
   children: PropTypes.node.isRequired,
+  headerVariant: PropTypes.string,
   pathName: PropTypes.string.isRequired
+};
+
+BaseLayout.defaultProps = {
+  headerVariant: "base"
 };
 
 export default BaseLayout;

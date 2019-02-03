@@ -26,6 +26,7 @@ import {
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
+ * @version 0.8.0
  * @since 0.1.0
  */
 const Landing = ({ location: { pathname } }) => (

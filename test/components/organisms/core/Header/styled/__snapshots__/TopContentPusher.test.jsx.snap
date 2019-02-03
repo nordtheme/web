@@ -4,7 +4,6 @@ exports[`theme styles has correct height based on header height in unpinned mode
 .c0 {
   height: 5em;
   position: relative;
-  background-color: transparent;
 }
 
 <div
@@ -17,7 +16,6 @@ exports[`theme styles has correct height based on the header height in pinned mo
 .c0 {
   height: 3.5em;
   position: relative;
-  background-color: transparent;
 }
 
 <div

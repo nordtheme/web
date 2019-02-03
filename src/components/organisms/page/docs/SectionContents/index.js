@@ -7,4 +7,4 @@
  * License:    MIT
  */
 
-export { default } from "./SectionLanding";
+export { default } from "./SectionContents";
