@@ -39,10 +39,10 @@ const SectionContents = () => (
           title="Getting Started"
           topics={topicsGettingStarted}
         >
-          Get to know the color palettes, use the native swatches or start to integrate it in your own projects.
+          Get to know the color palettes, use the native swatches or integrate the colors in your own projects.
         </ContentsCard>
         <ContentsCard accentColor={colors.nord10} logoComponent={BookOpen} title="References" topics={topicsReferences}>
-          Learn about the design guideslines, detailed technical views and all port projects of Nord.
+          Learn about the design guidelines, detailed technical views and all port projects of Nord.
         </ContentsCard>
       </Grid>
     </Content>
