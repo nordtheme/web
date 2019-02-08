@@ -8,6 +8,7 @@
  */
 
 import React from "react";
+import PropTypes from "prop-types";
 
 import { A, H3, P } from "atoms/core/HTMLElements";
 
@@ -22,6 +23,7 @@ import {
   CardItemTag as TopicTag,
   CardItemTitle as TopicTitle
 } from "../../../shared";
+import { cardBasePropTypes } from "../../../shared/propTypes";
 
 /**
  * A card component that renders information about a docs category and its topics.
@@ -52,6 +54,23 @@ const ContentsCard = ({ accentColor, children, topics, logoComponent: SvgLogo, s
       <Topics>{renderedTopics}</Topics>
     </Card>
   );
+};
+
+ContentsCard.propTypes = {
+  ...cardBasePropTypes,
+  accentColor: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  svgType: PropTypes.string,
+  topics: PropTypes.shape({
+    iconComponent: PropTypes.node,
+    svgType: PropTypes.string,
+    title: PropTypes.string,
+    url: PropTypes.string
+  }).isRequired
+};
+
+ContentsCard.defaultProps = {
+  svgType: "fill"
 };
 
 export default ContentsCard;

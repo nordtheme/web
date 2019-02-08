@@ -8,6 +8,7 @@
  */
 
 import React from "react";
+import PropTypes from "prop-types";
 
 import Button from "atoms/core/Button";
 import { H3, P } from "atoms/core/HTMLElements";
@@ -21,7 +22,8 @@ import {
   CardItemWrapper as QuestionWrapper,
   CardItems as Questions,
   CardLine as Line,
-  CardLogo as Logo
+  CardLogo as Logo,
+  cardBasePropTypes
 } from "../../../shared";
 import Tag from "./Tag";
 
@@ -77,6 +79,18 @@ const StackOverflowCard = ({
       <Questions>{renderQuestions}</Questions>
     </Card>
   );
+};
+
+StackOverflowCard.propTypes = {
+  ...cardBasePropTypes,
+  brandColor: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  questions: PropTypes.shape({
+    answerCount: PropTypes.number,
+    link: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.string),
+    title: PropTypes.string
+  }).isRequired
 };
 
 export default StackOverflowCard;

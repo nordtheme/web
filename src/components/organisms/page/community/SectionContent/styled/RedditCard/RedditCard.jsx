@@ -8,6 +8,7 @@
  */
 
 import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 
 import Button from "atoms/core/Button";
 import { H3, P } from "atoms/core/HTMLElements";
@@ -21,7 +22,8 @@ import {
   CardItemWrapper as PostWrapper,
   CardItems as Posts,
   CardLine as Line,
-  CardLogo as Logo
+  CardLogo as Logo,
+  cardBasePropTypes
 } from "../../../shared";
 import MetadataAuthor from "./MetadataAuthor";
 import MetadataCreationDate from "./MetadataCreationDate";
@@ -71,6 +73,19 @@ const RedditCard = ({ brandColor, children, logoColor, logoComponent: SvgLogo, p
       )}
     </Card>
   );
+};
+
+RedditCard.propTypes = {
+  ...cardBasePropTypes,
+  brandColor: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  posts: PropTypes.shape({
+    author: PropTypes.string,
+    created: PropTypes.string,
+    numComments: PropTypes.number,
+    title: PropTypes.string,
+    url: PropTypes.string
+  }).isRequired
 };
 
 export default RedditCard;

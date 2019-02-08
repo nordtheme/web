@@ -46,6 +46,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "no-confusing-arrow": "off",
+    "react/display-name": "off",
     /* Also suppress errors when importing development dependencies in project specific scripts. */
     "import/no-extraneous-dependencies": [
       "error",

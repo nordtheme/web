@@ -8,11 +8,12 @@
  */
 
 import React from "react";
+import PropTypes from "prop-types";
 
 import Button from "atoms/core/Button";
 import { H3, P } from "atoms/core/HTMLElements";
 
-import { Card, CardLogo as Logo } from "../../../shared";
+import { Card, CardLogo as Logo, cardBasePropTypes } from "../../../shared";
 import Action from "./Action";
 
 /**
@@ -34,5 +35,10 @@ const ChatCard = ({ children, logoColor, logoComponent: SvgLogo, title, url, ...
     <Action>{url ? <Button href={url}>Join Nord on {title}</Button> : <Button disabled>Coming soon!</Button>}</Action>
   </Card>
 );
+
+ChatCard.propTypes = {
+  ...cardBasePropTypes,
+  children: PropTypes.node.isRequired
+};
 
 export default ChatCard;

@@ -10,6 +10,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { cardIconPropTypes } from "./propTypes";
+
 /**
  * A component that represents the icon of a card item.
  *
@@ -17,7 +19,7 @@ import styled from "styled-components";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.8.0
  */
-const CardItemIcon = ({ accentColor, iconComponent: SvgIcon, svgType = "fill", ...passProps }) => {
+const CardItemIcon = ({ accentColor, iconComponent: SvgIcon, svgType, ...passProps }) => {
   const Icon = styled(SvgIcon)`
     width: 1.8em;
     ${svgType === "stroke" ? `stroke: ${accentColor}` : `fill: ${accentColor}`};
@@ -28,5 +30,7 @@ const CardItemIcon = ({ accentColor, iconComponent: SvgIcon, svgType = "fill", .
   `;
   return <Icon {...passProps} />;
 };
+
+CardItemIcon.propTypes = cardIconPropTypes;
 
 export default CardItemIcon;

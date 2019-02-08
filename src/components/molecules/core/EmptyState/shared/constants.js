@@ -7,22 +7,18 @@
  * License:    MIT
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-
-import { Wrapper } from "./styled";
-
 /**
- * The main wrapper for both sub-containers.
- *
+ * @file Provides shared constants.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.6.0
+ * @since 0.9.0
  */
-const FeatureDuo = ({ children, ...passProps }) => <Wrapper {...passProps}>{children}</Wrapper>;
 
-FeatureDuo.propTypes = {
-  children: PropTypes.node.isRequired
+const illustrationVariants = {
+  IGLOO_FRONT: "iglooFront",
+  IGLOO_HEMISPHERE: "iglooHemisphere",
+  IGLOO_SIDE: "iglooSide"
 };
 
-export default FeatureDuo;
+/* eslint-disable-next-line import/prefer-default-export */
+export { illustrationVariants };

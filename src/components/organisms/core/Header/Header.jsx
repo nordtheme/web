@@ -7,6 +7,8 @@
  * License:    MIT
  */
 
+/* eslint-disable react/no-multi-comp */
+
 import React, { Fragment, PureComponent } from "react";
 import PropTypes from "prop-types";
 import { PoseGroup } from "react-pose";

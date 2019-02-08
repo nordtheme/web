@@ -7,22 +7,22 @@
  * License:    MIT
  */
 
-import React from "react";
-import PropTypes from "prop-types";
-
-import { Wrapper } from "./styled";
-
 /**
- * The main wrapper for both sub-containers.
- *
+ * @file Provides shared prop types.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.6.0
+ * @since 0.9.0
  */
-const FeatureDuo = ({ children, ...passProps }) => <Wrapper {...passProps}>{children}</Wrapper>;
 
-FeatureDuo.propTypes = {
-  children: PropTypes.node.isRequired
+import PropTypes from "prop-types";
+
+const illustrationPropTypes = {
+  illustrationStyles: PropTypes.arrayOf(PropTypes.string).isRequired,
+  viewBox: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.number), PropTypes.string])
 };
 
-export default FeatureDuo;
+const svgPropTypes = {
+  svgRef: PropTypes.node
+};
+
+export { illustrationPropTypes, svgPropTypes };

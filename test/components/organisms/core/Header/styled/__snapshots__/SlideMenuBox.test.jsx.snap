@@ -20,7 +20,7 @@ exports[`theme styles has correct top position based on header height in unpinne
 
 <div
   class="c0"
-  style="transform: none;"
+  style="height: 0px;"
 />
 `;
 
@@ -44,6 +44,6 @@ exports[`theme styles has correct top position based on the header height in pin
 
 <div
   class="c0"
-  style="transform: none;"
+  style="height: 0px;"
 />
 `;

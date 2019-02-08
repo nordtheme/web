@@ -17,6 +17,7 @@ import CardItems from "./CardItems";
 import CardItemWrapper from "./CardItemWrapper";
 import CardLine from "./CardLine";
 import CardLogo from "./CardLogo";
+import { cardBasePropTypes } from "./propTypes";
 
 export {
   CardAction,
@@ -28,5 +29,6 @@ export {
   CardItems,
   CardItemWrapper,
   CardLine,
-  CardLogo
+  CardLogo,
+  cardBasePropTypes
 };

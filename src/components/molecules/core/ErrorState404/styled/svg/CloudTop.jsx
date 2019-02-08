@@ -11,6 +11,8 @@ import React from "react";
 
 import { colors } from "styles/theme";
 
+import { svgPropTypes } from "../../shared/propTypes";
+
 const SvgElements = ({ svgRef, ...props }) => (
   <g ref={svgRef} {...props}>
     <path
@@ -32,5 +34,7 @@ const SvgElements = ({ svgRef, ...props }) => (
  * @since 0.3.0
  */
 const CloudTop = React.forwardRef((props, ref) => <SvgElements svgRef={ref} {...props} />);
+
+SvgElements.propTypes = svgPropTypes;
 
 export default CloudTop;

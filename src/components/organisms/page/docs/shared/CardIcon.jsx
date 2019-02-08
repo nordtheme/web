@@ -11,6 +11,8 @@ import React from "react";
 import styled from "styled-components";
 import { transparentize } from "polished";
 
+import { cardIconPropTypes } from "./propTypes";
+
 /**
  * A component that represents the icon of a card component.
  *
@@ -18,7 +20,7 @@ import { transparentize } from "polished";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.8.0
  */
-const CardIcon = ({ accentColor, iconComponent: SvgIcon, svgType = "fill", ...passProps }) => {
+const CardIcon = ({ accentColor, iconComponent: SvgIcon, svgType, ...passProps }) => {
   const Icon = styled(SvgIcon)`
     display: inline-flex;
     width: 3em;
@@ -35,5 +37,7 @@ const CardIcon = ({ accentColor, iconComponent: SvgIcon, svgType = "fill", ...pa
   `;
   return <Icon {...passProps} />;
 };
+
+CardIcon.propTypes = cardIconPropTypes;
 
 export default CardIcon;

@@ -82,11 +82,18 @@ const A = ({ children, href, to, linkRef, ...passProps }) =>
 
 A.propTypes = {
   children: PropTypes.node.isRequired,
+  href: PropTypes.node,
+  linkRef: PropTypes.element,
   to: PropTypes.string
 };
 
-A.defaultProps = { to: "" };
+A.defaultProps = {
+  href: null,
+  linkRef: null,
+  to: ""
+};
 
+/* eslint-disable-next-line react/prop-types */
 export default React.forwardRef(({ children, ...passProps }, ref) => (
   <A linkRef={ref} {...passProps}>
     {children}

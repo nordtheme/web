@@ -25,7 +25,7 @@ exports[`theme styles matches the snapshot 1`] = `
 <a
   class="c0 c1"
   href=""
-  style="transform: none;"
+  style="opacity: 0; transform: none;"
 >
   Nord
 </a>

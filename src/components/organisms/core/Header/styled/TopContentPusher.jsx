@@ -10,6 +10,8 @@
 import styled from "styled-components";
 import { em } from "polished";
 
+import { motion } from "styles/theme";
+
 import { backgroundColorVariants } from "../shared/styles";
 
 /**
@@ -24,6 +26,7 @@ const TopContentPusher = styled.div`
   height: ${({ height }) => em(height)};
   position: relative;
   background-color: ${({ variant }) => backgroundColorVariants[variant]};
+  transition: background-color ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
 `;
 
 export default TopContentPusher;
