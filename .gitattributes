@@ -4,6 +4,12 @@
 # Project:    Nord Docs
 # Repository: https://github.com/arcticicestudio/nord-docs
 # License:    MIT
+# References:
+#   https://git-scm.com/docs/gitattributes
+#   https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#Keyword-Expansion
+#   https://github.com/AGWA/git-crypt
+#   https://www.gnupg.org
+#   https://wiki.archlinux.org/index.php/GnuPG
 
 # Automatically perform line feed (LF) normalization for files detected as text and leave all files detected as binary
 # untouched.
@@ -14,3 +20,11 @@
 # +--------+
 *.ai binary
 *.png binary
+
+# +------------+
+# + Encryption +
+# +------------+
+.gatsby/.env.development filter=git-crypt diff=git-crypt
+.gatsby/.env.production filter=git-crypt diff=git-crypt
+.gitattributes !filter !diff
+.gitignore !filter !diff
