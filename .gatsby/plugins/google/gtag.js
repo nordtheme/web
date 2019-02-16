@@ -15,11 +15,9 @@
  * @since 0.4.0
  */
 
-const { GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID } = require("../../../src/config/internal/constants");
-
 module.exports = {
   /* The tracking IDs for all used "Google Marketing" products. */
-  trackingIds: [GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID],
+  trackingIds: [`${process.env.NORD_DOCS_GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID}`],
   /* The configuration that gets passed to the `gtag.js`'s `config` command. */
   /* eslint-disable-next-line babel/camelcase */
   gtagConfig: { anonymize_ip: true },

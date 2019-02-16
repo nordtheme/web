@@ -15,6 +15,17 @@
  * @since 0.1.0
  */
 
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+const dotenv = require("dotenv");
+
+/*
+ * Load environment specific project and OS environment variables based on the current Node environment.
+ *
+ * @see https://www.gatsbyjs.org/docs/environment-variables
+ * @see https://github.com/motdotla/dotenv
+ */
+dotenv.config({ path: `./.gatsby/.env.${process.env.NODE_ENV}` });
+
 const { metadataNord, metadataNordDocs } = require("./src/data/project");
 const { sourceInstanceTypes } = require("./src/config/internal/nodes");
 const {
