@@ -16,6 +16,11 @@
 #
 # > $NORD_DOCS_GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID
 # Stores the "Google Universal Analytics" tracking ID.
+# @since 0.6.0
+#
+# > $NORD_DOCS_GITHUB_API_TOKEN_READONLY_PUBLIC
+# Stores the read-only token for the GitHub GraphQL and REST API to fetch public data.
+# @since 0.9.0
 #
 # @see https://www.netlify.com/docs/netlify-toml-reference
 # @see https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
