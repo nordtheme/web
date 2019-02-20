@@ -22,11 +22,11 @@ const sitemapCategories = [
     name: "Nord",
     url: ROUTE_ROOT,
     links: [
-      { title: "Palettes", url: `#${sectionIdFor(ROUTE_ROOT, 1)}` },
-      { title: "Ports", url: `#${sectionIdFor(ROUTE_ROOT, 3)}` },
-      { title: "Swatches", url: `#${sectionIdFor(ROUTE_ROOT, 4)}` },
-      { title: "Syntax Highlighting", url: `#${sectionIdFor(ROUTE_ROOT, 5)}` },
-      { title: "Community", url: `#${sectionIdFor(ROUTE_ROOT, 6)}` }
+      { title: "Palettes", url: `/#${sectionIdFor(ROUTE_ROOT, 1)}` },
+      { title: "Ports", url: `/#${sectionIdFor(ROUTE_ROOT, 3)}` },
+      { title: "Swatches", url: `/#${sectionIdFor(ROUTE_ROOT, 4)}` },
+      { title: "Syntax Highlighting", url: `/#${sectionIdFor(ROUTE_ROOT, 5)}` },
+      { title: "Community", url: `/#${sectionIdFor(ROUTE_ROOT, 6)}` }
     ]
   },
   {
