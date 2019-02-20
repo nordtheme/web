@@ -56,6 +56,7 @@ module.exports = {
     "gatsby-plugin-svgr",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-webpack-size",
+    "gatsby-plugin-lodash",
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
