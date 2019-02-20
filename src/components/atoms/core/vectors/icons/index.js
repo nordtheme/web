@@ -17,6 +17,7 @@
 
 import ArrowForward from "./ArrowForward";
 import BookOpen from "./BookOpen";
+import CloudDownload from "./CloudDownload";
 import Code from "./Code";
 import CodeDownload from "./CodeDownload";
 import Compass from "./Compass";
@@ -28,7 +29,9 @@ import Layout from "./Layout";
 import Menu from "./Menu";
 import Moon from "./Moon";
 import Pantone from "./Pantone";
+import PriceTags from "./PriceTags";
 import Reddit from "./Reddit";
+import Search from "./Search";
 import Slack from "./Slack";
 import Spectrum from "./Spectrum";
 import StackOverflow from "./StackOverflow";
@@ -40,6 +43,7 @@ import Zap from "./Zap";
 export {
   ArrowForward,
   BookOpen,
+  CloudDownload,
   Code,
   CodeDownload,
   Compass,
@@ -51,7 +55,9 @@ export {
   Menu,
   Moon,
   Pantone,
+  PriceTags,
   Reddit,
+  Search,
   Slack,
   Spectrum,
   StackOverflow,
