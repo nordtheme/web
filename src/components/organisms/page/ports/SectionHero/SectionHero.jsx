@@ -45,7 +45,7 @@ export default function SectionHero(props) {
             <Headline large>Nordify your digital home</Headline>
             <Subline>
               Unify the appearance and usage experience for your favorite applications &mdash; from code editors, shell
-              terminals, modern UIs and libraries.
+              terminals to modern UIs and libraries.
             </Subline>
             <Subline>
               Nord supports a broad and constantly growing spectrum that allows to customize your daily tool stack.

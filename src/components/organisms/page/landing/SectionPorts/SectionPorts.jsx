@@ -11,7 +11,7 @@ import React from "react";
 
 import Button from "atoms/core/Button";
 import { Content } from "containers/core/Section";
-import { ReactComponent as Nordify } from "assets/images/illustrations/nordify.svg";
+import PortProjectsWindow, { useFloatingLogos } from "atoms/core/vectors/decorations/PortProjectsWindow";
 import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { ROUTE_PORTS, ROUTE_ROOT } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
@@ -29,28 +29,38 @@ const SECTION_ID = sectionIdFor(ROUTE_ROOT, 3);
  * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
  */
-const SectionPorts = () => (
-  <Section bgColor={darkenedThemeModeBackgroundbackgroundColor} gapWidth={2} id={SECTION_ID} variant="primary">
-    <Content centered>
-      <FeatureDuo verticalOnly>
-        <Text verticalOnly>
-          <Headline large>Nordify your digital home.</Headline>
-          <Subline>
-            Choose from many port projects to unify the style of your favorite applications and platforms.
-          </Subline>
-          <Actions>
-            <Button ghost outlined quiet to={ROUTE_PORTS} variant="primary">
-              Learn more
-            </Button>
-          </Actions>
-        </Text>
-        <Visualization>
-          <Nordify />
-        </Visualization>
-      </FeatureDuo>
-    </Content>
-    <WavyLineDivider />
-  </Section>
-);
+export default function SectionPorts(props) {
+  const { transformLogoLayer, calcFloatingLogos } = useFloatingLogos();
 
-export default SectionPorts;
+  return (
+    <Section
+      bgColor={darkenedThemeModeBackgroundbackgroundColor}
+      gapWidth={2}
+      id={SECTION_ID}
+      onMouseMove={({ clientX: x, clientY: y }) => calcFloatingLogos(x, y)}
+      variant="primary"
+      {...props}
+    >
+      <Content centered>
+        <FeatureDuo verticalOnly>
+          <Text verticalOnly>
+            <Headline large>Nordify your digital home.</Headline>
+            <Subline>
+              Choose from a broad and constantly growing spectrum of port projects to unify the appearance of your
+              favorite applications.
+            </Subline>
+            <Actions>
+              <Button ghost outlined quiet to={ROUTE_PORTS} variant="primary">
+                Learn more
+              </Button>
+            </Actions>
+          </Text>
+          <Visualization>
+            <PortProjectsWindow logoLayerTransformer={transformLogoLayer} />
+          </Visualization>
+        </FeatureDuo>
+      </Content>
+      <WavyLineDivider />
+    </Section>
+  );
+}
