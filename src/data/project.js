@@ -54,7 +54,7 @@ const links = {
     }
   },
   organization: {
-    url: "https://arcticicestudio.com",
+    url: "https://www.arcticicestudio.com",
     social: {
       github: {
         id: "arcticicestudio",

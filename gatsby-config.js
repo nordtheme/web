@@ -38,6 +38,7 @@ const { BASE_PUBLIC_URL } = require("./src/config/routes/constants");
 const gatsbyPluginGoogleGtagConfig = require("./.gatsby/plugins/google/gtag");
 const gatsbyPluginManifestConfig = require("./.gatsby/plugins/manifest");
 const gatsbyPluginRobotsTxtConfig = require("./.gatsby/plugins/robots-txt");
+const gatsbyPluginSourceGraphQlConfig = require("./.gatsby/plugins/source-graphql");
 
 module.exports = {
   siteMetadata: {
@@ -55,6 +56,7 @@ module.exports = {
     "gatsby-plugin-svgr",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-webpack-size",
+    "gatsby-plugin-lodash",
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
@@ -103,6 +105,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: gatsbyPluginRobotsTxtConfig
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: gatsbyPluginSourceGraphQlConfig
     },
     /* NOTE: The following plugins rely on the order in this array and must be placed at last in order work properly! */
     {
