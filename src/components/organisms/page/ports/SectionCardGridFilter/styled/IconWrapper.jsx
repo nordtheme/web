@@ -7,14 +7,17 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
 /**
- * @file Provides the components for the ports page.
+ * The wrapper for a icon of a port project card.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.9.0
  */
+const IconWrapper = styled.div`
+  display: inline-flex;
+`;
 
-import SectionCardGridFilter from "./SectionCardGridFilter";
-import SectionHero from "./SectionHero";
-
-export { SectionCardGridFilter, SectionHero };
+export default IconWrapper;

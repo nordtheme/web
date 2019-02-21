@@ -32,7 +32,7 @@ const sitemapCategories = [
   {
     name: "Ports",
     url: ROUTE_PORTS,
-    links: []
+    links: [{ title: "Search", url: `${ROUTE_PORTS}#${sectionIdFor(ROUTE_PORTS, 1)}` }]
   },
   {
     name: "Docs",

@@ -7,14 +7,22 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
+import Icon from "./Icon";
+
 /**
- * @file Provides the components for the ports page.
+ * The icon for the search/filter input component of the port project card grid.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.9.0
  */
+const SearchIcon = styled(Icon)`
+  position: absolute;
+  opacity: 0.4;
+  top: 25%;
+  left: 0.5em;
+`;
 
-import SectionCardGridFilter from "./SectionCardGridFilter";
-import SectionHero from "./SectionHero";
-
-export { SectionCardGridFilter, SectionHero };
+export default SearchIcon;

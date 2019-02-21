@@ -74,6 +74,7 @@ const ROUTE_PORTS = ROUTE_ROOT + PORTS;
 const SECTION_COMPONENT_IDS = {
   [ROUTE_COMMUNITY]: ["hero", "chat-channels", "content"],
   [ROUTE_DOCS]: ["hero", "contents"],
+  [ROUTE_PORTS]: ["hero", "search"],
   [ROUTE_ROOT]: [
     "hero",
     "palettes-modularity",
