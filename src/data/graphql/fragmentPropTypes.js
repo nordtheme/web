@@ -39,6 +39,16 @@ const contentMdxImageFluidPropTypes = {
 };
 
 /**
+ * GraphQL fragment prop types for a media file of a MDX content document.
+ */
+const contentMdxMediaFilePropTypes = {
+  extension: PropTypes.string,
+  name: PropTypes.string,
+  publicURL: PropTypes.string,
+  relativePath: PropTypes.string
+};
+
+/**
  * GraphQL fragment prop types for the frontmatter of a MDX content document.
  */
 const contentMdxDocumentFrontmatterPropTypes = {
@@ -123,5 +133,6 @@ export {
   contentBlogPostFrontmatterPropTypes,
   contentDocsPagePropTypes,
   contentDocsPageFrontmatterPropTypes,
-  contentMdxImageFluidPropTypes
+  contentMdxImageFluidPropTypes,
+  contentMdxMediaFilePropTypes
 };

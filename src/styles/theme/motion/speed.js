@@ -28,6 +28,7 @@ const duration = {
   transition: {
     base: { themeModeSwitch: 400 },
     area: {
+      fullscreen: 400,
       large: 300,
       medium: 250,
       small: 100

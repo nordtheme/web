@@ -8,16 +8,19 @@
  */
 
 /**
- * @file Provides motion related values like animations inspired by Material Design Guidelines.
+ * @file Provides motion easing values.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.2.0
+ * @since 0.10.0
+ * @see https://material.io/design/motion/speed.html#easing
+ * @see https://easings.net
  */
 
-import easings from "./easings";
-import speed, { duration } from "./speed";
+const easings = {
+  easeInQuad: [0.55, 0.085, 0.68, 0.53],
+  easeInOutQuad: [0.455, 0.03, 0.515, 0.955],
+  easeOutCubic: [0.215, 0.61, 0.355, 1],
+  easeOutQuart: [0.165, 0.84, 0.44, 1]
+};
 
-const motion = { easings, speed };
-
-export { easings, speed, duration };
-export default motion;
+export default easings;
