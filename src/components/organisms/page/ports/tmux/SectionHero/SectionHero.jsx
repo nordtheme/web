@@ -11,7 +11,7 @@ import React from "react";
 import { css } from "styled-components";
 
 import { WaveFooter } from "atoms/core/vectors/divider";
-import { P } from "atoms/core/HTMLElements";
+import { P } from "atoms/core/html-elements";
 import Link from "atoms/core/Link";
 import Section, { Content } from "containers/core/Section";
 import EmptyState from "molecules/core/EmptyState";

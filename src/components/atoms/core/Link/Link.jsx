@@ -10,7 +10,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import { A } from "atoms/core/HTMLElements";
+import { A } from "atoms/core/html-elements";
 
 import { calmly, decent, minimal } from "./styles";
 

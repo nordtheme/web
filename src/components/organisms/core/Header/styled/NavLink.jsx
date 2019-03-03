@@ -9,7 +9,7 @@
 
 import styled from "styled-components";
 
-import { A } from "atoms/core/HTMLElements";
+import { A } from "atoms/core/html-elements";
 import { motion } from "styles/theme";
 
 import { linkBackgroundColorHoverVariants } from "../shared/styles";

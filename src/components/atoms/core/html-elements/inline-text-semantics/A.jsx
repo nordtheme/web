@@ -64,6 +64,7 @@ const BaseGatsbyLink = styled(Link)`
  *   </A>
  * );
  * <RefLink to="/blog">Blog</RefLink>
+ *
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
  * @see https://www.gatsbyjs.org/docs/gatsby-link
  * @see https://github.com/gatsbyjs/gatsby/pull/9892
@@ -83,7 +84,7 @@ const A = ({ children, href, to, linkRef, ...passProps }) =>
 A.propTypes = {
   children: PropTypes.node.isRequired,
   href: PropTypes.node,
-  linkRef: PropTypes.element,
+  linkRef: PropTypes.func,
   to: PropTypes.string
 };
 

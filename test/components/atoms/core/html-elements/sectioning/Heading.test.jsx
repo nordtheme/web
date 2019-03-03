@@ -11,7 +11,7 @@ import React, { Fragment } from "react";
 import { stripUnit } from "polished";
 
 import { renderWithTheme } from "nord-docs-test-utils";
-import { H1, H2, H3, H4, H5, H6 } from "atoms/core/HTMLElements";
+import { H1, H2, H3, H4, H5, H6 } from "atoms/core/html-elements";
 
 describe("theme styles", () => {
   test("matches the snapshot", () => {
@@ -31,12 +31,12 @@ describe("theme styles", () => {
   test("matches the snapshot with adjusted margin", () => {
     const { container } = renderWithTheme(
       <Fragment>
-        <H1 noMargin>Heading Level 1</H1>
-        <H2 noMargin>Heading Level 2</H2>
-        <H3 noMargin>Heading Level 3</H3>
-        <H4 noMargin>Heading Level 4</H4>
-        <H5 noMargin>Heading Level 5</H5>
-        <H6 noMargin>Heading Level 6</H6>
+        <H1 compact>Heading Level 1</H1>
+        <H2 compact>Heading Level 2</H2>
+        <H3 compact>Heading Level 3</H3>
+        <H4 compact>Heading Level 4</H4>
+        <H5 compact>Heading Level 5</H5>
+        <H6 compact>Heading Level 6</H6>
       </Fragment>
     );
     expect(container).toMatchSnapshot();
@@ -45,12 +45,12 @@ describe("theme styles", () => {
   test("has explicit font size definitions", () => {
     const { container } = renderWithTheme(
       <Fragment>
-        <H1 noMargin>Heading Level 1</H1>
-        <H2 noMargin>Heading Level 2</H2>
-        <H3 noMargin>Heading Level 3</H3>
-        <H4 noMargin>Heading Level 4</H4>
-        <H5 noMargin>Heading Level 5</H5>
-        <H6 noMargin>Heading Level 6</H6>
+        <H1 compact>Heading Level 1</H1>
+        <H2 compact>Heading Level 2</H2>
+        <H3 compact>Heading Level 3</H3>
+        <H4 compact>Heading Level 4</H4>
+        <H5 compact>Heading Level 5</H5>
+        <H6 compact>Heading Level 6</H6>
       </Fragment>
     );
     expect(
@@ -66,19 +66,19 @@ describe("theme styles", () => {
   });
 
   test("adjusts bottom margin based on passed props", () => {
-    const { container } = renderWithTheme(<H1 noMargin>Nord</H1>);
+    const { container } = renderWithTheme(<H1 compact>Nord</H1>);
     expect(container.firstChild).toHaveStyleRule("margin-bottom", "0");
   });
 
   test("Ensure descending font sizes between all heading levels", () => {
     const { container } = renderWithTheme(
       <Fragment>
-        <H1 noMargin>Heading Level 1</H1>
-        <H2 noMargin>Heading Level 2</H2>
-        <H3 noMargin>Heading Level 3</H3>
-        <H4 noMargin>Heading Level 4</H4>
-        <H5 noMargin>Heading Level 5</H5>
-        <H6 noMargin>Heading Level 6</H6>
+        <H1 compact>Heading Level 1</H1>
+        <H2 compact>Heading Level 2</H2>
+        <H3 compact>Heading Level 3</H3>
+        <H4 compact>Heading Level 4</H4>
+        <H5 compact>Heading Level 5</H5>
+        <H6 compact>Heading Level 6</H6>
       </Fragment>
     );
 

@@ -7,19 +7,15 @@
  * License:    MIT
  */
 
-import styled from "styled-components";
-
 /**
- * A base HTML component that represents a paragraph.
- *
+ * @file Provides components that represent basic HTML elements for interactive user interface objects.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
- * @since 0.3.0
+ * @since 0.10.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Interactive_elements
  */
-const P = styled.p`
-  margin-top: 0;
-  margin-bottom: 1em;
-`;
 
-export default P;
+import Details from "./Details";
+import Summary from "./Summary";
+
+export { Details, Summary };

@@ -10,7 +10,7 @@
 import React from "react";
 import { render } from "react-testing-library";
 
-import { A } from "atoms/core/HTMLElements";
+import { A } from "atoms/core/html-elements";
 import { ROUTE_DOCS } from "config/routes/mappings";
 import { metadataNordDocs } from "data/project";
 

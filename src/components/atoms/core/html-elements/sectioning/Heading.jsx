@@ -10,8 +10,8 @@
 /**
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
  * @since 0.3.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
  */
 
 import PropTypes from "prop-types";
@@ -20,9 +20,9 @@ import styled, { css } from "styled-components";
 import { ms } from "styles/theme";
 
 const baseHeadingStyles = css`
-  margin-top: 0;
-  margin-bottom: ${({ noMargin }) => (noMargin ? 0 : "0.5rem")};
-  font-weight: 500;
+  margin-top: ${({ forMDX }) => (forMDX ? "2em" : 0)};
+  margin-bottom: ${({ compact }) => (compact ? 0 : "0.5em")};
+  font-weight: ${({ forMDX }) => (forMDX ? 600 : 500)};
 `;
 
 /**

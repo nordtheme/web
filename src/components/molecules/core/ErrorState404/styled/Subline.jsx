@@ -9,7 +9,7 @@
 
 import styled from "styled-components";
 
-import { P } from "atoms/core/HTMLElements";
+import { P } from "atoms/core/html-elements";
 
 /**
  * The subline that includes information and helpful instructions in addition to the headline.

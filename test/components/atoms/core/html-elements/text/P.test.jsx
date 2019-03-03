@@ -10,7 +10,7 @@
 import React from "react";
 
 import { renderWithTheme } from "nord-docs-test-utils";
-import { P } from "atoms/core/HTMLElements";
+import { P } from "atoms/core/html-elements";
 
 describe("theme styles", () => {
   test("matches the snapshot", () => {

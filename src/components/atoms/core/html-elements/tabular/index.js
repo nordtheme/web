@@ -8,15 +8,17 @@
  */
 
 /**
- * @file Provides components that represents basic HTML elements.
+ * @file Provides components that represent basic HTML elements to create and handle tabular data.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element
  * @since 0.3.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Table_content
  */
 
-import { A, Code } from "./inline-text-semantics";
-import { H1, H2, H3, H4, H5, H6 } from "./sectioning";
-import { Hr, P, Pre } from "./text";
+import Caption from "./Caption";
+import Table from "./Table";
+import Td from "./Td";
+import Th from "./Th";
+import Tr from "./Tr";
 
-export { A, Code, H1, H2, H3, H4, H5, H6, Hr, P, Pre };
+export { Caption, Table, Td, Th, Tr };

@@ -3,42 +3,42 @@
 exports[`theme styles matches the snapshot 1`] = `
 .c0 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
   font-weight: 500;
   font-size: 2.0272865295410156em;
 }
 
 .c1 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
   font-weight: 500;
   font-size: 1.802032470703125em;
 }
 
 .c2 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
   font-weight: 500;
   font-size: 1.601806640625em;
 }
 
 .c3 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
   font-weight: 500;
   font-size: 1.423828125em;
 }
 
 .c4 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
   font-weight: 500;
   font-size: 1.265625em;
 }
 
 .c5 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
   font-weight: 500;
   font-size: 1.125em;
 }

@@ -8,14 +8,13 @@
  */
 
 /**
- * @file Provides components that represent basic HTML elements with inline text semantics functionality.
+ * @file Provides components that represent basic HTML elements with form functionality.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics
- * @since 0.3.0
+ * @since 0.10.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms
  */
 
-import A from "./A";
-import Code from "./Code";
+import Input from "./Input";
 
-export { A, Code };
+export default Input;
