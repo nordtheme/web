@@ -39,6 +39,7 @@ const gatsbyPluginGoogleGtagConfig = require("./.gatsby/plugins/google/gtag");
 const gatsbyPluginManifestConfig = require("./.gatsby/plugins/manifest");
 const gatsbyPluginRobotsTxtConfig = require("./.gatsby/plugins/robots-txt");
 const gatsbyPluginSourceGraphQlConfig = require("./.gatsby/plugins/source-graphql");
+const gatsbyPluginMdxConfig = require("./.gatsby/plugins/mdx");
 
 module.exports = {
   siteMetadata: {
@@ -57,6 +58,8 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-webpack-size",
     "gatsby-plugin-lodash",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
@@ -109,6 +112,10 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: gatsbyPluginSourceGraphQlConfig
+    },
+    {
+      resolve: "gatsby-mdx",
+      options: gatsbyPluginMdxConfig
     },
     /* NOTE: The following plugins rely on the order in this array and must be placed at last in order work properly! */
     {
