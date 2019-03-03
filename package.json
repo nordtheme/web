@@ -1,14 +1,14 @@
 {
   "name": "nord-docs",
   "title": "Nord Docs",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "The official Nord website and documentation",
   "author": {
     "name": "Arctic Ice Studio",
     "email": "development@arcticicestudio.com",
-    "url": "https://arcticicestudio.com"
+    "url": "https://www.arcticicestudio.com"
   },
-  "homepage": "https://nordtheme.com",
+  "homepage": "https://www.nordtheme.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arcticicestudio/nord-docs.git"
