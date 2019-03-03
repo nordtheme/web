@@ -25,7 +25,7 @@ const {
 
 module.exports = {
   extends: "arcticicestudio",
-  plugins: ["babel", "prettier"],
+  plugins: ["babel", "prettier", "react-hooks"],
   parser: "babel-eslint",
   env: {
     browser: true,
@@ -44,8 +44,17 @@ module.exports = {
     }
   },
   rules: {
+    /* Prioritize format errors found by Prettier. */
     "prettier/prettier": "error",
+
+    /* Support for React Hooks. */
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-no-bind": "off",
+
+    /* Disable noisy and low priority rules. */
     "no-confusing-arrow": "off",
+    "react/display-name": "off",
+
     /* Also suppress errors when importing development dependencies in project specific scripts. */
     "import/no-extraneous-dependencies": [
       "error",

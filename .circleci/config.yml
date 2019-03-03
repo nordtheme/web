@@ -12,6 +12,35 @@
 # - https://circleci.com/docs/2.0/circleci-images
 # - https://circleci.com/docs/2.0/contexts
 
+# This build configuration uses sensitive/secret data through `git-crypt` via specific Circle CI project environment
+# variables. They must be set before running the workflows/jobs in order to work properly.
+#
+# NOTE: The GPG private/secret key and the associated password are encoded with base64 using the `-w`/`--wrap` option
+# that excludes line breaks in the resulting encoded value. This is necessary to prevent problems with the Circle CI
+# web app UI that doesn't handle line breaks correctly which would result in invalid Bash environment variable values.
+#
+# > $NORD_DOCS_GPG_CICD_KEY
+# Stores the GPG private/secret key in exported ASCII format encoded with base64:
+# `gpg --export-secret-keys --armor <KEY_ID> | base64 -w 0`
+#
+# > $NORD_DOCS_GPG_CICD_KEY_PASSWORD
+# Stores the GPG private/secret key password encoded with base64:
+# `base64 -w 0`
+#
+# > $NORD_DOCS_GPG_CICD_KEY_GRIP
+# Stores the GPG private/secret "keygrip" (cacheid) which is a 40 character value of hexadecimal characters identifying the key. It can be received by passing the `--with-keygrip` when listing the GPG private/secret keys:
+# `gpg --list-secret-keys --with-keygrip`
+#
+# > $NORD_DOCS_GPG_CICD_KEY_FINGERPRINT
+# Stores the GPG key fingerprint that is required in batch mode when deleting the key from the key ring again in the
+# post-process job.
+#  It can be received when listing the GPG keys:
+# `gpg --list-keys`
+#
+# See the following references and documentations of used GPG tools for more details:
+# - man gpg-preset-passphrase(1)
+# - https://www.gnupg.org/documentation/manuals/gnupg/gpg_002dpreset_002dpassphrase.html
+
 version: 2.1
 
 commands:
@@ -21,9 +50,48 @@ commands:
       - run:
           name: Build production bundle
           command: npm run build:gatsby
+  decrypt-sensitive-data:
+    description: "Decrypt senstive data through git-crypt"
+    steps:
+      - run:
+          name: Import base64 encoded GPG secret key
+          command: echo "$NORD_DOCS_GPG_CICD_KEY" | base64 --decode | gpg --batch --import
+      - run:
+          name: Configure GPG agent to allow preset passphrases
+          command: gpgconf --kill gpg-agent && gpg-agent --daemon --allow-preset-passphrase --max-cache-ttl 86400
+      - run:
+          name: Import preset passphrase for GPG keygrip (cacheid)
+          command: |
+            /usr/lib/gnupg2/gpg-preset-passphrase --preset --passphrase "$(echo "$NORD_DOCS_GPG_CICD_KEY_PASSWORD" | base64 --decode)" "$NORD_DOCS_GPG_CICD_KEY_GRIP"
+      - run:
+          name: Unlock encrypted repository files
+          command: git-crypt unlock
+  delete-encryption-keys:
+    description: "Delete the GPG secret and public key from the key ring used to decrypt senstive data"
+    steps:
+      - run:
+          name: Delete GPG secret and public key from keyring
+          command: gpg --batch --delete-secret-and-public-keys --yes "$NORD_DOCS_GPG_CICD_KEY_FINGERPRINT"
+  encrypt-sensitive-data:
+    description: "Encrypt senstive data through git-crypt"
+    steps:
+      - run:
+          name: Lock decrypted repository files
+          command: git-crypt lock
+  install-build-dependencies:
+    description: "Install build dependencies"
+    steps:
+      - run:
+          name: Update package lists
+          command: apt-get update
+      - run:
+          name: Install git-crypt and GPG
+          command: apt-get install -y git-crypt gnupg2
   post-process:
     description: "Post-process the build"
     steps:
+      - encrypt-sensitive-data
+      - delete-encryption-keys
       - save-npm-cache
       - store_artifacts:
           path: ./build/reports
@@ -40,6 +108,8 @@ commands:
     description: "Pre-process the build"
     steps:
       - checkout
+      - install-build-dependencies
+      - decrypt-sensitive-data
       - print-env-info
       - restore-npm-cache
       - run:

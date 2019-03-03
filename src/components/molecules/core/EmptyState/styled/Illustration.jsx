@@ -8,18 +8,12 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import IglooFront from "./svg/IglooFront";
 import IglooHemisphere from "./svg/IglooHemisphere";
 import IglooSide from "./svg/IglooSide";
-
-const illustrationVariants = {
-  IGLOO_FRONT: "iglooFront",
-  IGLOO_HEMISPHERE: "iglooHemisphere",
-  IGLOO_SIDE: "iglooSide"
-};
+import { illustrationDefaultProps, illustrationPropTypes } from "../shared/propTypes";
 
 const illustrationVariantMapping = {
   iglooFront: IglooFront,
@@ -41,18 +35,8 @@ const Illustration = ({ illustrationVariant, illustrationStyles }) => {
   return <StyledIllustration />;
 };
 
-Illustration.propTypes = {
-  illustrationStyles: PropTypes.arrayOf(PropTypes.string).isRequired,
-  illustrationVariant: PropTypes.oneOf([
-    illustrationVariants.IGLOO_FRONT,
-    illustrationVariants.IGLOO_HEMISPHERE,
-    illustrationVariants.IGLOO_SIDE
-  ])
-};
+Illustration.propTypes = illustrationPropTypes;
 
-Illustration.defaultProps = {
-  illustrationVariant: illustrationVariants.IGLOO_FRONT
-};
+Illustration.defaultProps = illustrationDefaultProps;
 
-export { illustrationVariants };
 export default Illustration;

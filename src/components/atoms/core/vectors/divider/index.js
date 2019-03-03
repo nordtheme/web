@@ -22,5 +22,19 @@ import WaveRough from "./WaveRough";
 import WaveSmooth from "./WaveSmooth";
 import WaveSmooth2 from "./WaveSmooth2";
 import WaveSmoothFlat from "./WaveSmoothFlat";
+import WaveSwaying from "./WaveSwaying";
+import WaveWobbly from "./WaveWobbly";
+import WaveWobblyDeep from "./WaveWobblyDeep";
 
-export { LinesWavyIntersecting, WaveFooter, WaveRoaring, WaveRough, WaveSmooth, WaveSmooth2, WaveSmoothFlat };
+export {
+  LinesWavyIntersecting,
+  WaveFooter,
+  WaveRoaring,
+  WaveRough,
+  WaveSmooth,
+  WaveSmooth2,
+  WaveSmoothFlat,
+  WaveSwaying,
+  WaveWobbly,
+  WaveWobblyDeep
+};

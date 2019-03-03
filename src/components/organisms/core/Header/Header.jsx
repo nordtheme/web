@@ -7,6 +7,8 @@
  * License:    MIT
  */
 
+/* eslint-disable react/no-multi-comp */
+
 import React, { Fragment, PureComponent } from "react";
 import PropTypes from "prop-types";
 import { PoseGroup } from "react-pose";
@@ -45,26 +47,30 @@ import {
 } from "./styled";
 
 /**
- * Populates and renders the list of navigation links.
+ * The populated and rendered list of navigation links.
  *
  * @since 0.3.0
  */
-const renderNavListItems = navigationItems.map(({ title, url }) => (
-  <NavLink key={`${title}-${url}`} to={url}>
-    {title}
-  </NavLink>
-));
+const RenderedNavListItems = React.memo(props =>
+  navigationItems.map(({ title, url }) => (
+    <NavLink key={`${title}-${url}`} to={url} {...props}>
+      {title}
+    </NavLink>
+  ))
+); // eslint-disable-line function-paren-newline
 
 /**
- * Populates and renders the list of slide menu navigation links.
+ * The populateed and rendered list of slide menu navigation links.
  *
  * @since 0.3.0
  */
-const renderSlideMenuNavListItems = navigationItems.map(({ title, url }) => (
-  <SlideMenuNavLink key={`${title}-${url}`} initialPose={SLIDE_MENU_NAV_LINK_INITIAL_POSE} to={url}>
-    {title}
-  </SlideMenuNavLink>
-));
+const RenderedSlideMenuNavListItems = React.memo(props =>
+  navigationItems.map(({ title, url }) => (
+    <SlideMenuNavLink key={`${title}-${url}`} initialPose={SLIDE_MENU_NAV_LINK_INITIAL_POSE} to={url} {...props}>
+      {title}
+    </SlideMenuNavLink>
+  ))
+); // eslint-disable-line function-paren-newline
 
 /**
  * The header component that provides Nord's branding caption and logo, the main navigation and a button to toggle
@@ -97,13 +103,19 @@ export default class Header extends PureComponent {
     /**
      * The height from the top in pixels where the header will switch to pinned mode.
      */
-    pinStart: PropTypes.number
+    pinStart: PropTypes.number,
+
+    /**
+     * The name of the style variant.
+     */
+    variant: PropTypes.string
   };
 
   static defaultProps = {
     height: HEADER_HEIGHT,
     heightPinned: HEADER_HEIGHT_PINNED,
-    pinStart: 0
+    pinStart: 0,
+    variant: "base"
   };
 
   state = {
@@ -193,13 +205,19 @@ export default class Header extends PureComponent {
   };
 
   render() {
-    const { height, heightPinned } = this.props;
+    const { height, heightPinned, variant } = this.props;
     const { isSlideMenuOpen, isPinned } = this.state;
 
     return (
       <Fragment>
-        <TopContentPusher height={height} />
-        <StyledHeader height={height} heightPinned={heightPinned} isPinned={isPinned} isSlideMenuOpen={isSlideMenuOpen}>
+        <TopContentPusher height={height} variant={variant} />
+        <StyledHeader
+          height={height}
+          heightPinned={heightPinned}
+          isPinned={isPinned}
+          isSlideMenuOpen={isSlideMenuOpen}
+          variant={variant}
+        >
           <ContentBox centered>
             <LogoBannerBox>
               <A to={ROUTE_ROOT}>
@@ -208,13 +226,15 @@ export default class Header extends PureComponent {
               <LogoCaption isPinned={isPinned}>Nord</LogoCaption>
             </LogoBannerBox>
             <Nav>
-              <NavList>{renderNavListItems}</NavList>
-              <SlideMenuToggle onClick={this.handleSlideMenuToggle}>
+              <NavList>
+                <RenderedNavListItems variant={variant} />
+              </NavList>
+              <SlideMenuToggle onClick={this.handleSlideMenuToggle} variant={variant}>
                 <Menu />
               </SlideMenuToggle>
               <GlobalThemeMode>
                 {({ toggleThemeMode, mode }) => (
-                  <ThemeModeSwitch onClick={toggleThemeMode}>
+                  <ThemeModeSwitch onClick={toggleThemeMode} variant={variant}>
                     <PoseGroup preEnterPose={THEME_MODE_SWITCH_ICON_INITIAL_POSE}>
                       {mode === MODE_BRIGHT_SNOW_FLURRY ? (
                         <MoonIcon key="moon" />
@@ -232,8 +252,11 @@ export default class Header extends PureComponent {
             isOpen={isSlideMenuOpen}
             isPinned={isPinned}
             pose={isSlideMenuOpen ? SLIDE_MENU_NAV_LINK_OPEN_POSE : SLIDE_MENU_NAV_LINK_CLOSED_POSE}
+            variant={variant}
           >
-            <SlideMenuNavList>{renderSlideMenuNavListItems}</SlideMenuNavList>
+            <SlideMenuNavList>
+              <RenderedSlideMenuNavListItems variant={variant} />
+            </SlideMenuNavList>
           </SlideMenuBox>
         </StyledHeader>
       </Fragment>

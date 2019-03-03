@@ -22,16 +22,10 @@ exports[`theme styles matches the snapshot 1`] = `
   transition: background-color 100ms ease-in-out;
 }
 
-.c0:active,
-.c0:focus,
-.c0:hover {
-  background-color: rgba(236,239,244,0.4);
-}
-
 <a
   class="c0 c1"
   href=""
-  style="transform: none;"
+  style="opacity: 0; transform: none;"
 >
   Nord
 </a>

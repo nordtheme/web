@@ -14,7 +14,7 @@
  * @since 0.3.0
  */
 
-import SectionLanding from "./SectionLanding";
+import SectionCardGridFilter from "./SectionCardGridFilter";
+import SectionHero from "./SectionHero";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { SectionLanding };
+export { SectionCardGridFilter, SectionHero };

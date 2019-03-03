@@ -9,7 +9,7 @@
 
 import styled from "styled-components";
 
-import BaseDecorationCanvas from "../../shared/DecorationCanvas";
+import BaseDecorationCanvas from "../../../shared/DecorationCanvas";
 
 /**
  * A container for absolute positioned decoration components.

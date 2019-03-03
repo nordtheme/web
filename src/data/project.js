@@ -17,6 +17,17 @@
 
 const { author, description, homepage, keywords, name, repository, title, version } = require("nord/package.json");
 
+const {
+  author: pkgAuthor,
+  description: pkgDescription,
+  homepage: pkgHomepage,
+  keywords: pkgKeywords,
+  name: pkgName,
+  repository: pkgRepository,
+  title: pkgTitle,
+  version: pkgVersion
+} = require("../../package.json");
+
 /**
  * Provides social and community links.
  *
@@ -29,6 +40,10 @@ const links = {
       id: "nord.chat",
       url: "https://keybase.io/team/nord.chat"
     },
+    reddit: {
+      id: "nordtheme",
+      url: "https://www.reddit.com/r/nordtheme"
+    },
     slack: {
       id: "arcticicestudio",
       url: "https://arcticicestudio.slack.com"
@@ -39,7 +54,7 @@ const links = {
     }
   },
   organization: {
-    url: "https://arcticicestudio.com",
+    url: "https://www.arcticicestudio.com",
     social: {
       github: {
         id: "arcticicestudio",
@@ -72,17 +87,6 @@ const links = {
     }
   }
 };
-
-const {
-  author: pkgAuthor,
-  description: pkgDescription,
-  homepage: pkgHomepage,
-  keywords: pkgKeywords,
-  name: pkgName,
-  repository: pkgRepository,
-  title: pkgTitle,
-  version: pkgVersion
-} = require("../../package.json");
 
 /**
  * Provides metadata about this `nord-docs` project package.
@@ -119,4 +123,12 @@ const metadataNordDocs = {
   version: pkgVersion
 };
 
-module.exports = { links, metadataNord, metadataNordDocs };
+/**
+ * Provides project tag names.
+ *
+ * @type {Array<string>}
+ * @since 0.7.0
+ */
+const tags = ["nord", "nordtheme"];
+
+module.exports = { links, metadataNord, metadataNordDocs, tags };

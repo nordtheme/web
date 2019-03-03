@@ -15,9 +15,8 @@
  */
 
 import { css } from "styled-components";
-import { darken } from "polished";
 
-import { media, nord } from "styles/theme";
+import { media } from "styles/theme";
 
 const emptyStateIllustrationStyles = css`
   width: 7em;
@@ -43,11 +42,4 @@ const errorState404IllustrationStyles = css`
   `}
 `;
 
-/**
- * A darkened background color for landing page section components.
- *
- * @since 0.6.0
- */
-const darkenedSectionBackgroundColor = darken(0.045, nord.nord0);
-
-export { darkenedSectionBackgroundColor, emptyStateIllustrationStyles, errorState404IllustrationStyles };
+export { emptyStateIllustrationStyles, errorState404IllustrationStyles };

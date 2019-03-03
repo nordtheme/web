@@ -11,7 +11,7 @@ import styled from "styled-components";
 
 import { motion, ms } from "styles/theme";
 
-import { linkBackgroundColorHover } from "../shared/styles";
+import { linkBackgroundColorHoverVariants } from "../shared/styles";
 
 /**
  * A button to toggle the navigation link slide menu.
@@ -36,7 +36,7 @@ const SlideMenuToggle = styled.button`
   }
 
   &:hover:not(:disabled) {
-    background-color: ${linkBackgroundColorHover};
+    background-color: ${({ variant }) => linkBackgroundColorHoverVariants[variant]};
   }
 
   > * {

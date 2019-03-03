@@ -22,7 +22,7 @@ import theme, {
 import { SESSIONSTORAGE_KEY_THEME_MODE } from "config/stores/caches/constants";
 import { readSessionCache, writeSessionCache } from "utils";
 
-import "inter-ui/inter-ui.css";
+import "inter-ui/inter.css";
 import "typeface-rubik/index.css";
 import "typeface-source-code-pro/index.css";
 

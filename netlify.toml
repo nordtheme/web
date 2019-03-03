@@ -7,7 +7,25 @@
 
 # Configuration for Netlify.
 #
+# The project uses sensitive/secret data through git-crypt that are made available as environment variables.
+# Unfortunately Netlify currently doesn't provide a way to customize the Docker container configuration so that it is
+# not possible to set up GPG and git-crypt to import the CI/CD GPG secret key, decrypt the files and build the project.
+#
+# This requires to manually set the following build environment variables through Netlify's web app UI before running a
+# deployment in order to work properly:
+#
+# > $NORD_DOCS_GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID
+# Stores the "Google Universal Analytics" tracking ID.
+# @since 0.6.0
+#
+# > $NORD_DOCS_GITHUB_API_TOKEN_READONLY_PUBLIC
+# Stores the read-only token for the GitHub GraphQL and REST API to fetch public data.
+# @since 0.9.0
+#
 # @see https://www.netlify.com/docs/netlify-toml-reference
+# @see https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
+# @see https://github.com/AGWA/git-crypt
+# @see https://www.gnupg.org/documentation
 
 [build]
   command = "npm run build"

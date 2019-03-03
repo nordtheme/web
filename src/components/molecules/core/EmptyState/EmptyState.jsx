@@ -11,6 +11,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Headline, Illustration, Subline, TextWrapper, Wrapper } from "./styled";
+import { illustrationPropTypes } from "./shared/propTypes";
 
 /**
  * A component that represents an empty state through a vector illustration with a headline and subline.
@@ -33,6 +34,7 @@ const EmptyState = ({ headline, illustrationStyles, illustrationVariant, subline
 );
 
 EmptyState.propTypes = {
+  ...illustrationPropTypes,
   headline: PropTypes.string.isRequired,
   subline: PropTypes.string.isRequired
 };

@@ -4,7 +4,8 @@ exports[`theme styles has correct height based on header height in unpinned mode
 .c0 {
   height: 5em;
   position: relative;
-  background-color: transparent;
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
 }
 
 <div
@@ -17,7 +18,8 @@ exports[`theme styles has correct height based on the header height in pinned mo
 .c0 {
   height: 3.5em;
   position: relative;
-  background-color: transparent;
+  -webkit-transition: background-color 400ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
 }
 
 <div

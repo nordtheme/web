@@ -5,7 +5,6 @@ exports[`theme styles has correct top position based on header height in unpinne
   position: absolute;
   top: 5em;
   width: 100%;
-  background-color: #fff;
   text-align: center;
   z-index: 4;
   overflow-y: auto;
@@ -21,7 +20,7 @@ exports[`theme styles has correct top position based on header height in unpinne
 
 <div
   class="c0"
-  style="transform: none;"
+  style="height: 0px;"
 />
 `;
 
@@ -30,7 +29,6 @@ exports[`theme styles has correct top position based on the header height in pin
   position: absolute;
   top: 3.5em;
   width: 100%;
-  background-color: #fff;
   text-align: center;
   z-index: 4;
   overflow-y: auto;
@@ -46,6 +44,6 @@ exports[`theme styles has correct top position based on the header height in pin
 
 <div
   class="c0"
-  style="transform: none;"
+  style="height: 0px;"
 />
 `;

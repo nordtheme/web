@@ -90,7 +90,7 @@ module.exports = {
   /*
    * The paths to modules that run some code to configure or set up the testing environment before each test.
    * The `___loader` shim is a global function used by internal Gatsby APIs.
-   * Note that this is executed BEFORE the `setupTestFrameworkScriptFile` option!
+   * Note that this is executed BEFORE the `setupFilesAfterEnv` option!
    */
   setupFiles: ["<rootDir>/test/__shims__/___loader.js"],
 
@@ -98,7 +98,7 @@ module.exports = {
    * The path to the module that runs to configure or set up the testing framework before each test.
    * Note that this is executed AFTER the `setupFiles` option!
    */
-  setupTestFrameworkScriptFile: require.resolve("./test/setup.js"),
+  setupFilesAfterEnv: [require.resolve("./test/setup.js")],
 
   /*
    * An array of regexp pattern strings that are matched against all test paths before executing the test. If the test

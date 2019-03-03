@@ -8,14 +8,12 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
 import styled, { keyframes } from "styled-components";
 
 import CloudBottom from "./svg/CloudBottom";
 import CloudTop from "./svg/CloudTop";
 import NightSkyCanvas from "./svg/NightSkyCanvas";
-
-const VIEW_BOX = [0, 0, 512.5, 372.642];
+import { illustrationPropTypes } from "../shared/propTypes";
 
 const animFloating = keyframes`
   from { transform: translate3d(0, 0, 0); }
@@ -41,11 +39,11 @@ const Svg = styled.svg`
  * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
-const Illustration = ({ illustrationStyles, viewBox }) => (
+const Illustration = ({ illustrationStyles }) => (
   <Svg
     data-testid="nd-molecules-core-errorstate404-svg-illustration"
     illustrationStyles={illustrationStyles}
-    viewBox={viewBox}
+    viewBox="0 0 512.5 372.642"
     xmlns="http://www.w3.org/2000/svg"
   >
     <NightSkyCanvas data-testid="nd-molecules-core-errorstate404-svg-illustration-fragment-nightsky" />
@@ -55,13 +53,7 @@ const Illustration = ({ illustrationStyles, viewBox }) => (
 );
 
 Illustration.propTypes = {
-  illustrationStyles: PropTypes.arrayOf(PropTypes.string).isRequired,
-  viewBox: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.number), PropTypes.string])
+  ...illustrationPropTypes
 };
 
-Illustration.defaultProps = {
-  viewBox: VIEW_BOX.join(" ")
-};
-
-export { VIEW_BOX };
 export default Illustration;

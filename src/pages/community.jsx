@@ -11,7 +11,7 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionLanding } from "organisms/page/community";
+import { SectionChat, SectionContent, SectionHero } from "organisms/page/community";
 
 /**
  * The component that represents the community page.
@@ -22,7 +22,9 @@ import { SectionLanding } from "organisms/page/community";
  */
 const Community = ({ location: { pathname } }) => (
   <BaseLayout pathName={pathname}>
-    <SectionLanding />
+    <SectionHero />
+    <SectionChat />
+    <SectionContent />
   </BaseLayout>
 );
 

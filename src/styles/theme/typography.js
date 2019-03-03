@@ -30,8 +30,8 @@
 const typefaces = {
   main: "Rubik",
   monospace: "Source Code Pro",
-  straight: "Inter UI",
-  straightVariable: "Inter UI var"
+  straight: "Inter",
+  straightVariable: "Inter var"
 };
 
 /**

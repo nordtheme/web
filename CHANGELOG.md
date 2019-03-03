@@ -8,6 +8,217 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.9.0
+
+![Release Date: 2019-03-03](https://img.shields.io/badge/Release_Date-2019--03--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/11) [![Milestone](https://img.shields.io/badge/Milestone-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/9)
+
+This version mainly focused on the [sections of the ports page][gh-119] to represent Nord's port projects. The implementation was limited to the “landing” page components and currently doesn't include any prot specific pages, but will be implemented later on when the actual documentations are being migrated.
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+
+The following issues are related to the [“Components” design concept][gh-63] and the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/52519841-ee1f7680-2c61-11e9-91fa-b7e41ab30145.png" width="30%"/></p>
+
+**Ports Page Sections** — #119 ⇄ #126 (⊶ 606f805a)
+↠ Implemented all port page sections including required changes to involved components and new dependencies.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53166036-83145f00-35d4-11e9-8158-3008657ce4ff.png"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53166795-96282e80-35d6-11e9-8ed8-5b81ed3fe41f.png"/></p>
+
+### Hero
+
+The first section contains a _feature duo_ container with the pages heading and a summary about Nord's ports.
+Underneath the static vector graphic that was placed in the port section of the landing (`/`) page has been implemented as interactive animated component. It uses a 3D depth effect for the port project's logos by moving against the direction of the current mouse position where the larger logos will move more to give the impression that they are closer.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53166647-33369780-35d6-11e9-9130-fde7e4cdadd1.gif"/></p>
+
+### Grid Filter
+
+The second section consists of a input field that allows to filter available port projects by predefined search terms. Underneath a animated grid of card components reacts to the input field by filtering non-matching ports projects.
+Each card represents one port project and consists of the logo, the name (with the _Nord_ prefix) as well as a card footer that contains the version of the latest release of the respective project and the number of stars of the GitHub repository.
+
+To prevent UI freezes/frame drops when typing in the input field, while the grid reacts to the change immediately, it was considered to use _debounce_ that waits some milliseconds before actually filtering the grid by the given search term. This hasn't been implemented yet but might be added later on when there are performance problems. To get the best performance [Lodash][] can be used through [gatsby-plugin-lodash][gh-gatsby-plugin-lodash] which sets up [babel-plugin-lodash][gh-babel-plugin-lodash] and [lodash-webpack-plugin][gh-lodash-webpack-plugin].
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53166646-33369780-35d6-11e9-94ea-b5758691f47f.gif"/></p>
+
+### GitHub GraphQL API
+
+To view the metadata about the port project repositories [Gatsby's fantastic GraphQL integration][gatsby-docs-gql] is used through the awesome [gatsby-source-graphql][gh-gatsby-source-graphql] plugin. It allows to fire queries that'll get executed and stitches remote schemas together by adding a type that wraps the remote schema Query type and putting it under field of Gatsby GraphQL Query.
+
+### Interactive Animations
+
+To implement components with an interactive animation the awesome [react-spring][] project is used which allows, like the already used fantastic [react-pose][] library, to use spring-physics based animations.
+The advantage of react-spring is that it bails out of the React renderer to avoid unnecessary renders and instead uses native methods to get the best performance even for complex animations.
+It comes with [first-class support for Hooks][react-spring-basic], a great and extensive documentation and [a lot of examples for inspirations][react-spring-ex].
+
+**React Hooks Support** — #121 ⇄ #122 (⊶ c1bf2dbe)
+↠ Since the [latest stable React version finally comes with the long-awaited Hooks][react-b-16.8.0] the project now added support for the new features.
+To simplify the usage and import of [custom Hooks][react-docs-hooks-ch] a new `hooks` import alias has been added that allows to import custom hooks from the new `src/hooks` Hooks base directory.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48658871-4707b600-ea49-11e8-8a08-39e1a318c442.png" width="25%"/></p>
+
+The ESLint plugin [eslint-plugin-react-hooks][npm-eslint-react-hooks] provided by the React core team has been added to enforce the [rules of Hooks][react-docs-hooks-roh]. This is a temporary integration until the [eslint-config-arcticicestudio][npm-eslint-config-arcticicestudio] package has been updated to support and include the plugin.
+
+The plugin is configured by following the [official documentation about the rules of Hooks][react-docs-hooks-roh].
+Since React Hooks are making use of inline arrow functions the [react/jsx-no-bind][eslint-p-react/jsx-no-bind] rule has been disabled to avoid noisy false-positive errors.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/52774423-6d83c000-303d-11e9-83cb-4704419c63c6.png" width="25%"/></p>
+
+**git-crypt** — #123 ⇄ #124 (⊶ 475c6956)
+↠ Integrated [git-crypt][] into the repository to allow to encrypt specific files using [GPG][].
+_git-crypt_ is a stable and production proven concept that works safely and allows to use a transparent encryption with Git.
+
+Nord Docs uses it to encrypt [Gatsby environment variables][gatsby-docs-env] stored in `.env*` files that are handled by [dotenv][]. Another way would be to use [Circle CI's environment variables features][circleci-docs-env] to make sensitive data available during build time, but using git-crypt ensures that all required project data is stored in the repository and tracked by Git without the need to manually configure CI/CD providers and servers.
+
+Unfortunately Netlify currently doesn't provide a way to customize the Docker container configuration so that it was not possible to set up GPG and git-crypt to import the CI/CD GPG secret key, decrypt the files and build the project. An attempted solution was to use [Netlify's awesome “Functions” feature][netlify-docs-func] to run a function that executes shell commands using the `deploy-building` trigger to set up GPG and git-crypt, but there is no way to install `git-crypt` in the container so this doesn't work.
+
+Therefore is was necessary to manually set required environment variables via [Netlify's web app UI for build environment variables][netlify-docs-env]:
+
+- `NORD_DOCS_GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID` — Stores the “Google Universal Analytics” tracking ID.
+
+The following steps have been performed to integrate git-crypt for the current code base:
+
+1. Add files to `.gitattributes` and configure `filter` and `diff` to use `git-crypt` setup
+2. Initialize `git-crypt` for the repository: `git-crypt init` (default key)
+3. Add the GPG keys of all core team members keys and Nord theme CI/CD virtual user: `git-crypt add-gpg-user --trusted --no-commit <ID>` (`--no-commit` flag prevents automatic commit of generated files while `--trusted` assumes the GPG user IDs are trusted)
+4. Commit the new generated `.git-crypt` folder
+5. Unlock the repository: `git-crypt unlock`
+6. Ensure all target files are tracked to be encrypted: `git-crypt status`
+7. Commit all encrypted target files
+8. Validate the encryption works by locking the repository again: `git-crypt lock`
+9. Implement Circle CI build configuration jobs and commands to handle GPG key import, file decryption and clean up after successful build
+10. Document required manual steup steps for Netlify deployment configuration in `netlify.toml` file
+
+## Improvements
+
+**Interactive illustration for ports section of landing page** — #127 (⊶ f79f4ac3)
+↠ #126 improved the already existing “Nordify” SVG illustration by making it an interactive components that animates the floating logos in the opposite direction of the current mouse cursor's position.
+
+The new component is now also used for the [port section of the landing page][env-dev-landing-ports] replacing the static SVG illustration/image.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53172428-9da30400-35e5-11e9-96a5-f787247b467a.gif" /></p>
+
+## Tasks
+
+**Dependency Update January 2018** — #120 (⊶ cb09058a)
+↠ Performed the regular batch update for outdated dependencies.
+It includes the long awaited React version [16.8.0][react-b-16.8.0] finally brings the stable [Hooks API][react-docs-hooks] as well as great performance improvements and bug fixes!
+
+Updated Jest's configuration since version `>=24.0.0` [deprecated `setupTestFrameworkScriptFile` in favor of the new `setupFilesAfterEnv`][facebook/jest#7119] option.
+
+The ESLint plugin `eslint-plugin-react` includes a lot of improvements and bug fixes regarding the parsing of code structures for better prop validation and display name detection. This resulted in the requirement to implement currently missing prop types and display names in various SFC and class components in the project.
+
+Gatsby and all plugins have been updated to the latest versions to include the latest improvements and bug fixes. The `gatsby-plugin-manifest` plugin now sets the [`legacy` option to `true` by default][gatsbyjs/gatsby#11203] to include Apple touch icons since the assumption was wrong that iOS supports the icons from the web manifest.
+
+As of version 3.3 the [“Inter UI” font typeface has been renamed and is now “Inter”][rsms/inter#v3.3], without the “UI” part. This change has been ported to the used [inter-ui][npm-inter-ui] package. The import has been adjusted to match the renamed `inter.css` main file and all references to the “Inter UI” name have been adjusted by removing “UI”.
+
+[Prettier version 1.16.0][prettier-b-1.16.0] comes with support for React Hooks and features for TypeScript and HTML as well as many other improvements and bug fixes.
+
+[React Pose][react-pose] includes an important fix that also [animates all other children when items are moving][popmotion/popmotion#682] when using the `PoseGroup` component.
+
+**Gatsby 2.1.0 with React Hooks Support** — #125 (⊶ cf578797)
+↠ Updated to [Gatsby v2.1.0 which introduces `useStaticQuery`][gatsby-docs-usestq], a new Gatsby feature that provides the ability to use a [React Hook][react-docs-hooks] to query with GraphQL at _build time_. It provides the same functionality like the [`StaticQuery`][gatsby-docs-stq] component, but as a Hook rather than a component that takes a render prop.
+
+**Update to React 16.8.3** — #128 (⊶ f4c9b45d)
+↠ The latest React version [16.8.3][facebook/react#v16.8.3] has been released including important bug fixes for incorrect state behaviors with the `useState` hook as well as a fix for `<input>` elements that discarded state updates during the render phase and reduced the performance.
+The update is [strongly recommended for any 16.8 release][tw-dan_abramov-react-v16.8.3] by the core team.
+
+This bug fix release version might fix some problems that were encountered during development of the search filter `<input>` for #119.
+
+# 0.8.0
+
+![Release Date: 2019-02-03](https://img.shields.io/badge/Release_Date-2019--02--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/10) [![Milestone](https://img.shields.io/badge/Milestone-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/8)
+
+This version mainly focused on the [sections of the docs page][gh-117] to represent Nord's documentation categories and their topics. The implementation was limited to the “landing” page components and style and currently doesn't include any documentation, the actual docs will be implemented and imported later on using the [GraphQL API and MDX][gh-24].
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+
+The following issues are related to the [“Components” design concept][gh-63].
+
+**Community Page Sections** — #117 ⇄ #118 (⊶ a0b9f5bc)
+↠ Implemented all docs page sections including required changes to other components.
+All sections follow the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/52166394-eb2a0080-270c-11e9-9979-17aeee02043d.png"/></p>
+
+### Hero
+
+The first section is the “hero” of the docs page that renders a description about the page's purpose.
+
+### Contents Cards
+
+The 2nd section is about Nord's documentation contents where each category is represented as card rendered in a two-column grid layout. Each card contains a topic icon, colorized with a accent color from Nord's palettes and a short summary about the topic's links.
+
+As of now there are two cards for the categories “Getting Started” and “References” that provide links to the various topics.
+
+# 0.7.0
+
+![Release Date: 2019-01-26](https://img.shields.io/badge/Release_Date-2019--01--26-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/9) [![Milestone](https://img.shields.io/badge/Milestone-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/7)
+
+This version mainly focused on the [sections of the community page][gh-115] to represent Nord's community chat channels as well as the content & knowledge bases.
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+
+The following issues are related to the [“Components” design concept][gh-63] and the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
+
+**Community Page Sections** — #115 ⇄ #116 (⊶ 5fb775c7)
+↠ Implemented all community page sections including required dependencies, components and illustrations.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789079-bb677f80-2185-11e9-8069-782a098c3d50.png"/></p>
+
+### Hero
+
+The first section is the “hero” of the community page that renders a description about the page's purpose and an animated SVG component.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789084-bb677f80-2185-11e9-8f01-06d2d1b24b5a.png"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789085-bc001600-2185-11e9-8711-fc6c7a082405.png"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789098-da661180-2185-11e9-86af-cfafc58395f3.gif"/></p>
+
+### Chats
+
+The 2nd section is about Nord's community chats where each platform is represented as card rendered in a two-column grid layout. Each card contains the platforms official logo, colorized with colors of the respective brand guidelines, a short summary about the platform/service and a link component that'll forward to the community within the platform.
+Next to the official main channel each platform also provides sub-channels for all port projects
+
+As of now the following community chats of Nord are represented:
+
+- Arctic Ice Studio's official community on [Spectrum][spectrum-ais]
+- Nord's official [Keybase team chat][kb-chat-nord]
+- Nord's official [Slack][slack-ais] workspace
+- Nord's official [Discord][] space
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789080-bb677f80-2185-11e9-8c28-5d429bfa14e0.png"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789081-bb677f80-2185-11e9-9a81-b00b77af90e9.png"/></p>
+
+### Content
+
+The 3th and also currently last section presents platforms where the community can create content and ask questions for and about Nord. Next to the official documentation these content & knowledge bases are also powered by community.
+
+Like the chat platforms in the previous section each platform/service is represented as card including the same information, rendered by the same components, and also structured in a two-column grid layout.
+Next to this, each card includes the latest three items (questions, posts etc.) of the platform's community rendered as link component with the item's title and metadata like tags, the name of the author and the relative creation date/time.
+
+As of now the following community platforms of Nord are represented:
+
+- Latest questions from [Stack Overflow][stof-nord-tagged] tagged with `nord` or `nordtheme`
+- Nord's official [/r/nordtheme][] subreddit
+
+All data is fetched from the official REST APIs of the respective platform using [axios][gh-axios].
+The processing of any date/time data is handled with [date-fns][gh-date-fns], a modern and more lightweight ES6+ library with tree-shaking support that'll be used project-wide for Nord Docs to handle any other date/time data like e.g. blog posts metadata.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789082-bb677f80-2185-11e9-99f3-5cb9387fcefa.png"/></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789083-bb677f80-2185-11e9-9920-64914402da26.png"/></p>
+
 # 0.6.0
 
 ![Release Date: 2019-01-13](https://img.shields.io/badge/Release_Date-2019--01--13-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/8) [![Milestone](https://img.shields.io/badge/Milestone-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/6)
@@ -18,7 +229,7 @@ This version focused on the [sections of the landing page][gh-112] including the
 
 <p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
 
-The following issues are related to the [“Components” design concept][gh-63].
+The following issues are related to the [“Components” design concept][gh-63] and the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
 
 **Core HTML Element Atom: “Button”** — #110 ⇄ #111 (⊶ 41ce16fa)
 ↠ Implemented the core atom `Button` that represents a [`<button>`][mdn-button] base HTML element. It can also render as [core atom `A`][gh-70] with `Button` styles when the `href` or `to` props are passed with an internal and external URL.
@@ -46,9 +257,7 @@ Next to variations there are additional props to toggle more styles:
 <p align="center"><img src="https://user-images.githubusercontent.com/7836623/50845538-5fbb8a80-136d-11e9-84b0-b81d7d5c2e94.png" width="30%"/></p>
 
 **Landing Page Sections** — #112 ⇄ #113 (⊶ 339d3b8f)
-↠ Implemented the core atom `Button` that represents a [`<button>`][mdn-button] base HTML element. It can also render as [core atom `A`][gh-70] with `Button` styles when the `href` or `to` props are passed with an internal and external URL.
-
-Implemented all landing page sections including required dependencies, components and illustrations.
+↠ Implemented all landing page sections including required dependencies, components and illustrations.
 All sections follow the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
 
 ### Hero
@@ -90,7 +299,7 @@ This version focused on the essential [footer][gh-106] as well as a styled [link
 
 <p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
 
-The following issues are related to the [“Components” design concept][gh-63].
+The following issues are related to the [“Components” design concept][gh-63] and the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
 
 **Core Atom: “Link”** — #105 ⇄ #107 (⊶ cf1f1184)
 ↠ Implemented the core atom `Link` that wraps the [base HTML element atom component the `A`][gh-70] and adds matching brand styles to it.
@@ -140,10 +349,10 @@ The last elements of the left-side container is a paragraph providing version in
 
 For reduced width views (responsive design) the footer adjusts several styles and composed components. For really small view ports the grid layout be switches to a flexbox layout.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50536175-ea241300-0b51-11e9-85d6-41350ce8017b.png" width="40%" /></p>
-
 **Core Organism Component: “Footer”** — #109 (⊶ 75435d07)
 ↠ Integrated the Webpack [size-plugin][gh-sp] that prints the gzipped sizes of assets and the changes since the last build added through [gatsby-plugin-webpack-size][gh-gp-ws].
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50536175-ea241300-0b51-11e9-85d6-41350ce8017b.png" width="40%" /></p>
 
 # 0.4.0
 
@@ -758,7 +967,7 @@ During the initial implementation of Gatsby (#27) the [gatsby-plugin-react-helme
 ↠ Fixed the [Webpack resolve alias][webpack-docs-resv-alias] `pages` for Gatsby pages that was configured to the invalid `src/components/pages` path instead of the correct `src/pages` path.
 
 **Fixed overridden ESLint `import/no-extraneous-dependencies` rule** — #41 (⊶ 7eccff4b)
-↠ The [import/no-extraneous-dependencies][eslint-r-import/no-extraneous-dependencies] rule allows to define a array of glob pattern that are allowed to define import `devDependencies`. In #15 the rule was overridden to include the project specific path `**/.gatsby/**` which whitelists all Gatsby specific scripts. Unfortunately this removed all glob pattern defined in the used [eslint-config-arcticicestudio][npm-eslint-config-arcticicestudio] (rule is defined in the `-base` package) resulting in errors in other projects paths like tests.
+↠ The [import/no-extraneous-dependencies][eslint-p-import/no-extraneous-dependencies] rule allows to define a array of glob pattern that are allowed to define import `devDependencies`. In #15 the rule was overridden to include the project specific path `**/.gatsby/**` which whitelists all Gatsby specific scripts. Unfortunately this removed all glob pattern defined in the used [eslint-config-arcticicestudio][npm-eslint-config-arcticicestudio] (rule is defined in the `-base` package) resulting in errors in other projects paths like tests.
 It has been fixed by importing the paths defined in the preset from the [eslint-config-arcticicestudio-base][npm-eslint-config-arcticicestudio-base] package and merge it with the additional `**/.gatsby/**` path.
 
 ## Tasks
@@ -813,24 +1022,34 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 <!-- Base Links -->
 
-[babel]: https://babeljs.io
+[/r/nordtheme]: https://www.reddit.com/r/nordtheme
 [babel-docs-plug]: https://babeljs.io/docs/en/plugins
+[babel]: https://babeljs.io
+[circleci-docs-env]: https://circleci.com/docs/2.0/env-vars
 [circleci]: https://circleci.com
 [codecov]: https://codecov.io
 [cra]: https://facebook.github.io/create-react-app
+[discord]: https://discordapp.com
+[dotenv]: https://github.com/motdotla/dotenv
 [editorconfig]: https://editorconfig.org
-[eslint]: https://eslint.org
+[env-dev-landing-ports]: https://develop.nordtheme.com/#ports
 [eslint-docs-auto-fix]: https://eslint.org/docs/user-guide/command-line-interface#fixing-problems
-[eslint-r-import/no-extraneous-dependencies]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+[eslint-p-import/no-extraneous-dependencies]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+[eslint-p-react/jsx-no-bind]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
+[eslint]: https://eslint.org
 [eva-icons]: https://akveo.github.io/eva-icons
 [flow]: https://flow.org
 [ga-mark]: https://marketingplatform.google.com/about/analytics
 [gatsby-docs-404]: https://www.gatsbyjs.org/docs/add-404-page
 [gatsby-docs-api-node]: https://www.gatsbyjs.org/docs/node-apis
 [gatsby-docs-config]: https://gatsbyjs.org/docs/gatsby-config
+[gatsby-docs-env]: https://www.gatsbyjs.org/docs/environment-variables
+[gatsby-docs-gql]: https://www.gatsbyjs.org/docs/querying-with-graphql
 [gatsby-docs-link]: https://www.gatsbyjs.org/docs/gatsby-link
 [gatsby-docs-seo]: https://www.gatsbyjs.org/docs/seo
+[gatsby-docs-stq]: https://www.gatsbyjs.org/docs/static-query
 [gatsby-docs-testing]: https://www.gatsbyjs.org/docs/testing
+[gatsby-docs-usestq]: https://www.gatsbyjs.org/docs/use-static-query
 [gdev-fund-wamf]: https://developers.google.com/web/fundamentals/web-app-manifest
 [gdev-ga-gtag]: https://developers.google.com/analytics/devguides/collection/gtagjs
 [gdev-tm]: https://developers.google.com/tag-manager
@@ -839,6 +1058,16 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gf-rubik]: https://fonts.google.com/specimen/Rubik
 [gf-source-code-pro]: https://fonts.google.com/specimen/Source+Code+Pro
 [gh-1]: https://github.com/arcticicestudio/nord-docs/issues/1
+[gh-100]: https://github.com/arcticicestudio/nord-docs/issues/100
+[gh-101]: https://github.com/arcticicestudio/nord-docs/issues/101
+[gh-105]: https://github.com/arcticicestudio/nord-docs/issues/105
+[gh-106]: https://github.com/arcticicestudio/nord-docs/issues/106
+[gh-109]: https://github.com/arcticicestudio/nord-docs/issues/109
+[gh-110]: https://github.com/arcticicestudio/nord-docs/issues/110
+[gh-112]: https://github.com/arcticicestudio/nord-docs/issues/112
+[gh-115]: https://github.com/arcticicestudio/nord-docs/issues/112
+[gh-117]: https://github.com/arcticicestudio/nord-docs/issues/117
+[gh-119]: https://github.com/arcticicestudio/nord-docs/issues/119
 [gh-2]: https://github.com/arcticicestudio/nord-docs/issues/2
 [gh-24]: https://github.com/arcticicestudio/nord-docs/issues/24
 [gh-25]: https://github.com/arcticicestudio/nord-docs/issues/25
@@ -868,30 +1097,29 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-94]: https://github.com/arcticicestudio/nord-docs/issues/94
 [gh-96]: https://github.com/arcticicestudio/nord-docs/issues/96
 [gh-98]: https://github.com/arcticicestudio/nord-docs/issues/98
-[gh-100]: https://github.com/arcticicestudio/nord-docs/issues/100
-[gh-101]: https://github.com/arcticicestudio/nord-docs/issues/101
-[gh-105]: https://github.com/arcticicestudio/nord-docs/issues/105
-[gh-106]: https://github.com/arcticicestudio/nord-docs/issues/106
-[gh-109]: https://github.com/arcticicestudio/nord-docs/issues/109
-[gh-110]: https://github.com/arcticicestudio/nord-docs/issues/110
-[gh-112]: https://github.com/arcticicestudio/nord-docs/issues/112
 [gh-arcland]: https://github.com/arcticicestudio/arctic-landscape
 [gh-arcocfrac]: https://www.npmjs.com/package/arctic-ocean-fractal
+[gh-axios]: https://github.com/axios/axios
+[gh-babel-plugin-lodash]: https://github.com/lodash/babel-plugin-lodash
 [gh-bsl]: https://github.com/willmcpo/body-scroll-lock
 [gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
+[gh-date-fns]: https://github.com/date-fns/date-fns
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
+[gh-gatsby-plugin-lodash]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-lodash
+[gh-gatsby-source-graphql]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-graphql
 [gh-gp-ws]: https://github.com/axe312ger/gatsby-plugin-webpack-size
 [gh-help-coc]: https://help.github.com/articles/adding-a-code-of-conduct-to-your-project
 [gh-help-code-owners]: https://help.github.com/articles/about-codeowners
 [gh-help-contrib-gl]: https://help.github.com/articles/setting-guidelines-for-repository-contributors
-[gh-help-issue-templ]: https://help.github.com/articles/about-issue-and-pull-request-templates
 [gh-help-issue-templ-depr]: https://help.github.com/articles/manually-creating-a-single-issue-template-for-your-repository
 [gh-help-issue-templ-repo]: https://help.github.com/articles/creating-issue-templates-for-your-repository
+[gh-help-issue-templ]: https://help.github.com/articles/about-issue-and-pull-request-templates
 [gh-help-pr-templ]: https://help.github.com/articles/creating-a-pull-request-template-for-your-repository
 [gh-husky]: https://github.com/typicode/husky
 [gh-jest-dom-matcher]: https://github.com/gnapse/jest-dom#custom-matchers
 [gh-jsc]: https://github.com/styled-components/jest-styled-components
 [gh-lint-staged]: https://github.com/okonet/lint-staged
+[gh-lodash-webpack-plugin]: https://github.com/lodash/lodash-webpack-plugin
 [gh-react-helmet]: https://github.com/nfl/react-helmet
 [gh-remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-remark-preset-lint-arcticicestudio]: https://github.com/arcticicestudio/remark-preset-lint-arcticicestudio
@@ -902,19 +1130,23 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-styleguide-js]: https://github.com/arcticicestudio/styleguide-javascript
 [gh-styleguide-md]: https://github.com/arcticicestudio/styleguide-markdown
 [gh-sue]: https://github.com/yahoo/subscribe-ui-event
+[git-crypt]: https://github.com/AGWA/git-crypt
 [git-docs-gitattributes]: https://git-scm.com/docs/gitattributes
 [git-docs-gitignore]: https://git-scm.com/docs/gitignore
 [git-docs-mailmap]: https://git-scm.com/docs/git-shortlog#_mapping_authors
+[gpg]: https://www.gnupg.org
 [inter-ui]: https://rsms.me/inter
 [jest]: https://jestjs.io
 [json-ld]: https://json-ld.org
-[md]: https://material.io
+[kb-chat-nord]: https://keybase.io/team/nord.chat
+[lodash]: https://lodash.com
 [md-com-es]: https://material.io/design/communication/empty-states.html
+[md-motion-speed]: https://material.io/design/motion/speed.html
+[md]: https://material.io
 [mdn-button]: https://developer.mozilla.org/de/docs/Web/HTML/Element/button
 [mdn-css-bs]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-style
 [mdn-flexbox]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
 [mdn-grids]: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
-[md-motion-speed]: https://material.io/design/motion/speed.html
 [mdn-html-el-a]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
 [mdn-html-el-cs]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning
 [mdn-html-el-h]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
@@ -929,37 +1161,49 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [mdn-web-mf]: https://developer.mozilla.org/en-US/docs/Web/Manifest
 [mit-lic]: https://opensource.org/licenses/MIT
 [mobx]: https://mobx.js.org
-[netlify]: https://www.netlify.com
+[netlify-docs-env]: https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
+[netlify-docs-func]: https://www.netlify.com/docs/functions
 [netlify-docs-headers]: https://www.netlify.com/docs/headers-and-basic-auth
 [netlify-docs-rd]: https://www.netlify.com/docs/redirects
 [netlify-docs-toml-ref]: https://www.netlify.com/docs/netlify-toml-reference
+[netlify]: https://www.netlify.com
 [npm-docs-lock]: https://docs.npmjs.com/files/package-locks
 [npm-docs-pkg]: https://docs.npmjs.com/files/package.json
 [npm-docs-rc]: https://docs.npmjs.com/files/npmrc
-[npm-eslint-config-arcticicestudio]: https://www.npmjs.com/package/eslint-config-arcticicestudio
 [npm-eslint-config-arcticicestudio-base]: https://www.npmjs.com/package/eslint-config-arcticicestudio-base
+[npm-eslint-config-arcticicestudio]: https://www.npmjs.com/package/eslint-config-arcticicestudio
+[npm-eslint-react-hooks]: https://www.npmjs.com/package/eslint-plugin-react-hooks
 [npm-gatsby-plugin-react-helmet]: https://www.npmjs.com/package/gatsby-plugin-react-helmet
 [npm-npm-run-all]: https://www.npmjs.com/package/npm-run-all
 [npm-prop-types]: https://www.npmjs.com/package/prop-types
+[npm-react-dom]: https://www.npmjs.com/package/react-dom
 [npm-react-helmet]: https://www.npmjs.com/package/react-helmet
 [npm-react]: https://www.npmjs.com/package/react
-[npm-react-dom]: https://www.npmjs.com/package/react-dom
 [npm-remark-cli]: https://www.npmjs.com/package/remark-cli
 [ogp]: http://ogp.me
-[ossg]: https://opensource.guide
 [ossg-contrib]: https://opensource.guide/how-to-contribute
+[ossg]: https://opensource.guide
 [polished]: https://polished.js.org
 [prettier]: https://prettier.io
-[react]: https://reactjs.org
 [react-docs-context]: https://reactjs.org/docs/context.html
+[react-docs-hooks-ch]: https://reactjs.org/docs/hooks-custom.html
+[react-docs-hooks-roh]: https://reactjs.org/docs/hooks-rules.html
+[react-docs-hooks]: https://reactjs.org/docs/hooks-intro.html
 [react-docs-typecheck-pt]: https://reactjs.org/docs/typechecking-with-proptypes.html
 [react-pose]: https://popmotion.io/pose
+[react-spring-basic]: https://www.react-spring.io/docs/hooks/basics
+[react-spring-ex]: https://www.react-spring.io/docs/hooks/examples
+[react-spring]: https://www.react-spring.io
+[react]: https://reactjs.org
 [remark]: https://remark.js.org
 [schema.org]: https://schema.org
+[slack-ais]: https://arcticicestudio.slack.com
+[spectrum-ais]: https://spectrum.chat/arcticicestudio
 [stc-docs-globstyle]: https://www.styled-components.com/docs/api#createglobalstyle
 [stc-docs-mqt]: https://www.styled-components.com/docs/advanced#media-templates
 [stc-docs-thprov]: https://www.styled-components.com/docs/api#themeprovider
 [stc-docs-tooling-jest]: https://www.styled-components.com/docs/tooling#jest-integration
+[stof-nord-tagged]: https://stackoverflow.com/questions/tagged/nord+or+nordtheme
 [styled-components]: https://styled-components.com
 [styleguide-javascript]: https://arcticicestudio.github.io/styleguide-javascript
 [styleguide-markdown]: https://arcticicestudio.github.io/styleguide-markdown
@@ -967,8 +1211,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [tw-docs-cards]: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html
 [typescript]: https://www.typescriptlang.org
 [w3-spec-mf]: https://www.w3.org/TR/appmanifest
-[webpack]: https://webpack.js.org
 [webpack-docs-resv-alias]: https://webpack.js.org/configuration/resolve/#resolve-alias
+[webpack]: https://webpack.js.org
 [wiki-404]: https://en.wikipedia.org/wiki/HTTP_404
 [wiki-pwa]: https://en.wikipedia.org/wiki/Progressive_web_applications
 [wiki-robotstxt]: https://en.wikipedia.org/wiki/Robots_exclusion_standard
@@ -1027,3 +1271,14 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [npm-gatsby-plugin-netlify]: https://www.npmjs.com/package/gatsby-plugin-netlify
 [npm-gatsby-plugin-offline]: https://www.npmjs.com/package/gatsby-plugin-offline
 [react-rln-16.7.0]: https://reactjs.org/blog/2018/12/19/react-v-16-7.html
+
+<!-- v0.9.0 -->
+
+[facebook/jest#7119]: https://github.com/facebook/jest/pull/7119
+[facebook/react#v16.8.3]: https://github.com/facebook/react/releases/tag/v16.8.3
+[gatsbyjs/gatsby#11203]: https://github.com/gatsbyjs/gatsby/pull/11203
+[popmotion/popmotion#682]: https://github.com/Popmotion/popmotion/issues/682
+[prettier-b-1.16.0]: https://prettier.io/blog/2019/01/20/1.16.0.html
+[react-b-16.8.0]: https://reactjs.org/blog/2019/02/06/react-v16.8.0.html
+[rsms/inter#v3.3]: https://github.com/rsms/inter/releases/tag/v3.3
+[tw-dan_abramov-react-v16.8.3]: https://twitter.com/dan_abramov/status/1098691583292133376

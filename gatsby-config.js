@@ -15,6 +15,17 @@
  * @since 0.1.0
  */
 
+/* eslint-disable-next-line import/no-extraneous-dependencies */
+const dotenv = require("dotenv");
+
+/*
+ * Load environment specific project and OS environment variables based on the current Node environment.
+ *
+ * @see https://www.gatsbyjs.org/docs/environment-variables
+ * @see https://github.com/motdotla/dotenv
+ */
+dotenv.config({ path: `./.gatsby/.env.${process.env.NODE_ENV}` });
+
 const { metadataNord, metadataNordDocs } = require("./src/data/project");
 const { sourceInstanceTypes } = require("./src/config/internal/nodes");
 const {
@@ -27,6 +38,7 @@ const { BASE_PUBLIC_URL } = require("./src/config/routes/constants");
 const gatsbyPluginGoogleGtagConfig = require("./.gatsby/plugins/google/gtag");
 const gatsbyPluginManifestConfig = require("./.gatsby/plugins/manifest");
 const gatsbyPluginRobotsTxtConfig = require("./.gatsby/plugins/robots-txt");
+const gatsbyPluginSourceGraphQlConfig = require("./.gatsby/plugins/source-graphql");
 
 module.exports = {
   siteMetadata: {
@@ -44,6 +56,7 @@ module.exports = {
     "gatsby-plugin-svgr",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-webpack-size",
+    "gatsby-plugin-lodash",
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
@@ -92,6 +105,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: gatsbyPluginRobotsTxtConfig
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: gatsbyPluginSourceGraphQlConfig
     },
     /* NOTE: The following plugins rely on the order in this array and must be placed at last in order work properly! */
     {

@@ -14,7 +14,7 @@ import ArcticOceanFractal, { POSE_HIDE, POSE_SHOW } from "arctic-ocean-fractal";
 import { WaveFooter } from "atoms/core/vectors/divider";
 import Button from "atoms/core/Button";
 import Section, { Content } from "containers/core/Section";
-import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/landing/FeatureDuo";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { ROUTE_COMMUNITY, ROUTE_ROOT } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
 
