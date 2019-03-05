@@ -77,17 +77,12 @@ export const gqlFragmentContentDocsPageFrontmatter = graphql`
 
 /**
  * GraphQL fragment for the node fields of an MDX blog post.
- * Gatsby internally relies on Moment.js for the provided `formatString` function.
- * The allowed tokens can be found in the official Moment.js documentation.
- *
- * @see https://momentjs.com/docs/#/displaying/format
- * @see https://www.gatsbyjs.org/docs/graphql-reference/#format
  */
 export const gqlFragmentContentBlogPostFields = graphql`
   fragment contentBlogPostFields on Mdx {
     fields {
       contentSourceType
-      date(formatString: "YYYY-MM-DDTHH:MM:ssZZ")
+      date
       relativeDirectory
       slug
       slugParentRoute

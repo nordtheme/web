@@ -15,18 +15,17 @@ const { ROUTE_BLOG, ROUTE_DOCS } = require("../src/config/routes/mappings");
 
 /**
  * Extracts the date of a blog post from the given path using the `REGEX_BLOG_POST_DATE` regular expression.
- * Note that the returned date is in UTC format to be independent of the time zone. The exact time of the day will be
- * parsed from the blog posts frontmatter "publishTime" field.
+ * The exact time of the day will be parsed from the blog posts frontmatter "publishTime" field.
  *
  * @private
- * @method extractDateFromPath
+ * @method extractBlogPostDateFromPath
  * @param  {string} path The path from which the blog post date should be extracted.
- * @return {string|null} The extracted blog post date in UTC format as JSON string if the given path matches the
- * regular expression, `null` otherwise.
+ * @return {string|null} The extracted blog post date if the given path matches the regular expression,
+ * `null` otherwise.
  */
 const extractBlogPostDateFromPath = path => {
   const date = REGEX_BLOG_POST_DATE.exec(path);
-  return date ? new Date(Date.UTC(date[1], date[2] - 1, date[3])).toJSON() : null;
+  return date ? `${date[1]}-${date[2]}-${date[3]}` : null;
 };
 
 /**
@@ -64,7 +63,7 @@ const onCreateNode = ({ node, getNode, actions }) => {
       createNodeField({
         node,
         name: `${nodeFields.date.name}`,
-        value: extractBlogPostDateFromPath(relativePath)
+        value: date
       });
       createNodeField({
         node,
