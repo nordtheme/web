@@ -9,21 +9,16 @@
 
 import styled from "styled-components";
 import posed from "react-pose";
-import { rgba } from "polished";
 
-import { colors, motion, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
+import {
+  mixinDropShadowAmbientLight,
+  mixinDropShadowAmbientLightHover,
+  mixinDropShadowDirectLight,
+  mixinDropShadowDirectLightHover,
+  transitionThemedModeSwitch
+} from "styles/shared";
 
 import { componentBaseBackgroundColor } from "../shared/styles";
-
-const dropShadowColorAmbientLight = themedMode({
-  [MODE_BRIGHT_SNOW_FLURRY]: rgba(colors.shadow.base[MODE_BRIGHT_SNOW_FLURRY], 0.1),
-  [MODE_DARK_NIGHT_FROST]: rgba(colors.shadow.base[MODE_DARK_NIGHT_FROST], 0.1)
-});
-
-const dropShadowColorDirectLight = themedMode({
-  [MODE_BRIGHT_SNOW_FLURRY]: rgba(colors.shadow.base[MODE_BRIGHT_SNOW_FLURRY], 0.25),
-  [MODE_DARK_NIGHT_FROST]: rgba(colors.shadow.base[MODE_DARK_NIGHT_FROST], 0.25)
-});
 
 /**
  * The card component to represent a port project and its metadata.
@@ -41,12 +36,11 @@ const Card = styled(posed.div())`
   height: auto;
   border-radius: 4px;
   background-color: ${componentBaseBackgroundColor};
-  box-shadow: 0 4px 6px ${dropShadowColorDirectLight}, 0 5px 7px ${dropShadowColorAmbientLight};
-  transition: box-shadow ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out,
-    background-color ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
+  box-shadow: ${mixinDropShadowDirectLight()}, ${mixinDropShadowAmbientLight()};
+  transition: ${transitionThemedModeSwitch("box-shadow")}, ${transitionThemedModeSwitch("background-color")};
 
   &:hover {
-    box-shadow: 0 8px 10px ${dropShadowColorDirectLight}, 0 9px 11px ${dropShadowColorAmbientLight};
+    box-shadow: ${mixinDropShadowDirectLightHover()}, ${mixinDropShadowAmbientLightHover()};
   }
 `;
 
