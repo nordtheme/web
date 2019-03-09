@@ -23,7 +23,7 @@ import { graphql } from "gatsby";
  */
 export const gqlFragmentContentMdxDocumentImageFluid = graphql`
   fragment contentMdxDocumentImageFluid on ImageSharp {
-    fluid(maxWidth: 2560, quality: 90) {
+    fluid(maxWidth: 2560, quality: 100) {
       originalImg
       originalName
       presentationHeight
@@ -34,22 +34,25 @@ export const gqlFragmentContentMdxDocumentImageFluid = graphql`
 `;
 
 /**
+ * GraphQL fragment for blog post media files.
+ */
+export const gqlFragmentContentBlogPostMediaFile = graphql`
+  fragment contentBlogPostMediaFile on File {
+    extension
+    name
+    publicURL
+    relativePath
+  }
+`;
+
+/**
  * GraphQL fragment for the frontmatter fields of an MDX blog post.
  */
 export const gqlFragmentContentBlogPostFrontmatter = graphql`
   fragment contentBlogPostFrontmatter on Mdx {
     frontmatter {
-      contentImages {
-        childImageSharp {
-          ...contentMdxDocumentImageFluid
-        }
-      }
+      coverTitleColor
       draft
-      heroImage {
-        childImageSharp {
-          ...contentMdxDocumentImageFluid
-        }
-      }
       introduction
       publishTime
       title
@@ -63,11 +66,6 @@ export const gqlFragmentContentBlogPostFrontmatter = graphql`
 export const gqlFragmentContentDocsPageFrontmatter = graphql`
   fragment contentDocsPageFrontmatter on Mdx {
     frontmatter {
-      contentImages {
-        childImageSharp {
-          ...contentMdxDocumentImageFluid
-        }
-      }
       draft
       subline
       title
@@ -81,6 +79,29 @@ export const gqlFragmentContentDocsPageFrontmatter = graphql`
 export const gqlFragmentContentBlogPostFields = graphql`
   fragment contentBlogPostFields on Mdx {
     fields {
+      bannerImage {
+        childImageSharp {
+          ...contentMdxDocumentImageFluid
+        }
+      }
+      coverImage {
+        childImageSharp {
+          ...contentMdxDocumentImageFluid
+        }
+      }
+      heroImage {
+        childImageSharp {
+          ...contentMdxDocumentImageFluid
+        }
+      }
+      heroVideo {
+        ...contentBlogPostMediaFile
+      }
+      heroVideoPoster {
+        childImageSharp {
+          ...contentMdxDocumentImageFluid
+        }
+      }
       contentSourceType
       date
       relativeDirectory

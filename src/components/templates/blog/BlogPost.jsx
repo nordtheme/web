@@ -11,7 +11,6 @@ import React from "react";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 import { MDXProvider } from "@mdx-js/tag";
 import { graphql } from "gatsby";
-import camelCase from "camelcase";
 
 import BaseLayout from "layouts/core/BaseLayout";
 import Section, { Content } from "containers/core/Section";
@@ -30,26 +29,22 @@ import { blogPostTemplatePropTypes } from "../shared/propTypes";
  * @see https://github.com/ChristopherBiscardi/gatsby-mdx
  *
  */
-const BlogPost = ({ data: { mdx, images }, location: { pathname }, ...passProps }) => {
+const BlogPost = ({ data: { images, mdx, videos }, location: { pathname }, ...passProps }) => {
   /*
-   * Make each image available as image prop in camelcase format consisting of the name and extension of the file.
-   * Example: "snow-mountain.png" -> "snowMountainPng"
+   * Generate mappings for content images and videos to allow to use them by their file names.
+   * Examples:
+   *
+   * - `prop.images["snow-mountain.png"]`
+   * - `prop.videos["arctic-owl.mp4"]`
    */
   const blogPostImages = {};
-  images?.edges.forEach(({ node }) => {
-    const { extension, name } = node;
-    const imageName = camelCase(`${name}.${extension}`);
-    blogPostImages[imageName] = node.childImageSharp;
+  images?.edges?.forEach(({ node: { childImageSharp } }) => {
+    blogPostImages[childImageSharp.fluid.originalName] = childImageSharp.fluid;
   });
-
-  /*
-   * Shorten the object key path for content image props by deconstructing the "childImageSharp" property.
-   * The images can then be used by their index: `props.contentImages[0].fluid`
-   */
-  const blogPostContentImages = [];
-  if (mdx.frontmatter?.contentImages) {
-    mdx.frontmatter.contentImages.forEach(({ childImageSharp }) => blogPostContentImages.push(childImageSharp));
-  }
+  const blogPostVideos = {};
+  videos?.edges?.forEach(({ node }) => {
+    blogPostVideos[`${node.name}.${node.extension}`] = node.publicURL;
+  });
 
   return (
     <BaseLayout pathName={pathname}>
@@ -58,9 +53,13 @@ const BlogPost = ({ data: { mdx, images }, location: { pathname }, ...passProps 
           <PageTypoHead fontScale={9} headline={mdx.frontmatter?.title} subline={mdx.frontmatter?.introduction} />
           <MDXProvider components={mappedHtmlElementComponents}>
             <MDXRenderer
-              contentImages={blogPostContentImages}
-              heroImage={mdx.frontmatter?.heroImage?.childImageSharp}
+              bannerImage={mdx.fields?.bannerImage?.childImageSharp.fluid}
+              coverImage={mdx.fields?.coverImage?.childImageSharp.fluid}
+              heroImage={mdx.fields?.heroImage?.childImageSharp.fluid}
+              heroVideo={mdx.fields?.heroVideo}
+              heroVideoPoster={mdx.fields?.heroVideoPoster?.childImageSharp.fluid}
               images={blogPostImages}
+              videos={blogPostVideos}
               {...passProps}
             >
               {mdx.code.body}
@@ -95,7 +94,17 @@ export const pageQuery = graphql`
         body
       }
       id
-      ...contentBlogPostFrontmatter
+      ...contentBlogPost
+    }
+    videos: allFile(
+      filter: { relativeDirectory: { eq: $relativeDirectory }, extension: { regex: "/(mp4|webm)/" } }
+      sort: { fields: [name], order: ASC }
+    ) {
+      edges {
+        node {
+          ...contentBlogPostMediaFile
+        }
+      }
     }
   }
 `;

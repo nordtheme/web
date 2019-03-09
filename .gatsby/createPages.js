@@ -67,7 +67,7 @@ const createPages = async ({ graphql, actions }) => {
   mdxQueryResult.data.allMdx.edges.forEach(({ node }) => {
     const { id } = node;
     const { contentSourceType, date, relativeDirectory, slug, slugParentRoute } = node.fields;
-    const { draft } = node.frontmatter;
+    const { draft, publishTime } = node.frontmatter;
 
     /* Only create non-draft pages in production mode while also create draft pages during development. */
     if (draft && isProductionMode) return;
@@ -97,6 +97,7 @@ const createPages = async ({ graphql, actions }) => {
         contentSourceType,
         date,
         id,
+        publishTime,
         relativeDirectory,
         slug,
         slugParentRoute

@@ -7,14 +7,20 @@
  * License:    MIT
  */
 
+import styled from "styled-components";
+
 /**
- * @file Provides the components for the blog page.
+ * The styled container for the title of a blog post.
+ *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * @since 0.10.0
  */
+const TitleBox = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5em 2em;
+`;
 
-import SectionBlogPostsCardGrid from "./SectionBlogPostsCardGrid";
-
-/* eslint-disable-next-line import/prefer-default-export */
-export { SectionBlogPostsCardGrid };
+export default TitleBox;

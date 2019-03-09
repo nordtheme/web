@@ -20,20 +20,21 @@ import PropTypes from "prop-types";
 import {
   contentBlogPostFrontmatterPropTypes,
   contentDocsPageFrontmatterPropTypes,
-  contentMdxImageFluidPropTypes
+  contentMdxImageFluidPropTypes,
+  contentMdxMediaFilePropTypes
 } from "data/graphql/fragmentPropTypes";
+
+const imagePropTypes = {
+  childImageSharp: PropTypes.shape({
+    ...contentMdxImageFluidPropTypes
+  }),
+  extension: PropTypes.string,
+  name: PropTypes.string
+};
 
 const dataImagesPropTypes = {
   images: PropTypes.shape({
-    edges: PropTypes.arrayOf(
-      PropTypes.shape({
-        childImageSharp: PropTypes.shape({
-          ...contentMdxImageFluidPropTypes
-        }),
-        extension: PropTypes.string,
-        name: PropTypes.string
-      })
-    )
+    edges: PropTypes.arrayOf(PropTypes.shape({ ...imagePropTypes }))
   })
 };
 
@@ -44,9 +45,20 @@ const dataMDXPropTypes = {
   id: PropTypes.string
 };
 
+const dataVideosPropTypes = {
+  videos: PropTypes.shape({
+    edges: PropTypes.arrayOf(
+      PropTypes.shape({
+        ...contentMdxMediaFilePropTypes
+      })
+    )
+  })
+};
+
 const blogPostTemplatePropTypes = {
   data: PropTypes.shape({
     ...dataImagesPropTypes,
+    ...dataVideosPropTypes,
     mdx: PropTypes.shape({
       ...dataMDXPropTypes,
       ...contentBlogPostFrontmatterPropTypes

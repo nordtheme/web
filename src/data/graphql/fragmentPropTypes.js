@@ -55,9 +55,6 @@ const contentMdxDocumentFrontmatterPropTypes = {
   contentImages: PropTypes.arrayOf(
     PropTypes.shape({
       ...contentMdxImageFluidPropTypes
-    }),
-    PropTypes.shape({
-      ...contentMdxImageFluidPropTypes
     })
   ),
   draft: PropTypes.bool,
@@ -69,8 +66,9 @@ const contentMdxDocumentFrontmatterPropTypes = {
  */
 const contentBlogPostFrontmatterPropTypes = {
   frontmatter: PropTypes.shape({
-    introduction: PropTypes.string,
-    publishTime: PropTypes.string,
+    coverTitleColor: PropTypes.string,
+    introduction: PropTypes.string.isRequired,
+    publishTime: PropTypes.string.isRequired,
     ...contentMdxDocumentFrontmatterPropTypes
   })
 };
@@ -101,6 +99,15 @@ const contentBlogPostFieldsPropTypes = {
   fields: PropTypes.shape({
     date: PropTypes.string,
     relativeDirectory: PropTypes.string,
+    bannerImage: PropTypes.shape({
+      ...contentMdxImageFluidPropTypes
+    }).isRequired,
+    coverImage: PropTypes.shape({
+      ...contentMdxImageFluidPropTypes
+    }).isRequired,
+    heroImage: PropTypes.shape({
+      ...contentMdxImageFluidPropTypes
+    }).isRequired,
     ...contentNodeFieldsPropTypes
   })
 };
