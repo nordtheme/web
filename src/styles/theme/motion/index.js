@@ -11,13 +11,13 @@
  * @file Provides motion related values like animations inspired by Material Design Guidelines.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @see https://material.io/design/motion/speed.html
  * @since 0.2.0
  */
 
+import easings from "./easings";
 import speed, { duration } from "./speed";
 
-const motion = { speed };
+const motion = { easings, speed };
 
-export { speed, duration };
+export { easings, speed, duration };
 export default motion;

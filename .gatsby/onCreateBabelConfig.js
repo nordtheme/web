@@ -27,7 +27,7 @@
  * @since 0.1.0
  */
 const onCreateBabelConfig = ({ actions }) => {
-  const isProductionMode = () => process.env.NODE_ENV === "production";
+  const isProductionMode = process.env.NODE_ENV === "production";
 
   /*
    * Allows to use the "ES Class Fields & Static Properties" proposal to transforms static class properties as well as

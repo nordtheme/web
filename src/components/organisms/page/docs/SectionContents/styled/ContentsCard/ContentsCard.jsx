@@ -10,7 +10,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { A, H3, P } from "atoms/core/HTMLElements";
+import { A, H3, P } from "atoms/core/html-elements";
 
 import {
   ArrowIcon,

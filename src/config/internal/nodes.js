@@ -15,6 +15,38 @@
  */
 
 /**
+ * The names and node field names of the optional videos for a blog post.
+ *
+ * @type {Object}
+ * @since 0.10.0
+ */
+const optionalBlogPostImages = {
+  heroposter: { name: "heroposter", nodeFieldName: "heroVideoPoster" }
+};
+
+/**
+ * The names and node field names of the optional videos for a blog post.
+ *
+ * @type {Object}
+ * @since 0.10.0
+ */
+const optionalBlogPostVideos = {
+  hero: { name: "hero", nodeFieldName: "heroVideo" }
+};
+
+/**
+ * The names and node field names of the required images for a blog post.
+ *
+ * @type {Object}
+ * @since 0.10.0
+ */
+const requiredBlogPostImages = {
+  banner: { name: "banner", nodeFieldName: "bannerImage" },
+  cover: { name: "cover", nodeFieldName: "coverImage" },
+  hero: { name: "hero", nodeFieldName: "heroImage" }
+};
+
+/**
  * The names of the source instance types and their paths relative to the project root path.
  *
  * @type {Object}
@@ -77,4 +109,10 @@ const nodeFields = {
   }
 };
 
-module.exports = { nodeFields, sourceInstanceTypes };
+module.exports = {
+  nodeFields,
+  optionalBlogPostImages,
+  optionalBlogPostVideos,
+  requiredBlogPostImages,
+  sourceInstanceTypes
+};

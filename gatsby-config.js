@@ -27,7 +27,12 @@ const dotenv = require("dotenv");
 dotenv.config({ path: `./.gatsby/.env.${process.env.NODE_ENV}` });
 
 const { metadataNord, metadataNordDocs } = require("./src/data/project");
-const { sourceInstanceTypes } = require("./src/config/internal/nodes");
+const {
+  optionalBlogPostImages,
+  optionalBlogPostVideos,
+  requiredBlogPostImages,
+  sourceInstanceTypes
+} = require("./src/config/internal/nodes");
 const {
   BASE_DIR_CONTENT,
   BASE_DIR_ASSETS_IMAGES,
@@ -39,12 +44,28 @@ const gatsbyPluginGoogleGtagConfig = require("./.gatsby/plugins/google/gtag");
 const gatsbyPluginManifestConfig = require("./.gatsby/plugins/manifest");
 const gatsbyPluginRobotsTxtConfig = require("./.gatsby/plugins/robots-txt");
 const gatsbyPluginSourceGraphQlConfig = require("./.gatsby/plugins/source-graphql");
+const gatsbyPluginMdxConfig = require("./.gatsby/plugins/mdx");
 
+/**
+ * The Gatsby configuration.
+ * The `mapping` object includes important mappings related to the optional/required blog post image and video node
+ * fields.
+ * It maps the paths (string) to a `File` node to make them available for the "Gatsby Sharp" plugin.
+ *
+ * @see https://www.gatsbyjs.org/docs/gatsby-config/#mapping-node-types
+ */
 module.exports = {
   siteMetadata: {
     nord: { ...metadataNord },
     ...metadataNordDocs,
     siteUrl: metadataNordDocs.homepage
+  },
+  mapping: {
+    [`Mdx.fields.${optionalBlogPostImages.heroposter.nodeFieldName}`]: "File.absolutePath",
+    [`Mdx.fields.${optionalBlogPostVideos.hero.nodeFieldName}`]: "File.absolutePath",
+    [`Mdx.fields.${requiredBlogPostImages.banner.nodeFieldName}`]: "File.absolutePath",
+    [`Mdx.fields.${requiredBlogPostImages.cover.nodeFieldName}`]: "File.absolutePath",
+    [`Mdx.fields.${requiredBlogPostImages.hero.nodeFieldName}`]: "File.absolutePath"
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -57,6 +78,8 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-webpack-size",
     "gatsby-plugin-lodash",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
@@ -109,6 +132,10 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: gatsbyPluginSourceGraphQlConfig
+    },
+    {
+      resolve: "gatsby-mdx",
+      options: gatsbyPluginMdxConfig
     },
     /* NOTE: The following plugins rely on the order in this array and must be placed at last in order work properly! */
     {

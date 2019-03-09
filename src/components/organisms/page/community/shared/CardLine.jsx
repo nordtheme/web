@@ -9,7 +9,7 @@
 
 import styled from "styled-components";
 
-import { Hr } from "atoms/core/HTMLElements";
+import { Hr } from "atoms/core/html-elements";
 
 /**
  * A component that represents a horizontal line of a card component.

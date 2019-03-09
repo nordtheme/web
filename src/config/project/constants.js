@@ -25,13 +25,13 @@ import { getSemVerFromGitDescribe } from "utils";
 const COPYRIGHT_YEAR = new Date().getFullYear();
 
 /**
- * The date format for the "date-fns" library according to ISO 8601.
+ * The date format for the [date-fns](https://date-fns.org) library according to ISO 8601.
  *
  * @constant {string}
  * @see https://date-fns.org/v1.29.0/docs/format
  * @see https://en.wikipedia.org/wiki/ISO_8601
  */
-const DATE_FORMAT = "yyyy-MM-ddTHH:mm:ssxx";
+const DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ssxx";
 
 /**
  * The name of the current Git branch extracted from the local Git repository.

@@ -1,0 +1,43 @@
+/*
+ * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
+ * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
+ *
+ * Project:    Nord Docs
+ * Repository: https://github.com/arcticicestudio/nord-docs
+ * License:    MIT
+ */
+
+/**
+ * The Visual Studio Code debug configuration for Gatsby.
+ * @author Arctic Ice Studio <development@arcticicestudio.com>
+ * @author Sven Greb <development@svengreb.de>
+ * @since 0.10.0
+ * @see https://github.com/Microsoft/vscode-recipes/tree/master/Gatsby-js
+ * @see https://www.gatsbyjs.org/docs/debugging-the-build-process
+ */
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Gatsby Development Build Process",
+      "program": "${workspaceRoot}/node_modules/gatsby/dist/bin/gatsby",
+      "args": ["develop"],
+      "runtimeArgs": [
+        /*
+         * For performance reasons Node.js parses functions lazily on first access.
+         * As a consequence, breakpoints don't work in source code areas that haven't been parsed by Node.js.
+         * The `--nolazy` flag prevents the delayed parsing and ensures that breakpoints can be validated before
+         * running the code.
+         *
+         * @see https://nodejs.org/api/cli.html#cli_v8_options
+         */
+        "--nolazy"
+      ],
+      "stopOnEntry": false,
+      "sourceMaps": false,
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 
 import styled from "styled-components";
 
-import { H1 } from "atoms/core/HTMLElements";
+import { H1 } from "atoms/core/html-elements";
 import { media, motion, ms } from "styles/theme";
 
 /**
