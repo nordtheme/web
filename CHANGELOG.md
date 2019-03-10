@@ -8,6 +8,111 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.10.0
+
+![Release Date: 2019-03-10](https://img.shields.io/badge/Release_Date-2019--03--10-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/12) [![Milestone](https://img.shields.io/badge/Milestone-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/10)
+
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/master/src/assets/images/metadata-banner.svg?sanitize=true" width="60%"/></p>
+
+<p align="center"><strong>Initial website launch ahead!</strong></p>
+
+This version finally marks the last release before the long awaited initial website launch. It mainly focused on the [MDX integration for blog posts and docs pages][gh-129] to finish the last remaining base routes in order to start the migration of Nord's documentation and poject asset content.
+
+I'm really hyped and happy to announce this great milestone. It's been a long time, but finally all essential parts are done and it is ready to see the light of the production environment.
+
+More details and information can also be found in the [tweet thread of the initial website announcement][tw-arcticicestudio-announce-initial-launch].
+
+## Features
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+
+The following issues are related to the [“Components”][gh-63] and [“Responsive Web”][gh-52] design concepts to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
+
+**MDX Integration for docs and blog pages** — #129 ⇄ #130 (⊶ 05d32115)
+↠ Integrated [MDX][] with [gh-gatsby-mdx] including the implementation of the logic, layout and style for blog posts and docs pages (`/docs` and `/blog` routes).
+
+### MDX
+
+MDX is used to handle the actual content of the documentation and blog posts.
+Gatsby allows to use Markdown for content that comes with the nice side effect that the already existing documentations can simply be adapted and reused, but unfortunately it is limited to it's reduced and simplified syntax.
+
+To also use the great power of React for content and not only layout and design this project makes use of the [MDX specification][gh-mdx-spec], a new language and abstract syntax tree definition.
+
+> In order to ensure a vibrant ecosystem and community, tooling needs to exist for formatting, linting, and plugins. This tooling requires a foundational specification and abstract syntax tree so that parsing is properly handled before transforming to JSX/Hyperscript/React/etc and potentially leveraging existing plugin ecosystems.
+
+We're using the official implementation, the [fully-featured MDX parser, loader and JSX renderer][mdx] together with the great Gatsby plugin [gh-gatsby-mdx][] to allow to seamlessly use JSX in Markdown documents by importing components and export metadata or any other ECMAScript compliant data structures like _frontmatter_.
+
+> - 💻 **Everything is a component**: Use existing components inside your MDX and import other MDX files as plain components.
+> - 🔧 **Customizable**: Decide which component is rendered for each Markdown element ({ h1: MyHeading }).
+> - 📚 **Markdown-based**: The simplicity and elegance of Markdown remains, you interleave JSX only when you want to.
+> - 🔥 **Blazingly blazing fast**: MDX has no runtime, all compilation occurs during the build stage.
+
+To integrate MDX Gatsby's [`onCreateNode`][gatsby-docs-api-node-ocn] and [`createPages`][gatsby-docs-api-node-cps] APIs are implemented to handle the generation of the GraphQL MDX nodes and the subsequent automated creation of the docs pages and blog posts.
+
+More details are provided by the [official MDX][mdx] and [gh-gatsby-mdx][] websites that include documentations to get started, usage examples and advanced configuration and customization information.
+
+### Image Processing
+
+To get the [best performance and quality for images][gatsby-docs-images] Gatsby's awesome support for the [high performance Node.js image processing library “Sharp“][gh-lovell/sharp] is used through [`gatsby-plugin-sharp`][gh-gatsby-p-sharp], [`gatsby-transformer-sharp`][gh-gatsby-t-sharp] and [gatsby-image][gh-gatsby-image].
+
+To automatically process all images the transformer provides GraphQL query fragments like `GatsbyImageSharpFluid`. They are used within custom fragments that have been implemented to fit the project structure.
+
+### Custom Content Components
+
+In order to create great documentations and blog posts with interactive elements a new `mdx-elements` atom core package was created that initially includes some custom React components that can be imported and placed in MDX based content:
+
+- `Image` — An Gatsby image that extends `GatsbyImage` and is wrapped in a `<figure>` element with an optional caption.
+- `Video` — An `<video>` element that uses the `Image` component to render a `poster` with Gatsby's image rendering mechanism while the media file is being loaded to prevent layout shifting. It is also wrapped in a `<figure>` element with an optional caption.
+- `ShinkedWidth` — An container component that shrinks the maxiumum width for a better visual style and more readable text.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/54077408-019d1c00-42b8-11e9-928a-27e580cd9fc5.gif" /></p>
+
+To reduce the requirement of imports and "logical Markdown" almost all HTML elements supported by the official Markdown as well as the [GitHub Flavored Markdown Specification][gfm] the [`MDXProvider`][mdx-docs-provider] component is used to map the project's base components to their specific HTML elements.
+
+### Docs Pages
+
+The design of docs pages imitate a paper sheet where the overall styles using a darker background so that the white paper stands out for a clear and sharp content visualization.
+
+### Blog Posts
+
+The last remaining main page is `/blog` which presents an overview of Nord's blog posts in a three-column grid of card components sorted descending by their publish date.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/54077409-019d1c00-42b8-11e9-916f-c26138947d4e.jpg" /></p>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/54077410-019d1c00-42b8-11e9-94e3-7ef5466e9f4b.jpg" /></p>
+
+Each card consists of an cover image together with the title of the post. The latest post spans over two columns at the top for a nice visual structure and better recognizability.
+While a one-column card uses a cover image the latest post uses a _banner_ that will either be the same image with a larger width, a variant of it or a completly different one.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/54077411-019d1c00-42b8-11e9-9968-ba1a3a6e4666.gif" /></p>
+
+A blog post itself makes use of the MDX features and the custom MDX components mentioned in the paragraph above.
+To simplify the usage of the _cover_ and _banner_ image they are be processed with Gatsby's [`onCreateNode`][gatsby-docs-api-node-ocn] API in combination with [Gatsby's `mapping` configuration feature][gatsby-docs-conf-mapping]. This allows to map the paths of images to a `File` node that is then handled by the [Gatsby image processing plugin workflow][gatsby-docs-images] also documented in the [Image Processing](#image-processing) section above.
+
+Another required node is the `heroImage` field that queries for a `hero.(png|jpg|jpeg)` image that is used as the hero of a blog post.
+To also allow the usage of videos in blog posts or even as header a custom `Video` the custom MDX component has been implemented including the optional `heroVideo` and `heroVideoPoster` GraphQL node fields.
+
+All together that results in the following required and optional images/videos mapped to specific node fields with **reserved file names per blog post directory** for simple usage via GraphQL queries:
+
+- `bannerImage` ↹ `banner.(png|jpg|jpeg)` — The **required** banner image of a blog post card (used when currently the latest two-column wide post placed on top of the grid).
+- `coverImage` ↹ `cover.(png|jpg|jpeg)` — The **required** cover image of a one-column blog post.
+- `heroImage` ↹ `hero.(png|jpg|jpeg)` — The **required** hero image of a blog post.
+- `heroVideo` ↹ `hero.(mp4|webm)` — The **optional** hero video of a blog post.
+- `heroVideoPoster` ↹ `heroposter.(png|jpg|jpeg)` — The **optional** poster image of a blog post `heroVideo`.
+
+### Known Problems
+
+To prevent the [`unknwon field` GraphQL error during build time][gh-gatsbyjs/gatsby#3344] (e.g. when there are no blog posts yet) a _dummy_/_placeholder_ blog post and docs page has been created.
+Anyway, they will be removed as soon as there is finally the first blog post and docs page. Later on the project will migrate to the shiny [new schema customization API][gatsby-blog-custom-schemes].
+
+## Tasks
+
+**New official Nord Spectrum community** — #131 (⊶ d71e4f98)
+↠ Updated all URLs and references to the new [official Nord Spectrum community][spectrum-nord] that is available as of 2019-03-03.
+Previously the official [Arctic Ice Studio][spectrum-ais] community was used with it's channels for Nord projects.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53745393-3a478a80-3e9f-11e9-938b-3758158dbbe0.png" width="45%" /> <img src="https://user-images.githubusercontent.com/7836623/53745380-36b40380-3e9f-11e9-84a7-947eea4e923a.png" width="45%" /></p>
+
 # 0.9.0
 
 ![Release Date: 2019-03-03](https://img.shields.io/badge/Release_Date-2019--03--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/11) [![Milestone](https://img.shields.io/badge/Milestone-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/9)
@@ -41,13 +146,13 @@ Underneath the static vector graphic that was placed in the port section of the 
 The second section consists of a input field that allows to filter available port projects by predefined search terms. Underneath a animated grid of card components reacts to the input field by filtering non-matching ports projects.
 Each card represents one port project and consists of the logo, the name (with the _Nord_ prefix) as well as a card footer that contains the version of the latest release of the respective project and the number of stars of the GitHub repository.
 
-To prevent UI freezes/frame drops when typing in the input field, while the grid reacts to the change immediately, it was considered to use _debounce_ that waits some milliseconds before actually filtering the grid by the given search term. This hasn't been implemented yet but might be added later on when there are performance problems. To get the best performance [Lodash][] can be used through [gatsby-plugin-lodash][gh-gatsby-plugin-lodash] which sets up [babel-plugin-lodash][gh-babel-plugin-lodash] and [lodash-webpack-plugin][gh-lodash-webpack-plugin].
+To prevent UI freezes/frame drops when typing in the input field, while the grid reacts to the change immediately, it was considered to use _debounce_ that waits some milliseconds before actually filtering the grid by the given search term. This hasn't been implemented yet but might be added later on when there are performance problems. To get the best performance [Lodash][] can be used through [gatsby-plugin-lodash][gh-gatsby-p-lodash] which sets up [babel-plugin-lodash][gh-babel-plugin-lodash] and [lodash-webpack-plugin][gh-lodash-webpack-plugin].
 
 <p align="center"><img src="https://user-images.githubusercontent.com/7836623/53166646-33369780-35d6-11e9-94ea-b5758691f47f.gif"/></p>
 
 ### GitHub GraphQL API
 
-To view the metadata about the port project repositories [Gatsby's fantastic GraphQL integration][gatsby-docs-gql] is used through the awesome [gatsby-source-graphql][gh-gatsby-source-graphql] plugin. It allows to fire queries that'll get executed and stitches remote schemas together by adding a type that wraps the remote schema Query type and putting it under field of Gatsby GraphQL Query.
+To view the metadata about the port project repositories [Gatsby's fantastic GraphQL integration][gatsby-docs-gql] is used through the awesome [gatsby-source-graphql][gh-gatsby-s-graphql] plugin. It allows to fire queries that'll get executed and stitches remote schemas together by adding a type that wraps the remote schema Query type and putting it under field of Gatsby GraphQL Query.
 
 ### Interactive Animations
 
@@ -350,7 +455,7 @@ The last elements of the left-side container is a paragraph providing version in
 For reduced width views (responsive design) the footer adjusts several styles and composed components. For really small view ports the grid layout be switches to a flexbox layout.
 
 **Core Organism Component: “Footer”** — #109 (⊶ 75435d07)
-↠ Integrated the Webpack [size-plugin][gh-sp] that prints the gzipped sizes of assets and the changes since the last build added through [gatsby-plugin-webpack-size][gh-gp-ws].
+↠ Integrated the Webpack [size-plugin][gh-sp] that prints the gzipped sizes of assets and the changes since the last build added through [gatsby-plugin-webpack-size][gh-gatsby-p-wps].
 
 <p align="center"><img src="https://user-images.githubusercontent.com/7836623/50536175-ea241300-0b51-11e9-85d6-41350ce8017b.png" width="40%" /></p>
 
@@ -1041,10 +1146,14 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [flow]: https://flow.org
 [ga-mark]: https://marketingplatform.google.com/about/analytics
 [gatsby-docs-404]: https://www.gatsbyjs.org/docs/add-404-page
+[gatsby-docs-api-node-cps]: https://www.gatsbyjs.org/docs/node-apis/#createPages
+[gatsby-docs-api-node-ocn]: https://www.gatsbyjs.org/docs/node-apis/#onCreateNode
 [gatsby-docs-api-node]: https://www.gatsbyjs.org/docs/node-apis
+[gatsby-docs-conf-mapping]: https://www.gatsbyjs.org/docs/gatsby-config/#mapping-node-types
 [gatsby-docs-config]: https://gatsbyjs.org/docs/gatsby-config
 [gatsby-docs-env]: https://www.gatsbyjs.org/docs/environment-variables
 [gatsby-docs-gql]: https://www.gatsbyjs.org/docs/querying-with-graphql
+[gatsby-docs-images]: https://www.gatsbyjs.org/docs/working-with-images
 [gatsby-docs-link]: https://www.gatsbyjs.org/docs/gatsby-link
 [gatsby-docs-seo]: https://www.gatsbyjs.org/docs/seo
 [gatsby-docs-stq]: https://www.gatsbyjs.org/docs/static-query
@@ -1057,6 +1166,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gdev-web-pwa]: https://developers.google.com/web/progressive-web-apps
 [gf-rubik]: https://fonts.google.com/specimen/Rubik
 [gf-source-code-pro]: https://fonts.google.com/specimen/Source+Code+Pro
+[gfm]: https://github.github.com/gfm
 [gh-1]: https://github.com/arcticicestudio/nord-docs/issues/1
 [gh-100]: https://github.com/arcticicestudio/nord-docs/issues/100
 [gh-101]: https://github.com/arcticicestudio/nord-docs/issues/101
@@ -1068,6 +1178,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-115]: https://github.com/arcticicestudio/nord-docs/issues/112
 [gh-117]: https://github.com/arcticicestudio/nord-docs/issues/117
 [gh-119]: https://github.com/arcticicestudio/nord-docs/issues/119
+[gh-129]: https://github.com/arcticicestudio/nord-docs/issues/129
 [gh-2]: https://github.com/arcticicestudio/nord-docs/issues/2
 [gh-24]: https://github.com/arcticicestudio/nord-docs/issues/24
 [gh-25]: https://github.com/arcticicestudio/nord-docs/issues/25
@@ -1105,9 +1216,13 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
 [gh-date-fns]: https://github.com/date-fns/date-fns
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
-[gh-gatsby-plugin-lodash]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-lodash
-[gh-gatsby-source-graphql]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-graphql
-[gh-gp-ws]: https://github.com/axe312ger/gatsby-plugin-webpack-size
+[gh-gatsby-image]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image
+[gh-gatsby-mdx]: https://github.com/ChristopherBiscardi/gatsby-mdx
+[gh-gatsby-p-lodash]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-lodash
+[gh-gatsby-p-sharp]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sharp
+[gh-gatsby-p-wps]: https://github.com/axe312ger/gatsby-plugin-webpack-size
+[gh-gatsby-s-graphql]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-graphql
+[gh-gatsby-t-sharp]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-transformer-sharp
 [gh-help-coc]: https://help.github.com/articles/adding-a-code-of-conduct-to-your-project
 [gh-help-code-owners]: https://help.github.com/articles/about-codeowners
 [gh-help-contrib-gl]: https://help.github.com/articles/setting-guidelines-for-repository-contributors
@@ -1120,6 +1235,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-jsc]: https://github.com/styled-components/jest-styled-components
 [gh-lint-staged]: https://github.com/okonet/lint-staged
 [gh-lodash-webpack-plugin]: https://github.com/lodash/lodash-webpack-plugin
+[gh-lovell/sharp]: https://github.com/lovell/sharp
+[gh-mdx-spec]: https://github.com/mdx-js/specification
 [gh-react-helmet]: https://github.com/nfl/react-helmet
 [gh-remark-lint]: https://github.com/remarkjs/remark-lint
 [gh-remark-preset-lint-arcticicestudio]: https://github.com/arcticicestudio/remark-preset-lint-arcticicestudio
@@ -1159,6 +1276,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [mdn-mq]: https://developer.mozilla.org/de/docs/Web/CSS/Media_Queries/Using_media_queries
 [mdn-ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 [mdn-web-mf]: https://developer.mozilla.org/en-US/docs/Web/Manifest
+[mdx-docs-provider]: https://mdxjs.com/getting-started/#mdxprovider
+[mdx]: https://mdxjs.com
 [mit-lic]: https://opensource.org/licenses/MIT
 [mobx]: https://mobx.js.org
 [netlify-docs-env]: https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
@@ -1199,6 +1318,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [schema.org]: https://schema.org
 [slack-ais]: https://arcticicestudio.slack.com
 [spectrum-ais]: https://spectrum.chat/arcticicestudio
+[spectrum-nord]: https://spectrum.chat/arcticicestudio
 [stc-docs-globstyle]: https://www.styled-components.com/docs/api#createglobalstyle
 [stc-docs-mqt]: https://www.styled-components.com/docs/advanced#media-templates
 [stc-docs-thprov]: https://www.styled-components.com/docs/api#themeprovider
@@ -1282,3 +1402,9 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [react-b-16.8.0]: https://reactjs.org/blog/2019/02/06/react-v16.8.0.html
 [rsms/inter#v3.3]: https://github.com/rsms/inter/releases/tag/v3.3
 [tw-dan_abramov-react-v16.8.3]: https://twitter.com/dan_abramov/status/1098691583292133376
+
+<!-- v0.10.0 -->
+
+[gatsby-blog-custom-schemes]: https://www.gatsbyjs.org/blog/2019-03-04-new-schema-customization
+[gh-gatsbyjs/gatsby#3344]: https://github.com/gatsbyjs/gatsby/issues/3344
+[tw-arcticicestudio-announce-initial-launch]: https://twitter.com/arcticicestudio/status/1104494647383068673
