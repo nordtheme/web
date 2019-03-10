@@ -14,7 +14,7 @@ import { Match } from "@reach/router";
 import { StaticQuery, graphql } from "gatsby";
 
 import Link from "atoms/core/Link";
-import { A } from "atoms/core/HTMLElements";
+import { A } from "atoms/core/html-elements";
 import { GitHub, Heart, Keybase, Reddit, Slack, Spectrum, StackOverflow, Twitter } from "atoms/core/vectors/icons";
 import { ArcticIceStudio } from "atoms/core/vectors/logos";
 import Section, { Content } from "containers/core/Section";

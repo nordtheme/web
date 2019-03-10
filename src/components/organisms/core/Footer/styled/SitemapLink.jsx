@@ -9,7 +9,7 @@
 
 import styled from "styled-components";
 
-import { A } from "atoms/core/HTMLElements";
+import { A } from "atoms/core/html-elements";
 import { colors, motion, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
 
 const fontColor = themedMode({

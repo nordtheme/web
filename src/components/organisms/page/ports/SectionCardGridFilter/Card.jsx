@@ -11,7 +11,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Heart, PriceTags } from "atoms/core/vectors/icons";
-import { A } from "atoms/core/HTMLElements";
+import { A } from "atoms/core/html-elements";
 
 import { Card as StyledCard, CardBox, CardLogo, CardMetadata, CardTitle, Icon, IconWrapper } from "./styled";
 

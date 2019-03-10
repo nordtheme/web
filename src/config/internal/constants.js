@@ -95,6 +95,38 @@ const BASE_DIR_CONFIG = `${BASE_DIR_SRC}/config`;
 const BASE_DIR_PAGES = `${BASE_DIR_SRC}/pages`;
 
 /**
+ * The minimum height for required blog post images.
+ *
+ * @constant {number}
+ * @since 0.10.0
+ */
+const BLOG_POST_IMAGE_MIN_HEIGHT = 920;
+
+/**
+ * The minimum width for blog post banner images.
+ *
+ * @constant {number}
+ * @since 0.10.0
+ */
+const BLOG_POST_IMAGE_BANNER_MIN_WIDTH = BLOG_POST_IMAGE_MIN_HEIGHT * 1.7;
+
+/**
+ * The minimum width for blog post cover images.
+ *
+ * @constant {number}
+ * @since 0.10.0
+ */
+const BLOG_POST_IMAGE_COVER_MIN_WIDTH = BLOG_POST_IMAGE_MIN_HEIGHT * 0.85;
+
+/**
+ * The minimum width for blog post hero images.
+ *
+ * @constant {number}
+ * @since 0.10.0
+ */
+const BLOG_POST_IMAGE_HERO_MIN_WIDTH = BLOG_POST_IMAGE_MIN_HEIGHT * 1.8;
+
+/**
  * The internal type for MDX nodes.
  *
  * @constant {string}
@@ -121,6 +153,10 @@ module.exports = {
   BASE_DIR_CONFIG,
   BASE_DIR_CONTENT,
   BASE_DIR_PAGES,
+  BLOG_POST_IMAGE_MIN_HEIGHT,
+  BLOG_POST_IMAGE_BANNER_MIN_WIDTH,
+  BLOG_POST_IMAGE_COVER_MIN_WIDTH,
+  BLOG_POST_IMAGE_HERO_MIN_WIDTH,
   NODE_TYPE_MDX,
   REGEX_BLOG_POST_DATE
 };

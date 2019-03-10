@@ -9,7 +9,7 @@
 
 import styled from "styled-components";
 
-import { H3 } from "atoms/core/HTMLElements";
+import { H3 } from "atoms/core/html-elements";
 
 /**
  * The headline to inform the user about the purpose of the illustration and the reason why it is currently shown.

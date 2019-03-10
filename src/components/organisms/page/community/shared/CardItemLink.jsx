@@ -9,7 +9,7 @@
 
 import styled from "styled-components";
 
-import { A } from "atoms/core/HTMLElements";
+import { A } from "atoms/core/html-elements";
 
 /**
  * A component that represents a link for an card item.

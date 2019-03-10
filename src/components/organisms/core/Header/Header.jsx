@@ -15,7 +15,7 @@ import { PoseGroup } from "react-pose";
 import { subscribe } from "subscribe-ui-event";
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
-import { A } from "atoms/core/HTMLElements";
+import { A } from "atoms/core/html-elements";
 import { Menu } from "atoms/core/vectors/icons";
 import { GlobalThemeMode } from "containers/core/Root";
 import { ROUTE_ROOT } from "config/routes/mappings";

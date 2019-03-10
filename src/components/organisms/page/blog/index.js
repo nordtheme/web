@@ -14,7 +14,7 @@
  * @since 0.3.0
  */
 
-import SectionBlogPosts from "./SectionBlogPosts";
+import SectionBlogPostsCardGrid from "./SectionBlogPostsCardGrid";
 
 /* eslint-disable-next-line import/prefer-default-export */
-export { SectionBlogPosts };
+export { SectionBlogPostsCardGrid };

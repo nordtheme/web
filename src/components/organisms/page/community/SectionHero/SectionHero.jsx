@@ -11,7 +11,7 @@ import React from "react";
 
 import Section, { Content } from "containers/core/Section";
 import { ROUTE_COMMUNITY } from "config/routes/mappings";
-import { H1 } from "atoms/core/HTMLElements";
+import { H1 } from "atoms/core/html-elements";
 import FeatureDuo, { Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { sectionIdFor } from "utils";
 

@@ -11,7 +11,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 import Button from "atoms/core/Button";
-import { H3, P } from "atoms/core/HTMLElements";
+import { H3, P } from "atoms/core/html-elements";
 
 import {
   CardAction as Action,

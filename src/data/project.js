@@ -49,8 +49,8 @@ const links = {
       url: "https://arcticicestudio.slack.com"
     },
     spectrum: {
-      id: "arcticicestudio",
-      url: "https://spectrum.chat/arcticicestudio"
+      id: "nord",
+      url: "https://spectrum.chat/nord"
     }
   },
   organization: {
