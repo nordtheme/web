@@ -37,7 +37,6 @@ const Code = styled.code`
   transition: background-color ${motion.speed.duration.transition.base.themeModeSwitch}ms ease-in-out;
 
   ${Pre} & {
-    margin-bottom: 1em;
     display: block;
     padding: 1em;
     font-size: 0.9375em;

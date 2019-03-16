@@ -14,7 +14,17 @@
  * @since 0.1.0
  */
 
-const { BLOG, COMMUNITY, DOCS, LANDING, PORTS, ROOT } = require("./constants");
+const {
+  BLOG,
+  COMMUNITY,
+  DOCS,
+  DOCS_COLORS_AND_PALETTES,
+  DOCS_SWATCHES,
+  DOCS_USAGE,
+  LANDING,
+  PORTS,
+  ROOT
+} = require("./constants");
 
 /**
  * The root route mapping.
@@ -25,7 +35,7 @@ const { BLOG, COMMUNITY, DOCS, LANDING, PORTS, ROOT } = require("./constants");
 const ROUTE_ROOT = ROOT;
 
 /**
- * The route mapping for the "blog" page.
+ * The route mapping for the `blog` page.
  *
  * @constant {string}
  * @since 0.1.0
@@ -33,7 +43,7 @@ const ROUTE_ROOT = ROOT;
 const ROUTE_BLOG = ROUTE_ROOT + BLOG;
 
 /**
- * The route mapping for the "community" page.
+ * The route mapping for the `community` page.
  *
  * @constant {string}
  * @since 0.3.0
@@ -41,7 +51,7 @@ const ROUTE_BLOG = ROUTE_ROOT + BLOG;
 const ROUTE_COMMUNITY = ROUTE_ROOT + COMMUNITY;
 
 /**
- * The route mapping for the "docs" page.
+ * The route mapping for the `docs` page.
  *
  * @constant {string}
  * @since 0.1.0
@@ -49,8 +59,32 @@ const ROUTE_COMMUNITY = ROUTE_ROOT + COMMUNITY;
 const ROUTE_DOCS = ROUTE_ROOT + DOCS;
 
 /**
+ * The route mapping for the `docs` page about Nord's colors and palettes.
+ *
+ * @constant {string}
+ * @since 0.11.0
+ */
+const ROUTE_DOCS_COLOR_AND_PALETTES = `${ROUTE_ROOT}${DOCS}/${DOCS_COLORS_AND_PALETTES}`;
+
+/**
+ * The route mapping for the `docs` page about Nord's color swatches.
+ *
+ * @constant {string}
+ * @since 0.11.0
+ */
+const ROUTE_DOCS_SWATCHES = `${ROUTE_ROOT}${DOCS}/${DOCS_SWATCHES}`;
+
+/**
+ * The route mapping for the `docs` page about Nord's installation and usage.
+ *
+ * @constant {string}
+ * @since 0.11.0
+ */
+const ROUTE_DOCS_USAGE = `${ROUTE_ROOT}${DOCS}/${DOCS_USAGE}`;
+
+/**
  * The route mapping for the landing page.
- * Alias that will be redirected to {@link ROUTE_ROOT}.
+ * Alias that will be redirected to `${ROUTE_ROOT}`.
  *
  * @constant {string}
  * @since 0.1.0
@@ -90,6 +124,9 @@ module.exports = {
   ROUTE_BLOG,
   ROUTE_COMMUNITY,
   ROUTE_DOCS,
+  ROUTE_DOCS_COLOR_AND_PALETTES,
+  ROUTE_DOCS_SWATCHES,
+  ROUTE_DOCS_USAGE,
   ROUTE_LANDING,
   ROUTE_PORTS,
   ROUTE_ROOT,

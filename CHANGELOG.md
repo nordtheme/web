@@ -8,6 +8,43 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.11.0
+
+![Release Date: 2019-03-16](https://img.shields.io/badge/Release_Date-2019--03--16-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/13) [![Milestone](https://img.shields.io/badge/Milestone-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/11)
+
+<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/nord/repository-hero.svg?sanitize=true" width="60%" /></a></p>
+
+<p align="center"><strong>Finally emerged from the snowstorm: Nord Docs initially launched!</strong></p>
+
+Nord Docs's initial version is finally available on the [production domain][home-prod]!
+
+The long awaited initial website launch is completed. It focused on the [transition of the Nord documentation and assets][nord#112] to make them available through the `/docs` landing page.
+
+I'm absolutely happy to announce this great milestone. It's been a long time, but finally all essential parts are done and it is ready to be tested by the community in the production environment.
+
+Please feel free to give it a try and give any feedback if you'd like!
+Nord is an open source project and we love to receive contributions from the [community][home-comm]!
+
+Also keep an eye on the [blog][home-blog], there will be a detailed write-up about Nord Doc's way from the initial commit to the initial launch.
+
+## Features
+
+**Nord Docs Transition** — #132 ⇄ #135 (⊶ 0e5eb3d4)
+↠ Transferred all documentations, assets and visualizations from Nord to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the Nord repository][nord#112] to get an overview of what has changed for Nord and what has been done to migrate to Nord Docs.
+
+### Colors and Palettes
+
+<p align="center"><a href="https://www.nordtheme.com/docs/colors-and-palettes" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/54481336-b6dd5000-4833-11e9-887b-61f3cfe0ea23.png" alt="Preview: Colors and Palettes"/></a></p>
+
+### Installation and Usage
+
+<p align="center"><a href="https://www.nordtheme.com/docs/usage" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/54481345-c2c91200-4833-11e9-82d7-a7852454a906.png" alt="Preview: Installation and Usage"/></a></p>
+
+### Color Swatches
+
+<p align="center"><a href="https://www.nordtheme.com/docs/swatches" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/54481344-c2c91200-4833-11e9-8b0b-71625e3816bd.png" alt="Preview: Color Swatches"/></a></p>
+
 # 0.10.0
 
 ![Release Date: 2019-03-10](https://img.shields.io/badge/Release_Date-2019--03--10-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/12) [![Milestone](https://img.shields.io/badge/Milestone-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/10)
@@ -1252,6 +1289,9 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [git-docs-gitignore]: https://git-scm.com/docs/gitignore
 [git-docs-mailmap]: https://git-scm.com/docs/git-shortlog#_mapping_authors
 [gpg]: https://www.gnupg.org
+[home-blog]: https://www.nordtheme.com/blog
+[home-comm]: https://www.nordtheme.com/community
+[home-prod]: https://www.nordtheme.com
 [inter-ui]: https://rsms.me/inter
 [jest]: https://jestjs.io
 [json-ld]: https://json-ld.org
@@ -1408,3 +1448,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gatsby-blog-custom-schemes]: https://www.gatsbyjs.org/blog/2019-03-04-new-schema-customization
 [gh-gatsbyjs/gatsby#3344]: https://github.com/gatsbyjs/gatsby/issues/3344
 [tw-arcticicestudio-announce-initial-launch]: https://twitter.com/arcticicestudio/status/1104494647383068673
+
+<!-- v0.11.0 -->
+
+[nord#112]: https://github.com/arcticicestudio/nord/issues/112

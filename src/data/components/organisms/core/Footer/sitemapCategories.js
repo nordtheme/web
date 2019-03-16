@@ -7,7 +7,16 @@
  * License:    MIT
  */
 
-import { ROUTE_BLOG, ROUTE_COMMUNITY, ROUTE_DOCS, ROUTE_PORTS, ROUTE_ROOT } from "config/routes/mappings";
+import {
+  ROUTE_BLOG,
+  ROUTE_COMMUNITY,
+  ROUTE_DOCS,
+  ROUTE_DOCS_COLOR_AND_PALETTES,
+  ROUTE_DOCS_SWATCHES,
+  ROUTE_DOCS_USAGE,
+  ROUTE_PORTS,
+  ROUTE_ROOT
+} from "config/routes/mappings";
 import { sectionIdFor } from "utils";
 
 /**
@@ -38,8 +47,9 @@ const sitemapCategories = [
     name: "Docs",
     url: ROUTE_DOCS,
     links: [
-      { title: "Getting Started", url: `${ROUTE_DOCS}#${sectionIdFor(ROUTE_DOCS, 1)}` },
-      { title: "References", url: `${ROUTE_DOCS}#${sectionIdFor(ROUTE_DOCS, 1)}` }
+      { title: "Installation & Usage", url: ROUTE_DOCS_USAGE },
+      { title: "Colors & Palettes", url: ROUTE_DOCS_COLOR_AND_PALETTES },
+      { title: "Color Swatches", url: ROUTE_DOCS_SWATCHES }
     ]
   },
   {

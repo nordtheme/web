@@ -76,7 +76,7 @@ const A = ({ children, href, to, linkRef, ...passProps }) =>
       {children}
     </BaseGatsbyLink>
   ) : (
-    <BaseComponent ref={linkRef} href={href || to} {...passProps}>
+    <BaseComponent ref={linkRef} href={href || to} target="_blank" {...passProps}>
       {children}
     </BaseComponent>
   );

@@ -41,6 +41,7 @@ exports[`theme styles matches the snapshot 1`] = `
 <a
   class="c0 c1"
   href=""
+  target="_blank"
 >
   Nord
 </a>

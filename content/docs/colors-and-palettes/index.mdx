@@ -1,0 +1,214 @@
+import { ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import ColorPaletteCard from "atoms/core/ColorPaletteCard";
+import { ReactComponent as ColorPalette } from "assets/images/illustrations/color-palette.svg";
+import { palettes } from "styles/theme";
+import { ROUTE_DOCS_SWATCHES, ROUTE_DOCS_USAGE } from "config/routes/mappings";
+
+export const frontmatter = {
+  title: "Colors and Palettes",
+  subline:
+    "A total of sixteen, carefully selected, dimmed pastel colors for a eye-comfortable, but yet colorful ambiance."
+};
+
+<ShrinkedWidth value={20}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <ColorPalette />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+Nord consists of four named color palettes providing different syntactic meanings and color effects for dark & bright ambiance designs.
+
+It has been created for **clear, uncluttered and elegant designs** following a **minimal and flat** style pattern.
+For syntax highlighting it aims to ensure an **undisturbed focus on important parts of the code**, a **good readability** and a **quick visual distinction** between the different syntax elements.
+
+All colors are numbered from `nord0` to `nord15` where each palette contains a different amount of colors. The naming convention preserves the compatibility for terminal color schemes and allows an uncomplicated use as base for such.
+
+This document provides a set of guidelines detailing how to style and highlight code syntax and UI elements.
+Please note that these guidelines are “soft“ recommendations to describe the original idea of Nord!
+They may be used in a modified form like e.g. different use cases for a specific color or with different shading options applied.
+
+> This is a _living document_ which means it is **work in progress**, not completed yet and **can change at any time** while the project is still in development!
+
+Make sure to check out the guides about how to <Link to={ROUTE_DOCS_USAGE}>install and integrate Nord in your own projects</Link> or use the <Link to={ROUTE_DOCS_SWATCHES}>color swatches for your favorite applications</Link>.
+
+</ShrinkedWidth>
+
+<ShrinkedWidth >
+
+<SpaceBox mTop={4} mBottom={4}>
+  <ColorPaletteCard id="polar-night" colors={Object.values(palettes.POLAR_NIGHT)} floatingTitle="Polar Night" />
+</SpaceBox>
+
+**Polar Night** is made up of four darker colors that are commonly used for base elements like backgrounds or text color in _bright ambiance designs_.
+
+### `nord0`
+
+**The origin color or the _Polar Night_ palette.**
+
+For _dark ambiance designs_, it is used for background and area coloring while it's not used for syntax highlighting at all because otherwise it would collide with the same background color.
+
+For _bright ambiance designs_, it is used for base elements like plain text, the text editor caret and reserved syntax characters like curly- and square brackets.
+It is rarely used for passive UI elements like borders, but might be possible to achieve a higher contrast and better visual distinction (harder/not flat) between larger components.
+
+### `nord1`
+
+**A brighter shade color based on `nord0`.**
+
+For _dark ambiance designs_ it is used for elevated, more prominent or focused UI elements like
+
+- status bars and text editor gutters
+- panels, modals and floating popups like notifications or auto completion
+- user interaction/form components like buttons, text/select fields or checkboxes
+
+It also works fine for more inconspicuous and passive elements like borders or as dropshadow between different components.
+There's currently no official port project that makes use of it for syntax highlighting.
+
+For _bright ambiance designs_, it is used for more subtle/inconspicuous UI text elements that do not need so much visual attention.
+Other use cases are also state animations like a more brighter text color when a button is hovered, active or focused.
+
+### `nord2`
+
+**An even more brighter shade color of `nord0`.**
+
+For _dark ambiance designs_, it is used to colorize the currently active text editor line as well as selection- and text highlighting color.
+For both _bright & dark ambiance designs_ it can also be used as an brighter variant for the same target elements like `nord1`.
+
+### `nord3`
+
+**The brightest shade color based on `nord0`.**
+
+For _dark ambiance designs_, it is used for UI elements like indent- and wrap guide marker.
+In the context of code syntax highlighting it is used for comments and invisible/non-printable characters.
+
+For _bright ambiance designs_, it is, next to `nord1` and `nord2` as darker variants, also used for the most subtle/inconspicuous UI text elements that do not need so much visual attention.
+
+<SpaceBox mTop={4} mBottom={4}>
+  <ColorPaletteCard id="snow-storm" colors={Object.values(palettes.SNOW_STORM)} floatingTitle="Snow Storm" />
+</SpaceBox>
+
+**Snow Storm** is made up of three bright colors that are commonly used for text colors or base UI elements in _bright ambiance designs_.
+
+The palette can be used for two different shading ambiance styles:
+
+- bright to dark — This is the **recommended style** that uses `nord6` as base color and highlights other UI elements with `nord5` and `nord4`.
+- dark to bright (_semi-light_) — This style uses `nord4` as base color and highlights other UI elements with `nord5` and `nord6`.
+
+The documentation of the different colors from this palette are based on the recommended _bright to dark_ ambiance style.
+To apply the color purposes to the _dark to bright_ style the definitions can be used in reversed order.
+
+### `nord4`
+
+**The origin color or the _Snow Storm_ palette.**
+
+For _dark ambiance designs_, it is used for UI elements like the text editor caret.
+In the context of syntax highlighting it is used as text color for variables, constants, attributes and fields.
+
+For _bright ambiance designs_, it is used for elevated, more prominent or focused UI elements like
+
+- status bars and text editor gutters
+- panels, modals and floating popups like notifications or auto completion
+- user interaction/form components like buttons, text/select fields or checkboxes
+
+It also works fine for more inconspicuous and passive elements like borders or as dropshadow between different components.
+In the context of syntax highlighting it's not used at all.
+
+### `nord5`
+
+**A brighter shade color of `nord4`.**
+
+For _dark ambiance designs_, it is used for more subtle/inconspicuous UI text elements that do not need so much visual attention.
+Other use cases are also state animations like a more brighter text color when a button is hovered, active or focused.
+
+For _bright ambiance designs_, it is used to colorize the currently active text editor line as well as selection- and text highlighting color.
+
+### `nord6`
+
+**The brightest shade color based on `nord4`.**
+
+For _dark ambiance designs_, it is used for elevated UI text elements that require more visual attention.
+In the context of syntax highlighting it is used as text color for plain text as well as reserved and structuring syntax characters like curly- and square brackets.
+
+For _bright ambiance designs_, it is used as background and area coloring while it's not used for syntax highlighting at all because otherwise it would collide with the same background color.
+
+<SpaceBox mTop={4} mBottom={4}>
+  <ColorPaletteCard id="frost" colors={Object.values(palettes.FROST)} floatingTitle="Frost" />
+</SpaceBox>
+
+**Frost** can be described as the heart palette of Nord, a group of four bluish colors that are commonly used for primary UI component and text highlighting and essential code syntax elements.
+
+All colors of this palette are used the same for both _dark & bright ambiance designs_.
+
+### `nord7`
+
+**A calm and highly contrasted color reminiscent of frozen polar water.**
+
+Used for UI elements that should, next to the primary accent color `nord8`, stand out and get more visual attention.
+In the context of syntax highlighting it is used for classes, types and primitives.
+
+### `nord8`
+
+**The bright and shiny primary accent color reminiscent of pure and clear ice.**
+
+Used for primary UI elements with main usage purposes that require the most visual attention.
+In the context of syntax highlighting it is used for declarations, calls and execution statements of functions, methods and routines.
+
+### `nord9`
+
+**A more darkened and less saturated color reminiscent of arctic waters.**
+
+Used for secondary UI elements that also require more visual attention than other elements.
+In the context of syntax highlighting it is used for language specific, syntactic and reserved keywords as well as
+
+- support characters
+- operators
+- tags
+- units
+- punctuations like (semi)colons, points and commas
+
+### `nord10`
+
+**A dark and intensive color reminiscent of the deep arctic ocean.**
+
+Used for tertiary UI elements that require more visual attention than default elements.
+In the context of syntax highlighting it is used for pragmas, comment keywords and pre-processor statements.
+
+<SpaceBox mTop={4} mBottom={4}>
+  <ColorPaletteCard id="aurora" colors={Object.values(palettes.AURORA)} floatingTitle="Aurora" />
+</SpaceBox>
+
+**Aurora** consists of five colorful components reminiscent of the [„Aurora borealis“][wiki-aurora], sometimes referred to as _polar lights_ or _northern lights_.
+
+All colors of this palette are used the same for both _dark & bright ambiance designs_.
+
+### `nord11`
+
+Used for UI elements that are rendering error states like linter markers and the highlighting of Git `diff` deletions.
+In the context of syntax highlighting it is used to override the highlighting of syntax elements that are detected as errors.
+
+### `nord12`
+
+Rarely used for UI elements, but it may indicate a more advanced or dangerous functionality.
+In the context of syntax highlighting it is used for special syntax elements like annotations and decorators.
+
+### `nord13`
+
+Used for UI elements that are rendering warning states like linter markers and the highlighting of Git `diff` modifications.
+In the context of syntax highlighting it is used to override the highlighting of syntax elements that are detected as warnings as well as escape characters and within regular expressions.
+
+### `nord14`
+
+Used for UI elements that are rendering success states and visualizations and the highlighting of Git `diff` additions.
+In the context of syntax highlighting it is used as main color for strings of any type like double/single quoted or interpolated.
+
+### `nord15`
+
+Rarely used for UI elements, but it may indicate a more uncommon functionality.
+In the context of syntax highlighting it is used as main color for numbers of any type like integers and floating point numbers.
+
+</ShrinkedWidth>
+
+[wiki-aurora]: https://en.wikipedia.org/wiki/Aurora

@@ -1,0 +1,163 @@
+import Button from "atoms/core/Button";
+import Link from "atoms/core/Link";
+import { ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { ReactComponent as PaintBrush } from "assets/images/illustrations/paint-brush.svg";
+import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_DOCS_SWATCHES } from "config/routes/mappings";
+
+export const frontmatter = {
+  title: "Installation and Usage",
+  subline: "Learn how to install Nord, integrate the palettes and use the colors in your own projects."
+};
+
+<ShrinkedWidth value={20}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <PaintBrush />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth>
+
+Nord comes in many formats to cover a wide range of project types and tech stacks.
+It's <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>colors and palettes</Link> have especially been designed for UI elements and code syntax highlighting often found in projects build with web technologies like websites.
+
+## Installation
+
+Since Nord if heavily used in web technology based projects, it's main installation method is therefore [**npm**][npm], the [Node.js][] package manager.
+
+Install and add it as production dependency by running `npm` from the command line:
+
+```sh
+npm install --save nord
+```
+
+If you're using [**yarn**][yarn] instead of `npm` run the following command:
+
+```sh
+yarn add nord
+```
+
+### From Source
+
+If you'd like to install Nord without `npm` or `yarn` you can use it from source by either [downloading individual source files][gh-tree-src] or [cloning the repository][gh].
+
+## Usage
+
+Next to the available <Link to={ROUTE_DOCS_SWATCHES}>color swatches</Link> for your favorite applications, Nord is available in many module formats for various CSS [preprocessors][wiki-preproc].
+
+### Sass
+
+[Sass][] is a mature, stable, and powerful professional grade CSS preprocessor and extension language.
+Nord is available as [SCSS syntax module][sass-docs-scss] that can be imported using the [`@import`][sass-docs-import] @-rule that extends the [default CSS `@import`][mdn-css-@import] @-rule:
+
+```scss
+@import "node_modules/nord/src/nord.scss";
+
+body {
+  background-color: $nord0;
+  color: $nord8;
+}
+```
+
+Please see the official [Sass syntax][sass-docs-syntax] documentation for more details about differences to the [indented Sass syntax][sass-docs-syntax-indented].
+
+The [Sass module][gh-tree-sass] provides all <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>Nord colors</Link> as [Sass variables][sass-docs-vars] from `$nord0` to `$nord15`.
+
+### Less
+
+[Less][] is a dynamic CSS preprocessor and extension language that was influenced by [Sass][] and has influenced the newer [SCSS syntax][sass-docs-scss].
+Nord can be [imported as Less module][less-docs-importing] using the [`@import`][sass-docs-import] @-rule that extends the [default CSS `@import`][mdn-css-@import] @-rule:
+
+```less
+@import "node_modules/nord/src/nord.less";
+
+body {
+  background-color: @nord0;
+  color: @nord8;
+}
+```
+
+The [Less module][gh-tree-less] provides all <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>Nord colors</Link> as [Less variables][less-docs-vars] from `@nord0` to `@nord15`.
+
+### Stylus
+
+[Stylus][] is a dynamic CSS preprocessor and extension language that was influenced by [Sass][] and [Less][].
+Nord can be imported as [Stylus module][stylus-docs-import] using the `@import` @-rule, which extends the [default CSS `@import`][mdn-css-@import] @-rule, or the Stylus specific [`@require`][stylus-docs-import-req] @-rule:
+
+```stylus
+@import "node_modules/nord/src/nord.styl";
+
+body {
+  background-color: @nord0;
+  color: @nord8;
+}
+```
+
+The [Stylus module][gh-tree-stylus] provides all <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>Nord colors</Link> as [Stylus variables][stylus-docs-vars] from `@nord0` to `@nord15`.
+
+### CSS
+
+The [CSS specification][w3-css-spec-vars] supports the definition of **custom properties**, often referred to as **CSS variables**, that contain specific values to be reused throughout a document.
+They are set using custom property notation (e.g. `--nord8: #88c0d0;`) and are accessed using the CSS [`var()`][mdn-css-func-var] function (e.g. `color: var(--nord8);`).
+
+Nord can be imported as [CSS module][stylus-docs-import] using the [CSS `@import`][mdn-css-@import] @-rule:
+
+```css
+@import "node_modules/nord/src/nord.css";
+
+body {
+  background-color: var(--nord0);
+  color: var(--nord8);
+}
+```
+
+If you're using the [PostCSS][] plugin [postcss-import][gh-postcss-import], Nord can be simply imported like any JavaScript module:
+
+```css
+@import "nord";
+```
+
+The [CSS module][gh-tree-css] provides all <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>Nord colors</Link> as variables `--nord0` to `--nord15` nested inside the `:root` element selector.
+
+## Source Code Documentation
+
+The Sass module is documented using the [SassDoc][] comment syntax, a documentation system to build pretty and powerful docs from Sass files, while the Less and Stylus modules are documented using the [KSS][] comment syntax, a documentation syntax that is human readable, but just structured enough to be machine parsable.
+
+Both SassDoc and KSS can be used to generate a static, fully styled HTML document from the source code. Please see the [official SassDoc documentation on how to get started][sassdoc-docs-start] and the [official KSS documentation on how to create styleguides][kss-docs-styleguides] for more details.
+
+</ShrinkedWidth>
+
+[gh-postcss-import]: https://github.com/postcss/postcss-import
+[gh-tree-css]: https://github.com/arcticicestudio/nord/blob/develop/src/nord.css
+[gh-tree-less]: https://github.com/arcticicestudio/nord/blob/develop/src/nord.less
+[gh-tree-sass]: https://github.com/arcticicestudio/nord/blob/develop/src/nord.scss
+[gh-tree-src]: https://github.com/arcticicestudio/nord/tree/develop/src
+[gh-tree-stylus]: https://github.com/arcticicestudio/nord/blob/develop/src/nord.styl
+[gh]: https://github.com/arcticicestudio/nord
+[kss-docs-styleguides]: http://warpspire.com/kss/styleguides
+[kss]: https://warpspire.com/kss
+[less-docs-import-rule]: http://lesscss.org/features/#import-atrules-feature
+[less-docs-importing]: http://lesscss.org/#importing
+[less-docs-vars]: http://lesscss.org/features/#variables-feature
+[less]: http://lesscss.org
+[mdn-css-@import]: https://developer.mozilla.org/en-US/docs/Web/CSS/@import
+[mdn-css-func-var]: https://developer.mozilla.org/en-US/docs/Web/CSS/var
+[node.js]: https://nodejs.org
+[npm]: https://www.npmjs.com
+[postcss]: https://postcss.org
+[sass-docs-import]: https://sass-lang.com/documentation/file.SASS_REFERENCE#import
+[sass-docs-scss]: https://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS
+[sass-docs-syntax-indented]: https://sass-lang.com/documentation/file.INDENTED_SYNTAX
+[sass-docs-syntax]: https://sass-lang.com/documentation/file.SASS_REFERENCE#syntax
+[sass-docs-vars]: https://sass-lang.com/documentation/file.SASS_REFERENCE#variables_
+[sass]: https://sass-lang.com
+[sassdoc-docs-start]: http://sassdoc.com/getting-started
+[sassdoc]: http://sassdoc.com
+[stylus-docs-import-req]: http://stylus-lang.com/docs/import#require
+[stylus-docs-import]: http://stylus-lang.com/docs/import
+[stylus-docs-vars]: http://stylus-lang.com/docs/variables
+[stylus]: http://stylus-lang.com
+[w3-css-spec-vars]: https://www.w3.org/TR/css-variables
+[wiki-preproc]: https://en.wikipedia.org/wiki/Preprocessor
+[yarn]: https://yarnpkg.com

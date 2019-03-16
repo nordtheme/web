@@ -32,6 +32,7 @@ exports[`theme styles matches the snapshot with \`calmly\` variant 1`] = `
 <a
   class="c0 c1"
   href=""
+  target="_blank"
 >
   Nord
 </a>
@@ -68,6 +69,7 @@ exports[`theme styles matches the snapshot with \`decent\` variant 1`] = `
 <a
   class="c0 c1"
   href=""
+  target="_blank"
 >
   Nord
 </a>
@@ -103,6 +105,7 @@ exports[`theme styles matches the snapshot with \`minimal\` variant 1`] = `
 <a
   class="c0 c1"
   href=""
+  target="_blank"
 >
   Nord
 </a>
@@ -140,6 +143,7 @@ exports[`theme styles matches the snapshot with default variant 1`] = `
 <a
   class="c0 c1"
   href=""
+  target="_blank"
 >
   Nord
 </a>

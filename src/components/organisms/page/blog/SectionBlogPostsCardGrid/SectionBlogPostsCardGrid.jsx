@@ -50,9 +50,9 @@ const SectionBlogPostsCardGrid = ({ blogPosts, ...passProps }) => (
         </Grid>
       ) : (
         <EmptyState
-          headline="Oh, there's nothing here yet"
+          headline="Oh, there's no blog post here yet"
           illustrationStyles={emptyStateIllustrationStyles}
-          subline="Please check back later, we're working hard on this page!"
+          subline="Please check back later, we're busy writing some amazing content!"
         />
       )}
     </Content>
