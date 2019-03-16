@@ -43,7 +43,7 @@ const BASE_PUBLIC_URL = process.env.NORD_DOCS_BASE_PUBLIC_URL || `${metadataNord
 const ROOT = pathSeparator;
 
 /**
- * The route name of the "blog" page.
+ * The route name of the `blog` page.
  *
  * @constant {string}
  * @since 0.1.0
@@ -51,7 +51,7 @@ const ROOT = pathSeparator;
 const BLOG = "blog";
 
 /**
- * The route name of the "community" page.
+ * The route name of the `community` page.
  *
  * @constant {string}
  * @since 0.3.0
@@ -59,12 +59,36 @@ const BLOG = "blog";
 const COMMUNITY = "community";
 
 /**
- * The route name of the "docs" page.
+ * The route name of the `docs` page.
  *
  * @constant {string}
  * @since 0.1.0
  */
 const DOCS = "docs";
+
+/**
+ * The route name of the `docs` page about Nord's colors and palettes.
+ *
+ * @constant {string}
+ * @since 0.11.0
+ */
+const DOCS_COLORS_AND_PALETTES = "colors-and-palettes";
+
+/**
+ * The route name of the `docs` page about Nord's color swatches.
+ *
+ * @constant {string}
+ * @since 0.11.0
+ */
+const DOCS_SWATCHES = "swatches";
+
+/**
+ * The route name of the `docs` page about Nord's installation and usage.
+ *
+ * @constant {string}
+ * @since 0.11.0
+ */
+const DOCS_USAGE = "usage";
 
 /**
  * The route name of the landing page.
@@ -88,6 +112,9 @@ module.exports = {
   BLOG,
   COMMUNITY,
   DOCS,
+  DOCS_COLORS_AND_PALETTES,
+  DOCS_SWATCHES,
+  DOCS_USAGE,
   LANDING,
   PORTS,
   ROOT

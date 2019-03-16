@@ -8,6 +8,7 @@
  */
 
 import { Code, CodeDownload, Compass, Pantone, Layout, Terminal } from "atoms/core/vectors/icons";
+import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_DOCS_SWATCHES, ROUTE_DOCS_USAGE } from "config/routes/mappings";
 
 /**
  * The mapping of topics for the "Getting Started" contents cards.
@@ -19,15 +20,18 @@ import { Code, CodeDownload, Compass, Pantone, Layout, Terminal } from "atoms/co
 const topicsGettingStarted = [
   {
     iconComponent: Compass,
-    title: "Learn about the colors and palettes"
+    title: "Learn about the colors and palettes",
+    url: ROUTE_DOCS_COLOR_AND_PALETTES
   },
   {
     iconComponent: Pantone,
-    title: "Use native swatches for your favorite applications"
+    title: "Use native swatches for your favorite applications",
+    url: ROUTE_DOCS_SWATCHES
   },
   {
     iconComponent: CodeDownload,
-    title: "Include Nord in your own project"
+    title: "Include Nord in your own project",
+    url: ROUTE_DOCS_USAGE
   }
 ];
 

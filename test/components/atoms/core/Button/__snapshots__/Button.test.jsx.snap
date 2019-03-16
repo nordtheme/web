@@ -73,6 +73,7 @@ exports[`logical behavior renders external URLs with \`href\` prop 1`] = `
 <a
   class="c0 c1"
   href="https://www.nordtheme.com"
+  target="_blank"
 >
   Nord
 </a>
@@ -151,6 +152,7 @@ exports[`logical behavior renders external URLs with \`to\` prop 1`] = `
 <a
   class="c0 c1"
   href="https://www.nordtheme.com"
+  target="_blank"
 >
   Nord
 </a>
