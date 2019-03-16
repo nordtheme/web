@@ -17,14 +17,14 @@
 import PropTypes from "prop-types";
 
 const cardBasePropTypes = {
-  logoComponent: PropTypes.node.isRequired,
+  logoComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func, PropTypes.node]).isRequired,
   title: PropTypes.string.isRequired
 };
 
 const cardIconPropTypes = {
   accentColor: PropTypes.string.isRequired,
-  iconComponent: PropTypes.node.isRequired,
-  svgType: PropTypes.string.isRequired
+  iconComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func, PropTypes.node]).isRequired,
+  svgType: PropTypes.string
 };
 
 export { cardBasePropTypes, cardIconPropTypes };

@@ -1,0 +1,92 @@
+import Button from "atoms/core/Button";
+import Link from "atoms/core/Link";
+import { ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { ReactComponent as ColorSwatches } from "assets/images/illustrations/color-swatches-stripes.svg";
+import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_DOCS_USAGE } from "config/routes/mappings";
+
+export const frontmatter = {
+  title: "Swatches",
+  subline:
+    "No matter what's your design tool stack — we've got you covered with native color swatches for your favorite applications."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <ColorSwatches />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth>
+
+Next to the many ways of <Link to={ROUTE_DOCS_USAGE}>integrating Nord into your project</Link>, all <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>color palettes of Nord</Link> are also available in various native color swatch formats.
+
+> This is a _living document_ which means it is **work in progress**, not completed yet and **can change at any time** while the project is still in development!
+> There will also be detailed **install instructions** for all supported formats, but in the meantime please refer to the documentation of the specific application.
+
+### Adobe Products
+
+There are two different color swatches available for _Adobe_ products like [Photoshop][] and [Illustrator][]:
+
+- `.aco` — A format especially designed for and only compatible with _Adobe Photoshop_.
+  <SpaceBox mTop={2} mBottom={2}>
+    <Button href="https://raw.githubusercontent.com/arcticicestudio/nord/develop/src/swatches/nord.ase">
+      Download Nord for Adobe Swatch Exchange
+    </Button>
+  </SpaceBox>
+- `.ase` — The “_Adobe Swatch Exchange_“ format that allows to share color swatches between different _Adobe_ products.
+  <SpaceBox mTop={2} mBottom={2}>
+    <Button href="https://raw.githubusercontent.com/arcticicestudio/nord/develop/src/swatches/nord.aco">
+      Download Nord for Adobe Photoshop
+    </Button>
+  </SpaceBox>
+
+**Install instructions** on how to import and use the swatches are documented in [_Adobe_'s Help Center Guide][illustrator-help-swatches].
+
+### Apple macOS
+
+For use with the macOS system color app Nord is available as `.clr` file format.
+
+**Install instructions** and more details are available through [_Apple's Visual Color Design_ guidelines][apple-dev-design-color].
+
+<Button href="https://raw.githubusercontent.com/arcticicestudio/nord/develop/src/swatches/nord.clr">
+  Download Nord for macOS
+</Button>
+
+### Gpick
+
+To use Nord with [Gpick][] the palettes are available as `.gpa` format.
+
+<Button href="https://raw.githubusercontent.com/arcticicestudio/nord/develop/src/swatches/nord.gpa">
+  Download Nord for Gpick
+</Button>
+
+### GIMP, Krita and Inkscape
+
+The universal `.gpl` file format allows to use Nord with [GIMP], [Krita] and [Inkscape].
+
+<Button href="https://raw.githubusercontent.com/arcticicestudio/nord/develop/src/swatches/nord.gpl">
+  Download Nord for GIMP, Krita and Inkscape
+</Button>
+
+### Alias and WaveFront Material
+
+For applications that make use of the _Alias_ and _WaveFront Material_ format Nord also provides a `.mtl` file.
+
+<Button href="https://raw.githubusercontent.com/arcticicestudio/nord/develop/src/swatches/nord.mtl">
+  Download Nord for Alias and WaveFront Material
+</Button>
+
+</ShrinkedWidth>
+
+[apple-dev-design-color]: https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/color
+[gimp-doc-color-palette]: https://docs.gimp.org/en/gimp-concepts-palettes.html
+[gpick]: http://gpick.org
+[illustrator-help-swatches]: https://helpx.adobe.com/illustrator/using/using-creating-swatches.html
+[illustrator]: https://www.adobe.com/products/illustrator
+[inkscape-wiki-color-palette]: http://wiki.inkscape.org/wiki/index.php/ColorPalette
+[inkscape]: https://inkscape.org
+[krita-doc-color-palette]: https://docs.krita.org/Palette
+[krita]: https://krita.org
+[photoshop]: http://adobe.com/products/photoshop

@@ -61,12 +61,14 @@ ContentsCard.propTypes = {
   accentColor: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   svgType: PropTypes.string,
-  topics: PropTypes.shape({
-    iconComponent: PropTypes.node,
-    svgType: PropTypes.string,
-    title: PropTypes.string,
-    url: PropTypes.string
-  }).isRequired
+  topics: PropTypes.arrayOf(
+    PropTypes.shape({
+      iconComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.func, PropTypes.node]).isRequired,
+      svgType: PropTypes.string,
+      title: PropTypes.string,
+      url: PropTypes.string
+    })
+  ).isRequired
 };
 
 ContentsCard.defaultProps = {
