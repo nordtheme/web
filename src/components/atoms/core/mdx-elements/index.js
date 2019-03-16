@@ -9,6 +9,7 @@
 
 import Image from "./Image";
 import ShrinkedWidth from "./ShrinkedWidth";
+import SpaceBox from "./SpaceBox";
 import Video from "./Video";
 
-export { Image, ShrinkedWidth, Video };
+export { Image, ShrinkedWidth, SpaceBox, Video };
