@@ -1,8 +1,8 @@
-<p align="center"><a href="https://develop.nordtheme.com"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/repository-hero.svg?sanitize=true"/></a></p>
+<p align="center"><a href="https://www.nordtheme.com"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/repository-hero.svg?sanitize=true"/></a></p>
 
 <p align="center"><a href="https://github.com/arcticicestudio/nord-docs/releases/latest"><img src="https://img.shields.io/github/release/arcticicestudio/nord-docs.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
-<p align="center"><a href="https://nordtheme.com"><img src="https://img.shields.io/badge/Deployment-production-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a> <a href="https://develop.nordtheme.com"><img src="https://img.shields.io/badge/Deployment-development-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a></p>
+<p align="center"><a href="https://nordtheme.com"><img src="https://img.shields.io/badge/Deployment-production-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a> <a href="https://www.nordtheme.com"><img src="https://img.shields.io/badge/Deployment-development-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a></p>
 
 <p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/nord" alt="Nord">Nord</a> website and documentation</p>
 
@@ -16,7 +16,7 @@
 
 <p align="center"><strong>Finally emerged from the snowstorm: Nord Docs initially launched!</strong></p>
 
-Nord Docs's initial version is finally available on the [production domain][home-prod]!
+Nord Docs's initial version is finally available on the [production domain][home]!
 
 The long awaited initial website launch is completed. It focused on the [transition of the Nord documentation and assets][nord#112] to make them available through the `/docs` landing page.
 
@@ -240,7 +240,7 @@ The following steps have been performed to integrate git-crypt for the current c
 **Interactive illustration for ports section of landing page** — #127 (⊶ f79f4ac3)
 ↠ #126 improved the already existing “Nordify” SVG illustration by making it an interactive components that animates the floating logos in the opposite direction of the current mouse cursor's position.
 
-The new component is now also used for the [port section of the landing page][env-dev-landing-ports] replacing the static SVG illustration/image.
+The new component is now also used for the [port section of the landing page][home-ports] replacing the static SVG illustration/image.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/7836623/53172428-9da30400-35e5-11e9-96a5-f787247b467a.gif" /></p>
 
@@ -1174,7 +1174,6 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [discord]: https://discordapp.com
 [dotenv]: https://github.com/motdotla/dotenv
 [editorconfig]: https://editorconfig.org
-[env-dev-landing-ports]: https://develop.nordtheme.com/#ports
 [eslint-docs-auto-fix]: https://eslint.org/docs/user-guide/command-line-interface#fixing-problems
 [eslint-p-import/no-extraneous-dependencies]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
 [eslint-p-react/jsx-no-bind]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
@@ -1291,7 +1290,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gpg]: https://www.gnupg.org
 [home-blog]: https://www.nordtheme.com/blog
 [home-comm]: https://www.nordtheme.com/community
-[home-prod]: https://www.nordtheme.com
+[home-ports]: https://www.nordtheme.com/ports
+[home]: https://www.nordtheme.com
 [inter-ui]: https://rsms.me/inter
 [jest]: https://jestjs.io
 [json-ld]: https://json-ld.org
