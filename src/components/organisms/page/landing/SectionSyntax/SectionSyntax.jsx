@@ -8,7 +8,7 @@
  */
 
 import React, { PureComponent } from "react";
-import Waypoint from "react-waypoint";
+import { Waypoint } from "react-waypoint";
 
 import Button from "atoms/core/Button";
 import { Content } from "containers/core/Section";

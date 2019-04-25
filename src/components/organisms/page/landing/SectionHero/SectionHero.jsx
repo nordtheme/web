@@ -8,7 +8,7 @@
  */
 
 import React, { PureComponent } from "react";
-import Waypoint from "react-waypoint";
+import { Waypoint } from "react-waypoint";
 import ArcticLandscape, { POSE_DRAW, POSE_ERASE } from "arctic-landscape";
 
 import { Content } from "containers/core/Section";

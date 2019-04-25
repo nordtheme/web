@@ -22,6 +22,6 @@ import typography from "../typography";
  * @see https://polished.js.org/docs/#modularscale
  * @since 0.3.0
  */
-const ms = step => modularScale(step, typography.sizes.msBase, typography.sizes.msName);
+const ms = step => modularScale(step, `${typography.sizes.msBase}em`, typography.sizes.msName);
 
 export default ms;

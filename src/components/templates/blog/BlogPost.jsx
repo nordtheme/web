@@ -9,7 +9,7 @@
 
 import React from "react";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
-import { MDXProvider } from "@mdx-js/tag";
+import { MDXProvider } from "@mdx-js/react";
 import { graphql } from "gatsby";
 
 import BaseLayout from "layouts/core/BaseLayout";
