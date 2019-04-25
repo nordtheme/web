@@ -8,7 +8,7 @@
  */
 
 import React, { PureComponent } from "react";
-import Waypoint from "react-waypoint";
+import { Waypoint } from "react-waypoint";
 import ArcticOceanFractal, { POSE_HIDE, POSE_SHOW } from "arctic-ocean-fractal";
 
 import { WaveFooter } from "atoms/core/vectors/divider";
