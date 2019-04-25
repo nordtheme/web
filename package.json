@@ -90,11 +90,11 @@
     "webpack-bundle-analyzer": "3.3.2"
   },
   "dependencies": {
-    "@babel/polyfill": "7.4.3",
     "arctic-landscape": ">=0.1.0 <1.0.0",
     "arctic-ocean-fractal": ">=0.1.0 <1.0.0",
     "axios": "0.18.0",
     "body-scroll-lock": "2.6.1",
+    "core-js": "2.6.5",
     "date-fns": "2.0.0-alpha.27",
     "gatsby": "2.3.29",
     "gatsby-image": "2.0.40",
