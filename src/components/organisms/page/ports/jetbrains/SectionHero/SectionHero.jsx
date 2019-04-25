@@ -20,7 +20,7 @@ import { usePortsMetadata } from "hooks";
 import { emptyStateIllustrationStyles } from "../../../shared/styles";
 
 /**
- * The component that represents the hero section for the landing page of the "Nord JetBrains Editor" port project.
+ * The component that represents the hero section for the landing page of the "Nord JetBrains" port project.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
@@ -28,7 +28,7 @@ import { emptyStateIllustrationStyles } from "../../../shared/styles";
  */
 export default function SectionHero() {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-jetbrains-editor");
+  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-jetbrains");
 
   return (
     <Section>
@@ -48,7 +48,7 @@ export default function SectionHero() {
           <Link href={gitHubRepositoryUrl} target="_blank" variant="minimal">
             repository on GitHub
           </Link>{" "}
-          for information about Nord JetBrains Editor.
+          for information about Nord JetBrains.
         </P>
       </Content>
       <WaveFooter />

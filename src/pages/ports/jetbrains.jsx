@@ -8,24 +8,24 @@
  */
 
 import React from "react";
+import { SectionHero } from "organisms/page/ports/jetbrains";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/ports/jetbrains-editor";
 
 /**
- * The component that represents the landing page of the "Nord JetBrains Editor" port project.
+ * The component that represents the landing page of the "Nord JetBrains" port project.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const JetBrainsEditor = ({ location: { pathname } }) => (
+const JetBrains = ({ location: { pathname } }) => (
   <BaseLayout pathName={pathname}>
     <SectionHero />
   </BaseLayout>
 );
 
-JetBrainsEditor.propTypes = locationPropTypes;
+JetBrains.propTypes = locationPropTypes;
 
-export default JetBrainsEditor;
+export default JetBrains;
