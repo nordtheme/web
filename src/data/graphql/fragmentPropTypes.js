@@ -45,6 +45,7 @@ const contentMdxMediaFilePropTypes = {
   extension: PropTypes.string,
   name: PropTypes.string,
   publicURL: PropTypes.string,
+  relativeDirectory: PropTypes.string,
   relativePath: PropTypes.string
 };
 
