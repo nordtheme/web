@@ -1,0 +1,177 @@
+import Button from "atoms/core/Button";
+import Link from "atoms/core/Link";
+import { Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Kbd } from "atoms/core/html-elements";
+import { ReactComponent as WindowCode } from "assets/images/illustrations/window-code.svg";
+import { ROUTE_DOCS_PORTS_JETBRAINS_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Plugin Development",
+  subline: "Learn how to customize the theme to fit your needs, preview changes and export the plugin."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowCode />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+This page documents how to develop the theme plugin — from requirements to the deployment and local installation steps.
+
+# Requirements
+
+Download and install [IntelliJ][jb-intellij] with a minimal version of [2019.1 or higher][jb-whatsnew-2019.1].
+
+<Image dropShadow fillSize={75} fluid={props.images["intellij-splash-screen.png"]} rounded />
+
+To develop IntelliJ platform plugins the [DevKit][jb-docs-sdk-devkit] plugin (bundled by default) must be enabled.
+
+<Image dropShadow fluid={props.images["devkit-plugin.png"]} rounded />
+
+# Setup
+
+## Download
+
+Clone the [_Nord JetBrains_ repository from GitHub][gh-repo] to any path:
+
+```sh
+git clone https://github.com/arcticicestudio/nord-jetbrains.git
+```
+
+To get the project without [Git][] download the project as `.zip` archive file from the GitHub repository or click on the download button below. Afterwards extract the archive to any path.
+
+<Button href="https://github.com/arcticicestudio/nord-jetbrains/archive/develop.zip">Download</Button>
+
+<Image
+  alt="Screenshot showing the GitHub repository web UI to download the project repository"
+  fillSize={60}
+  fluid={props.images["github-clone.png"]}
+>
+  Download the project repository from GitHub
+</Image>
+
+Both methods will use the `develop` branch to work with the latest development state.
+
+Import the project use IntelliJ's <Kbd>Open...</Kbd> wizard from the welcome screen and browse to the path of the cloned/extracted repository.
+
+# Development
+
+## Workflow
+
+_Nord JetBrains_ follows the [official workflow documentation][jb-docs-sdk-ui-theme-workflow] to
+
+1. [Customize the UI icons and Controls][jb-docs-sdk-ui-theme-customize]
+2. [Bundle the already existing editor color theme][jb-docs-sdk-editor-theme]
+3. [Build, debug and test the theme plugin][jb-docs-sdk-test-build]
+4. [Deploy and publish the theme plugin][jb-docs-sdk-deployment]
+
+For details about the general UI design pattern please refer to the [JetBrains UI guidelines][jb-ui_guidelines].
+
+## Theme Preview
+
+IntelliJ comes with a builtin function to preview the currently opened platform plugin project.
+Open the [`nord.theme.json`][gh-repo-tree-dev-ui-theme] file and click on the _play_ icon to apply the current state of the UI theme.
+
+<Image
+  dropShadow
+  alt="Screenshot showing the UI theme preview icon bar when the theme definition file is opened"
+  fluid={props.images["ui-theme-preview.png"]}
+  rounded
+>
+  UI theme preview icon bar when the theme definition file is opened
+</Image>
+
+To apply changes made while the preview is enabled click on the _double play_ icon and disable the preview again using using the _stop_ icon.
+
+<Image
+  dropShadow
+  alt="Screenshot showing the enabled UI theme preview icon bar when the theme definition file is opened"
+  fluid={props.images["ui-theme-preview-enabled.png"]}
+  rounded
+>
+  UI theme preview icon bar when enabled
+</Image>
+
+## Visual Testing
+
+The IntelliJ SDK provides a lot of tools to develop plugins by [enabling the internal mode][jb-docs-sdk-internal_mode] that will allow to show e.g. the [LaF Defaults][jb-docs-sdk-internal_mode_laf].
+
+To enable the _internal mode_ open the [advanced IDE properties][jb-docs-ide_props] and add the following key-value pair:
+
+```properties
+idea.is.internal=true
+```
+
+Restart IntelliJ to enable the new property.
+
+<Image
+  dropShadow
+  fillSize={50}
+  alt="Screenshot showing the menu entry to edit the IDE properties"
+  fluid={props.images["ide-props.png"]}
+  rounded
+>
+  Menu entry to edit the IDE properties
+</Image>
+
+# Deployment
+
+IntelliJ comes with builtin tools to build and deploy plugins.
+
+1. Go to **Build** and **Build Project** to copy the project files to the `/out` folder and generate required metadata.
+2. Again go to **Build** and choose **Select All Plugin Modules For Deployment** to generate the JAR file.
+
+<Image
+  dropShadow
+  fillSize={50}
+  alt="Screenshot showing the menu entries for builtin tools to build and deploy platform plugins"
+  fluid={props.images["build-deploy.png"]}
+  rounded
+>
+  Menu entries for builtin tools to build and deploy platform plugins
+</Image>
+
+# Local Installation
+
+A generated JAR file can be locally installed to use the theme without uploading it to the JetBrains plugin repository.
+Go to [Settings / Preferences][jb-docs-sett_prefs] ➜ **Plugins**, click on the gear icon and select „Install Plugin From Disk...“.
+
+<Image
+  dropShadow
+  alt="Screenshot showing the menu to install plugins locally"
+  fluid={props.images["install-local.png"]}
+  rounded
+>
+  Local plugin installation
+</Image>
+
+Select the plugin JAR file and restart IntelliJ.
+
+Follow the <Link to={ROUTE_DOCS_PORTS_JETBRAINS_INSTALLATION}>Installation & Activation Guide</Link> for more details how to enable the UI theme and editor color scheme.
+
+</ShrinkedWidth>
+
+[gh-repo-tree-dev-ui-theme]: https://github.com/arcticicestudio/nord-jetbrains/blob/develop/src/nord.theme.json
+[gh-repo]: https://github.com/arcticicestudio/nord-jetbrains
+[git]: https://git-scm.com
+[jb-docs-ide_props]: https://www.jetbrains.com/help/idea/tuning-the-ide.html
+[jb-docs-sdk-deployment]: https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/deploying_plugin.html
+[jb-docs-sdk-devkit]: https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/using_dev_kit.html
+[jb-docs-sdk-editor-theme]: http://www.jetbrains.org/intellij/sdk/docs/reference_guide/ui_themes/themes_extras.html
+[jb-docs-sdk-internal_mode_laf]: http://www.jetbrains.org/intellij/sdk/docs/reference_guide/internal_actions/internal_ui_lafd.html
+[jb-docs-sdk-internal_mode]: http://www.jetbrains.org/intellij/sdk/docs/reference_guide/internal_actions/enabling_internal.html
+[jb-docs-sdk-test-build]: http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/running_and_debugging_a_plugin.html
+[jb-docs-sdk-ui-theme-customize]: http://www.jetbrains.org/intellij/sdk/docs/reference_guide/ui_themes/themes_customize.html
+[jb-docs-sdk-ui-theme-workflow]: http://www.jetbrains.org/intellij/sdk/docs/reference_guide/ui_themes/themes.html#custom-ui-theme-workflow
+[jb-docs-sett_prefs]: https://www.jetbrains.com/help/idea/settings-preferences-dialog.html
+[jb-intellij]: https://www.jetbrains.com/idea
+[jb-ui_guidelines]: https://jetbrains.github.io/ui
+[jb-whatsnew-2019.1]: https://www.jetbrains.com/idea/whatsnew/#v2019-1
