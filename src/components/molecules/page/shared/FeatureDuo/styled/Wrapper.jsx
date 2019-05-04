@@ -22,8 +22,8 @@ const Wrapper = styled.div`
   grid-row-gap: 4em;
   justify-items: center;
 
-  ${({ theme, verticalOnly }) => theme.media.tabletLandscape`
-    grid-template-columns: ${!verticalOnly && "repeat(2, 1fr)"};
+  ${({ columnRatio, theme, verticalOnly }) => theme.media.tabletLandscape`
+    grid-template-columns: ${!verticalOnly && `${columnRatio[0]}fr ${columnRatio[1]}fr`};
     grid-column-gap: 2em;
     align-items: center;
     grid-row-gap: 8em;
