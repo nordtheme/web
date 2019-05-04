@@ -45,6 +45,7 @@ const PosterImage = styled(Image)`
   left: 0;
   right: 0;
   bottom: 0;
+  margin-bottom: ${({ hasCaption }) => hasCaption && "2em"};
   opacity: ${({ videoLoaded }) => (videoLoaded ? 0 : 1)};
   transition: ${transitionThemedModeSwitch("opacity", 0, "ease")};
 `;
@@ -97,6 +98,7 @@ const Video = ({ autoPlay, children, dropShadow, fillSize, poster, rounded, sour
         dropShadow={dropShadow}
         fillSize={fillSize}
         fluid={poster}
+        hasCaption={!!children}
         rounded={rounded}
         videoLoaded={videoLoaded}
       />
