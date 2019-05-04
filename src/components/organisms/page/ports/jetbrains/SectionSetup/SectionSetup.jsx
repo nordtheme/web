@@ -9,62 +9,69 @@
 
 import React from "react";
 
+import Button from "atoms/core/Button";
+import Link from "atoms/core/Link";
+import { WaveFooter } from "atoms/core/vectors/divider";
 import { Content } from "containers/core/Section";
-import { Image } from "atoms/core/mdx-elements";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { ROUTE_DOCS_PORTS_JETBRAINS, ROUTE_PORTS_JETBRAINS } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
-import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
-import Button from "atoms/core/Button";
-import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
+import { Image } from "atoms/core/mdx-elements";
 import { usePortsMetadata } from "hooks";
+import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
 
 import { Section } from "../../../shared";
-import WaveDivider from "./styled/WaveDivider";
 
-const SECTION_ID = sectionIdFor(ROUTE_PORTS_JETBRAINS, 0);
+const SECTION_ID = sectionIdFor(ROUTE_PORTS_JETBRAINS, 5);
 
 /**
  * The component that represents the hero section for the landing page of the "Nord JetBrains" port project.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.9.0
+ * @since 0.12.0
  */
-const SectionHero = ({ assets }) => {
+const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();
   const { pluginRepositoryUrl } = portMetadata.find(port => port.name === "nord-jetbrains");
 
   return (
-    <Section id={SECTION_ID}>
+    <Section id={SECTION_ID} variant="secondary">
       <Content centered decorated>
         <FeatureDuo verticalOnly>
           <Text verticalOnly>
-            <Headline large>Nord JetBrains</Headline>
-            <Subline>An arctic, north-bluish clean and elegant JetBrains IDE UI and editor color theme.</Subline>
+            <Headline>Installation and updates with one click.</Headline>
+            <Subline>
+              Install Nord from the <Link href={pluginRepositoryUrl}>official JetBrains Plugin Repository</Link> for all
+              your favorite JetBrain IDEs with one click including automatic updates to always use the latest Nord
+              version.
+            </Subline>
             <Actions>
-              <Button href={pluginRepositoryUrl} variant="primary">
-                Install
+              <Button to={pluginRepositoryUrl} variant="primary">
+                Get It Now
               </Button>
               <Button ghost outlined quiet to={ROUTE_DOCS_PORTS_JETBRAINS} variant="primary">
-                Documentation
+                Learn More
               </Button>
             </Actions>
           </Text>
           <Visualization>
             <Image
-              alt="Screenshot showing the IDE UI and code editor elements with Go functions for a RabbitMQ AMQP client"
+              alt="Screenshot showing the builtin IDE plugin marketplace"
               dropShadow
-              fluid={assets.images["ui-overview-go.png"]}
+              fluid={assets.images["ui-plugins-installed.png"]}
               rounded
-            />
+            >
+              <span>JetBrains builtin IDE plugin marketplace.</span>
+            </Image>
           </Visualization>
         </FeatureDuo>
       </Content>
-      <WaveDivider />
+      <WaveFooter />
     </Section>
   );
 };
 
-SectionHero.propTypes = usePortsAssetsPropTypes;
+SectionSetup.propTypes = usePortsAssetsPropTypes;
 
-export default SectionHero;
+export default SectionSetup;
