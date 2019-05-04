@@ -13,7 +13,7 @@ import Section, { Content } from "containers/core/Section";
 import { ROUTE_DOCS } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
 
-import { Headline, Subline } from "./styled";
+import { Headline, Subline } from "../shared";
 
 const SECTION_ID = sectionIdFor(ROUTE_DOCS, 0);
 
