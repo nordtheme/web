@@ -8,6 +8,138 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.12.0
+
+![Release Date: 2019-05-05](https://img.shields.io/badge/Release_Date-2019--05--05-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/14) [![Milestone](https://img.shields.io/badge/Milestone-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/12)
+
+This version mainly focused on the [transition of the „Nord JetBrains“ port project][gh-140]. The implementation include port specific [“landing”][home-ports-jetbrains] and [docs][home-docs-ports-jetbrains] page, the [installation & activation guide][home-docs-ports-jetbrains-install] and [development/contribution guide][home-docs-ports-jetbrains-dev].
+
+## Features
+
+**„Nord JetBrains“ Transition** — #140 ⇄ #142 (⊶ 31a8666a)
+↠ Transferred all documentations, assets and visualizations from „Nord JetBrains“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the Nord repository][nord-jetbrains#48] to get an overview of what has changed for Nord JetBrains and what has been done to migrate to Nord Docs.
+
+### Landing Page
+
+<p align="center"><a href="https://www.nordtheme.com/ports/jetbrains" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/57189976-67530080-6f15-11e9-9938-7ad5feb71d13.png" alt="Preview: Nord JetBrains Port Project Landing Page"/></a></p>
+
+### Docs Page
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/jetbrains" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/57189922-ba788380-6f14-11e9-8900-11e96ef98b0a.png" alt="Preview: Nord JetBrains Docs Page"/></a></p>
+
+### Installation & Activation Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/jetbrains/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/57189920-ba788380-6f14-11e9-9595-34a3f4effd2d.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+
+### Development Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/jetbrains/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/57189979-6fab3b80-6f15-11e9-9492-e473b244ea36.png" alt="Preview: Installation & Development Guide Page"/></a></p>
+
+## Bug Fixes
+
+**Invalid image paths after asset restructuring** — #136 (⊶ 819d3258)
+↠ Fixed invalid image path for the repository hero caused by [PR #135][gh-135].
+
+**Invalid download URL for Apple macOS color swatch file** — #141 (⊶ 2505faf5) reported by [@jblanton on Twitter][tw-1123005668762349571]
+↠ Fixed the invalid download URL for the [Apple macOS color swatch file in the docs][home-docs-swatch-macos] that used a lowercase `n` instead of an uppercase `N` for the file name.
+
+## Task
+
+**„Nord JetBains“ project renaming** — #138 (⊶ b435e0ef)
+↠ Adapted the port docs, pages and components to the renaming of the „Nord JetBain“ project (`nord-jetbrains-editor` to `nord-jetbrains`) like documented in [arcticicestudio/nord-jetbrains#44][nord-jetbrains#44].
+
+**Dependency Update February-April 2019** — #137 ⇄ #139 (⊶ 9de7e7b3)
+↠ Completed the regular batch update for outdated production and development dependencies.
+
+The largest change is the migration to [MDX 1.0.0][mdx-blog-v1] using the official [migration v0 to v1 guide][mdx-blog-v1-mig].
+
+React has been been updated to the latest patch version [16.8.6][facebook/react-v16.8.6] and the `prop-types` package now [comes with a handy new `elementType` prop type][facebook/prop-types#211] that can be used for React components.
+
+[Polished has been updated to the large 3.0.0 version milestone][styled-components/polished-v3.0.0] that comes with many features in form of new modules, improvements like a new error system as well as a a roadmap for v4.
+The `readableColor` helper now offers the option to set the color(s) it returns for light or dark colors instead of only returning `white` or `black` based on the passed colors luminosity. `stripUnit` now offers the option to return the value and unit as an array, replacing the functionality of `getValueAndUnit` that'll is now deprecated and will be removed in v4.
+All color modules will now also safely handle the `transparent` keyword instead of erroring out.
+See the release notes for all details and changes.
+
+[React Waypoint has been updated to major version 9][brigade/react-waypoint-v9] that comes with improvements in library size and minifications in form of named exports for the `Waypoint` module as well as for all defined constants.
+
+As of Babel 7.4.0, the [@babel/polyfill package has been deprecated in favor of directly including `core-js/stable` and `regenerator-runtime/runtime`][babel-polyfill]. Therefore the package has been replaced with the [`core-js`][npm-core-js] package.
+
+[Prettier 1.17.0][prettier-v1.17.0] now allows to use shared configurations making it much easier to setup new projects and keep the config code base at one single-point-of-truth™. Also [Markdown tables are now kept compact when reformatting would exceed the print width][prettier-v1.17.0-md-table-struct] making largely improving the readability.
+
+The [`renderHook` helper has been extracted from `react-testing-library`][kentcdodds/react-testing-library-v6.0.0] into the [`react-hooks-testing-library` standalone package][npm-react-hooks-testing-library] for better modularization. Therefore the package has been added as development dependency in order to test Hook based implementations.
+
+Gatsby and all official plugins have been updated to the latest versions. This comes with new features that [allow environment variables to be replaced per environment][gatsbyjs/gatsby#10565].
+
+[`gatsby-plugin-manifest` fixes the incorrect favicons size bug][gatsbyjs/gatsby#12081] that often appeared as warning in the console.
+
+[`gatsby-plugin-sharp` now comes with a `defaultQuality` option][gatsby-plugin-sharp-defaultquality] to define the default quality for processed images instead of only allowing to set the quality through the GraphQL query.
+
+[`gatsby-image` now comes with a `durationFadeIn` option][gatsbyjs/gatsby#13566] that accepts a number instead of boolean to customize animation duration.
+
+###### Production Dependencies
+
+- ~~@babel/polyfill~~ **deprecated and removed in favor of including `core-js/stable` directly**
+- @mdx-js/tag `0.18.0` ➜ `0.20.3`
+- 🆕 core-js `2.6.5`
+- gatsby `2.0.75` ➔ `2.0.117`
+- gatsby `2.1.4` ➜ `2.3.29`
+- gatsby-image `2.0.30` ➜ `2.0.40`
+- gatsby-mdx `0.4.0` ➜ `0.6.2`
+- gatsby-plugin-canonical-urls `2.0.10` ➜ `2.0.12`
+- gatsby-plugin-catch-links `2.0.10` ➜ `2.0.13`
+- gatsby-plugin-google-gtag `1.0.13` ➜ `1.0.16`
+- gatsby-plugin-lodash `3.0.4` ➜ `3.0.5`
+- gatsby-plugin-manifest `2.0.17` ➜ `2.0.29`
+- gatsby-plugin-netlify `2.0.9` ➜ `2.0.15`
+- gatsby-plugin-offline `2.0.23` ➜ `2.0.25`
+- gatsby-plugin-react-helmet `3.0.6` ➜ `3.0.12`
+- gatsby-plugin-remove-trailing-slashes `2.0.7` ➜ `2.0.11`
+- gatsby-plugin-sharp `2.0.23` ➜ `2.0.35`
+- gatsby-plugin-sitemap `2.0.5` ➜ `2.0.12`
+- gatsby-plugin-styled-components `3.0.5` ➜ `3.0.7`
+- gatsby-plugin-svgr `2.0.1` ➜ `2.0.2`
+- gatsby-source-filesystem `2.0.20` ➜ `2.0.32`
+- gatsby-source-graphql `2.0.10` ➜ `2.0.18`
+- gatsby-transformer-sharp `2.1.15` ➜ `2.1.18`
+- gatsby-transformer-yaml `2.1.8` ➜ `2.1.12`
+- inter-ui `3.3.2` ➜ `3.5.0`
+- polished `2.3.3` ➜ `3.2.0`
+- prop-types `15.6.2` ➜ `15.7.2`
+- react `16.8.3` ➜ `16.8.6`
+- react-dom `16.8.3` ➜ `16.8.6`
+- react-pose `4.0.6` ➜ `4.0.8`
+- react-spring `8.0.7` ➜ `8.0.19`
+- react-waypoint `8.1.0` ➜ `9.0.2`
+- semver `5.6.0` ➜ `6.0.0`
+- styled-components `4.1.3` ➜ `4.2.0`
+- typeface-rubik `0.0.54` ➜ `0.0.72`
+
+###### Development Dependencies
+
+- @babel/core `7.2.2` ➔ `7.4.3`
+- @babel/plugin-proposal-class-properties `7.3.0` ➔ `7.4.0`
+- @babel/plugin-proposal-nullish-coalescing-operator `7.2.0` ➔ `7.4.3`
+- @mdx-js/mdx `0.20.1` ➔ `1.0.14`
+- @mdx-js/tag ␡ **Migrated to MDX v1 that replaced it with the new `@mdx-js/react` pragma package!**
+- @mdx-js/react 🆕 `1.0.6`
+- @svgr/webpack `4.1.0` ➔ `4.2.0`
+- babel-jest `24.1.0` ➔ `24.7.1`
+- babel-plugin-react-remove-properties `0.2.5` ➔ `0.3.0`
+- babel-preset-gatsby `0.1.7` ➜ `0.1.11`
+- eslint `5.14.0` ➜ `5.16.0`
+- eslint-plugin-import `2.16.0` ➜ `2.17.2`
+- eslint-plugin-react-hooks `1.0.2` ➜ `1.6.0`
+- husky `1.3.1` ➜ `2.1.0`
+- jest `24.1.0` ➜ `24.7.1`
+- jest-dom `3.0.2` ➜ `3.1.3`
+- jest-junit `6.2.1` ➜ `6.3.0`
+- lint-staged `8.1.3` ➜ `8.1.5`
+- prettier `1.16.4` ➜ `1.17.0`
+- react-hooks-testing-library 🆕 `0.5.0`
+- react-testing-library `5.5.3` ➜ `6.1.2`
+- webpack-bundle-analyzer `3.0.3` ➜ `3.3.2`
+
 # 0.11.0
 
 ![Release Date: 2019-03-16](https://img.shields.io/badge/Release_Date-2019--03--16-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/13) [![Milestone](https://img.shields.io/badge/Milestone-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/11)
@@ -1452,3 +1584,32 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 <!-- v0.11.0 -->
 
 [nord#112]: https://github.com/arcticicestudio/nord/issues/112
+
+<!-- v0.12.0 -->
+
+[babel-polyfill]: https://babeljs.io/docs/en/next/babel-polyfill.html
+[brigade/react-waypoint-v9]: https://github.com/brigade/react-waypoint/releases/tag/v9.0.0
+[facebook/prop-types#211]: https://github.com/facebook/prop-types/pull/211
+[facebook/react-v16.8.6]: https://github.com/facebook/react/releases/tag/v16.8.6
+[gatsby-plugin-sharp-defaultquality]: https://github.com/gatsbyjs/gatsby/commit/8af982614e994169d65d299d16a5cfa535aa7572
+[gatsbyjs/gatsby#10565]: https://github.com/gatsbyjs/gatsby/pull/10565
+[gatsbyjs/gatsby#12081]: https://github.com/gatsbyjs/gatsby/pull/12081
+[gatsbyjs/gatsby#13566]: https://github.com/gatsbyjs/gatsby/pull/13566
+[gh-135]: https://github.com/arcticicestudio/nord-docs/issues/135
+[gh-140]: https://github.com/arcticicestudio/nord-docs/issues/140
+[home-docs-ports-jetbrains-dev]: https://www.nordtheme.com/docs/ports/jetbrains/development
+[home-docs-ports-jetbrains-install]: https://www.nordtheme.com/docs/ports/jetbrains/installation
+[home-docs-ports-jetbrains]: https://www.nordtheme.com/docs/ports/jetbrains
+[home-docs-swatch-macos]: https://www.nordtheme.com/docs/swatches#apple-macos
+[home-ports-jetbrains]: https://www.nordtheme.com/ports/jetbrains
+[kentcdodds/react-testing-library-v6.0.0]: https://github.com/kentcdodds/react-testing-library/releases/tag/v6.0.0
+[mdx-blog-v1-mig]: https://mdxjs.com/migrating/v1
+[mdx-blog-v1]: https://mdxjs.com/blog/v1
+[nord-jetbrains#44]: https://github.com/arcticicestudio/nord-jetbrains/issues/44
+[nord-jetbrains#48]: https://github.com/arcticicestudio/nord-jetbrains/issues/48
+[npm-core-js]: https://www.npmjs.com/package/core-js
+[npm-react-hooks-testing-library]: https://www.npmjs.com/package/react-hooks-testing-library
+[prettier-v1.17.0-md-table-struct]: https://prettier.io/blog/2019/04/12/1.17.0.html#do-not-align-table-contents-if-it-exceeds-the-print-width-and-prose-wrap-never-is-set-5701-by-chenshuai2144
+[prettier-v1.17.0]: https://prettier.io/blog/2019/04/12/1.17.0.html
+[styled-components/polished-v3.0.0]: https://github.com/styled-components/polished/releases/tag/v3.0.0
+[tw-1123005668762349571]: https://twitter.com/jblanton/status/1123005668762349571
