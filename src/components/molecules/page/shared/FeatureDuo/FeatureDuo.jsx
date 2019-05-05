@@ -19,10 +19,19 @@ import { Wrapper } from "./styled";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
  */
-const FeatureDuo = ({ children, ...passProps }) => <Wrapper {...passProps}>{children}</Wrapper>;
+const FeatureDuo = ({ children, columnRatio, ...passProps }) => (
+  <Wrapper columnRatio={columnRatio} {...passProps}>
+    {children}
+  </Wrapper>
+);
 
 FeatureDuo.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  columnRatio: PropTypes.arrayOf(PropTypes.number)
+};
+
+FeatureDuo.defaultProps = {
+  columnRatio: [1, 1]
 };
 
 export default FeatureDuo;

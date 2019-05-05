@@ -7,7 +7,4 @@
  * License:    MIT
  */
 
-import SectionHero from "./SectionHero";
-
-/* eslint-disable-next-line import/prefer-default-export */
-export { SectionHero };
+export { default } from "./SectionSyntax";

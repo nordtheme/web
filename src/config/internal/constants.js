@@ -47,6 +47,14 @@ const BASE_DIR_ASSETS = `${BASE_DIR_SRC}/assets`;
 const BASE_DIR_ASSETS_IMAGES = `${BASE_DIR_ASSETS}/images`;
 
 /**
+ *  The relative path of the assets directory for videos starting from the project root.
+ *
+ * @constant {string}
+ * @since 0.12.0
+ */
+const BASE_DIR_ASSETS_VIDEOS = `${BASE_DIR_ASSETS}/videos`;
+
+/**
  *  The relative path of the build base directory starting from the project root.
  *
  * @constant {string}
@@ -127,6 +135,17 @@ const BLOG_POST_IMAGE_COVER_MIN_WIDTH = BLOG_POST_IMAGE_MIN_HEIGHT * 0.85;
 const BLOG_POST_IMAGE_HERO_MIN_WIDTH = BLOG_POST_IMAGE_MIN_HEIGHT * 1.8;
 
 /**
+ * The internal type for Gatsby sharp images.
+ *
+ * @constant {string}
+ * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-transformer-sharp
+ * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sharp
+ * @see https://github.com/lovell/sharp
+ * @since 0.12.0
+ */
+const NODE_TYPE_IMAGE_SHARP = "ImageSharp";
+
+/**
  * The internal type for MDX nodes.
  *
  * @constant {string}
@@ -146,6 +165,7 @@ const REGEX_BLOG_POST_DATE = /([0-9]+)\/([0-9]+)\/([0-9]+)\/(.+)/;
 module.exports = {
   BASE_DIR_ASSETS,
   BASE_DIR_ASSETS_IMAGES,
+  BASE_DIR_ASSETS_VIDEOS,
   BASE_DIR_BUILD,
   BASE_DIR_BUILD_REPORTS,
   BASE_DIR_BUILD_REPORTS_COVERAGE,
@@ -157,6 +177,7 @@ module.exports = {
   BLOG_POST_IMAGE_BANNER_MIN_WIDTH,
   BLOG_POST_IMAGE_COVER_MIN_WIDTH,
   BLOG_POST_IMAGE_HERO_MIN_WIDTH,
+  NODE_TYPE_IMAGE_SHARP,
   NODE_TYPE_MDX,
   REGEX_BLOG_POST_DATE
 };

@@ -15,7 +15,7 @@
  * @see https://reactjs.org/docs/hooks-intro.html
  */
 
+import usePortsAssets from "./usePortsAssets";
 import usePortsMetadata from "./usePortsMetadata";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { usePortsMetadata };
+export { usePortsAssets, usePortsMetadata };

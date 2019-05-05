@@ -4,6 +4,8 @@ import { ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { ReactComponent as PaintBrush } from "assets/images/illustrations/paint-brush.svg";
 import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_DOCS_SWATCHES } from "config/routes/mappings";
 
+import WIPNotice from "../../shared/docs/wip-notice";
+
 export const frontmatter = {
   title: "Installation and Usage",
   subline: "Learn how to install Nord, integrate the palettes and use the colors in your own projects."
@@ -18,6 +20,8 @@ export const frontmatter = {
 </ShrinkedWidth>
 
 <ShrinkedWidth>
+
+<WIPNotice />
 
 Nord comes in many formats to cover a wide range of project types and tech stacks.
 It's <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>colors and palettes</Link> have especially been designed for UI elements and code syntax highlighting often found in projects build with web technologies like websites.

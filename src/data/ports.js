@@ -198,10 +198,11 @@ const ports = [
     searchTerms: ["implementation", "import", "java", "jdk", "jvm", "library", "openjdk", "oracle", "reference"]
   },
   {
-    name: "nord-jetbrains-editor",
-    projectName: "JetBrains Editor",
+    name: "nord-jetbrains",
+    projectName: "JetBrains",
     logoComponent: JetBrains,
     projectUrl: "https://www.jetbrains.com",
+    pluginRepositoryUrl: "https://plugins.jetbrains.com/plugin/10321-nord",
     searchTerms: [
       ...tokensExtendingSupport,
       ...tokensGUI,

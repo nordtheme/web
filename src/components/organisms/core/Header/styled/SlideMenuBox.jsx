@@ -3,9 +3,8 @@ import posed from "react-pose";
 import { em } from "polished";
 
 import { motion, zIndexFor, Z_INDEX_ELEMENTS } from "styles/theme";
-import { HEADER_HEIGHT, HEADER_HEIGHT_PINNED } from "organisms/core/Header";
 
-import { backgroundColorVariants } from "../shared/styles";
+import { backgroundColorVariants, HEADER_HEIGHT, HEADER_HEIGHT_PINNED } from "../shared/styles";
 import { slideMenuNavigationPoseConfig } from "./poseConfig";
 
 /**

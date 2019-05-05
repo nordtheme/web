@@ -41,6 +41,7 @@ export const gqlFragmentContentBlogPostMediaFile = graphql`
     extension
     name
     publicURL
+    relativeDirectory
     relativePath
   }
 `;

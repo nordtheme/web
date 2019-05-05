@@ -11,21 +11,24 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/ports/jetbrains-editor";
+import { DocsPage, SectionContents, SectionHero } from "organisms/page/docs";
 
 /**
- * The component that represents the landing page of the "Nord JetBrains Editor" port project.
+ * The component that represents the docs page.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.9.0
+ * @since 0.3.0
  */
-const JetBrainsEditor = ({ location: { pathname } }) => (
-  <BaseLayout pathName={pathname}>
-    <SectionHero />
+const Docs = ({ location: { pathname } }) => (
+  <BaseLayout headerVariant="tertiary" pathName={pathname}>
+    <DocsPage>
+      <SectionHero />
+      <SectionContents />
+    </DocsPage>
   </BaseLayout>
 );
 
-JetBrainsEditor.propTypes = locationPropTypes;
+Docs.propTypes = locationPropTypes;
 
-export default JetBrainsEditor;
+export default Docs;

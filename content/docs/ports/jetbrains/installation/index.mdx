@@ -1,0 +1,83 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code, Kbd } from "atoms/core/html-elements";
+import { ReactComponent as Plugin } from "assets/images/illustrations/plugin.svg";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Activation",
+  subline: "Get up and running in one click with the official JetBrains Plugin Repository."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <Plugin />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+<Banner
+  title={
+    <>
+      Users with currently installed versions less or equal to <Code>0.4.0</Code> must reinstall the plugin!
+    </>
+  }
+  variant="warn"
+>
+  As of version <Code>0.5.0</Code> the{" "}
+  <Link
+    href="https://www.jetbrains.org/intellij/sdk/docs/basics/plugin_structure/plugin_configuration_file.html"
+    variant="minimal"
+  >
+    plugin XML ID
+  </Link>{" "}
+  changed to better fit the package hierarchy naming scheme.
+  This means plugin versions less or equal to <Code>0.4.0</Code> (old ID) won't receive updates automatically.
+
+To update to the latest version and re-enable auto updates again it is **required to uninstall and install the plugin once**!
+
+</Banner>
+
+Thanks to the [official JetBrains Plugin Repository][jb-plug-repo-nord], _Nord JetBrains_ can be installed for all supported products with one click.
+
+Go to [Settings / Preferences][jb-docs-sett_prefs] ➜ **Plugins**, switch to the **Marketplace** tab and search for `Nord`.
+
+<Image dropShadow fluid={props.images["ui-plugins-marketplace.png"]} rounded />
+
+Click on the <Kbd>Install</Kbd> button and restart the IDE to finish the installation.
+
+<Image dropShadow fluid={props.images["ui-plugins-installed.png"]} rounded />
+
+## Activation
+
+_Nord JetBrains_ provides a UI theme and editor color scheme and allows both to be used individually.
+
+### UI Theme
+
+Beginning with the 2019.1 JetBrain product releases, [custom UI Themes][jb-docs-sdk-ui_theme] are available for all supported IDEs.
+
+To activate Nord's UI theme go to [Settings / Preferences][jb-docs-sett_prefs] ➜ **Appearance & Behavior** ➜ **Appearance**, select `Nord` from the _Theme_ drop-down menu and <Kbd>Apply</Kbd> the change.
+
+<Image dropShadow fluid={props.images["ui-settings-appearance.png"]} rounded />
+
+### Editor Color Scheme
+
+Using a custom [color scheme][jb-docs-color_fonts] is a feature that has been supported almost since the first JetBrains product versions.
+
+To activate Nord's editor color scheme go to [Settings / Preferences][jb-docs-sett_prefs] ➜ **Editor** ➜ **Color Theme**, select `Nord` from the _Scheme_ drop-down menu and <Kbd>Apply</Kbd> the change.
+
+<Image dropShadow fluid={props.images["ui-settings-color-scheme.png"]} rounded />
+
+</ShrinkedWidth>
+
+[jb-docs-color_fonts]: https://www.jetbrains.com/help/idea/configuring-colors-and-fonts.html
+[jb-docs-sdk-ui_theme]: https://www.jetbrains.org/intellij/sdk/docs/reference_guide/ui_themes/themes_intro.html
+[jb-docs-sett_prefs]: https://www.jetbrains.com/help/idea/settings-preferences-dialog.html
+[jb-plug-repo-nord]: https://plugins.jetbrains.com/plugin/10321-nord
+[jb-plug-repo]: https://plugins.jetbrains.com

@@ -36,6 +36,7 @@ const {
 const {
   BASE_DIR_CONTENT,
   BASE_DIR_ASSETS_IMAGES,
+  BASE_DIR_ASSETS_VIDEOS,
   BASE_DIR_CONFIG,
   BASE_DIR_PAGES
 } = require("./src/config/internal/constants");
@@ -89,8 +90,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
+        name: `${sourceInstanceTypes.images.id}`,
         path: `${__dirname}/${BASE_DIR_ASSETS_IMAGES}`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `${sourceInstanceTypes.videos.id}`,
+        path: `${__dirname}/${BASE_DIR_ASSETS_VIDEOS}`
       }
     },
     {
