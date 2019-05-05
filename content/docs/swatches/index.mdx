@@ -4,6 +4,8 @@ import { ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { ReactComponent as ColorSwatches } from "assets/images/illustrations/color-swatches-stripes.svg";
 import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_DOCS_USAGE } from "config/routes/mappings";
 
+import WIPNotice from "../../shared/docs/wip-notice";
+
 export const frontmatter = {
   title: "Swatches",
   subline:
@@ -20,10 +22,11 @@ export const frontmatter = {
 
 <ShrinkedWidth>
 
+<WIPNotice />
+
 Next to the many ways of <Link to={ROUTE_DOCS_USAGE}>integrating Nord into your project</Link>, all <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>color palettes of Nord</Link> are also available in various native color swatch formats.
 
-> This is a _living document_ which means it is **work in progress**, not completed yet and **can change at any time** while the project is still in development!
-> There will also be detailed **install instructions** for all supported formats, but in the meantime please refer to the documentation of the specific application.
+For detailed install instructions of all supported formats please refer to the documentation of the specific application.
 
 ### Adobe Products
 

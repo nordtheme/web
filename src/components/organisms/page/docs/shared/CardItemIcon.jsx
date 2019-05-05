@@ -19,7 +19,7 @@ import { cardIconPropTypes } from "./propTypes";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.8.0
  */
-const CardItemIcon = ({ accentColor, iconComponent: SvgIcon, svgType, ...passProps }) => {
+const CardItemIcon = ({ accentColor, iconComponent: SvgIcon, iconOutlined, svgType, ...passProps }) => {
   const Icon = styled(SvgIcon)`
     width: 1.8em;
     ${svgType === "stroke" ? `stroke: ${accentColor}` : `fill: ${accentColor}`};
@@ -28,7 +28,7 @@ const CardItemIcon = ({ accentColor, iconComponent: SvgIcon, svgType, ...passPro
       margin-right: 1em;
     `};
   `;
-  return <Icon {...passProps} />;
+  return <Icon outlined={iconOutlined} {...passProps} />;
 };
 
 CardItemIcon.propTypes = cardIconPropTypes;

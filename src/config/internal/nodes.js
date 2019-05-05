@@ -54,7 +54,9 @@ const requiredBlogPostImages = {
  */
 const sourceInstanceTypes = {
   blog: { id: "blog", path: "blog" },
-  docs: { id: "docs", path: "docs" }
+  docs: { id: "docs", path: "docs" },
+  images: { id: "images", path: "images" },
+  videos: { id: "videos", path: "videos" }
 };
 
 /**

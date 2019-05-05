@@ -8,10 +8,18 @@
  */
 
 import React from "react";
-import { SectionHero } from "organisms/page/ports/jetbrains";
 
+import {
+  SectionEditorDetails,
+  SectionHero,
+  SectionIntroduction,
+  SectionSetup,
+  SectionSyntax,
+  SectionUIElements
+} from "organisms/page/ports/jetbrains";
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
+import { usePortsAssets } from "hooks";
 
 /**
  * The component that represents the landing page of the "Nord JetBrains" port project.
@@ -20,11 +28,20 @@ import BaseLayout from "layouts/core/BaseLayout";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const JetBrains = ({ location: { pathname } }) => (
-  <BaseLayout pathName={pathname}>
-    <SectionHero />
-  </BaseLayout>
-);
+const JetBrains = ({ location: { pathname } }) => {
+  const assets = usePortsAssets("jetbrains");
+
+  return (
+    <BaseLayout pathName={pathname}>
+      <SectionHero assets={assets} />
+      <SectionIntroduction assets={assets} />
+      <SectionSyntax assets={assets} />
+      <SectionEditorDetails assets={assets} />
+      <SectionUIElements assets={assets} />
+      <SectionSetup assets={assets} />
+    </BaseLayout>
+  );
+};
 
 JetBrains.propTypes = locationPropTypes;
 

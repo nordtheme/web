@@ -17,7 +17,7 @@ import { topicsGettingStarted, topicsReferences } from "data/components/organism
 import { sectionIdFor } from "utils";
 import { colors } from "styles/theme";
 
-import { ContentsCard, Grid } from "./styled";
+import { ContentsCard, CardGrid } from "../shared";
 
 const SECTION_ID = sectionIdFor(ROUTE_DOCS, 1);
 
@@ -31,7 +31,7 @@ const SECTION_ID = sectionIdFor(ROUTE_DOCS, 1);
 const SectionContents = () => (
   <Section id={SECTION_ID} variant="tertiary">
     <Content centered>
-      <Grid>
+      <CardGrid>
         <ContentsCard
           accentColor={colors.nord8}
           logoComponent={Zap}
@@ -44,7 +44,7 @@ const SectionContents = () => (
         <ContentsCard accentColor={colors.nord10} logoComponent={BookOpen} title="References" topics={topicsReferences}>
           Learn about the design guidelines, detailed technical views and all port projects of Nord.
         </ContentsCard>
-      </Grid>
+      </CardGrid>
     </Content>
     <WaveFooter />
   </Section>

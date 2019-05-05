@@ -16,10 +16,15 @@ const {
   nodeFields,
   optionalBlogPostImages,
   optionalBlogPostVideos,
-  sourceInstanceTypes,
-  requiredBlogPostImages
+  requiredBlogPostImages,
+  sourceInstanceTypes
 } = require("../src/config/internal/nodes");
-const { BASE_DIR_CONTENT, NODE_TYPE_MDX, REGEX_BLOG_POST_DATE } = require("../src/config/internal/constants");
+const {
+  BASE_DIR_CONTENT,
+  NODE_TYPE_IMAGE_SHARP,
+  NODE_TYPE_MDX,
+  REGEX_BLOG_POST_DATE
+} = require("../src/config/internal/constants");
 const { ROUTE_BLOG, ROUTE_DOCS } = require("../src/config/routes/mappings");
 
 /**
@@ -51,6 +56,7 @@ const extractBlogPostDateFromPath = path => {
  */
 const onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
+
   if (node.internal.type === NODE_TYPE_MDX) {
     const contentFileResourceSlug = createFilePath({
       node,
@@ -160,6 +166,52 @@ const onCreateNode = ({ node, getNode, actions }) => {
         node,
         name: `${nodeFields.slugParentRoute.name}`,
         value: `${ROUTE_DOCS}`
+      });
+    }
+  }
+
+  if (node.internal.type === NODE_TYPE_IMAGE_SHARP) {
+    const contentFileResourceSlug = createFilePath({
+      node,
+      getNode,
+      basePath: `${BASE_DIR_CONTENT}`,
+      trailingSlash: false
+    });
+    const { relativeDirectory, sourceInstanceName } = getNode(node.parent);
+
+    if (sourceInstanceName === sourceInstanceTypes.images.id) {
+      createNodeField({
+        node,
+        name: `${nodeFields.contentSourceType.name}`,
+        value: `${sourceInstanceTypes.images.id}`
+      });
+      createNodeField({
+        node,
+        name: `${nodeFields.relativeDirectory.name}`,
+        value: `${relativeDirectory}`
+      });
+      createNodeField({
+        node,
+        name: `${nodeFields.slug.name}`,
+        value: contentFileResourceSlug
+      });
+    }
+
+    if (sourceInstanceName === sourceInstanceTypes.videos.id) {
+      createNodeField({
+        node,
+        name: `${nodeFields.contentSourceType.name}`,
+        value: `${sourceInstanceTypes.videos.id}`
+      });
+      createNodeField({
+        node,
+        name: `${nodeFields.relativeDirectory.name}`,
+        value: `${relativeDirectory}`
+      });
+      createNodeField({
+        node,
+        name: `${nodeFields.slug.name}`,
+        value: contentFileResourceSlug
       });
     }
   }

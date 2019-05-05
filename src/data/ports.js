@@ -202,6 +202,7 @@ const ports = [
     projectName: "JetBrains",
     logoComponent: JetBrains,
     projectUrl: "https://www.jetbrains.com",
+    pluginRepositoryUrl: "https://plugins.jetbrains.com/plugin/10321-nord",
     searchTerms: [
       ...tokensExtendingSupport,
       ...tokensGUI,
