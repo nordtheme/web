@@ -34,6 +34,6 @@ module.exports = {
   },
   footnotes: true,
   gatsbyRemarkPlugins: [],
-  hastPlugins: [rehypeSlug],
-  mdPlugins: [remarkBreaks, [remarkGitHub, remarkGitHubOptions]]
+  rehypePlugins: [rehypeSlug],
+  remarkPlugins: [remarkBreaks, [remarkGitHub, remarkGitHubOptions]]
 };
