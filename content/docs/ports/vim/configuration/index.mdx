@@ -1,0 +1,292 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as WindowConfiguration } from "assets/images/illustrations/window-configuration.svg";
+import { ROUTE_DOCS_PORTS_VIM_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Configuration",
+  subline:
+    "From UI elements to syntax highlighting up to font rendering — configure the theme to match your personal preferences"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowConfiguration />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+Nord Vim is designed to provide a good UX out-of-the-box, but there is a reason why principles like _themes_ exist a all: Everyone has different preferences and that's a good thing!
+
+To ensure Nord Vim fit your needs it comes with configurations for UI elements, the code syntax highlighting and font rendering to make the theme as flexible as possible while still providing sane defaults.
+
+All theme configuration variables must be added to either Vim's user-level or system-wide configuration file(s) that are referred to as `vimrc` in this documentation. The location of of the files and more details can be found in [Vim's official `vimrc` documentation][vimhelp-vimrc].
+
+<Banner
+  title={
+    <>
+      All configuration variables must be set <strong>before</strong> the <Code>colorscheme</Code>{" "}
+      <Link to={`${ROUTE_DOCS_PORTS_VIM_INSTALLATION}#activation`}>activation</Link> command!
+    </>
+  }
+>
+  This ensures the configurations are applied correctly when the color scheme file gets loaded, otherwise the theme will
+  load without taking these configurations into account.
+</Banner>
+
+## UI Elements
+
+### Active Cursor Line Number Background
+
+By default, the background of line numbers for the currently active cursor line are not styled especially.
+
+<Image
+  dropShadow
+  fluid={props.images["cursor-line-number-background-disabled.png"]}
+  rounded
+  alt="Screenshot showing a minimal vimrc with installed and activated Nord color scheme"
+>
+  <span>Default line number background style for the active cursor line.</span>
+</Image>
+
+This can be changed by to use the same background color highlighting like the background of the active cursor line by enabling the theme configuration variable `nord_cursor_line_number_background`:
+
+```viml
+let g:nord_cursor_line_number_background = 1
+```
+
+<Image
+  dropShadow
+  fluid={props.images["cursor-line-number-background-enabled.png"]}
+  rounded
+  alt="Screenshot showing the style of line numbers with enabled background highlighting for active cursor line."
+>
+  <span>Line number style with enabled background highlighting for active cursor line.</span>
+</Image>
+
+### Uniform Status Lines
+
+By default, Nord Vim uses a slightly brighter background for the current split buffer. This is designed to draw attention to the currently active buffer without being distracting.
+
+<Image
+  dropShadow
+  fluid={props.images["uniform-status-lines-disabled.png"]}
+  rounded
+  alt="Screenshot showing the default style of activate- and inactive status lines"
+>
+  <span>Default style of activate- and inactive status lines.</span>
+</Image>
+
+To use a uniform style for activate- and inactive status lines with `nord3` as background the `nord_uniform_status_lines` configuration variable can be set:
+
+```viml
+let g:nord_uniform_status_lines = 1
+```
+
+<Image
+  dropShadow
+  fluid={props.images["uniform-status-lines-enabled.png"]}
+  rounded
+  alt="Screenshot showing the activate- and inactive status lines with uniform style"
+>
+  <span>Activate- and inactive status lines with uniform style.</span>
+</Image>
+
+### Bold Vertical Split Lines
+
+To provide a lightweight and uncluttered overall appearance for split views the [vertical split lines][vimhelp-vertsplit], only the separator characters are styled while the background color is equal to the theme's base background.
+
+<Image
+  dropShadow
+  fluid={props.images["bold-vertical-split-lines-disabled.png"]}
+  rounded
+  alt="Screenshot showing the default style of vertical split lines"
+>
+  <span>Default style of vertical split lines.</span>
+</Image>
+
+To use also highlight the background of separators, making them appear more bold, the `nord_bold_vertical_split_line` theme configuration variable can be set:
+
+```viml
+let g:nord_bold_vertical_split_line = 1
+```
+
+<Image
+  dropShadow
+  fluid={props.images["bold-vertical-split-lines-enabled.png"]}
+  rounded
+  alt="Screenshot showing vertical split lines with a bolder style"
+>
+  <span>Vertical split lines with a bolder style.</span>
+</Image>
+
+To also change the separator character used to display the vertical line please see the documentation about Vim's [fillchars][vimhelp-fillchars] variable (`:help fillchars`).
+
+## Syntax Highlighting
+
+### Uniform _diff_ Background
+
+By default, Nord Vim uses colorful backgrounds for Vim's _diff_ mode (`vimdiff`, `vim -d`) which is a common pattern to clearly highlight the elements through colors that convey the meaning of each change.
+
+<Image
+  dropShadow
+  fluid={props.images["uniform-diff-background-disabled.png"]}
+  rounded
+  alt="Screenshot showing Vim's side-by-side diff view with default highlighting styles"
+>
+  <span>
+    Default highlighting styles for Vim's side-by-side <em>diff</em> view.
+  </span>
+</Image>
+
+To use a uniform background highlighting where the foreground color is used to mark the changes instead, the `nord_uniform_diff_background` theme configuration variable can be set:
+
+```viml
+let g:nord_uniform_diff_background = 1
+```
+
+<Image
+  dropShadow
+  fluid={props.images["uniform-diff-background-enabled.png"]}
+  rounded
+  alt="Screenshot showing Vim's side-by-side diff view with enabled uniform background highlighting"
+>
+  <span>
+    Vim's side-by-side <em>diff</em> view with enabled uniform background highlighting.
+  </span>
+</Image>
+
+## Font Rendering
+
+<Banner title={<>Only use font rendering theme configurations with compatible terminals!</>} variant="warn">
+  Special font rendering styles like <em>italic</em>, <u>underline</u> or <strong>bold</strong> require support from the
+  side of the used terminal in order to work properly. Please check if your used terminal supports these font styles
+  before enabling any of the configurations in this section, otherwise the might be unexpected rendering issues or the
+  configuration won't have any effect at all.
+
+**Please ensure the used terminal is capable of rendering special font styles before activating any of Nord Vim's font rendering configurations!**
+
+</Banner>
+
+### Italic Style
+
+In terminal mode Nord Vim doesn't make use of <em>italic</em> font styles in order to prevent unexpected styles and color highlighting. This design decision is based on the known problems of most terminals related to special font styles like <em>italic</em>.
+
+<Banner
+  title={
+    <>
+      In GUI mode <em>italic</em> font styles are enabled by default.
+    </>
+  }
+>
+  Since Vim's runtime shoukd ensure the rendering compatibility for special font styles Nord Vim can make use of{" "}
+  <em>italics</em> without the risk to break the overall appearance.
+</Banner>
+
+The theme includes <em>italic</em> font styles for specific syntax elements, but requires to set the `nord_italic` theme configuration variable:
+
+```viml
+let g:nord_italic = 1
+```
+
+<Image
+  dropShadow
+  fluid={props.images["font-rendering-italic.png"]}
+  rounded
+  alt="Screenshot showing the Markdown code syntax with italic font style rendering"
+>
+  <span>
+    Markdown code syntax with <em>italic</em> font style rendering.
+  </span>
+</Image>
+
+**Please ensure the used terminal is capable of rendering _italic_ font styles before activating this configuration!**
+
+#### Italic Comments
+
+<Banner
+  title={
+    <>
+      This configuration requires the <Code>nord_italic</Code> font rendering configuration to be enabled!
+    </>
+  }
+>
+  It wont' have any effect if the requirement is not fulfilled since theme is not configured to render <em>italic</em>{" "}
+  font styles at all.
+</Banner>
+
+For uncluttered and clearly readable comments, Nord Vim uses normal font styles for comments, but it is a common design pattern for syntax themes to use <em>italic</em> font styles instead.
+
+<Image
+  dropShadow
+  fluid={props.images["font-rendering-italic-comments-disabled.png"]}
+  rounded
+  alt="Screenshot showing a Go function with documentation comments and default rendering styles"
+>
+  <span>Go function with documentation comments and default rendering styles.</span>
+</Image>
+
+To enable <em>italic</em> comment for Nord Vim the `nord_italic_comments` theme configuration variable can be set:
+
+```viml
+let g:nord_italic_comments = 1
+```
+
+<Image
+  dropShadow
+  fluid={props.images["font-rendering-italic-comments-enabled.png"]}
+  rounded
+  alt="Screenshot showing a Go function with documentation comments and default enabled italic font rendering styles"
+>
+  <span>
+    Go function with documentation comments and enabled <em>italic</em> font rendering styles.
+  </span>
+</Image>
+
+### Underline Style
+
+In terminal mode Nord Vim doesn't make use of <u>underline</u> font styles in order to prevent unexpected styles and color highlighting. This design decision is based on the known problems of most terminals related to special font styles like <u>underline</u>.
+
+<Banner
+  title={
+    <>
+      In GUI mode <u>underline</u> font styles are enabled by default.
+    </>
+  }
+>
+  Since Vim's runtime should ensure the rendering compatibility for special font styles Nord Vim can make use of{" "}
+  <em>italics</em> without the risk to break the overall appearance.
+</Banner>
+
+The theme includes <<u>underline</u> font styles for specific syntax elements, but requires to set the `nord_underline` theme configuration variable:
+
+```viml
+let g:nord_underline = 1
+```
+
+<Image
+  dropShadow
+  fluid={props.images["font-rendering-underline.png"]}
+  rounded
+  alt="Screenshot showing the Markdown code syntax with underline font style rendering"
+>
+  <span>
+    Markdown code syntax with <u>underline</u> font style rendering.
+  </span>
+</Image>
+
+**Please ensure the used terminal is capable of rendering <u>underline</u> font styles before activating this configuration!**
+
+</ShrinkedWidth>
+
+[vimhelp-fillchars]: https://vimhelp.org/options.txt.html#%27fillchars%27
+[vimhelp-vertsplit]: https://vimhelp.org/syntax.txt.html#hl-VertSplit
+[vimhelp-vimrc]: https://vimhelp.org/starting.txt.html#vimrc
