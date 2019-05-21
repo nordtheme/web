@@ -18,6 +18,7 @@
 import AlertCircle from "./AlertCircle";
 import ArrowForward from "./ArrowForward";
 import BookOpen from "./BookOpen";
+import Brush from "./Brush";
 import Bulb from "./Bulb";
 import CloudDownload from "./CloudDownload";
 import Code from "./Code";
@@ -35,6 +36,7 @@ import PriceTags from "./PriceTags";
 import QuestionMarkCircle from "./QuestionMarkCircle";
 import Reddit from "./Reddit";
 import Search from "./Search";
+import Settings2 from "./Settings2";
 import Slack from "./Slack";
 import Spectrum from "./Spectrum";
 import StackOverflow from "./StackOverflow";
@@ -48,6 +50,7 @@ export {
   AlertCircle,
   ArrowForward,
   BookOpen,
+  Brush,
   Bulb,
   CloudDownload,
   Code,
@@ -65,6 +68,7 @@ export {
   QuestionMarkCircle,
   Reddit,
   Search,
+  Settings2,
   Slack,
   Spectrum,
   StackOverflow,
