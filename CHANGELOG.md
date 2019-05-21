@@ -8,6 +8,46 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.13.0
+
+![Release Date: 2019-05-21](https://img.shields.io/badge/Release_Date-2019--05--21-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/15) [![Milestone](https://img.shields.io/badge/Milestone-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/13)
+
+This version mainly focused on the [transition of the „Nord Vim“ port project][gh-143]. The implementation include port specific [“landing”][home-ports-vim] and [docs][home-docs-ports-vim] page, the [installation & activation guide][home-docs-ports-vim-install], [configuration][home-docs-ports-vim-config] and [customization][home-docs-ports-vim-custom] guide.
+
+## Features
+
+**„Nord Vim“ Transition** — #143 ⇄ #146 (⊶ 6c804f42)
+↠ Transferred all documentations, assets and visualizations from „Nord Vim“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the Nord Vim repository][nord-vim#158] to get an overview of what has changed for Nord Vim and what has been done to migrate to Nord Docs.
+
+### Landing Page
+
+<p align="center"><a href="https://www.nordtheme.com/ports/vim" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123747-d1092500-7c0c-11e9-8ea1-d8a97b592acb.png" alt="Preview: Nord Vim Port Project Landing Page"/></a></p>
+
+### Docs Page
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/vim" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123746-d1092500-7c0c-11e9-990d-6e65d20cd935.png" alt="Preview: Nord Vim Docs Page"/></a></p>
+
+### Installation & Activation Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/vim/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123745-d1092500-7c0c-11e9-82d8-e1d60fc0d725.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+
+### Configuration Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/vim/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123743-d0708e80-7c0c-11e9-9149-a3f023104b1c.png" alt="Preview: Configuration Guide Page"/></a></p>
+
+### Customization Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/vim/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123744-d0708e80-7c0c-11e9-84c7-50275e2696e1.png" alt="Preview: Customization Guide Page"/></a></p>
+
+## Bug Fixes
+
+**MDX v1 remark/rehype plugin loading after migration** — #144 ⇄ #145 (⊶ 182f57f4)
+↠ Fixed the loading of MDX remark/rehype plugins after the migration to [MDX 1.0.0][mdx-blog-v1] in [#137][gh-137]. The [now deprecated `mdPlugins` and `hastPlugins` options][mdx-blog-v1-depr] were not replaced with their (new named) respective
+equivalents `remarkPlugins` and `rehypePlugins`. Even if the documentation states that the options will be removed in v2 and are still supported (only showing a warning in the console when still used), the defined plugins were not loaded anymore causing e.g. no more automatic generation of `id` attributes for headers in MDX content.
+
+Therefore, to finish 100% of the migration, both options have been renamed.
+
 # 0.12.0
 
 ![Release Date: 2019-05-05](https://img.shields.io/badge/Release_Date-2019--05--05-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/14) [![Milestone](https://img.shields.io/badge/Milestone-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/12)
@@ -18,7 +58,7 @@ This version mainly focused on the [transition of the „Nord JetBrains“ port 
 
 **„Nord JetBrains“ Transition** — #140 ⇄ #142 (⊶ 31a8666a)
 ↠ Transferred all documentations, assets and visualizations from „Nord JetBrains“ to Nord Docs which will now serve as the single-source-of-truth™.
-Please see the [corresponding issue in the Nord repository][nord-jetbrains#48] to get an overview of what has changed for Nord JetBrains and what has been done to migrate to Nord Docs.
+Please see the [corresponding issue in the Nord JetBrains repository][nord-jetbrains#48] to get an overview of what has changed for Nord JetBrains and what has been done to migrate to Nord Docs.
 
 ### Landing Page
 
@@ -1613,3 +1653,15 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [prettier-v1.17.0]: https://prettier.io/blog/2019/04/12/1.17.0.html
 [styled-components/polished-v3.0.0]: https://github.com/styled-components/polished/releases/tag/v3.0.0
 [tw-1123005668762349571]: https://twitter.com/jblanton/status/1123005668762349571
+
+<!-- v0.13.0 -->
+
+[gh-137]: https://github.com/arcticicestudio/nord-docs/issues/140
+[gh-143]: https://github.com/arcticicestudio/nord-docs/issues/140
+[home-docs-ports-vim-config]: https://www.nordtheme.com/docs/ports/vim/configuration
+[home-docs-ports-vim-custom]: https://www.nordtheme.com/docs/ports/vim/customization
+[home-docs-ports-vim-install]: https://www.nordtheme.com/docs/ports/vim/installation
+[home-docs-ports-vim]: https://www.nordtheme.com/docs/ports/vim
+[home-ports-vim]: https://www.nordtheme.com/ports/vim
+[mdx-blog-v1-depr]: https://mdxjs.com/blog/v1/#deprecations
+[mdx-blog-v1]: https://mdxjs.com/blog/v1/
