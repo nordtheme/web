@@ -1,0 +1,85 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as PaintBrush } from "assets/images/illustrations/paint-brush.svg";
+import { ROUTE_DOCS_PORTS_VIM_CONFIGURATION, ROUTE_DOCS_PORTS_VIM_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Customization",
+  subline:
+    "Not in agreement with all of Nord Vim's design decisions? No problem — simply override every theme style you like."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <PaintBrush />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+It is totally fine that you not agree to all design decisions and color highlighting assignments — that's the reason why themes exist.
+
+Even though Nord Vim comes with sane defaults and a <Link to={ROUTE_DOCS_PORTS_VIM_CONFIGURATION}>bunch of theme configurations</Link>, it can still be customized down to it's core, using Vim's builtin features, by overriding every style defined by the theme. It is even possible to set new styles not defined or supported by the theme yet.
+
+Vim's [`autocmd`][vimhelp-autocmd] feature allows to specify commands to be executed automatically when reading or writing files like the user-level or system-wide [vimrc][vimhelp-vimrc] file. In combination with the [`augroup`][vimhelp-autocmd-augroup] feature, that allows to create a uniquely named group of commands for a specific purpose, the color scheme overrides can be scoped to only apply for Nord Vim while leaving other themes unaffected.
+
+<Banner
+  title={
+    <>
+      The <em>auto command</em> <Code>augroup</Code> definitions must be set <strong>before</strong> the{" "}
+      <Code>colorscheme</Code> <Link to={`${ROUTE_DOCS_PORTS_VIM_INSTALLATION}#activation`}>activation</Link> command!
+    </>
+  }
+>
+  This ensures the commands are applied correctly when the color scheme file gets loaded, otherwise the theme will load
+  without taking these style assignments into account.
+</Banner>
+
+To override or define new styles of Nord Vim, create a _auto command_ group in the [vimrc][vimhelp-vimrc] with a unique name like `nord-theme-overrides` and add the desired [syntax `highlight` commands][vimhelp-highlight]:
+
+The following example shows how to override the foreground color of Vim syntax comment titles:
+
+```viml
+augroup nord-theme-overrides
+  autocmd!
+  " Use 'nord7' as foreground color for Vim comment titles.
+  autocmd ColorScheme nord highlight vimCommentTitle ctermfg=14 guifg=#8FBCBB
+augroup END
+```
+
+<Image
+  dropShadow
+  fluid={props.images["example-vim-comment-titles-default.png"]}
+  rounded
+  alt="Screenshot showing Vim comment titles with Nord theme styles"
+>
+  <span>Vim comment titles with Nord theme styles.</span>
+</Image>
+
+<Image
+  dropShadow
+  fluid={props.images["example-vim-comment-titles-overridden.png"]}
+  rounded
+  alt="Screenshot showing Vim comment titles with overridden Nord theme styles"
+>
+  <span>Vim comment titles with overridden Nord theme styles.</span>
+</Image>
+
+Read [Vim's documentation][vimhelp] about [how to use syntax highlighting][vimhelp-usr-synhigh] and the [syntax highlighting features][vimhelp-syntax] for more details and the `highlight` command usage.
+
+</ShrinkedWidth>
+
+[vimhelp-autocmd-augroup]: https://vimhelp.org/autocmd.txt.html#%3Aaugroup
+[vimhelp-autocmd]: https://vimhelp.org/autocmd.txt.html
+[vimhelp-highlight]: https://vimhelp.org/syntax.txt.html#%3Ahighlight
+[vimhelp-syntax]: https://vimhelp.org/syntax.txt.html
+[vimhelp-usr-synhigh]: https://vimhelp.org/usr_06.txt.html
+[vimhelp-vimrc]: https://vimhelp.org/starting.txt.html#vimrc
+[vimhelp]: https://vimhelp.org

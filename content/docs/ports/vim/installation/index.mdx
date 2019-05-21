@@ -1,0 +1,125 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as WindowCode } from "assets/images/illustrations/window-code.svg";
+import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_PORTS } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Activation",
+  subline: "Get up and running in a few lines of code with your favorite plugin manager or manual setup"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowCode />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+<Banner
+  title={
+    <>
+      Vim in terminal mode <strong>must</strong> be used with a <Link to={ROUTE_PORTS}>Nord terminal emulator theme</Link> in order to work properly!
+    </>
+  }
+>
+  Make sure to install one of the currently supported <Link to={ROUTE_PORTS}>terminal emulator port projects</Link> **before** installing Nord Vim.
+
+Vim in terminal mode uses the 16 color codes provided by the terminal emulator.
+**When used with another color theme** than the one provided by one of Nord's terminal emulator ports, the colors in Vim won't use <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>Nord's color palettes</Link>!
+This will result in different styles than those defined by Nord Vim and could make it appear that there is a problem with the Nord Vim theme while the actual problem are missing Nord colors.
+
+Read the GitHub Gist about [terminal colors][gh-gist-terminal-colors] for more information about terminal color specifications.
+
+</Banner>
+
+## Installation
+
+Thanks to existing plugin/_runtimepath_ managers for Vim, Nord Vim can be installed for all platforms and the various variants/forks of Vim in a uniform way within a few lines of codes. The recommended manager is [vim-plug][gh-junegunn/vim-plug], but any other manager like [pathogen][gh-tpope/vim-pathogen] or [Vundle][gh-vundlevim/vundle.vim] can also be used.
+
+To automatically download and activate Nord Vim, follow the install instructions for [vim-plug][gh-junegunn/vim-plug] and
+
+1. add `Plug 'arcticicestudio/nord-vim'` to your [`vimrc`][vimhelp-vimrc] within _vim-plug's_ plugin loading function
+2. run the `:PlugInstall` command in Vim
+
+<Image
+  dropShadow
+  fluid={props.images["vim-plug.png"]}
+  rounded
+  alt="Screenshot showing a minimal vimrc with installed and activated Nord color scheme"
+>
+  <span>
+    Minimal <Code>vimrc</Code> with installed and activated Nord color scheme
+  </span>
+</Image>
+
+By default, the [latest version][repo-rel-latest] will be installed. To use the [latest development state from the `develop` branch][repo-br-develop] instead, vim-plug allows to specify the branch:
+
+```viml
+Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
+```
+
+To install an explicit version the corresponding [Git tag][repo-tags] can be specified instead:
+
+```viml
+Plug 'arcticicestudio/nord-vim', { 'tag': 'v0.11.0' }
+```
+
+###### Manual
+
+To install Nord Vim manually, [download the latest version][repo-down-master] or [clone the repository][repo].
+Afterwards copy the [`nord.vim`][repo-tree-master-nord.vim] file into the `.vim/colors` located in your [home directory][wiki-home_dir].
+
+<Image
+  alt="Screenshot showing the GitHub repository web UI to download the project repository"
+  fillSize={60}
+  fluid={props.images["github-clone.png"]}
+/>
+
+## Activation
+
+To activate and use Nord Vim as your default color theme set it in your [`vimrc`][vimhelp-vimrc]:
+
+```viml
+colorscheme nord
+```
+
+To switch to the theme on-the-fly run the `:colorscheme nord` Vim command.
+
+When using vim-plug the theme can also be configured to only automatically activate on-demand for specific languages…
+
+```viml
+" Activate Nord Vim when editing Go files.
+Plug 'arcticicestudio/nord-vim', { 'for': 'go' }
+```
+
+…or on specific events.
+
+```viml
+" Activate Nord Vim when toggling the NERDTree.
+Plug 'arcticicestudio/nord-vim', { 'on':  'NERDTreeToggle' }
+```
+
+</ShrinkedWidth>
+
+[gh-gist-terminal-colors]: https://gist.github.com/XVilka/8346728
+[gh-junegunn/vim-plug]: https://github.com/junegunn/vim-plug
+[gh-tpope/vim-pathogen]: https://github.com/tpope/vim-pathogen
+[gh-vundlevim/vundle.vim]: https://github.com/VundleVim/Vundle.vim
+[repo-br-develop]: https://github.com/arcticicestudio/nord-vim/tree/develop
+[repo-down-master]: https://github.com/arcticicestudio/nord-vim/archive/master.zip
+[repo-rel-latest]: https://github.com/arcticicestudio/nord-vim/releases/latest
+[repo-tags]: https://github.com/arcticicestudio/nord-vim/tags
+[repo-tree-master-nord.vim]: https://github.com/arcticicestudio/nord-vim/blob/master/colors/nord.vim
+[repo]: https://github.com/arcticicestudio/nord-vim
+[vimhelp-autocmd-augroup]: https://vimhelp.org/autocmd.txt.html#:augroup
+[vimhelp-autocmd]: https://vimhelp.org/autocmd.txt.html
+[vimhelp-vimrc]: https://vimhelp.org/starting.txt.html#vimrc
+[wiki-home_dir]: https://en.wikipedia.org/wiki/Home_directory
