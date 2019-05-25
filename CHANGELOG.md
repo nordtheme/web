@@ -8,6 +8,15 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.14.0
+
+![Release Date: 2019-05-25](https://img.shields.io/badge/Release_Date-2019--05--25-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.14.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/16) [![Milestone](https://img.shields.io/badge/Milestone-0.14.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/14)
+
+# Features
+
+**Nord Vim „bold font rendering“ configuration** — #147 ⇄ #148 (⊶ ef0cb597)
+↠ Added [documentations for Nord Vim's new `nord_bold` configuration][home-docs-ports-vim-config-font-bold] implemented in [arcticicestudio/nord-vim#161][].
+
 # 0.13.0
 
 ![Release Date: 2019-05-21](https://img.shields.io/badge/Release_Date-2019--05--21-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/15) [![Milestone](https://img.shields.io/badge/Milestone-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/13)
@@ -1462,6 +1471,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gpg]: https://www.gnupg.org
 [home-blog]: https://www.nordtheme.com/blog
 [home-comm]: https://www.nordtheme.com/community
+[home-docs-ports-vim-config-font-bold]: https://www.nordtheme.com/docs/ports/vim/configuration#bold-styles
+[home-docs-ports-vim-config]: https://www.nordtheme.com/docs/ports/vim/configuration
 [home-ports]: https://www.nordtheme.com/ports
 [home]: https://www.nordtheme.com
 [inter-ui]: https://rsms.me/inter
@@ -1658,10 +1669,13 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 [gh-137]: https://github.com/arcticicestudio/nord-docs/issues/140
 [gh-143]: https://github.com/arcticicestudio/nord-docs/issues/140
-[home-docs-ports-vim-config]: https://www.nordtheme.com/docs/ports/vim/configuration
 [home-docs-ports-vim-custom]: https://www.nordtheme.com/docs/ports/vim/customization
 [home-docs-ports-vim-install]: https://www.nordtheme.com/docs/ports/vim/installation
 [home-docs-ports-vim]: https://www.nordtheme.com/docs/ports/vim
 [home-ports-vim]: https://www.nordtheme.com/ports/vim
 [mdx-blog-v1-depr]: https://mdxjs.com/blog/v1/#deprecations
 [mdx-blog-v1]: https://mdxjs.com/blog/v1/
+
+<!-- v0.14.0 -->
+
+[arcticicestudio/nord-vim#161][]https://github.com/arcticicestudio/nord-vim/pull/161
