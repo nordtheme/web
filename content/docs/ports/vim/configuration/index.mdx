@@ -176,6 +176,42 @@ let g:nord_uniform_diff_background = 1
 
 </Banner>
 
+### Bold Style
+
+Next to color highlighting Nord Vim makes use of <strong>bold</strong> font styles for various syntax elements to make them stand out more as well as better representing their syntactic meaning.
+
+<Banner
+  title={
+    <>
+      <strong>Bold</strong> font styles are enabled (<Code>g:nord_bold = 1</Code>) by default in both GUI and terminal
+      mode.
+    </>
+  }
+>
+  Almost every common and still actively used terminal supports <strong>bold</strong> font styles while in GUI mode
+  Vim's runtime ensures the rendering compatibility for special font styles without the risk to break the overall
+  appearance.
+</Banner>
+
+The theme includes **bold** font styles for specific syntax elements. To **disable bold font styles**, set the `nord_bold` theme configuration variable:
+
+```viml
+let g:nord_bold = 0
+```
+
+<Image
+  dropShadow
+  fluid={props.images["font-rendering-bold.png"]}
+  rounded
+  alt="Screenshot showing the Markdown code syntax with bold font style rendering"
+>
+  <span>
+    Markdown code syntax with <strong>bold</strong> font style rendering.
+  </span>
+</Image>
+
+If you encounter font rendering problems with **bold** styles, please ensure the used terminal is capable of rendering such special font styles or disable Nord Vim's **bold** font rendering like described above.
+
 ### Italic Style
 
 In terminal mode Nord Vim doesn't make use of <em>italic</em> font styles in order to prevent unexpected styles and color highlighting. This design decision is based on the known problems of most terminals related to special font styles like <em>italic</em>.
@@ -187,7 +223,7 @@ In terminal mode Nord Vim doesn't make use of <em>italic</em> font styles in ord
     </>
   }
 >
-  Since Vim's runtime shoukd ensure the rendering compatibility for special font styles Nord Vim can make use of{" "}
+  Since Vim's runtime should ensure the rendering compatibility for special font styles Nord Vim can make use of{" "}
   <em>italics</em> without the risk to break the overall appearance.
 </Banner>
 
