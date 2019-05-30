@@ -7,7 +7,11 @@
  * License:    MIT
  */
 
+import SectionEditorDetails from "./SectionEditorDetails";
 import SectionHero from "./SectionHero";
+import SectionIntroduction from "./SectionIntroduction";
+import SectionSetup from "./SectionSetup";
+import SectionSyntax from "./SectionSyntax";
+import SectionUIElements from "./SectionUIElements";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { SectionHero };
+export { SectionEditorDetails, SectionHero, SectionIntroduction, SectionSetup, SectionSyntax, SectionUIElements };
