@@ -1,0 +1,153 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as PaintBrush } from "assets/images/illustrations/paint-brush.svg";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Customization",
+  subline:
+    "Not in agreement with all of Nord Visual Studio Code's design decisions? No problem — simply override every theme style you like."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <PaintBrush />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+It is totally fine that you not agree to all design decisions and color highlighting assignments — that's the reason why themes exist.
+
+Even though Nord Visual Studio Code comes with sane defaults, it can still be customized down to it's core, using Visual Studio Code's builtin features, by overriding every UI (workbench) and syntax style defined by the theme. It is even possible to set new styles not defined or supported by the theme yet.
+
+Visual Studio Code's `workbench.colorCustomizations` and `editor.tokenColorCustomizations` user [settings][vscode-docs-settings]. Both allow to either define global styles or **only for a specific theme** like Nord Visual Studio Code while leaving other themes unaffected.
+
+While editing the `settings.json` file all changes will be applied on save and doesn't require to restart VS Code.
+
+<Banner
+  title={
+    <>
+      Please see the official VS Code documentation on{" "}
+      <Link href="https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme">
+        how to customize a color theme
+      </Link>{" "}
+      for more details and customization examples.
+    </>
+  }
+>
+  You can use Visual Studio Code&apos;s <em>IntelliSense</em> auto-completion feature while adding customizations and read the official <Link href="https://code.visualstudio.com/api/references/theme-color">theme color reference documentation</Link> for a list of all customizable colors.
+
+Also note that the <Code>settings.json</Code> file uses the <Link href="https://json5.org">JSON5</Link> language syntax that comes with more features than the JSON specification like comments allowing to document fields and their purpose.
+
+</Banner>
+
+## UI
+
+To override or define any workbench UI styles of Nord Visual Studio Code, e.g. lists, buttons, or the [_Activity Bar_][vscode-docs-ui-actbar], add the `workbench.colorCustomizations` object to your [settings][vscode-docs-settings] and scope the styles to only apply to _Nord_ by adding the `[Nord]` object as field.
+
+The following example shows how to override the colors of the activity bar and badges:
+
+```json5
+"workbench.colorCustomizations": {
+  "[Nord]": {
+    // Use a brighter (nord1) activity bar background color.
+    "activityBar.background": "#3b4252",
+    // Use a darker (nord9) background color for badges
+    // with brighter a (nord6) foreground color.
+    "activityBarBadge.background": "#81a1c1",
+    "activityBarBadge.foreground": "#eceff4"
+  }
+}
+```
+
+<Image
+  dropShadow
+  fluid={props.images["example-workbench-ui-default.png"]}
+  rounded
+  alt="Screenshot showing the activity bar and badges with Nord theme styles"
+>
+  <span>The activity bar and badges with Nord theme styles.</span>
+</Image>
+
+<Image
+  dropShadow
+  fluid={props.images["example-workbench-ui-overridden.png"]}
+  rounded
+  alt="Screenshot showing the activity bar and badges with overridden Nord theme styles"
+>
+  <span>The activity bar and badges with overridden Nord theme styles.</span>
+</Image>
+
+## Syntax
+
+To override or define any code syntax styles of Nord Visual Studio Code of languages like e.g. Go or JavaScript, add the `editor.tokenColorCustomizations` object to your [settings][vscode-docs-settings] and scope the styles to only apply to _Nord_ by adding the `[Nord]` object as field.
+
+VS Code comes with a pre-configured set of syntax tokens, e.g. `comments` or `strings`, that apply to all languages for a easy and quick customization for every syntax while the `textMateRules` array can be used to define explicit _TextMate_ rules to fine-tune styles for every element of all languages.
+
+<Banner
+  title={
+    <>
+      Using <em>TextMate</em> grammar style rules requires advanced knowledge about the syntax!
+    </>
+  }
+  variant="warn"
+>
+  Please read the guide about{" "}
+  <Link href="https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#textmate-grammars">
+    syntax highlighting with TextMate grammars
+  </Link>{" "}
+  for more details about the syntax and usage guides.
+</Banner>
+
+The following example shows how to override the foreground color of all comments and commas for the [Go][] syntax:
+
+```json5
+"editor.tokenColorCustomizations": {
+  "[Nord]": {
+    // Use a 10% brigher foreground color for all comments.
+    "comments": "#7b88a1",
+    "textMateRules": [
+      {
+        // Also use `nord9` as comma foreground color for Go syntax.
+        "scope": "punctuation.other.comma.go",
+        "settings": {
+          "foreground": "#81a1c1"
+        }
+      }
+    ]
+  }
+}
+```
+
+<Image
+  dropShadow
+  fluid={props.images["example-syntax-default.png"]}
+  rounded
+  alt="Screenshot showing comments and Go syntax with Nord theme styles"
+>
+  <span>Comments and Go syntax with Nord theme styles.</span>
+</Image>
+
+<Image
+  dropShadow
+  fluid={props.images["example-syntax-overridden.png"]}
+  rounded
+  alt="Screenshot showing comments and Go syntax with overridden Nord theme styles"
+>
+  <span>Comments and Go syntax with overridden Nord theme styles.</span>
+</Image>
+
+</ShrinkedWidth>
+
+[go]: https://golang.org
+[vscode-docs-colortheme-custom]: https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme
+[vscode-docs-colortheme]: https://code.visualstudio.com/docs/getstarted/themes
+[vscode-docs-settings]: https://code.visualstudio.com/docs/getstarted/settings
+[vscode-docs-ui-actbar]: https://code.visualstudio.com/docs/getstarted/userinterface#_activity-bar
