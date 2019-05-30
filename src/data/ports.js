@@ -323,6 +323,8 @@ const ports = [
     projectName: "Visual Studio Code",
     logoComponent: VisualStudioCode,
     projectUrl: "https://code.visualstudio.com",
+    extensionMarketplaceUrl:
+      "https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code",
     searchTerms: [
       ...tokensExtendingSupport,
       ...tokensGUI,

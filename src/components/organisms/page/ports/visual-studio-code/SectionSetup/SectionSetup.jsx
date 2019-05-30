@@ -11,50 +11,49 @@ import React from "react";
 
 import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
-import { Image } from "atoms/core/mdx-elements";
+import { WaveFooter } from "atoms/core/vectors/divider";
 import { Content } from "containers/core/Section";
 import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
-import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
-import { usePortsMetadata } from "hooks";
-import { sectionIdFor } from "utils";
 import { ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE, ROUTE_PORTS_VISUAL_STUDIO_CODE } from "config/routes/mappings";
+import { sectionIdFor } from "utils";
+import { Image } from "atoms/core/mdx-elements";
+import { usePortsMetadata } from "hooks";
+import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
 
 import { Section } from "../../../shared";
-import WaveDivider from "./styled/WaveDivider";
 
-const SECTION_ID = sectionIdFor(ROUTE_PORTS_VISUAL_STUDIO_CODE, 0);
+const SECTION_ID = sectionIdFor(ROUTE_PORTS_VISUAL_STUDIO_CODE, 5);
 
 /**
- * The component that represents the hero section for the landing page of the "Nord Visual Studio Code" port project.
+ * The component that represents the setup section for the landing page of the
+ * "Nord Visual Studio Code" port project.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.9.0
+ * @since 0.14.0
  */
-const SectionHero = ({ assets }) => {
+const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { extensionMarketplaceUrl, gitHubRepositoryUrl, projectUrl } = portMetadata.find(
+  const { extensionMarketplaceUrl, gitHubRepositoryUrl } = portMetadata.find(
     port => port.name === "nord-visual-studio-code"
   );
 
   return (
-    <Section id={SECTION_ID}>
+    <Section id={SECTION_ID} variant="secondary">
       <Content centered decorated>
         <FeatureDuo verticalOnly>
           <Text verticalOnly>
-            <Headline large>Nord Visual Studio Code</Headline>
+            <Headline>Installation and updates with one click.</Headline>
             <Subline>
-              An arctic, north-bluish clean and elegant <Link href={projectUrl}>Visual Studio Code</Link> theme.
-            </Subline>
-            <Subline>
-              Designed for a fluent and clear workflow with support for many languages and the workbench UI.
+              Install Nord from the <Link href={extensionMarketplaceUrl}>official extension marketplace</Link> with one
+              click including automatic updates to always use the latest Nord version.
             </Subline>
             <Actions>
-              <Button href={extensionMarketplaceUrl} variant="primary">
+              <Button to={extensionMarketplaceUrl} variant="primary">
                 Install Now
               </Button>
               <Button ghost outlined quiet to={ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE} variant="primary">
-                Documentation
+                Learn More
               </Button>
               <Button ghost href={gitHubRepositoryUrl} outlined quiet variant="primary">
                 GitHub
@@ -63,19 +62,25 @@ const SectionHero = ({ assets }) => {
           </Text>
           <Visualization>
             <Image
-              alt="Screenshot showing JSX syntax as part of a React component"
+              alt="Screenshot showing the builtin extension marketplace view"
               dropShadow
-              fluid={assets.images["ui-overview-jsx.png"]}
+              fluid={assets.images["ui-extension-marketplace.png"]}
               rounded
-            />
+            >
+              <span>
+                Builtin{" "}
+                <Link href="https://code.visualstudio.com/docs/editor/extension-gallery">extension marketplace</Link>{" "}
+                view.
+              </span>
+            </Image>
           </Visualization>
         </FeatureDuo>
       </Content>
-      <WaveDivider />
+      <WaveFooter />
     </Section>
   );
 };
 
-SectionHero.propTypes = usePortsAssetsPropTypes;
+SectionSetup.propTypes = usePortsAssetsPropTypes;
 
-export default SectionHero;
+export default SectionSetup;
