@@ -8,6 +8,38 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.15.0
+
+![Release Date: 2019-05-31](https://img.shields.io/badge/Release_Date-2019--05--31-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/17) [![Milestone](https://img.shields.io/badge/Milestone-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/15)
+
+This version mainly focused on the [transition of the „Nord Visual Studio Code“ port project][gh-149]. The implementation include port specific [“landing”][home-ports-vscode] and [docs][home-docs-ports-vscode] page, the [installation & activation guide][home-docs-ports-vscode-install], [customization][home-docs-ports-vscode-custom] and [development][home-docs-ports-vscode-develop] guide.
+
+## Features
+
+**„Nord Visual Studio Code“ Transition** — #149 ⇄ #150 (⊶ c3fd6058)
+↠ Transferred all documentations, assets and visualizations from „Nord Visual Studio Code“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the Nord Visual Studio Code repository][nord-visual-studio-code#138] to get an overview of what has changed for Nord Visual Studio Code and what has been done to migrate to Nord Docs.
+
+### Landing Page
+
+<p align="center"><a href="https://www.nordtheme.com/ports/visual-studio-code" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706701-14a12300-83b3-11e9-8bad-d652e7d910d1.png" alt="Preview: Nord Visual Studio Code Port Project Landing Page"/></a></p>
+
+### Docs Page
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/visual-studio-code" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706700-14a12300-83b3-11e9-8bd4-1f3f29f61775.png" alt="Preview: Nord Visual Studio Code Docs Page"/></a></p>
+
+### Installation & Activation Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/visual-studio-code/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706699-14a12300-83b3-11e9-8700-27fa215ae6e9.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+
+### Customization Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/visual-studio-code/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706697-14088c80-83b3-11e9-8dc9-3b13cb8ab9e3.png" alt="Preview: Customization Guide Page"/></a></p>
+
+### Development Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/visual-studio-code/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706698-14a12300-83b3-11e9-9fb6-b1b61cfa1cad.png" alt="Preview: Development Guide Page"/></a></p>
+
 # 0.14.0
 
 ![Release Date: 2019-05-25](https://img.shields.io/badge/Release_Date-2019--05--25-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.14.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/16) [![Milestone](https://img.shields.io/badge/Milestone-0.14.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/14)
@@ -1674,8 +1706,19 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-docs-ports-vim]: https://www.nordtheme.com/docs/ports/vim
 [home-ports-vim]: https://www.nordtheme.com/ports/vim
 [mdx-blog-v1-depr]: https://mdxjs.com/blog/v1/#deprecations
-[mdx-blog-v1]: https://mdxjs.com/blog/v1/
+[mdx-blog-v1]: https://mdxjs.com/blog/v1
+[nord-vim#158]: https://github.com/arcticicestudio/nord-vim/issues/158
 
 <!-- v0.14.0 -->
 
 [arcticicestudio/nord-vim#161][]https://github.com/arcticicestudio/nord-vim/pull/161
+
+<!-- v0.15.0 -->
+
+[gh-149]: https://github.com/arcticicestudio/nord-docs/issues/140
+[home-docs-ports-vscode-custom]: https://www.nordtheme.com/docs/ports/visual-studio-code/customization
+[home-docs-ports-vscode-develop]: https://www.nordtheme.com/docs/ports/visual-studio-code/development
+[home-docs-ports-vscode-install]: https://www.nordtheme.com/docs/ports/visual-studio-code/installation
+[home-docs-ports-vscode]: https://www.nordtheme.com/docs/ports/visual-studio-code
+[home-ports-vscode]: https://www.nordtheme.com/ports/visual-studio-code
+[nord-visual-studio-code#138]: https://github.com/arcticicestudio/nord-visual-studio-code/issues/138
