@@ -131,6 +131,38 @@ const ROUTE_DOCS_PORTS_VIM_CUSTOMIZATION = `${ROUTE_DOCS_PORTS_VIM}/customizatio
 const ROUTE_DOCS_PORTS_VIM_INSTALLATION = `${ROUTE_DOCS_PORTS_VIM}/installation`;
 
 /**
+ * The route mapping for the docs page of the "Nord Visual Studio Code" port project.
+ *
+ * @constant {string}
+ * @since 0.14.0
+ */
+const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}${DOCS}/${PORTS}/visual-studio-code`;
+
+/**
+ * The route mapping for the theme customization docs page of the "Nord Visual Studio Code" port project.
+ *
+ * @constant {string}
+ * @since 0.14.0
+ */
+const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_CUSTOMIZATION = `${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE}/customization`;
+
+/**
+ * The route mapping for the development docs page of the "Nord Visual Studio Code" port project.
+ *
+ * @constant {string}
+ * @since 0.14.0
+ */
+const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT = `${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE}/development`;
+
+/**
+ * The route mapping for the installation docs page of the "Nord Visual Studio Code" port project.
+ *
+ * @constant {string}
+ * @since 0.14.0
+ */
+const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION = `${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE}/installation`;
+
+/**
  * The route mapping for the `docs` page about Nord's colors and palettes.
  *
  * @constant {string}
@@ -188,6 +220,14 @@ const ROUTE_PORTS_JETBRAINS = `${ROUTE_ROOT}/${PORTS}/jetbrains`;
 const ROUTE_PORTS_VIM = `${ROUTE_ROOT}/${PORTS}/vim`;
 
 /**
+ * The route mapping for the "Nord Visual Studio Code" port project page.
+ *
+ * @constant {string}
+ * @since 0.14.0
+ */
+const ROUTE_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}/${PORTS}/visual-studio-code`;
+
+/**
  * The per-route unique `id` attribute values of sections components.
  *
  * @constant {Object}
@@ -201,6 +241,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_PORTS]: ["hero", "search"],
   [ROUTE_PORTS_JETBRAINS]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
   [ROUTE_PORTS_VIM]: ["hero", "introduction", "syntax", "editor-details", "plugin-support", "configurations", "setup"],
+  [ROUTE_PORTS_VISUAL_STUDIO_CODE]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
   [ROUTE_ROOT]: [
     "hero",
     "palettes-modularity",
@@ -232,6 +273,11 @@ module.exports = {
   ROUTE_PORTS,
   ROUTE_PORTS_JETBRAINS,
   ROUTE_PORTS_VIM,
+  ROUTE_PORTS_VISUAL_STUDIO_CODE,
+  ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE,
+  ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_CUSTOMIZATION,
+  ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT,
+  ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION,
   ROUTE_ROOT,
   SECTION_COMPONENT_IDS
 };

@@ -1,0 +1,109 @@
+import Button from "atoms/core/Button";
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { ReactComponent as WindowCode } from "assets/images/illustrations/window-code.svg";
+import { ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Extension Development",
+  subline: "Learn how to customize the theme to fit your needs, preview changes and package the extension."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowCode />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+This page documents how to develop the theme extension — from requirements to VSIX packaging and the development workflow steps.
+
+# Requirements
+
+Download and install Visual Studio Code, or [Visual Studio Code Insiders][vscode-insiders] to update to the latest development state each day, with a minimal version of [1.12.0 or higher][vscode-docs-rl-1.12.0].
+
+# Setup
+
+<Banner
+  title={
+    <>
+      Uninstall all currently installed versions of the <em>Nord</em> extension!
+    </>
+  }
+  variant="warn"
+>
+  Otherwise the installed and versioned extension will collide with the development extension that'll be configured in
+  this guide.
+</Banner>
+
+## Download
+
+Clone the [_Nord Visual Studio Code_ repository from GitHub][gh-repo] to your [local extension directory][vscode-docs-extdir] where name of _Nord_'s extension directory must follow VS Code's extension naming scheme of `<PUBLISHER_NAME>.<EXTENSION_NAME>-<EXTENSION_VERSION>`.
+
+This results in the following directory name for the _Nord_ extension: `arcticicestudio.nord-visual-studio-code-0.0.0`. Note that **you can specify any version number you like**, but using `0.0.0` indicates that this is a special version for development purposes.
+
+```sh
+git clone https://github.com/arcticicestudio/nord-visual-studio-code.git arcticicestudio.nord-visual-studio-code-0.0.0
+```
+
+To get the project without [Git][] download the project as `.zip` archive file from the GitHub repository or click on the download button below. Afterwards extract the archive to your local extension directory following the directory naming scheme like described above.
+
+<Button href="https://github.com/arcticicestudio/nord-visual-studio-code/archive/develop.zip">Download</Button>
+
+<Image
+  alt="Screenshot showing the GitHub repository web UI to download the project repository"
+  fillSize={60}
+  fluid={props.images["github-clone.png"]}
+>
+  Download the project repository from GitHub
+</Image>
+
+Both methods will use the `develop` branch to work with the latest development state.
+
+Open the extension by [adding the cloned/extracted repository directory to your workspace][vscode-docs-add-to-workspace] or opening the directory directly and set _Nord_ as active color theme like documented in the <Link to={`${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION}#activation`}>installation & activation guide</Link>.
+
+# Workflow
+
+In contrast to the immediately applied changes when editing the [user settings][vscode-docs-settings] it requires a complete restart/reload of VS Code when editing any [JSON theme files][gh-tree-themes] provided by the extension.
+
+To simplify the development without requiring to restart VS Code every time to preview changes
+
+1. add the [modified workbench UI or syntax theme key][vscode-docs-colortheme-custom] to your user settings
+2. save the file to apply the changes immediately
+3. add the changes to _Nord_'s JSON theme file afterwards
+
+This way allows to develop and preview the theme without being slowed down by the missing _hot reload_ functionality.
+
+# Packaging
+
+Visual Studio Code extensions are [packaged using the custom and installable VSIX format][vscode-docs-ext-vsixpack].
+To package, publish and manage extensions, VS Code uses the official CLI tool [`vsce`][vscode-docs-ext-vsixpack].
+
+1. Follow the official documentations to learn how to [install and use the `vsce` CLI tool][vscode-docs-ext-vsce-install].
+2. Run `vsce package` in your terminal from within _Nord Visual Studio Code_'s repository to build the `.vsix` extension file.
+
+Please read the theme documentation about <Link to={`${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION}#local-installation`}>how to install and activate the generated VSIX file locally</Link>.
+
+Follow the <Link to={ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION}>Installation & Activation Guide</Link> for more details how to enable the theme.
+
+</ShrinkedWidth>
+
+[gh-repo]: https://github.com/arcticicestudio/nord-visual-studio-code
+[gh-tree-themes]: https://github.com/arcticicestudio/nord-visual-studio-code/blob/develop/themes
+[git]: https://git-scm.com
+[vscode-docs-add-to-workspace]: https://code.visualstudio.com/docs/editor/multi-root-workspaces#_adding-folders
+[vscode-docs-colortheme-custom]: https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme
+[vscode-docs-ext-vsce-install]: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#installation
+[vscode-docs-ext-vsce]: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#vsce
+[vscode-docs-ext-vsixpack]: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#packaging-extensions
+[vscode-docs-extdir]: https://code.visualstudio.com/api/working-with-extensions/publishing-extension#your-extension-folder
+[vscode-docs-rl-1.12.0]: https://code.visualstudio.com/updates/v1_12
+[vscode-docs-settings]: https://code.visualstudio.com/docs/getstarted/settings
+[vscode-insiders]: https://code.visualstudio.com/insiders

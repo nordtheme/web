@@ -1,0 +1,97 @@
+import Link from "atoms/core/Link";
+import { Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Kbd } from "atoms/core/html-elements";
+import { ReactComponent as Plugin } from "assets/images/illustrations/plugin.svg";
+import { ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Activation",
+  subline: "Get up and running in one click with the official VS Code Extension Marketplace."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <Plugin />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+Thanks to the [official VS Code Extension Marketplace][vscode-extmarket-nord], _Nord Visual Studio Code_ can be installed with one click.
+
+Open the [extension marketplace][vscode-docs-extmarket] by clicking on the _Extensions_ icon in the [_Activity Bar_][vscode-docs-ui-actbar] and search for `Nord`.
+Click on the <Kbd>Install</Kbd> button and restart VS Code (when asked for it) to finish the installation.
+
+<Image dropShadow fluid={props.images["ui-extension-marketplace.png"]} rounded>
+  <span>
+    The builtin <Link href="https://code.visualstudio.com/docs/editor/extension-gallery">extension marketplace</Link>{" "}
+    view installed <em>Nord</em> theme.
+  </span>
+</Image>
+
+The extension can also be installed by running the `ext install arcticicestudio.nord-visual-studio-code` command via the _Quick Open_ widget like also described in the header of [Nord's extension page on the marketplace site][vscode-extmarket-nord].
+
+### Local Installation
+
+A <Link to={`${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT}#packaging`}>packaged VSIX file</Link> can be installed locally to use a modified variant of the theme without uploading it to the [extension marketplace][vscode-extmarket].
+
+Open the drop-down menu from the „Extension“ view in the _Activity Bar_ and select „Install from VSIX…“.
+
+<Image
+  dropShadow
+  alt="Screenshot showing the menu to install VSIX extensions locally"
+  fluid={props.images["install-local-menu.png"]}
+  rounded
+>
+  Local VSIX installation from the extension context menu.
+</Image>
+
+The VSIX file picker can also be opened by running the „“ command from the _Command Palette_.
+
+<Image
+  dropShadow
+  alt="Screenshot showing the command palette to install VSIX extensions locally"
+  fluid={props.images["install-local-command.png"]}
+  rounded
+>
+  Local VSIX installation through the <em>Command Palette</em>.
+</Image>
+
+Select the extension VSIX file and confirm the installation.
+
+Read the theme documentation on <Link to={ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT}>how to develop and package the theme</Link> as well as the official VS Code documentation on how to [install from a VSIX file][vscode-docs-extmarket-vsix].
+
+## Activation
+
+To activate the _Nord_ color theme, open the [color theme picker][vscode-docs-colortheme] by clicking on the gear icon in the [_Activity Bar_][vscode-docs-ui-actbar] and select _Color Theme_ or by running the `Preferences: Color Theme` command from the [_Command Palette_][vscode-docs-ui-cmdpalette].
+
+<Image dropShadow fluid={props.images["ui-command-palette-color-theme.png"]} rounded>
+  <span>
+    Opening the color theme picker through the <em>Command Palette</em>.
+  </span>
+</Image>
+
+Search for `Nord` and confirm the color theme change with <Kbd>Enter</Kbd>.
+
+<Image dropShadow fluid={props.images["ui-color-theme-select.png"]} rounded>
+  <span>
+    Selecting <em>Nord</em> as active color theme.
+  </span>
+</Image>
+
+</ShrinkedWidth>
+
+[vscode-docs-colortheme]: https://code.visualstudio.com/docs/getstarted/themes
+[vscode-docs-extmarket-vsix]: https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix
+[vscode-docs-extmarket]: https://code.visualstudio.com/docs/editor/extension-gallery
+[vscode-docs-settings]: https://code.visualstudio.com/docs/getstarted/settings
+[vscode-docs-ui-actbar]: https://code.visualstudio.com/docs/getstarted/userinterface#_activity-bar
+[vscode-docs-ui-cmdpalette]: https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette
+[vscode-extmarket-nord]: https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code
+[vscode-extmarket]: https://marketplace.visualstudio.com
