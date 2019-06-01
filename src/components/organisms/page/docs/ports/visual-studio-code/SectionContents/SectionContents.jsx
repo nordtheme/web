@@ -29,7 +29,7 @@ const SECTION_ID = sectionIdFor(ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE, 1);
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.14.0
+ * @since 0.15.0
  */
 const SectionContents = () => (
   <Section id={SECTION_ID} variant="tertiary">
