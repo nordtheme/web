@@ -134,7 +134,7 @@ const ROUTE_DOCS_PORTS_VIM_INSTALLATION = `${ROUTE_DOCS_PORTS_VIM}/installation`
  * The route mapping for the docs page of the "Nord Visual Studio Code" port project.
  *
  * @constant {string}
- * @since 0.14.0
+ * @since 0.15.0
  */
 const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}${DOCS}/${PORTS}/visual-studio-code`;
 
@@ -142,7 +142,7 @@ const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}${DOCS}/${PORTS}/visua
  * The route mapping for the theme customization docs page of the "Nord Visual Studio Code" port project.
  *
  * @constant {string}
- * @since 0.14.0
+ * @since 0.15.0
  */
 const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_CUSTOMIZATION = `${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE}/customization`;
 
@@ -150,7 +150,7 @@ const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_CUSTOMIZATION = `${ROUTE_DOCS_PORTS_VI
  * The route mapping for the development docs page of the "Nord Visual Studio Code" port project.
  *
  * @constant {string}
- * @since 0.14.0
+ * @since 0.15.0
  */
 const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT = `${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE}/development`;
 
@@ -158,7 +158,7 @@ const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT = `${ROUTE_DOCS_PORTS_VISU
  * The route mapping for the installation docs page of the "Nord Visual Studio Code" port project.
  *
  * @constant {string}
- * @since 0.14.0
+ * @since 0.15.0
  */
 const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION = `${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE}/installation`;
 
@@ -223,7 +223,7 @@ const ROUTE_PORTS_VIM = `${ROUTE_ROOT}/${PORTS}/vim`;
  * The route mapping for the "Nord Visual Studio Code" port project page.
  *
  * @constant {string}
- * @since 0.14.0
+ * @since 0.15.0
  */
 const ROUTE_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}/${PORTS}/visual-studio-code`;
 
