@@ -8,6 +8,41 @@
 
 <!-- lint disable no-duplicate-headings -->
 
+# 0.16.0
+
+![Release Date: 2019-06-02](https://img.shields.io/badge/Release_Date-2019--06--02-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.16.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/18) [![Milestone](https://img.shields.io/badge/Milestone-0.16.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/16)
+
+This version mainly focused on the [transition of the „Nord tmux“ port project][gh-152]. The implementation include port specific [“landing”][home-ports-tmux] and [docs][home-docs-ports-tmux] page, the [installation & activation guide][home-docs-ports-tmux-install], [configuration][home-docs-ports-tmux-config] guide and [plugin support][home-docs-ports-tmux-plugins] pages.
+
+## Features
+
+**„Nord tmux“ Transition** — #152 ⇄ #153 (⊶ a138cc24)
+↠ Transferred all documentations, assets and visualizations from „Nord tmux“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the Nord tmux repository][nord-tmux#36] to get an overview of what has changed for Nord tmux and what has been done to migrate to Nord Docs.
+
+### Landing Page
+
+<p align="center"><a href="https://www.nordtheme.com/ports/tmux" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762743-23bed700-8553-11e9-8094-dc82e8eea6bd.png" alt="Preview: Nord tmux Port Project Landing Page"/></a></p>
+
+### Docs Page
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/tmux" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762745-29b4b800-8553-11e9-9b2c-076577593a9c.png" alt="Preview: Nord tmux Docs Page"/></a></p>
+
+### Installation & Activation Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/tmux/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762754-3f29e200-8553-11e9-88ae-336f7a1ed999.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+
+### Configuration Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/tmux/configuration" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762760-451fc300-8553-11e9-861c-1a0925d20d66.png" alt="Preview: Configuration Guide Page"/></a></p>
+
+### Plugin Support Guide
+
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/tmux/plugin-support" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762761-4ea92b00-8553-11e9-929a-14dfd6690b36.png" alt="Preview: Plugin Support Guide Page"/></a></p>
+
+**Screenshot showing Go syntax highlighting** — #151 (⊶ 42b2b609)
+↠ Added a new screenshot asset for the „Nord Visual Studio Code“ port project showing the Go syntax in order to fix the bug described in [arcticicestudio/nord-visual-studio-code#140][gh-arcticicestudio/nord-visual-studio-code#140] regarding the usage of duplicate assets.
+
 # 0.15.0
 
 ![Release Date: 2019-05-31](https://img.shields.io/badge/Release_Date-2019--05--31-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/17) [![Milestone](https://img.shields.io/badge/Milestone-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/15)
@@ -1715,10 +1750,21 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 <!-- v0.15.0 -->
 
-[gh-149]: https://github.com/arcticicestudio/nord-docs/issues/140
+[gh-149]: https://github.com/arcticicestudio/nord-docs/issues/149
 [home-docs-ports-vscode-custom]: https://www.nordtheme.com/docs/ports/visual-studio-code/customization
 [home-docs-ports-vscode-develop]: https://www.nordtheme.com/docs/ports/visual-studio-code/development
 [home-docs-ports-vscode-install]: https://www.nordtheme.com/docs/ports/visual-studio-code/installation
 [home-docs-ports-vscode]: https://www.nordtheme.com/docs/ports/visual-studio-code
 [home-ports-vscode]: https://www.nordtheme.com/ports/visual-studio-code
 [nord-visual-studio-code#138]: https://github.com/arcticicestudio/nord-visual-studio-code/issues/138
+
+<!-- v0.16.0 -->
+
+[gh-152]: https://github.com/arcticicestudio/nord-docs/issues/152
+[gh-arcticicestudio/nord-visual-studio-code#140]: https://github.com/arcticicestudio/nord-visual-studio-code/issues/140
+[home-docs-ports-tmux-config]: https://www.nordtheme.com/docs/ports/tmux/configuration
+[home-docs-ports-tmux-install]: https://www.nordtheme.com/docs/ports/tmux/installation
+[home-docs-ports-tmux-plugins]: https://www.nordtheme.com/docs/ports/visual-studio-code/plugin-support
+[home-docs-ports-tmux]: https://www.nordtheme.com/docs/ports/visual-studio-code
+[home-ports-tmux]: https://www.nordtheme.com/ports/tmux
+[nord-tmux#36]: https://github.com/arcticicestudio/nord-tmux/issues/36
