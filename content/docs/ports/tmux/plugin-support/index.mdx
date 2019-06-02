@@ -1,0 +1,59 @@
+import Link from "atoms/core/Link";
+import { Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { ReactComponent as Plugin } from "assets/images/illustrations/plugin.svg";
+import { ROUTE_DOCS_PORTS_TMUX_CONFIGURATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Plugin Support",
+  subline: "Use your favorite plugins with a fluid and unobtrusive user interface transition."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <Plugin />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+The theme comes with styles for popular [official][gh-tmux-plugins]- and third-party UI plugins allowing a unobtrusive and visually matching integration.
+
+## tmux-prefix-highlight
+
+[tmux-prefix-highlight][gh-tmux-plugins/tmux-prefix-highlight] highlights when pressing the tmux prefix key that allows to quickly see the current usage mode.
+Nord tmux supports the _prefix_ and _copy-mode_ status indicator.
+
+<Image
+  alt="Screenshot showing the status bar with multiple tmux-prefix-highlight mode indicators."
+  dropShadow
+  fluid={props.images["tmux-prefix-highlight.png"]}
+  rounded
+>
+  <span>
+    The status bar with multiple <em>tmux-prefix-highlight</em> mode indicators.
+  </span>
+</Image>
+
+The plugin is also supported when using Nord tmux without <Link to={`${ROUTE_DOCS_PORTS_TMUX_CONFIGURATION}#patched-font-characters`}>patched font characters</Link>.
+
+<Image
+  alt="Screenshot showing the status bar with disabled patched font characters and multiple tmux-prefix-highlight mode indicators."
+  dropShadow
+  fluid={props.images["tmux-prefix-highlight-no-patched-font.png"]}
+  rounded
+>
+  <span>
+    The status bar with disabled patched font characters and multiple <em>tmux-prefix-highlight</em> mode indicators.
+  </span>
+</Image>
+
+</ShrinkedWidth>
+
+[gh-tmux-plugins]: https://github.com/tmux-plugins
+[gh-tmux-plugins/tmux-prefix-highlight]: https://github.com/tmux-plugins/tmux-prefix-highlight
