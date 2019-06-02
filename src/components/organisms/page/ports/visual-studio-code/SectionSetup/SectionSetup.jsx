@@ -30,7 +30,7 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_VISUAL_STUDIO_CODE, 5);
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.14.0
+ * @since 0.15.0
  */
 const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();

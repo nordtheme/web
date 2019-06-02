@@ -8,16 +8,20 @@
  */
 
 import React from "react";
-import { css } from "styled-components";
 
-import { WaveFooter } from "atoms/core/vectors/divider";
-import { P } from "atoms/core/html-elements";
+import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
+import { Image } from "atoms/core/mdx-elements";
 import Section, { Content } from "containers/core/Section";
-import EmptyState from "molecules/core/EmptyState";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
+import { ROUTE_DOCS_PORTS_TMUX, ROUTE_DOCS_PORTS_TMUX_INSTALLATION, ROUTE_PORTS_TMUX } from "config/routes/mappings";
 import { usePortsMetadata } from "hooks";
+import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
+import { sectionIdFor } from "utils";
 
-import { emptyStateIllustrationStyles } from "../../../shared/styles";
+import WaveDivider from "./styled/WaveDivider";
+
+const SECTION_ID = sectionIdFor(ROUTE_PORTS_TMUX, 0);
 
 /**
  * The component that represents the hero section for the landing page of the "Nord tmux" port project.
@@ -26,32 +30,51 @@ import { emptyStateIllustrationStyles } from "../../../shared/styles";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-export default function SectionHero() {
+const SectionHero = ({ assets }) => {
   const portMetadata = usePortsMetadata();
   const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-tmux");
 
   return (
-    <Section>
-      <Content centered>
-        <EmptyState
-          headline="Oh, there's nothing here yet"
-          illustrationStyles={emptyStateIllustrationStyles}
-          illustrationVariant="iglooHemisphere"
-          subline="Please check back later, we're working hard on this page!"
-        />
-        <P
-          css={css`
-            text-align: center;
-          `}
-        >
-          In the meantime, please see the official{" "}
-          <Link href={gitHubRepositoryUrl} target="_blank" variant="minimal">
-            repository on GitHub
-          </Link>{" "}
-          for information about Nord tmux.
-        </P>
+    <Section id={SECTION_ID}>
+      <Content centered decorated>
+        <FeatureDuo verticalOnly>
+          <Text verticalOnly>
+            <Headline large>Nord tmux</Headline>
+            <Subline>
+              An arctic, north-bluish clean and elegant <Link href="https://tmux.github.io">tmux</Link> theme.
+            </Subline>
+            <Subline>Designed for a fluent and clear workflow with support for third-party plugins.</Subline>
+            <Actions>
+              <Button to={ROUTE_DOCS_PORTS_TMUX_INSTALLATION} variant="primary">
+                Get Started
+              </Button>
+              <Button ghost outlined quiet to={ROUTE_DOCS_PORTS_TMUX} variant="primary">
+                Documentation
+              </Button>
+              <Button ghost href={gitHubRepositoryUrl} outlined quiet variant="primary">
+                GitHub
+              </Button>
+            </Actions>
+          </Text>
+          <Visualization>
+            <Image
+              alt="Screenshot showing the terminal with active tmux session"
+              dropShadow
+              fluid={assets.images["overview.png"]}
+              rounded
+            >
+              <span>
+                Terminal with active <em>tmux</em> session.
+              </span>
+            </Image>
+          </Visualization>
+        </FeatureDuo>
       </Content>
-      <WaveFooter />
+      <WaveDivider />
     </Section>
   );
-}
+};
+
+SectionHero.propTypes = usePortsAssetsPropTypes;
+
+export default SectionHero;
