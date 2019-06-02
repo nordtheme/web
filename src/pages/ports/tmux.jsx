@@ -11,7 +11,15 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/ports/tmux";
+import {
+  SectionConfigurations,
+  SectionHero,
+  SectionIntroduction,
+  SectionPluginSupport,
+  SectionSetup,
+  SectionUIElements
+} from "organisms/page/ports/tmux";
+import { usePortsAssets } from "hooks";
 
 /**
  * The component that represents the landing page of the "Nord tmux" port project.
@@ -20,11 +28,20 @@ import { SectionHero } from "organisms/page/ports/tmux";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const Tmux = ({ location: { pathname } }) => (
-  <BaseLayout pathName={pathname}>
-    <SectionHero />
-  </BaseLayout>
-);
+const Tmux = ({ location: { pathname } }) => {
+  const assets = usePortsAssets("tmux");
+
+  return (
+    <BaseLayout pathName={pathname}>
+      <SectionHero assets={assets} />
+      <SectionIntroduction assets={assets} />
+      <SectionUIElements assets={assets} />
+      <SectionPluginSupport assets={assets} />
+      <SectionConfigurations assets={assets} />
+      <SectionSetup assets={assets} />
+    </BaseLayout>
+  );
+};
 
 Tmux.propTypes = locationPropTypes;
 

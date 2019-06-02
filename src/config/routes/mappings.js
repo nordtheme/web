@@ -99,6 +99,38 @@ const ROUTE_DOCS_PORTS_JETBRAINS_SUPPORT = `${ROUTE_DOCS_PORTS_JETBRAINS}/suppor
 const ROUTE_DOCS_PORTS_JETBRAINS_TROUBLESHOOTING = `${ROUTE_DOCS_PORTS_JETBRAINS}/troubleshooting`;
 
 /**
+ * The route mapping for the docs page of the "Nord tmux" port project.
+ *
+ * @constant {string}
+ * @since 0.16.0
+ */
+const ROUTE_DOCS_PORTS_TMUX = `${ROUTE_ROOT}${DOCS}/${PORTS}/tmux`;
+
+/**
+ * The route mapping for the theme configuration docs page of the "Nord tmux" port project.
+ *
+ * @constant {string}
+ * @since 0.16.0
+ */
+const ROUTE_DOCS_PORTS_TMUX_CONFIGURATION = `${ROUTE_DOCS_PORTS_TMUX}/configuration`;
+
+/**
+ * The route mapping for the installation docs page of the "Nord tmux" port project.
+ *
+ * @constant {string}
+ * @since 0.16.0
+ */
+const ROUTE_DOCS_PORTS_TMUX_INSTALLATION = `${ROUTE_DOCS_PORTS_TMUX}/installation`;
+
+/**
+ * The route mapping for the theme plugin support docs page of the "Nord tmux" port project.
+ *
+ * @constant {string}
+ * @since 0.16.0
+ */
+const ROUTE_DOCS_PORTS_TMUX_PLUGIN_SUPPORT = `${ROUTE_DOCS_PORTS_TMUX}/plugin-support`;
+
+/**
  * The route mapping for the docs page of the "Nord Vim" port project.
  *
  * @constant {string}
@@ -212,6 +244,14 @@ const ROUTE_PORTS = ROUTE_ROOT + PORTS;
 const ROUTE_PORTS_JETBRAINS = `${ROUTE_ROOT}/${PORTS}/jetbrains`;
 
 /**
+ * The route mapping for the "Nord JetBrains" port project page.
+ *
+ * @constant {string}
+ * @since 0.16.0
+ */
+const ROUTE_PORTS_TMUX = `${ROUTE_ROOT}/${PORTS}/tmux`;
+
+/**
  * The route mapping for the "Nord Vim" port project page.
  *
  * @constant {string}
@@ -240,6 +280,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_DOCS_PORTS_VIM]: ["hero", "contents"],
   [ROUTE_PORTS]: ["hero", "search"],
   [ROUTE_PORTS_JETBRAINS]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
+  [ROUTE_PORTS_TMUX]: ["hero", "introduction", "ui-elements", "plugin-support", "configurations", "setup"],
   [ROUTE_PORTS_VIM]: ["hero", "introduction", "syntax", "editor-details", "plugin-support", "configurations", "setup"],
   [ROUTE_PORTS_VISUAL_STUDIO_CODE]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
   [ROUTE_ROOT]: [
@@ -256,28 +297,33 @@ const SECTION_COMPONENT_IDS = {
 module.exports = {
   ROUTE_BLOG,
   ROUTE_COMMUNITY,
-  ROUTE_DOCS,
-  ROUTE_DOCS_PORTS_JETBRAINS,
+  ROUTE_DOCS_COLOR_AND_PALETTES,
   ROUTE_DOCS_PORTS_JETBRAINS_DEVELOPMENT,
   ROUTE_DOCS_PORTS_JETBRAINS_INSTALLATION,
   ROUTE_DOCS_PORTS_JETBRAINS_SUPPORT,
   ROUTE_DOCS_PORTS_JETBRAINS_TROUBLESHOOTING,
-  ROUTE_DOCS_PORTS_VIM,
+  ROUTE_DOCS_PORTS_JETBRAINS,
+  ROUTE_DOCS_PORTS_TMUX_CONFIGURATION,
+  ROUTE_DOCS_PORTS_TMUX_INSTALLATION,
+  ROUTE_DOCS_PORTS_TMUX_PLUGIN_SUPPORT,
+  ROUTE_DOCS_PORTS_TMUX,
   ROUTE_DOCS_PORTS_VIM_CONFIGURATION,
   ROUTE_DOCS_PORTS_VIM_CUSTOMIZATION,
   ROUTE_DOCS_PORTS_VIM_INSTALLATION,
-  ROUTE_DOCS_COLOR_AND_PALETTES,
-  ROUTE_DOCS_SWATCHES,
-  ROUTE_DOCS_USAGE,
-  ROUTE_LANDING,
-  ROUTE_PORTS,
-  ROUTE_PORTS_JETBRAINS,
-  ROUTE_PORTS_VIM,
-  ROUTE_PORTS_VISUAL_STUDIO_CODE,
-  ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE,
+  ROUTE_DOCS_PORTS_VIM,
   ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_CUSTOMIZATION,
   ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT,
   ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION,
+  ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE,
+  ROUTE_DOCS_SWATCHES,
+  ROUTE_DOCS_USAGE,
+  ROUTE_DOCS,
+  ROUTE_LANDING,
+  ROUTE_PORTS_JETBRAINS,
+  ROUTE_PORTS_TMUX,
+  ROUTE_PORTS_VIM,
+  ROUTE_PORTS_VISUAL_STUDIO_CODE,
+  ROUTE_PORTS,
   ROUTE_ROOT,
   SECTION_COMPONENT_IDS
 };
