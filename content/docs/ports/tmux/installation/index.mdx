@@ -1,0 +1,114 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code, Kbd } from "atoms/core/html-elements";
+import { ReactComponent as WindowCode } from "assets/images/illustrations/window-code.svg";
+import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_PORTS } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Activation",
+  subline: "Get up and running in a few lines of code with your favorite plugin manager or manual setup"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowCode />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+<Banner
+  title={
+    <>
+      tmux <strong>must</strong> be used with a <Link to={ROUTE_PORTS}>Nord terminal emulator theme</Link> in order to work properly!
+    </>
+  }
+>
+  Make sure to install one of the currently supported <Link to={ROUTE_PORTS}>terminal emulator port projects</Link> <strong>before</strong> installing Nord tmux.
+
+tmux in terminal mode uses the 16 color codes provided by the terminal emulator.
+**When used with another color theme** than the one provided by one of Nord's terminal emulator ports, the colors in tmux won't use the <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>Nord color palettes</Link>!
+This will result in different styles than those defined by Nord tmux and could make it appear that there is a problem with the Nord tmux theme while the actual problem are missing Nord colors.
+
+Read the GitHub Gist about [terminal colors][gh-gist-terminal-colors] for more information about terminal color specifications.
+
+</Banner>
+
+Thanks to existing plugin managers for tmux, Nord tmux can be installed for all platforms in a uniform way within a few lines of codes. The recommended manager is [tpm][gh-tmux-plugins/tpm], but any other manager like [tundle][gh-javier-lopez/tundle] can also be used.
+
+To automatically download and activate Nord tmux, follow the install instructions for [tpm][gh-tmux-plugins/tpm] and
+
+1. add `set -g @plugin "arcticicestudio/nord-tmux"` to your [`tmux.conf`][tmux-man-tmux.conf], by default `.tmux.conf` located in your [home directory][wiki-home_dir]
+2. press the default key binding `prefix` + <Kbd>I</Kbd> to fetch- and install the plugin
+
+Also see [_tpm's_ install instructions][gh-tpm-docs-install-plugins] for more details.
+
+<Image
+  dropShadow
+  fluid={props.images["tpm.png"]}
+  rounded
+  alt="Screenshot showing a minimal tmux.conf with installed Nord color scheme"
+>
+  <span>
+    Minimal <Code>tmux.conf</Code> with installed Nord color scheme.
+  </span>
+</Image>
+
+By default, the [latest version][repo-rel-latest] will be installed. To use the [latest development state from the `develop` branch][repo-br-develop] instead, go to the installation path of Nord tmux and switch to the `develop` branch or [any other version tag][repo-tags] you like.
+
+###### Manual
+
+To install Nord tmux manually **using Git**,
+
+1. [clone the repository][repo] into any location, e.g. `~/.tmux/themes/nord-tmux`
+2. source the downloaded theme by adding the path of the [`nord.tmux`][repo-tree-master-nord.tmux] file to the bottom of your `.tmux.conf`, located in your [home directory][wiki-home_dir]:
+   ```sh
+   run-shell "~/.tmux/themes/nord-tmux/nord.tmux"
+   ```
+3. reload your `.tmux.conf` file to source- and activate the theme:
+   ```sh
+   tmux source-file ~/.tmux.conf
+   ```
+
+<Image
+  alt="Screenshot showing the GitHub repository web UI to download the project repository"
+  fillSize={60}
+  fluid={props.images["github-clone.png"]}
+/>
+
+To install the theme **without Git**,
+
+1. [download the latest version][repo-down-master] of the repository
+2. extract the downloaded archive into any location, e.g. `~/.tmux/themes/nord-tmux`
+3. copy the [`nord.tmux`][repo-tree-master-nord.tmux], [`nord-status-content.conf`][repo-tree-master-status-content.conf] and [`nord-status-content-no-patched-font.conf`][repo-tree-master-no-patched-font.conf] files to any location
+4. source the downloaded theme by adding the path of the [`nord.tmux`][repo-tree-master-nord.tmux] file to the bottom of your `.tmux.conf`, located in your [home directory][wiki-home_dir]:
+   ```sh
+   run-shell "~/.tmux/themes/nord-tmux/nord.tmux"
+   ```
+5. reload your `.tmux.conf` file to source- and activate the theme:
+   ```sh
+   tmux source-file ~/.tmux.conf
+   ```
+
+</ShrinkedWidth>
+
+[gh-gist-terminal-colors]: https://gist.github.com/XVilka/8346728
+[gh-javier-lopez/tundle]: https://github.com/javier-lopez/tundle
+[gh-tmux-plugins/tpm]: https://github.com/tmux-plugins/tpm
+[gh-tpm-docs-install-plugins]: https://github.com/tmux-plugins/tpm#installing-plugins
+[repo-br-develop]: https://github.com/arcticicestudio/nord-tmux/tree/develop
+[repo-down-master]: https://github.com/arcticicestudio/nord-tmux/archive/master.zip
+[repo-rel-latest]: https://github.com/arcticicestudio/nord-tmux/releases/latest
+[repo-tags]: https://github.com/arcticicestudio/nord-tmux/tags
+[repo-tree-master-no-patched-font.conf]: https://github.com/arcticicestudio/nord-tmux/blob/master/src/nord-status-content-no-patched-font.conf
+[repo-tree-master-nord.tmux]: https://github.com/arcticicestudio/nord-tmux/blob/master/nord.tmux
+[repo-tree-master-status-content.conf]: https://github.com/arcticicestudio/nord-tmux/blob/master/src/nord-status-content.conf
+[repo]: https://github.com/arcticicestudio/nord-tmux
+[tmux-man-tmux.conf]: http://man.openbsd.org/OpenBSD-current/man1/tmux.1#FILES
+[wiki-home_dir]: https://en.wikipedia.org/wiki/Home_directory

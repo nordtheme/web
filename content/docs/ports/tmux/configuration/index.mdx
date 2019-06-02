@@ -1,0 +1,113 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as WindowConfiguration } from "assets/images/illustrations/window-configuration.svg";
+import { ROUTE_DOCS_PORTS_TMUX_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Configuration",
+  subline: "From UI elements to font rendering — configure the theme to match your personal preferences"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowConfiguration />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+Nord tmux is designed to provide a good UX out-of-the-box, but there is a reason why principles like „themes“ exist at all: Everyone has different preferences and that's a good thing!
+
+To ensure Nord tmux fits your needs it comes with configurations for UI elements and font rendering to make the theme as flexible as possible while still providing sane defaults.
+
+All theme configuration variables must be added to either tmux's user-level, by default located in your [home directory][wiki-home_dir], or system-wide configuration file(s) that are referred to as `.tmux.conf` in this documentation. The location of the files and more details can be found in [tmux's `.tmux.conf` manual documentation][tmux-man-tmux.conf].
+
+<Banner
+  title={
+    <>
+      All configuration variables should be set <strong>before</strong> <em>tpm</em>&apos;s <Code>@plugin</Code>{" "}
+      <Link to={`${ROUTE_DOCS_PORTS_TMUX_INSTALLATION}`}>installation</Link> definition line!
+    </>
+  }
+>
+  This ensures the configurations are applied correctly when the scheme file gets loaded, otherwise the theme might be
+  loaded without taking these configurations into account.
+</Banner>
+
+## UI Elements
+
+### Default Status Bar Content
+
+By default, this theme provides status bar content including patched „powerline“ styled characters like separator arrows.
+
+<Image
+  alt="Screenshot showing the status bar with default content."
+  dropShadow
+  fluid={props.images["ui-default-status-bar-content.png"]}
+  rounded
+>
+  <span>Default status bar content.</span>
+</Image>
+
+The status bar content can be disabled in order to use customized content by setting the `@nord_tmux_show_status_content` configuration variable in the `.tmux.conf` file:
+
+```sh
+set -g @nord_tmux_show_status_content "0"
+```
+
+## Font Rendering
+
+<Banner
+  title={
+    <>
+      Disable specific font rendering theme configurations when facing rendering problems with incompatible terminals or
+      fonts!
+    </>
+  }
+  variant="warn"
+>
+  Special font rendering styles like the usage of special characters (patched „powerline“ arrows) require support from
+  the side of the used terminal and font family in order to work properly. Please check if your used terminal and font
+  supports any of the theme styles in this section, otherwise there might be unexpected rendering issues or the
+  configuration won't have any effect at all.
+</Banner>
+
+### Patched Font Characters
+
+The provided default status bar content makes use of patched „powerline“ styled characters like the separator arrows for a more modern UI and fluidly merged appearance with other applications like the status bars of Vim or Emacs.
+
+<Image
+  alt="Screenshot showing the tmux status bar with patched font elements"
+  dropShadow
+  fluid={props.images["font-rendering-patched-font.png"]}
+  rounded
+>
+  <span>The status bar with patched font elements.</span>
+</Image>
+
+To disable the usage of patched „powerline“ styled font characters, using normal _Unicode_ characters instead that should be compatible with all terminals and fonts, set the `@nord_tmux_no_patched_font` configuration variable in your `.tmux.conf` file:
+
+```sh
+set -g @nord_tmux_no_patched_font "1"
+```
+
+<Image
+  alt="Screenshot showing the tmux status bar without patched font elements"
+  dropShadow
+  fluid={props.images["font-rendering-patched-font-disabled.png"]}
+  rounded
+>
+  <span>The status bar without patched font elements.</span>
+</Image>
+
+</ShrinkedWidth>
+
+[tmux-man-tmux.conf]: http://man.openbsd.org/OpenBSD-current/man1/tmux.1#FILES
+[wiki-home_dir]: https://en.wikipedia.org/wiki/Home_directory
