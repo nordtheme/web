@@ -45,7 +45,7 @@ const DocsPage = ({ data: { images, mdx, videos }, location: { pathname }, ...pa
   });
   const docsPageVideos = {};
   videos?.edges?.forEach(({ node }) => {
-    docsPageVideos[`${node.name}.${node.extension}`] = node.publicURL;
+    docsPageVideos[`${node.name}.${node.extension}`] = node;
   });
 
   return (
