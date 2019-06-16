@@ -6,7 +6,37 @@
 
 <p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/nord" alt="Nord">Nord</a> website and documentation</p>
 
-<!-- lint disable no-duplicate-headings -->
+<!--lint disable no-duplicate-headings-->
+
+# 0.17.0
+
+![Release Date: 2019-06-02](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-16&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/19) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/17)
+
+This version mainly focused on the [transition of the „Nord Emacs“ port project][gh-155]. The implementation includse port specific [“landing”][home-ports-emacs] and [docs][home-docs-ports-emacs] page, the [installation & activation guide][home-docs-ports-emacs-install] and [configuration][home-docs-ports-emacs-config] page.
+
+## Features
+
+**„Nord Emacs“ Transition** — #155 ⇄ #158 (⊶ 9569306d)
+↠ Transferred all documentations, assets and visualizations from „Nord Emacs“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the Nord Emacs repository][nord-emacs#155] to get an overview of what has changed for Nord Emacs and what has been done to migrate to Nord Docs.
+
+<p align="center">Landing Page</p>
+<p align="center"><a href="https://www.nordtheme.com/ports/emacs" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59565380-2f31f800-9053-11e9-8963-7d0ca40b0f43.jpg" alt="Preview: Nord Emacs Port Project Landing Page"/></a></p>
+
+<p align="center">Docs Page</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/emacs" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59565381-2f31f800-9053-11e9-8351-2dcdcd9757e2.png" alt="Preview: Nord Emacs Docs Page"/></a></p>
+
+<p align="center">Installation & Activation Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/emacs/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59565379-2f31f800-9053-11e9-802d-8c75cb93382a.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+
+<p align="center">Configuration Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/emacs/configuration" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59565378-2f31f800-9053-11e9-9b40-32a0c7d83adf.png" alt="Preview: Configuration Guide Page"/></a></p>
+
+## Bug Fixes
+
+**Missing Video Metadata In Docs Page Template** — #157 (⊶ ce1f5768)
+↠ The [`Video`][gh-nord-docs-blob-mdx-video-component#l93-94] component maps the video file metadata received from `props.sources` (array of objects) to the `<source>` HTML tag, but for docs pages the MDX [`DocsPage`][gh-nord-docs-blob-template-docs_page#l48] component only passed down the `publicUrl` metadata field resulting in a array of strings. This caused the `Video` component failing to load the video file(s) for MDX docs pages.
+To fix the invalid mapping the `DocsPage` component now passes down the whole video file metadata object instead of only the `publicUrl` (string) field.
 
 # 0.16.0
 
@@ -1408,7 +1438,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 ⊶ (U+22B6): Icon prefix for the short commit SHA checksum in a log metadata
 -->
 
-<!-- lint disable final-definition -->
+<!--lint disable final-definition-->
 
 <!-- Base Links -->
 
@@ -1566,6 +1596,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [mdn-mq]: https://developer.mozilla.org/de/docs/Web/CSS/Media_Queries/Using_media_queries
 [mdn-ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 [mdn-web-mf]: https://developer.mozilla.org/en-US/docs/Web/Manifest
+[mdx-blog-v1]: https://mdxjs.com/blog/v1
 [mdx-docs-provider]: https://mdxjs.com/getting-started/#mdxprovider
 [mdx]: https://mdxjs.com
 [mit-lic]: https://opensource.org/licenses/MIT
@@ -1705,6 +1736,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 <!-- v0.12.0 -->
 
+[arcticicestudio/nord-vim#161]: https://github.com/arcticicestudio/nord-vim/issues/161
 [babel-polyfill]: https://babeljs.io/docs/en/next/babel-polyfill.html
 [brigade/react-waypoint-v9]: https://github.com/brigade/react-waypoint/releases/tag/v9.0.0
 [facebook/prop-types#211]: https://github.com/facebook/prop-types/pull/211
@@ -1722,7 +1754,6 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-ports-jetbrains]: https://www.nordtheme.com/ports/jetbrains
 [kentcdodds/react-testing-library-v6.0.0]: https://github.com/kentcdodds/react-testing-library/releases/tag/v6.0.0
 [mdx-blog-v1-mig]: https://mdxjs.com/migrating/v1
-[mdx-blog-v1]: https://mdxjs.com/blog/v1
 [nord-jetbrains#44]: https://github.com/arcticicestudio/nord-jetbrains/issues/44
 [nord-jetbrains#48]: https://github.com/arcticicestudio/nord-jetbrains/issues/48
 [npm-core-js]: https://www.npmjs.com/package/core-js
@@ -1741,7 +1772,6 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-docs-ports-vim]: https://www.nordtheme.com/docs/ports/vim
 [home-ports-vim]: https://www.nordtheme.com/ports/vim
 [mdx-blog-v1-depr]: https://mdxjs.com/blog/v1/#deprecations
-[mdx-blog-v1]: https://mdxjs.com/blog/v1
 [nord-vim#158]: https://github.com/arcticicestudio/nord-vim/issues/158
 
 <!-- v0.14.0 -->
@@ -1768,3 +1798,14 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-docs-ports-tmux]: https://www.nordtheme.com/docs/ports/visual-studio-code
 [home-ports-tmux]: https://www.nordtheme.com/ports/tmux
 [nord-tmux#36]: https://github.com/arcticicestudio/nord-tmux/issues/36
+
+<!-- v0.17.0 -->
+
+[gh-155]: https://github.com/arcticicestudio/nord-docs/issues/155
+[gh-nord-docs-blob-mdx-video-component#l93-94]: https://github.com/arcticicestudio/nord-docs/blob/3b4f7273e00532c2a7506030e604f56492886acf/src/components/atoms/core/mdx-elements/Video.jsx#L93-L94
+[gh-nord-docs-blob-template-docs_page#l48]: https://github.com/arcticicestudio/nord-docs/blob/eda9240912dc8005e3297ee82471f9da8da10980/src/components/templates/docs/DocsPage.jsx#L48
+[home-docs-ports-emacs-config]: https://www.nordtheme.com/docs/ports/tmux/configuration
+[home-docs-ports-emacs-install]: https://www.nordtheme.com/docs/ports/tmux/installation
+[home-docs-ports-emacs]: https://www.nordtheme.com/docs/ports/tmux
+[home-ports-emacs]: https://www.nordtheme.com/ports/tmux
+[nord-emacs#155]: https://github.com/arcticicestudio/nord-emacs/issues/155
