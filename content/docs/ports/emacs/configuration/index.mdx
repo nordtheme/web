@@ -1,0 +1,130 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox, Video } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as WindowConfiguration } from "assets/images/illustrations/window-configuration.svg";
+import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_DOCS_PORTS_EMACS_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Configuration",
+  subline: "From UI elements to syntax highlighting — configure the theme to match your personal preferences"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowConfiguration />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+Nord Emacs is designed to provide a good UX out-of-the-box, but there is a reason why principles like _themes_ exist a all: Everyone has different preferences and that's a good thing!
+
+To ensure Nord Emacs fit your needs it comes with configurations for UI elements and the code syntax highlighting to make the theme as flexible as possible while still providing sane defaults.
+
+All theme configuration variables must be loaded by your [init file][emacs-man-init_file] that are referred to as `init.el` in this documentation. The location of the file and more details can be found in [Emacs official documentation][emacs-man-init_file].
+
+<Banner
+  title={
+    <>
+      All configuration variables must be set <strong>before</strong> the <Code>load-theme</Code>{" "}
+      <Link to={`${ROUTE_DOCS_PORTS_VIM_INSTALLATION}#activation`}>activation</Link> command!
+    </>
+  }
+>
+  This ensures the configurations are applied correctly when the theme file gets loaded, otherwise it will be loaded
+  without taking these configurations into account.
+</Banner>
+
+## UI Elements
+
+### Uniform Mode Lines
+
+Enables uniform activate- and inactive mode lines using nord3 as background.
+
+By default, only the mode line of the active buffer uses `nord3` as background color while inactive buffers are dimmed using `nord1`.
+
+<Image
+  alt="Screenshot showing Emacs with default mode lines styles"
+  fluid={props.images["uniform-mode-lines-disabled.png"]}
+  dropShadow
+  rounded
+>
+  <span>Default mode lines style.</span>
+</Image>
+
+This can be changed to use `nord3` as background color highlighting for both active and inactive mode lines by enabling the theme configuration variable `nord-uniform-mode-lines`:
+
+```lisp
+(setq nord-uniform-mode-lines t)
+```
+
+<Image
+  alt="Screenshot showing Emacs with enabled uniform mode lines style configuration"
+  fluid={props.images["uniform-mode-lines-enabled.png"]}
+  dropShadow
+  rounded
+>
+  <span>Emacs with enabled uniform mode lines style configuration.</span>
+</Image>
+
+## Syntax Highlighting
+
+### Region Highlight Style
+
+By default, Nord Emacs uses `nord2` as background color for selected text in the editor to provide a sane default style.
+
+<Video
+  dropShadow
+  loop
+  poster={props.images["editor-selection-highlight.mp4.png"]}
+  rounded
+  sources={[props.videos["editor-selection-highlight.mp4"]]}
+>
+  <span>Default editor code selection highlighting.</span>
+</Video>
+
+To use a more colorful highlighting for region selections, Nord Emacs provides the `nord-region-highlight` configuration that can be set to either `snowstorm` or `frost` to use `nord4` or `nord8` colors from Nord's <Link to={`${ROUTE_DOCS_COLOR_AND_PALETTES}#frost`}>Frost</Link> and <Link to={`${ROUTE_DOCS_COLOR_AND_PALETTES}#snow-storm`}>Snow Storm</Link> palettes.
+
+```lisp
+;; Use `nord8` from Nord's "Frost" palette as background color.
+(setq nord-region-highlight "frost")
+
+;; Use `nord4` from Nord's "Snow Storm" palette as background color.
+(setq nord-region-highlight "snowstorm")
+```
+
+<Video
+  dropShadow
+  loop
+  poster={props.images["editor-selection-highlight-frost.mp4.png"]}
+  rounded
+  sources={[props.videos["editor-selection-highlight-frost.mp4"]]}
+>
+  <span>
+    Selection in the editor with enabled <Code>frost</Code> <em>region highlight style</em> configuration.
+  </span>
+</Video>
+
+<Video
+  dropShadow
+  loop
+  poster={props.images["editor-selection-highlight-snowstorm.mp4.png"]}
+  rounded
+  sources={[props.videos["editor-selection-highlight-snowstorm.mp4"]]}
+>
+  <span>
+    Selection in the editor with enabled <Code>snowstorm</Code> <em>region highlight style</em> configuration.
+  </span>
+</Video>
+
+The foreground color is <Link to={`${ROUTE_DOCS_COLOR_AND_PALETTES}#snow-storm`}><Code>nord0</Code></Link> for both options.
+
+</ShrinkedWidth>
+
+[emacs-man-init_file]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html
