@@ -8,17 +8,41 @@
 
 <!--lint disable no-duplicate-headings-->
 
+# 0.18.0
+
+![Release Date: 2019-06-21](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.18.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/20) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.18.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/18)
+
+This version mainly focused on the [transition of the „Nord dircolors“ port project][gh-159]. The implementation includes port specific [“landing”][home-ports-dircolors] and [docs][home-docs-ports-dircolors] page, the [installation & activation guide][home-docs-ports-dircolors-install] and [supported data and node types][home-docs-ports-dircolors-type_support] page.
+
+## Features
+
+**„Nord dircolors“ Transition** — #159 ⇄ #160 (⊶ 1e2a61f6)
+↠ Transferred all documentations, assets and visualizations from „Nord dircolors“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the Nord dircolors repository][nord-dircolors#13] to get an overview of what has changed for Nord dircolors and what has been done to migrate to Nord Docs.
+
+<p align="center">Landing Page</p>
+<p align="center"><a href="https://www.nordtheme.com/ports/dircolors" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942887-25e4c900-9461-11e9-8532-50f3032c9ff6.png" alt="Preview: Nord dircolors Port Project Landing Page"/></a></p>
+
+<p align="center">Docs Page</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/dircolors" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942885-25e4c900-9461-11e9-80d4-aeb06c17bf42.png" alt="Preview: Nord dircolors Docs Page"/></a></p>
+
+<p align="center">Installation & Activation Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/dircolors/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942884-25e4c900-9461-11e9-899f-37e80ca1d7db.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+
+<p align="center">Type Support</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/dircolors/type-support" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942886-25e4c900-9461-11e9-98bd-ddd164ca2447.png" alt="Preview: Configuration Guide Page"/></a></p>
+
 # 0.17.0
 
-![Release Date: 2019-06-02](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-16&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/19) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/17)
+![Release Date: 2019-06-16](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-16&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/19) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/17)
 
-This version mainly focused on the [transition of the „Nord Emacs“ port project][gh-155]. The implementation includse port specific [“landing”][home-ports-emacs] and [docs][home-docs-ports-emacs] page, the [installation & activation guide][home-docs-ports-emacs-install] and [configuration][home-docs-ports-emacs-config] page.
+This version mainly focused on the [transition of the „Nord Emacs“ port project][gh-155]. The implementation includes port specific [“landing”][home-ports-emacs] and [docs][home-docs-ports-emacs] page, the [installation & activation guide][home-docs-ports-emacs-install] and [configuration][home-docs-ports-emacs-config] page.
 
 ## Features
 
 **„Nord Emacs“ Transition** — #155 ⇄ #158 (⊶ 9569306d)
 ↠ Transferred all documentations, assets and visualizations from „Nord Emacs“ to Nord Docs which will now serve as the single-source-of-truth™.
-Please see the [corresponding issue in the Nord Emacs repository][nord-emacs#155] to get an overview of what has changed for Nord Emacs and what has been done to migrate to Nord Docs.
+Please see the [corresponding issue in the Nord Emacs repository][nord-emacs#76] to get an overview of what has changed for Nord Emacs and what has been done to migrate to Nord Docs.
 
 <p align="center">Landing Page</p>
 <p align="center"><a href="https://www.nordtheme.com/ports/emacs" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59565380-2f31f800-9053-11e9-8963-7d0ca40b0f43.jpg" alt="Preview: Nord Emacs Port Project Landing Page"/></a></p>
@@ -1804,8 +1828,17 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-155]: https://github.com/arcticicestudio/nord-docs/issues/155
 [gh-nord-docs-blob-mdx-video-component#l93-94]: https://github.com/arcticicestudio/nord-docs/blob/3b4f7273e00532c2a7506030e604f56492886acf/src/components/atoms/core/mdx-elements/Video.jsx#L93-L94
 [gh-nord-docs-blob-template-docs_page#l48]: https://github.com/arcticicestudio/nord-docs/blob/eda9240912dc8005e3297ee82471f9da8da10980/src/components/templates/docs/DocsPage.jsx#L48
-[home-docs-ports-emacs-config]: https://www.nordtheme.com/docs/ports/tmux/configuration
-[home-docs-ports-emacs-install]: https://www.nordtheme.com/docs/ports/tmux/installation
-[home-docs-ports-emacs]: https://www.nordtheme.com/docs/ports/tmux
-[home-ports-emacs]: https://www.nordtheme.com/ports/tmux
-[nord-emacs#155]: https://github.com/arcticicestudio/nord-emacs/issues/155
+[home-docs-ports-emacs-config]: https://www.nordtheme.com/docs/ports/emacs/configuration
+[home-docs-ports-emacs-install]: https://www.nordtheme.com/docs/ports/emacs/installation
+[home-docs-ports-emacs]: https://www.nordtheme.com/docs/ports/emacs
+[home-ports-emacs]: https://www.nordtheme.com/ports/emacs
+[nord-emacs#76]: https://github.com/arcticicestudio/nord-emacs/issues/76
+
+<!-- v0.18.0 -->
+
+[gh-159]: https://github.com/arcticicestudio/nord-docs/issues/159
+[home-docs-ports-dircolors-type_support]: https://www.nordtheme.com/docs/ports/dircolors/type-support
+[home-docs-ports-dircolors-install]: https://www.nordtheme.com/docs/ports/dircolors/installation
+[home-docs-ports-dircolors]: https://www.nordtheme.com/docs/ports/dircolors
+[home-ports-dircolors]: https://www.nordtheme.com/ports/dircolors
+[nord-dircolors#13]: https://github.com/arcticicestudio/nord-dircolors/issues/13
