@@ -1,0 +1,197 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as DataNodesSSD } from "assets/images/illustrations/data-nodes-ssd.svg";
+import { ROUTE_DOCS_PORTS_DIRCOLORS_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Type Support",
+  subline:
+    "Learn about the wide range of supported data and node types — From symbolic links, executables up to file system permissions."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <DataNodesSSD />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+<Banner
+  title={
+    <>
+    This theme is only compatible for <Link href="https://en.wikipedia.org/wiki/Ls">GNU <Code>ls</Code></Link> and will have no effect with commands from other distributions like BSD (macOS) or Slackware!
+    </>
+  }
+  variant="warn"
+>
+
+[dircolors][gnu-docs-dircolors] is a utility that sets the `LS_COLORS` environment variable respected by [GNU `ls`][wiki-ls] when used with the `--color` option. It converts the _color database file_ provided by this theme (`dir_colors`), converts it into the parsable format for the GNU `ls` command and stores it in the `LS_COLOR` environment variable.
+
+Other distributions/platforms/operating systems like [macOS][wiki-macos] are based on [BSD][wiki-bsd] and using a different implementation of the `ls` command that uses a different format for color definitions stored in the `LSCOLOR` environment variable (no underscore).
+
+The `dircolors` utility only supports GNU `ls` and therefore this theme is also only compatible with the GNU `ls` command. It has no effect when used with different implementations.
+
+Please read the [manual pages of the `dircolors(1)` utility][linux-man-dircolors] and it's [configuration file `dir_colors(5)`][linux-man-dir_colors] for more information about supported terminal codes/sequences and platforms.
+
+</Banner>
+
+Nord dircolors provides highlighting for a lot of different data types, their attributes and file system permissions. This document contains a general overview of these types including descriptions about their applied Nord styles.
+
+<Image
+  alt="Screenshot showing an overview of various file and node types colorized by Nord"
+  dropShadow
+  fluid={props.images["overview.png"]}
+  rounded
+>
+  <span>Overview of various file and node types colorized by Nord.</span>
+</Image>
+
+## Global Defaults
+
+The following styles are applied globally to essential data and node types as well as their file system permissions.
+
+### Permissions
+
+The styles are applied for files and directories with different [file system permissions][wiki-fs_perm].
+
+Directories using `nord9` as foreground color and a `bold` font style.
+If the `t` permission flag is set the background color is `nord9` instead while `nord4` is used as foreground color using the `underline` font style. Also if the `o+w` permission flags are set too the font uses the `bold` style instead.
+
+For directories with the `777` permission value both the `bold` and `underline` font styles are used.
+
+<Image
+  alt="Screenshot showing directories with different file system permissions"
+  dropShadow
+  fluid={props.images["permissions.png"]}
+  rounded
+>
+  <span>
+    Directories with different{" "}
+    <Link href="https://en.wikipedia.org/wiki/File_system_permissions">file system permissions</Link>.
+  </span>
+</Image>
+
+### Links
+
+The styles are applied for [symbolic][wiki-symlink] and [hard][wiki-hardlink] links using `nord8` as foreground color. Hard links additionally have a `underline` font style.
+
+The foreground color of invalid symbolic links are colored by `nord11` while non-existent link targets using `nord11` as background color and `nord4` foreground with `bold` font styles.
+
+<Image alt="Screenshot showing symbolic and hard links" dropShadow fluid={props.images["links.png"]} rounded>
+  <span>
+    Different link types like <Link href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic</Link> and{" "}
+    <Link href="https://en.wikipedia.org/wiki/Hard_link">hard</Link> links.
+  </span>
+</Image>
+
+### Executables
+
+The styles are applied for [executables][wiki-exec] using `nord7` as foreground color with a `bold` font style.
+
+<Image alt="Screenshot showing executable files" dropShadow fluid={props.images["executables.png"]} rounded>
+  <span>
+    <Link href="https://en.wikipedia.org/wiki/Executable">Executables</Link> are recognizable at a glance.
+  </span>
+</Image>
+
+### Blocks and Sockets
+
+The styles are applied for [Unix file types][wiki-unix_ft] like [device files][wiki-dev_file] and [domain sockets][wiki-unix_sock].
+
+Character device files are using `nord13` as foreground while block devices additionally having the `bold` font style. Sockets are also colored by `nord13` with a the `underline` font style.
+
+<Image
+  alt="Screenshot showing various Unix file types"
+  dropShadow
+  fluid={props.images["blocks-and-sockets.png"]}
+  rounded
+>
+  Various <Link href="https://en.wikipedia.org/wiki/Unix_file_types">Unix file types</Link> like{" "}
+  <Link href="https://en.wikipedia.org/wiki/Device_file">device files</Link> and{" "}
+  <Link href="https://en.wikipedia.org/wiki/Unix_domain_socket">domain sockets</Link>.
+</Image>
+
+### Capabilities
+
+The styles are applied for files with different [capabilities][wiki-setuid].
+
+The GID `g+s` and UID `u+s` capability flags are colored by `nord4` with the `bold` and `underline` font styles.
+
+<Image
+  alt="Screenshot showing files with different capabilities"
+  dropShadow
+  fluid={props.images["capabilities.png"]}
+  rounded
+>
+  <Link href="https://en.wikipedia.org/wiki/Setuid">Capabilities</Link> are also styled to be more prominent.
+</Image>
+
+### Named Pipe (FIFO)
+
+The styles are applied for [named pipe][wiki-named_pipe], also known as FIFO, using `nord7` as foreground color with the `underline` font style.
+
+<Image
+  alt="Screenshot showing a named pipe also know as FIFO"
+  dropShadow
+  fluid={props.images["named_pipes.png"]}
+  rounded
+>
+  A <Link href="https://en.wikipedia.org/wiki/Named_pipe">named pipe</Link> also know as FIFO.
+</Image>
+
+## Extension Pattern
+
+The following styles are for files with specific file extensions.
+
+### Media
+
+Extension for media based types like images, audio, videos and documents are colored by `nord14` while archive- and compression types additionally using the `bold` font style.
+
+<Image
+  alt="Screenshot showing file extensions for multimedia files"
+  dropShadow
+  fluid={props.images["extension-pattern-media.png"]}
+  rounded
+>
+  Common file extensions like multimedia files.
+</Image>
+
+### Ignore Pattern
+
+Extensions for common [VCS][wiki-vcs] ignore pattern using the `dim` terminal effect applied to `nord4`.
+
+<Image
+  alt="Screenshot showing ignore pattern files"
+  dropShadow
+  fluid={props.images["extension-pattern-ignore.png"]}
+  rounded
+>
+  Common VSC ignore pattern files.
+</Image>
+
+</ShrinkedWidth>
+
+[gnu-docs-dircolors]: https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html
+[linux-man-dir_colors]: https://linux.die.net/man/5/dir_colors
+[linux-man-dircolors]: https://linux.die.net/man/1/dircolors
+[wiki-bsd]: https://en.wikipedia.org/wiki/Berkeley_Software_Distribution
+[wiki-ls]: https://en.wikipedia.org/wiki/Ls
+[wiki-macos]: https://en.wikipedia.org/wiki/MacOS
+[wiki-symlink]: https://en.wikipedia.org/wiki/Symbolic_link
+[wiki-hardlink]: https://en.wikipedia.org/wiki/Hard_link
+[wiki-fs_perm]: https://en.wikipedia.org/wiki/File_system_permissions
+[wiki-exec]: https://en.wikipedia.org/wiki/Executable
+[wiki-unix_ft]: https://en.wikipedia.org/wiki/Unix_file_types
+[wiki-dev_file]: https://en.wikipedia.org/wiki/Device_file
+[wiki-unix_sock]: https://en.wikipedia.org/wiki/Unix_domain_socket
+[wiki-setuid]: https://en.wikipedia.org/wiki/Setuid
+[wiki-named_pipe]: https://en.wikipedia.org/wiki/Named_pipe
+[wiki-vcs]: https://en.wikipedia.org/wiki/Version_control

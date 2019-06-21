@@ -1,0 +1,86 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as WindowCode } from "assets/images/illustrations/window-code.svg";
+import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_PORTS } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Activation",
+  subline: "Get up and running in one line of code for your favorite shell"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowCode />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+<Banner
+  title={
+    <>
+      The theme <strong>must</strong> be used with a <Link to={ROUTE_PORTS}>Nord terminal emulator theme</Link> in order to work properly!
+    </>
+  }
+>
+  Make sure to install one of the currently supported <Link to={ROUTE_PORTS}>terminal emulator port projects</Link> <strong>before</strong> installing Nord dircolors.
+
+[`dircolors`][gnu-docs-dircolors] uses the 16 color codes provided by the terminal emulator.
+**When used with another color theme** than the one provided by one of Nord's terminal emulator ports, the colors for dircolors won't use <Link to={ROUTE_DOCS_COLOR_AND_PALETTES}>Nord's color palettes</Link>!
+This will result in different styles than those defined by Nord dircolors and could make it appear that there is a problem with the theme while the actual problem are missing Nord colors.
+
+Read the GitHub Gist about [terminal colors][gh-gist-terminal-colors] for more information about terminal color specifications.
+
+</Banner>
+
+## Installation
+
+Nord dircolors can be installed for all application that respect the `LS_COLORS` environment variable like GNU core utils [`ls`][wiki-ls], [`tree`][wiki-tree] or modern projects like [`fd`][gh-sharkdp/fd].
+
+To automatically load Nord dircolors for every shell session, download the [`dir_colors`][gh-tree-dir_colors] file and place it as `~/.dir_colors` in your [home directory][wiki-home_dir].
+
+### Latest Development State
+
+To always use the latest development state of Nord dircolors, [clone the repository][repo] and create a [symbolic link][wiki-symlink] of the `src/dir_colors` file to `~/.dir_colors` in your [home directory][wiki-home_dir] afterwards:
+
+```sh
+ln -sr "$PWD/src/dir_colors" "~/.dir_colors"
+```
+
+## Activation
+
+To activate and use Nord dircolors as your default color theme for all sessions, load the theme with `dircolors` by adding the following snippet to the configuration file of your shell (`~/.bashrc`, `~/.zshrc`, …):
+
+```sh
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+```
+
+<Image
+  dropShadow
+  fluid={props.images["shell-rc.png"]}
+  rounded
+  alt="Screenshot showing an example of a shell configuration file to load Nord through dircolors"
+>
+  <span>
+    <em>Oneliner</em> for a shell configuration to automatically load the theme.
+  </span>
+</Image>
+
+</ShrinkedWidth>
+
+[gh-gist-terminal-colors]: https://gist.github.com/XVilka/8346728
+[gh-sharkdp/fd]: https://github.com/sharkdp/fd
+[gh-tree-dir_colors]: https://github.com/arcticicestudio/nord-dircolors/blob/develop/src/dir_colors
+[gnu-docs-dircolors]: https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html
+[repo]: https://github.com/arcticicestudio/nord-dircolors
+[wiki-home_dir]: https://en.wikipedia.org/wiki/Home_directory
+[wiki-ls]: https://en.wikipedia.org/wiki/Ls
+[wiki-symlink]: https://en.wikipedia.org/wiki/Symbolic_link
+[wiki-tree]: https://en.wikipedia.org/wiki/Tree_(command)

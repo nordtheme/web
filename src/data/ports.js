@@ -109,8 +109,7 @@ const ports = [
     name: "nord-dircolors",
     projectName: "dircolors",
     logoComponent: CommonTerminal,
-    projectUrl:
-      "https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html#dircolors-invocation",
+    projectUrl: "https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html",
     searchTerms: [...tokensTerminal, "dircolors", "gnu", "ls"]
   },
   {
