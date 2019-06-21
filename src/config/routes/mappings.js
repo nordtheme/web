@@ -59,6 +59,30 @@ const ROUTE_COMMUNITY = ROUTE_ROOT + COMMUNITY;
 const ROUTE_DOCS = ROUTE_ROOT + DOCS;
 
 /**
+ * The route mapping for the docs page of the "Nord dircolors" port project.
+ *
+ * @constant {string}
+ * @since 0.18.0
+ */
+const ROUTE_DOCS_PORTS_DIRCOLORS = `${ROUTE_ROOT}${DOCS}/${PORTS}/dircolors`;
+
+/**
+ * The route mapping for the installation docs page of the "Nord dircolors" port project.
+ *
+ * @constant {string}
+ * @since 0.18.0
+ */
+const ROUTE_DOCS_PORTS_DIRCOLORS_INSTALLATION = `${ROUTE_DOCS_PORTS_DIRCOLORS}/installation`;
+
+/**
+ * The route mapping for the theme plugin support docs page of the "Nord dircolors" port project.
+ *
+ * @constant {string}
+ * @since 0.18.0
+ */
+const ROUTE_DOCS_PORTS_DIRCOLORS_TYPE_SUPPORT = `${ROUTE_DOCS_PORTS_DIRCOLORS}/type-support`;
+
+/**
  * The route mapping for the docs page of the "Nord Emacs" port project.
  *
  * @constant {string}
@@ -284,6 +308,14 @@ const ROUTE_LANDING = ROUTE_ROOT + LANDING;
 const ROUTE_PORTS = ROUTE_ROOT + PORTS;
 
 /**
+ * The route mapping for the "Nord dircolors" port project page.
+ *
+ * @constant {string}
+ * @since 0.18.0
+ */
+const ROUTE_PORTS_DIRCOLORS = `${ROUTE_ROOT}/${PORTS}/dircolors`;
+
+/**
  * The route mapping for the "Nord Emacs" port project page.
  *
  * @constant {string}
@@ -332,11 +364,13 @@ const ROUTE_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}/${PORTS}/visual-studio-cod
 const SECTION_COMPONENT_IDS = {
   [ROUTE_COMMUNITY]: ["hero", "chat-channels", "content"],
   [ROUTE_DOCS]: ["hero", "contents"],
+  [ROUTE_DOCS_PORTS_DIRCOLORS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_EMACS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_JETBRAINS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_TMUX]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_VIM]: ["hero", "contents"],
   [ROUTE_PORTS]: ["hero", "search"],
+  [ROUTE_PORTS_DIRCOLORS]: ["hero", "introduction", "setup"],
   [ROUTE_PORTS_EMACS]: ["hero", "introduction", "syntax", "editor-details", "configurations", "setup"],
   [ROUTE_PORTS_JETBRAINS]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
   [ROUTE_PORTS_TMUX]: ["hero", "introduction", "ui-elements", "plugin-support", "configurations", "setup"],
@@ -357,6 +391,9 @@ module.exports = {
   ROUTE_BLOG,
   ROUTE_COMMUNITY,
   ROUTE_DOCS_COLOR_AND_PALETTES,
+  ROUTE_DOCS_PORTS_DIRCOLORS,
+  ROUTE_DOCS_PORTS_DIRCOLORS_INSTALLATION,
+  ROUTE_DOCS_PORTS_DIRCOLORS_TYPE_SUPPORT,
   ROUTE_DOCS_PORTS_EMACS,
   ROUTE_DOCS_PORTS_EMACS_CONFIGURATION,
   ROUTE_DOCS_PORTS_EMACS_DEVELOPMENT,
@@ -384,6 +421,7 @@ module.exports = {
   ROUTE_DOCS_USAGE,
   ROUTE_DOCS,
   ROUTE_LANDING,
+  ROUTE_PORTS_DIRCOLORS,
   ROUTE_PORTS_EMACS,
   ROUTE_PORTS_JETBRAINS,
   ROUTE_PORTS_TMUX,
