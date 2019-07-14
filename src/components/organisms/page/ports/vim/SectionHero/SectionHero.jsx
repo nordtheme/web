@@ -47,7 +47,7 @@ const SectionHero = ({ assets }) => {
             <Subline>
               Build for Vim&apos;s terminal- and GUI mode with <em>true colors</em> and support for many third-party
               syntax and UI plugins including bundled themes for{" "}
-              <Link href="https://github.com/itchyny/lightline.vim">lighline.vim</Link> and{" "}
+              <Link href="https://github.com/itchyny/lightline.vim">lightline.vim</Link> and{" "}
               <Link href="https://github.com/vim-airline/vim-airline">vim-airline</Link>.
             </Subline>
             <Actions>
