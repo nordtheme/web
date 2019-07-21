@@ -928,7 +928,7 @@ Another focus was the handling of exceptional & special states like [empty state
 
 ### Media Query Generator
 
-To simplify the usage of [media queries][mdn-mq] with [styled-components][gh-51], a utility function to generate [media templates][stc-docs-mqt]has been implemented. It uses the `min-width` parameter to fulfill the used _mobile-first_ approach. The base size that is used has been implemented as theme property in [#54][gh-55-diff-r49].
+To simplify the usage of [media queries][mdn-mq] with [styled-components][gh-51], a utility function to generate [media templates][stc-docs-mqt] has been implemented. It uses the `min-width` parameter to fulfill the used _mobile-first_ approach. The base size that is used has been implemented as theme property in [#54][gh-55-diff-r49].
 
 ### Initial Media Queries
 
