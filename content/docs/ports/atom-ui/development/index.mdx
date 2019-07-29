@@ -1,0 +1,133 @@
+import Button from "atoms/core/Button";
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox, Video } from "atoms/core/mdx-elements";
+import { ReactComponent as WindowCode } from "assets/images/illustrations/window-code.svg";
+import { ROUTE_DOCS_PORTS_ATOM_UI_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Package Development",
+  subline: "Learn how to customize the theme to fit your needs and instantly preview local changes."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowCode />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+This page documents how to develop the theme package — from requirements to the APM development workflow steps.
+
+# Requirements
+
+Download and install Atom, or [Atom Beta][atom-beta] to use the latest development state, with a minimal version of [1.13.0 or higher][atom-blog-rln-1.13.0].
+
+# Setup
+
+<Banner
+  title={
+    <>
+      Uninstall all currently installed versions of the <em>Nord Atom UI</em> package!
+    </>
+  }
+  variant="warn"
+>
+  Otherwise the installed and versioned package will collide with the development package that'll be configured in this
+  guide.
+</Banner>
+
+## Download
+
+Clone the [_Nord Atom UI_ repository from GitHub][gh-repo] to your local system.
+
+```sh
+git clone https://github.com/arcticicestudio/nord-atom-ui.git
+```
+
+To get the project without [Git][] download the project as `.zip` archive file from the GitHub repository or click on the download button below and extract the archive to your local system afterwards.
+
+<Button href="https://github.com/arcticicestudio/nord-atom-ui/archive/develop.zip">Download</Button>
+
+<Image
+  alt="Screenshot showing the GitHub repository web UI to download the project repository"
+  fillSize={60}
+  fluid={props.images["github-clone.png"]}
+>
+  Download the project repository from GitHub
+</Image>
+
+Both methods will use the `develop` branch to work with the latest development state.
+
+## Register As Development Package
+
+To make the theme available within Atom, the package repository must be registered as _development package_.
+Open a terminal, switch to the cloned/extracted repository directory and run APM&apos;s `dev` command to register the package:
+
+```sh
+apm dev
+```
+
+This automatically links _Nord Atom UI_&apos;s package directory into Atom&apos;s `dev/packages` directory in your [Atom configuration folder][atom-docs-basic-custom-config] `.atom` that is by default located in your [home directory][wiki-homedir] at `~/.atom/dev/packages/<package-name>`.
+
+Afterwards **restart Atom** to check that the _Nord Atom UI_ theme has been registered successfully as development package. Go to the _Packages_ panes of the [_Settings_ view][atom-docs-basic-settings] and ensure the _Nord Atom UI_ package is listed in the _Development Packages_ section.
+
+<Image
+  alt="Screenshot showing the settings view with successfully registered Nord Atom UI development theme package"
+  dropShadow
+  fluid={props.images["settings-dev-theme-pkg.png"]}
+  rounded
+>
+  The{" "}
+  <Link href="https://flight-manual.atom.io/getting-started/sections/atom-basics/#settings-and-preferences">
+    <em>Settings</em> view
+  </Link>{" "}
+  with successfully registered <em>Nord Atom UI</em> development theme package.
+</Image>
+
+# Workflow
+
+## Dev Mode
+
+Start Atom in the [„Dev Mode“][atom-docs-hack-debug] using the `--dev`/`-d` CLI flag to to detect and load all registered development packages. This enables [auto reload („hot reload“)][atom-docs-hack-debug-hotreload] for registered development packages to immediately see saved changes of any of the package's source code files.
+
+```sh
+atom --dev
+```
+
+[Add the cloned/extracted repository as new project folder][atom-docs-basic-add_proj_dir] and set _Nord Atom_ as active UI theme like documented in the <Link to={`${ROUTE_DOCS_PORTS_ATOM_UI_INSTALLATION}#activation`}>installation & activation guide</Link>.
+
+The theme's source code can now be modified and saved changes will immediately apply to the currently running Atom instance.
+
+<Video
+  dropShadow
+  loop
+  poster={props.images["dev-pkg-hot-reload.mp4.png"]}
+  rounded
+  sources={[props.videos["dev-pkg-hot-reload.mp4"]]}
+>
+  <span>
+    Development theme packages changes are immediately applied on save when running in Atom&apos;s „Dev Mode“.
+  </span>
+</Video>
+
+</ShrinkedWidth>
+
+[atom-beta]: https://atom.io/beta
+[atom-blog-rln-1.13.0]: https://blog.atom.io/2017/01/10/atom-1-13.html
+[atom-docs-basic-add_proj_dir]: https://flight-manual.atom.io/getting-started/sections/atom-basics/#opening-directories
+[atom-docs-basic-custom-config]: https://flight-manual.atom.io/using-atom/sections/basic-customization/#global-configuration-settings
+[atom-docs-basic-settings]: https://flight-manual.atom.io/getting-started/sections/atom-basics/#settings-and-preferences
+[atom-docs-hack-debug-hotreload]: https://flight-manual.atom.io/hacking-atom/sections/creating-a-theme/#live-reload
+[atom-docs-hack-debug]: https://flight-manual.atom.io/hacking-atom/sections/debugging
+[atom-docs-hack-dev_workflow]: https://flight-manual.atom.io/hacking-atom/sections/creating-a-theme/#development-workflow
+[atom-docs-hack-theme-ui]: https://flight-manual.atom.io/hacking-atom/sections/creating-a-theme/#creating-a-ui-theme
+[gh-repo]: https://github.com/arcticicestudio/nord-atom-ui
+[git]: https://git-scm.com
+[wiki-homedir]: https://en.wikipedia.org/wiki/Home_directory
