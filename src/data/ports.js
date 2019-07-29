@@ -69,6 +69,7 @@ const ports = [
     projectName: "Atom UI",
     logoComponent: Atom,
     projectUrl: "https://atom.io",
+    packageThemeRegistryUrl: "https://atom.io/themes/nord-atom-ui",
     searchTerms: [...tokensExtendingSupport, ...tokensGUI, "atom", "electron", "github", "javascript", "nodejs"]
   },
   {
