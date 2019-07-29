@@ -59,6 +59,54 @@ const ROUTE_COMMUNITY = ROUTE_ROOT + COMMUNITY;
 const ROUTE_DOCS = ROUTE_ROOT + DOCS;
 
 /**
+ * The route mapping for the docs page of the "Nord Atom UI" port project.
+ *
+ * @constant {string}
+ * @since 0.19.0
+ */
+const ROUTE_DOCS_PORTS_ATOM_UI = `${ROUTE_ROOT}${DOCS}/${PORTS}/atom-ui`;
+
+/**
+ * The route mapping for the configuration docs page of the "Nord Atom UI" port project.
+ *
+ * @constant {string}
+ * @since 0.19.0
+ */
+const ROUTE_DOCS_PORTS_ATOM_UI_CONFIGURATION = `${ROUTE_DOCS_PORTS_ATOM_UI}/configuration`;
+
+/**
+ * The route mapping for the development docs page of the "Nord Atom UI" port project.
+ *
+ * @constant {string}
+ * @since 0.19.0
+ */
+const ROUTE_DOCS_PORTS_ATOM_UI_DEVELOPMENT = `${ROUTE_DOCS_PORTS_ATOM_UI}/development`;
+
+/**
+ * The route mapping for the installation docs page of the "Nord Atom UI" port project.
+ *
+ * @constant {string}
+ * @since 0.19.0
+ */
+const ROUTE_DOCS_PORTS_ATOM_UI_INSTALLATION = `${ROUTE_DOCS_PORTS_ATOM_UI}/installation`;
+
+/**
+ * The route mapping for the language and package support docs page of the "Nord Atom UI" port project.
+ *
+ * @constant {string}
+ * @since 0.19.0
+ */
+const ROUTE_DOCS_PORTS_ATOM_UI_SUPPORT = `${ROUTE_DOCS_PORTS_ATOM_UI}/support`;
+
+/**
+ * The route mapping for the troubleshooting guide docs page of the "Nord Atom UI" port project.
+ *
+ * @constant {string}
+ * @since 0.19.0
+ */
+const ROUTE_DOCS_PORTS_ATOM_UI_TROUBLESHOOTING = `${ROUTE_DOCS_PORTS_ATOM_UI}/troubleshooting`;
+
+/**
  * The route mapping for the docs page of the "Nord dircolors" port project.
  *
  * @constant {string}
@@ -308,6 +356,14 @@ const ROUTE_LANDING = ROUTE_ROOT + LANDING;
 const ROUTE_PORTS = ROUTE_ROOT + PORTS;
 
 /**
+ * The route mapping for the "Nord Atom UI" port project page.
+ *
+ * @constant {string}
+ * @since 0.19.0
+ */
+const ROUTE_PORTS_ATOM_UI = `${ROUTE_ROOT}/${PORTS}/atom-ui`;
+
+/**
  * The route mapping for the "Nord dircolors" port project page.
  *
  * @constant {string}
@@ -364,12 +420,14 @@ const ROUTE_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}/${PORTS}/visual-studio-cod
 const SECTION_COMPONENT_IDS = {
   [ROUTE_COMMUNITY]: ["hero", "chat-channels", "content"],
   [ROUTE_DOCS]: ["hero", "contents"],
+  [ROUTE_DOCS_PORTS_ATOM_UI]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_DIRCOLORS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_EMACS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_JETBRAINS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_TMUX]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_VIM]: ["hero", "contents"],
   [ROUTE_PORTS]: ["hero", "search"],
+  [ROUTE_PORTS_ATOM_UI]: ["hero", "introduction", "ui-elements", "package-support", "configurations", "setup"],
   [ROUTE_PORTS_DIRCOLORS]: ["hero", "introduction", "setup"],
   [ROUTE_PORTS_EMACS]: ["hero", "introduction", "syntax", "editor-details", "configurations", "setup"],
   [ROUTE_PORTS_JETBRAINS]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
@@ -391,6 +449,12 @@ module.exports = {
   ROUTE_BLOG,
   ROUTE_COMMUNITY,
   ROUTE_DOCS_COLOR_AND_PALETTES,
+  ROUTE_DOCS_PORTS_ATOM_UI,
+  ROUTE_DOCS_PORTS_ATOM_UI_CONFIGURATION,
+  ROUTE_DOCS_PORTS_ATOM_UI_DEVELOPMENT,
+  ROUTE_DOCS_PORTS_ATOM_UI_INSTALLATION,
+  ROUTE_DOCS_PORTS_ATOM_UI_SUPPORT,
+  ROUTE_DOCS_PORTS_ATOM_UI_TROUBLESHOOTING,
   ROUTE_DOCS_PORTS_DIRCOLORS,
   ROUTE_DOCS_PORTS_DIRCOLORS_INSTALLATION,
   ROUTE_DOCS_PORTS_DIRCOLORS_TYPE_SUPPORT,
@@ -421,6 +485,7 @@ module.exports = {
   ROUTE_DOCS_USAGE,
   ROUTE_DOCS,
   ROUTE_LANDING,
+  ROUTE_PORTS_ATOM_UI,
   ROUTE_PORTS_DIRCOLORS,
   ROUTE_PORTS_EMACS,
   ROUTE_PORTS_JETBRAINS,

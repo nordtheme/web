@@ -11,50 +11,46 @@ import React from "react";
 
 import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
-import { Image } from "atoms/core/mdx-elements";
+import { WaveFooter } from "atoms/core/vectors/divider";
 import { Content } from "containers/core/Section";
 import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
-import {
-  ROUTE_DOCS_PORTS_ATOM_UI,
-  ROUTE_DOCS_PORTS_ATOM_UI_INSTALLATION,
-  ROUTE_PORTS_ATOM_UI
-} from "config/routes/mappings";
+import { ROUTE_DOCS_PORTS_ATOM_UI, ROUTE_PORTS_ATOM_UI } from "config/routes/mappings";
+import { sectionIdFor } from "utils";
+import { Image } from "atoms/core/mdx-elements";
 import { usePortsMetadata } from "hooks";
 import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
-import { sectionIdFor } from "utils";
 
 import { Section } from "../../../shared";
-import WaveDivider from "./styled/WaveDivider";
 
-const SECTION_ID = sectionIdFor(ROUTE_PORTS_ATOM_UI, 0);
+const SECTION_ID = sectionIdFor(ROUTE_PORTS_ATOM_UI, 5);
 
 /**
- * The component that represents the hero section for the landing page of the "Nord Atom UI" port project.
+ * The component that represents the setup section for the landing page of the "Nord Atom UI" port project.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.19.0
  */
-const SectionHero = ({ assets }) => {
+const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl, projectUrl } = portMetadata.find(port => port.name === "nord-atom-ui");
+  const { gitHubRepositoryUrl, packageThemeRegistryUrl } = portMetadata.find(port => port.name === "nord-atom-ui");
 
   return (
-    <Section id={SECTION_ID}>
+    <Section id={SECTION_ID} variant="secondary">
       <Content centered decorated>
         <FeatureDuo verticalOnly>
           <Text verticalOnly>
-            <Headline large>Nord Atom UI</Headline>
+            <Headline>Installation and updates with one click.</Headline>
             <Subline>
-              An arctic, north-bluish clean and elegant <Link href={projectUrl}>Atom</Link> UI theme.
+              Install Nord from the <Link href={packageThemeRegistryUrl}>official theme package registry</Link> with one
+              click including automatic updates to always use the latest Nord version.
             </Subline>
-            <Subline>Designed for a optimized fluent and clear workflow matching the Nord Atom Syntax theme.</Subline>
             <Actions>
-              <Button to={ROUTE_DOCS_PORTS_ATOM_UI_INSTALLATION} variant="primary">
-                Get Started
+              <Button to={packageThemeRegistryUrl} variant="primary">
+                Install Now
               </Button>
               <Button ghost outlined quiet to={ROUTE_DOCS_PORTS_ATOM_UI} variant="primary">
-                Documentation
+                Learn More
               </Button>
               <Button ghost href={gitHubRepositoryUrl} outlined quiet variant="primary">
                 GitHub
@@ -63,19 +59,23 @@ const SectionHero = ({ assets }) => {
           </Text>
           <Visualization>
             <Image
-              alt="Screenshot showing Atom with the floating command palette modal overlay with a big font type."
+              alt="Screenshot showing the builtin theme package registry view"
               dropShadow
-              fluid={assets.images["overview-command-palette.png"]}
+              fluid={assets.images["settings-package-registry.png"]}
               rounded
-            />
+            >
+              <span>
+                The builtin <Link href="https://atom.io/themes">theme package registry</Link> view.
+              </span>
+            </Image>
           </Visualization>
         </FeatureDuo>
       </Content>
-      <WaveDivider />
+      <WaveFooter />
     </Section>
   );
 };
 
-SectionHero.propTypes = usePortsAssetsPropTypes;
+SectionSetup.propTypes = usePortsAssetsPropTypes;
 
-export default SectionHero;
+export default SectionSetup;

@@ -11,7 +11,15 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/ports/atom-ui";
+import {
+  SectionConfigurations,
+  SectionHero,
+  SectionIntroduction,
+  SectionPackageSupport,
+  SectionSetup,
+  SectionUIElements
+} from "organisms/page/ports/atom-ui";
+import { usePortsAssets } from "hooks";
 
 /**
  * The component that represents the landing page of the "Nord Atom UI" port project.
@@ -20,11 +28,19 @@ import { SectionHero } from "organisms/page/ports/atom-ui";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const AtomUI = ({ location: { pathname } }) => (
-  <BaseLayout pathName={pathname}>
-    <SectionHero />
-  </BaseLayout>
-);
+const AtomUI = ({ location: { pathname } }) => {
+  const assets = usePortsAssets("atom-ui");
+  return (
+    <BaseLayout pathName={pathname}>
+      <SectionHero assets={assets} />
+      <SectionIntroduction assets={assets} />
+      <SectionUIElements assets={assets} />
+      <SectionPackageSupport assets={assets} />
+      <SectionConfigurations assets={assets} />
+      <SectionSetup assets={assets} />
+    </BaseLayout>
+  );
+};
 
 AtomUI.propTypes = locationPropTypes;
 
