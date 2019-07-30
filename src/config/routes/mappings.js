@@ -361,7 +361,7 @@ const ROUTE_PORTS = ROUTE_ROOT + PORTS;
  * @constant {string}
  * @since 0.19.0
  */
-const ROUTE_PORTS_ATOM_UI = `${ROUTE_ROOT}/${PORTS}/atom-ui`;
+const ROUTE_PORTS_ATOM_UI = `${ROUTE_ROOT}${PORTS}/atom-ui`;
 
 /**
  * The route mapping for the "Nord dircolors" port project page.
@@ -369,7 +369,7 @@ const ROUTE_PORTS_ATOM_UI = `${ROUTE_ROOT}/${PORTS}/atom-ui`;
  * @constant {string}
  * @since 0.18.0
  */
-const ROUTE_PORTS_DIRCOLORS = `${ROUTE_ROOT}/${PORTS}/dircolors`;
+const ROUTE_PORTS_DIRCOLORS = `${ROUTE_ROOT}${PORTS}/dircolors`;
 
 /**
  * The route mapping for the "Nord Emacs" port project page.
@@ -377,7 +377,7 @@ const ROUTE_PORTS_DIRCOLORS = `${ROUTE_ROOT}/${PORTS}/dircolors`;
  * @constant {string}
  * @since 0.17.0
  */
-const ROUTE_PORTS_EMACS = `${ROUTE_ROOT}/${PORTS}/emacs`;
+const ROUTE_PORTS_EMACS = `${ROUTE_ROOT}${PORTS}/emacs`;
 
 /**
  * The route mapping for the "Nord JetBrains" port project page.
@@ -385,7 +385,7 @@ const ROUTE_PORTS_EMACS = `${ROUTE_ROOT}/${PORTS}/emacs`;
  * @constant {string}
  * @since 0.12.0
  */
-const ROUTE_PORTS_JETBRAINS = `${ROUTE_ROOT}/${PORTS}/jetbrains`;
+const ROUTE_PORTS_JETBRAINS = `${ROUTE_ROOT}${PORTS}/jetbrains`;
 
 /**
  * The route mapping for the "Nord tmux" port project page.
@@ -393,7 +393,7 @@ const ROUTE_PORTS_JETBRAINS = `${ROUTE_ROOT}/${PORTS}/jetbrains`;
  * @constant {string}
  * @since 0.16.0
  */
-const ROUTE_PORTS_TMUX = `${ROUTE_ROOT}/${PORTS}/tmux`;
+const ROUTE_PORTS_TMUX = `${ROUTE_ROOT}${PORTS}/tmux`;
 
 /**
  * The route mapping for the "Nord Vim" port project page.
@@ -401,7 +401,7 @@ const ROUTE_PORTS_TMUX = `${ROUTE_ROOT}/${PORTS}/tmux`;
  * @constant {string}
  * @since 0.13.0
  */
-const ROUTE_PORTS_VIM = `${ROUTE_ROOT}/${PORTS}/vim`;
+const ROUTE_PORTS_VIM = `${ROUTE_ROOT}${PORTS}/vim`;
 
 /**
  * The route mapping for the "Nord Visual Studio Code" port project page.
@@ -409,7 +409,7 @@ const ROUTE_PORTS_VIM = `${ROUTE_ROOT}/${PORTS}/vim`;
  * @constant {string}
  * @since 0.15.0
  */
-const ROUTE_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}/${PORTS}/visual-studio-code`;
+const ROUTE_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}${PORTS}/visual-studio-code`;
 
 /**
  * The per-route unique `id` attribute values of sections components.
