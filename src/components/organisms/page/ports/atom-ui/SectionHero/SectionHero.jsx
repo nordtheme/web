@@ -15,6 +15,7 @@ import { Image } from "atoms/core/mdx-elements";
 import { Content } from "containers/core/Section";
 import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import {
+  ROUTE_PORTS_ATOM_SYNTAX,
   ROUTE_DOCS_PORTS_ATOM_UI,
   ROUTE_DOCS_PORTS_ATOM_UI_INSTALLATION,
   ROUTE_PORTS_ATOM_UI
@@ -48,7 +49,10 @@ const SectionHero = ({ assets }) => {
             <Subline>
               An arctic, north-bluish clean and elegant <Link href={projectUrl}>Atom</Link> UI theme.
             </Subline>
-            <Subline>Designed for a optimized fluent and clear workflow matching the Nord Atom Syntax theme.</Subline>
+            <Subline>
+              Designed for a optimized fluent and clear workflow matching the{" "}
+              <Link to={ROUTE_PORTS_ATOM_SYNTAX}>Nord Atom Syntax</Link> theme.
+            </Subline>
             <Actions>
               <Button to={ROUTE_DOCS_PORTS_ATOM_UI_INSTALLATION} variant="primary">
                 Get Started
