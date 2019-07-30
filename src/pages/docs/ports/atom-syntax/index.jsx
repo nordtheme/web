@@ -9,19 +9,19 @@
 
 import React from "react";
 
-import { SectionContents, SectionHero } from "organisms/page/docs/ports/atom-ui";
+import { SectionContents, SectionHero } from "organisms/page/docs/ports/atom-syntax";
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
 import { DocsPage } from "organisms/page/docs";
 
 /**
- * The component that represents the docs page of the "Nord Atom UI" port project.
+ * The component that represents the docs page of the "Nord Atom Syntax" port project.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.19.0
  */
-const AtomUIDocs = ({ location: { pathname } }) => (
+const AtomSyntaxDocs = ({ location: { pathname } }) => (
   <BaseLayout headerVariant="tertiary" pathName={pathname}>
     <DocsPage>
       <SectionHero />
@@ -30,6 +30,6 @@ const AtomUIDocs = ({ location: { pathname } }) => (
   </BaseLayout>
 );
 
-AtomUIDocs.propTypes = locationPropTypes;
+AtomSyntaxDocs.propTypes = locationPropTypes;
 
-export default AtomUIDocs;
+export default AtomSyntaxDocs;
