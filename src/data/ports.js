@@ -62,6 +62,7 @@ const ports = [
     projectName: "Atom Syntax",
     logoComponent: Atom,
     projectUrl: "https://atom.io",
+    packageThemeRegistryUrl: "https://atom.io/themes/nord-atom-syntax",
     searchTerms: [...tokensExtendingSupport, ...tokensSyntax, "atom", "electron", "github", "javascript", "nodejs"]
   },
   {
@@ -69,6 +70,7 @@ const ports = [
     projectName: "Atom UI",
     logoComponent: Atom,
     projectUrl: "https://atom.io",
+    packageThemeRegistryUrl: "https://atom.io/themes/nord-atom-ui",
     searchTerms: [...tokensExtendingSupport, ...tokensGUI, "atom", "electron", "github", "javascript", "nodejs"]
   },
   {

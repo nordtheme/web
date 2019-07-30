@@ -1,0 +1,105 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox, Video } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as WindowConfiguration } from "assets/images/illustrations/window-configuration.svg";
+import { ROUTE_DOCS_PORTS_ATOM_UI_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Configuration",
+  subline:
+    "From UI element layout up to animations and effects — configure the theme to match your personal preferences"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowConfiguration />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+Nord Atom UI is designed to provide a good UX out-of-the-box, but there is a reason why principles like _themes_ exist a all: Everyone has different preferences and that's a good thing!
+
+To ensure Nord Atom UI fit your needs it comes with configurations for UI elements to make the theme as flexible as possible while still providing sane defaults.
+
+All theme configurations are available through the _Settings_ by switching to the _Themes_ pane and clicking on the small _gear_ icon button next to the _UI Theme_ drop-down component.
+
+<Image
+  alt="Screenshot showing the theme pane of the settings view with active icon button to switch to the UI theme specific configurations"
+  dropShadow
+  fluid={props.images["settings-theme-button.png"]}
+  rounded
+>
+  <span>The icon button to show the UI theme specific configurations.</span>
+</Image>
+
+This will open the available configurations of the active UI theme.
+
+<Image
+  alt="Screenshot showing Nord Atom UI's available theme configurations"
+  dropShadow
+  fluid={props.images["settings-theme-overview.png"]}
+  rounded
+>
+  <span>Nord Atom UI&apos;s available theme configurations.</span>
+</Image>
+
+## UI Elements
+
+### Full-Width Tabs
+
+By default, tabs are using a minimal width required to display the content like titles and allow to keep a better overview when having a large number of open tabs.
+
+<Image
+  alt="Screenshot showing Atom's default tab style"
+  dropShadow
+  fluid={props.images["full-width-tabs-disabled.png"]}
+  rounded
+>
+  <span>Default tab style.</span>
+</Image>
+
+This can be changed to use the full tab bar width, where the available size is evenly distributed among the open tabs, by enabling the „Full-Width Tab Sizing“ theme configuration.
+
+<Image
+  alt="Screenshot showing Atom with enabled „Full-Width Tab Sizing“ theme configuration"
+  dropShadow
+  fluid={props.images["full-width-tabs-enabled.png"]}
+  rounded
+>
+  <span>Tabs with enabled „Full-Width Tab Sizing“ theme configuration.</span>
+</Image>
+
+### Darker Form Focus
+
+By default, form components like a text field using bright styles when focused like a light background color with a dark foreground color to better emphasize the focus state of the currently active UI component.
+
+<Video
+  dropShadow
+  loop
+  poster={props.images["darker-form-focus-disabled.mp4.png"]}
+  rounded
+  sources={[props.videos["darker-form-focus-disabled.mp4"]]}
+>
+  <span>Default bright form focusing effect.</span>
+</Video>
+
+This can be changed to use darker styles with `nord2` as background and `nord4` as foreground color by enabling the „Darker Form-Focusing Effect“ theme configuration.
+
+<Video
+  dropShadow
+  loop
+  poster={props.images["darker-form-focus-enabled.mp4.png"]}
+  rounded
+  sources={[props.videos["darker-form-focus-enabled.mp4"]]}
+>
+  <span>Form focusing effect with enabled „Darker Form-Focusing Effect“ theme configuration.</span>
+</Video>
+
+</ShrinkedWidth>

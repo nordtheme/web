@@ -1,0 +1,76 @@
+import Link from "atoms/core/Link";
+import { Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Kbd } from "atoms/core/html-elements";
+import { ReactComponent as Plugin } from "assets/images/illustrations/plugin.svg";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Activation",
+  subline: "Get up and running in one click with the official Atom theme package registry."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <Plugin />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+Thanks to the [official Atom theme package registry][atom-theme_pkg-reg-nord], _Nord Atom Syntax_ can be installed with one click.
+
+1. Go to the [package installation view][atom-docs-pkgs] by opening the [_Settings_][atom-docs-basic-settings].
+2. Switch to the _Install_ pane and enable the [_Themes_ package search filter][atom-docs-pkgs-th].
+3. Search for _Nord_ and and click on the <Kbd>Install</Kbd> button to finish the installation.
+
+<Image
+  alt="Screenshot showing the builtin theme package registry view after searching for Nord"
+  dropShadow
+  fluid={props.images["settings-package-registry.png"]}
+  rounded
+>
+  <span>
+    The builtin <Link href="https://atom.io/themes">theme package registry</Link> view after searching for Nord.
+  </span>
+</Image>
+
+## From CLI via APM
+
+The package can also be installed from the command line using `apm` by running the `install` command:
+
+```sh
+# Install the latest Nord theme package version...
+apm install nord-atom-syntax
+
+# ...or a specific version.
+apm install nord-atom-syntax@0.9.1
+```
+
+## Activation
+
+To activate the _Nord_ syntax theme, open the [_Settings_][atom-docs-basic-settings] and switch to the _Themes_ pane to [change the UI or syntax theme][atom-docs-basic-theme_switch]. Click on the the _Syntax Theme_ drop-down menu and select _Nord Atom_.
+
+<Image
+  alt="Screenshot showing the theme pane of the setting view with active drop-down menu component to select the active syntax theme"
+  dropShadow
+  fluid={props.images["settings-theme-select.png"]}
+  rounded
+>
+  <span>
+    Selecting <em>Nord Atom</em> as active syntax theme.
+  </span>
+</Image>
+
+</ShrinkedWidth>
+
+[atom-docs-basic-settings]: https://flight-manual.atom.io/getting-started/sections/atom-basics/#settings-and-preferences
+[atom-docs-basic-theme_switch]: https://flight-manual.atom.io/getting-started/sections/atom-basics/#changing-the-theme
+[atom-docs-pkgs-cli]: https://flight-manual.atom.io/using-atom/sections/atom-packages/#command-line
+[atom-docs-pkgs-th]: https://flight-manual.atom.io/using-atom/sections/atom-packages/#atom-themes
+[atom-docs-pkgs]: https://flight-manual.atom.io/using-atom/sections/atom-packages
+[atom-theme_pkg-reg-nord]: https://atom.io/themes/nord-atom-syntax

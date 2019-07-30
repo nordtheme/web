@@ -1,12 +1,73 @@
-<p align="center"><a href="https://www.nordtheme.com"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/repository-hero.svg?sanitize=true"/></a></p>
+<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/repository-hero.svg?sanitize=true"/></a></p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/nord-docs/releases/latest"><img src="https://img.shields.io/github/release/arcticicestudio/nord-docs.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
+<p align="center"><a href="https://github.com/arcticicestudio/nord-docs/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/nord-docs.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
-<p align="center"><a href="https://nordtheme.com"><img src="https://img.shields.io/badge/Deployment-production-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a> <a href="https://www.nordtheme.com"><img src="https://img.shields.io/badge/Deployment-development-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a></p>
+<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://img.shields.io/badge/Deployment-production-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a> <a href="https://www.nordtheme.com" target="_blank"><img src="https://img.shields.io/badge/Deployment-development-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a></p>
 
-<p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/nord" alt="Nord">Nord</a> website and documentation</p>
+<p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/nord" alt="Nord" target="_blank">Nord</a> website and documentation</p>
 
 <!--lint disable no-duplicate-headings-->
+
+# 0.19.0
+
+![Release Date: 2019-07-30](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-07-30&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.19.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/21) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.19.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/19)
+
+This version mainly focused on the [transition of the „Nord Atom Syntax“][gh-168] and [Nord Atom UI][gh-166]. The implementation includes port specific “landing” ([syntax][home-ports-atom-syntax]/[UI][home-ports-atom-ui]) and „docs“ ([syntax][home-docs-ports-atom-syntax]/[UI][home-docs-ports-atom-ui]) page, the „installation & activation guide“ ([syntax][home-docs-ports-atom-syntax-install]/[UI][home-docs-ports-atom-ui-install]) and how to develop the theme ([syntax][home-docs-ports-atom-syntax-dev]/[UI][home-docs-ports-atom-ui-dev]).
+
+## Features
+
+**„Nord Atom Syntax“ Transition** — #168 ⇄ #170 (⊶ 82dcda81)
+↠ Transferred all documentations, assets and visualizations from „Nord Atom Syntax“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the Nord Atom Syntax repository][nord-atom-syntax#63] to get an overview of what has changed for Nord Atom Syntax and what has been done to migrate to Nord Docs.
+
+<p align="center">Landing Page</p>
+<p align="center"><a href="https://www.nordtheme.com/ports/atom-syntax" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62131873-52032d80-b2dc-11e9-8893-ef9dd8bfdd5d.png" alt="Preview: Nord Atom Syntax Port Project Landing Page"/></a></p>
+
+<p align="center">Docs Page</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-syntax" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62128997-e61dc680-b2d5-11e9-99f3-004b8b1243b5.png" alt="Preview: Nord Atom Syntax Docs Page"/></a></p>
+
+<p align="center">Installation & Activation Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-syntax/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62128860-a1922b00-b2d5-11e9-8fab-536361344b7e.png" alt="Preview: Nord Atom Syntax Installation & Activation Guide Page"/></a></p>
+
+<p align="center">Package Development</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-syntax/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62128859-a1922b00-b2d5-11e9-9840-890abf8c2d97.png" alt="Preview: Nord Atom Syntax Package Development Guide Page"/></a></p>
+
+## Features
+
+**„Nord Atom UI“ Transition** — #166 ⇄ #167 (⊶ 53b712c0)
+↠ Transferred all documentations, assets and visualizations from „Nord Atom UI“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the Nord Atom UI repository][nord-atom-ui#82] to get an overview of what has changed for Nord Atom UI and what has been done to migrate to Nord Docs.
+
+<p align="center">Landing Page</p>
+<p align="center"><a href="https://www.nordtheme.com/ports/atom-ui" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059671-f2e1e200-b223-11e9-8e1d-ce28e185336e.png" alt="Preview: Nord Atom UI Port Project Landing Page"/></a></p>
+
+<p align="center">Docs Page</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-ui" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059666-f2494b80-b223-11e9-99f0-576efe20e10b.png" alt="Preview: Nord Atom UI Docs Page"/></a></p>
+
+<p align="center">Installation & Activation Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-ui/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059670-f2494b80-b223-11e9-933b-8864ec545db4.png" alt="Preview: Nord Atom UI Installation & Activation Guide Page"/></a></p>
+
+<p align="center">Configurations</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-ui/configuration" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059667-f2494b80-b223-11e9-990d-b526295de772.png" alt="Preview: Nord Atom UI Configuration Guide Page"/></a></p>
+
+<p align="center">Package Development</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-ui/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059668-f2494b80-b223-11e9-892b-b53cbe012e06.png" alt="Preview: Nord Atom UI Package Development Guide Page"/></a></p>
+
+## Bug Fixes
+
+**Duplicate path separator in URL mappings** — #169 (⊶ 12e52c01)
+↠ Some [URL mapping constants for specific port projects defined duplicate path separators][gh-tree-config-route-mapping-gh-169]. The value of the `ROUTE_ROOT` constant is set to `/` and the port constants contained the partial path `${ROUTE_ROOT}/` resulting in duplicate path separators `//`. This has been fixed by removing the extra `/` character leaving only the correct `ROUTE_ROOT` constant that resolves into a single path separator.
+
+### Documentation
+
+**Reversed download button targets for Adobe swatches** — #162 (⊶ d799131a) by [@mrymtsk][gh-user-mrymtsk]
+↠ Fixed the [download buttons for Adobe swatches][home-docs-swatch-adobe] where the `.ase` file was linked to the `.aco` file while the button for the `.aco` file was in section for the _Adobe Swatch Exchange_ file.
+
+**Typo on Vim landing page for _lightline_** — #164 ⇄ #165 (⊶ 177f2906) by [@jmurinello][gh-user-jmurinello]
+↠ Fixed the missing letter `t` in the link for _lightline_ located in the hero section of the _Vim_ port project landing page.
+
+**Missing whitespace in changelog** — #161 (⊶ 453601e9) by [@mosn][gh-user-mosn]
+↠ Fixed a missing whitespace in the changelog after a closing link square bracket.
 
 # 0.18.0
 
@@ -928,7 +989,7 @@ Another focus was the handling of exceptional & special states like [empty state
 
 ### Media Query Generator
 
-To simplify the usage of [media queries][mdn-mq] with [styled-components][gh-51], a utility function to generate [media templates][stc-docs-mqt]has been implemented. It uses the `min-width` parameter to fulfill the used _mobile-first_ approach. The base size that is used has been implemented as theme property in [#54][gh-55-diff-r49].
+To simplify the usage of [media queries][mdn-mq] with [styled-components][gh-51], a utility function to generate [media templates][stc-docs-mqt] has been implemented. It uses the `min-width` parameter to fulfill the used _mobile-first_ approach. The base size that is used has been implemented as theme property in [#54][gh-55-diff-r49].
 
 ### Initial Media Queries
 
@@ -1594,6 +1655,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-comm]: https://www.nordtheme.com/community
 [home-docs-ports-vim-config-font-bold]: https://www.nordtheme.com/docs/ports/vim/configuration#bold-styles
 [home-docs-ports-vim-config]: https://www.nordtheme.com/docs/ports/vim/configuration
+[home-docs-swatch-adobe]: https://www.nordtheme.com/docs/swatches#adobe-products
+[home-docs-swatch-macos]: https://www.nordtheme.com/docs/swatches#apple-macos
 [home-ports]: https://www.nordtheme.com/ports
 [home]: https://www.nordtheme.com
 [inter-ui]: https://rsms.me/inter
@@ -1774,7 +1837,6 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-docs-ports-jetbrains-dev]: https://www.nordtheme.com/docs/ports/jetbrains/development
 [home-docs-ports-jetbrains-install]: https://www.nordtheme.com/docs/ports/jetbrains/installation
 [home-docs-ports-jetbrains]: https://www.nordtheme.com/docs/ports/jetbrains
-[home-docs-swatch-macos]: https://www.nordtheme.com/docs/swatches#apple-macos
 [home-ports-jetbrains]: https://www.nordtheme.com/ports/jetbrains
 [kentcdodds/react-testing-library-v6.0.0]: https://github.com/kentcdodds/react-testing-library/releases/tag/v6.0.0
 [mdx-blog-v1-mig]: https://mdxjs.com/migrating/v1
@@ -1842,3 +1904,22 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-docs-ports-dircolors]: https://www.nordtheme.com/docs/ports/dircolors
 [home-ports-dircolors]: https://www.nordtheme.com/ports/dircolors
 [nord-dircolors#13]: https://github.com/arcticicestudio/nord-dircolors/issues/13
+
+<!-- v0.19.0 -->
+
+[gh-166]: https://github.com/arcticicestudio/nord-docs/issues/166
+[gh-168]: https://github.com/arcticicestudio/nord-docs/issues/168
+[gh-tree-config-route-mapping-gh-169]: https://github.com/arcticicestudio/nord-docs/blob/53b712c02342b76516b918adb0b3c181d624c6fc/src/config/routes/mappings.js#L364-L412
+[gh-user-jmurinello]: https://github.com/jmurinello
+[gh-user-mosn]: https://github.com/mosn
+[gh-user-mrymtsk]: https://github.com/mrymtsk
+[home-docs-ports-atom-syntax-dev]: https://www.nordtheme.com/docs/ports/atom-syntax/development
+[home-docs-ports-atom-syntax-install]: https://www.nordtheme.com/docs/ports/atom-syntax/installation
+[home-docs-ports-atom-syntax]: https://www.nordtheme.com/docs/ports/atom-syntax
+[home-docs-ports-atom-ui-dev]: https://www.nordtheme.com/docs/ports/atom-ui/development
+[home-docs-ports-atom-ui-install]: https://www.nordtheme.com/docs/ports/atom-ui/installation
+[home-docs-ports-atom-ui]: https://www.nordtheme.com/docs/ports/atom-ui
+[home-ports-atom-syntax]: https://www.nordtheme.com/ports/atom-syntax
+[home-ports-atom-ui]: https://www.nordtheme.com/ports/atom-ui
+[nord-atom-syntax#63]: https://github.com/arcticicestudio/nord-atom-syntax/issues/63
+[nord-atom-ui#82]: https://github.com/arcticicestudio/nord-atom-ui/issues/82
