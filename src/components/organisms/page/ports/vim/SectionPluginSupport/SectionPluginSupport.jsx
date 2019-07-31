@@ -107,7 +107,7 @@ const SectionPluginSupport = ({ assets }) => (
         <Text>
           <Subline>
             Beautiful syntax highlighting with support for <Link href="https://github.com/fatih/vim-go">vim-go</Link>{" "}
-            <Link href="https://github.com/vim-airline/vim-airline">vim-airline</Link>.
+            and <Link href="https://github.com/vim-airline/vim-airline">vim-airline</Link>.
           </Subline>
         </Text>
       </FeatureDuo>
