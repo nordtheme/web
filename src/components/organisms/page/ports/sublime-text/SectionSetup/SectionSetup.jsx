@@ -11,50 +11,46 @@ import React from "react";
 
 import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
-import { Image } from "atoms/core/mdx-elements";
-import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
+import { WaveFooter } from "atoms/core/vectors/divider";
 import { Content } from "containers/core/Section";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { ROUTE_DOCS_PORTS_SUBLIME_TEXT, ROUTE_PORTS_SUBLIME_TEXT } from "config/routes/mappings";
-import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
-import { usePortsMetadata } from "hooks";
 import { sectionIdFor } from "utils";
+import { Image } from "atoms/core/mdx-elements";
+import { usePortsMetadata } from "hooks";
+import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
 
 import { Section } from "../../../shared";
-import WaveDivider from "./styled/WaveDivider";
 
-const SECTION_ID = sectionIdFor(ROUTE_PORTS_SUBLIME_TEXT, 0);
+const SECTION_ID = sectionIdFor(ROUTE_PORTS_SUBLIME_TEXT, 4);
 
 /**
- * The component that represents the hero section for the landing page of the "Nord Sublime Text" port project.
+ * The component that represents the setup section for the landing page of the "Nord Sublime Text" port project.
  *
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
- * @since 0.9.0
+ * @since 0.20.0
  */
-const SectionHero = ({ assets }) => {
+const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl, packageControlUrl, projectUrl } = portMetadata.find(
-    port => port.name === "nord-sublime-text"
-  );
+  const { gitHubRepositoryUrl, packageControlUrl } = portMetadata.find(port => port.name === "nord-sublime-text");
 
   return (
     <Section id={SECTION_ID}>
       <Content centered decorated>
         <FeatureDuo verticalOnly>
           <Text verticalOnly>
-            <Headline large>Nord Sublime Text</Headline>
+            <Headline>Installation and updates with one click.</Headline>
             <Subline>
-              An arctic, north-bluish clean and elegant <Link href={projectUrl}>Sublime Text</Link> theme.
-            </Subline>
-            <Subline>
-              Designed for a fluent and clear workflow with support for many languages and third-party syntax plugins.
+              Install Nord from the <Link href={packageControlUrl}>package control registry</Link> with one command
+              including automatic updates to always use the latest Nord version.
             </Subline>
             <Actions>
-              <Button href={packageControlUrl} variant="primary">
+              <Button to={packageControlUrl} variant="primary">
                 Install Now
               </Button>
               <Button ghost outlined quiet to={ROUTE_DOCS_PORTS_SUBLIME_TEXT} variant="primary">
-                Documentation
+                Learn More
               </Button>
               <Button ghost href={gitHubRepositoryUrl} outlined quiet variant="primary">
                 GitHub
@@ -63,19 +59,23 @@ const SectionHero = ({ assets }) => {
           </Text>
           <Visualization>
             <Image
-              alt="Screenshot showing a Go function"
+              alt="Screenshot showing the package control installation view of the command palette"
               dropShadow
-              fluid={assets.images["editor-overview-go.png"]}
+              fluid={assets.images["ui-package-control.png"]}
               rounded
-            />
+            >
+              <span>
+                The <Link href="https://packagecontrol.io">package control</Link> installation view.
+              </span>
+            </Image>
           </Visualization>
         </FeatureDuo>
       </Content>
-      <WaveDivider />
+      <WaveFooter />
     </Section>
   );
 };
 
-SectionHero.propTypes = usePortsAssetsPropTypes;
+SectionSetup.propTypes = usePortsAssetsPropTypes;
 
-export default SectionHero;
+export default SectionSetup;
