@@ -267,6 +267,30 @@ const ROUTE_DOCS_PORTS_JETBRAINS_SUPPORT = `${ROUTE_DOCS_PORTS_JETBRAINS}/suppor
 const ROUTE_DOCS_PORTS_JETBRAINS_TROUBLESHOOTING = `${ROUTE_DOCS_PORTS_JETBRAINS}/troubleshooting`;
 
 /**
+ * The route mapping for the docs page of the "Nord Sublime Text" port project.
+ *
+ * @constant {string}
+ * @since 0.20.0
+ */
+const ROUTE_DOCS_PORTS_SUBLIME_TEXT = `${ROUTE_ROOT}${DOCS}/${PORTS}/sublime-text`;
+
+/**
+ * The route mapping for the development docs page of the "Nord Sublime Text" port project.
+ *
+ * @constant {string}
+ * @since 0.20.0
+ */
+const ROUTE_DOCS_PORTS_SUBLIME_TEXT_DEVELOPMENT = `${ROUTE_DOCS_PORTS_SUBLIME_TEXT}/development`;
+
+/**
+ * The route mapping for the installation docs page of the "Nord Sublime Text" port project.
+ *
+ * @constant {string}
+ * @since 0.20.0
+ */
+const ROUTE_DOCS_PORTS_SUBLIME_TEXT_INSTALLATION = `${ROUTE_DOCS_PORTS_SUBLIME_TEXT}/installation`;
+
+/**
  * The route mapping for the docs page of the "Nord tmux" port project.
  *
  * @constant {string}
@@ -444,6 +468,14 @@ const ROUTE_PORTS_EMACS = `${ROUTE_ROOT}${PORTS}/emacs`;
 const ROUTE_PORTS_JETBRAINS = `${ROUTE_ROOT}${PORTS}/jetbrains`;
 
 /**
+ * The route mapping for the "Nord Sublime Text" port project page.
+ *
+ * @constant {string}
+ * @since 0.20.0
+ */
+const ROUTE_PORTS_SUBLIME_TEXT = `${ROUTE_ROOT}${PORTS}/sublime-text`;
+
+/**
  * The route mapping for the "Nord tmux" port project page.
  *
  * @constant {string}
@@ -481,6 +513,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_DOCS_PORTS_DIRCOLORS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_EMACS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_JETBRAINS]: ["hero", "contents"],
+  [ROUTE_DOCS_PORTS_SUBLIME_TEXT]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_TMUX]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_VIM]: ["hero", "contents"],
   [ROUTE_PORTS]: ["hero", "search"],
@@ -489,6 +522,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_PORTS_DIRCOLORS]: ["hero", "introduction", "setup"],
   [ROUTE_PORTS_EMACS]: ["hero", "introduction", "syntax", "editor-details", "configurations", "setup"],
   [ROUTE_PORTS_JETBRAINS]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
+  [ROUTE_PORTS_SUBLIME_TEXT]: ["hero", "introduction", "syntax", "editor-details", "setup"],
   [ROUTE_PORTS_TMUX]: ["hero", "introduction", "ui-elements", "plugin-support", "configurations", "setup"],
   [ROUTE_PORTS_VIM]: ["hero", "introduction", "syntax", "editor-details", "plugin-support", "configurations", "setup"],
   [ROUTE_PORTS_VISUAL_STUDIO_CODE]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
@@ -533,6 +567,9 @@ module.exports = {
   ROUTE_DOCS_PORTS_JETBRAINS_SUPPORT,
   ROUTE_DOCS_PORTS_JETBRAINS_TROUBLESHOOTING,
   ROUTE_DOCS_PORTS_JETBRAINS,
+  ROUTE_DOCS_PORTS_SUBLIME_TEXT_DEVELOPMENT,
+  ROUTE_DOCS_PORTS_SUBLIME_TEXT_INSTALLATION,
+  ROUTE_DOCS_PORTS_SUBLIME_TEXT,
   ROUTE_DOCS_PORTS_TMUX_CONFIGURATION,
   ROUTE_DOCS_PORTS_TMUX_INSTALLATION,
   ROUTE_DOCS_PORTS_TMUX_PLUGIN_SUPPORT,
@@ -554,6 +591,7 @@ module.exports = {
   ROUTE_PORTS_DIRCOLORS,
   ROUTE_PORTS_EMACS,
   ROUTE_PORTS_JETBRAINS,
+  ROUTE_PORTS_SUBLIME_TEXT,
   ROUTE_PORTS_TMUX,
   ROUTE_PORTS_VIM,
   ROUTE_PORTS_VISUAL_STUDIO_CODE,

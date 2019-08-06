@@ -1,0 +1,111 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Kbd } from "atoms/core/html-elements";
+import { ReactComponent as Plugin } from "assets/images/illustrations/plugin.svg";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Activation",
+  subline: "Get up and running in one command with the package control registry."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <Plugin />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+Thanks to the [_package control_ registry][pc-pkg-nord], _Nord Sublime Text_ can be installed with one command.
+Please follow the [official installation instructions][pc-install] to set up _package control_ itself in order to install available packages from the registry.
+
+<Banner title={<>Nord requires a minimum Sublime Text version of <Link href="https://www.sublimetext.com/blog/articles/sublime-text-3-point-1">3.1.0 Build 3170</Link></>}>
+
+Nord makes use of the new [`.sublime-color-scheme` JSON file format][sbt-docs-color_schemes] that has been introduced in Sublime Text [version 3.1.0 Build 3170][sbt-blog-announce-v3.1] and is therefore the minimum required and supported version. The `.tmTheme` XML file format][sbt-docs-tmtheme] has been officially deprecated by the Sublime Text team and is not supported by Nord anymore.
+
+</Banner>
+
+Open the _package installation_ view through the [command palette][sbt-udocs-cmdp] via <Kbd>Ctrl</Kbd>/<Kbd>⌘</Kbd>+<Kbd>Shift</Kbd>+<Kbd>p</Kbd> and run the „Package Control: Install Package“ command.
+
+<Image
+  alt="Screenshot showing the command palette searching for the package installation command"
+  dropShadow
+  fluid={props.images["ui-package-control-install-command.png"]}
+  rounded
+>
+  <span>
+    The <Link href="http://docs.sublimetext.info/en/latest/extensibility/command_palette.html">command palette</Link>{" "}
+    searching for the „Install Package“ command.
+  </span>
+</Image>
+
+Search for „Nord“ and press <Kbd>⏎</Kbd> _Enter_ to install the theme.
+
+<Image
+  alt="Screenshot showing the installation view searching for the Nord package in the package registry"
+  dropShadow
+  fluid={props.images["ui-package-control-list-installed.png"]}
+  rounded
+>
+  <span>
+    The installation view searching for the{" "}
+    <Link href="https://packagecontrol.io/packages/Nord">Nord package in the package registry</Link>.
+  </span>
+</Image>
+
+### Manual
+
+A `.sublime-package` file can be installed manually without using the online _package control_ registry by placing the package file in the `Installed Packages` or `Packages/User` directory located in the [settings data path][sbt-docs-settings]. For details about package directory paths on different operating system see the [official package documentations][sbt-docs-pkgs].
+
+1. Get the theme by either
+   - downloading the `.sublime-package` file of the [latest release version][gh-rel-latest] (recommended).
+   - cloning the [repository from GitHub][gh-repo], packing it as [ZIP][wiki-zip] archive file and renaming the file extension and rename the file extension from `.zip` to `.sublime-package` afterwards.
+   - downloading the [master][gh-dl-master] (stable) or [`develop`][gh-dl-develop] (unstable) repository branch from GitHub as [ZIP][wiki-zip] archive file and rename the file extension from `.zip` to `.sublime-package` afterwards.
+2. Copy the `.sublime-package` file into your package directory (_Preferences_ ➜ _Browse Packages…_) and restart Sublime Text in order to reload all installed packages.
+
+## Activation
+
+To activate the _Nord_ color theme, open the [command palette][sbt-udocs-cmdp] via <Kbd>Ctrl</Kbd>/<Kbd>⌘</Kbd>+<Kbd>Shift</Kbd>+<Kbd>p</Kbd> and run the „UI: Select Color Theme“ command or use the _Preferences_ ➜ _Color Theme…_ menu.
+
+<Image dropShadow fluid={props.images["ui-color-theme-select.png"]} rounded>
+  <span>
+    Opening the color theme picker through the{" "}
+    <Link href="http://docs.sublimetext.info/en/latest/extensibility/command_palette.html">Command Palette</Link>.
+  </span>
+</Image>
+
+Search for `Nord` and confirm the color theme change with <Kbd>⏎</Kbd> _Enter_.
+
+<Image dropShadow fluid={props.images["ui-color-theme-select-search.png"]} rounded>
+  <span>
+    Selecting <em>Nord</em> as active color theme.
+  </span>
+</Image>
+
+Alternatively the color scheme can also be set directly within the [user settings][sbt-docs-settings] that can be opened using the _Preferences_ ➜ _Settings_ menu. Add or modify the `color_scheme` JSON key and set _Nord Sublime Text_ as active color theme:
+
+```json
+"color_scheme": "Packages/User/nord-sublime-text/Nord.sublime-color-scheme"
+```
+
+</ShrinkedWidth>
+
+[gh-dl-develop]: https://github.com/arcticicestudio/nord-docs/archive/develop.zip
+[gh-dl-master]: https://github.com/arcticicestudio/nord-docs/archive/develop.zip
+[gh-rel-latest]: https://github.com/arcticicestudio/nord-docs/releases/latest
+[gh-repo]: https://github.com/arcticicestudio/nord-sublime-text
+[pc-install]: https://packagecontrol.io/installation
+[pc-pkg-nord]: https://packagecontrol.io/packages/Nord
+[sbt-blog-announce-v3.1]: https://www.sublimetext.com/blog/articles/sublime-text-3-point-1
+[sbt-docs-color_schemes]: https://www.sublimetext.com/docs/3/color_schemes.html
+[sbt-docs-pkgs]: https://www.sublimetext.com/docs/3/packages.html
+[sbt-docs-settings]: https://www.sublimetext.com/docs/3/settings.html
+[sbt-docs-tmtheme]: https://www.sublimetext.com/docs/3/color_schemes_tmtheme.html
+[sbt-udocs-cmdp]: http://docs.sublimetext.info/en/latest/extensibility/command_palette.html
+[wiki-zip]: https://en.wikipedia.org/wiki/Zip_(file_format)

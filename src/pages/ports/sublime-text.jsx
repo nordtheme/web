@@ -11,7 +11,14 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/ports/sublime-text";
+import {
+  SectionEditorDetails,
+  SectionHero,
+  SectionIntroduction,
+  SectionSetup,
+  SectionSyntax
+} from "organisms/page/ports/sublime-text";
+import { usePortsAssets } from "hooks";
 
 /**
  * The component that represents the landing page of the "Nord Sublime Text" port project.
@@ -20,11 +27,18 @@ import { SectionHero } from "organisms/page/ports/sublime-text";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const SublimeText = ({ location: { pathname } }) => (
-  <BaseLayout pathName={pathname}>
-    <SectionHero />
-  </BaseLayout>
-);
+const SublimeText = ({ location: { pathname } }) => {
+  const assets = usePortsAssets("sublime-text");
+  return (
+    <BaseLayout pathName={pathname}>
+      <SectionHero assets={assets} />
+      <SectionIntroduction assets={assets} />
+      <SectionSyntax assets={assets} />
+      <SectionEditorDetails assets={assets} />
+      <SectionSetup assets={assets} />
+    </BaseLayout>
+  );
+};
 
 SublimeText.propTypes = locationPropTypes;
 
