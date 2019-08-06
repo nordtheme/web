@@ -6,7 +6,38 @@
 
 <p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/nord" alt="Nord" target="_blank">Nord</a> website and documentation</p>
 
-<!--lint disable no-duplicate-headings-->
+<!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
+
+# 0.20.0
+
+![Release Date: 2019-08-06](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-06&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.20.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/22) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.20.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/20)
+
+This version mainly focused on the [transition of the „Nord Sublime Text“ port project][gh-171]. The implementation includes port specific [“landing”][home-ports-sublime-text] and [docs][home-docs-ports-sublime-text] page, the [installation & activation guide][home-docs-ports-sublime-text-install] and [package development][home-docs-ports-sublime-text-develop] page.
+
+## Features
+
+**„Nord Sublime Text“ Transition** — #171 ⇄ #174 (⊶ 06251893)
+↠ Transferred all documentations, assets and visualizations from „Nord Sublime Text“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the _Nord Sublime Text_ repository][nord-sublime-text#21] to get an overview of what has changed for _Nord Sublime Text_ and what has been done to migrate to Nord Docs.
+
+<p align="center">Landing Page</p>
+<p align="center"><a href="https://www.nordtheme.com/ports/sublime-text" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62528962-fe459680-b83d-11e9-8d54-89f8625ce1af.png" alt="Preview: Nord Sublime Text Port Project Landing Page"/></a></p>
+
+<p align="center">Docs Page</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/sublime-text" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62528548-4f08bf80-b83d-11e9-9315-73788f63e9a5.png" alt="Preview: Nord Sublime Text Docs Page"/></a></p>
+
+<p align="center">Installation & Activation Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/sublime-text/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62528550-4fa15600-b83d-11e9-84be-a58782e3ef1c.png" alt="Preview: Nord Sublime Text Installation & Activation Guide Page"/></a></p>
+
+<p align="center">Package Development</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/sublime-text/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62528549-4fa15600-b83d-11e9-8c25-481653380cf6.png" alt="Preview: Nord Sublime Text Package Development Guide Page"/></a></p>
+
+## Bug Fixes
+
+### Documentation
+
+**Typo on Vim Port Project Landing Page** — #172 (⊶ fd3f895b) by [@impulse][gh-user-impulse]
+↠ Removed an orphan `gr` token before link to the `vim-go` package in the [plugin support section][port-vim#plugin-support] of the [Vim port project landing page][port-vim].
 
 # 0.19.0
 
@@ -1711,6 +1742,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [ossg-contrib]: https://opensource.guide/how-to-contribute
 [ossg]: https://opensource.guide
 [polished]: https://polished.js.org
+[port-vim]: https://www.nordtheme.com/ports/vim
+[port-vim#plugin-support]: https://www.nordtheme.com/ports/vim#plugin-support
 [prettier]: https://prettier.io
 [react-docs-context]: https://reactjs.org/docs/context.html
 [react-docs-hooks-ch]: https://reactjs.org/docs/hooks-custom.html
@@ -1923,3 +1956,13 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-ports-atom-ui]: https://www.nordtheme.com/ports/atom-ui
 [nord-atom-syntax#63]: https://github.com/arcticicestudio/nord-atom-syntax/issues/63
 [nord-atom-ui#82]: https://github.com/arcticicestudio/nord-atom-ui/issues/82
+
+<!-- v0.20.0 -->
+
+[gh-171]: https://github.com/arcticicestudio/nord-docs/issues/171
+[gh-user-impulse]: https://github.com/impulse
+[home-docs-ports-sublime-text-develop]: https://www.nordtheme.com/docs/ports/dircolors/development
+[home-docs-ports-sublime-text-install]: https://www.nordtheme.com/docs/ports/dircolors/installation
+[home-docs-ports-sublime-text]: https://www.nordtheme.com/docs/ports/dircolors
+[home-ports-sublime-text]: https://www.nordtheme.com/ports/dircolors
+[nord-sublime-text#21]: https://github.com/arcticicestudio/nord-sublime-text/issues/21

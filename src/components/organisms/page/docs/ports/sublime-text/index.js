@@ -7,10 +7,7 @@
  * License:    MIT
  */
 
-import SectionEditorDetails from "./SectionEditorDetails";
+import SectionContents from "./SectionContents";
 import SectionHero from "./SectionHero";
-import SectionIntroduction from "./SectionIntroduction";
-import SectionSetup from "./SectionSetup";
-import SectionSyntax from "./SectionSyntax";
 
-export { SectionEditorDetails, SectionHero, SectionIntroduction, SectionSetup, SectionSyntax };
+export { SectionContents, SectionHero };

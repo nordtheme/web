@@ -1,0 +1,89 @@
+import Button from "atoms/core/Button";
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as WindowCode } from "assets/images/illustrations/window-code.svg";
+import { ROUTE_DOCS_PORTS_SUBLIME_TEXT_INSTALLATION } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Package Development",
+  subline: "Learn how to customize the theme to fit your needs, preview changes and bundle it as package."
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowCode />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+This page documents how to develop the theme package — from requirements to `.sublime-package` packaging and the development workflow steps.
+
+# Requirements
+
+Download and install [Sublime Text] with a minimal version of [3.1.0 Build 3170][sbt-blog-announce-v3.1] (2018-05-07).
+
+# Setup
+
+## Download
+
+Clone the [_Nord Sublime Text_ repository from GitHub][gh-repo] to your [local `Packages/User` directory][sbt-docs-pkgs] located in the [settings data path][sbt-docs-settings].
+
+```sh
+git clone https://github.com/arcticicestudio/nord-sublime-text.git
+```
+
+<Banner title={<>Package directories take precedence over <Code>`.sublime-package`</Code> files!</>} variant="warn">
+
+When Nord has also been installed as `.sublime-package` [ZIP][wiki-zip] archive file while a directory with the same name (without `.sublime-package` prefix) is also placed in the package directory, each file within the directory overrides files whose names are equal to files in the packaged theme. See the section about „Overriding Files From a Zipped Package“ in the [official package documentations][sbt-docs-pkgs].
+
+</Banner>
+
+To get the theme without [Git][], download the repository as [ZIP][wiki-zip] archive file from the GitHub or click on the download button below.
+
+<Button href="https://github.com/arcticicestudio/nord-sublime-text/archive/develop.zip">Download</Button>
+
+Afterwards extract the archive to your [local `Packages/User` directory][sbt-docs-pkgs] located in the [settings data path][sbt-docs-settings].
+
+<Image
+  alt="Screenshot showing the GitHub repository web UI to download the project repository"
+  fillSize={60}
+  fluid={props.images["github-clone.png"]}
+>
+  GitHub Web UI to download the theme repository as{" "}
+  <Link href="https://en.wikipedia.org/wiki/Zip_(file_format)">ZIP</Link> file from GitHub.
+</Image>
+
+Both methods will use the `develop` branch to work with the latest development state.
+
+# Workflow
+
+Sublime Text provides auto reload („hot reload“) for themes to immediately see saved changes when editing any of the package's source code files.
+
+Open the extension by adding the cloned/extracted repository directory as project folder through the „Project: Add Folder“ command or opening the directory directly (_File_ ➜ _Open Folder_) and set _Nord_ as active color theme like documented in the <Link to={`${ROUTE_DOCS_PORTS_SUBLIME_TEXT_INSTALLATION}#activation`}>installation & activation guide</Link>.
+
+The theme's source code can now be modified and saved changes will immediately apply to the currently running Sublime Text instance.
+
+# Packaging
+
+Sublime Text packages are stored as compressed `.sublime-package` file using the [ZIP][wiki-zip] archive file format. To create Nord as package, either add at least the [`Nord.sublime-color-scheme`][gh-tree-color_scheme] and [`Nord.skins`][gh-tree-skins] files (recommended) or the whole repository to a new ZIP archive file named `Nord.sublime-package`.
+
+Read the theme documentation about <Link to={`${ROUTE_DOCS_PORTS_SUBLIME_TEXT_INSTALLATION}#manual`}>how to install and activate a `.sublime-theme` package file</Link> for more details.
+
+</ShrinkedWidth>
+
+[gh-repo]: https://github.com/arcticicestudio/nord-sublime-text
+[gh-tree-color_scheme]: https://github.com/arcticicestudio/nord-sublime-text/blob/develop/Nord.sublime-color-scheme
+[gh-tree-skins]: https://github.com/arcticicestudio/nord-sublime-text/blob/develop/Nord.skins
+[git]: https://git-scm.com
+[sbt-blog-announce-v3.1]: https://www.sublimetext.com/blog/articles/sublime-text-3-point-1
+[sbt-docs-pkgs]: https://www.sublimetext.com/docs/3/packages.html
+[sbt-docs-settings]: https://www.sublimetext.com/docs/3/settings.html
+[wiki-zip]: https://en.wikipedia.org/wiki/Zip_(file_format)

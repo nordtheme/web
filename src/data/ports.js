@@ -267,6 +267,7 @@ const ports = [
     projectName: "Sublime Text",
     logoComponent: SublimeText,
     projectUrl: "https://www.sublimetext.com",
+    packageControlUrl: "https://packagecontrol.io/packages/Nord",
     searchTerms: [...tokensExtendingSupport, ...tokensGUI, ...tokensSyntax, "sublime"]
   },
   {
