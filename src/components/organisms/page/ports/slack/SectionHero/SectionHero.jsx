@@ -8,16 +8,21 @@
  */
 
 import React from "react";
-import { css } from "styled-components";
 
-import { WaveFooter } from "atoms/core/vectors/divider";
-import { P } from "atoms/core/html-elements";
+import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
-import Section, { Content } from "containers/core/Section";
-import EmptyState from "molecules/core/EmptyState";
+import { Content } from "containers/core/Section";
+import { Image } from "atoms/core/mdx-elements";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
+import { ROUTE_DOCS_PORTS_SLACK, ROUTE_DOCS_PORTS_SLACK_INSTALLATION, ROUTE_PORTS_SLACK } from "config/routes/mappings";
+import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
 import { usePortsMetadata } from "hooks";
+import { sectionIdFor } from "utils";
 
-import { emptyStateIllustrationStyles } from "../../../shared/styles";
+import { Section } from "../../../shared";
+import WaveDivider from "./styled/WaveDivider";
+
+const SECTION_ID = sectionIdFor(ROUTE_PORTS_SLACK, 0);
 
 /**
  * The component that represents the hero section for the landing page of the "Nord Slack" port project.
@@ -26,32 +31,47 @@ import { emptyStateIllustrationStyles } from "../../../shared/styles";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-export default function SectionHero() {
+const SectionHero = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-slack");
+  const { gitHubRepositoryUrl, projectUrl } = portMetadata.find(port => port.name === "nord-slack");
 
   return (
-    <Section>
-      <Content centered>
-        <EmptyState
-          headline="Oh, there's nothing here yet"
-          illustrationStyles={emptyStateIllustrationStyles}
-          illustrationVariant="iglooHemisphere"
-          subline="Please check back later, we're working hard on this page!"
-        />
-        <P
-          css={css`
-            text-align: center;
-          `}
-        >
-          In the meantime, please see the official{" "}
-          <Link href={gitHubRepositoryUrl} target="_blank" variant="minimal">
-            repository on GitHub
-          </Link>{" "}
-          for information about Nord Slack.
-        </P>
+    <Section id={SECTION_ID}>
+      <Content centered decorated>
+        <FeatureDuo verticalOnly>
+          <Text verticalOnly>
+            <Headline large>Nord Slack</Headline>
+            <Subline>
+              An arctic, north-bluish clean and elegant <Link href={projectUrl}>Slack</Link> theme.
+            </Subline>
+            <Subline>Designed for a fluent and clear workflow.</Subline>
+            <Actions>
+              <Button to={ROUTE_DOCS_PORTS_SLACK_INSTALLATION} variant="primary">
+                Install Now
+              </Button>
+              <Button ghost outlined quiet to={ROUTE_DOCS_PORTS_SLACK} variant="primary">
+                Documentation
+              </Button>
+              <Button ghost href={gitHubRepositoryUrl} outlined quiet variant="primary">
+                GitHub
+              </Button>
+            </Actions>
+          </Text>
+          <Visualization>
+            <Image
+              alt="Screenshot showing an overview of the Slack desktop app with the Nord theme applied to the sidebar."
+              dropShadow
+              fluid={assets.images["overview.png"]}
+              rounded
+            />
+          </Visualization>
+        </FeatureDuo>
       </Content>
-      <WaveFooter />
+      <WaveDivider />
     </Section>
   );
-}
+};
+
+SectionHero.propTypes = usePortsAssetsPropTypes;
+
+export default SectionHero;

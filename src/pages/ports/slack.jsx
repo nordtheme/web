@@ -11,7 +11,8 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/ports/slack";
+import { SectionHero, SectionSetup, SectionUIDetails } from "organisms/page/ports/slack";
+import { usePortsAssets } from "hooks";
 
 /**
  * The component that represents the landing page of the "Nord Slack" port project.
@@ -20,11 +21,16 @@ import { SectionHero } from "organisms/page/ports/slack";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const Slack = ({ location: { pathname } }) => (
-  <BaseLayout pathName={pathname}>
-    <SectionHero />
-  </BaseLayout>
-);
+const Slack = ({ location: { pathname } }) => {
+  const assets = usePortsAssets("slack");
+  return (
+    <BaseLayout pathName={pathname}>
+      <SectionHero assets={assets} />
+      <SectionUIDetails assets={assets} />
+      <SectionSetup assets={assets} />
+    </BaseLayout>
+  );
+};
 
 Slack.propTypes = locationPropTypes;
 

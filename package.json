@@ -137,6 +137,7 @@
     "styled-theming": "2.2.0",
     "subscribe-ui-event": "2.0.5",
     "typeface-rubik": "0.0.72",
-    "typeface-source-code-pro": "0.0.71"
+    "typeface-source-code-pro": "0.0.71",
+    "use-clipboard-copy": "0.1.1"
   }
 }
