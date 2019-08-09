@@ -267,6 +267,22 @@ const ROUTE_DOCS_PORTS_JETBRAINS_SUPPORT = `${ROUTE_DOCS_PORTS_JETBRAINS}/suppor
 const ROUTE_DOCS_PORTS_JETBRAINS_TROUBLESHOOTING = `${ROUTE_DOCS_PORTS_JETBRAINS}/troubleshooting`;
 
 /**
+ * The route mapping for the docs page of the "Nord Slack" port project.
+ *
+ * @constant {string}
+ * @since 0.21.0
+ */
+const ROUTE_DOCS_PORTS_SLACK = `${ROUTE_ROOT}${DOCS}/${PORTS}/slack`;
+
+/**
+ * The route mapping for the installation docs page of the "Nord Slack" port project.
+ *
+ * @constant {string}
+ * @since 0.21.0
+ */
+const ROUTE_DOCS_PORTS_SLACK_INSTALLATION = `${ROUTE_DOCS_PORTS_SLACK}/installation`;
+
+/**
  * The route mapping for the docs page of the "Nord Sublime Text" port project.
  *
  * @constant {string}
@@ -468,6 +484,14 @@ const ROUTE_PORTS_EMACS = `${ROUTE_ROOT}${PORTS}/emacs`;
 const ROUTE_PORTS_JETBRAINS = `${ROUTE_ROOT}${PORTS}/jetbrains`;
 
 /**
+ * The route mapping for the "Nord Slack" port project page.
+ *
+ * @constant {string}
+ * @since 0.21.0
+ */
+const ROUTE_PORTS_SLACK = `${ROUTE_ROOT}${PORTS}/slack`;
+
+/**
  * The route mapping for the "Nord Sublime Text" port project page.
  *
  * @constant {string}
@@ -513,6 +537,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_DOCS_PORTS_DIRCOLORS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_EMACS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_JETBRAINS]: ["hero", "contents"],
+  [ROUTE_DOCS_PORTS_SLACK]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_SUBLIME_TEXT]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_TMUX]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_VIM]: ["hero", "contents"],
@@ -522,6 +547,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_PORTS_DIRCOLORS]: ["hero", "introduction", "setup"],
   [ROUTE_PORTS_EMACS]: ["hero", "introduction", "syntax", "editor-details", "configurations", "setup"],
   [ROUTE_PORTS_JETBRAINS]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
+  [ROUTE_PORTS_SLACK]: ["hero", "ui-elements", "setup"],
   [ROUTE_PORTS_SUBLIME_TEXT]: ["hero", "introduction", "syntax", "editor-details", "setup"],
   [ROUTE_PORTS_TMUX]: ["hero", "introduction", "ui-elements", "plugin-support", "configurations", "setup"],
   [ROUTE_PORTS_VIM]: ["hero", "introduction", "syntax", "editor-details", "plugin-support", "configurations", "setup"],
@@ -567,6 +593,8 @@ module.exports = {
   ROUTE_DOCS_PORTS_JETBRAINS_SUPPORT,
   ROUTE_DOCS_PORTS_JETBRAINS_TROUBLESHOOTING,
   ROUTE_DOCS_PORTS_JETBRAINS,
+  ROUTE_DOCS_PORTS_SLACK_INSTALLATION,
+  ROUTE_DOCS_PORTS_SLACK,
   ROUTE_DOCS_PORTS_SUBLIME_TEXT_DEVELOPMENT,
   ROUTE_DOCS_PORTS_SUBLIME_TEXT_INSTALLATION,
   ROUTE_DOCS_PORTS_SUBLIME_TEXT,
