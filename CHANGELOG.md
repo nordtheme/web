@@ -8,11 +8,32 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.21.0
+
+![Release Date: 2019-08-09](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-09&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.21.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/24) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.21.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/21)
+
+This version mainly focused on the [transition of the „Nord Slack“ port project][gh-175]. The implementation includes the port specific [landing][home-ports-slack] and [docs][home-docs-ports-slack] pages and the [installation & activation guide][home-docs-ports-slack-install].
+
+## Features
+
+**„Nord Slack“ Transition** — #175 ⇄ #176 (⊶ 28916bb5)
+↠ Transferred all documentations, assets and visualizations from „Nord Slack“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the _Nord Slack_ repository][nord-slack#5] to get an overview of what has changed for _Nord Slack_ and what has been done to migrate to Nord Docs.
+
+<p align="center">Landing Page</p>
+<p align="center"><a href="https://www.nordtheme.com/ports/slack" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62790926-6a3d2e80-bacc-11e9-98b1-a19d1bc18725.png" alt="Preview: Nord Slack Port Project Landing Page"/></a></p>
+
+<p align="center">Docs Page</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/slack" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62790924-69a49800-bacc-11e9-9748-be6f26ba5c30.png" alt="Preview: Nord Slack Docs Page"/></a></p>
+
+<p align="center">Installation & Activation Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/slack/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62790925-6a3d2e80-bacc-11e9-9a8a-c713d0cafd1f.png" alt="Preview: Nord Slack Installation & Activation Guide Page"/></a></p>
+
 # 0.20.0
 
 ![Release Date: 2019-08-06](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-06&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.20.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/22) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.20.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/20)
 
-This version mainly focused on the [transition of the „Nord Sublime Text“ port project][gh-171]. The implementation includes port specific [“landing”][home-ports-sublime-text] and [docs][home-docs-ports-sublime-text] page, the [installation & activation guide][home-docs-ports-sublime-text-install] and [package development][home-docs-ports-sublime-text-develop] page.
+This version mainly focused on the [transition of the „Nord Sublime Text“ port project][gh-171]. The implementation includes the port specific [landing][home-ports-sublime-text] and [docs][home-docs-ports-sublime-text] pages, the [installation & activation guide][home-docs-ports-sublime-text-install] and [package development][home-docs-ports-sublime-text-develop] page.
 
 ## Features
 
@@ -43,7 +64,7 @@ Please see the [corresponding issue in the _Nord Sublime Text_ repository][nord-
 
 ![Release Date: 2019-07-30](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-07-30&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.19.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/21) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.19.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/19)
 
-This version mainly focused on the [transition of the „Nord Atom Syntax“][gh-168] and [Nord Atom UI][gh-166]. The implementation includes port specific “landing” ([syntax][home-ports-atom-syntax]/[UI][home-ports-atom-ui]) and „docs“ ([syntax][home-docs-ports-atom-syntax]/[UI][home-docs-ports-atom-ui]) page, the „installation & activation guide“ ([syntax][home-docs-ports-atom-syntax-install]/[UI][home-docs-ports-atom-ui-install]) and how to develop the theme ([syntax][home-docs-ports-atom-syntax-dev]/[UI][home-docs-ports-atom-ui-dev]).
+This version mainly focused on the [transition of the „Nord Atom Syntax“][gh-168] and [Nord Atom UI][gh-166]. The implementation includes port specific landing ([syntax][home-ports-atom-syntax]/[UI][home-ports-atom-ui]) and „docs“ ([syntax][home-docs-ports-atom-syntax]/[UI][home-docs-ports-atom-ui]) page, the „installation & activation guide“ ([syntax][home-docs-ports-atom-syntax-install]/[UI][home-docs-ports-atom-ui-install]) and how to develop the theme ([syntax][home-docs-ports-atom-syntax-dev]/[UI][home-docs-ports-atom-ui-dev]).
 
 ## Features
 
@@ -104,7 +125,7 @@ Please see the [corresponding issue in the Nord Atom UI repository][nord-atom-ui
 
 ![Release Date: 2019-06-21](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.18.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/20) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.18.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/18)
 
-This version mainly focused on the [transition of the „Nord dircolors“ port project][gh-159]. The implementation includes port specific [“landing”][home-ports-dircolors] and [docs][home-docs-ports-dircolors] page, the [installation & activation guide][home-docs-ports-dircolors-install] and [supported data and node types][home-docs-ports-dircolors-type_support] page.
+This version mainly focused on the [transition of the „Nord dircolors“ port project][gh-159]. The implementation includes port specific [landing][home-ports-dircolors] and [docs][home-docs-ports-dircolors] page, the [installation & activation guide][home-docs-ports-dircolors-install] and [supported data and node types][home-docs-ports-dircolors-type_support] page.
 
 ## Features
 
@@ -128,7 +149,7 @@ Please see the [corresponding issue in the Nord dircolors repository][nord-dirco
 
 ![Release Date: 2019-06-16](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-16&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/19) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/17)
 
-This version mainly focused on the [transition of the „Nord Emacs“ port project][gh-155]. The implementation includes port specific [“landing”][home-ports-emacs] and [docs][home-docs-ports-emacs] page, the [installation & activation guide][home-docs-ports-emacs-install] and [configuration][home-docs-ports-emacs-config] page.
+This version mainly focused on the [transition of the „Nord Emacs“ port project][gh-155]. The implementation includes port specific [landing][home-ports-emacs] and [docs][home-docs-ports-emacs] page, the [installation & activation guide][home-docs-ports-emacs-install] and [configuration][home-docs-ports-emacs-config] page.
 
 ## Features
 
@@ -158,7 +179,7 @@ To fix the invalid mapping the `DocsPage` component now passes down the whole vi
 
 ![Release Date: 2019-06-02](https://img.shields.io/badge/Release_Date-2019--06--02-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.16.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/18) [![Milestone](https://img.shields.io/badge/Milestone-0.16.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/16)
 
-This version mainly focused on the [transition of the „Nord tmux“ port project][gh-152]. The implementation include port specific [“landing”][home-ports-tmux] and [docs][home-docs-ports-tmux] page, the [installation & activation guide][home-docs-ports-tmux-install], [configuration][home-docs-ports-tmux-config] guide and [plugin support][home-docs-ports-tmux-plugins] pages.
+This version mainly focused on the [transition of the „Nord tmux“ port project][gh-152]. The implementation include port specific [landing][home-ports-tmux] and [docs][home-docs-ports-tmux] page, the [installation & activation guide][home-docs-ports-tmux-install], [configuration][home-docs-ports-tmux-config] guide and [plugin support][home-docs-ports-tmux-plugins] pages.
 
 ## Features
 
@@ -193,7 +214,7 @@ Please see the [corresponding issue in the Nord tmux repository][nord-tmux#36] t
 
 ![Release Date: 2019-05-31](https://img.shields.io/badge/Release_Date-2019--05--31-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/17) [![Milestone](https://img.shields.io/badge/Milestone-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/15)
 
-This version mainly focused on the [transition of the „Nord Visual Studio Code“ port project][gh-149]. The implementation include port specific [“landing”][home-ports-vscode] and [docs][home-docs-ports-vscode] page, the [installation & activation guide][home-docs-ports-vscode-install], [customization][home-docs-ports-vscode-custom] and [development][home-docs-ports-vscode-develop] guide.
+This version mainly focused on the [transition of the „Nord Visual Studio Code“ port project][gh-149]. The implementation include port specific [landing][home-ports-vscode] and [docs][home-docs-ports-vscode] page, the [installation & activation guide][home-docs-ports-vscode-install], [customization][home-docs-ports-vscode-custom] and [development][home-docs-ports-vscode-develop] guide.
 
 ## Features
 
@@ -234,7 +255,7 @@ Please see the [corresponding issue in the Nord Visual Studio Code repository][n
 
 ![Release Date: 2019-05-21](https://img.shields.io/badge/Release_Date-2019--05--21-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/15) [![Milestone](https://img.shields.io/badge/Milestone-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/13)
 
-This version mainly focused on the [transition of the „Nord Vim“ port project][gh-143]. The implementation include port specific [“landing”][home-ports-vim] and [docs][home-docs-ports-vim] page, the [installation & activation guide][home-docs-ports-vim-install], [configuration][home-docs-ports-vim-config] and [customization][home-docs-ports-vim-custom] guide.
+This version mainly focused on the [transition of the „Nord Vim“ port project][gh-143]. The implementation include port specific [landing][home-ports-vim] and [docs][home-docs-ports-vim] page, the [installation & activation guide][home-docs-ports-vim-install], [configuration][home-docs-ports-vim-config] and [customization][home-docs-ports-vim-custom] guide.
 
 ## Features
 
@@ -274,7 +295,7 @@ Therefore, to finish 100% of the migration, both options have been renamed.
 
 ![Release Date: 2019-05-05](https://img.shields.io/badge/Release_Date-2019--05--05-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/14) [![Milestone](https://img.shields.io/badge/Milestone-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/12)
 
-This version mainly focused on the [transition of the „Nord JetBrains“ port project][gh-140]. The implementation include port specific [“landing”][home-ports-jetbrains] and [docs][home-docs-ports-jetbrains] page, the [installation & activation guide][home-docs-ports-jetbrains-install] and [development/contribution guide][home-docs-ports-jetbrains-dev].
+This version mainly focused on the [transition of the „Nord JetBrains“ port project][gh-140]. The implementation include port specific [landing][home-ports-jetbrains] and [docs][home-docs-ports-jetbrains] page, the [installation & activation guide][home-docs-ports-jetbrains-install] and [development/contribution guide][home-docs-ports-jetbrains-dev].
 
 ## Features
 
@@ -548,7 +569,7 @@ Previously the official [Arctic Ice Studio][spectrum-ais] community was used wit
 
 ![Release Date: 2019-03-03](https://img.shields.io/badge/Release_Date-2019--03--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/11) [![Milestone](https://img.shields.io/badge/Milestone-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/9)
 
-This version mainly focused on the [sections of the ports page][gh-119] to represent Nord's port projects. The implementation was limited to the “landing” page components and currently doesn't include any prot specific pages, but will be implemented later on when the actual documentations are being migrated.
+This version mainly focused on the [sections of the ports page][gh-119] to represent Nord's port projects. The implementation was limited to the landing page components and currently doesn't include any prot specific pages, but will be implemented later on when the actual documentations are being migrated.
 
 ## Features
 
@@ -669,7 +690,7 @@ This bug fix release version might fix some problems that were encountered durin
 
 ![Release Date: 2019-02-03](https://img.shields.io/badge/Release_Date-2019--02--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/10) [![Milestone](https://img.shields.io/badge/Milestone-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/8)
 
-This version mainly focused on the [sections of the docs page][gh-117] to represent Nord's documentation categories and their topics. The implementation was limited to the “landing” page components and style and currently doesn't include any documentation, the actual docs will be implemented and imported later on using the [GraphQL API and MDX][gh-24].
+This version mainly focused on the [sections of the docs page][gh-117] to represent Nord's documentation categories and their topics. The implementation was limited to the landing page components and style and currently doesn't include any documentation, the actual docs will be implemented and imported later on using the [GraphQL API and MDX][gh-24].
 
 ## Features
 
@@ -1961,8 +1982,16 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 [gh-171]: https://github.com/arcticicestudio/nord-docs/issues/171
 [gh-user-impulse]: https://github.com/impulse
-[home-docs-ports-sublime-text-develop]: https://www.nordtheme.com/docs/ports/dircolors/development
-[home-docs-ports-sublime-text-install]: https://www.nordtheme.com/docs/ports/dircolors/installation
-[home-docs-ports-sublime-text]: https://www.nordtheme.com/docs/ports/dircolors
-[home-ports-sublime-text]: https://www.nordtheme.com/ports/dircolors
+[home-docs-ports-sublime-text-develop]: https://www.nordtheme.com/docs/ports/sublime-text/development
+[home-docs-ports-sublime-text-install]: https://www.nordtheme.com/docs/ports/sublime-text/installation
+[home-docs-ports-sublime-text]: https://www.nordtheme.com/docs/ports/sublime-text
+[home-ports-sublime-text]: https://www.nordtheme.com/ports/sublime-text
 [nord-sublime-text#21]: https://github.com/arcticicestudio/nord-sublime-text/issues/21
+
+<!-- v0.21.0 -->
+
+[gh-175]: https://github.com/arcticicestudio/nord-docs/issues/175
+[home-docs-ports-slack-install]: https://www.nordtheme.com/docs/ports/slack/installation
+[home-docs-ports-slack]: https://www.nordtheme.com/docs/ports/slack
+[home-ports-slack]: https://www.nordtheme.com/ports/slack
+[nord-slack#5]: https://github.com/arcticicestudio/nord-slack/issues/5
