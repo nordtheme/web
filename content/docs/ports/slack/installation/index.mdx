@@ -1,0 +1,85 @@
+import Link from "atoms/core/Link";
+import { useClipboard } from "use-clipboard-copy";
+import { Clipboard } from "atoms/core/vectors/icons";
+import { Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Kbd } from "atoms/core/html-elements";
+import { ClipboardIcon, ColorValueInput, ColorValueInputBox } from "organisms/page/ports/slack/SectionSetup/styled";
+import { ReactComponent as Plugin } from "assets/images/illustrations/plugin.svg";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Activation",
+  subline: "Get up and running with one line of code."
+};
+
+export const ColorValues = function() {
+  const clipboard = useClipboard();
+  function handleTextInputFocus({ target }) {
+    target.select();
+  }
+  function handleClipboardCopy() {
+    clipboard.copy();
+  }
+  return (
+    <>
+      <ColorValueInputBox onClick={handleClipboardCopy} aria-label="Copy to clipboard" title="Copy to clipboard">
+        <ClipboardIcon outlined svgComponent={Clipboard} />
+        <ColorValueInput
+          readOnly
+          type="text"
+          value="#2E3440,#3B4252,#88C0D0,#2E3440,#3B4252,#D8DEE9,#A3BE8C,#81A1C1"
+          ref={clipboard.target}
+          onFocus={handleTextInputFocus}
+        />
+      </ColorValueInputBox>
+    </>
+  );
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <Plugin />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+Thanks to [Slack's simply shareable custom themes][slk-help-themes], _Nord Slack_ can be installed with one line of code.
+
+1. [Sign in][slk-help-sign_in] to the Slack workspace you’d like to customize.
+2. [Open Slack](slack://open) and click on the workspace name to go to the **Preferences** or via <Kbd>Ctrl</Kbd>/<Kbd>⌘</Kbd>+<Kbd>,</Kbd>.
+3. Switch to the **Sidebar** section and scroll down to the text field in the **Custom Theme** section at the bottom.
+   - If the text field is not visible, click on the „Customize your theme and share it with others“ link to toggle it.
+4. Copy Nord's color values from the text field below and paste it into Slack's custom theme text field to install and automatically apply the custom theme.
+
+<SpaceBox mTop={4} mBottom={4}>
+  <ColorValues />
+</SpaceBox>
+
+<Image
+  alt="Screenshot showing the workspace preferences UI to install and activate custom themes"
+  dropShadow
+  fluid={props.images["slack-theme-config.png"]}
+  rounded
+>
+  <span>
+    The workspace preferences UI to{" "}
+    <Link href="https://get.slack.help/hc/en-us/articles/205166337-Customize-your-Slack-theme">
+      install and activate custom themes
+    </Link>
+    .
+  </span>
+</Image>
+
+See the official [Slack Help Center][slk-help] for more details and documentations.
+
+</ShrinkedWidth>
+
+[slk-help-sign_in]: https://get.slack.help/hc/articles/212681477-Sign-in-to-Slack
+[slk-help-themes]: https://get.slack.help/hc/articles/205166337-Customize-your-Slack-theme
+[slk-help]: https://get.slack.help/hc
