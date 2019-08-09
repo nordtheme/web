@@ -81,7 +81,6 @@ export default function usePortsMetadata(idProperty = "name") {
    *
    * @see https://reactjs.org/docs/hooks-reference.html#usememo
    */
-
   const mergedMetadata = useMemo(() => {
     const merged = projectPorts.map(port => {
       const gh = gitHubApi.github.search.edges.find(ghRepo => ghRepo.node[idProperty] === port[idProperty]);

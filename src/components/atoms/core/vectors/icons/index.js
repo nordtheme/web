@@ -20,10 +20,12 @@ import ArrowForward from "./ArrowForward";
 import BookOpen from "./BookOpen";
 import Brush from "./Brush";
 import Bulb from "./Bulb";
+import Clipboard from "./Clipboard";
 import CloudDownload from "./CloudDownload";
 import Code from "./Code";
 import CodeDownload from "./CodeDownload";
 import Compass from "./Compass";
+import Copy from "./Copy";
 import Discord from "./Discord";
 import GitHub from "./GitHub";
 import Heart from "./Heart";
@@ -52,10 +54,12 @@ export {
   BookOpen,
   Brush,
   Bulb,
+  Clipboard,
   CloudDownload,
   Code,
   CodeDownload,
   Compass,
+  Copy,
   Discord,
   GitHub,
   Heart,

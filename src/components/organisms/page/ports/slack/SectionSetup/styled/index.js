@@ -7,8 +7,8 @@
  * License:    MIT
  */
 
-import SectionHero from "./SectionHero";
-import SectionSetup from "./SectionSetup";
-import SectionUIDetails from "./SectionUIDetails";
+import ClipboardIcon from "./ClipboardIcon";
+import ColorValueInput from "./ColorValueInput";
+import ColorValueInputBox from "./ColorValueInputBox";
 
-export { SectionHero, SectionSetup, SectionUIDetails };
+export { ClipboardIcon, ColorValueInput, ColorValueInputBox };
