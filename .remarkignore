@@ -5,8 +5,10 @@
 # Repository: https://github.com/arcticicestudio/nord-docs
 # License:    MIT
 
-.cache/*
-build/*
-**/node_modules/*
-public/*
-static/*
+# Important: Directories must have no "asterisk" wildcard character at the path end,
+# otherwise the pattern won't match!
+**/.cache/
+**/build/
+**/node_modules/
+**/public/
+**/static/
