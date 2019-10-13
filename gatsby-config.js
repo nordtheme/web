@@ -142,7 +142,7 @@ module.exports = {
       options: gatsbyPluginSourceGraphQlConfig
     },
     {
-      resolve: "gatsby-mdx",
+      resolve: "gatsby-plugin-mdx",
       options: gatsbyPluginMdxConfig
     },
     /* NOTE: The following plugins rely on the order in this array and must be placed at last in order work properly! */

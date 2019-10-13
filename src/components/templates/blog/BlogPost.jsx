@@ -8,7 +8,7 @@
  */
 
 import React from "react";
-import MDXRenderer from "gatsby-mdx/mdx-renderer";
+import MDXRenderer from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import { graphql } from "gatsby";
 
@@ -26,7 +26,8 @@ import { blogPostTemplatePropTypes } from "../shared/propTypes";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
  * @see https://mdxjs.com
- * @see https://github.com/ChristopherBiscardi/gatsby-mdx
+ * @see https://www.gatsbyjs.org/docs/mdx
+ * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx
  *
  */
 const BlogPost = ({ data: { images, mdx, videos }, location: { pathname }, ...passProps }) => {
@@ -62,7 +63,7 @@ const BlogPost = ({ data: { images, mdx, videos }, location: { pathname }, ...pa
               videos={blogPostVideos}
               {...passProps}
             >
-              {mdx.code.body}
+              {mdx.body}
             </MDXRenderer>
           </MDXProvider>
         </Content>
@@ -90,9 +91,7 @@ export const pageQuery = graphql`
       }
     }
     mdx(id: { eq: $id }) {
-      code {
-        body
-      }
+      body
       id
       ...contentBlogPost
     }

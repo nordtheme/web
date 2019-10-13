@@ -20,9 +20,6 @@ const mdxQuery = `
   allMdx {
     edges {
       node {
-        code {
-          scope
-        }
         fields {
           ${Object.keys(nodeFields).map(nf => nf.replace(",", "\n"))}
         }
@@ -46,7 +43,8 @@ const mdxQuery = `
  * @since 0.10.0
  * @see https://next.gatsbyjs.org/docs/node-apis/#createPages
  * @see https://next.gatsbyjs.org/docs/node-apis/#createPage
- * @see https://github.com/ChristopherBiscardi/gatsby-mdx
+ * @see https://www.gatsbyjs.org/docs/mdx
+ * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx
  */
 const createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
