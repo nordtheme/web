@@ -8,7 +8,7 @@
  */
 
 import React from "react";
-import MDXRenderer from "gatsby-plugin-mdx";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import { graphql } from "gatsby";
 

@@ -16,11 +16,10 @@
  * @since 0.1.0
  */
 
-const { resolve: resolvePath } = require("path");
-/* eslint-disable-next-line import/no-extraneous-dependencies */
 const webpack = require("webpack");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const GitRevisionPlugin = require("git-revision-webpack-plugin");
+const { resolve: resolvePath } = require("path");
 
 const { BASE_DIR_BUILD_REPORTS } = require("../src/config/internal/constants");
 

@@ -87,6 +87,12 @@ const RenderedSlideMenuNavListItems = React.memo(props =>
  * @since 0.3.0
  */
 export default class Header extends PureComponent {
+  slideMenuElement = null;
+
+  slideMenuRef = React.createRef();
+
+  uiSubscribers = [];
+
   static propTypes = {
     /**
      * The height of the header in pixels.
@@ -169,12 +175,6 @@ export default class Header extends PureComponent {
     /* Ensure to release all scroll-locked elements when swithcing routes. */
     clearAllBodyScrollLocks();
   }
-
-  slideMenuElement = null;
-
-  slideMenuRef = React.createRef();
-
-  uiSubscribers = [];
 
   /**
    * Toggles the slide menu.

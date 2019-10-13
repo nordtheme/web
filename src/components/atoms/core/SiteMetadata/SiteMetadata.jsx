@@ -145,9 +145,11 @@ PureSiteMetadata.propTypes = {
           description: PropTypes.string,
           keywords: PropTypes.arrayOf(PropTypes.string),
           links: PropTypes.shape({
-            social: PropTypes.shape({
-              twitter: PropTypes.shape({
-                id: PropTypes.string
+            organization: PropTypes.shape({
+              social: PropTypes.shape({
+                twitter: PropTypes.shape({
+                  id: PropTypes.string
+                })
               })
             })
           }),
