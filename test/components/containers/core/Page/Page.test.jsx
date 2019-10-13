@@ -8,7 +8,7 @@
  */
 
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 
 import Page from "containers/core/Page";
 
