@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`theme styles matches the snapshot 1`] = `
-.c1 {
+.c0 {
   color: inherit;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1:active,
-.c1:focus,
-.c1:hover,
-.c1:visited {
+.c0:active,
+.c0:focus,
+.c0:hover,
+.c0:visited {
   outline: none;
 }
 
-.c0 {
+.c1 {
   border-radius: 0.25em;
   padding: 0.15em 0.5em;
   -webkit-transition: background-color 100ms ease-in-out;

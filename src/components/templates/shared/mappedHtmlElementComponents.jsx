@@ -40,7 +40,8 @@ import Wrapper from "./Wrapper";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
  * @see https://mdxjs.com
- * @see https://github.com/ChristopherBiscardi/gatsby-mdx
+ * @see https://www.gatsbyjs.org/docs/mdx
+ * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx
  *
  */
 const mappedHtmlElementComponents = {
