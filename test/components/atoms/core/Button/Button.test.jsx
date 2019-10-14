@@ -8,7 +8,7 @@
  */
 
 import React from "react";
-import { waitForElement } from "react-testing-library";
+import { waitForElement } from "@testing-library/react";
 
 import { renderWithTheme } from "nord-docs-test-utils";
 import Button from "atoms/core/Button";

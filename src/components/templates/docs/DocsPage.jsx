@@ -8,7 +8,7 @@
  */
 
 import React from "react";
-import MDXRenderer from "gatsby-mdx/mdx-renderer";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 import { MDXProvider } from "@mdx-js/react";
 import { graphql } from "gatsby";
 
@@ -28,7 +28,8 @@ import PageTypoHead from "../shared/PageTypoHead";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
  * @see https://mdxjs.com
- * @see https://github.com/ChristopherBiscardi/gatsby-mdx
+ * @see https://www.gatsbyjs.org/docs/mdx
+ * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx
  *
  */
 const DocsPage = ({ data: { images, mdx, videos }, location: { pathname }, ...passProps }) => {
@@ -56,7 +57,7 @@ const DocsPage = ({ data: { images, mdx, videos }, location: { pathname }, ...pa
             <PageTypoHead fontScale={6.5} headline={mdx.frontmatter?.title} subline={mdx.frontmatter?.subline} />
             <PaperSheet>
               <MDXRenderer images={docsPageImages} videos={docsPageVideos} {...passProps}>
-                {mdx.code.body}
+                {mdx.body}
               </MDXRenderer>
             </PaperSheet>
           </MDXProvider>
@@ -86,9 +87,7 @@ export const pageQuery = graphql`
       }
     }
     mdx(id: { eq: $id }) {
-      code {
-        body
-      }
+      body
       id
       ...contentDocsPageFrontmatter
     }

@@ -8,7 +8,7 @@
  */
 
 import React from "react";
-import { render } from "react-testing-library";
+import { render } from "@testing-library/react";
 
 import { A } from "atoms/core/html-elements";
 import { ROUTE_DOCS } from "config/routes/mappings";

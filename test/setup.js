@@ -24,12 +24,7 @@
  *
  * @see https://github.com/gnapse/jest-dom#custom-matchers
  */
-import "jest-dom/extend-expect";
-
-/*
- * Automatically execute `afterEach(cleanup)` for each test.
- */
-import "react-testing-library/cleanup-after-each";
+import "@testing-library/jest-dom/extend-expect";
 
 /*
  * Add support and utilities for testing styled-somponents with Jest.

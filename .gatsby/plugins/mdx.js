@@ -8,12 +8,13 @@
  */
 
 /**
- * @file The configuration for the Gatsby plugin `gatsby-mdx`.
+ * @file The configuration for the Gatsby plugin `gatsby-plugin-mdx`.
  * @author Arctic Ice Studio <development@arcticicestudio.com>
  * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
  * @see https://mdxjs.com
- * @see https://github.com/ChristopherBiscardi/gatsby-mdx
+ * @see https://www.gatsbyjs.org/docs/mdx
+ * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx
  */
 
 const remarkBreaks = require("remark-breaks");
