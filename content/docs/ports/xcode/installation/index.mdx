@@ -1,0 +1,73 @@
+import Link from "atoms/core/Link";
+import { Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { ReactComponent as WindowCode } from "assets/images/illustrations/window-code.svg";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Activation",
+  subline: "Get up and running with a few commands"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowCode />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+## Installation
+
+Nord Xcode can be installed by downloading the latest [`Nord.xccolortheme`][gh-tree-xccolortheme] file from the [GitHub repository][gh-repo] and place it into the `~/Library/Developer/Xcode/UserData/FontAndColorThemes` directory.
+
+```sh
+mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes
+curl https://raw.githubusercontent.com/arcticicestudio/nord-xcode/develop/src/Nord.xccolortheme -o ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Nord.xccolortheme
+```
+
+### Latest Development State
+
+To always use the latest development state of Nord Xcode, [clone the repository][gh-repo] and create a [symbolic link][wiki-symlink] of the [`Nord.xccolortheme`][gh-tree-xccolortheme] file to `~/Library/Developer/Xcode/UserData/FontAndColorThemes/Nord.xccolortheme` afterwards:
+
+```sh
+git clone https://github.com/arcticicestudio/nord-xcode
+ln -sr "$PWD/src/Nord.xccolortheme" "$HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/Nord.xccolortheme"
+```
+
+<Image
+  alt="Screenshot showing the GitHub repository web UI to download the project repository"
+  fillSize={60}
+  fluid={props.images["github-clone.png"]}
+>
+  <span>The GitHub repository web UI to download the project repository.</span>
+</Image>
+
+## Activation
+
+To activate and use Nord Xcode as your default color theme…
+
+1. …open _File_ > _Preferences_
+2. …switch to the _Fonts & Colors_ tab
+3. …select _Nord_ from the list
+
+<SpaceBox mTop={4} mBottom={4}>
+  <Image
+    dropShadow
+    fluid={props.images["ui-activation.png"]}
+    rounded
+    alt="Screenshot showing the Xcode preference to activate the Nord color theme"
+  >
+    <span>The Xcode preferences to activate the Nord color theme.</span>
+  </Image>
+</SpaceBox>
+
+</ShrinkedWidth>
+
+[gh-repo]: https://github.com/arcticicestudio/nord-xcode
+[gh-tree-xccolortheme]: https://github.com/arcticicestudio/nord-xcode/blob/develop/src/Nord.xccolortheme
+[wiki-symlink]: https://en.wikipedia.org/wiki/Symbolic_link

@@ -11,7 +11,8 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/ports/xcode";
+import { SectionHero, SectionSyntax, SectionUIElements, SectionSetup } from "organisms/page/ports/xcode";
+import { usePortsAssets } from "hooks";
 
 /**
  * The component that represents the landing page of the "Nord Xcode" port project.
@@ -20,11 +21,17 @@ import { SectionHero } from "organisms/page/ports/xcode";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const Xcode = ({ location: { pathname } }) => (
-  <BaseLayout pathName={pathname}>
-    <SectionHero />
-  </BaseLayout>
-);
+const Xcode = ({ location: { pathname } }) => {
+  const assets = usePortsAssets("xcode");
+  return (
+    <BaseLayout pathName={pathname}>
+      <SectionHero assets={assets} />
+      <SectionSyntax assets={assets} />
+      <SectionUIElements assets={assets} />
+      <SectionSetup assets={assets} />
+    </BaseLayout>
+  );
+};
 
 Xcode.propTypes = locationPropTypes;
 
