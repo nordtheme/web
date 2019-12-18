@@ -403,6 +403,30 @@ const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT = `${ROUTE_DOCS_PORTS_VISU
 const ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION = `${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE}/installation`;
 
 /**
+ * The route mapping for the docs page of the "Nord Xcode" port project.
+ *
+ * @constant {string}
+ * @since 0.22.0
+ */
+const ROUTE_DOCS_PORTS_XCODE = `${ROUTE_ROOT}${DOCS}/${PORTS}/xcode`;
+
+/**
+ * The route mapping for the asset catalog docs page of the "Nord Xcode" port project.
+ *
+ * @constant {string}
+ * @since 0.22.0
+ */
+const ROUTE_DOCS_PORTS_XCODE_ASSET_CATALOG = `${ROUTE_DOCS_PORTS_XCODE}/asset_catalog`;
+
+/**
+ * The route mapping for the installation docs page of the "Nord Xcode" port project.
+ *
+ * @constant {string}
+ * @since 0.22.0
+ */
+const ROUTE_DOCS_PORTS_XCODE_INSTALLATION = `${ROUTE_DOCS_PORTS_XCODE}/installation`;
+
+/**
  * The route mapping for the `docs` page about Nord's colors and palettes.
  *
  * @constant {string}
@@ -524,6 +548,14 @@ const ROUTE_PORTS_VIM = `${ROUTE_ROOT}${PORTS}/vim`;
 const ROUTE_PORTS_VISUAL_STUDIO_CODE = `${ROUTE_ROOT}${PORTS}/visual-studio-code`;
 
 /**
+ * The route mapping for the "Nord Xcode" port project page.
+ *
+ * @constant {string}
+ * @since 0.22.0
+ */
+const ROUTE_PORTS_XCODE = `${ROUTE_ROOT}${PORTS}/xcode`;
+
+/**
  * The per-route unique `id` attribute values of sections components.
  *
  * @constant {Object}
@@ -541,6 +573,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_DOCS_PORTS_SUBLIME_TEXT]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_TMUX]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_VIM]: ["hero", "contents"],
+  [ROUTE_DOCS_PORTS_XCODE]: ["hero", "contents"],
   [ROUTE_PORTS]: ["hero", "search"],
   [ROUTE_PORTS_ATOM_SYNTAX]: ["hero", "introduction", "syntax", "editor-details", "package-support", "setup"],
   [ROUTE_PORTS_ATOM_UI]: ["hero", "introduction", "ui-elements", "package-support", "configurations", "setup"],
@@ -552,6 +585,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_PORTS_TMUX]: ["hero", "introduction", "ui-elements", "plugin-support", "configurations", "setup"],
   [ROUTE_PORTS_VIM]: ["hero", "introduction", "syntax", "editor-details", "plugin-support", "configurations", "setup"],
   [ROUTE_PORTS_VISUAL_STUDIO_CODE]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
+  [ROUTE_PORTS_XCODE]: ["hero", "introduction", "syntax", "ui-elements", "setup"],
   [ROUTE_ROOT]: [
     "hero",
     "palettes-modularity",
@@ -610,6 +644,9 @@ module.exports = {
   ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT,
   ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION,
   ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE,
+  ROUTE_DOCS_PORTS_XCODE,
+  ROUTE_DOCS_PORTS_XCODE_ASSET_CATALOG,
+  ROUTE_DOCS_PORTS_XCODE_INSTALLATION,
   ROUTE_DOCS_SWATCHES,
   ROUTE_DOCS_USAGE,
   ROUTE_DOCS,
@@ -623,6 +660,7 @@ module.exports = {
   ROUTE_PORTS_TMUX,
   ROUTE_PORTS_VIM,
   ROUTE_PORTS_VISUAL_STUDIO_CODE,
+  ROUTE_PORTS_XCODE,
   ROUTE_PORTS,
   ROUTE_ROOT,
   SECTION_COMPONENT_IDS

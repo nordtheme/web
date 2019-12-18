@@ -8,16 +8,20 @@
  */
 
 import React from "react";
-import { css } from "styled-components";
 
-import { WaveFooter } from "atoms/core/vectors/divider";
-import { P } from "atoms/core/html-elements";
+import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
+import { Image } from "atoms/core/mdx-elements";
 import Section, { Content } from "containers/core/Section";
-import EmptyState from "molecules/core/EmptyState";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
+import { ROUTE_DOCS_PORTS_XCODE, ROUTE_DOCS_PORTS_XCODE_INSTALLATION, ROUTE_PORTS_XCODE } from "config/routes/mappings";
 import { usePortsMetadata } from "hooks";
+import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
+import { sectionIdFor } from "utils";
 
-import { emptyStateIllustrationStyles } from "../../../shared/styles";
+import WaveDivider from "./styled/WaveDivider";
+
+const SECTION_ID = sectionIdFor(ROUTE_PORTS_XCODE, 0);
 
 /**
  * The component that represents the hero section for the landing page of the "Nord Xcode" port project.
@@ -26,32 +30,51 @@ import { emptyStateIllustrationStyles } from "../../../shared/styles";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-export default function SectionHero() {
+const SectionHero = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-xcode");
+  const { gitHubRepositoryUrl, projectUrl } = portMetadata.find(port => port.name === "nord-xcode");
 
   return (
-    <Section>
-      <Content centered>
-        <EmptyState
-          headline="Oh, there's nothing here yet"
-          illustrationStyles={emptyStateIllustrationStyles}
-          illustrationVariant="iglooHemisphere"
-          subline="Please check back later, we're working hard on this page!"
-        />
-        <P
-          css={css`
-            text-align: center;
-          `}
-        >
-          In the meantime, please see the official{" "}
-          <Link href={gitHubRepositoryUrl} target="_blank" variant="minimal">
-            repository on GitHub
-          </Link>{" "}
-          for information about Nord Xcode.
-        </P>
+    <Section id={SECTION_ID}>
+      <Content centered decorated>
+        <FeatureDuo verticalOnly>
+          <Text verticalOnly>
+            <Headline large>Nord Xcode</Headline>
+            <Subline>
+              An arctic, north-bluish clean and elegant <Link href={projectUrl}>Xcode</Link> color theme.
+            </Subline>
+            <Subline>Designed for a fluent and clear workflow.</Subline>
+            <Actions>
+              <Button to={ROUTE_DOCS_PORTS_XCODE_INSTALLATION} variant="primary">
+                Get Started
+              </Button>
+              <Button ghost outlined quiet to={ROUTE_DOCS_PORTS_XCODE} variant="primary">
+                Documentation
+              </Button>
+              <Button ghost href={gitHubRepositoryUrl} outlined quiet variant="primary">
+                GitHub
+              </Button>
+            </Actions>
+          </Text>
+          <Visualization>
+            <Image
+              alt="Screenshot showing the syntax highlighting in the Xcode source code editor"
+              dropShadow
+              fluid={assets.images["overview.png"]}
+              rounded
+            >
+              <span>
+                The syntax highlighting in the <em>Xcode</em> source code editor.
+              </span>
+            </Image>
+          </Visualization>
+        </FeatureDuo>
       </Content>
-      <WaveFooter />
+      <WaveDivider />
     </Section>
   );
-}
+};
+
+SectionHero.propTypes = usePortsAssetsPropTypes;
+
+export default SectionHero;
