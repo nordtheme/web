@@ -1,0 +1,80 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as ColorSwatchesStripes } from "assets/images/illustrations/color-swatches-stripes.svg";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Asset Catalog",
+  subline: "Use Nord as color set from the asset catalog and for the interface builder"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <ColorSwatchesStripes />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+## Color Set
+
+Nord Xcode provides a _color set_ for Xcode [asset catalog][apple-dev-lib-asset_catalog] that can be used as named colors in the [Interface Builder][apple-dev-if_builder] and programmatically, e.g. via the `UIColor(named)` function.
+
+<Image
+  alt="Screenshot showing the Xcode interface builder using the Nord color set from the asset catalog"
+  fluid={props.images["ui-interface_builder.png"]}
+>
+  <span>
+    The Xcode{" "}
+    <Link href="https://developer.apple.com/xcode/interface-builder" target="_blank">
+      interface builder
+    </Link>{" "}
+    using the Nord color set from the asset catalog.
+  </span>
+</Image>
+
+The colors are located in the [`nord.xcassets`][gh-tree-xcassets] folder and can be installed by [adding the folder to your project][apple-help-xcode-add_folder_files].
+
+<SpaceBox mTop={2} mBottom={2}>
+<Banner
+  title={
+    <>
+      More details about the asset catalog, color sets and the usage.
+    </>
+  }
+>
+
+Please read the official documentation section on how to [create a asset catalog and color sets][apple-help-xcode-create_ass_cata] to learn more about the usage in the [Interface Builder][apple-dev-if_builder].
+
+</Banner>
+</SpaceBox>
+
+<Image
+  alt="Screenshot showing the Nord color set in the Xcode asset catalog"
+  fluid={props.images["ui-asset_catalog.png"]}
+>
+  <span>
+    The Nord color set in the{" "}
+    <Link
+      href="https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format"
+      target="_blank"
+    >
+      Xcode asset catalog
+    </Link>
+    .
+  </span>
+</Image>
+
+</ShrinkedWidth>
+
+[gh-tree-xcassets]: https://github.com/arcticicestudio/nord-xcode/tree/develop/src/nord.xcassets
+[apple-dev-lib-asset_catalog]: https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format
+[apple-dev-if_builder]: https://developer.apple.com/xcode/interface-builder
+[apple-help-xcode-add_folder_files]: https://help.apple.com/xcode/mac/current/#/dev81ce1d383
+[apple-help-xcode-create_ass_cata]: https://help.apple.com/xcode/mac/current/#/dev10510b1f7
