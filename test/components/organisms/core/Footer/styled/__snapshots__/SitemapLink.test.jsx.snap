@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`theme styles matches the snapshot 1`] = `
-.c1 {
+.c0 {
   color: inherit;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1:active,
-.c1:focus,
-.c1:hover,
-.c1:visited {
+.c0:active,
+.c0:focus,
+.c0:hover,
+.c0:visited {
   outline: none;
 }
 
-.c0 {
+.c1 {
   display: block;
   padding: 0.4em 0;
   font-size: 0.9em;
@@ -24,17 +24,17 @@ exports[`theme styles matches the snapshot 1`] = `
   transition: color 200ms ease-in-out;
 }
 
-.c0:active,
-.c0:focus,
-.c0:hover {
+.c1:active,
+.c1:focus,
+.c1:hover {
   color: #4c566a;
 }
 
-.c0:first-child {
+.c1:first-child {
   padding-top: 0;
 }
 
-.c0:last-child {
+.c1:last-child {
   padding-bottom: 0;
 }
 

@@ -95,7 +95,7 @@ export default function usePortsMetadata(idProperty = "name") {
       };
     });
     return merged.sort((md1, md2) => md1.stargazers.count < md2.stargazers.count);
-  }, [gitHubApi]);
+  }, [gitHubApi.github.search.edges, idProperty]);
 
   return mergedMetadata;
 }

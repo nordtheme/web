@@ -8,6 +8,8 @@
  */
 
 import SectionHero from "./SectionHero";
+import SectionSetup from "./SectionSetup";
+import SectionSyntax from "./SectionSyntax";
+import SectionUIElements from "./SectionUIElements";
 
-/* eslint-disable-next-line import/prefer-default-export */
-export { SectionHero };
+export { SectionHero, SectionSetup, SectionSyntax, SectionUIElements };
