@@ -8,6 +8,159 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.22.0
+
+![Release Date: 2019-12-19](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-12-19&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.22.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/25) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.22.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/22)
+
+This version mainly focused on the [transition of the „Nord Xcode“ port project][gh-182]. The implementation includes the port specific [landing][home-ports-xcode] and [docs][home-docs-ports-xcode] pages as well as the [installation & activation][home-docs-ports-xcode-install] and [asset catalog][home-docs-ports-xcode-asset_catalog] guides.
+
+## Features
+
+**„Nord Xcode“ Transition** — #182 ⇄ #186 (⊶ 0732fd4c)
+↠ Transferred all documentations, assets and visualizations from „Nord Xcode“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the _Nord Xcode_ repository][nord-xcode#9] to get an overview of what has changed for _Nord Xcode_ and what has been done to migrate to Nord Docs.
+
+<p align="center">Landing Page</p>
+<p align="center"><a href="https://www.nordtheme.com/ports/xcode" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71106477-bc4f3880-21bf-11ea-987b-bd5183c1aa4b.png" alt="Preview: Nord Xcode Port Project Landing Page"/></a></p>
+
+<p align="center">Docs Page</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/xcode" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71106475-bc4f3880-21bf-11ea-9a9f-4c0a0472a604.png" alt="Preview: Nord Xcode Docs Page"/></a></p>
+
+<p align="center">Installation & Activation Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/xcode/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71106476-bc4f3880-21bf-11ea-8812-079bb6425777.png" alt="Preview: Nord Xcode Installation & Activation Guide Page"/></a></p>
+
+<p align="center">Asset Catalog Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/xcode/asset_catalog" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71106473-bc4f3880-21bf-11ea-9cec-d182d526a068.png" alt="Preview: Nord Xcode Asset Catalog Guide Page"/></a></p>
+
+## Bug Fixes
+
+### Workflow
+
+**Non-matching remark-lint ignore pattern** — #180 ⇄ #181 (⊶ 8ae06b3b)
+↠ Previously the defined pattern for directories were not matching due to the "asterisk" wildcard character at the end of the paths. These have been removed in order to make them work correctly.
+
+## Task
+
+**Dependency Update April-October 2019** — #183 ⇄ #184 (⊶ b37ec8d6)
+↠ Completed the regular batch update for outdated production and development dependencies.
+
+#### Deprecated Packages
+
+The following packages have been deprecated in favour of new (scoped) packages:
+
+- `eslint-config-arcticicestudio` ➔ `@arcticicestudio/eslint-config`
+- `gatsby-mdx` ➔ `gatsby-plugin-mdx`
+- `jest-dom` ➔ `@testing-library/jest-dom`
+- `react-hooks-testing-library` ➔ `@testing-library/react-hooks`
+- `react-testing-library` ➔ `@testing-library/react`
+
+#### Known Issues
+
+The `react-pose` and `react-spring` package were intentionally not updated in order to prevent incompatibilities. Due to the transitive dependency of `react-pose` to the `stylefire` package, some SVG animations would break because the latest version of `stylefire` changed the way how `x` & `y` CSS `transform` and `translate` property values are handled. This would result in SVG elements not being scaled from their original position but from the top of the `viewBox`.
+Using the latest version of `react-spring` would cause a `value not defined` error for the animation of the floating port project logos.
+Both problems will be solved later on by finding the root cause of the undefined `value` as well as migrating away from the deprecated `react-pose` package to the new `framer-motion` package and API.
+
+#### Updated ESLint Configuration
+
+The ESLint configuration has been adapted to the new `@arcticicestudio/eslint-config` package. This simplifies the configuration at all by removing custom overrides that were missing in the preset. It also removes the import of the `import/no-extraneous-dependencies` rule object from the `@arcticicestudio/eslint-config-base` package since the rule will be disabled for all files matching the `**/.gatsby/**/*.js` pattern.
+
+The new preset also comes with the new development dependency package `eslint-config-prettier`. In order to resolve alias imports the `eslint-import-resolver-alias` package has also been added and configured.
+
+After updating all configurations the whole code base has been linted and found errors and warnings have been fixed.
+
+#### Testing Setup
+
+The awesome _react-testing_ libraries moved to the `@testing-library` package scope which required some changes to be done to migrate the test setup:
+
+1. Updated all package import paths, e.g. `react-testing-library` to `@testing-library/react`.
+2. Removed the deprecated import of the `cleanup-after-each` function that yields the following warning
+   > The module `@testing-library/react/cleanup-after-each` has been deprecated and no longer does anything (it is not needed). You no longer need to import this module and can safely remove any import or configuration which imports this module.
+3. Updated failing snapshots were only the class name of _styled components_ changed. This is because the generated class names are now starting with a counter of `0` instead of `1` causing only changes like this:
+   ```diff
+   -.c1
+   +.c0
+   ```
+
+###### Production Dependencies
+
+- @mdx-js/react `1.0.6` ➔ `1.5.1`
+- axios `0.18.0` ➔ `0.19.0`
+- body-scroll-lock `2.6.1` ➔ `2.6.4`
+- date-fns `2.0.0-alpha.27` ➔ `2.4.1`
+- gatsby `2.3.29` ➔ `2.15.36`
+- gatsby-image `2.0.40` ➔ `2.2.27`
+- ~~gatsby-mdx `0.6.2`~~ ➔ gatsby-plugin-mdx `1.0.51`
+- gatsby-plugin-canonical-urls `2.0.12` ➔ `2.1.11`
+- gatsby-plugin-catch-links `2.0.13` ➔ `2.1.13`
+- gatsby-plugin-google-gtag `1.0.16` ➔ `1.1.12`
+- gatsby-plugin-lodash `3.0.5` ➔ `3.1.11`
+- gatsby-plugin-manifest `2.0.29` ➔ `2.2.21`
+- gatsby-plugin-netlify `2.0.15` ➔ 2.1.19``
+- gatsby-plugin-no-sourcemaps `2.0.2` ➔ `2.1.1`
+- gatsby-plugin-offline `2.0.25` ➔ `3.0.14`
+- gatsby-plugin-react-helmet `3.0.12` ➔ `3.1.11`
+- gatsby-plugin-remove-trailing-slashes `2.0.11` ➔ `2.1.10`
+- gatsby-plugin-robots-txt `1.4.0` ➔ `1.5.0`
+- gatsby-plugin-sharp `2.0.35` ➔ `2.2.29`
+- gatsby-plugin-sitemap `2.0.12` ➔ `2.2.17`
+- gatsby-plugin-styled-components `3.0.7` ➔ `3.1.9`
+- gatsby-plugin-webpack-size `0.0.3` ➔ `1.0.0`
+- gatsby-source-filesystem `2.0.32` ➔ `2.1.31`
+- gatsby-source-graphql `2.0.18` ➔ `2.1.18`
+- gatsby-transformer-sharp `2.1.18` ➔ `2.2.21`
+- gatsby-transformer-yaml `2.1.12` ➔ `2.2.13`
+- inter-ui `3.5.0` ➔ `3.10.0`
+- lodash `4.17.11` ➔ `4.17.15`
+- polished `3.2.0` ➔ `3.4.1`
+- react `16.8.6` ➔ `16.10.2`
+- react-dom `16.8.6` ➔ `16.10.2`
+- react-helmet `5.2.0` ➔ `5.2.1`
+- react-spring `8.0.7` ➔ `8.0.27`
+- semver `6.0.0` ➔ `6.3.0`
+- styled-components `4.2.0` ➔ `4.4.0`
+
+###### Development Dependencies
+
+- @babel/core `7.4.3` ➔ `7.6.4`
+- @babel/plugin-proposal-class-properties `7.4.0` ➔ `7.5.5`
+- @babel/plugin-proposal-export-default-from `7.2.0` ➔ `7.5.2`
+- @babel/plugin-proposal-nullish-coalescing-operator `7.4.3` ➔ `7.4.4`
+- @babel/plugin-proposal-optional-chaining `7.2.0` ➔ `7.6.0`
+- @mdx-js/mdx `1.0.14` ➔ `1.5.1`
+- @svgr/webpack `4.2.0` ➔ `4.3.3`
+- babel-eslint `10.0.1` ➔ `10.0.3`
+- babel-jest `24.7.1` ➔ `24.9.0`
+- babel-plugin-styled-components `1.10.0` ➔ `1.10.6`
+- babel-preset-gatsby `0.1.11` ➔ `0.2.18`
+- del-cli `1.1.0` ➔ `3.0.0`
+- eslint `5.16.0` ➔ `6.5.1`
+- ~~eslint-config-arcticicestudio `>=0.4.0 <1.0.0`~~ ➔ @arcticicestudio/eslint-config `>=0.8.0 <1.0.0`
+- eslint-config-prettier 🆕 `6.4.0`
+- eslint-import-resolver-jest `2.1.1` ➔ `3.0.0`
+- eslint-import-resolver-alias 🆕 `1.1.2`
+- eslint-plugin-import `2.17.2` ➔ `2.18.2`
+- eslint-plugin-jsx-a11y `6.2.1` ➔ `6.2.3`
+- eslint-plugin-prettier `3.0.1` ➔ `3.1.1`
+- eslint-plugin-react `7.12.4` ➔ `7.16.0`
+- eslint-plugin-react-hooks `1.6.0` ➔ `2.1.2`
+- git-revision-webpack-plugin `3.0.3` ➔ `3.0.4`
+- glob `7.1.3` ➔ `7.1.4`
+- husky `2.1.0` ➔ `3.0.9`
+- jest `24.7.1` ➔ `24.9.0`
+- ~~jest-dom `3.1.3`~~ ➔ @testing-library/jest-dom `4.1.2`
+- jest-junit `6.3.0` ➔ `8.0.0`
+- jest-styled-components `6.3.1` ➔ `6.3.3`
+- lint-staged `8.1.5` ➔ `9.4.2`
+- prettier `1.17.0` ➔ `1.18.2`
+- rehype-slug `2.0.2` ➔ `2.0.3`
+- ~~react-hooks-testing-library `0.5.0`~~ ➔ @testing-library/react `9.3.0`
+- ~~react-testing-library `6.1.2`~~ ➔ @testing-library/react-hooks `2.0.3`
+- remark-breaks `1.0.2` ➔ `1.0.3`
+- remark-cli `6.0.1` ➔ `7.0.0`
+- remark-github `7.0.6` ➔ `8.0.0`
+- remark-preset-lint-arcticicestudio `>=0.2.0 <1.0.0` ➔ `>=0.3.0 <1.0.0`
+- webpack-bundle-analyzer `3.3.2` ➔ `3.5.2`
+
 # 0.21.0
 
 ![Release Date: 2019-08-09](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-09&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.21.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/24) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.21.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/21)
@@ -1995,3 +2148,12 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-docs-ports-slack]: https://www.nordtheme.com/docs/ports/slack
 [home-ports-slack]: https://www.nordtheme.com/ports/slack
 [nord-slack#5]: https://github.com/arcticicestudio/nord-slack/issues/5
+
+<!-- v0.22.0 -->
+
+[gh-182]: https://github.com/arcticicestudio/nord-docs/issues/182
+[home-docs-ports-xcode-asset_catalog]: https://www.nordtheme.com/docs/ports/slack/asset_catalog
+[home-docs-ports-xcode-install]: https://www.nordtheme.com/docs/ports/slack/installation
+[home-docs-ports-xcode]: https://www.nordtheme.com/docs/ports/xcode
+[home-ports-xcode]: https://www.nordtheme.com/ports/xcode
+[nord-xcode#9]: https://github.com/arcticicestudio/nord-xcode/issues/9
