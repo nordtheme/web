@@ -8,6 +8,27 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.23.0
+
+![Release Date: 2019-12-20](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-12-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.23.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/26) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.23.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/23)
+
+This version mainly focused on the [transition of the „Nord highlight.js“ port project][gh-188]. The implementation includes the port specific [landing][home-ports-highlightjs] and [docs][home-docs-ports-highlightjs] pages as well as the [installation & usage][home-docs-ports-highlightjs-install] guides.
+
+## Features
+
+**„Nord highlight.js“ Transition** — #188 ⇄ #189 (⊶ c83114c5)
+↠ Transferred all documentations, assets and visualizations from „Nord highlight.js“ to Nord Docs which will now serve as the single-source-of-truth™.
+Please see the [corresponding issue in the _Nord highlight.js_ repository][nord-highlightjs#13] to get an overview of what has changed for _Nord highlight.js_ and what has been done to migrate to Nord Docs.
+
+<p align="center">Landing Page</p>
+<p align="center"><a href="https://www.nordtheme.com/ports/highlightjs" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71248061-4ad7cd00-231a-11ea-8e3b-18d8793deafd.png" alt="Preview: Nord highlight.js Port Project Landing Page"/></a></p>
+
+<p align="center">Docs Page</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/highlightjs" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71248059-4ad7cd00-231a-11ea-8bf7-6397ec997efd.png" alt="Preview: Nord highlight.js Docs Page"/></a></p>
+
+<p align="center">Installation & Usage Guide</p>
+<p align="center"><a href="https://www.nordtheme.com/docs/ports/highlightjs/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71248060-4ad7cd00-231a-11ea-9cc6-5fd14d45b1eb.png" alt="Preview: Nord highlight.js Installation & Usage Guide Page"/></a></p>
+
 # 0.22.0
 
 ![Release Date: 2019-12-19](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-12-19&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.22.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/25) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.22.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/22)
@@ -2157,3 +2178,11 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-docs-ports-xcode]: https://www.nordtheme.com/docs/ports/xcode
 [home-ports-xcode]: https://www.nordtheme.com/ports/xcode
 [nord-xcode#9]: https://github.com/arcticicestudio/nord-xcode/issues/9
+
+<!-- v0.23.0 -->
+
+[gh-188]: https://github.com/arcticicestudio/nord-docs/issues/188
+[home-docs-ports-highlightjs-install]: https://www.nordtheme.com/docs/ports/slack/installation
+[home-docs-ports-highlightjs]: https://www.nordtheme.com/docs/ports/highlightjs
+[home-ports-highlightjs]: https://www.nordtheme.com/ports/highlightjs
+[nord-highlightjs#13]: https://github.com/arcticicestudio/nord-highlightjs/issues/13
