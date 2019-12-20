@@ -11,7 +11,8 @@ import React from "react";
 
 import { locationPropTypes } from "data/pages/shared/propTypes";
 import BaseLayout from "layouts/core/BaseLayout";
-import { SectionHero } from "organisms/page/ports/highlightjs";
+import { SectionHero, SectionSetup, SectionSyntax } from "organisms/page/ports/highlightjs";
+import { usePortsAssets } from "hooks";
 
 /**
  * The component that represents the landing page of the "Nord highlight.js" port project.
@@ -20,11 +21,17 @@ import { SectionHero } from "organisms/page/ports/highlightjs";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const HighlightJs = ({ location: { pathname } }) => (
-  <BaseLayout pathName={pathname}>
-    <SectionHero />
-  </BaseLayout>
-);
+const HighlightJs = ({ location: { pathname } }) => {
+  const assets = usePortsAssets("highlightjs");
+
+  return (
+    <BaseLayout pathName={pathname}>
+      <SectionHero assets={assets} />
+      <SectionSyntax assets={assets} />
+      <SectionSetup assets={assets} />
+    </BaseLayout>
+  );
+};
 
 HighlightJs.propTypes = locationPropTypes;
 
