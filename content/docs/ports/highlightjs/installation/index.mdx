@@ -1,0 +1,76 @@
+import Link from "atoms/core/Link";
+import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
+import { Code } from "atoms/core/html-elements";
+import { ReactComponent as WindowCode } from "assets/images/illustrations/window-code.svg";
+import { ROUTE_DOCS_COLOR_AND_PALETTES, ROUTE_PORTS } from "config/routes/mappings";
+
+import WIPNotice from "../../../../shared/docs/wip-notice";
+
+export const frontmatter = {
+  title: "Installation & Usage",
+  subline: "Get up and running in one line of code"
+};
+
+<ShrinkedWidth value={25}>
+
+<SpaceBox mTop={4} mBottom={4}>
+  <WindowCode />
+</SpaceBox>
+
+</ShrinkedWidth>
+
+<ShrinkedWidth value={80}>
+
+<WIPNotice />
+
+<Banner
+  title={
+    <>
+      Highlight.js prerequisites
+    </>
+  }
+>
+
+Make sure to read the official _highlight.js_ documentation lo learn [how to install and use highlight.js][hjs-usage] in order to use themes like Nord.
+
+</Banner>
+
+## Installation
+
+Since Nord highlight.js is used in web technology based projects, it's main installation method are therefore [**npm**][npm] or [**yarn**][yarn], the [Node.js][] package managers.
+
+Install and add it as production dependency from the command line:
+
+```sh
+# When using npm...
+npm install --save nord-highlightjs
+
+# ...or yarn as package manager.
+yarn add nord-highlightjs
+```
+
+To use Nord highlight.js in projects without Node.js, the CSS file can be used through CDN services like [UNPKG][]:
+
+```html
+<!-- Replace the version with any available release. -->
+<link href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css" rel="stylesheet" type="text/css" />
+```
+
+## Usage
+
+To use Nord highlight.js include the CSS file as stylesheet depending on the installation method:
+
+```sh
+<!-- When installed via npm/yarn for Node.js based projects -->
+<link href="node_modules/nord-highlightjs/dist/nord.css" rel="stylesheet" type="text/css" />
+<!-- When using CDN service like UNPKG -->
+<link href="https://unpkg.com/nord-highlightjs@0.1.0/dist/nord.css" rel="stylesheet" type="text/css" />
+```
+
+</ShrinkedWidth>
+
+[hjs-usage]: https://highlightjs.org/usage
+[node.js]: https://nodejs.org
+[npm]: https://www.npmjs.com
+[unpkg]: https://unpkg.com
+[yarn]: https://yarnpkg.com

@@ -7,8 +7,4 @@
  * License:    MIT
  */
 
-import SectionHero from "./SectionHero";
-import SectionSyntax from "./SectionSyntax";
-import SectionSetup from "./SectionSetup";
-
-export { SectionHero, SectionSetup, SectionSyntax };
+export { default } from "./SectionSetup";
