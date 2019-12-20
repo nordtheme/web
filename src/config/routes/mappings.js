@@ -227,6 +227,30 @@ const ROUTE_DOCS_PORTS_EMACS_SUPPORT = `${ROUTE_DOCS_PORTS_EMACS}/support`;
 const ROUTE_DOCS_PORTS_EMACS_TROUBLESHOOTING = `${ROUTE_DOCS_PORTS_EMACS}/troubleshooting`;
 
 /**
+ * The route mapping for the troubleshooting guide docs page of the "Nord highlight.js" port project.
+ *
+ * @constant {string}
+ * @since 0.23.0
+ */
+const ROUTE_DOCS_PORTS_HIGHLIGHTJS = `${ROUTE_ROOT}${DOCS}/${PORTS}/highlightjs`;
+
+/**
+ * The route mapping for the troubleshooting guide docs page of the "Nord highlight.js" port project.
+ *
+ * @constant {string}
+ * @since 0.23.0
+ */
+const ROUTE_DOCS_PORTS_HIGHLIGHTJS_INSTALLATION = `${ROUTE_DOCS_PORTS_HIGHLIGHTJS}/installation`;
+
+/**
+ * The route mapping for the troubleshooting guide docs page of the "Nord highlight.js" port project.
+ *
+ * @constant {string}
+ * @since 0.23.0
+ */
+const ROUTE_DOCS_PORTS_HIGHLIGHTJS_TROUBLESHOOTING = `${ROUTE_DOCS_PORTS_HIGHLIGHTJS}/troubleshooting`;
+
+/**
  * The route mapping for the docs page of the "Nord JetBrains" port project.
  *
  * @constant {string}
@@ -500,6 +524,14 @@ const ROUTE_PORTS_DIRCOLORS = `${ROUTE_ROOT}${PORTS}/dircolors`;
 const ROUTE_PORTS_EMACS = `${ROUTE_ROOT}${PORTS}/emacs`;
 
 /**
+ * The route mapping for the "Nord highlight.js" port project page.
+ *
+ * @constant {string}
+ * @since 0.23.0
+ */
+const ROUTE_PORTS_HIGHLIGHTJS = `${ROUTE_ROOT}${PORTS}/highlightjs`;
+
+/**
  * The route mapping for the "Nord JetBrains" port project page.
  *
  * @constant {string}
@@ -568,6 +600,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_DOCS_PORTS_ATOM_UI]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_DIRCOLORS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_EMACS]: ["hero", "contents"],
+  [ROUTE_DOCS_PORTS_HIGHLIGHTJS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_JETBRAINS]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_SLACK]: ["hero", "contents"],
   [ROUTE_DOCS_PORTS_SUBLIME_TEXT]: ["hero", "contents"],
@@ -579,6 +612,7 @@ const SECTION_COMPONENT_IDS = {
   [ROUTE_PORTS_ATOM_UI]: ["hero", "introduction", "ui-elements", "package-support", "configurations", "setup"],
   [ROUTE_PORTS_DIRCOLORS]: ["hero", "introduction", "setup"],
   [ROUTE_PORTS_EMACS]: ["hero", "introduction", "syntax", "editor-details", "configurations", "setup"],
+  [ROUTE_PORTS_HIGHLIGHTJS]: ["hero", "introduction", "syntax", "setup"],
   [ROUTE_PORTS_JETBRAINS]: ["hero", "introduction", "syntax", "editor-details", "ui-elements", "setup"],
   [ROUTE_PORTS_SLACK]: ["hero", "ui-elements", "setup"],
   [ROUTE_PORTS_SUBLIME_TEXT]: ["hero", "introduction", "syntax", "editor-details", "setup"],
@@ -622,6 +656,9 @@ module.exports = {
   ROUTE_DOCS_PORTS_EMACS_INSTALLATION,
   ROUTE_DOCS_PORTS_EMACS_SUPPORT,
   ROUTE_DOCS_PORTS_EMACS_TROUBLESHOOTING,
+  ROUTE_DOCS_PORTS_HIGHLIGHTJS,
+  ROUTE_DOCS_PORTS_HIGHLIGHTJS_INSTALLATION,
+  ROUTE_DOCS_PORTS_HIGHLIGHTJS_TROUBLESHOOTING,
   ROUTE_DOCS_PORTS_JETBRAINS_DEVELOPMENT,
   ROUTE_DOCS_PORTS_JETBRAINS_INSTALLATION,
   ROUTE_DOCS_PORTS_JETBRAINS_SUPPORT,
@@ -655,6 +692,7 @@ module.exports = {
   ROUTE_PORTS_ATOM_UI,
   ROUTE_PORTS_DIRCOLORS,
   ROUTE_PORTS_EMACS,
+  ROUTE_PORTS_HIGHLIGHTJS,
   ROUTE_PORTS_JETBRAINS,
   ROUTE_PORTS_SUBLIME_TEXT,
   ROUTE_PORTS_TMUX,
