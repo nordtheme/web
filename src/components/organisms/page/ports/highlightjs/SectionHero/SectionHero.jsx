@@ -8,16 +8,25 @@
  */
 
 import React from "react";
-import { css } from "styled-components";
 
-import { WaveFooter } from "atoms/core/vectors/divider";
-import { P } from "atoms/core/html-elements";
+import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
-import Section, { Content } from "containers/core/Section";
-import EmptyState from "molecules/core/EmptyState";
+import { Image } from "atoms/core/mdx-elements";
+import { Content } from "containers/core/Section";
+import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
+import {
+  ROUTE_DOCS_PORTS_HIGHLIGHTJS,
+  ROUTE_DOCS_PORTS_HIGHLIGHTJS_INSTALLATION,
+  ROUTE_PORTS_HIGHLIGHTJS
+} from "config/routes/mappings";
 import { usePortsMetadata } from "hooks";
+import { usePortsAssetsPropTypes } from "hooks/shared/propTypes";
+import { sectionIdFor } from "utils";
 
-import { emptyStateIllustrationStyles } from "../../../shared/styles";
+import { Section } from "../../../shared";
+import WaveDivider from "./styled/WaveDivider";
+
+const SECTION_ID = sectionIdFor(ROUTE_PORTS_HIGHLIGHTJS, 0);
 
 /**
  * The component that represents the hero section for the landing page of the "Nord highlight.js" port project.
@@ -26,32 +35,42 @@ import { emptyStateIllustrationStyles } from "../../../shared/styles";
  * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-export default function SectionHero() {
+const SectionHero = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-highlightjs");
+  const { gitHubRepositoryUrl, projectUrl } = portMetadata.find(port => port.name === "nord-highlightjs");
 
   return (
-    <Section>
-      <Content centered>
-        <EmptyState
-          headline="Oh, there's nothing here yet"
-          illustrationStyles={emptyStateIllustrationStyles}
-          illustrationVariant="iglooHemisphere"
-          subline="Please check back later, we're working hard on this page!"
-        />
-        <P
-          css={css`
-            text-align: center;
-          `}
-        >
-          In the meantime, please see the official{" "}
-          <Link href={gitHubRepositoryUrl} target="_blank" variant="minimal">
-            repository on GitHub
-          </Link>{" "}
-          for information about Nord highlight.js.
-        </P>
+    <Section id={SECTION_ID}>
+      <Content centered decorated>
+        <FeatureDuo verticalOnly>
+          <Text verticalOnly>
+            <Headline large>Nord highlight.js</Headline>
+            <Subline>
+              An arctic, north-bluish clean and elegant <Link href={projectUrl}>highlight.js</Link> theme.
+            </Subline>
+            <Subline>Designed for a fluent and clear workflow with support for many languages.</Subline>
+            <Actions>
+              <Button to={ROUTE_DOCS_PORTS_HIGHLIGHTJS_INSTALLATION} variant="primary">
+                Get Started
+              </Button>
+              <Button ghost outlined quiet to={ROUTE_DOCS_PORTS_HIGHLIGHTJS} variant="primary">
+                Documentation
+              </Button>
+              <Button ghost href={gitHubRepositoryUrl} outlined quiet variant="primary">
+                GitHub
+              </Button>
+            </Actions>
+          </Text>
+          <Visualization>
+            <Image alt="Screenshot showing a Go function" dropShadow fluid={assets.images["overview.png"]} rounded />
+          </Visualization>
+        </FeatureDuo>
       </Content>
-      <WaveFooter />
+      <WaveDivider />
     </Section>
   );
-}
+};
+
+SectionHero.propTypes = usePortsAssetsPropTypes;
+
+export default SectionHero;
