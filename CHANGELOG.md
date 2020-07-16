@@ -660,7 +660,7 @@ The following issues are related to the [“Components”][gh-63] and [“Respon
 ### MDX
 
 MDX is used to handle the actual content of the documentation and blog posts.
-Gatsby allows to use Markdown for content that comes with the nice side effect that the already existing documentations can simply be adapted and reused, but unfortunately it is limited to it's reduced and simplified syntax.
+Gatsby allows to use Markdown for content that comes with the nice side effect that the already existing documentations can simply be adapted and reused, but unfortunately it is limited to its reduced and simplified syntax.
 
 To also use the great power of React for content and not only layout and design this project makes use of the [MDX specification][gh-mdx-spec], a new language and abstract syntax tree definition.
 
@@ -735,7 +735,7 @@ Anyway, they will be removed as soon as there is finally the first blog post and
 
 **New official Nord Spectrum community** — #131 (⊶ d71e4f98)
 ↠ Updated all URLs and references to the new [official Nord Spectrum community][spectrum-nord] that is available as of 2019-03-03.
-Previously the official [Arctic Ice Studio][spectrum-ais] community was used with it's channels for Nord projects.
+Previously the official [Arctic Ice Studio][spectrum-ais] community was used with its channels for Nord projects.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/7836623/53745393-3a478a80-3e9f-11e9-938b-3758158dbbe0.png" width="45%" /> <img src="https://user-images.githubusercontent.com/7836623/53745380-36b40380-3e9f-11e9-84a7-947eea4e923a.png" width="45%" /></p>
 
@@ -1492,7 +1492,7 @@ To simplify the read- and write handling as well as prevent possible errors due 
 This is the initial release version of _Nord Docs_.
 It represents the basic project setup, structure and development workflow with an deployable state. There are many initial implementations and configurations for the documented design concepts. They are covered in the following sections of this version changelog to introduce used technologies and explain why several decisions have been made.
 
-To get an overview of the general project plan, read the [“Design Concept & Initial Launch Plan”][gh-1] documentation which describes the project's justification, it's goals, the architecture, the tech stack and the “UI Design & Branding“ concept.
+To get an overview of the general project plan, read the [“Design Concept & Initial Launch Plan”][gh-1] documentation which describes the project's justification, its goals, the architecture, the tech stack and the “UI Design & Branding“ concept.
 
 ## Features
 
