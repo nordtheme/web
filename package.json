@@ -95,7 +95,7 @@
     "@mdx-js/react": "1.5.1",
     "arctic-landscape": ">=0.1.0 <1.0.0",
     "arctic-ocean-fractal": ">=0.1.0 <1.0.0",
-    "axios": "0.19.0",
+    "axios": "0.21.1",
     "body-scroll-lock": "2.6.4",
     "core-js": "2.6.5",
     "date-fns": "2.4.1",
