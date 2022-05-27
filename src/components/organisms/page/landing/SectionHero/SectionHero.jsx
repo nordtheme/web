@@ -60,7 +60,7 @@ export default class SectionHero extends PureComponent {
                 An arctic, north-bluish color palette.
               </Headline>
               <Subline>
-                Created for the clean and uncluttered design pattern to achieve a optimal focus and readability for code
+                Created for a clean and uncluttered design pattern to achieve optimal focus and readability for code
                 syntax highlighting and UI components.
               </Subline>
               <Actions>
