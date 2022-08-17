@@ -80,8 +80,12 @@ export default class Root extends Component {
   }
 
   state = {
-    themeMode: readSessionCache(SESSIONSTORAGE_KEY_THEME_MODE) || MODE_BRIGHT_SNOW_FLURRY
-  };
+    themeMode:
+      readSessionCache(SESSIONSTORAGE_KEY_THEME_MODE) ||
+      (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? MODE_DARK_NIGHT_FROST
+        : MODE_BRIGHT_SNOW_FLURRY),
+  };  
 
   /**
    * Toggles the global theme mode and persists it in the browser's session storage.
