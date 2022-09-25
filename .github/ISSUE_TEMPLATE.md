@@ -1,6 +1,6 @@
 <!-- Click on the "Preview" tab to render the instructions in a more readable format -->
 
-> **Please read the [contribution guidelines](https://github.com/arcticicestudio/nord-docs/blob/master/CONTRIBUTING.md) before filling out this issue template**.
+> **Please read the [contribution guidelines](https://github.com/arcticicestudio/nord-docs/blob/main/CONTRIBUTING.md) before filling out this issue template**.
 
 ## [Please follow one of the issue templates](https://github.com/arcticicestudio/nord-docs/issues/new/choose)
 
