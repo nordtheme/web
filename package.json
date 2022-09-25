@@ -123,7 +123,7 @@
     "gatsby-transformer-sharp": "2.2.21",
     "gatsby-transformer-yaml": "2.2.13",
     "inter-ui": "3.10.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "nord": ">=0.2.1 <1.0.0",
     "polished": "3.4.1",
     "prop-types": "15.7.2",
