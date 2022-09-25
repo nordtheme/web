@@ -31,7 +31,7 @@ A bug is a _demonstrable problem_ that is caused by the code in the repository. 
 
 - **Use the [GitHub Issue search][gh-issues]** — check if the issue has already been reported. If it has **and the issue is still open**, add a comment to the existing issue instead of opening a new one. If you find a closed issue that seems like it is the same thing that you are experiencing, open a new issue and include a link to the original issue in the body of your new one.
 - **Determine [which repository the contribution belongs to](#repository-assignment).**
-- **Check if the issue has been fixed** — try to reproduce it using the [latest version][gh-releases-latest] and [`develop`][gh-branch-develop] branch in the repository.
+- **Check if the issue has been fixed** — try to reproduce it using the [latest version][gh-releases-latest] and [`master`][gh-branch-master] branch in the repository.
 - **Isolate the problem** — ideally create a [MCVE](#mcve).
 
 When you are creating a bug report, please provide as much detail and context as possible. Fill out on of [the required templates][gh-issues-template-bug], the information it asks helps maintainers to reproduce the problem and resolve issues faster.
@@ -56,7 +56,7 @@ This section guides you through submitting an enhancement suggestion, including 
 
 - **Use the [GitHub Issues search][gh-issues]** — check if this enhancement has already been suggested. If it has **and the issue is still open**, add your additions as comment to the existing issue instead of opening a new one.
 - **Determine [which repository the contribution belongs to](#repository-assignment).**
-- **Check if the enhancement has already been implemented** — use the [latest version][gh-releases-latest] and [`develop`][gh-branch-develop] branch to ensure that the feature or improvement has not already been added.
+- **Check if the enhancement has already been implemented** — use the [latest version][gh-releases-latest] and [`master`][gh-branch-master] branch to ensure that the feature or improvement has not already been added.
 - **Provide a reduced show case** — ideally create a [MCVE](#mcve).
 
 Before creating enhancement suggestions, please check if your idea fits with the scope and provide as much detail and context as possible using a structured layout like the [the issue template][gh-issues-template-enhancement].
@@ -85,7 +85,7 @@ When you are submitting an pull request, please provide as much detail and conte
 - **Lint and test before submitting the pull request**.
 - **Make sure to create the pull request from a [topic branch][git-docs-branching-workflows]**.
 
-**All pull requests must be send against the [`develop`][gh-branch-develop] branch** - Please read the [branch organization](#branch-organization) section below for details about the branching model.
+**All pull requests must be send against the [`master`][gh-branch-master] branch** - Please read the [branch organization](#branch-organization) section below for details about the branching model.
 
 ### Documentations
 
@@ -95,12 +95,9 @@ You can help improve the docs and guides by making them more coherent, consisten
 
 ## Branch Organization
 
-Nord uses the [gitflow][gitflow] branching model. The repository consists of two core branches with an infinite development lifecycle:
+Nord uses the [GitHub Flow][github-flow] branching model. The repository consists of the `master` core branch with an infinite development lifecycle. The source code of [Git‘s `HEAD`][git-docs-internals-head] in this branch contains the latest development state and reflects all tagged release versions.
 
-- `master` - The source code of `HEAD` always reflects a tagged release version.
-- `develop` - The default branch where the source code of `HEAD` always reflects a state with the latest development state.
-
-**All [pull requests](#pull-requests) for the limited development lifecycle _story_/_topic_ branches must be send against the `develop` branch**.
+**All [pull requests](#pull-requests) for limited development lifecycle _story_/_topic_ branches must be send against the `master` branch**.
 
 <!-- lint disable no-heading-punctuation -->
 
@@ -194,33 +191,35 @@ Every significant change is documented in the [changelog][gh-changelog].
 Thanks for the inspirations and attributions to GitHub's [Open Source Guides][os-guide] and various contribution guides of large open source projects like [Atom][gh-atom-contrib], [React][react-contrib] and [Ruby on Rails][ruby-on-rails-contrib].
 
 [gh-atom-contrib]: https://github.com/atom/atom/blob/master/CONTRIBUTING.md
-[gh-branch-develop]: https://github.com/arcticicestudio/nord-docs/tree/develop
-[gh-changelog]: https://github.com/arcticicestudio/nord-docs/blob/develop/CHANGELOG.md
-[gh-coc]: https://github.com/arcticicestudio/nord-docs/blob/develop/CODE_OF_CONDUCT.md
+[gh-branch-master]: https://github.com/arcticicestudio/nord-docs/tree/master
+[gh-changelog]: https://github.com/arcticicestudio/nord-docs/blob/master/CHANGELOG.md
+[gh-coc]: https://github.com/arcticicestudio/nord-docs/blob/master/CODE_OF_CONDUCT.md
 [gh-gist]: https://gist.github.com
 [gh-issues]: https://github.com/arcticicestudio/nord-docs/issues
 [gh-issues-label-question]: https://github.com/arcticicestudio/nord-docs/labels/type-question
-[gh-issues-template-bug]: https://github.com/arcticicestudio/nord-docs/blob/develop/.github/ISSUE_TEMPLATE/bugs.md
-[gh-issues-template-enhancement]: https://github.com/arcticicestudio/nord-docs/blob/develop/.github/ISSUE_TEMPLATE/enhancement.md
-[gh-issues-template-pr]: https://github.com/arcticicestudio/nord-docs/blob/develop/.github/PULL_REQUEST_TEMPLATE.md
+[gh-issues-template-bug]: https://github.com/arcticicestudio/nord-docs/blob/master/.github/ISSUE_TEMPLATE/bugs.md
+[gh-issues-template-enhancement]: https://github.com/arcticicestudio/nord-docs/blob/master/.github/ISSUE_TEMPLATE/enhancement.md
+[gh-issues-template-pr]: https://github.com/arcticicestudio/nord-docs/blob/master/.github/PULL_REQUEST_TEMPLATE.md
 [gh-issues-templates]: https://github.com/arcticicestudio/nord-docs/issues/new/choose
-[gh-mailmap]: https://github.com/arcticicestudio/nord-docs/blob/develop/.mailmap
+[gh-mailmap]: https://github.com/arcticicestudio/nord-docs/blob/master/.mailmap
 [gh-nord]: https://github.com/arcticicestudio/nord
 [gh-nord-docs]: https://github.com/arcticicestudio/nord-docs
 [gh-pr]: https://github.com/arcticicestudio/nord-docs/pulls
 [gh-profile-repo-search]: https://github.com/arcticicestudio?&tab=repositories&q=nord
 [gh-releases-latest]: https://github.com/arcticicestudio/nord-docs/releases/latest
 [gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
-[gh-styleguide-git-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-git/develop/assets/styleguide-git-banner-typography-badge.svg?sanitize=true
+[gh-styleguide-git-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-git/master/assets/styleguide-git-banner-typography-badge.svg?sanitize=true
 [gh-styleguide-javascript]: https://github.com/arcticicestudio/styleguide-javascript
-[gh-styleguide-javascript-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/develop/assets/styleguide-javascript-banner-typography-badge.svg?sanitize=true
+[gh-styleguide-javascript-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/main/assets/styleguide-javascript-banner-typography-badge.svg?sanitize=true
 [gh-styleguide-markdown]: https://github.com/arcticicestudio/styleguide-markdown
-[gh-styleguide-markdown-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-markdown/develop/assets/styleguide-markdown-banner-typography-badge.svg?sanitize=true
+[gh-styleguide-markdown-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-markdown/main/assets/styleguide-markdown-banner-typography-badge.svg?sanitize=true
 [ghh-attach-file]: https://help.github.com/articles/file-attachments-on-issues-and-pull-requests
 [ghh-issue-keywords]: https://help.github.com/articles/closing-issues-using-keywords
 [ghh-markdown-code-blocks]: https://help.github.com/articles/basic-writing-and-formatting-syntax
 [git-docs-branching-workflows]: https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+[git-docs-internals-head]: https://git-scm.com/book/en/v2/Git-Internals-Git-References#ref_the_ref
 [gitflow]: http://nvie.com/posts/a-successful-git-branching-model
+[github-flow]: https://docs.github.com/en/get-started/quickstart/github-flow
 [nt-ports]: https://nordtheme.com/ports
 [os-guide]: https://opensource.guide
 [os-guide-contrib]: https://opensource.guide/how-to-contribute
