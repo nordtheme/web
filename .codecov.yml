@@ -12,7 +12,7 @@
 # - https://docs.codecov.io/docs/node
 
 codecov:
-  branch: develop
+  branch: master
 
 parsers:
   javascript:

@@ -1,6 +1,6 @@
 <!-- Click on the "Preview" tab to render the instructions in a more readable format -->
 
-> **Please read the [contribution guidelines](https://github.com/arcticicestudio/nord-docs/blob/develop/CONTRIBUTING.md) before filling out this issue template**.
+> **Please read the [contribution guidelines](https://github.com/arcticicestudio/nord-docs/blob/master/CONTRIBUTING.md) before filling out this issue template**.
 
 ## Prerequisites
 
@@ -10,8 +10,8 @@ Please do your best to provide as much information as possible and use a clear a
 
 - **Ensure the pull request has not already been submitted by using the [GitHub Issue search](https://github.com/arcticicestudio/nord-docs/issues)** — check if this enhancement or bug fix has already been suggested. If it has **and the pull request is still open**, add your additions as comment or [suggest a change](https://help.github.com/articles/incorporating-feedback-in-your-pull-request/#applying-a-suggested-change) to the existing pull request instead of opening a new one. If you find a closed pull request that seems to be similar to this one, include a link to the original pull request in the [metadata head](#metadata-head) section of this new pull request.
 - **Ensure your contribution belongs to the correct [main or port project repository](https://github.com/arcticicestudio?&tab=repositories&q=nord).**
-- **Ensure to adhere to the [pull request contribution guidelines](https://github.com/arcticicestudio/nord-docs/blob/develop/CONTRIBUTING.md#pull-requests)**, especially the one for tests and documentations.
-- **Check if the enhancement has already been implemented or bug already fixed** — use the [latest version](https://github.com/arcticicestudio/nord-docs/releases/latest) and [`develop`](https://github.com/arcticicestudio/nord-docs/tree/develop) branch to ensure that the enhancement or bug fix has not already been added.
+- **Ensure to adhere to the [pull request contribution guidelines](https://github.com/arcticicestudio/nord-docs/blob/master/CONTRIBUTING.md#pull-requests)**, especially the one for tests and documentations.
+- **Check if the enhancement has already been implemented or bug already fixed** — use the [latest version](https://github.com/arcticicestudio/nord-docs/releases/latest) and [`master`](https://github.com/arcticicestudio/nord-docs/tree/master) branch to ensure that the enhancement or bug fix has not already been added.
 
 ## Metadata Head
 
