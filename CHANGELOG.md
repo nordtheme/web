@@ -1,4 +1,4 @@
-<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/master/assets/images/repository-hero.svg?sanitize=true"/></a></p>
+<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/main/assets/images/repository-hero.svg?sanitize=true"/></a></p>
 
 <p align="center"><a href="https://github.com/arcticicestudio/nord-docs/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/nord-docs.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
@@ -601,7 +601,7 @@ Gatsby and all official plugins have been updated to the latest versions. This c
 
 ![Release Date: 2019-03-16](https://img.shields.io/badge/Release_Date-2019--03--16-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/13) [![Milestone](https://img.shields.io/badge/Milestone-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/11)
 
-<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/master/assets/images/nord/repository-hero.svg?sanitize=true" width="60%" /></a></p>
+<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/main/assets/images/nord/repository-hero.svg?sanitize=true" width="60%" /></a></p>
 
 <p align="center"><strong>Finally emerged from the snowstorm: Nord Docs initially launched!</strong></p>
 
@@ -638,7 +638,7 @@ Please see the [corresponding issue in the Nord repository][nord#112] to get an 
 
 ![Release Date: 2019-03-10](https://img.shields.io/badge/Release_Date-2019--03--10-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/12) [![Milestone](https://img.shields.io/badge/Milestone-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/10)
 
-<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/master/src/assets/images/metadata-banner.svg?sanitize=true" width="60%"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/main/src/assets/images/metadata-banner.svg?sanitize=true" width="60%"/></p>
 
 <p align="center"><strong>Initial website launch ahead!</strong></p>
 
@@ -679,7 +679,7 @@ More details are provided by the [official MDX][mdx] and [gh-gatsby-mdx][] websi
 
 ### Image Processing
 
-To get the [best performance and quality for images][gatsby-docs-images] Gatsby's awesome support for the [high performance Node.js image processing library “Sharp“][gh-lovell/sharp] is used through [`gatsby-plugin-sharp`][gh-gatsby-p-sharp], [`gatsby-transformer-sharp`][gh-gatsby-t-sharp] and [gatsby-image][gh-gatsby-image].
+To get the [best performance and quality for images][gatsby-docs-images] Gatsby's awesome support for the [high performance Node.js image processing library “Sharp“][gh-lovell/sharp] is used through [`gatsby-plugin-sharp`][gh-gatsby-p-sharp], [`gatsby-transformer-sharp`][gh-gatsby-t-sharp] and [gatsby-image][gh-gatsby-plugin-image].
 
 To automatically process all images the transformer provides GraphQL query fragments like `GatsbyImageSharpFluid`. They are used within custom fragments that have been implemented to fit the project structure.
 
@@ -1764,7 +1764,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [dotenv]: https://github.com/motdotla/dotenv
 [editorconfig]: https://editorconfig.org
 [eslint-docs-auto-fix]: https://eslint.org/docs/user-guide/command-line-interface#fixing-problems
-[eslint-p-import/no-extraneous-dependencies]: https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+[eslint-p-import/no-extraneous-dependencies]: https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md
 [eslint-p-react/jsx-no-bind]: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
 [eslint]: https://eslint.org
 [eva-icons]: https://akveo.github.io/eva-icons
@@ -1841,7 +1841,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
 [gh-date-fns]: https://github.com/date-fns/date-fns
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
-[gh-gatsby-image]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image
+[gh-gatsby-plugin-image]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-image
 [gh-gatsby-mdx]: https://github.com/ChristopherBiscardi/gatsby-mdx
 [gh-gatsby-p-lodash]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-lodash
 [gh-gatsby-p-sharp]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sharp
@@ -2011,7 +2011,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 [gh-55-diff-r49]: https://github.com/arcticicestudio/nord-docs/pull/55/files#diff-90a2aa45c339ce4720a7fbbd23c65e3eR49
 [gh-jsc-matcher]: https://github.com/styled-components/jest-styled-components#tohavestylerule
-[gh-svgr-wpl]: https://github.com/smooth-code/svgr/tree/master/packages/webpack
+[gh-svgr-wpl]: https://github.com/smooth-code/svgr/tree/main/packages/webpack
 [npm-gp-svgr]: https://www.npmjs.com/package/gatsby-plugin-svgr
 
 <!-- v0.4.0 -->
@@ -2020,7 +2020,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-gatsby-p-gtag]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-google-gtag
 [gh-gatsby-p-manifest]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-manifest
 [gh-gatsby-p-offline]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline
-[gh-gatsby-p-robots-txt]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-robots-txt
+[gh-gatsby-p-robots-txt]: https://github.com/mdreizin/gatsby-plugin-robots-txt
 [gh-gatsby-p-sitemap]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sitemap
 [gsup-ga-anonip]: https://support.google.com/analytics/answer/2763052
 [npm-gatsby-plugin-manifest]: https://www.npmjs.com/package/gatsby-plugin-manifest

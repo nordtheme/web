@@ -9,7 +9,7 @@
 #
 # References:
 # - https://github.com/svg/svgo
-# - https://github.com/svg/svgo/blob/master/.svgo.yml
+# - https://github.com/svg/svgo/blob/main/.svgo.yml
 
 multipass: true
 js2svg:

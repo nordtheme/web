@@ -56,6 +56,6 @@ Thanks for the inspirations and attributions to GitHub's [Open Source Guides][os
 
 [contrib-cov-1.4]: https://contributor-covenant.org/version/1/4/code-of-conduct
 [hoodie-coc]: http://hood.ie/code-of-conduct
-[mailmap]: https://github.com/arcticicestudio/nord-docs/blob/master/.mailmap
+[mailmap]: https://github.com/arcticicestudio/nord-docs/blob/main/.mailmap
 [oss-guides]: https://opensource.guide
 [ref-gender-neutral-docs]: https://modelviewculture.com/pieces/gendered-language-feature-or-bug-in-software-documentation
