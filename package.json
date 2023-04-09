@@ -1,43 +1,48 @@
 {
-  "name": "nord-docs",
-  "title": "Nord Docs",
+  "name": "@nordtheme/web",
   "version": "0.23.0",
   "description": "The official Nord website and documentation",
   "author": {
-    "name": "Arctic Ice Studio",
-    "email": "development@arcticicestudio.com",
-    "url": "https://www.arcticicestudio.com"
+    "name": "Sven Greb",
+    "email": "development@svengreb.de",
+    "url": "https://www.svengreb.de"
   },
   "homepage": "https://www.nordtheme.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arcticicestudio/nord-docs.git"
+    "url": "git+https://github.com/nordtheme/web.git"
   },
   "bugs": {
-    "url": "https://github.com/arcticicestudio/nord-docs/issues"
+    "url": "https://github.com/nordtheme/web/issues"
   },
-  "private": true,
   "license": "MIT",
+  "private": true,
+  "engines": {
+    "npm": ">=7.7"
+  },
   "keywords": [
     "nord",
     "website",
     "documentation",
     "react",
-    "arcticicestudio"
+    "svengreb"
   ],
   "scripts": {
-    "build": "npm-run-all clean build:gatsby",
+    "build": "run-s clean build:gatsby",
     "build:gatsby": "gatsby build",
     "clean": "del .cache/ build/ public/",
     "dev": "gatsby develop",
-    "dev:fresh": "npm-run-all clean dev",
+    "dev:fresh": "run-s clean dev",
     "dev:local": "gatsby develop -H 0.0.0.0",
-    "format": "npm-run-all format:pretty format:fix",
+    "format": "run-s format:fix format:pretty",
     "format:fix": "eslint --fix --ext .js,.jsx .",
-    "format:pretty": "prettier --write \"./**/*.{js,json,jsx,md,mdx,yml}\"",
-    "lint": "npm-run-all lint:*",
+    "format:pretty": "prettier --ignore-unknown --no-editorconfig --write . .husky/*",
+    "lint": "run-s lint:js lint:md lint:pretty",
+    "lint:ci": "run-s lint:md lint:ci:*",
+    "lint:ci:pretty": "prettier --check --ignore-unknown --loglevel silent --no-editorconfig --no-error-on-unmatched-pattern . .husky/*",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark --no-stdout . \".github/**/*.md\"",
+    "lint:pretty": "prettier --check --ignore-unknown --no-editorconfig . .husky/* src/ test",
     "report:js:junit": "eslint --ext .js,.jsx --format junit -o ./build/reports/junit/eslint.xml .",
     "serve": "gatsby serve",
     "test": "jest",
@@ -47,12 +52,14 @@
   },
   "devDependencies": {
     "@arcticicestudio/eslint-config": ">=0.8.0 <1.0.0",
+    "@arcticicestudio/remark-preset-lint": ">=0.4.0 <1.0.0",
     "@babel/core": "7.6.4",
     "@babel/plugin-proposal-class-properties": "7.5.5",
     "@babel/plugin-proposal-export-default-from": "7.5.2",
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.4.4",
     "@babel/plugin-proposal-optional-chaining": "7.6.0",
     "@mdx-js/mdx": "1.5.1",
+    "@prettier/plugin-xml": "2.2.0",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "4.1.2",
     "@testing-library/react": "9.3.0",
@@ -63,7 +70,7 @@
     "babel-plugin-styled-components": "1.10.6",
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "babel-preset-gatsby": "0.2.18",
-    "del-cli": "3.0.0",
+    "del-cli": "5.0.0",
     "eslint": "6.5.1",
     "eslint-config-prettier": "6.4.0",
     "eslint-import-resolver-alias": "1.1.2",
@@ -76,19 +83,19 @@
     "eslint-plugin-react-hooks": "2.1.2",
     "git-revision-webpack-plugin": "3.0.4",
     "glob": "7.1.4",
-    "husky": "3.0.9",
+    "husky": "8.0.3",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
     "jest-junit": "8.0.0",
     "jest-styled-components": "6.3.3",
-    "lint-staged": "9.4.2",
+    "lint-staged": "13.2.1",
     "npm-run-all": "4.1.5",
-    "prettier": "1.18.2",
+    "prettier": "2.8.7",
+    "prettier-plugin-sh": "0.12.8",
     "rehype-slug": "2.0.3",
     "remark-breaks": "1.0.3",
-    "remark-cli": "7.0.0",
+    "remark-cli": "11.0.0",
     "remark-github": "8.0.0",
-    "remark-preset-lint-arcticicestudio": ">=0.3.0 <1.0.0",
     "webpack-bundle-analyzer": "3.5.2"
   },
   "dependencies": {

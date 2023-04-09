@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -25,18 +21,12 @@ import { Section } from "../../../shared";
 const SECTION_ID = sectionIdFor(ROUTE_PORTS_VISUAL_STUDIO_CODE, 5);
 
 /**
- * The component that represents the setup section for the landing page of the
- * "Nord Visual Studio Code" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * The component that represents the setup section for the landing page of the "Nord Visual Studio Code" port project.
  * @since 0.15.0
  */
 const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { extensionMarketplaceUrl, gitHubRepositoryUrl } = portMetadata.find(
-    port => port.name === "nord-visual-studio-code"
-  );
+  const { extensionMarketplaceUrl, gitHubRepositoryUrl } = portMetadata.find((port) => port.name === "visual-studio-code");
 
   return (
     <Section id={SECTION_ID} variant="secondary">
@@ -45,8 +35,8 @@ const SectionSetup = ({ assets }) => {
           <Text verticalOnly>
             <Headline>Installation and updates with one click.</Headline>
             <Subline>
-              Install Nord from the <Link href={extensionMarketplaceUrl}>official extension marketplace</Link> with one
-              click including automatic updates to always use the latest Nord version.
+              Install Nord from the <Link href={extensionMarketplaceUrl}>official extension marketplace</Link> with one click including automatic updates to
+              always use the latest Nord version.
             </Subline>
             <Actions>
               <Button to={extensionMarketplaceUrl} variant="primary">
@@ -61,16 +51,9 @@ const SectionSetup = ({ assets }) => {
             </Actions>
           </Text>
           <Visualization>
-            <Image
-              alt="Screenshot showing the builtin extension marketplace view"
-              dropShadow
-              fluid={assets.images["ui-extension-marketplace.png"]}
-              rounded
-            >
+            <Image alt="Screenshot showing the builtin extension marketplace view" dropShadow fluid={assets.images["ui-extension-marketplace.png"]} rounded>
               <span>
-                Builtin{" "}
-                <Link href="https://code.visualstudio.com/docs/editor/extension-gallery">extension marketplace</Link>{" "}
-                view.
+                Builtin <Link href="https://code.visualstudio.com/docs/editor/extension-gallery">extension marketplace</Link> view.
               </span>
             </Image>
           </Visualization>

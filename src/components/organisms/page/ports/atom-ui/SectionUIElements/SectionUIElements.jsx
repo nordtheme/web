@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,9 +20,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_ATOM_UI, 2);
 
 /**
  * The component that represents the UI elements section for the landing page of the "Nord Atom UI" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.19.0
  */
 const SectionUIElements = ({ assets }) => (
@@ -35,22 +28,12 @@ const SectionUIElements = ({ assets }) => (
       <FeatureDuo columnRatio={[1, 2]}>
         <Text>
           <Headline>Uniform design with beautiful UI elements.</Headline>
-          <Subline>
-            The themed UI elements provide a fluid and unobtrusive transition from the code editor to the IDE.
-          </Subline>
+          <Subline>The themed UI elements provide a fluid and unobtrusive transition from the code editor to the IDE.</Subline>
         </Text>
         <Visualization>
-          <Image
-            alt="Screenshot showing the floating fuzzy finder modal"
-            dropShadow
-            fluid={assets.images["package-core-fuzzy-finder.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing the floating fuzzy finder modal" dropShadow fluid={assets.images["package-core-fuzzy-finder.png"]} rounded>
             <span>
-              The floating{" "}
-              <Link href="https://flight-manual.atom.io/getting-started/sections/atom-basics/#opening-a-file-in-a-project">
-                fuzzy finder
-              </Link>{" "}
+              The floating <Link href="https://flight-manual.atom.io/getting-started/sections/atom-basics/#opening-a-file-in-a-project">fuzzy finder</Link>{" "}
               modal.
             </span>
           </Image>
@@ -58,22 +41,14 @@ const SectionUIElements = ({ assets }) => (
       </FeatureDuo>
       <FeatureDuo columnRatio={[2, 1]}>
         <Visualization>
-          <Image
-            alt="Screenshot showing basic UI components of the settings views."
-            dropShadow
-            fluid={assets.images["settings-components.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing basic UI components of the settings views." dropShadow fluid={assets.images["settings-components.png"]} rounded>
             <span>Basic UI components of the settings views.</span>
           </Image>
         </Visualization>
         <Text>
           <Subline>
             Sane styles for basic UI components used in Atom&apos;s core panels and panes like the{" "}
-            <Link href="https://flight-manual.atom.io/getting-started/sections/atom-basics/#settings-and-preferences">
-              settings view
-            </Link>
-            .
+            <Link href="https://flight-manual.atom.io/getting-started/sections/atom-basics/#settings-and-preferences">settings view</Link>.
           </Subline>
         </Text>
       </FeatureDuo>

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,9 +20,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_JETBRAINS, 2);
 
 /**
  * The component that represents the syntax section for the landing page of the "Nord JetBrains" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.12.0
  */
 const SectionSyntax = ({ assets }) => (
@@ -48,16 +41,15 @@ const SectionSyntax = ({ assets }) => (
         <Text>
           <Headline>Beautiful code to keep focused.</Headline>
           <Subline>
-            The editor color scheme supports a wide range of programming languages — From bundled plugins of both
-            community and ultimate editions up to most popular third-party plugins.
+            The editor color scheme supports a wide range of programming languages — From bundled plugins of both community and ultimate editions up to most
+            popular third-party plugins.
           </Subline>
         </Text>
       </FeatureDuo>
       <FeatureDuo columnRatio={[1, 2]}>
         <Text>
           <Subline>
-            Supportive <i>code surfing</i> features like highlighting of bracket pairs are designed to stand out well
-            from the actual code.
+            Supportive <i>code surfing</i> features like highlighting of bracket pairs are designed to stand out well from the actual code.
           </Subline>
         </Text>
         <Visualization>
@@ -84,8 +76,8 @@ const SectionSyntax = ({ assets }) => (
         </Visualization>
         <Text>
           <Subline>
-            Comments and source code documentations are intentionally inconspicuous and less disturbing in order to keep
-            the focus on the important elements: the source code.
+            Comments and source code documentations are intentionally inconspicuous and less disturbing in order to keep the focus on the important elements:
+            the source code.
           </Subline>
         </Text>
       </FeatureDuo>

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import styled from "styled-components";
@@ -12,17 +8,14 @@ import { readableColor } from "polished";
 
 import { themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
 
-const colorThemed = color =>
+const colorThemed = (color) =>
   themedMode({
     [MODE_BRIGHT_SNOW_FLURRY]: readableColor(color),
-    [MODE_DARK_NIGHT_FROST]: readableColor(color)
+    [MODE_DARK_NIGHT_FROST]: readableColor(color),
   });
 
 /**
  * A component that represents a dot of an card item.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.7.0
  */
 const CardItemDot = styled.div`

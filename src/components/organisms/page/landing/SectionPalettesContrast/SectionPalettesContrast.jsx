@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -16,14 +12,7 @@ import ColorPaletteCard from "atoms/core/ColorPaletteCard";
 import FeatureDuo, { Actions, Headline, Subline, Text, Visualization } from "molecules/page/shared/FeatureDuo";
 import { ROUTE_DOCS, ROUTE_ROOT } from "config/routes/mappings";
 import { sectionIdFor } from "utils";
-import {
-  colors,
-  palettes,
-  themedMode,
-  THEME_KEY_MODE,
-  MODE_BRIGHT_SNOW_FLURRY,
-  MODE_DARK_NIGHT_FROST
-} from "styles/theme";
+import { colors, palettes, themedMode, THEME_KEY_MODE, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
 
 import { DecorationCanvas, Section } from "../../shared";
 import { ColorPaletteWrapper } from "../shared";
@@ -35,14 +24,11 @@ const pinnedThemeMode = { [THEME_KEY_MODE]: MODE_DARK_NIGHT_FROST };
 
 const pinnedThemeBackgroundColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.background.base[MODE_DARK_NIGHT_FROST],
-  [MODE_DARK_NIGHT_FROST]: colors.background.base[MODE_DARK_NIGHT_FROST]
+  [MODE_DARK_NIGHT_FROST]: colors.background.base[MODE_DARK_NIGHT_FROST],
 });
 
 /**
  * The component that represents the color palette contrast section of the landing page.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
  */
 const SectionPalettesContrast = () => (
@@ -62,8 +48,7 @@ const SectionPalettesContrast = () => (
           <Text>
             <Headline>Beautiful and harmonic color contrasts.</Headline>
             <Subline>
-              Inspired by the beauty of the arctic, the colors reflect the cold, yet harmonious world of ice and the
-              colorfulness of the Aurora Borealis.
+              Inspired by the beauty of the arctic, the colors reflect the cold, yet harmonious world of ice and the colorfulness of the Aurora Borealis.
             </Subline>
             <Actions>
               <Button ghost outlined quiet to={ROUTE_DOCS} variant="primary">

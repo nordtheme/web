@@ -1,25 +1,13 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides the Nord colors until the official library is available.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.2.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 /**
  * The Nord colors based on version `0.2.0`.
- *
  * @type {object}
- * @see https://github.com/arcticicestudio/nord/releases/tag/v0.2.0
  * @since 0.2.0
+ * @see https://github.com/nordtheme/nord/releases/tag/v0.2.0
  */
 const nord = {
   nord0: "#2e3440",
@@ -37,7 +25,11 @@ const nord = {
   nord12: "#d08770",
   nord13: "#ebcb8b",
   nord14: "#a3be8c",
-  nord15: "#b48ead"
+  nord15: "#b48ead",
 };
 
+/**
+ * Provides the Nord colors until the official library is available.
+ * @since 0.2.0
+ */
 export default nord;

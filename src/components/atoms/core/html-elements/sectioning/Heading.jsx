@@ -1,17 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import PropTypes from "prop-types";
@@ -74,11 +63,11 @@ const H6 = styled.h6`
 `;
 
 const propTypes = {
-  hasBottomMargin: PropTypes.bool
+  hasBottomMargin: PropTypes.bool,
 };
 
 const defaultProps = {
-  hasBottomMargin: false
+  hasBottomMargin: false,
 };
 
 H1.propTypes = propTypes;
@@ -99,4 +88,8 @@ H5.defaultProps = defaultProps;
 H6.propTypes = propTypes;
 H6.defaultProps = defaultProps;
 
+/**
+ * @since 0.3.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+ */
 export { H1, H2, H3, H4, H5, H6 };

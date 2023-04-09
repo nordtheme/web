@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -25,9 +21,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_VIM, 5);
 
 /**
  * The component that represents the theme configuration section for the landing page of the "Nord Vim" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.13.0
  */
 const SectionConfigurations = ({ assets }) => (
@@ -41,11 +34,8 @@ const SectionConfigurations = ({ assets }) => (
             <Link to={`${ROUTE_DOCS_PORTS_VIM_CONFIGURATION}#uniform-diff-background`}>
               uniform <em>diff</em> backgrounds
             </Link>{" "}
-            or{" "}
-            <Link to={`${ROUTE_DOCS_PORTS_VIM_CONFIGURATION}#bold-vertical-split-lines`}>
-              bold vertical split lines
-            </Link>{" "}
-            allow to customize the theme to match your personal preferences.
+            or <Link to={`${ROUTE_DOCS_PORTS_VIM_CONFIGURATION}#bold-vertical-split-lines`}>bold vertical split lines</Link> allow to customize the theme to
+            match your personal preferences.
           </Subline>
           <Actions>
             <Button ghost href={ROUTE_DOCS_PORTS_VIM_CONFIGURATION} outlined quiet variant="primary">
@@ -100,9 +90,8 @@ const SectionConfigurations = ({ assets }) => (
         </Visualization>
         <Text>
           <Subline>
-            Adjust UI elements like{" "}
-            <Link to={`${ROUTE_DOCS_PORTS_VIM_CONFIGURATION}#bold-vertical-split-lines`}>split lines</Link> to adjust
-            Vims overall appearance.
+            Adjust UI elements like <Link to={`${ROUTE_DOCS_PORTS_VIM_CONFIGURATION}#bold-vertical-split-lines`}>split lines</Link> to adjust Vims overall
+            appearance.
           </Subline>
         </Text>
       </FeatureDuo>
@@ -116,9 +105,7 @@ const SectionConfigurations = ({ assets }) => (
             rounded
           >
             <span>
-              Enabled{" "}
-              <Link to={`${ROUTE_DOCS_PORTS_VIM_CONFIGURATION}#bold-vertical-split-lines`}>bold split lines</Link>{" "}
-              configuration.
+              Enabled <Link to={`${ROUTE_DOCS_PORTS_VIM_CONFIGURATION}#bold-vertical-split-lines`}>bold split lines</Link> configuration.
             </span>
           </Image>
         </Visualization>

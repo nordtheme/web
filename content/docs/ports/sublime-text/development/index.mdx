@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
@@ -9,7 +14,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Package Development",
-  subline: "Learn how to customize the theme to fit your needs, preview changes and bundle it as package."
+  subline: "Learn how to customize the theme to fit your needs, preview changes and bundle it as package.",
 };
 
 <ShrinkedWidth value={25}>
@@ -37,7 +42,7 @@ Download and install [Sublime Text] with a minimal version of [3.1.0 Build 3170]
 Clone the [_Nord Sublime Text_ repository from GitHub][gh-repo] to your [local `Packages/User` directory][sbt-docs-pkgs] located in the [settings data path][sbt-docs-settings].
 
 ```sh
-git clone https://github.com/arcticicestudio/nord-sublime-text.git
+git clone https://github.com/nordtheme/sublime-text.git
 ```
 
 <Banner title={<>Package directories take precedence over <Code>`.sublime-package`</Code> files!</>} variant="warn">
@@ -48,17 +53,12 @@ When Nord has also been installed as `.sublime-package` [ZIP][wiki-zip] archive 
 
 To get the theme without [Git][], download the repository as [ZIP][wiki-zip] archive file from the GitHub or click on the download button below.
 
-<Button href="https://github.com/arcticicestudio/nord-sublime-text/archive/develop.zip">Download</Button>
+<Button href="https://github.com/nordtheme/sublime-text/archive/develop.zip">Download</Button>
 
 Afterwards extract the archive to your [local `Packages/User` directory][sbt-docs-pkgs] located in the [settings data path][sbt-docs-settings].
 
-<Image
-  alt="Screenshot showing the GitHub repository web UI to download the project repository"
-  fillSize={60}
-  fluid={props.images["github-clone.png"]}
->
-  GitHub Web UI to download the theme repository as{" "}
-  <Link href="https://en.wikipedia.org/wiki/Zip_(file_format)">ZIP</Link> file from GitHub.
+<Image alt="Screenshot showing the GitHub repository web UI to download the project repository" fillSize={60} fluid={props.images["github-clone.png"]}>
+  GitHub Web UI to download the theme repository as <Link href="https://en.wikipedia.org/wiki/Zip_(file_format)">ZIP</Link> file from GitHub.
 </Image>
 
 Both methods will use the `develop` branch to work with the latest development state.
@@ -79,9 +79,9 @@ Read the theme documentation about <Link to={`${ROUTE_DOCS_PORTS_SUBLIME_TEXT_IN
 
 </ShrinkedWidth>
 
-[gh-repo]: https://github.com/arcticicestudio/nord-sublime-text
-[gh-tree-color_scheme]: https://github.com/arcticicestudio/nord-sublime-text/blob/develop/Nord.sublime-color-scheme
-[gh-tree-skins]: https://github.com/arcticicestudio/nord-sublime-text/blob/develop/Nord.skins
+[gh-repo]: https://github.com/nordtheme/sublime-text
+[gh-tree-color_scheme]: https://github.com/nordtheme/sublime-text/blob/develop/Nord.sublime-color-scheme
+[gh-tree-skins]: https://github.com/nordtheme/sublime-text/blob/develop/Nord.skins
 [git]: https://git-scm.com
 [sbt-blog-announce-v3.1]: https://www.sublimetext.com/blog/articles/sublime-text-3-point-1
 [sbt-docs-pkgs]: https://www.sublimetext.com/docs/3/packages.html

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,9 +20,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_SUBLIME_TEXT, 2);
 
 /**
  * The component that represents the syntax section for the landing page of the "Nord Sublime Text" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.20.0
  */
 const SectionSyntax = ({ assets }) => (
@@ -34,12 +27,7 @@ const SectionSyntax = ({ assets }) => (
     <Content centered>
       <FeatureDuo columnRatio={[2, 1]}>
         <Visualization>
-          <Image
-            alt="Screenshot showing a Go function"
-            dropShadow
-            fluid={assets.images["editor-overview-go.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing a Go function" dropShadow fluid={assets.images["editor-overview-go.png"]} rounded>
             <span>
               Syntax highlighting for <Link href="https://golang.org">Go</Link>.
             </span>
@@ -48,20 +36,14 @@ const SectionSyntax = ({ assets }) => (
         <Text>
           <Headline>Beautiful code to keep focused.</Headline>
           <Subline>
-            The editor color scheme supports a wide range of programming languages — From bundled definitions up to many
-            popular third-party syntax packages.
+            The editor color scheme supports a wide range of programming languages — From bundled definitions up to many popular third-party syntax packages.
           </Subline>
         </Text>
       </FeatureDuo>
       <FeatureDuo columnRatio={[1, 2]}>
         <Text />
         <Visualization>
-          <Image
-            alt="Screenshot showing a JavaScript React Hook function"
-            dropShadow
-            fluid={assets.images["editor-syntax-javascript-react-hook.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing a JavaScript React Hook function" dropShadow fluid={assets.images["editor-syntax-javascript-react-hook.png"]} rounded>
             <span>
               JavaScript with a <Link href="https://reactjs.org/docs/hooks-intro">React Hook</Link> for{" "}
               <Link href="https://www.react-spring.io">React Spring</Link> animations.
@@ -84,16 +66,15 @@ const SectionSyntax = ({ assets }) => (
         </Visualization>
         <Text>
           <Subline>
-            Supportive <i>code surfing</i> features like highlighting of bracket pairs are designed to stand out well
-            from the actual code.
+            Supportive <i>code surfing</i> features like highlighting of bracket pairs are designed to stand out well from the actual code.
           </Subline>
         </Text>
       </FeatureDuo>
       <FeatureDuo columnRatio={[1, 2]}>
         <Text>
           <Subline>
-            Comments and reference documentations are intentionally inconspicuous and less disturbing in order to keep
-            the focus on the important elements: the source code.
+            Comments and reference documentations are intentionally inconspicuous and less disturbing in order to keep the focus on the important elements: the
+            source code.
           </Subline>
         </Text>
         <Visualization>

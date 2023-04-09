@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,9 +20,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_TMUX, 1);
 
 /**
  * The component that represents the introduction section for the landing page of the "Nord tmux" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.16.0
  */
 const SectionIntroduction = ({ assets }) => (
@@ -45,20 +38,14 @@ const SectionIntroduction = ({ assets }) => (
             rounded
           >
             <span>
-              Fluidly merged UI of tmux and the <Link to={ROUTE_PORTS_VIM}>Nord Vim</Link> theme with a{" "}
-              <Link href="https://golang.org">Go</Link> function.
+              Fluidly merged UI of tmux and the <Link to={ROUTE_PORTS_VIM}>Nord Vim</Link> theme with a <Link href="https://golang.org">Go</Link> function.
             </span>
           </Image>
         </Visualization>
       </FeatureDuo>
       <FeatureDuo columnRatio={[2, 1]}>
         <Visualization>
-          <Image
-            alt="Screenshot showing a fluidly merged UI of tmux with gotop."
-            dropShadow
-            fluid={assets.images["ui-fluid-appearance-gotop.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing a fluidly merged UI of tmux with gotop." dropShadow fluid={assets.images["ui-fluid-appearance-gotop.png"]} rounded>
             <span>
               Fluidly merged UI of tmux with <Link href="https://github.com/cjbassi/gotop">gotop</Link>.
             </span>
@@ -66,8 +53,7 @@ const SectionIntroduction = ({ assets }) => (
         </Visualization>
         <Text>
           <Subline>
-            Fits to many popular terminal based applications like{" "}
-            <Link href="https://github.com/cjbassi/gotop">gotop</Link> …
+            Fits to many popular terminal based applications like <Link href="https://github.com/cjbassi/gotop">gotop</Link> …
           </Subline>
         </Text>
       </FeatureDuo>
@@ -78,12 +64,7 @@ const SectionIntroduction = ({ assets }) => (
           </Subline>
         </Text>
         <Visualization>
-          <Image
-            alt="Screenshot showing a fluidly merged UI of tmux with htop."
-            dropShadow
-            fluid={assets.images["ui-fluid-appearance-htop.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing a fluidly merged UI of tmux with htop." dropShadow fluid={assets.images["ui-fluid-appearance-htop.png"]} rounded>
             <span>
               Fluidly merged UI of tmux with <Link href="https://hisham.hm/htop">htop</Link>.
             </span>

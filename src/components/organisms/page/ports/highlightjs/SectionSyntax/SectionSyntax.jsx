@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -25,9 +21,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_HIGHLIGHTJS, 1);
 
 /**
  * The component that represents the syntax section for the landing page of the "Nord highlight.js" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.23.0
  */
 const SectionSyntax = ({ assets }) => (
@@ -35,12 +28,7 @@ const SectionSyntax = ({ assets }) => (
     <Content centered>
       <FeatureDuo columnRatio={[2, 1]}>
         <Visualization>
-          <Image
-            alt="Screenshot showing a Go function with corresponding comments"
-            dropShadow
-            fluid={assets.images["go-comments.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing a Go function with corresponding comments" dropShadow fluid={assets.images["go-comments.png"]} rounded>
             <span>
               Syntax highlighting for{" "}
               <Link href="https://golang.org" target="_blank">
@@ -64,12 +52,7 @@ const SectionSyntax = ({ assets }) => (
       <FeatureDuo columnRatio={[1, 2]}>
         <Text />
         <Visualization>
-          <Image
-            alt="Screenshot showing a JavaScript React Hook function"
-            dropShadow
-            fluid={assets.images["javascript-react-hook.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing a JavaScript React Hook function" dropShadow fluid={assets.images["javascript-react-hook.png"]} rounded>
             <span>
               JavaScript with a{" "}
               <Link href="https://reactjs.org/docs/hooks-intro" target="_blank">
@@ -86,13 +69,7 @@ const SectionSyntax = ({ assets }) => (
       </FeatureDuo>
       <FeatureDuo columnRatio={[2, 1]}>
         <Visualization>
-          <Image
-            alt="Screenshot showing a simple Go function"
-            dropShadow
-            fillSize={80}
-            fluid={assets.images["go-function.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing a simple Go function" dropShadow fillSize={80} fluid={assets.images["go-function.png"]} rounded>
             <span>
               A simple{" "}
               <Link href="https://golang.org" target="_blank">
@@ -107,12 +84,7 @@ const SectionSyntax = ({ assets }) => (
       <FeatureDuo columnRatio={[1, 2]}>
         <Text />
         <Visualization>
-          <Image
-            alt="Screenshot showing a React component with forwarded ref export"
-            dropShadow
-            fluid={assets.images["javascript-react-jsx.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing a React component with forwarded ref export" dropShadow fluid={assets.images["javascript-react-jsx.png"]} rounded>
             <span>
               <Link href="https://reactjs.org" target="_blank">
                 React

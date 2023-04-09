@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -16,12 +12,9 @@ const GLEAM_GRADIENT_ID = "frost-wind-gleam-gradient";
 
 /**
  * An SVG vector component that renders an animated, gleaming frost wind.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
  */
-const GleamingFrostWind = props => (
+const GleamingFrostWind = (props) => (
   <svg {...props} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <linearGradient id={GLEAM_GRADIENT_ID} x2="100%" y1="25%" y2="25%">
       <stop offset="0%" stopColor={rgba(nord.nord8, 0.9)}>

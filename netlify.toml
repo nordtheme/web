@@ -1,11 +1,7 @@
-# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
-#
-# Project:    Nord Docs
-# Repository: https://github.com/arcticicestudio/nord-docs
-# License:    MIT
+# Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+# This source code is licensed under the MIT license found in the license file.
 
-# Configuration for Netlify.
+# Configurations for Netlify.
 #
 # The project uses sensitive/secret data through git-crypt that are made available as environment variables.
 # Unfortunately Netlify currently doesn't provide a way to customize the Docker container configuration so that it is
@@ -16,16 +12,15 @@
 #
 # > $NORD_DOCS_GOOGLE_UNIVERSAL_ANALYTICS_TRACKING_ID
 # Stores the "Google Universal Analytics" tracking ID.
-# @since 0.6.0
 #
 # > $NORD_DOCS_GITHUB_API_TOKEN_READONLY_PUBLIC
 # Stores the read-only token for the GitHub GraphQL and REST API to fetch public data.
-# @since 0.9.0
 #
-# @see https://www.netlify.com/docs/netlify-toml-reference
-# @see https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
-# @see https://github.com/AGWA/git-crypt
-# @see https://www.gnupg.org/documentation
+# References:
+#   1. https://www.netlify.com/docs/netlify-toml-reference
+#   2. https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
+#   3. https://github.com/AGWA/git-crypt
+#   4. https://www.gnupg.org/documentation
 
 [build]
   command = "npm run build"

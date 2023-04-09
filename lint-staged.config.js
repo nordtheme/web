@@ -1,21 +1,15 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 /**
- * @file The lint-staged configuration.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * Configurations for lint-staged.
  * @see https://github.com/okonet/lint-staged#configuration
  */
-
 module.exports = {
-  "*.{js,json,jsx,md,mdx,yml}": "prettier --list-different",
-  "*.{js,jsx}": "eslint --ext .js,.jsx",
-  "*.md": "remark --no-stdout"
+  "*.{json,mdx,svg,yaml,yml}": "prettier --check --ignore-unknown --no-editorconfig",
+  "*.{js,jsx}": ["eslint --ext .js,.jsx", "prettier --check --ignore-unknown --no-editorconfig"],
+  ".husky/pre-*": "prettier --check --ignore-unknown --no-editorconfig",
+  "*.md": ["remark --no-stdout", "prettier --check --ignore-unknown --no-editorconfig"],
 };

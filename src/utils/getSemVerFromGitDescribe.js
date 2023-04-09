@@ -1,31 +1,16 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides utility functions to get Git SemVer version information.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://git-scm.com/docs/git-describe
- * @see https://semver.org
- * @since 0.5.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import semver from "semver";
 
 /**
  * Returns the channel based on the passed build metadata and pre-release version.
- *
  * @private
  * @method getVersionChannel
  * @param  {Array<string>} build The build metadata of the version from which the channel should be extracted.
- * @param  {Array<(string|number)>} prerelease The pre-release version from which the channel should be
- * extracted.
+ * @param  {Array<(string|number)>} prerelease The pre-release version from which the channel should be extracted.
  * @return {string} The channel of the passed version.
  */
 const getVersionChannel = (build, prerelease) => {
@@ -44,12 +29,10 @@ const getVersionChannel = (build, prerelease) => {
 
 /**
  * Returns the stability status of the passed (SemVer) version.
- *
  * @private
  * @method getVersionStabilityStatus
  * @param  {Array<string>} build The build metadata of the version from which the channel should be extracted.
- * @param  {Array<(string|number)>} prerelease The pre-release version from which the channel should be
- * extracted.
+ * @param  {Array<(string|number)>} prerelease The pre-release version from which the channel should be extracted.
  * @return {string} The stability status of the passed version.
  */
 const getVersionStabilityStatus = (build, prerelease) => {
@@ -61,13 +44,12 @@ const getVersionStabilityStatus = (build, prerelease) => {
 
 /**
  * Converts the output from the Git "describe --always" command to a SemVer version.
- *
  * @method getSemVerFromGitDescribe
  * @param  {string} gitVersion The output of the Git "describe --always" command
  * @return {?Object} The SemVer information, `null` otherwise if the passed `gitVersion` is not compatible with SemVer.
  * @see https://semver.org
  */
-const getSemVerFromGitDescribe = gitVersion => {
+const getSemVerFromGitDescribe = (gitVersion) => {
   /*
    * Split the Git version output where the array index
    *
@@ -82,7 +64,7 @@ const getSemVerFromGitDescribe = gitVersion => {
    */
   const gitVersionElements = gitVersion.split("-");
 
-  /* Reject invalid strings and single commit SHA hashs not compatible with SemVer. */
+  /* Reject invalid strings and single commit SHA hashes not compatible with SemVer. */
   if (gitVersionElements.length === 1 && !semver.valid(gitVersionElements[0])) return null;
 
   const tagElement = gitVersionElements[0];
@@ -96,18 +78,16 @@ const getSemVerFromGitDescribe = gitVersion => {
     buildMetadataElement = gitVersionElements[gitVersionElements.length - 1];
     commitsAhead = Number.parseInt(gitVersionElements[gitVersionElements.length - 2], 10);
 
-    /*
+    /**
      * Remove the prefix character added by "git describe" that indicates the SCM type (where "g" means "Git").
-     *
      * @see https://git-scm.com/docs/git-describe
      */
     if (buildMetadataElement.charAt(0) === "g") {
       buildMetadataElement = buildMetadataElement.substring(1);
       scmPrefix = "g";
 
-      /*
+      /**
        * Prepend the separator character for build metadata as defined in the SemVer specification.
-       *
        * @see https://semver.org/#spec-item-10
        */
       buildMetadataElement = `+${buildMetadataElement}`;
@@ -116,9 +96,8 @@ const getSemVerFromGitDescribe = gitVersion => {
     gitVersionElements.splice(gitVersionElements.length - 2, 1);
   }
 
-  /*
+  /**
    * Extract the pre-release element and prepend the separator as defined in the SemVer specification.
-   *
    * @see https://semver.org/#spec-item-9
    */
   if (gitVersionElements.length > 2) {
@@ -127,7 +106,7 @@ const getSemVerFromGitDescribe = gitVersion => {
   }
 
   const parsedSemVer = semver.parse(`${tagElement}${preReleaseElement}${buildMetadataElement}`, {
-    includePrerelease: true
+    includePrerelease: true,
   });
 
   /* Append additional useful information about the version. */
@@ -139,4 +118,10 @@ const getSemVerFromGitDescribe = gitVersion => {
   return parsedSemVer;
 };
 
+/**
+ * Provides utility functions to get Git SemVer version information.
+ * @since 0.5.0
+ * @see https://git-scm.com/docs/git-describe
+ * @see https://semver.org
+ */
 export default getSemVerFromGitDescribe;

@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { Kbd } from "atoms/core/html-elements";
@@ -8,7 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Installation & Activation",
-  subline: "Get up and running in one click with the official VS Code Extension Marketplace."
+  subline: "Get up and running in one click with the official VS Code Extension Marketplace.",
 };
 
 <ShrinkedWidth value={25}>
@@ -30,8 +35,7 @@ Click on the <Kbd>Install</Kbd> button and restart VS Code (when asked for it) t
 
 <Image dropShadow fluid={props.images["ui-extension-marketplace.png"]} rounded>
   <span>
-    The builtin <Link href="https://code.visualstudio.com/docs/editor/extension-gallery">extension marketplace</Link>{" "}
-    view installed <em>Nord</em> theme.
+    The builtin <Link href="https://code.visualstudio.com/docs/editor/extension-gallery">extension marketplace</Link> view installed <em>Nord</em> theme.
   </span>
 </Image>
 
@@ -43,23 +47,13 @@ A <Link to={`${ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_DEVELOPMENT}#packaging`}>pack
 
 Open the drop-down menu from the „Extension“ view in the _Activity Bar_ and select „Install from VSIX…“.
 
-<Image
-  dropShadow
-  alt="Screenshot showing the menu to install VSIX extensions locally"
-  fluid={props.images["install-local-menu.png"]}
-  rounded
->
+<Image dropShadow alt="Screenshot showing the menu to install VSIX extensions locally" fluid={props.images["install-local-menu.png"]} rounded>
   Local VSIX installation from the extension context menu.
 </Image>
 
 The VSIX file picker can also be opened by running the „“ command from the _Command Palette_.
 
-<Image
-  dropShadow
-  alt="Screenshot showing the command palette to install VSIX extensions locally"
-  fluid={props.images["install-local-command.png"]}
-  rounded
->
+<Image dropShadow alt="Screenshot showing the command palette to install VSIX extensions locally" fluid={props.images["install-local-command.png"]} rounded>
   Local VSIX installation through the <em>Command Palette</em>.
 </Image>
 

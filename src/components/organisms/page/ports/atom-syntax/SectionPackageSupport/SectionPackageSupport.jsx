@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -23,11 +19,7 @@ import WaveDivider from "./styled/WaveDivider";
 const SECTION_ID = sectionIdFor(ROUTE_PORTS_ATOM_SYNTAX, 4);
 
 /**
- * The component that represents the packages support section for the landing page of the "Nord Atom Syntax" port
- * project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * The component that represents the packages support section for the landing page of the "Nord Atom Syntax" port project.
  * @since 0.19.0
  */
 const SectionPackageSupport = ({ assets }) => (
@@ -48,8 +40,8 @@ const SectionPackageSupport = ({ assets }) => (
           >
             <span>
               A <Link href="https://reactjs.org">React</Link> JSX component with the{" "}
-              <Link href="https://atom.io/packages/indent-guide-improved">indent-guide-improved</Link> package that
-              draws indent guides more correctly and understandably
+              <Link href="https://atom.io/packages/indent-guide-improved">indent-guide-improved</Link> package that draws indent guides more correctly and
+              understandably
             </span>
           </Video>
         </Visualization>

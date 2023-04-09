@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,14 +22,10 @@ const transformLogosMiddle = (x, y) => `translate3d(${-x * 0.015}px, ${-y * 0.02
 const transformLogosTop = (x, y) => `translate3d(${-x * 0.03}px, ${-y * 0.038}px, 0)`;
 
 /**
- * An interactive illustration with a 3D depth effect that reacts and animates floating port project logos based on the
- * current mouse poiner position.
+ * An interactive illustration with a 3D depth effect that reacts and animates floating port project logos based on the current mouse pointer position.
  * The animation is computed with react-spring through the exported `useFloatingLogos` hook.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
- * @see https://www.react-spring.io
+ * @see https://www.react-spring.dev
  */
 const PortProjectsWindow = ({ logoLayerTransformer, ...passProps }) => (
   <Svg {...passProps} viewBox="0 0 1678.836 503.798" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +37,7 @@ const PortProjectsWindow = ({ logoLayerTransformer, ...passProps }) => (
 );
 
 PortProjectsWindow.propTypes = {
-  logoLayerTransformer: PropTypes.func.isRequired
+  logoLayerTransformer: PropTypes.func.isRequired,
 };
 
 export default PortProjectsWindow;

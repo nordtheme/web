@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,11 +20,7 @@ import WaveDivider from "./styled/WaveDivider";
 const SECTION_ID = sectionIdFor(ROUTE_PORTS_ATOM_UI, 4);
 
 /**
- * The component that represents the theme configuration section for the landing page of the "Nord Atom UI" port
- * project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * The component that represents the theme configuration section for the landing page of the "Nord Atom UI" port project.
  * @since 0.19.0
  */
 const SectionConfigurations = ({ assets }) => (
@@ -38,10 +30,9 @@ const SectionConfigurations = ({ assets }) => (
         <Text>
           <Headline>Configure it to fit your needs.</Headline>
           <Subline>
-            Theme configurations like{" "}
-            <Link to={`${ROUTE_DOCS_PORTS_ATOM_UI_CONFIGURATION}#full-width-tabs`}>full-width tabs</Link> or{" "}
-            <Link to={`${ROUTE_DOCS_PORTS_ATOM_UI_CONFIGURATION}#darker-form-focus`}>darker form focus effects</Link>{" "}
-            allow to customize the theme to match your personal preferences.
+            Theme configurations like <Link to={`${ROUTE_DOCS_PORTS_ATOM_UI_CONFIGURATION}#full-width-tabs`}>full-width tabs</Link> or{" "}
+            <Link to={`${ROUTE_DOCS_PORTS_ATOM_UI_CONFIGURATION}#darker-form-focus`}>darker form focus effects</Link> allow to customize the theme to match your
+            personal preferences.
           </Subline>
           <Actions>
             <Button ghost href={ROUTE_DOCS_PORTS_ATOM_UI_CONFIGURATION} outlined quiet variant="primary">
@@ -66,12 +57,7 @@ const SectionConfigurations = ({ assets }) => (
       <FeatureDuo columnRatio={[1, 2]}>
         <Text />
         <Visualization>
-          <Image
-            alt="Screenshot showing Atom's default tab style"
-            dropShadow
-            fluid={assets.images["config-full-width-tabs-disabled.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing Atom's default tab style" dropShadow fluid={assets.images["config-full-width-tabs-disabled.png"]} rounded>
             <span>Default tab style.</span>
           </Image>
         </Visualization>
@@ -90,9 +76,8 @@ const SectionConfigurations = ({ assets }) => (
         </Visualization>
         <Text>
           <Subline>
-            Adjust UI elements effects like the{" "}
-            <Link to={`${ROUTE_DOCS_PORTS_ATOM_UI_CONFIGURATION}#darker-form-focus`}>focus of forms</Link> to adjust
-            Atoms usage experience and appearance.
+            Adjust UI elements effects like the <Link to={`${ROUTE_DOCS_PORTS_ATOM_UI_CONFIGURATION}#darker-form-focus`}>focus of forms</Link> to adjust Atoms
+            usage experience and appearance.
           </Subline>
         </Text>
       </FeatureDuo>

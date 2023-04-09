@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { Code } from "atoms/core/html-elements";
@@ -8,8 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Type Support",
-  subline:
-    "Learn about the wide range of supported data and node types — From symbolic links, executables up to file system permissions."
+  subline: "Learn about the wide range of supported data and node types — From symbolic links, executables up to file system permissions.",
 };
 
 <ShrinkedWidth value={25}>
@@ -45,12 +49,7 @@ Please read the [manual pages of the `dircolors(1)` utility][linux-man-dircolors
 
 Nord dircolors provides highlighting for a lot of different data types, their attributes and file system permissions. This document contains a general overview of these types including descriptions about their applied Nord styles.
 
-<Image
-  alt="Screenshot showing an overview of various file and node types colorized by Nord"
-  dropShadow
-  fluid={props.images["overview.png"]}
-  rounded
->
+<Image alt="Screenshot showing an overview of various file and node types colorized by Nord" dropShadow fluid={props.images["overview.png"]} rounded>
   <span>Overview of various file and node types colorized by Nord.</span>
 </Image>
 
@@ -67,15 +66,9 @@ If the `t` permission flag is set the background color is `nord9` instead while 
 
 For directories with the `777` permission value both the `bold` and `underline` font styles are used.
 
-<Image
-  alt="Screenshot showing directories with different file system permissions"
-  dropShadow
-  fluid={props.images["permissions.png"]}
-  rounded
->
+<Image alt="Screenshot showing directories with different file system permissions" dropShadow fluid={props.images["permissions.png"]} rounded>
   <span>
-    Directories with different{" "}
-    <Link href="https://en.wikipedia.org/wiki/File_system_permissions">file system permissions</Link>.
+    Directories with different <Link href="https://en.wikipedia.org/wiki/File_system_permissions">file system permissions</Link>.
   </span>
 </Image>
 
@@ -108,12 +101,7 @@ The styles are applied for [Unix file types][wiki-unix_ft] like [device files][w
 
 Character device files are using `nord13` as foreground while block devices additionally having the `bold` font style. Sockets are also colored by `nord13` with a the `underline` font style.
 
-<Image
-  alt="Screenshot showing various Unix file types"
-  dropShadow
-  fluid={props.images["blocks-and-sockets.png"]}
-  rounded
->
+<Image alt="Screenshot showing various Unix file types" dropShadow fluid={props.images["blocks-and-sockets.png"]} rounded>
   Various <Link href="https://en.wikipedia.org/wiki/Unix_file_types">Unix file types</Link> like{" "}
   <Link href="https://en.wikipedia.org/wiki/Device_file">device files</Link> and{" "}
   <Link href="https://en.wikipedia.org/wiki/Unix_domain_socket">domain sockets</Link>.
@@ -125,12 +113,7 @@ The styles are applied for files with different [capabilities][wiki-setuid].
 
 The GID `g+s` and UID `u+s` capability flags are colored by `nord4` with the `bold` and `underline` font styles.
 
-<Image
-  alt="Screenshot showing files with different capabilities"
-  dropShadow
-  fluid={props.images["capabilities.png"]}
-  rounded
->
+<Image alt="Screenshot showing files with different capabilities" dropShadow fluid={props.images["capabilities.png"]} rounded>
   <Link href="https://en.wikipedia.org/wiki/Setuid">Capabilities</Link> are also styled to be more prominent.
 </Image>
 
@@ -138,12 +121,7 @@ The GID `g+s` and UID `u+s` capability flags are colored by `nord4` with the `bo
 
 The styles are applied for [named pipe][wiki-named_pipe], also known as FIFO, using `nord7` as foreground color with the `underline` font style.
 
-<Image
-  alt="Screenshot showing a named pipe also know as FIFO"
-  dropShadow
-  fluid={props.images["named_pipes.png"]}
-  rounded
->
+<Image alt="Screenshot showing a named pipe also know as FIFO" dropShadow fluid={props.images["named_pipes.png"]} rounded>
   A <Link href="https://en.wikipedia.org/wiki/Named_pipe">named pipe</Link> also know as FIFO.
 </Image>
 
@@ -155,12 +133,7 @@ The following styles are for files with specific file extensions.
 
 Extension for media based types like images, audio, videos and documents are colored by `nord14` while archive- and compression types additionally using the `bold` font style.
 
-<Image
-  alt="Screenshot showing file extensions for multimedia files"
-  dropShadow
-  fluid={props.images["extension-pattern-media.png"]}
-  rounded
->
+<Image alt="Screenshot showing file extensions for multimedia files" dropShadow fluid={props.images["extension-pattern-media.png"]} rounded>
   Common file extensions like multimedia files.
 </Image>
 
@@ -168,12 +141,7 @@ Extension for media based types like images, audio, videos and documents are col
 
 Extensions for common [VCS][wiki-vcs] ignore pattern using the `dim` terminal effect applied to `nord4`.
 
-<Image
-  alt="Screenshot showing ignore pattern files"
-  dropShadow
-  fluid={props.images["extension-pattern-ignore.png"]}
-  rounded
->
+<Image alt="Screenshot showing ignore pattern files" dropShadow fluid={props.images["extension-pattern-ignore.png"]} rounded>
   Common VSC ignore pattern files.
 </Image>
 

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -14,9 +10,6 @@ import { colors } from "styles/theme";
 
 /**
  * The Slack logo as SVG vector graphic component.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
 const Slack = ({ fillColors, svgRef, ...passProps }) => (
@@ -68,9 +61,9 @@ Slack.propTypes = {
     fragmentsType1: PropTypes.string,
     fragmentsType2: PropTypes.string,
     fragmentsType3: PropTypes.string,
-    fragmentsType4: PropTypes.string
+    fragmentsType4: PropTypes.string,
   }),
-  svgRef: PropTypes.func
+  svgRef: PropTypes.func,
 };
 
 Slack.defaultProps = {
@@ -81,9 +74,9 @@ Slack.defaultProps = {
     fragmentsType1: colors.nord7,
     fragmentsType2: colors.nord8,
     fragmentsType3: colors.nord9,
-    fragmentsType4: colors.nord10
+    fragmentsType4: colors.nord10,
   },
-  svgRef: () => {}
+  svgRef: () => {},
 };
 
 export default Slack;

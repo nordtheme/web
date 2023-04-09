@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { Code } from "atoms/core/html-elements";
@@ -8,8 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Customization",
-  subline:
-    "Not in agreement with all of Nord Vim's design decisions? No problem — simply override every theme style you like."
+  subline: "Not in agreement with all of Nord Vim's design decisions? No problem — simply override every theme style you like.",
 };
 
 <ShrinkedWidth value={25}>
@@ -33,13 +37,13 @@ Vim's [`autocmd`][vimhelp-autocmd] feature allows to specify commands to be exec
 <Banner
   title={
     <>
-      The <em>auto command</em> <Code>augroup</Code> definitions must be set <strong>before</strong> the{" "}
-      <Code>colorscheme</Code> <Link to={`${ROUTE_DOCS_PORTS_VIM_INSTALLATION}#activation`}>activation</Link> command!
+      The <em>auto command</em> <Code>augroup</Code> definitions must be set <strong>before</strong> the <Code>colorscheme</Code>{" "}
+      <Link to={`${ROUTE_DOCS_PORTS_VIM_INSTALLATION}#activation`}>activation</Link> command!
     </>
   }
 >
-  This ensures the commands are applied correctly when the color scheme file gets loaded, otherwise the theme will load
-  without taking these style assignments into account.
+  This ensures the commands are applied correctly when the color scheme file gets loaded, otherwise the theme will load without taking these style assignments
+  into account.
 </Banner>
 
 To override or define new styles of Nord Vim, create a _auto command_ group in the [vimrc][vimhelp-vimrc] with a unique name like `nord-theme-overrides` and add the desired [syntax `highlight` commands][vimhelp-highlight]:
@@ -54,12 +58,7 @@ augroup nord-theme-overrides
 augroup END
 ```
 
-<Image
-  dropShadow
-  fluid={props.images["example-vim-comment-titles-default.png"]}
-  rounded
-  alt="Screenshot showing Vim comment titles with Nord theme styles"
->
+<Image dropShadow fluid={props.images["example-vim-comment-titles-default.png"]} rounded alt="Screenshot showing Vim comment titles with Nord theme styles">
   <span>Vim comment titles with Nord theme styles.</span>
 </Image>
 

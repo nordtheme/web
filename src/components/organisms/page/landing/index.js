@@ -1,18 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides the organism components for the landing page.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://en.wikipedia.org/wiki/Landing_page
- * @since 0.3.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import SectionCommunity from "./SectionCommunity";
@@ -23,12 +11,9 @@ import SectionPalettesModularity from "./SectionPalettesModularity";
 import SectionPorts from "./SectionPorts";
 import SectionSyntax from "./SectionSyntax";
 
-export {
-  SectionCommunity,
-  SectionHero,
-  SectionNativeColorSwatch,
-  SectionPalettesContrast,
-  SectionPalettesModularity,
-  SectionPorts,
-  SectionSyntax
-};
+/**
+ * Provides the organism components for the landing page.
+ * @see https://en.wikipedia.org/wiki/Landing_page
+ * @since 0.3.0
+ */
+export { SectionCommunity, SectionHero, SectionNativeColorSwatch, SectionPalettesContrast, SectionPalettesModularity, SectionPorts, SectionSyntax };

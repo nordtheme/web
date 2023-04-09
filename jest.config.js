@@ -1,24 +1,16 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file The Jest configuration.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://jestjs.io/docs/en/configuration
- * @see https://www.gatsbyjs.org/docs/testing
- * @see https://circleci.com/docs/2.0/collect-test-data/#jest
- * @since 0.1.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 const { BASE_DIR_BUILD_REPORTS_COVERAGE, BASE_DIR_BUILD_REPORTS_JUNIT } = require("./src/config/internal/constants");
 
+/**
+ * Configurations for Jest.
+ * @see https://jestjs.io/docs/configuration
+ * @see https://www.gatsbyjs.com/docs/how-to/testing
+ * @since 0.1.0
+ */
 module.exports = {
   /*
    * The directory where Jest should output its coverage files.
@@ -36,7 +28,7 @@ module.exports = {
    * specific to Gatsby based projects which is necessary for some components.
    */
   globals: {
-    __PATH_PREFIX__: ""
+    __PATH_PREFIX__: "",
   },
 
   /*
@@ -52,7 +44,7 @@ module.exports = {
     "^data(.*)$": "<rootDir>/src/data$1",
     "^layouts(.*)$": "<rootDir>/src/components/layouts$1",
     "^molecules(.*)$": "<rootDir>/src/components/molecules$1",
-    "^nord-docs-test-utils(.*)$": "<rootDir>/test/__utils__$1",
+    "^nord-web-test-utils(.*)$": "<rootDir>/test/__utils__$1",
     "^organisms(.*)$": "<rootDir>/src/components/organisms$1",
     "^pages(.*)$": "<rootDir>/src/pages$1",
     "^stores(.*)$": "<rootDir>/src/stores$1",
@@ -61,10 +53,9 @@ module.exports = {
     "^utils(.*)$": "<rootDir>/src/utils$1",
     /* Map all import stylesheets to the "identity object proxy" module. */
     ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/test/__mocks__/file.js",
+    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/file.js",
     /* Ensure React components loaded from SVG files are mocked correctly. */
-    ".+\\.svg$": "<rootDir>/test/__mocks__/svgr.jsx"
+    ".+\\.svg$": "<rootDir>/test/__mocks__/svgr.jsx",
   },
 
   /*
@@ -82,9 +73,9 @@ module.exports = {
       "jest-junit",
       {
         outputDirectory: `${BASE_DIR_BUILD_REPORTS_JUNIT}`,
-        outputName: "jest.xml"
-      }
-    ]
+        outputName: "jest.xml",
+      },
+    ],
   ],
 
   /*
@@ -116,7 +107,7 @@ module.exports = {
    * @see https://jestjs.io/docs/en/getting-started#using-babel
    */
   transform: {
-    "^.+\\.jsx?$": "<rootDir>/test/babel-config.js"
+    "^.+\\.jsx?$": "<rootDir>/test/babel-config.js",
   },
 
   /*
@@ -126,5 +117,5 @@ module.exports = {
    * This array of regexp pattern strings that are matched against all source file paths before transformation. If the
    * test path matches any of the patterns, it will not be transformed.
    */
-  transformIgnorePatterns: ["node_modules/(?!(gatsby)/)"]
+  transformIgnorePatterns: ["node_modules/(?!(gatsby)/)"],
 };

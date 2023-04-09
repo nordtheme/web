@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,14 +22,11 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_VIM, 6);
 
 /**
  * The component that represents the setup section for the landing page of the "Nord Vim" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.13.0
  */
 const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-vim");
+  const { gitHubRepositoryUrl } = portMetadata.find((port) => port.name === "vim");
 
   return (
     <Section id={SECTION_ID}>
@@ -42,9 +35,8 @@ const SectionSetup = ({ assets }) => {
           <Text verticalOnly>
             <Headline>Installation and updates in a few lines of code.</Headline>
             <Subline>
-              Install Nord with your favorite plugin manager like{" "}
-              <Link href="https://github.com/junegunn/vim-plug">vim-plug</Link> within a few lines of code and automatic
-              updates or simply set it up manually.
+              Install Nord with your favorite plugin manager like <Link href="https://github.com/junegunn/vim-plug">vim-plug</Link> within a few lines of code
+              and automatic updates or simply set it up manually.
             </Subline>
             <Actions>
               <Button to={ROUTE_DOCS_PORTS_VIM} variant="primary">
@@ -63,8 +55,7 @@ const SectionSetup = ({ assets }) => {
               rounded
             >
               <span>
-                Plugin setup through <Link href="https://github.com/junegunn/vim-plug">vim-plug</Link> and color scheme
-                activation.
+                Plugin setup through <Link href="https://github.com/junegunn/vim-plug">vim-plug</Link> and color scheme activation.
               </span>
             </Image>
           </Visualization>

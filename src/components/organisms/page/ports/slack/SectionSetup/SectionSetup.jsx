@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -27,14 +23,13 @@ import { Section } from "../../../shared";
 const SECTION_ID = sectionIdFor(ROUTE_PORTS_SLACK, 2);
 
 /**
- * GraphQL query that gets executed through the `gatsby-source-graphql` plugin to get the theme color values
- * from the remote GitGub repository object and make it available for other plugins like the JSON or YAML
- * transformers.
+ * GraphQL query that gets executed through the `gatsby-source-graphql` plugin to get the theme color values from the remote GitHub repository object and
+ * make it available for other plugins like the JSON or YAML transformers.
  */
 const gqlQueryGitHubAPINordSlackColorsFromJSON = graphql`
   {
     github {
-      repository(name: "nord-slack", owner: "arcticicestudio") {
+      repository(name: "slack", owner: "nordtheme") {
         object(expression: "develop:colors.json") {
           ... on GitHub_Blob {
             text
@@ -47,9 +42,6 @@ const gqlQueryGitHubAPINordSlackColorsFromJSON = graphql`
 
 /**
  * The component that represents the setup section for the landing page of the "Nord Slack" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.21.0
  */
 const SectionSetup = () => {
@@ -57,12 +49,12 @@ const SectionSetup = () => {
   const {
     github: {
       repository: {
-        object: { text }
-      }
-    }
+        object: { text },
+      },
+    },
   } = useStaticQuery(gqlQueryGitHubAPINordSlackColorsFromJSON);
   const clipboard = useClipboard();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-slack");
+  const { gitHubRepositoryUrl } = portMetadata.find((port) => port.name === "slack");
 
   function handleTextInputFocus({ target }) {
     target.select();
@@ -82,19 +74,9 @@ const SectionSetup = () => {
             <Headline>Installation in one line of code.</Headline>
             <Subline>
               Install Nord by copying the one-liner and paste it as custom theme in your Slack sidebar configuration.
-              <ColorValueInputBox
-                aria-label="Copy to clipboard"
-                onClick={handleClipboardCopy}
-                title="Copy to clipboard"
-              >
+              <ColorValueInputBox aria-label="Copy to clipboard" onClick={handleClipboardCopy} title="Copy to clipboard">
                 <ClipboardIcon outlined svgComponent={Clipboard} />
-                <ColorValueInput
-                  ref={clipboard.target}
-                  onFocus={handleTextInputFocus}
-                  readOnly
-                  type="text"
-                  value={colorValues}
-                />
+                <ColorValueInput ref={clipboard.target} onFocus={handleTextInputFocus} readOnly type="text" value={colorValues} />
               </ColorValueInputBox>
             </Subline>
             <Actions>

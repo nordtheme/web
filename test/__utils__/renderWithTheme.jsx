@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -12,14 +8,11 @@ import { render } from "@testing-library/react";
 
 import Root from "containers/core/Root";
 
-/**
- * Renders the passed components with the global theme and modes provided through the `Root` core container component.
- *
- * @method renderWithTheme
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
- */
 const renderWithTheme = (components, options = {}) => render(<Root>{components}</Root>, options);
 
+/**
+ * Renders the passed components with the global theme and modes provided through the `Root` core container component.
+ * @method renderWithTheme
+ * @since 0.3.0
+ */
 export default renderWithTheme;

@@ -1,25 +1,13 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides prop types for global GraphQL fragments.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.10.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import PropTypes from "prop-types";
 
 /**
  * GraphQL fragment prop types for the Gatsby Image "fluid" object returned from the "ImageSharpFluid" query type.
- *
- * @see https://github.com/gatsbyjs/gatsby/blob/e6d7dc3a7adc122fd6a3c606978bc79dc59fce07/packages/gatsby-image/src/index.js#L444-L453
+ * @see https://github.com/gatsbyjs/gatsby/blob/e6d7dc3a/packages/gatsby-image/src/index.js#L444-L453
  */
 const contentMdxImageFluidPropTypes = {
   fluid: PropTypes.shape({
@@ -34,8 +22,8 @@ const contentMdxImageFluidPropTypes = {
     srcSet: PropTypes.string.isRequired,
     srcSetWebp: PropTypes.string,
     srcWebp: PropTypes.string,
-    tracedSVG: PropTypes.string
-  })
+    tracedSVG: PropTypes.string,
+  }),
 };
 
 /**
@@ -46,7 +34,7 @@ const contentMdxMediaFilePropTypes = {
   name: PropTypes.string,
   publicURL: PropTypes.string,
   relativeDirectory: PropTypes.string,
-  relativePath: PropTypes.string
+  relativePath: PropTypes.string,
 };
 
 /**
@@ -55,11 +43,11 @@ const contentMdxMediaFilePropTypes = {
 const contentMdxDocumentFrontmatterPropTypes = {
   contentImages: PropTypes.arrayOf(
     PropTypes.shape({
-      ...contentMdxImageFluidPropTypes
+      ...contentMdxImageFluidPropTypes,
     })
   ),
   draft: PropTypes.bool,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 /**
@@ -70,8 +58,8 @@ const contentBlogPostFrontmatterPropTypes = {
     coverTitleColor: PropTypes.string,
     introduction: PropTypes.string.isRequired,
     publishTime: PropTypes.string.isRequired,
-    ...contentMdxDocumentFrontmatterPropTypes
-  })
+    ...contentMdxDocumentFrontmatterPropTypes,
+  }),
 };
 
 /**
@@ -80,8 +68,8 @@ const contentBlogPostFrontmatterPropTypes = {
 const contentDocsPageFrontmatterPropTypes = {
   frontmatter: PropTypes.shape({
     subline: PropTypes.string,
-    ...contentMdxDocumentFrontmatterPropTypes
-  })
+    ...contentMdxDocumentFrontmatterPropTypes,
+  }),
 };
 
 /**
@@ -90,7 +78,7 @@ const contentDocsPageFrontmatterPropTypes = {
 const contentNodeFieldsPropTypes = {
   contentSourceType: PropTypes.string,
   slug: PropTypes.string,
-  slugParentRoute: PropTypes.string
+  slugParentRoute: PropTypes.string,
 };
 
 /**
@@ -101,23 +89,23 @@ const contentBlogPostFieldsPropTypes = {
     date: PropTypes.string,
     relativeDirectory: PropTypes.string,
     bannerImage: PropTypes.shape({
-      ...contentMdxImageFluidPropTypes
+      ...contentMdxImageFluidPropTypes,
     }).isRequired,
     coverImage: PropTypes.shape({
-      ...contentMdxImageFluidPropTypes
+      ...contentMdxImageFluidPropTypes,
     }).isRequired,
     heroImage: PropTypes.shape({
-      ...contentMdxImageFluidPropTypes
+      ...contentMdxImageFluidPropTypes,
     }).isRequired,
-    ...contentNodeFieldsPropTypes
-  })
+    ...contentNodeFieldsPropTypes,
+  }),
 };
 
 /**
  * GraphQL fragment prop types for the node fields of a blog post.
  */
 const contentDocsPageFieldsPropTypes = {
-  fields: PropTypes.shape({ ...contentNodeFieldsPropTypes })
+  fields: PropTypes.shape({ ...contentNodeFieldsPropTypes }),
 };
 
 /**
@@ -125,7 +113,7 @@ const contentDocsPageFieldsPropTypes = {
  */
 const contentBlogPostPropTypes = {
   ...contentBlogPostFieldsPropTypes,
-  ...contentBlogPostFrontmatterPropTypes
+  ...contentBlogPostFrontmatterPropTypes,
 };
 
 /**
@@ -133,14 +121,18 @@ const contentBlogPostPropTypes = {
  */
 const contentDocsPagePropTypes = {
   ...contentDocsPageFieldsPropTypes,
-  ...contentDocsPageFrontmatterPropTypes
+  ...contentDocsPageFrontmatterPropTypes,
 };
 
+/**
+ * @file Provides prop types for global GraphQL fragments.
+ * @since 0.10.0
+ */
 export {
   contentBlogPostPropTypes,
   contentBlogPostFrontmatterPropTypes,
   contentDocsPagePropTypes,
   contentDocsPageFrontmatterPropTypes,
   contentMdxImageFluidPropTypes,
-  contentMdxMediaFilePropTypes
+  contentMdxMediaFilePropTypes,
 };

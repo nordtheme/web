@@ -1,31 +1,18 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
 
 /**
  * An SVG vector component rendering a decorated application illustration.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const Window = props => (
+const Window = (props) => (
   <g {...props}>
-    <path
-      d="M1182.662 0h-690.8c-7.85 0-14.213 6.363-14.213 14.213v54.582h719.226V14.213c0-7.85-6.363-14.213-14.213-14.213z"
-      fill="#2E3440"
-    />
-    <path
-      d="M1182.662 379.604h-690.8c-7.85 0-14.213-6.363-14.213-14.213V68.795h719.226v296.596c0 7.849-6.363 14.213-14.213 14.213z"
-      fill="#ECEFF4"
-    />
+    <path d="M1182.662 0h-690.8c-7.85 0-14.213 6.363-14.213 14.213v54.582h719.226V14.213c0-7.85-6.363-14.213-14.213-14.213z" fill="#2E3440" />
+    <path d="M1182.662 379.604h-690.8c-7.85 0-14.213-6.363-14.213-14.213V68.795h719.226v296.596c0 7.849-6.363 14.213-14.213 14.213z" fill="#ECEFF4" />
     <g fill="#D8DEE9">
       <circle cx="611.553" cy="34.398" r="11.912" />
       <circle cx="573.563" cy="34.398" r="11.912" />

@@ -1,17 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides shared styles for all page components.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import { css } from "styled-components";
@@ -42,4 +31,8 @@ const errorState404IllustrationStyles = css`
   `}
 `;
 
+/**
+ * @file Provides shared styles for all page components.
+ * @since 0.3.0
+ */
 export { emptyStateIllustrationStyles, errorState404IllustrationStyles };

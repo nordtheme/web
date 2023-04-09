@@ -1,18 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides SVG vector graphic divider components.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/de/docs/Web/SVG
- * @since 0.5.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import LinesWavyIntersecting from "./LinesWavyIntersecting";
@@ -26,15 +14,9 @@ import WaveSwaying from "./WaveSwaying";
 import WaveWobbly from "./WaveWobbly";
 import WaveWobblyDeep from "./WaveWobblyDeep";
 
-export {
-  LinesWavyIntersecting,
-  WaveFooter,
-  WaveRoaring,
-  WaveRough,
-  WaveSmooth,
-  WaveSmooth2,
-  WaveSmoothFlat,
-  WaveSwaying,
-  WaveWobbly,
-  WaveWobblyDeep
-};
+/**
+ * Provides SVG vector graphic divider components.
+ * @since 0.5.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG
+ */
+export { LinesWavyIntersecting, WaveFooter, WaveRoaring, WaveRough, WaveSmooth, WaveSmooth2, WaveSmoothFlat, WaveSwaying, WaveWobbly, WaveWobblyDeep };

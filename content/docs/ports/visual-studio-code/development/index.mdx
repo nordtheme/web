@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
@@ -8,7 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Extension Development",
-  subline: "Learn how to customize the theme to fit your needs, preview changes and package the extension."
+  subline: "Learn how to customize the theme to fit your needs, preview changes and package the extension.",
 };
 
 <ShrinkedWidth value={25}>
@@ -39,8 +44,7 @@ Download and install Visual Studio Code, or [Visual Studio Code Insiders][vscode
   }
   variant="warn"
 >
-  Otherwise the installed and versioned extension will collide with the development extension that'll be configured in
-  this guide.
+  Otherwise the installed and versioned extension will collide with the development extension that'll be configured in this guide.
 </Banner>
 
 ## Download
@@ -50,18 +54,14 @@ Clone the [_Nord Visual Studio Code_ repository from GitHub][gh-repo] to your [l
 This results in the following directory name for the _Nord_ extension: `arcticicestudio.nord-visual-studio-code-0.0.0`. Note that **you can specify any version number you like**, but using `0.0.0` indicates that this is a special version for development purposes.
 
 ```sh
-git clone https://github.com/arcticicestudio/nord-visual-studio-code.git arcticicestudio.nord-visual-studio-code-0.0.0
+git clone https://github.com/nordtheme/visual-studio-code.git arcticicestudio.nord-visual-studio-code-0.0.0
 ```
 
 To get the project without [Git][] download the project as `.zip` archive file from the GitHub repository or click on the download button below. Afterwards extract the archive to your local extension directory following the directory naming scheme like described above.
 
-<Button href="https://github.com/arcticicestudio/nord-visual-studio-code/archive/develop.zip">Download</Button>
+<Button href="https://github.com/nordtheme/visual-studio-code/archive/develop.zip">Download</Button>
 
-<Image
-  alt="Screenshot showing the GitHub repository web UI to download the project repository"
-  fillSize={60}
-  fluid={props.images["github-clone.png"]}
->
+<Image alt="Screenshot showing the GitHub repository web UI to download the project repository" fillSize={60} fluid={props.images["github-clone.png"]}>
   Download the project repository from GitHub
 </Image>
 
@@ -95,8 +95,8 @@ Follow the <Link to={ROUTE_DOCS_PORTS_VISUAL_STUDIO_CODE_INSTALLATION}>Installat
 
 </ShrinkedWidth>
 
-[gh-repo]: https://github.com/arcticicestudio/nord-visual-studio-code
-[gh-tree-themes]: https://github.com/arcticicestudio/nord-visual-studio-code/blob/develop/themes
+[gh-repo]: https://github.com/nordtheme/visual-studio-code
+[gh-tree-themes]: https://github.com/nordtheme/visual-studio-code/blob/develop/themes
 [git]: https://git-scm.com
 [vscode-docs-add-to-workspace]: https://code.visualstudio.com/docs/editor/multi-root-workspaces#_adding-folders
 [vscode-docs-colortheme-custom]: https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme

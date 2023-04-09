@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,9 +22,6 @@ const SECTION_ID = sectionIdFor(ROUTE_ROOT, 1);
 
 /**
  * The component that represents the color palette modularity section of the landing page.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
  */
 const SectionPalettesModularity = () => (
@@ -49,8 +42,7 @@ const SectionPalettesModularity = () => (
         <Text>
           <Headline>Modular structure.</Headline>
           <Subline>
-            Nord colors are numbered from <Code>nord0</Code> to <Code>nord15</Code> where each component contains a
-            different amount of colors.
+            Nord colors are numbered from <Code>nord0</Code> to <Code>nord15</Code> where each component contains a different amount of colors.
           </Subline>
           <Actions>
             <Button ghost outlined quiet to={ROUTE_DOCS} variant="primary">

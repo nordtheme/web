@@ -1,16 +1,10 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 /**
  * @file Provides global GraphQL fragments.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
  */
 
@@ -18,8 +12,8 @@ import { graphql } from "gatsby";
 
 /**
  * GraphQL fragment for fluid MDX document images.
- * The value of the `maxWidth` query parameter is based on the maximum witdh of the content wrapper HTML element and
- * the media breakpoints of the used global theme for "4K" devices.
+ * The value of the `maxWidth` query parameter is based on the maximum width of the content wrapper HTML element and the media breakpoints of the used
+ * global theme for "4K" devices.
  */
 export const gqlFragmentContentMdxDocumentImageFluid = graphql`
   fragment contentMdxDocumentImageFluid on ImageSharp {

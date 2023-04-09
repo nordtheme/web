@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -25,15 +21,12 @@ const StyledIcon = styled.div`
 
 /**
  * The styled proxy component for icons of a port project card.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
 const Icon = ({ svgComponent: SvgComponent, ...passProps }) => <StyledIcon as={SvgComponent} {...passProps} />;
 
 Icon.propTypes = {
-  svgComponent: PropTypes.node.isRequired
+  svgComponent: PropTypes.node.isRequired,
 };
 
 export default Icon;

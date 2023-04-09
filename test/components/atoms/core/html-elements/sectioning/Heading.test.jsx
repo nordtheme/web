@@ -1,16 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React, { Fragment } from "react";
 import { stripUnit } from "polished";
 
-import { renderWithTheme } from "nord-docs-test-utils";
+import { renderWithTheme } from "nord-web-test-utils";
 import { H1, H2, H3, H4, H5, H6 } from "atoms/core/html-elements";
 
 describe("theme styles", () => {
@@ -55,7 +51,7 @@ describe("theme styles", () => {
     );
     expect(
       Object.values(container.children)
-        .map(headingElement => getComputedStyle(headingElement).fontSize)
+        .map((headingElement) => getComputedStyle(headingElement).fontSize)
         .filter(Boolean).length
     ).toEqual(container.children.length);
   });
@@ -85,7 +81,7 @@ describe("theme styles", () => {
     expect(
       /* Get the font sizes as numbers of all heading components in rendered order. */
       Object.values(container.children)
-        .map(headingElement => stripUnit(getComputedStyle(headingElement).fontSize))
+        .map((headingElement) => stripUnit(getComputedStyle(headingElement).fontSize))
         /* Ensure descending font sizes by comparing a higher level heading with the next lower one. */
         .reduce((acc, cur) => (acc > cur ? cur : 0))
     ).toBeGreaterThan(0);

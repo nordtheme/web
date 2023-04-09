@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -12,12 +8,9 @@ import { animated } from "react-spring";
 
 /**
  * A SVG vector component rendering the top layer of floating port project logos.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const LogosLayerTop = props => (
+const LogosLayerTop = (props) => (
   <animated.g {...props}>
     <path
       d="M208.18 1.128c36.453 0 66.002 29.547 66.002 65.999 0 36.454-29.55 66.001-66.002 66.001-36.451 0-65.998-29.547-65.998-66.001.001-36.452 29.547-65.999 65.998-65.999z"
@@ -43,10 +36,7 @@ const LogosLayerTop = props => (
       d="M152.467 382.277c32.034 0 58.002 25.971 58.002 58 0 32.035-25.969 58-58.002 58-32.029 0-57.998-25.965-57.998-58 0-32.029 25.969-58 57.998-58z"
       fill="#2E3440"
     />
-    <path
-      d="M181.463 464.235v-10.086h-30.26v10.086m-23.335-10.086l-6.915-7.334 15.563-12.839-15.563-12.839 6.915-7.334 23.345 20.173"
-      fill="#88C0D0"
-    />
+    <path d="M181.463 464.235v-10.086h-30.26v10.086m-23.335-10.086l-6.915-7.334 15.563-12.839-15.563-12.839 6.915-7.334 23.345 20.173" fill="#88C0D0" />
     <path
       d="M1486.361 1.703c34.244 0 62 27.757 62 61.997 0 34.246-27.756 62.003-62 62.003-34.245 0-62-27.757-62-62.003 0-34.24 27.755-61.997 62-61.997z"
       fill="#2E3440"

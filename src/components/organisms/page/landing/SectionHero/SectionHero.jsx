@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React, { PureComponent } from "react";
@@ -25,16 +21,12 @@ const SECTION_ID = sectionIdFor(ROUTE_ROOT, 0);
 
 /**
  * The component that represents the hero section of the landing page.
- * It handles the state for the rendered "Arctic Landscape" SVG animation component that is triggered through a
- * waypoint.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * It handles the state for the rendered "Arctic Landscape" SVG animation component that is triggered through a waypoint.
  * @since 0.3.0
  */
 export default class SectionHero extends PureComponent {
   state = {
-    arcticLandscapePose: POSE_ERASE
+    arcticLandscapePose: POSE_ERASE,
   };
 
   handleArcticLandscapeWaypointEnter = () => this.setState({ arcticLandscapePose: POSE_DRAW });
@@ -60,8 +52,7 @@ export default class SectionHero extends PureComponent {
                 An arctic, north-bluish color palette.
               </Headline>
               <Subline>
-                Created for a clean and uncluttered design pattern to achieve optimal focus and readability for code
-                syntax highlighting and UI components.
+                Created for a clean and uncluttered design pattern to achieve optimal focus and readability for code syntax highlighting and UI components.
               </Subline>
               <Actions>
                 <Button to={ROUTE_DOCS} variant="primary">

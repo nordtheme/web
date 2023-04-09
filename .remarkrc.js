@@ -1,18 +1,13 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 /**
- * @file The remark-lint configuration.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * Configurations for remark-lint.
+ * @see https://github.com/remarkjs/remark-lint
+ * @see https://remark.js.org
  */
-
 module.exports = {
-  plugins: ["remark-preset-lint-arcticicestudio"]
+  plugins: ["@arcticicestudio/remark-preset-lint"],
 };

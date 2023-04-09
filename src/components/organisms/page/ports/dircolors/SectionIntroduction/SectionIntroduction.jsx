@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,9 +20,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_DIRCOLORS, 1);
 
 /**
  * The component that represents the introduction section for the landing page of the "Nord dircolors" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.18.0
  */
 const SectionIntroduction = ({ assets }) => (
@@ -35,18 +28,10 @@ const SectionIntroduction = ({ assets }) => (
       <FeatureDuo columnRatio={[1, 2]}>
         <Text>
           <Headline>Beautiful highlighting for all your bits and bytes.</Headline>
-          <Subline>
-            Support for a wide range of data and node types — From symbolic links, executables up to file system
-            permissions.
-          </Subline>
+          <Subline>Support for a wide range of data and node types — From symbolic links, executables up to file system permissions.</Subline>
         </Text>
         <Visualization>
-          <Image
-            alt="Screenshot showing different link types like symbolic and hard links"
-            dropShadow
-            fluid={assets.images["links.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing different link types like symbolic and hard links" dropShadow fluid={assets.images["links.png"]} rounded>
             <span>
               Different link types like <Link href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic</Link> and{" "}
               <Link href="https://en.wikipedia.org/wiki/Hard_link">hard</Link> links.
@@ -56,22 +41,15 @@ const SectionIntroduction = ({ assets }) => (
       </FeatureDuo>
       <FeatureDuo columnRatio={[2, 1]}>
         <Visualization>
-          <Image
-            alt="Screenshot showing directories with different file system permissions"
-            dropShadow
-            fluid={assets.images["permissions.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing directories with different file system permissions" dropShadow fluid={assets.images["permissions.png"]} rounded>
             <span>
-              Directories with different{" "}
-              <Link href="https://en.wikipedia.org/wiki/File_system_permissions">file system permissions</Link>.
+              Directories with different <Link href="https://en.wikipedia.org/wiki/File_system_permissions">file system permissions</Link>.
             </span>
           </Image>
         </Visualization>
         <Text>
           <Subline>
-            Styles for different{" "}
-            <Link href="https://en.wikipedia.org/wiki/File_system_permissions">file system permissions</Link>.
+            Styles for different <Link href="https://en.wikipedia.org/wiki/File_system_permissions">file system permissions</Link>.
           </Subline>
         </Text>
       </FeatureDuo>
@@ -84,22 +62,12 @@ const SectionIntroduction = ({ assets }) => (
           </Subline>
         </Text>
         <Visualization>
-          <Image
-            alt="Screenshot showing various Unix file types"
-            dropShadow
-            fluid={assets.images["blocks-and-sockets.png"]}
-            rounded
-          />
+          <Image alt="Screenshot showing various Unix file types" dropShadow fluid={assets.images["blocks-and-sockets.png"]} rounded />
         </Visualization>
       </FeatureDuo>
       <FeatureDuo columnRatio={[2, 1]}>
         <Visualization>
-          <Image
-            alt="Screenshot showing files with different capabilities."
-            dropShadow
-            fluid={assets.images["capabilities.png"]}
-            rounded
-          />
+          <Image alt="Screenshot showing files with different capabilities." dropShadow fluid={assets.images["capabilities.png"]} rounded />
         </Visualization>
         <Text>
           <Subline>
@@ -114,22 +82,12 @@ const SectionIntroduction = ({ assets }) => (
           </Subline>
         </Text>
         <Visualization>
-          <Image
-            alt="Screenshot showing executable files"
-            dropShadow
-            fluid={assets.images["executables.png"]}
-            rounded
-          />
+          <Image alt="Screenshot showing executable files" dropShadow fluid={assets.images["executables.png"]} rounded />
         </Visualization>
       </FeatureDuo>
       <FeatureDuo columnRatio={[2, 1]}>
         <Visualization>
-          <Image
-            alt="Screenshot showing file extensions for multimedia files"
-            dropShadow
-            fluid={assets.images["extension-pattern-media.png"]}
-            rounded
-          />
+          <Image alt="Screenshot showing file extensions for multimedia files" dropShadow fluid={assets.images["extension-pattern-media.png"]} rounded />
         </Visualization>
         <Text>
           <Subline>Support for many file extensions like common multimedia files…</Subline>
@@ -140,12 +98,7 @@ const SectionIntroduction = ({ assets }) => (
           <Subline>…and file ignore pattern.</Subline>
         </Text>
         <Visualization>
-          <Image
-            alt="Screenshot showing ignore pattern files"
-            dropShadow
-            fluid={assets.images["extension-pattern-ignore.png"]}
-            rounded
-          />
+          <Image alt="Screenshot showing ignore pattern files" dropShadow fluid={assets.images["extension-pattern-ignore.png"]} rounded />
         </Visualization>
       </FeatureDuo>
     </Content>

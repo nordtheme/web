@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -18,14 +14,11 @@ import {
   SectionPalettesContrast,
   SectionPalettesModularity,
   SectionPorts,
-  SectionSyntax
+  SectionSyntax,
 } from "organisms/page/landing";
 
 /**
  * The landing page component representing the root/index of the site.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @version 0.23.0
  * @since 0.1.0
  */

@@ -1,16 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
 import { em } from "polished";
 
-import { renderWithTheme } from "nord-docs-test-utils";
+import { renderWithTheme } from "nord-web-test-utils";
 import NavList from "organisms/core/Header/styled/NavList";
 import { media } from "styles/theme";
 
@@ -21,7 +17,7 @@ describe("theme styles", () => {
 
     expect(container.firstChild).toHaveStyleRule("display", "none");
     expect(container.firstChild).toHaveStyleRule("display", "flex", {
-      media: mediaQuery
+      media: mediaQuery,
     });
     expect(container.firstChild).toMatchSnapshot();
   });

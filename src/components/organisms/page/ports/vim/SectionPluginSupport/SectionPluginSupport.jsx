@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,9 +20,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_VIM, 4);
 
 /**
  * The component that represents the plugin support section for the landing page of the "Nord Vim" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.13.0
  */
 const SectionPluginSupport = ({ assets }) => (
@@ -35,10 +28,7 @@ const SectionPluginSupport = ({ assets }) => (
       <FeatureDuo columnRatio={[1, 2]}>
         <Text>
           <Headline>Take your favorite plugins with you.</Headline>
-          <Subline>
-            The theme supports many popular UI and syntax plugins for great highlighting and fluid and unobtrusive user
-            interface transition.
-          </Subline>
+          <Subline>The theme supports many popular UI and syntax plugins for great highlighting and fluid and unobtrusive user interface transition.</Subline>
         </Text>
         <Visualization>
           <Image
@@ -48,8 +38,7 @@ const SectionPluginSupport = ({ assets }) => (
             rounded
           >
             <span>
-              Vims sign column with enabled <Link href="https://github.com/airblade/vim-gitgutter">vim-gitgutter</Link>{" "}
-              plugin.
+              Vims sign column with enabled <Link href="https://github.com/airblade/vim-gitgutter">vim-gitgutter</Link> plugin.
             </span>
           </Image>
         </Visualization>
@@ -63,15 +52,13 @@ const SectionPluginSupport = ({ assets }) => (
             rounded
           >
             <span>
-              <Link href="https://github.com/itchyny/lightline.vim">lightline.vim</Link> with custom elements and
-              separators.
+              <Link href="https://github.com/itchyny/lightline.vim">lightline.vim</Link> with custom elements and separators.
             </span>
           </Image>
         </Visualization>
         <Text>
           <Subline>
-            Nord comes bundled with themes for{" "}
-            <Link href="https://github.com/itchyny/lightline.vim">lightline.vim</Link> and{" "}
+            Nord comes bundled with themes for <Link href="https://github.com/itchyny/lightline.vim">lightline.vim</Link> and{" "}
             <Link href="https://github.com/vim-airline/vim-airline">vim-airline</Link>.
           </Subline>
         </Text>
@@ -106,8 +93,8 @@ const SectionPluginSupport = ({ assets }) => (
         </Visualization>
         <Text>
           <Subline>
-            Beautiful syntax highlighting with support for <Link href="https://github.com/fatih/vim-go">vim-go</Link>{" "}
-            and <Link href="https://github.com/vim-airline/vim-airline">vim-airline</Link>.
+            Beautiful syntax highlighting with support for <Link href="https://github.com/fatih/vim-go">vim-go</Link> and{" "}
+            <Link href="https://github.com/vim-airline/vim-airline">vim-airline</Link>.
           </Subline>
         </Text>
       </FeatureDuo>

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import CardAction from "./CardAction";
@@ -19,16 +15,4 @@ import CardLine from "./CardLine";
 import CardLogo from "./CardLogo";
 import { cardBasePropTypes } from "./propTypes";
 
-export {
-  CardAction,
-  BaseCard,
-  Card,
-  CardItem,
-  CardItemDot,
-  CardItemLink,
-  CardItems,
-  CardItemWrapper,
-  CardLine,
-  CardLogo,
-  cardBasePropTypes
-};
+export { CardAction, BaseCard, Card, CardItem, CardItemDot, CardItemLink, CardItems, CardItemWrapper, CardLine, CardLogo, cardBasePropTypes };

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,9 +22,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_EMACS, 4);
 
 /**
  * The component that represents the theme configuration section for the landing page of the "Nord Emacs" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.17.0
  */
 const SectionConfigurations = ({ assets }) => (
@@ -44,18 +37,16 @@ const SectionConfigurations = ({ assets }) => (
           >
             <span>
               Selection in the editor with enabled <Code>frost</Code>{" "}
-              <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#region-highlight-style`}>region highlight style</Link>{" "}
-              configuration.
+              <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#region-highlight-style`}>region highlight style</Link> configuration.
             </span>
           </Image>
         </Visualization>
         <Text>
           <Headline>Configure it to fit your needs.</Headline>
           <Subline>
-            Theme configurations like different{" "}
-            <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#region-highlight-style`}>region highlight styles</Link>{" "}
-            or <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#uniform-mode-lines`}>uniform mode lines</Link> allow
-            to customize the theme to match your personal preferences.
+            Theme configurations like different <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#region-highlight-style`}>region highlight styles</Link> or{" "}
+            <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#uniform-mode-lines`}>uniform mode lines</Link> allow to customize the theme to match your
+            personal preferences.
           </Subline>
           <Actions>
             <Button ghost href={ROUTE_DOCS_PORTS_EMACS_CONFIGURATION} outlined quiet variant="primary">
@@ -75,8 +66,7 @@ const SectionConfigurations = ({ assets }) => (
           >
             <span>
               Selection in the editor with enabled <Code>snowstorm</Code>{" "}
-              <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#region-highlight-style`}>region highlight style</Link>{" "}
-              configuration.
+              <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#region-highlight-style`}>region highlight style</Link> configuration.
             </span>
           </Image>
         </Visualization>
@@ -100,9 +90,8 @@ const SectionConfigurations = ({ assets }) => (
       <FeatureDuo columnRatio={[1, 2]}>
         <Text>
           <Subline>
-            Customize UI elements like{" "}
-            <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#uniform-mode-lines`}>uniform mode lines</Link> to adjust
-            Emacs overall appearance.
+            Customize UI elements like <Link to={`${ROUTE_DOCS_PORTS_EMACS_CONFIGURATION}#uniform-mode-lines`}>uniform mode lines</Link> to adjust Emacs overall
+            appearance.
           </Subline>
         </Text>
         <Visualization>

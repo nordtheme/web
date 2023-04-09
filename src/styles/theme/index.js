@@ -1,17 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file The global theme.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.2.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import breakpoints from "./breakpoints";
@@ -22,15 +11,14 @@ import motion from "./motion";
 import normalize from "./normalize";
 import { generateMediaQuery, ms, themedMode, themedModeVariant, zIndexFor } from "./utils";
 import typography from "./typography";
-import {
-  MODE_BRIGHT_SNOW_FLURRY,
-  MODE_DARK_NIGHT_FROST,
-  THEME_KEY_MODE,
-  Z_INDEX_ELEMENTS,
-  Z_INDEX_ELEMENT_ORDER
-} from "./constants";
+import { MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST, THEME_KEY_MODE, Z_INDEX_ELEMENTS, Z_INDEX_ELEMENT_ORDER } from "./constants";
 
 const theme = { breakpoints, colors, media, motion, typography };
+
+/**
+ * @file The global theme.
+ * @since 0.2.0
+ */
 
 export {
   colors,
@@ -50,7 +38,6 @@ export {
   MODE_DARK_NIGHT_FROST,
   THEME_KEY_MODE,
   Z_INDEX_ELEMENTS,
-  Z_INDEX_ELEMENT_ORDER
+  Z_INDEX_ELEMENT_ORDER,
 };
-
 export default theme;

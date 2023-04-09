@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import { getSemVerFromGitDescribe } from "utils";
@@ -52,8 +48,8 @@ describe("rejects incompatible SemVer versions", () => {
       `_v${VERSION}`,
       `v_${VERSION}`,
       ` ${VERSION}`,
-      ` v${VERSION}`
-    ].forEach(invalidVersionPrefix => expect(getSemVerFromGitDescribe(invalidVersionPrefix)).toBeNull());
+      ` v${VERSION}`,
+    ].forEach((invalidVersionPrefix) => expect(getSemVerFromGitDescribe(invalidVersionPrefix)).toBeNull());
   });
 });
 

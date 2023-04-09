@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
+ */
+
 import styled from "styled-components";
 import posed from "react-pose";
 import { em } from "polished";
@@ -9,9 +14,6 @@ import { slideMenuNavigationPoseConfig } from "./poseConfig";
 
 /**
  * A compact responsive menu for small width layouts with a sliding animation starting below the main header container.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
 const SlideMenuBox = styled(posed.div(slideMenuNavigationPoseConfig))`

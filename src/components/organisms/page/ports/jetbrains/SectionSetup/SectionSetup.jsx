@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,14 +22,11 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_JETBRAINS, 5);
 
 /**
  * The component that represents the hero section for the landing page of the "Nord JetBrains" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.12.0
  */
 const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { pluginRepositoryUrl } = portMetadata.find(port => port.name === "nord-jetbrains");
+  const { pluginRepositoryUrl } = portMetadata.find((port) => port.name === "jetbrains");
 
   return (
     <Section id={SECTION_ID} variant="secondary">
@@ -42,9 +35,8 @@ const SectionSetup = ({ assets }) => {
           <Text verticalOnly>
             <Headline>Installation and updates with one click.</Headline>
             <Subline>
-              Install Nord from the <Link href={pluginRepositoryUrl}>official JetBrains Plugin Repository</Link> for all
-              your favorite JetBrain IDEs with one click including automatic updates to always use the latest Nord
-              version.
+              Install Nord from the <Link href={pluginRepositoryUrl}>official JetBrains Plugin Repository</Link> for all your favorite JetBrain IDEs with one
+              click including automatic updates to always use the latest Nord version.
             </Subline>
             <Actions>
               <Button to={pluginRepositoryUrl} variant="primary">
@@ -56,12 +48,7 @@ const SectionSetup = ({ assets }) => {
             </Actions>
           </Text>
           <Visualization>
-            <Image
-              alt="Screenshot showing the builtin IDE plugin marketplace"
-              dropShadow
-              fluid={assets.images["ui-plugins-installed.png"]}
-              rounded
-            >
+            <Image alt="Screenshot showing the builtin IDE plugin marketplace" dropShadow fluid={assets.images["ui-plugins-installed.png"]} rounded>
               <span>JetBrains builtin IDE plugin marketplace.</span>
             </Image>
           </Visualization>

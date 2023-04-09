@@ -1,26 +1,14 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides motion speed values.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://material.io/design/motion/speed.html
- * @since 0.2.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 /**
  * The values for motion durations.
  *
  * @type {object}
- * @see https://material.io/design/motion/speed.html#duration
  * @since 0.2.0
+ * @see https://m2.material.io/design/motion/speed.html#controlling-speed
  */
 const duration = {
   unit: "ms",
@@ -31,21 +19,26 @@ const duration = {
       fullscreen: 400,
       large: 300,
       medium: 250,
-      small: 100
+      small: 100,
     },
     text: {
-      fade: 200
-    }
-  }
+      fade: 200,
+    },
+  },
 };
 
 /**
  * The values for motion speed.
- *
  * @type {object}
  * @since 0.2.0
  */
 const speed = { duration };
+
+/**
+ * @file Provides motion speed values.
+ * @see https://material.io/design/motion/speed.html
+ * @since 0.2.0
+ */
 
 export { duration };
 export default speed;

@@ -1,18 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 /**
- * @file Implementation of Gatsby Node APIs.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://gatsbyjs.org/docs/node-apis
+ * @file Implementation of the Gatsby Node APIs.
  * @since 0.1.0
+ * @see https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node
  */
 
 exports.onCreateBabelConfig = require("./.gatsby/onCreateBabelConfig");

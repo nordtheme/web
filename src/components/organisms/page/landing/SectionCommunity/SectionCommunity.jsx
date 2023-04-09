@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React, { PureComponent } from "react";
@@ -22,16 +18,12 @@ const SECTION_ID = sectionIdFor(ROUTE_ROOT, 6);
 
 /**
  * The component that represents the community section of the landing page.
- * It handles the state for the rendered "Arctic Ocean Fractal" SVG animation component that is triggered through a
- * waypoint with a bottom offset.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * It handles the state for the rendered "Arctic Ocean Fractal" SVG animation component that is triggered through a waypoint with a bottom offset.
  * @since 0.6.0
  */
 export default class SectionCommunity extends PureComponent {
   state = {
-    arcticOceanFractalPose: POSE_HIDE
+    arcticOceanFractalPose: POSE_HIDE,
   };
 
   handleArcticOceanFractalWaypointEnter = () => this.setState({ arcticOceanFractalPose: POSE_SHOW });
@@ -46,8 +38,7 @@ export default class SectionCommunity extends PureComponent {
             <Text>
               <Headline>Never swim alone in the big arctic ocean.</Headline>
               <Subline>
-                Join the community for news and updates around Nord and chat with many other developers & designers,
-                submit your ideas or ask for help.
+                Join the community for news and updates around Nord and chat with many other developers & designers, submit your ideas or ask for help.
               </Subline>
               <Actions>
                 <Button ghost outlined quiet to={ROUTE_COMMUNITY} variant="primary">

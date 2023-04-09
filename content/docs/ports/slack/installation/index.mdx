@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { useClipboard } from "use-clipboard-copy";
 import { Clipboard } from "atoms/core/vectors/icons";
@@ -10,10 +15,10 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Installation & Activation",
-  subline: "Get up and running with one line of code."
+  subline: "Get up and running with one line of code.",
 };
 
-export const ColorValues = function() {
+export const ColorValues = function () {
   const clipboard = useClipboard();
   function handleTextInputFocus({ target }) {
     target.select();
@@ -69,10 +74,7 @@ Thanks to [Slack's simply shareable custom themes][slk-help-themes], _Nord Slack
 >
   <span>
     The workspace preferences UI to{" "}
-    <Link href="https://get.slack.help/hc/en-us/articles/205166337-Customize-your-Slack-theme">
-      install and activate custom themes
-    </Link>
-    .
+    <Link href="https://get.slack.help/hc/en-us/articles/205166337-Customize-your-Slack-theme">install and activate custom themes</Link>.
   </span>
 </Image>
 

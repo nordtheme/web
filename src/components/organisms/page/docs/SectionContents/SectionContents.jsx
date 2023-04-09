@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -23,22 +19,13 @@ const SECTION_ID = sectionIdFor(ROUTE_DOCS, 1);
 
 /**
  * The component that represents the contents section of the docs page.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.8.0
  */
 const SectionContents = () => (
   <Section id={SECTION_ID} variant="tertiary">
     <Content centered>
       <CardGrid>
-        <ContentsCard
-          accentColor={colors.nord8}
-          logoComponent={Zap}
-          svgType="stroke"
-          title="Getting Started"
-          topics={topicsGettingStarted}
-        >
+        <ContentsCard accentColor={colors.nord8} logoComponent={Zap} svgType="stroke" title="Getting Started" topics={topicsGettingStarted}>
           Get to know the color palettes, use the native swatches or integrate the colors in your own projects.
         </ContentsCard>
         <ContentsCard accentColor={colors.nord10} logoComponent={BookOpen} title="References" topics={topicsReferences}>

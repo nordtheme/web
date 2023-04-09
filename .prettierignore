@@ -1,12 +1,12 @@
-# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
-#
-# Project:    Nord Docs
-# Repository: https://github.com/arcticicestudio/nord-docs
-# License:    MIT
+# Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+# This source code is licensed under the MIT license found in the license file.
 
-.cache/*
-build/*
-**/node_modules/*
-public/*
-static/*
+# Path match pattern to ignore (i.e. not reformat) certain files and folders.
+# See https://prettier.io/docs/en/ignore for more details.
+
+.cache/
+.husky/_/
+build/
+node_modules/
+public/
+static/

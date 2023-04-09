@@ -1,24 +1,17 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file The Babel configuration for Jest.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://jestjs.io/docs/en/getting-started#using-babel
- * @see https://www.gatsbyjs.org/docs/testing
- * @since 0.1.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 const jestBabelConfig = {
   presets: ["babel-preset-gatsby"],
-  plugins: ["@babel/plugin-proposal-optional-chaining", "@babel/plugin-proposal-export-default-from"]
+  plugins: ["@babel/plugin-proposal-optional-chaining", "@babel/plugin-proposal-export-default-from"],
 };
 
+/**
+ * Babel configurations for Jest.
+ * @since 0.1.0
+ * @see https://jestjs.io/docs/getting-started#using-babel
+ * @see https://www.gatsbyjs.com/docs/how-to/testing
+ */
 module.exports = require("babel-jest").createTransformer(jestBabelConfig);

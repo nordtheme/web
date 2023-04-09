@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import { modularScale } from "polished";
@@ -13,15 +9,12 @@ import typography from "../typography";
 
 /**
  * Shorthand function for polished's `modularScale` helper with pre-configured base and ratio values.
- *
  * @method ms
  * @param {number} step The step to scale up or down.
- * @return {string} The calulcated scale with the `em` unit.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://polished.js.org/docs/#modularscale
+ * @return {string} The calculated scale with the `em` unit.
  * @since 0.3.0
+ * @see https://polished.js.org/docs/#modularscale
  */
-const ms = step => modularScale(step, `${typography.sizes.msBase}em`, typography.sizes.msName);
+const ms = (step) => modularScale(step, `${typography.sizes.msBase}em`, typography.sizes.msName);
 
 export default ms;

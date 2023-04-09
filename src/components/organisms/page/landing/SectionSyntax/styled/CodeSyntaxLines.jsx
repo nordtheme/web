@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -21,25 +17,24 @@ const transitionSpringEaseInQuad = {
   type: "tween",
   /**
    * The `ease-in-quad` transition easing values.
-   *
    * @see https://easings.net/#easeInQuad
    */
   ease: [0.55, 0.085, 0.68, 0.53],
-  duration: 1000
+  duration: 1000,
 };
 
 const poseConfig = {
   [POSE_DRAW]: {
     pathLength: 100,
-    transition: { pathLength: { ...transitionSpringEaseInQuad } }
+    transition: { pathLength: { ...transitionSpringEaseInQuad } },
   },
   [POSE_ERASE]: {
     pathLength: 0,
-    transition: { pathLength: { ...transitionSpringEaseInQuad } }
+    transition: { pathLength: { ...transitionSpringEaseInQuad } },
   },
   passive: {
-    strokeLinecap: ["pathLength", v => (v === 0 ? "butt" : "round")]
-  }
+    strokeLinecap: ["pathLength", (v) => (v === 0 ? "butt" : "round")],
+  },
 };
 
 const Svg = styled(posed.svg())`
@@ -52,17 +47,11 @@ const CodeLine = posed.path(poseConfig);
 
 /**
  * An SVG vector component that renders an editor window with animated code lines.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
  */
 const CodeSyntaxLines = ({ pose, ...passProps }) => (
   <Svg pose={pose} viewBox="0 0 241.064 336.69" xmlns="http://www.w3.org/2000/svg" {...passProps}>
-    <path
-      d="M0 8c0-4.4 3.6-8 8-8h225.064c4.4 0 8 3.6 8 8v320.69c0 4.4-3.6 8-8 8H8c-4.4 0-8-3.6-8-8V8z"
-      fill={nord.nord1}
-    />
+    <path d="M0 8c0-4.4 3.6-8 8-8h225.064c4.4 0 8 3.6 8 8v320.69c0 4.4-3.6 8-8 8H8c-4.4 0-8-3.6-8-8V8z" fill={nord.nord1} />
     <g fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="5">
       <CodeLine d="M17.603 21.61H133.32m23.483 289.185h15.674m6.716 0h19.387" stroke={nord.nord3} />
       <CodeLine d="M17.603 32.478h37.08M29.269 256.514h35.579" stroke={nord.nord12} />
@@ -80,22 +69,13 @@ const CodeSyntaxLines = ({ pose, ...passProps }) => (
         stroke={nord.nord4}
       />
       <CodeLine d="M196.642 119.307h25.202" stroke={nord.nord6} />
-      <CodeLine
-        d="M162.701 130.174h35.879m-87.348 21.707h17.721m-37.982 21.708h39.757m-17.449 21.708h25.23m14.471 32.574h34.923"
-        stroke={nord.nord4}
-      />
+      <CodeLine d="M162.701 130.174h35.879m-87.348 21.707h17.721m-37.982 21.708h39.757m-17.449 21.708h25.23m14.471 32.574h34.923" stroke={nord.nord4} />
       <CodeLine d="M179.193 217.004h19.387" stroke={nord.nord6} />
-      <CodeLine
-        d="M221.844 245.674h-81.423m64.002 21.707h17.421m-130.873 10.84h27.141m-4.833 10.868h25.23"
-        stroke={nord.nord4}
-      />
+      <CodeLine d="M221.844 245.674h-81.423m64.002 21.707h17.421m-130.873 10.84h27.141m-4.833 10.868h25.23" stroke={nord.nord4} />
       <CodeLine d="M152.98 321.663h34.923" stroke={nord.nord6} />
       <CodeLine d="M90.971 321.663h31.428" stroke={nord.nord4} />
       <CodeLine d="M17.603 43.317H77.4M17.603 162.721H77.4" stroke={nord.nord10} />
-      <CodeLine
-        d="M133.621 65.024h44.111m6.54 0h13.161M90.971 184.442h27.141m66.16 93.779h13.161"
-        stroke={nord.nord14}
-      />
+      <CodeLine d="M133.621 65.024h44.111m6.54 0h13.161M90.971 184.442h27.141m66.16 93.779h13.161" stroke={nord.nord14} />
       <CodeLine
         d="M167.562 54.185h20.341m-74.624 21.707h25.23m-71.348 75.989h35.087m38.173 0h56.356m-12.505 32.561h13.161m-53.327 10.855h46.965m-50.65 72.084h29.543"
         stroke={nord.nord8}
@@ -117,7 +97,7 @@ const CodeSyntaxLines = ({ pose, ...passProps }) => (
 );
 
 CodeSyntaxLines.propTypes = {
-  pose: PropTypes.oneOf([POSE_DRAW, POSE_ERASE]).isRequired
+  pose: PropTypes.oneOf([POSE_DRAW, POSE_ERASE]).isRequired,
 };
 
 export { POSE_DRAW, POSE_ERASE };

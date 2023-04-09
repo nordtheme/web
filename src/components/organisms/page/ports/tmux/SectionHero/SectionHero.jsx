@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -25,14 +21,11 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_TMUX, 0);
 
 /**
  * The component that represents the hero section for the landing page of the "Nord tmux" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
 const SectionHero = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-tmux");
+  const { gitHubRepositoryUrl } = portMetadata.find((port) => port.name === "tmux");
 
   return (
     <Section id={SECTION_ID}>
@@ -57,12 +50,7 @@ const SectionHero = ({ assets }) => {
             </Actions>
           </Text>
           <Visualization>
-            <Image
-              alt="Screenshot showing the terminal with active tmux session"
-              dropShadow
-              fluid={assets.images["overview.png"]}
-              rounded
-            >
+            <Image alt="Screenshot showing the terminal with active tmux session" dropShadow fluid={assets.images["overview.png"]} rounded>
               <span>
                 Terminal with active <em>tmux</em> session.
               </span>

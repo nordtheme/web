@@ -1,16 +1,12 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
 import { stripUnit } from "polished";
 
-import { renderWithTheme } from "nord-docs-test-utils";
+import { renderWithTheme } from "nord-web-test-utils";
 import { SitemapLink } from "organisms/core/Footer/styled";
 
 describe("theme styles", () => {
@@ -19,10 +15,10 @@ describe("theme styles", () => {
 
     expect(container.firstChild).toHaveStyleRule("padding", expect.stringContaining("em"));
     expect(container.firstChild).toHaveStyleRule("padding-bottom", "0", {
-      modifier: ":last-child"
+      modifier: ":last-child",
     });
     expect(container.firstChild).toHaveStyleRule("padding-top", "0", {
-      modifier: ":first-child"
+      modifier: ":first-child",
     });
   });
 
@@ -38,7 +34,7 @@ describe("theme styles", () => {
     const { container } = renderWithTheme(<SitemapLink>Nord</SitemapLink>);
 
     expect(container.firstChild).toHaveStyleRule("color", expect.any(String), {
-      modifier: ":hover"
+      modifier: ":hover",
     });
   });
 

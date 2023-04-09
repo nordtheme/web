@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import { decodeCodeCharacterHtmlEntities } from "utils";
@@ -21,7 +17,7 @@ describe("HTML entities are", () => {
       "@": "&#64;",
       "~": "&#126;",
       "©": "&#169;",
-      ä: "&#228;"
+      ä: "&#228;",
     };
     Object.entries(encodedEntities).forEach(([key, value]) => {
       expect(decodeCodeCharacterHtmlEntities(value)).toEqual(key);
@@ -40,7 +36,7 @@ describe("HTML entities are", () => {
       "@": "&commat;",
       "~": "&tilde;",
       "©": "&copy;",
-      ä: "&auml;"
+      ä: "&auml;",
     };
     Object.entries(encodedEntities).forEach(([key, value]) => {
       expect(decodeCodeCharacterHtmlEntities(value)).not.toEqual(key);

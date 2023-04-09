@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -15,7 +11,7 @@ import { colors, motion, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FR
 
 const backgroundColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.nord0,
-  [MODE_DARK_NIGHT_FROST]: colors.nord3
+  [MODE_DARK_NIGHT_FROST]: colors.nord3,
 });
 
 const Container = styled.div`
@@ -32,9 +28,6 @@ const Container = styled.div`
 
 /**
  * The logo of a port project card.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
 const CardLogo = ({ svgComponent: SvgComponent, ...passProps }) => (
@@ -44,7 +37,7 @@ const CardLogo = ({ svgComponent: SvgComponent, ...passProps }) => (
 );
 
 CardLogo.propTypes = {
-  svgComponent: PropTypes.node.isRequired
+  svgComponent: PropTypes.node.isRequired,
 };
 
 export default CardLogo;
