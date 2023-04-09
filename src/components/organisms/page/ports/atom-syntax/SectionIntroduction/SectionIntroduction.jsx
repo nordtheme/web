@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -22,10 +18,7 @@ import WaveDivider from "./styled/WaveDivider";
 const SECTION_ID = sectionIdFor(ROUTE_PORTS_ATOM_SYNTAX, 1);
 
 /**
- * The component that represents the introduction section for the landing page of the "Nord Aom Syntax" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * The component that represents the introduction section for the landing page of the "Nord Atom Syntax" port project.
  * @since 0.19.0
  */
 const SectionIntroduction = ({ assets }) => (
@@ -34,9 +27,7 @@ const SectionIntroduction = ({ assets }) => (
       <FeatureDuo columnRatio={[1, 2]}>
         <Text>
           <Headline>Your IDE. Your style.</Headline>
-          <Subline>
-            The unified UI and editor syntax element design provides a clutter-free and fluidly merging appearance.
-          </Subline>
+          <Subline>The unified UI and editor syntax element design provides a clutter-free and fluidly merging appearance.</Subline>
         </Text>
         <Visualization>
           <Image

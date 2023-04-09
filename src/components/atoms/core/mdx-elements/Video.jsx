@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React, { useRef, useState } from "react";
@@ -52,12 +48,8 @@ const PosterImage = styled(Image)`
 
 /**
  * An video wrapped in a `<figure>` element with an optional caption.
- * Note that the video is muted and blocked for autoplay (deconstructed `autoPlay` prop) by default to prevent problems
- * with browser-specific autoplay blocking mechanisms. The autoplay logic is handled by the component to allow to make
- * use of "Gatsby Sharp" for a responsive poster image.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * Note that the video is muted and blocked for autoplay (deconstructed `autoPlay` prop) by default to prevent problems with browser-specific autoplay
+ * blocking mechanisms. The autoplay logic is handled by the component to allow to make use of "Gatsby Sharp" for a responsive poster image.
  * @since 0.10.0
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
  * @see https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event
@@ -90,18 +82,11 @@ const Video = ({ autoPlay, children, dropShadow, fillSize, poster, rounded, sour
         rounded={rounded}
         {...passProps}
       >
-        {sources.map(src => (
+        {sources.map((src) => (
           <source key={src.publicURL} src={src?.publicURL} type={`video/${src.extension}`} />
         ))}
       </Vid>
-      <PosterImage
-        dropShadow={dropShadow}
-        fillSize={fillSize}
-        fluid={poster}
-        hasCaption={!!children}
-        rounded={rounded}
-        videoLoaded={videoLoaded}
-      />
+      <PosterImage dropShadow={dropShadow} fillSize={fillSize} fluid={poster} hasCaption={!!children} rounded={rounded} videoLoaded={videoLoaded} />
       {children && <FigCaption>{children}</FigCaption>}
     </Container>
   );
@@ -114,7 +99,7 @@ Video.propTypes = {
   fillSize: PropTypes.number,
   poster: PropTypes.shape({ ...contentMdxImageFluidPropTypes }).isRequired,
   rounded: PropTypes.bool,
-  sources: PropTypes.arrayOf(PropTypes.shape({ ...contentMdxMediaFilePropTypes })).isRequired
+  sources: PropTypes.arrayOf(PropTypes.shape({ ...contentMdxMediaFilePropTypes })).isRequired,
 };
 
 Video.defaultProps = {
@@ -122,7 +107,7 @@ Video.defaultProps = {
   children: null,
   dropShadow: false,
   fillSize: 100,
-  rounded: false
+  rounded: false,
 };
 
 export default Video;

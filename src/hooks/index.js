@@ -1,21 +1,14 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides project wide React hooks.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.9.0
- * @see https://reactjs.org/docs/hooks-intro.html
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import usePortsAssets from "./usePortsAssets";
 import usePortsMetadata from "./usePortsMetadata";
 
+/**
+ * @file Provides project wide React hooks.
+ * @since 0.9.0
+ * @see https://react.dev/learn/reusing-logic-with-custom-hooks
+ */
 export { usePortsAssets, usePortsMetadata };

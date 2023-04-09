@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import styled from "styled-components";
@@ -14,14 +10,11 @@ import { colors, motion, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FR
 
 const fillColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.background.sectioning.secondary[MODE_BRIGHT_SNOW_FLURRY],
-  [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.secondary[MODE_DARK_NIGHT_FROST]
+  [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.secondary[MODE_DARK_NIGHT_FROST],
 });
 
 /**
  * A "rough" vector wave to render a visual differentiation to the next section.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.16.0
  */
 const WaveDivider = styled(WaveRough)`

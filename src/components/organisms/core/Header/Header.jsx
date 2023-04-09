@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 /* eslint-disable react/no-multi-comp */
@@ -43,15 +39,14 @@ import {
   SLIDE_MENU_NAV_LINK_CLOSED_POSE,
   SLIDE_MENU_NAV_LINK_INITIAL_POSE,
   SLIDE_MENU_NAV_LINK_OPEN_POSE,
-  THEME_MODE_SWITCH_ICON_INITIAL_POSE
+  THEME_MODE_SWITCH_ICON_INITIAL_POSE,
 } from "./styled";
 
 /**
  * The populated and rendered list of navigation links.
- *
  * @since 0.3.0
  */
-const RenderedNavListItems = React.memo(props =>
+const RenderedNavListItems = React.memo((props) =>
   navigationItems.map(({ title, url }) => (
     <NavLink key={`${title}-${url}`} to={url} {...props}>
       {title}
@@ -60,11 +55,10 @@ const RenderedNavListItems = React.memo(props =>
 ); // eslint-disable-line function-paren-newline
 
 /**
- * The populateed and rendered list of slide menu navigation links.
- *
+ * The populated and rendered list of slide menu navigation links.
  * @since 0.3.0
  */
-const RenderedSlideMenuNavListItems = React.memo(props =>
+const RenderedSlideMenuNavListItems = React.memo((props) =>
   navigationItems.map(({ title, url }) => (
     <SlideMenuNavLink key={`${title}-${url}`} initialPose={SLIDE_MENU_NAV_LINK_INITIAL_POSE} to={url} {...props}>
       {title}
@@ -73,17 +67,11 @@ const RenderedSlideMenuNavListItems = React.memo(props =>
 ); // eslint-disable-line function-paren-newline
 
 /**
- * The header component that provides Nord's branding caption and logo, the main navigation and a button to toggle
- * between the availabe global theme modes.
- * The sticky position at the top of the site allows quick access to the navigation while also being inconspicuous, but
- * will change into pinned (collapsed) mode as soon as the user scrolls down. It will switch into unpinned (expanded)
- * mode again when at top of the site.
- * In unpinned mode, the height of the header is larger and the brand caption of the logo will be visible. When
- * switching into pinned mode the height will decrease and the logo caption fades out with a smooth transition
- * animation.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * The header component that provides Nord's branding caption and logo, the main navigation and a button to toggle between the available global theme modes.
+ * The sticky position at the top of the site allows quick access to the navigation while also being inconspicuous, but will change into pinned (collapsed)
+ * mode as soon as the user scrolls down. It will switch into unpinned (expanded) mode again when at top of the site.
+ * In unpinned mode, the height of the header is larger and the brand caption of the logo will be visible. When switching into pinned mode the height will
+ * decrease and the logo caption fades out with a smooth transition animation.
  * @since 0.3.0
  */
 export default class Header extends PureComponent {
@@ -114,14 +102,14 @@ export default class Header extends PureComponent {
     /**
      * The name of the style variant.
      */
-    variant: PropTypes.string
+    variant: PropTypes.string,
   };
 
   static defaultProps = {
     height: HEADER_HEIGHT,
     heightPinned: HEADER_HEIGHT_PINNED,
     pinStart: 0,
-    variant: "base"
+    variant: "base",
   };
 
   state = {
@@ -133,7 +121,7 @@ export default class Header extends PureComponent {
     /**
      * Indicates if the slide menu is opened.
      */
-    isSlideMenuOpen: false
+    isSlideMenuOpen: false,
   };
 
   componentDidMount() {
@@ -146,21 +134,17 @@ export default class Header extends PureComponent {
   static getDerivedStateFromProps(props, state) {
     if (typeof window !== "undefined") {
       /*
-       * The default "scroll-into-view" behavior of Firefox in combination with Gatsby's builtin scroll position
-       * handling causes the header to expand two times when switching from a route where the header was pinned
-       * (position was scrolled) to another route where the position is at the top, chaging the header to the unpinned
-       * state. As soon as the new route has been loaded the header gets mounted in unpinned mode, but due to the
-       * previously scrolled site position immediately changed to pinned mode and then directly back to unpinned mode
-       * again. This state changes resulting in a short, but clearly visible visual glitch.
-       * The behavior is currently only reproducible for Firefox. Other tested desktop browsers like Google Chrome,
-       * Chromium and Safari don't use the "scroll-into-view" technique and instead showing the correct header state
-       * immediately.
+       * The default "scroll-into-view" behavior of Firefox in combination with Gatsby's builtin scroll position handling causes the header to expand two
+       * times when switching from a route where the header was pinned (position was scrolled) to another route where the position is at the top, changing
+       * the header to the unpinned state. As soon as the new route has been loaded the header gets mounted in unpinned mode, but due to the previously
+       * scrolled site position immediately changed to pinned mode and then directly back to unpinned mode again. This state changes resulting in a short,
+       * but clearly visible visual glitch.
+       * The behavior is currently only reproducible for Firefox. Other tested desktop browsers like Google Chrome, Chromium and Safari don't use the
+       * "scroll-into-view" technique and instead showing the correct header state immediately.
        *
-       * Checking for the actual scroll position and current pinning mode allows to prevent the one unnecessary state
-       * change by mutating the state before the component gets commited. Note that this change is has also a posiive
-       * side effect for other tested browsers without the problem: When the new routes gets loaded the header will now
-       * be animated with the visual expand effect instead of just being rendered instantly.
-       *
+       * Checking for the actual scroll position and current pinning mode allows to prevent the one unnecessary state change by mutating the state before
+       * the component gets committed. Note that this change is has also a positive side effect for other tested browsers without the problem: When the new
+       * routes gets loaded the header will now be animated with the visual expand effect instead of just being rendered instantly.
        */
       if (window.scrollY > props.pinStart && state.isPinned === false) {
         return { isPinned: true };
@@ -170,15 +154,14 @@ export default class Header extends PureComponent {
   }
 
   componentWillUnmount() {
-    this.uiSubscribers.map(sub => sub.unsubscribe());
+    this.uiSubscribers.map((sub) => sub.unsubscribe());
 
-    /* Ensure to release all scroll-locked elements when swithcing routes. */
+    /* Ensure to release all scroll-locked elements when switching routes. */
     clearAllBodyScrollLocks();
   }
 
   /**
    * Toggles the slide menu.
-   *
    * @method handleSlideMenuToggle
    * @return {void}
    */
@@ -211,13 +194,7 @@ export default class Header extends PureComponent {
     return (
       <Fragment>
         <TopContentPusher height={height} variant={variant} />
-        <StyledHeader
-          height={height}
-          heightPinned={heightPinned}
-          isPinned={isPinned}
-          isSlideMenuOpen={isSlideMenuOpen}
-          variant={variant}
-        >
+        <StyledHeader height={height} heightPinned={heightPinned} isPinned={isPinned} isSlideMenuOpen={isSlideMenuOpen} variant={variant}>
           <ContentBox centered>
             <LogoBannerBox>
               <A to={ROUTE_ROOT}>
@@ -236,11 +213,7 @@ export default class Header extends PureComponent {
                 {({ toggleThemeMode, mode }) => (
                   <ThemeModeSwitch onClick={toggleThemeMode} variant={variant}>
                     <PoseGroup preEnterPose={THEME_MODE_SWITCH_ICON_INITIAL_POSE}>
-                      {mode === MODE_BRIGHT_SNOW_FLURRY ? (
-                        <MoonIcon key="moon" />
-                      ) : (
-                        <SunIcon key="sun" reverseEnterDirection />
-                      )}
+                      {mode === MODE_BRIGHT_SNOW_FLURRY ? <MoonIcon key="moon" /> : <SunIcon key="sun" reverseEnterDirection />}
                     </PoseGroup>
                   </ThemeModeSwitch>
                 )}

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -25,14 +21,11 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_HIGHLIGHTJS, 2);
 
 /**
  * The component that represents the setup section for the landing page of the "Nord highlight.js" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.23.0
  */
 const SectionSetup = () => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-highlightjs");
+  const { gitHubRepositoryUrl } = portMetadata.find((port) => port.name === "highlightjs");
 
   return (
     <Section id={SECTION_ID}>
@@ -42,9 +35,7 @@ const SectionSetup = () => {
             <Headline>Installation in one line of code.</Headline>
             <Subline>Use Nord in one line of code added to your site.</Subline>
             <Subline>
-              <Code>
-                &#x3C;link href=&#x22;nord.css&#x22; rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; /&#x3E;
-              </Code>
+              <Code>&#x3C;link href=&#x22;nord.css&#x22; rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; /&#x3E;</Code>
             </Subline>
             <Actions>
               <Button to={ROUTE_DOCS_PORTS_HIGHLIGHTJS} variant="primary">

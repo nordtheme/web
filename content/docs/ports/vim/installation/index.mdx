@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { Code } from "atoms/core/html-elements";
@@ -8,7 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Installation & Activation",
-  subline: "Get up and running in a few lines of code with your favorite plugin manager or manual setup"
+  subline: "Get up and running in a few lines of code with your favorite plugin manager or manual setup",
 };
 
 <ShrinkedWidth value={25}>
@@ -46,15 +51,10 @@ Thanks to existing plugin/_runtimepath_ managers for Vim, Nord Vim can be instal
 
 To automatically download and activate Nord Vim, follow the install instructions for [vim-plug][gh-junegunn/vim-plug] and
 
-1. add `Plug 'arcticicestudio/nord-vim'` to your [`vimrc`][vimhelp-vimrc] within _vim-plug's_ plugin loading function
+1. add `Plug 'nordtheme/vim'` to your [`vimrc`][vimhelp-vimrc] within _vim-plug's_ plugin loading function
 2. run the `:PlugInstall` command in Vim
 
-<Image
-  dropShadow
-  fluid={props.images["vim-plug.png"]}
-  rounded
-  alt="Screenshot showing a minimal vimrc with installed and activated Nord color scheme"
->
+<Image dropShadow fluid={props.images["vim-plug.png"]} rounded alt="Screenshot showing a minimal vimrc with installed and activated Nord color scheme">
   <span>
     Minimal <Code>vimrc</Code> with installed and activated Nord color scheme
   </span>
@@ -63,13 +63,13 @@ To automatically download and activate Nord Vim, follow the install instructions
 By default, the [latest version][repo-rel-latest] will be installed. To use the [latest development state from the `develop` branch][repo-br-develop] instead, vim-plug allows to specify the branch:
 
 ```viml
-Plug 'arcticicestudio/nord-vim', { 'branch': 'develop' }
+Plug 'nordtheme/vim', { 'as': 'nord', 'branch': 'develop' }
 ```
 
 To install an explicit version the corresponding [Git tag][repo-tags] can be specified instead:
 
 ```viml
-Plug 'arcticicestudio/nord-vim', { 'tag': 'v0.11.0' }
+Plug 'nordtheme/vim', { 'as': 'nord', 'tag': 'v0.11.0' }
 ```
 
 ###### Manual
@@ -77,11 +77,7 @@ Plug 'arcticicestudio/nord-vim', { 'tag': 'v0.11.0' }
 To install Nord Vim manually, [download the latest version][repo-down-main] or [clone the repository][repo].
 Afterwards copy the [`nord.vim`][repo-tree-main-nord.vim] file into the `.vim/colors` located in your [home directory][wiki-home_dir].
 
-<Image
-  alt="Screenshot showing the GitHub repository web UI to download the project repository"
-  fillSize={60}
-  fluid={props.images["github-clone.png"]}
-/>
+<Image alt="Screenshot showing the GitHub repository web UI to download the project repository" fillSize={60} fluid={props.images["github-clone.png"]} />
 
 ## Activation
 
@@ -97,14 +93,14 @@ When using vim-plug the theme can also be configured to only automatically activ
 
 ```viml
 " Activate Nord Vim when editing Go files.
-Plug 'arcticicestudio/nord-vim', { 'for': 'go' }
+Plug 'nordtheme/vim', { 'as': 'nord', 'for': 'go' }
 ```
 
 …or on specific events.
 
 ```viml
 " Activate Nord Vim when toggling the NERDTree.
-Plug 'arcticicestudio/nord-vim', { 'on':  'NERDTreeToggle' }
+Plug 'nordtheme/vim', { 'as': 'nord', 'on':  'NERDTreeToggle' }
 ```
 
 </ShrinkedWidth>
@@ -113,12 +109,12 @@ Plug 'arcticicestudio/nord-vim', { 'on':  'NERDTreeToggle' }
 [gh-junegunn/vim-plug]: https://github.com/junegunn/vim-plug
 [gh-tpope/vim-pathogen]: https://github.com/tpope/vim-pathogen
 [gh-vundlevim/vundle.vim]: https://github.com/VundleVim/Vundle.vim
-[repo-br-develop]: https://github.com/arcticicestudio/nord-vim/tree/develop
-[repo-down-main]: https://github.com/arcticicestudio/nord-vim/archive/main.zip
-[repo-rel-latest]: https://github.com/arcticicestudio/nord-vim/releases/latest
-[repo-tags]: https://github.com/arcticicestudio/nord-vim/tags
-[repo-tree-main-nord.vim]: https://github.com/arcticicestudio/nord-vim/blob/main/colors/nord.vim
-[repo]: https://github.com/arcticicestudio/nord-vim
+[repo-br-develop]: https://github.com/nordtheme/vim/tree/develop
+[repo-down-main]: https://github.com/nordtheme/vim/archive/main.zip
+[repo-rel-latest]: https://github.com/nordtheme/vim/releases/latest
+[repo-tags]: https://github.com/nordtheme/vim/tags
+[repo-tree-main-nord.vim]: https://github.com/nordtheme/vim/blob/main/colors/nord.vim
+[repo]: https://github.com/nordtheme/vim
 [vimhelp-autocmd-augroup]: https://vimhelp.org/autocmd.txt.html#:augroup
 [vimhelp-autocmd]: https://vimhelp.org/autocmd.txt.html
 [vimhelp-vimrc]: https://vimhelp.org/starting.txt.html#vimrc

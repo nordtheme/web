@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -16,7 +12,7 @@ import { colors, media, motion, ms, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DA
 
 const fontColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.nord2,
-  [MODE_DARK_NIGHT_FROST]: colors.font.base[MODE_DARK_NIGHT_FROST]
+  [MODE_DARK_NIGHT_FROST]: colors.font.base[MODE_DARK_NIGHT_FROST],
 });
 
 const Headline = styled(H1)`
@@ -57,9 +53,6 @@ const Wrapper = styled.div`
 
 /**
  * A typography header consisting of a large headline and a subline.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
  */
 const PageTypoHead = ({ headline, fontScale, subline, ...passProps }) =>
@@ -73,12 +66,12 @@ const PageTypoHead = ({ headline, fontScale, subline, ...passProps }) =>
 PageTypoHead.propTypes = {
   fontScale: PropTypes.number.isRequired,
   headline: PropTypes.string,
-  subline: PropTypes.string
+  subline: PropTypes.string,
 };
 
 PageTypoHead.defaultProps = {
   headline: "",
-  subline: ""
+  subline: "",
 };
 
 export default PageTypoHead;

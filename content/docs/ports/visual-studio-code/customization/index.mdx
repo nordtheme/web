@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { Code } from "atoms/core/html-elements";
@@ -7,8 +12,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Customization",
-  subline:
-    "Not in agreement with all of Nord Visual Studio Code's design decisions? No problem — simply override every theme style you like."
+  subline: "Not in agreement with all of Nord Visual Studio Code's design decisions? No problem — simply override every theme style you like.",
 };
 
 <ShrinkedWidth value={25}>
@@ -67,12 +71,7 @@ The following example shows how to override the colors of the activity bar and b
 }
 ```
 
-<Image
-  dropShadow
-  fluid={props.images["example-workbench-ui-default.png"]}
-  rounded
-  alt="Screenshot showing the activity bar and badges with Nord theme styles"
->
+<Image dropShadow fluid={props.images["example-workbench-ui-default.png"]} rounded alt="Screenshot showing the activity bar and badges with Nord theme styles">
   <span>The activity bar and badges with Nord theme styles.</span>
 </Image>
 
@@ -100,9 +99,7 @@ VS Code comes with a pre-configured set of syntax tokens, e.g. `comments` or `st
   variant="warn"
 >
   Please read the guide about{" "}
-  <Link href="https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#textmate-grammars">
-    syntax highlighting with TextMate grammars
-  </Link>{" "}
+  <Link href="https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#textmate-grammars">syntax highlighting with TextMate grammars</Link>{" "}
   for more details about the syntax and usage guides.
 </Banner>
 
@@ -126,12 +123,7 @@ The following example shows how to override the foreground color of all comments
 }
 ```
 
-<Image
-  dropShadow
-  fluid={props.images["example-syntax-default.png"]}
-  rounded
-  alt="Screenshot showing comments and Go syntax with Nord theme styles"
->
+<Image dropShadow fluid={props.images["example-syntax-default.png"]} rounded alt="Screenshot showing comments and Go syntax with Nord theme styles">
   <span>Comments and Go syntax with Nord theme styles.</span>
 </Image>
 

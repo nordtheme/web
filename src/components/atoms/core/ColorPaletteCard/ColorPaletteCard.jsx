@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -20,13 +16,13 @@ const ColorCard = ({ color, ...passProps }) => (
 );
 
 ColorCard.propTypes = {
-  color: PropTypes.string.isRequired
+  color: PropTypes.string.isRequired,
 };
 
 const BaseCard = ({ colors, title, ...passProps }) => (
   <Card {...passProps}>
     <Palette>
-      {colors.map(c => (
+      {colors.map((c) => (
         <ColorCard key={c} color={c} />
       ))}
     </Palette>
@@ -36,21 +32,17 @@ const BaseCard = ({ colors, title, ...passProps }) => (
 
 BaseCard.propTypes = {
   colors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 BaseCard.defaultProps = {
   colors: [],
-  title: ""
+  title: "",
 };
 
 /**
  * A card that renders a color box with the associated color code as label and the title of a color palette.
- * The title can either float above the card (`floatingTitle` prop) or can be placed within the card below the color
- * code labels.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * The title can either float above the card (`floatingTitle` prop) or can be placed within the card below the color code labels.
  * @since 0.6.0
  */
 const ColorPaletteCard = ({ colors, floatingTitle, title, ...passProps }) => {
@@ -68,13 +60,13 @@ const ColorPaletteCard = ({ colors, floatingTitle, title, ...passProps }) => {
 ColorPaletteCard.propTypes = {
   colors: PropTypes.arrayOf(PropTypes.string).isRequired,
   floatingTitle: PropTypes.string,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 ColorPaletteCard.defaultProps = {
   colors: [],
   floatingTitle: "",
-  title: ""
+  title: "",
 };
 
 export default ColorPaletteCard;

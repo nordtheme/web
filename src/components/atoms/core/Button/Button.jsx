@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -20,61 +16,28 @@ const BaseButton = styled.button`
 `;
 
 /**
- * A component that represents the `<button>` HTML element with multiple variants and additional props to toggle more
- * styles.
+ * A component that represents the `<button>` HTML element with multiple variants and additional props to toggle more styles.
  * It also wraps the `A` component to render a link through the `href` and `to` props.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
- * @see https://developer.mozilla.org/de/docs/Web/HTML/Element/button
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
  */
 const Button = ({ children, dashed, disabled, ghost, href, onClick, outlined, quiet, to, variant, ...passProps }) => {
   if (href) {
     return (
-      <BaseButton
-        as={A}
-        dashed={dashed}
-        disabled={disabled}
-        ghost={ghost}
-        href={href}
-        outlined={outlined}
-        quiet={quiet}
-        variant={variant}
-        {...passProps}
-      >
+      <BaseButton as={A} dashed={dashed} disabled={disabled} ghost={ghost} href={href} outlined={outlined} quiet={quiet} variant={variant} {...passProps}>
         {children}
       </BaseButton>
     );
   }
   if (to) {
     return (
-      <BaseButton
-        as={A}
-        dashed={dashed}
-        disabled={disabled}
-        ghost={ghost}
-        outlined={outlined}
-        quiet={quiet}
-        to={to}
-        variant={variant}
-        {...passProps}
-      >
+      <BaseButton as={A} dashed={dashed} disabled={disabled} ghost={ghost} outlined={outlined} quiet={quiet} to={to} variant={variant} {...passProps}>
         {children}
       </BaseButton>
     );
   }
   return (
-    <BaseButton
-      dashed={dashed}
-      disabled={disabled}
-      ghost={ghost}
-      onClick={onClick}
-      outlined={outlined}
-      quiet={quiet}
-      variant={variant}
-      {...passProps}
-    >
+    <BaseButton dashed={dashed} disabled={disabled} ghost={ghost} onClick={onClick} outlined={outlined} quiet={quiet} variant={variant} {...passProps}>
       {children}
     </BaseButton>
   );
@@ -90,7 +53,7 @@ Button.propTypes = {
   outlined: PropTypes.bool,
   quiet: PropTypes.bool,
   to: PropTypes.string,
-  variant: PropTypes.oneOf(["primary", "secondary", "simple", "subtle"])
+  variant: PropTypes.oneOf(["primary", "secondary", "simple", "subtle"]),
 };
 
 Button.defaultProps = {
@@ -102,7 +65,7 @@ Button.defaultProps = {
   outlined: false,
   quiet: false,
   to: "",
-  variant: "simple"
+  variant: "simple",
 };
 
 export default Button;

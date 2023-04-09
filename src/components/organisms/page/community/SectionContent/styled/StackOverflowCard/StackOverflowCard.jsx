@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -23,27 +19,15 @@ import {
   CardItems as Questions,
   CardLine as Line,
   CardLogo as Logo,
-  cardBasePropTypes
+  cardBasePropTypes,
 } from "../../../shared";
 import Tag from "./Tag";
 
 /**
  * A card component that renders information about Nord's Stack Overflow platform community.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.7.0
  */
-const StackOverflowCard = ({
-  brandColor,
-  children,
-  logoColor,
-  logoComponent: SvgLogo,
-  questions,
-  title,
-  url,
-  ...passProps
-}) => {
+const StackOverflowCard = ({ brandColor, children, logoColor, logoComponent: SvgLogo, questions, title, url, ...passProps }) => {
   const renderQuestions = questions.map(({ answerCount, link, tags: questionTags, title: questionTitle }) => (
     <QuestionWrapper key={questionTitle}>
       <Dot color={logoColor}>{answerCount}</Dot>
@@ -52,7 +36,7 @@ const StackOverflowCard = ({
           {questionTitle}
         </QuestionLink>
         <div>
-          {questionTags.map(tag => (
+          {questionTags.map((tag) => (
             <Tag key={tag} color={brandColor}>
               {tag}
             </Tag>
@@ -89,8 +73,8 @@ StackOverflowCard.propTypes = {
     answerCount: PropTypes.number,
     link: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
-    title: PropTypes.string
-  }).isRequired
+    title: PropTypes.string,
+  }).isRequired,
 };
 
 export default StackOverflowCard;

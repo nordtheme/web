@@ -1,22 +1,31 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- * References:
- *   https://prettier.io/docs/en/configuration.html
- *   https://prettier.io/docs/en/options.html
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 /**
- * @file The Prettier configuration.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * Configurations for Prettier.
  * @see https://prettier.io/docs/en/configuration.html
+ * @see https://prettier.io/docs/en/options.html
+ * @see https://prettier.io/docs/en/options.html#parser
+ * @see https://prettier.io/docs/en/plugins.html
+ * @see https://github.com/un-ts/prettier/tree/master/packages/sh
+ * @see https://github.com/prettier/plugin-xml
  */
-
 module.exports = {
-  printWidth: 120
+  printWidth: 160,
+  overrides: [
+    {
+      files: ["*.svg"],
+      options: {
+        parser: "xml",
+      },
+    },
+    {
+      files: [".husky/*"],
+      options: {
+        parser: "sh",
+      },
+    },
+  ],
 };

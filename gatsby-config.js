@@ -1,45 +1,22 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file The Gatsby configuration.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://gatsbyjs.org/docs/gatsby-config
- * @since 0.1.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 const dotenv = require("dotenv");
 
-/*
+/**
  * Load environment specific project and OS environment variables based on the current Node environment.
  *
- * @see https://www.gatsbyjs.org/docs/environment-variables
+ * @see https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables
  * @see https://github.com/motdotla/dotenv
  */
 dotenv.config({ path: `./.gatsby/.env.${process.env.NODE_ENV}` });
 
 const { metadataNord, metadataNordDocs } = require("./src/data/project");
-const {
-  optionalBlogPostImages,
-  optionalBlogPostVideos,
-  requiredBlogPostImages,
-  sourceInstanceTypes
-} = require("./src/config/internal/nodes");
-const {
-  BASE_DIR_CONTENT,
-  BASE_DIR_ASSETS_IMAGES,
-  BASE_DIR_ASSETS_VIDEOS,
-  BASE_DIR_CONFIG,
-  BASE_DIR_PAGES
-} = require("./src/config/internal/constants");
+const { optionalBlogPostImages, optionalBlogPostVideos, requiredBlogPostImages, sourceInstanceTypes } = require("./src/config/internal/nodes");
+const { BASE_DIR_CONTENT, BASE_DIR_ASSETS_IMAGES, BASE_DIR_ASSETS_VIDEOS, BASE_DIR_CONFIG, BASE_DIR_PAGES } = require("./src/config/internal/constants");
 const { BASE_PUBLIC_URL } = require("./src/config/routes/constants");
 const gatsbyPluginGoogleGtagConfig = require("./.gatsby/plugins/google/gtag");
 const gatsbyPluginManifestConfig = require("./.gatsby/plugins/manifest");
@@ -49,24 +26,23 @@ const gatsbyPluginMdxConfig = require("./.gatsby/plugins/mdx");
 
 /**
  * The Gatsby configuration.
- * The `mapping` object includes important mappings related to the optional/required blog post image and video node
- * fields.
+ * The `mapping` object includes important mappings related to the optional/required blog post image and video node fields.
  * It maps the paths (string) to a `File` node to make them available for the "Gatsby Sharp" plugin.
- *
- * @see https://www.gatsbyjs.org/docs/gatsby-config/#mapping-node-types
+ * @since 0.1.0
+ * @see https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#mapping-node-types
  */
 module.exports = {
   siteMetadata: {
     nord: { ...metadataNord },
     ...metadataNordDocs,
-    siteUrl: metadataNordDocs.homepage
+    siteUrl: metadataNordDocs.homepage,
   },
   mapping: {
     [`Mdx.fields.${optionalBlogPostImages.heroposter.nodeFieldName}`]: "File.absolutePath",
     [`Mdx.fields.${optionalBlogPostVideos.hero.nodeFieldName}`]: "File.absolutePath",
     [`Mdx.fields.${requiredBlogPostImages.banner.nodeFieldName}`]: "File.absolutePath",
     [`Mdx.fields.${requiredBlogPostImages.cover.nodeFieldName}`]: "File.absolutePath",
-    [`Mdx.fields.${requiredBlogPostImages.hero.nodeFieldName}`]: "File.absolutePath"
+    [`Mdx.fields.${requiredBlogPostImages.hero.nodeFieldName}`]: "File.absolutePath",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -84,76 +60,75 @@ module.exports = {
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
-        siteUrl: `${BASE_PUBLIC_URL}`
-      }
+        siteUrl: `${BASE_PUBLIC_URL}`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `${sourceInstanceTypes.images.id}`,
-        path: `${__dirname}/${BASE_DIR_ASSETS_IMAGES}`
-      }
+        path: `${__dirname}/${BASE_DIR_ASSETS_IMAGES}`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `${sourceInstanceTypes.videos.id}`,
-        path: `${__dirname}/${BASE_DIR_ASSETS_VIDEOS}`
-      }
+        path: `${__dirname}/${BASE_DIR_ASSETS_VIDEOS}`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `${sourceInstanceTypes.blog.id}`,
-        path: `${__dirname}/${BASE_DIR_CONTENT}/${sourceInstanceTypes.blog.path}/`
-      }
+        path: `${__dirname}/${BASE_DIR_CONTENT}/${sourceInstanceTypes.blog.path}/`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "config",
-        path: `${__dirname}/${BASE_DIR_CONFIG}/`
-      }
+        path: `${__dirname}/${BASE_DIR_CONFIG}/`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `${sourceInstanceTypes.docs.id}`,
-        path: `${__dirname}/${BASE_DIR_CONTENT}/${sourceInstanceTypes.docs.path}/`
-      }
+        path: `${__dirname}/${BASE_DIR_CONTENT}/${sourceInstanceTypes.docs.path}/`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: `${__dirname}/${BASE_DIR_PAGES}/`
-      }
+        path: `${__dirname}/${BASE_DIR_PAGES}/`,
+      },
     },
     {
       resolve: "gatsby-plugin-google-gtag",
-      options: gatsbyPluginGoogleGtagConfig
+      options: gatsbyPluginGoogleGtagConfig,
     },
     {
       resolve: "gatsby-plugin-robots-txt",
-      options: gatsbyPluginRobotsTxtConfig
+      options: gatsbyPluginRobotsTxtConfig,
     },
     {
       resolve: "gatsby-source-graphql",
-      options: gatsbyPluginSourceGraphQlConfig
+      options: gatsbyPluginSourceGraphQlConfig,
     },
     {
       resolve: "gatsby-plugin-mdx",
-      options: gatsbyPluginMdxConfig
+      options: gatsbyPluginMdxConfig,
     },
     /* NOTE: The following plugins rely on the order in this array and must be placed at last in order work properly! */
     {
       resolve: "gatsby-plugin-manifest",
-      options: gatsbyPluginManifestConfig
+      options: gatsbyPluginManifestConfig,
     },
     /*
-     * This plugin must definitely be listed last to ensure cache-able files like the web app manifest are included in
-     * the service worker!
+     * This plugin must definitely be listed last to ensure cache-able files like the web app manifest are included in the service worker!
      */
-    "gatsby-plugin-offline"
-  ]
+    "gatsby-plugin-offline",
+  ],
 };

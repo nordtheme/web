@@ -1,17 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides shared theme mode styles for all components.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.10.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import { transitionThemedModeSwitch } from "./motion/transition";
@@ -21,9 +10,13 @@ import {
   mixinDropShadowAmbientLight,
   mixinDropShadowAmbientLightHover,
   mixinDropShadowDirectLight,
-  mixinDropShadowDirectLightHover
+  mixinDropShadowDirectLightHover,
 } from "./colors/shadow";
 
+/**
+ * Provides shared theme mode styles for all components.
+ * @since 0.10.0
+ */
 export {
   dropShadowColorAmbientLight,
   dropShadowColorDirectLight,
@@ -31,5 +24,5 @@ export {
   mixinDropShadowAmbientLightHover,
   mixinDropShadowDirectLight,
   mixinDropShadowDirectLightHover,
-  transitionThemedModeSwitch
+  transitionThemedModeSwitch,
 };

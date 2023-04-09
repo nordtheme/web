@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { Code } from "atoms/core/html-elements";
@@ -7,7 +12,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Asset Catalog",
-  subline: "Use Nord as color set from the asset catalog and for the interface builder"
+  subline: "Use Nord as color set from the asset catalog and for the interface builder",
 };
 
 <ShrinkedWidth value={25}>
@@ -26,10 +31,7 @@ export const frontmatter = {
 
 Nord Xcode provides a _color set_ for Xcode [asset catalog][apple-dev-lib-asset_catalog] that can be used as named colors in the [Interface Builder][apple-dev-if_builder] and programmatically, e.g. via the `UIColor(named)` function.
 
-<Image
-  alt="Screenshot showing the Xcode interface builder using the Nord color set from the asset catalog"
-  fluid={props.images["ui-interface_builder.png"]}
->
+<Image alt="Screenshot showing the Xcode interface builder using the Nord color set from the asset catalog" fluid={props.images["ui-interface_builder.png"]}>
   <span>
     The Xcode{" "}
     <Link href="https://developer.apple.com/xcode/interface-builder" target="_blank">
@@ -55,16 +57,10 @@ Please read the official documentation section on how to [create a asset catalog
 </Banner>
 </SpaceBox>
 
-<Image
-  alt="Screenshot showing the Nord color set in the Xcode asset catalog"
-  fluid={props.images["ui-asset_catalog.png"]}
->
+<Image alt="Screenshot showing the Nord color set in the Xcode asset catalog" fluid={props.images["ui-asset_catalog.png"]}>
   <span>
     The Nord color set in the{" "}
-    <Link
-      href="https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format"
-      target="_blank"
-    >
+    <Link href="https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format" target="_blank">
       Xcode asset catalog
     </Link>
     .
@@ -73,7 +69,7 @@ Please read the official documentation section on how to [create a asset catalog
 
 </ShrinkedWidth>
 
-[gh-tree-xcassets]: https://github.com/arcticicestudio/nord-xcode/tree/develop/src/nord.xcassets
+[gh-tree-xcassets]: https://github.com/nordtheme/xcode/tree/develop/src/nord.xcassets
 [apple-dev-lib-asset_catalog]: https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format
 [apple-dev-if_builder]: https://developer.apple.com/xcode/interface-builder
 [apple-help-xcode-add_folder_files]: https://help.apple.com/xcode/mac/current/#/dev81ce1d383

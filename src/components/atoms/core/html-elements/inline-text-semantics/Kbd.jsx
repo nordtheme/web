@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import styled from "styled-components";
@@ -14,30 +10,27 @@ import { colors, motion, themedMode, typography, MODE_BRIGHT_SNOW_FLURRY, MODE_D
 
 const fontColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.font.base[MODE_BRIGHT_SNOW_FLURRY],
-  [MODE_DARK_NIGHT_FROST]: colors.font.base[MODE_DARK_NIGHT_FROST]
+  [MODE_DARK_NIGHT_FROST]: colors.font.base[MODE_DARK_NIGHT_FROST],
 });
 
 const backgroundColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: rgba(colors.nord6, 0.3),
-  [MODE_DARK_NIGHT_FROST]: colors.nord1
+  [MODE_DARK_NIGHT_FROST]: colors.nord1,
 });
 
 const borderColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.nord4,
-  [MODE_DARK_NIGHT_FROST]: colors.nord2
+  [MODE_DARK_NIGHT_FROST]: colors.nord2,
 });
 
 const borderBottomColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: darken(0.1, colors.nord4),
-  [MODE_DARK_NIGHT_FROST]: lighten(0.1, colors.nord2)
+  [MODE_DARK_NIGHT_FROST]: lighten(0.1, colors.nord2),
 });
 
 /**
- * A base HTML component that represents the `<kbd>` element to render a span of inline text denoting textual user
- * input from a keyboard, voice input, or any other text entry device.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * A base HTML component that represents the `<kbd>` element to render a span of inline text denoting textual user input from a keyboard, voice input,
+ * or any other text entry device.
  * @since 0.10.0
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd
  */

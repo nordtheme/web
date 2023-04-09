@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import styled from "styled-components";
@@ -12,23 +8,20 @@ import { lighten } from "polished";
 
 import { motion, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } from "styles/theme";
 
-const backgroundColorThemed = color =>
+const backgroundColorThemed = (color) =>
   themedMode({
     [MODE_BRIGHT_SNOW_FLURRY]: lighten(0.4, color),
-    [MODE_DARK_NIGHT_FROST]: color
+    [MODE_DARK_NIGHT_FROST]: color,
   });
 
-const colorThemed = color =>
+const colorThemed = (color) =>
   themedMode({
     [MODE_BRIGHT_SNOW_FLURRY]: color,
-    [MODE_DARK_NIGHT_FROST]: lighten(0.4, color)
+    [MODE_DARK_NIGHT_FROST]: lighten(0.4, color),
   });
 
 /**
  * A component that represents the tag of an Stack Overflow question.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.7.0
  */
 const Tag = styled.div`

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,9 +20,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_ATOM_UI, 3);
 
 /**
  * The component that represents the packages support section for the landing page of the "Nord VAtom UI" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.19.0
  */
 const SectionPackageSupport = ({ assets }) => (
@@ -35,9 +28,7 @@ const SectionPackageSupport = ({ assets }) => (
       <FeatureDuo columnRatio={[1, 2]}>
         <Text>
           <Headline>Take your favorite packages with you.</Headline>
-          <Subline>
-            The theme supports many popular UI packages for fluid and unobtrusive user interface transitions.
-          </Subline>
+          <Subline>The theme supports many popular UI packages for fluid and unobtrusive user interface transitions.</Subline>
         </Text>
         <Visualization>
           <Image
@@ -47,9 +38,8 @@ const SectionPackageSupport = ({ assets }) => (
             rounded
           >
             <span>
-              A <Link href="https://reactjs.org">React</Link> JSX component with the the{" "}
-              <Link href="https://atom.io/packages/minimap">minimap</Link> package to keep an overall overview of the
-              whole file.
+              A <Link href="https://reactjs.org">React</Link> JSX component with the the <Link href="https://atom.io/packages/minimap">minimap</Link> package to
+              keep an overall overview of the whole file.
             </span>
           </Image>
         </Visualization>
@@ -63,27 +53,21 @@ const SectionPackageSupport = ({ assets }) => (
             rounded
           >
             <span>
-              The <Link href="https://atom.io/packages/tool-bar">tool-bar</Link> package for a minimal style for common
-              views and tasks.
+              The <Link href="https://atom.io/packages/tool-bar">tool-bar</Link> package for a minimal style for common views and tasks.
             </span>
           </Image>
         </Visualization>
         <Text>
           <Subline>
-            Packages like <Link href="https://atom.io/packages/tool-bar">tool-bar</Link> allow to achieve a minimal
-            style for quick access to common views and tasks.
+            Packages like <Link href="https://atom.io/packages/tool-bar">tool-bar</Link> allow to achieve a minimal style for quick access to common views and
+            tasks.
           </Subline>
         </Text>
       </FeatureDuo>
       <FeatureDuo columnRatio={[1, 2]}>
         <Text />
         <Visualization>
-          <Image
-            alt="Screenshot showing the card view of the expose package"
-            dropShadow
-            fluid={assets.images["package-support-expose.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing the card view of the expose package" dropShadow fluid={assets.images["package-support-expose.png"]} rounded>
             <span>
               The card view of the <Link href="https://atom.io/packages/expose">expose</Link> package.
             </span>
@@ -105,8 +89,7 @@ const SectionPackageSupport = ({ assets }) => (
         </Visualization>
         <Text>
           <Subline>
-            Smooth integration of floating UI components like the{" "}
-            <Link href="https://atom.io/packages/color-picker">color-picker</Link> package.
+            Smooth integration of floating UI components like the <Link href="https://atom.io/packages/color-picker">color-picker</Link> package.
           </Subline>
         </Text>
       </FeatureDuo>

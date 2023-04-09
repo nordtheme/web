@@ -1,17 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides metadata about Nord's port projects.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.9.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import {
@@ -36,7 +25,7 @@ import {
   Vim,
   VisualStudioCode,
   Xcode,
-  Xresources
+  Xresources,
 } from "atoms/core/vectors/logos";
 
 const tokensExtendingSupport = ["addons", "extensions", "packages", "plugins", "support"];
@@ -51,155 +40,121 @@ const tokensTerminalTiling = ["tiles", "tiling"];
 
 const ports = [
   {
-    name: "nord-alacritty",
+    name: "alacritty",
     projectName: "Alacritty",
     logoComponent: CommonTerminal,
     projectUrl: "https://github.com/jwilm/alacritty",
-    searchTerms: [...tokensTerminal, "alacritty"]
+    searchTerms: [...tokensTerminal, "alacritty"],
   },
   {
-    name: "nord-atom-syntax",
+    name: "atom-syntax",
     projectName: "Atom Syntax",
     logoComponent: Atom,
     projectUrl: "https://atom.io",
     packageThemeRegistryUrl: "https://atom.io/themes/nord-atom-syntax",
-    searchTerms: [...tokensExtendingSupport, ...tokensSyntax, "atom", "electron", "github", "javascript", "nodejs"]
+    searchTerms: [...tokensExtendingSupport, ...tokensSyntax, "atom", "electron", "github", "javascript", "nodejs"],
   },
   {
-    name: "nord-atom-ui",
+    name: "atom-ui",
     projectName: "Atom UI",
     logoComponent: Atom,
     projectUrl: "https://atom.io",
     packageThemeRegistryUrl: "https://atom.io/themes/nord-atom-ui",
-    searchTerms: [...tokensExtendingSupport, ...tokensGUI, "atom", "electron", "github", "javascript", "nodejs"]
+    searchTerms: [...tokensExtendingSupport, ...tokensGUI, "atom", "electron", "github", "javascript", "nodejs"],
   },
   {
-    name: "nord-brackets",
+    name: "brackets",
     projectName: "Brackets",
     logoComponent: Brackets,
     projectUrl: "http://brackets.io",
-    searchTerms: [...tokensSyntax, "adobe", "brackets", "css", "html", "javascript", "nodejs", "web"]
+    searchTerms: [...tokensSyntax, "adobe", "brackets", "css", "html", "javascript", "nodejs", "web"],
   },
   {
-    name: "nord-coda",
+    name: "coda",
     projectName: "Coda",
     logoComponent: Coda,
     projectUrl: "https://www.panic.com/coda",
-    searchTerms: [
-      ...tokensSyntax,
-      "apple",
-      "coda",
-      "css",
-      "html",
-      "hyper",
-      "javascript",
-      "macos",
-      "nodejs",
-      "npm",
-      "osx",
-      "web"
-    ]
+    searchTerms: [...tokensSyntax, "apple", "coda", "css", "html", "hyper", "javascript", "macos", "nodejs", "npm", "osx", "web"],
   },
   {
-    name: "nord-conemu",
+    name: "conemu",
     projectName: "ConEmu",
     logoComponent: ConEmu,
     projectUrl: "https://conemu.github.io",
-    searchTerms: [...tokensTerminal, "conemu", "windows"]
+    searchTerms: [...tokensTerminal, "conemu", "windows"],
   },
   {
-    name: "nord-dircolors",
+    name: "dircolors",
     projectName: "dircolors",
     logoComponent: CommonTerminal,
     projectUrl: "https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html",
-    searchTerms: [...tokensTerminal, "dircolors", "gnu", "ls"]
+    searchTerms: [...tokensTerminal, "dircolors", "gnu", "ls"],
   },
   {
-    name: "nord-eclipse-syntax",
+    name: "eclipse-syntax",
     projectName: "Eclipse Syntax",
     logoComponent: Eclipse,
     projectUrl: "https://eclipse.org",
-    searchTerms: [...tokensSyntax, "eclipse", "java", "jdk", "jvm", "openjdk", "oracle"]
+    searchTerms: [...tokensSyntax, "eclipse", "java", "jdk", "jvm", "openjdk", "oracle"],
   },
   {
-    name: "nord-emacs",
+    name: "emacs",
     projectName: "Emacs",
     logoComponent: Emacs,
     projectUrl: "https://www.gnu.org/software/emacs",
-    searchTerms: [
-      ...tokensExtendingSupport,
-      ...tokensSyntax,
-      ...tokensTerminal,
-      "emacs",
-      "gnu",
-      "lisp",
-      "marmelade",
-      "melpa",
-      "spacemacs"
-    ]
+    searchTerms: [...tokensExtendingSupport, ...tokensSyntax, ...tokensTerminal, "emacs", "gnu", "lisp", "marmelade", "melpa", "spacemacs"],
   },
   {
-    name: "nord-guake",
+    name: "guake",
     projectName: "Guake",
     logoComponent: CommonTerminal,
     projectUrl: "http://guake-project.org",
-    searchTerms: [...tokensTerminal, "gnome", "guake"]
+    searchTerms: [...tokensTerminal, "gnome", "guake"],
   },
   {
-    name: "nord-gnome-terminal",
+    name: "gnome-terminal",
     projectName: "GNOME Terminal",
     logoComponent: CommonTerminal,
     projectUrl: "https://wiki.gnome.org/Apps/Terminal",
-    searchTerms: [...tokensTerminal, "gnome"]
+    searchTerms: [...tokensTerminal, "gnome"],
   },
   {
-    name: "nord-gedit",
+    name: "gedit",
     projectName: "gedit",
     logoComponent: Gedit,
     projectUrl: "https://wiki.gnome.org/Apps/Gedit",
-    searchTerms: [...tokensSyntax, "gedit", "gnome"]
+    searchTerms: [...tokensSyntax, "gedit", "gnome"],
   },
   {
-    name: "nord-highlightjs",
+    name: "highlightjs",
     projectName: "highlight.js",
     logoComponent: HighlightJs,
     projectUrl: "https://highlightjs.org",
-    searchTerms: [...tokensSyntax, "css", "highlightjs", "html", "javascript", "nodejs", "npm", "web"]
+    searchTerms: [...tokensSyntax, "css", "highlightjs", "html", "javascript", "nodejs", "npm", "web"],
   },
   {
-    name: "nord-hyper",
+    name: "hyper",
     projectName: "Hyper",
     logoComponent: Hyper,
     projectUrl: "https://hyper.is",
-    searchTerms: [
-      ...tokensExtendingSupport,
-      ...tokensGUI,
-      ...tokensTerminal,
-      "css",
-      "html",
-      "hyper",
-      "javascript",
-      "nodejs",
-      "npm",
-      "web"
-    ]
+    searchTerms: [...tokensExtendingSupport, ...tokensGUI, ...tokensTerminal, "css", "html", "hyper", "javascript", "nodejs", "npm", "web"],
   },
   {
-    name: "nord-iterm2",
+    name: "iterm2",
     projectName: "iTerm2",
     logoComponent: CommonTerminalTiled,
     projectUrl: "https://iterm2.com",
-    searchTerms: [...tokensTerminal, "apple", "iterm2", "macos", "osx"]
+    searchTerms: [...tokensTerminal, "apple", "iterm2", "macos", "osx"],
   },
   {
-    name: "nord-java",
+    name: "java",
     projectName: "Java",
     logoComponent: Java,
     projectUrl: "https://www.java.com",
-    searchTerms: ["implementation", "import", "java", "jdk", "jvm", "library", "openjdk", "oracle", "reference"]
+    searchTerms: ["implementation", "import", "java", "jdk", "jvm", "library", "openjdk", "oracle", "reference"],
   },
   {
-    name: "nord-jetbrains",
+    name: "jetbrains",
     projectName: "JetBrains",
     logoComponent: JetBrains,
     projectUrl: "https://www.jetbrains.com",
@@ -224,141 +179,127 @@ const ports = [
       "resharper",
       "rider",
       "rubymine",
-      "webstorm"
-    ]
+      "webstorm",
+    ],
   },
   {
-    name: "nord-konsole",
+    name: "konsole",
     projectName: "Konsole",
     logoComponent: CommonTerminal,
     projectUrl: "https://konsole.kde.org",
-    searchTerms: [...tokensTerminal, "kde", "konsole"]
+    searchTerms: [...tokensTerminal, "kde", "konsole"],
   },
   {
-    name: "nord-mintty",
+    name: "mintty",
     projectName: "Mintty",
     logoComponent: CommonTerminal,
     projectUrl: "https://mintty.github.io",
-    searchTerms: [...tokensTerminal, "mintty", "windows"]
+    searchTerms: [...tokensTerminal, "mintty", "windows"],
   },
   {
-    name: "nord-notepadplusplus",
+    name: "notepadplusplus",
     projectName: "Notepad++",
     logoComponent: NotepadPlusPlus,
     projectUrl: "https://notepad-plus-plus.org",
-    searchTerms: [...tokensSyntax, "notepad++", "windows"]
+    searchTerms: [...tokensSyntax, "notepad++", "windows"],
   },
   {
-    name: "nord-putty",
+    name: "putty",
     projectName: "PuTTY",
     logoComponent: PuTTY,
     projectUrl: "https://www.chiark.greenend.org.uk/~sgtatham/putty",
-    searchTerms: [...tokensTerminal, "putty", "ssh", "windows"]
+    searchTerms: [...tokensTerminal, "putty", "ssh", "windows"],
   },
   {
-    name: "nord-slack",
+    name: "slack",
     projectName: "Slack",
     logoComponent: Slack,
     projectUrl: "https://slack.com",
-    searchTerms: [...tokensGUI, "slack"]
+    searchTerms: [...tokensGUI, "slack"],
   },
   {
-    name: "nord-sublime-text",
+    name: "sublime-text",
     projectName: "Sublime Text",
     logoComponent: SublimeText,
     projectUrl: "https://www.sublimetext.com",
     packageControlUrl: "https://packagecontrol.io/packages/Nord",
-    searchTerms: [...tokensExtendingSupport, ...tokensGUI, ...tokensSyntax, "sublime"]
+    searchTerms: [...tokensExtendingSupport, ...tokensGUI, ...tokensSyntax, "sublime"],
   },
   {
-    name: "nord-terminal-app",
+    name: "terminal-app",
     projectName: "Terminal.app",
     logoComponent: CommonTerminal,
     projectUrl: "https://support.apple.com/guide/terminal/welcome/mac",
-    searchTerms: [...tokensTerminal, "apple", "macos", "osx"]
+    searchTerms: [...tokensTerminal, "apple", "macos", "osx"],
   },
   {
-    name: "nord-terminator",
+    name: "terminator",
     projectName: "Terminator",
     logoComponent: CommonTerminalTiled,
     projectUrl: "https://gnometerminator.blogspot.com",
-    searchTerms: [...tokensTerminal, ...tokensTerminalTiling, "terminator"]
+    searchTerms: [...tokensTerminal, ...tokensTerminalTiling, "terminator"],
   },
   {
-    name: "nord-termite",
+    name: "termite",
     projectName: "Termite",
     logoComponent: CommonTerminalTiled,
     projectUrl: "https://github.com/thestinger/termite",
-    searchTerms: [...tokensTerminal, ...tokensTerminalTiling, "termite"]
+    searchTerms: [...tokensTerminal, ...tokensTerminalTiling, "termite"],
   },
   {
-    name: "nord-tilix",
+    name: "tilix",
     projectName: "Tilix",
     logoComponent: CommonTerminalTiled,
     projectUrl: "https://gnunn1.github.io/tilix-web",
-    searchTerms: [...tokensTerminal, ...tokensTerminalTiling, "gnome", "terminix", "tilix"]
+    searchTerms: [...tokensTerminal, ...tokensTerminalTiling, "gnome", "terminix", "tilix"],
   },
   {
-    name: "nord-tmux",
+    name: "tmux",
     projectName: "tmux",
     logoComponent: Tmux,
     projectUrl: "https://tmux.github.io",
-    searchTerms: [
-      ...tokensExtendingSupport,
-      ...tokensTerminal,
-      ...tokensTerminalTiling,
-      "multiplexer",
-      "process",
-      "ssh",
-      "tmux"
-    ]
+    searchTerms: [...tokensExtendingSupport, ...tokensTerminal, ...tokensTerminalTiling, "multiplexer", "process", "ssh", "tmux"],
   },
   {
-    name: "nord-vim",
+    name: "vim",
     projectName: "Vim",
     logoComponent: Vim,
     projectUrl: "https://www.vim.org",
-    searchTerms: [...tokensExtendingSupport, ...tokensSyntax, ...tokensTerminal, "improved", "vim"]
+    searchTerms: [...tokensExtendingSupport, ...tokensSyntax, ...tokensTerminal, "improved", "vim"],
   },
   {
-    name: "nord-visual-studio-code",
+    name: "visual-studio-code",
     projectName: "Visual Studio Code",
     logoComponent: VisualStudioCode,
     projectUrl: "https://code.visualstudio.com",
-    extensionMarketplaceUrl:
-      "https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code",
-    searchTerms: [
-      ...tokensExtendingSupport,
-      ...tokensGUI,
-      ...tokensSyntax,
-      "electron",
-      "microsoft",
-      "studio",
-      "visual",
-      "vscode"
-    ]
+    extensionMarketplaceUrl: "https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code",
+    searchTerms: [...tokensExtendingSupport, ...tokensGUI, ...tokensSyntax, "electron", "microsoft", "studio", "visual", "vscode"],
   },
   {
-    name: "nord-xcode",
+    name: "xcode",
     projectName: "Xcode",
     logoComponent: Xcode,
     projectUrl: "https://developer.apple.com/xcode",
-    searchTerms: [...tokensSyntax, "apple", "macos", "object-c", "osx", "swift", "xcode"]
+    searchTerms: [...tokensSyntax, "apple", "macos", "object-c", "osx", "swift", "xcode"],
   },
   {
-    name: "nord-xfce-terminal",
+    name: "xfce-terminal",
     projectName: "Xfce Terminal",
     logoComponent: CommonTerminal,
     projectUrl: "https://docs.xfce.org/apps/terminal/start",
-    searchTerms: [...tokensTerminal, "xfce"]
+    searchTerms: [...tokensTerminal, "xfce"],
   },
   {
-    name: "nord-xresources",
+    name: "xresources",
     projectName: "Xresources",
     logoComponent: Xresources,
     projectUrl: "https://wiki.archlinux.org/index.php/x_resources",
-    searchTerms: [...tokensTerminal, "dotfiles", "dots", "xrdb", "xresources"]
-  }
+    searchTerms: [...tokensTerminal, "dotfiles", "dots", "xrdb", "xresources"],
+  },
 ];
 
+/**
+ * Provides metadata about Nord's port projects.
+ * @since 0.9.0
+ */
 export default ports;

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -15,13 +11,10 @@ import { illustrationPropTypes } from "./shared/propTypes";
 
 /**
  * A component that represents an empty state through a vector illustration with a headline and subline.
- * The illustration that'll be shown can be configured through the `illustrationVariant` prop and styled with
- * styled-component's `css` API passed to the `illustrationStyles` prop.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://material.io/design/communication/empty-states.html
+ * The illustration that'll be shown can be configured through the `illustrationVariant` prop and styled with styled-component's `css` API passed to the
+ * `illustrationStyles` prop.
  * @since 0.3.0
+ * @see https://m2.material.io/design/communication/empty-states.html#content
  */
 const EmptyState = ({ headline, illustrationStyles, illustrationVariant, subline, ...passProps }) => (
   <Wrapper {...passProps}>
@@ -36,7 +29,7 @@ const EmptyState = ({ headline, illustrationStyles, illustrationVariant, subline
 EmptyState.propTypes = {
   ...illustrationPropTypes,
   headline: PropTypes.string.isRequired,
-  subline: PropTypes.string.isRequired
+  subline: PropTypes.string.isRequired,
 };
 
 export default EmptyState;

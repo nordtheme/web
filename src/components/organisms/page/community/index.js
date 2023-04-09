@@ -1,21 +1,14 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides the components for the community page.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.3.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import SectionChat from "./SectionChat";
 import SectionContent from "./SectionContent";
 import SectionHero from "./SectionHero";
 
+/**
+ * Provides the components for the community page.
+ * @since 0.3.0
+ */
 export { SectionChat, SectionContent, SectionHero };

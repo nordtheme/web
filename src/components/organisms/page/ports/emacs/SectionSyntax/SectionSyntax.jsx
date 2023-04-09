@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,9 +20,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_EMACS, 2);
 
 /**
  * The component that represents the syntax section for the landing page of the "Nord Emacs" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.17.0
  */
 const SectionSyntax = ({ assets }) => (
@@ -34,32 +27,22 @@ const SectionSyntax = ({ assets }) => (
     <Content centered>
       <FeatureDuo columnRatio={[2, 1]}>
         <Visualization>
-          <Image
-            alt="Screenshot showing Java enum methods to process JSON data"
-            dropShadow
-            fluid={assets.images["editor-syntax-java-enum.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing Java enum methods to process JSON data" dropShadow fluid={assets.images["editor-syntax-java-enum.png"]} rounded>
             <span>Java enum methods to process JSON data.</span>
           </Image>
         </Visualization>
         <Text>
           <Headline>Beautiful code to keep focused.</Headline>
           <Subline>
-            The editor color scheme supports a wide range of programming languages — From bundled languages up to many
-            popular syntax and UI third-party packages.
+            The editor color scheme supports a wide range of programming languages — From bundled languages up to many popular syntax and UI third-party
+            packages.
           </Subline>
         </Text>
       </FeatureDuo>
       <FeatureDuo columnRatio={[1, 2]}>
         <Text />
         <Visualization>
-          <Image
-            alt="Screenshot showing a JavaScript React Hook function"
-            dropShadow
-            fluid={assets.images["editor-syntax-javascript-react-hook.png"]}
-            rounded
-          >
+          <Image alt="Screenshot showing a JavaScript React Hook function" dropShadow fluid={assets.images["editor-syntax-javascript-react-hook.png"]} rounded>
             <span>
               JavaScript with a <Link href="https://reactjs.org/docs/hooks-intro">React Hook</Link> for{" "}
               <Link href="https://www.react-spring.io">React Spring</Link> animations.
@@ -80,16 +63,15 @@ const SectionSyntax = ({ assets }) => (
         </Visualization>
         <Text>
           <Subline>
-            Supportive <i>code surfing</i> features like highlighting of bracket pairs are designed to stand out well
-            from the actual code.
+            Supportive <i>code surfing</i> features like highlighting of bracket pairs are designed to stand out well from the actual code.
           </Subline>
         </Text>
       </FeatureDuo>
       <FeatureDuo columnRatio={[1, 2]}>
         <Text>
           <Subline>
-            Comments and reference documentations are intentionally inconspicuous and less disturbing in order to keep
-            the focus on the important elements: the source code.
+            Comments and reference documentations are intentionally inconspicuous and less disturbing in order to keep the focus on the important elements: the
+            source code.
           </Subline>
         </Text>
         <Visualization>

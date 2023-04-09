@@ -1,17 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides all available theme colors.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.2.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import background from "./background";
@@ -25,8 +14,12 @@ const colors = {
   font,
   shadow,
   ...nord,
-  ...palettes
+  ...palettes,
 };
 
+/**
+ * Provides all available theme colors.
+ * @since 0.2.0
+ */
 export { nord, palettes };
 export default colors;

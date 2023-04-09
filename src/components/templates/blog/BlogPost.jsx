@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -21,12 +17,9 @@ import { blogPostTemplatePropTypes } from "../shared/propTypes";
 
 /**
  * A template for blog posts with custom HTML components and injected props that can be used in the MDX document.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
  * @see https://mdxjs.com
- * @see https://www.gatsbyjs.org/docs/mdx
+ * @see https://www.gatsbyjs.com/docs/how-to/routing/mdx
  * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx
  *
  */
@@ -34,9 +27,8 @@ const BlogPost = ({ data: { images, mdx, videos }, location: { pathname }, ...pa
   /*
    * Generate mappings for content images and videos to allow to use them by their file names.
    * Examples:
-   *
-   * - `prop.images["snow-mountain.png"]`
-   * - `prop.videos["arctic-owl.mp4"]`
+   *   - `prop.images["snow-mountain.png"]`
+   *   - `prop.videos["arctic-owl.mp4"]`
    */
   const blogPostImages = {};
   images?.edges?.forEach(({ node: { childImageSharp } }) => {
@@ -75,11 +67,8 @@ const BlogPost = ({ data: { images, mdx, videos }, location: { pathname }, ...pa
 BlogPost.propTypes = blogPostTemplatePropTypes;
 
 export const pageQuery = graphql`
-  query($id: String!, $relativeDirectory: String!) {
-    images: allFile(
-      filter: { relativeDirectory: { eq: $relativeDirectory }, extension: { regex: "/(png|jpe?g)/" } }
-      sort: { fields: [name], order: ASC }
-    ) {
+  query ($id: String!, $relativeDirectory: String!) {
+    images: allFile(filter: { relativeDirectory: { eq: $relativeDirectory }, extension: { regex: "/(png|jpe?g)/" } }, sort: { fields: [name], order: ASC }) {
       edges {
         node {
           childImageSharp {
@@ -95,10 +84,7 @@ export const pageQuery = graphql`
       id
       ...contentBlogPost
     }
-    videos: allFile(
-      filter: { relativeDirectory: { eq: $relativeDirectory }, extension: { regex: "/(mp4|webm)/" } }
-      sort: { fields: [name], order: ASC }
-    ) {
+    videos: allFile(filter: { relativeDirectory: { eq: $relativeDirectory }, extension: { regex: "/(mp4|webm)/" } }, sort: { fields: [name], order: ASC }) {
       edges {
         node {
           ...contentBlogPostMediaFile

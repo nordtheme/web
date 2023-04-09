@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,16 +22,11 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_SUBLIME_TEXT, 0);
 
 /**
  * The component that represents the hero section for the landing page of the "Nord Sublime Text" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
 const SectionHero = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl, packageControlUrl, projectUrl } = portMetadata.find(
-    port => port.name === "nord-sublime-text"
-  );
+  const { gitHubRepositoryUrl, packageControlUrl, projectUrl } = portMetadata.find((port) => port.name === "sublime-text");
 
   return (
     <Section id={SECTION_ID}>
@@ -46,9 +37,7 @@ const SectionHero = ({ assets }) => {
             <Subline>
               An arctic, north-bluish clean and elegant <Link href={projectUrl}>Sublime Text</Link> theme.
             </Subline>
-            <Subline>
-              Designed for a fluent and clear workflow with support for many languages and third-party syntax plugins.
-            </Subline>
+            <Subline>Designed for a fluent and clear workflow with support for many languages and third-party syntax plugins.</Subline>
             <Actions>
               <Button href={packageControlUrl} variant="primary">
                 Install Now
@@ -62,12 +51,7 @@ const SectionHero = ({ assets }) => {
             </Actions>
           </Text>
           <Visualization>
-            <Image
-              alt="Screenshot showing a Go function"
-              dropShadow
-              fluid={assets.images["editor-overview-go.png"]}
-              rounded
-            />
+            <Image alt="Screenshot showing a Go function" dropShadow fluid={assets.images["editor-overview-go.png"]} rounded />
           </Visualization>
         </FeatureDuo>
       </Content>

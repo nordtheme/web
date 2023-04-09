@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -12,12 +8,9 @@ import { animated } from "react-spring";
 
 /**
  * A SVG vector component rendering the middle layer of floating port project logos.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const LogosLayerMiddle = props => (
+const LogosLayerMiddle = (props) => (
   <animated.g {...props}>
     <path
       d="M291.365 305.804c29.824 0 54.003 24.177 54.003 53.998 0 29.825-24.179 54.002-54.003 54.002-29.818 0-53.997-24.177-53.997-54.002 0-29.822 24.179-53.998 53.997-53.998z"
@@ -31,10 +24,7 @@ const LogosLayerMiddle = props => (
       d="M316.315 358.694c0-.807-.589-1.264-1.311-1.037L265.1 373.495c-.727.235-1.32 1.069-1.32 1.866v16.189c0 .801.594 1.262 1.32 1.036l49.904-15.843c.722-.228 1.311-1.063 1.311-1.865v-16.184z"
       fill="#5E81AC"
     />
-    <path
-      d="M288.922 365.94l-5.448 1.726 30.068 9.549 1.458-.471c.727-.228 1.32-1.063 1.32-1.865v-.25l-27.398-8.689z"
-      opacity=".1"
-    />
+    <path d="M288.922 365.94l-5.448 1.726 30.068 9.549 1.458-.471c.727-.228 1.32-1.063 1.32-1.865v-.25l-27.398-8.689z" opacity=".1" />
     <path
       d="M263.78 358.174c0 .803.594 1.642 1.32 1.872l49.909 15.841c.727.22 1.32-.233 1.32-1.037v-16.188c0-.804-.594-1.638-1.32-1.864L265.1 340.959c-.727-.235-1.32.229-1.32 1.026v16.189z"
       fill="#81A1C1"
@@ -109,10 +99,7 @@ const LogosLayerMiddle = props => (
       d="M1351.248 276.66v-5.449h-16.344v5.449m-17.25-1.856l-4.547-4.626 10.229-8.098-10.229-8.089 4.547-4.611L1333 262.071l-15.346 12.712"
       fill="#D8DEE9"
     />
-    <path
-      d="M1317.654 236.689l-4.547-4.634 10.229-8.084-10.229-8.092 4.547-4.634L1333 223.959l-15.346 12.709"
-      fill="#88C0D0"
-    />
+    <path d="M1317.654 236.689l-4.547-4.634 10.229-8.084-10.229-8.092 4.547-4.634L1333 223.959l-15.346 12.709" fill="#88C0D0" />
   </animated.g>
 );
 

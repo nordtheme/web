@@ -1,18 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Provides shared prop types.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.10.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import PropTypes from "prop-types";
@@ -21,38 +9,38 @@ import {
   contentBlogPostFrontmatterPropTypes,
   contentDocsPageFrontmatterPropTypes,
   contentMdxImageFluidPropTypes,
-  contentMdxMediaFilePropTypes
+  contentMdxMediaFilePropTypes,
 } from "data/graphql/fragmentPropTypes";
 
 const imagePropTypes = {
   childImageSharp: PropTypes.shape({
-    ...contentMdxImageFluidPropTypes
+    ...contentMdxImageFluidPropTypes,
   }),
   extension: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
 };
 
 const dataImagesPropTypes = {
   images: PropTypes.shape({
-    edges: PropTypes.arrayOf(PropTypes.shape({ ...imagePropTypes }))
-  })
+    edges: PropTypes.arrayOf(PropTypes.shape({ ...imagePropTypes })),
+  }),
 };
 
 const dataMDXPropTypes = {
   code: PropTypes.shape({
-    body: PropTypes.string
+    body: PropTypes.string,
   }),
-  id: PropTypes.string
+  id: PropTypes.string,
 };
 
 const dataVideosPropTypes = {
   videos: PropTypes.shape({
     edges: PropTypes.arrayOf(
       PropTypes.shape({
-        ...contentMdxMediaFilePropTypes
+        ...contentMdxMediaFilePropTypes,
       })
-    )
-  })
+    ),
+  }),
 };
 
 const blogPostTemplatePropTypes = {
@@ -61,9 +49,9 @@ const blogPostTemplatePropTypes = {
     ...dataVideosPropTypes,
     mdx: PropTypes.shape({
       ...dataMDXPropTypes,
-      ...contentBlogPostFrontmatterPropTypes
-    })
-  }).isRequired
+      ...contentBlogPostFrontmatterPropTypes,
+    }),
+  }).isRequired,
 };
 
 const docsPageTemplatePropTypes = {
@@ -71,9 +59,13 @@ const docsPageTemplatePropTypes = {
     ...dataImagesPropTypes,
     mdx: PropTypes.shape({
       ...dataMDXPropTypes,
-      ...contentDocsPageFrontmatterPropTypes
-    })
-  }).isRequired
+      ...contentDocsPageFrontmatterPropTypes,
+    }),
+  }).isRequired,
 };
 
+/**
+ * @file Provides shared prop types.
+ * @since 0.10.0
+ */
 export { blogPostTemplatePropTypes, docsPageTemplatePropTypes };

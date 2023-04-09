@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -14,9 +10,6 @@ import { colors } from "styles/theme";
 
 /**
  * The PuTTY logo as SVG vector graphic component.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
 const PuTTY = ({ fillColors, svgRef, ...passProps }) => (
@@ -29,10 +22,7 @@ const PuTTY = ({ fillColors, svgRef, ...passProps }) => (
       d="M24.98 10.608l4.365 3.536h12.32c.374 0 .719.345.719.717V27.57a.75.75 0 0 1-.719.717H22a.753.753 0 0 1-.718-.717v-1.989l-3.572-3.147v8.344a1.07 1.07 0 0 0 1.052 1.048h9.558v3.537h-7.073v3.535h21.217v-3.535h-7.071v-3.537h9.538c.558 0 1.069-.49 1.069-1.048v-19.12a1.09 1.09 0 0 0-1.069-1.049"
       fill={fillColors.monitorBottom}
     />
-    <path
-      d="M7.071 10.608l15.913 14.145v-8.841l12.376 5.304L17.681 7.071v6.63L7.08 10.608"
-      fill={fillColors.lightning}
-    />
+    <path d="M7.071 10.608l15.913 14.145v-8.841l12.376 5.304L17.681 7.071v6.63L7.08 10.608" fill={fillColors.lightning} />
   </svg>
 );
 
@@ -40,18 +30,18 @@ PuTTY.propTypes = {
   fillColors: PropTypes.shape({
     lightning: PropTypes.string,
     monitorBottom: PropTypes.string,
-    monitorTop: PropTypes.string
+    monitorTop: PropTypes.string,
   }),
-  svgRef: PropTypes.func
+  svgRef: PropTypes.func,
 };
 
 PuTTY.defaultProps = {
   fillColors: {
     lightning: colors.nord13,
     monitorBottom: colors.nord7,
-    monitorTop: colors.nord8
+    monitorTop: colors.nord8,
   },
-  svgRef: () => {}
+  svgRef: () => {},
 };
 
 export default PuTTY;

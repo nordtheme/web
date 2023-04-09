@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,14 +22,11 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_VIM, 0);
 
 /**
  * The component that represents the hero section for the landing page of the "Nord Vim" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.13.0
  */
 const SectionHero = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-vim");
+  const { gitHubRepositoryUrl } = portMetadata.find((port) => port.name === "vim");
 
   return (
     <Section id={SECTION_ID}>
@@ -45,9 +38,8 @@ const SectionHero = ({ assets }) => {
               An arctic, north-bluish clean and elegant <Link href="https://www.vim.org">Vim</Link> theme.
             </Subline>
             <Subline>
-              Build for Vim&apos;s terminal- and GUI mode with <em>true colors</em> and support for many third-party
-              syntax and UI plugins including bundled themes for{" "}
-              <Link href="https://github.com/itchyny/lightline.vim">lightline.vim</Link> and{" "}
+              Build for Vim&apos;s terminal- and GUI mode with <em>true colors</em> and support for many third-party syntax and UI plugins including bundled
+              themes for <Link href="https://github.com/itchyny/lightline.vim">lightline.vim</Link> and{" "}
               <Link href="https://github.com/vim-airline/vim-airline">vim-airline</Link>.
             </Subline>
             <Actions>

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -24,9 +20,6 @@ const SECTION_ID = sectionIdFor(ROUTE_ROOT, 3);
 
 /**
  * The component that represents the port project section of the landing page.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
  */
 export default function SectionPorts(props) {
@@ -45,10 +38,7 @@ export default function SectionPorts(props) {
         <FeatureDuo verticalOnly>
           <Text verticalOnly>
             <Headline large>Nordify your digital home.</Headline>
-            <Subline>
-              Choose from a broad and constantly growing spectrum of port projects to unify the appearance of your
-              favorite applications.
-            </Subline>
+            <Subline>Choose from a broad and constantly growing spectrum of port projects to unify the appearance of your favorite applications.</Subline>
             <Actions>
               <Button ghost outlined quiet to={ROUTE_PORTS} variant="primary">
                 Learn more

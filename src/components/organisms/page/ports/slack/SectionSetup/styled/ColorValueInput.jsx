@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import styled from "styled-components";
@@ -15,19 +11,16 @@ import { fadedColor } from "./styles";
 
 const borderColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.nord5,
-  [MODE_DARK_NIGHT_FROST]: colors.nord3
+  [MODE_DARK_NIGHT_FROST]: colors.nord3,
 });
 
 const inputBackgroundColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.background.sectioning.primary[MODE_BRIGHT_SNOW_FLURRY],
-  [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.primary[MODE_DARK_NIGHT_FROST]
+  [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.primary[MODE_DARK_NIGHT_FROST],
 });
 
 /**
  * The read-only input component of the setup section.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.21.0
  */
 const ColorValueInput = styled.input`

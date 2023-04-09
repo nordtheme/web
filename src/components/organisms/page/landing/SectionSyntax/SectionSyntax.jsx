@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React, { PureComponent } from "react";
@@ -23,14 +19,11 @@ const SECTION_ID = sectionIdFor(ROUTE_ROOT, 5);
 
 /**
  * The component that represents the code syntax section of the landing page.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.6.0
  */
 export default class SectionSyntax extends PureComponent {
   state = {
-    codeSyntaxLinesPose: POSE_ERASE
+    codeSyntaxLinesPose: POSE_ERASE,
   };
 
   handleCodeSyntaxLinesWaypointEnter = () => this.setState({ codeSyntaxLinesPose: POSE_DRAW });
@@ -49,8 +42,8 @@ export default class SectionSyntax extends PureComponent {
             <Text>
               <Headline>Beautiful code to keep focused.</Headline>
               <Subline>
-                Each color is carefully designed with a syntax meaning and an balanced color distribution for syntax
-                elements to help to keep the focus on the important aspects.
+                Each color is carefully designed with a syntax meaning and an balanced color distribution for syntax elements to help to keep the focus on the
+                important aspects.
               </Subline>
               <Actions>
                 <Button ghost outlined quiet to={ROUTE_DOCS} variant="primary">

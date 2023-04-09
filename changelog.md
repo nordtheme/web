@@ -1,16 +1,40 @@
-<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/main/assets/images/repository-hero.svg?sanitize=true"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com" target="_blank">
+    <picture>
+      <source srcset="https://raw.githubusercontent.com/nordtheme/web/main/assets/images/repository-hero.svg?sanitize=true" width="100%" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+      <img srcset="https://raw.githubusercontent.com/nordtheme/web/main/assets/images/repository-hero.svg?sanitize=true" width="100%" />
+    </picture>
+  </a>
+</p>
 
-<p align="center"><a href="https://github.com/arcticicestudio/nord-docs/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/nord-docs.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
+<p align="center">
+  <a href="https://github.com/nordtheme/web/releases/latest" target="_blank">
+    <img src="https://img.shields.io/github/release/nordtheme/web.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0" />
+  </a>
+  <a href="https://github.com/nordtheme/web/blob/develop/changelog.md" target="_blank">
+    <img src="https://img.shields.io/github/release/nordtheme/web.svg?style=flat-square&label=Changelog&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0" />
+  </a>
+</p>
 
-<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://img.shields.io/badge/Deployment-production-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a> <a href="https://www.nordtheme.com" target="_blank"><img src="https://img.shields.io/badge/Deployment-development-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify"/></a></p>
+<p align="center">
+  <a href="https://nordtheme.com" target="_blank">
+    <img src="https://img.shields.io/badge/Deployment-production-88c0d0.svg?style=flat-square&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=netlify" />
+  </a>
+</p>
 
-<p align="center">Changelog for the official <a href="https://github.com/arcticicestudio/nord" alt="Nord" target="_blank">Nord</a> website and documentation</p>
+<p align="center">
+  <a href="https://github.com/nordtheme/nord/releases/tag/v0.2.0" target="_blank">
+    <img src="https://img.shields.io/static/v1.svg?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACUklEQVRIibXUQUiTcRjH8e+zvaO0AgPd1mDmNvFVI+ng1UNU1wiDoEIIoUNUdOkQUkER1KWTnRJCLyZBIdEhQvAWQVp5KN9X3bskmHunYbeZbu/TaWXRdOLrc3ue5/f/f/6nP+xwycy8m6y0LGqg0N7UsLB+9jmdbQwZQaNawPBKpCstA3g/7fRCl5k68P7PLNjplRgBQtUAYjmuCriqDP690RqQK8A3WSt1mmZsqbyyM+4pVc5tcvdxYD+W46qVdif/l7Ac95bluGo57piqBqt58e+zaXfSclwNbBQyE+F7KKPAMTuzeGcrQLk2BEREV41dvYAD2jeddrt9BQA6DtYtC3QDKyIM2pmlVl+Bublc2ExGpgS9BuxTLT2byuX2+AYUJTAyPq6GmYwOIPoEOLy7IAO+AYgejTW5dwF2UbiM8kGVs9NO/qo/AGRV5Ybl5E4mEokVT0rdwHdBH9pOvmvbgCd6GlgDGZqddVPtydg8aC9gKDqybaA9EX2nyHWgrhTkxUQ2W9uajL4U0QdAbNsAQFsy3C8wBHTsXQk+BmhpitwE3vgCANSGVi8pfATO207uooh4hqc9vgHxeLzgeXIG+KFIv5Ve7GxujuZ9AwAONYfnVLUHCCHec9vO1vsKALSloq9A7gONhILDm/2yWwYAzETDbeC1wgk7k+/bKCuW4yqwDIxtGBSGzURktNzbdrZeQ8EJIA76CJXCP/kLCpEyUE2VVLWnLRV9Wh7MZPJHPNW3QE2lQ0YgSKpKgLWiV1zftyTCn758XUwZ4lUEdrx+ASW88rx2UJY8AAAAAElFTkSuQmCC&label=Nord&message=v0.2.0&colorA=4c566a&colorB=88c0d0" />
+  </a>
+</p>
+
+<p align="center">Changelog for the official <a href="https://github.com/nordtheme/nord" alt="Nord" target="_blank">Nord</a> website and documentation</p>
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
 # 0.23.0
 
-![Release Date: 2019-12-20](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-12-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.23.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/26) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.23.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/23)
+![Release Date: 2019-12-20](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-12-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.23.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.23.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/nordtheme/web/milestones/23)
 
 This version mainly focused on the [transition of the „Nord highlight.js“ port project][gh-188]. The implementation includes the port specific [landing][home-ports-highlightjs] and [docs][home-docs-ports-highlightjs] pages as well as the [installation & usage][home-docs-ports-highlightjs-install] guides.
 
@@ -21,17 +45,29 @@ This version mainly focused on the [transition of the „Nord highlight.js“ po
 Please see the [corresponding issue in the _Nord highlight.js_ repository][nord-highlightjs#13] to get an overview of what has changed for _Nord highlight.js_ and what has been done to migrate to Nord Docs.
 
 <p align="center">Landing Page</p>
-<p align="center"><a href="https://www.nordtheme.com/ports/highlightjs" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71248061-4ad7cd00-231a-11ea-8e3b-18d8793deafd.png" alt="Preview: Nord highlight.js Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/highlightjs" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/71248061-4ad7cd00-231a-11ea-8e3b-18d8793deafd.png" alt="Preview: Nord highlight.js Port Project Landing Page" />
+  </a>
+</p>
 
 <p align="center">Docs Page</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/highlightjs" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71248059-4ad7cd00-231a-11ea-8bf7-6397ec997efd.png" alt="Preview: Nord highlight.js Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/highlightjs" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/71248059-4ad7cd00-231a-11ea-8bf7-6397ec997efd.png" alt="Preview: Nord highlight.js Docs Page" />
+  </a>
+</p>
 
 <p align="center">Installation & Usage Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/highlightjs/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71248060-4ad7cd00-231a-11ea-9cc6-5fd14d45b1eb.png" alt="Preview: Nord highlight.js Installation & Usage Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/highlightjs/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/71248060-4ad7cd00-231a-11ea-9cc6-5fd14d45b1eb.png" alt="Preview: Nord highlight.js Installation & Usage Guide Page" />
+  </a>
+</p>
 
 # 0.22.0
 
-![Release Date: 2019-12-19](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-12-19&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.22.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/25) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.22.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/22)
+![Release Date: 2019-12-19](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-12-19&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.22.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.22.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/nordtheme/web/milestones/22)
 
 This version mainly focused on the [transition of the „Nord Xcode“ port project][gh-182]. The implementation includes the port specific [landing][home-ports-xcode] and [docs][home-docs-ports-xcode] pages as well as the [installation & activation][home-docs-ports-xcode-install] and [asset catalog][home-docs-ports-xcode-asset_catalog] guides.
 
@@ -42,16 +78,32 @@ This version mainly focused on the [transition of the „Nord Xcode“ port proj
 Please see the [corresponding issue in the _Nord Xcode_ repository][nord-xcode#9] to get an overview of what has changed for _Nord Xcode_ and what has been done to migrate to Nord Docs.
 
 <p align="center">Landing Page</p>
-<p align="center"><a href="https://www.nordtheme.com/ports/xcode" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71106477-bc4f3880-21bf-11ea-987b-bd5183c1aa4b.png" alt="Preview: Nord Xcode Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/xcode" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/71106477-bc4f3880-21bf-11ea-987b-bd5183c1aa4b.png" alt="Preview: Nord Xcode Port Project Landing Page" />
+  </a>
+</p>
 
 <p align="center">Docs Page</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/xcode" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71106475-bc4f3880-21bf-11ea-9a9f-4c0a0472a604.png" alt="Preview: Nord Xcode Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/xcode" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/71106475-bc4f3880-21bf-11ea-9a9f-4c0a0472a604.png" alt="Preview: Nord Xcode Docs Page" />
+  </a>
+</p>
 
 <p align="center">Installation & Activation Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/xcode/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71106476-bc4f3880-21bf-11ea-8812-079bb6425777.png" alt="Preview: Nord Xcode Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/xcode/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/71106476-bc4f3880-21bf-11ea-8812-079bb6425777.png" alt="Preview: Nord Xcode Installation & Activation Guide Page" />
+  </a>
+</p>
 
 <p align="center">Asset Catalog Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/xcode/asset_catalog" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/71106473-bc4f3880-21bf-11ea-9cec-d182d526a068.png" alt="Preview: Nord Xcode Asset Catalog Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/xcode/asset_catalog" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/71106473-bc4f3880-21bf-11ea-9cec-d182d526a068.png" alt="Preview: Nord Xcode Asset Catalog Guide Page" />
+  </a>
+</p>
 
 ## Bug Fixes
 
@@ -184,7 +236,7 @@ The awesome _react-testing_ libraries moved to the `@testing-library` package sc
 
 # 0.21.0
 
-![Release Date: 2019-08-09](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-09&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.21.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/24) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.21.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/21)
+![Release Date: 2019-08-09](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-09&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.21.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.21.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/nordtheme/web/milestones/21)
 
 This version mainly focused on the [transition of the „Nord Slack“ port project][gh-175]. The implementation includes the port specific [landing][home-ports-slack] and [docs][home-docs-ports-slack] pages and the [installation & activation guide][home-docs-ports-slack-install].
 
@@ -195,17 +247,29 @@ This version mainly focused on the [transition of the „Nord Slack“ port proj
 Please see the [corresponding issue in the _Nord Slack_ repository][nord-slack#5] to get an overview of what has changed for _Nord Slack_ and what has been done to migrate to Nord Docs.
 
 <p align="center">Landing Page</p>
-<p align="center"><a href="https://www.nordtheme.com/ports/slack" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62790926-6a3d2e80-bacc-11e9-98b1-a19d1bc18725.png" alt="Preview: Nord Slack Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/slack" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62790926-6a3d2e80-bacc-11e9-98b1-a19d1bc18725.png" alt="Preview: Nord Slack Port Project Landing Page" />
+  </a>
+</p>
 
 <p align="center">Docs Page</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/slack" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62790924-69a49800-bacc-11e9-9748-be6f26ba5c30.png" alt="Preview: Nord Slack Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/slack" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62790924-69a49800-bacc-11e9-9748-be6f26ba5c30.png" alt="Preview: Nord Slack Docs Page" />
+  </a>
+</p>
 
 <p align="center">Installation & Activation Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/slack/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62790925-6a3d2e80-bacc-11e9-9a8a-c713d0cafd1f.png" alt="Preview: Nord Slack Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/slack/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62790925-6a3d2e80-bacc-11e9-9a8a-c713d0cafd1f.png" alt="Preview: Nord Slack Installation & Activation Guide Page" />
+  </a>
+</p>
 
 # 0.20.0
 
-![Release Date: 2019-08-06](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-06&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.20.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/22) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.20.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/20)
+![Release Date: 2019-08-06](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-08-06&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.20.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.20.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/nordtheme/web/milestones/20)
 
 This version mainly focused on the [transition of the „Nord Sublime Text“ port project][gh-171]. The implementation includes the port specific [landing][home-ports-sublime-text] and [docs][home-docs-ports-sublime-text] pages, the [installation & activation guide][home-docs-ports-sublime-text-install] and [package development][home-docs-ports-sublime-text-develop] page.
 
@@ -216,16 +280,32 @@ This version mainly focused on the [transition of the „Nord Sublime Text“ po
 Please see the [corresponding issue in the _Nord Sublime Text_ repository][nord-sublime-text#21] to get an overview of what has changed for _Nord Sublime Text_ and what has been done to migrate to Nord Docs.
 
 <p align="center">Landing Page</p>
-<p align="center"><a href="https://www.nordtheme.com/ports/sublime-text" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62528962-fe459680-b83d-11e9-8d54-89f8625ce1af.png" alt="Preview: Nord Sublime Text Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/sublime-text" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62528962-fe459680-b83d-11e9-8d54-89f8625ce1af.png" alt="Preview: Nord Sublime Text Port Project Landing Page" />
+  </a>
+</p>
 
 <p align="center">Docs Page</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/sublime-text" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62528548-4f08bf80-b83d-11e9-9315-73788f63e9a5.png" alt="Preview: Nord Sublime Text Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/sublime-text" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62528548-4f08bf80-b83d-11e9-9315-73788f63e9a5.png" alt="Preview: Nord Sublime Text Docs Page" />
+  </a>
+</p>
 
 <p align="center">Installation & Activation Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/sublime-text/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62528550-4fa15600-b83d-11e9-84be-a58782e3ef1c.png" alt="Preview: Nord Sublime Text Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/sublime-text/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62528550-4fa15600-b83d-11e9-84be-a58782e3ef1c.png" alt="Preview: Nord Sublime Text Installation & Activation Guide Page" />
+  </a>
+</p>
 
 <p align="center">Package Development</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/sublime-text/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62528549-4fa15600-b83d-11e9-8c25-481653380cf6.png" alt="Preview: Nord Sublime Text Package Development Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/sublime-text/development" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62528549-4fa15600-b83d-11e9-8c25-481653380cf6.png" alt="Preview: Nord Sublime Text Package Development Guide Page" />
+  </a>
+</p>
 
 ## Bug Fixes
 
@@ -236,7 +316,7 @@ Please see the [corresponding issue in the _Nord Sublime Text_ repository][nord-
 
 # 0.19.0
 
-![Release Date: 2019-07-30](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-07-30&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.19.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/21) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.19.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/19)
+![Release Date: 2019-07-30](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-07-30&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.19.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.19.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/nordtheme/web/milestones/19)
 
 This version mainly focused on the [transition of the „Nord Atom Syntax“][gh-168] and [Nord Atom UI][gh-166]. The implementation includes port specific landing ([syntax][home-ports-atom-syntax]/[UI][home-ports-atom-ui]) and „docs“ ([syntax][home-docs-ports-atom-syntax]/[UI][home-docs-ports-atom-ui]) page, the „installation & activation guide“ ([syntax][home-docs-ports-atom-syntax-install]/[UI][home-docs-ports-atom-ui-install]) and how to develop the theme ([syntax][home-docs-ports-atom-syntax-dev]/[UI][home-docs-ports-atom-ui-dev]).
 
@@ -247,16 +327,32 @@ This version mainly focused on the [transition of the „Nord Atom Syntax“][gh
 Please see the [corresponding issue in the Nord Atom Syntax repository][nord-atom-syntax#63] to get an overview of what has changed for Nord Atom Syntax and what has been done to migrate to Nord Docs.
 
 <p align="center">Landing Page</p>
-<p align="center"><a href="https://www.nordtheme.com/ports/atom-syntax" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62131873-52032d80-b2dc-11e9-8893-ef9dd8bfdd5d.png" alt="Preview: Nord Atom Syntax Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/atom-syntax" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62131873-52032d80-b2dc-11e9-8893-ef9dd8bfdd5d.png" alt="Preview: Nord Atom Syntax Port Project Landing Page" />
+  </a>
+</p>
 
 <p align="center">Docs Page</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-syntax" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62128997-e61dc680-b2d5-11e9-99f3-004b8b1243b5.png" alt="Preview: Nord Atom Syntax Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/atom-syntax" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62128997-e61dc680-b2d5-11e9-99f3-004b8b1243b5.png" alt="Preview: Nord Atom Syntax Docs Page" />
+  </a>
+</p>
 
 <p align="center">Installation & Activation Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-syntax/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62128860-a1922b00-b2d5-11e9-8fab-536361344b7e.png" alt="Preview: Nord Atom Syntax Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/atom-syntax/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62128860-a1922b00-b2d5-11e9-8fab-536361344b7e.png" alt="Preview: Nord Atom Syntax Installation & Activation Guide Page" />
+  </a>
+</p>
 
 <p align="center">Package Development</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-syntax/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62128859-a1922b00-b2d5-11e9-9840-890abf8c2d97.png" alt="Preview: Nord Atom Syntax Package Development Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/atom-syntax/development" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62128859-a1922b00-b2d5-11e9-9840-890abf8c2d97.png" alt="Preview: Nord Atom Syntax Package Development Guide Page" />
+  </a>
+</p>
 
 ## Features
 
@@ -265,19 +361,39 @@ Please see the [corresponding issue in the Nord Atom Syntax repository][nord-ato
 Please see the [corresponding issue in the Nord Atom UI repository][nord-atom-ui#82] to get an overview of what has changed for Nord Atom UI and what has been done to migrate to Nord Docs.
 
 <p align="center">Landing Page</p>
-<p align="center"><a href="https://www.nordtheme.com/ports/atom-ui" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059671-f2e1e200-b223-11e9-8e1d-ce28e185336e.png" alt="Preview: Nord Atom UI Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/atom-ui" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62059671-f2e1e200-b223-11e9-8e1d-ce28e185336e.png" alt="Preview: Nord Atom UI Port Project Landing Page" />
+  </a>
+</p>
 
 <p align="center">Docs Page</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-ui" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059666-f2494b80-b223-11e9-99f0-576efe20e10b.png" alt="Preview: Nord Atom UI Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/atom-ui" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62059666-f2494b80-b223-11e9-99f0-576efe20e10b.png" alt="Preview: Nord Atom UI Docs Page" />
+  </a>
+</p>
 
 <p align="center">Installation & Activation Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-ui/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059670-f2494b80-b223-11e9-933b-8864ec545db4.png" alt="Preview: Nord Atom UI Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/atom-ui/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62059670-f2494b80-b223-11e9-933b-8864ec545db4.png" alt="Preview: Nord Atom UI Installation & Activation Guide Page" />
+  </a>
+</p>
 
 <p align="center">Configurations</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-ui/configuration" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059667-f2494b80-b223-11e9-990d-b526295de772.png" alt="Preview: Nord Atom UI Configuration Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/atom-ui/configuration" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62059667-f2494b80-b223-11e9-990d-b526295de772.png" alt="Preview: Nord Atom UI Configuration Guide Page" />
+  </a>
+</p>
 
 <p align="center">Package Development</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/atom-ui/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/62059668-f2494b80-b223-11e9-892b-b53cbe012e06.png" alt="Preview: Nord Atom UI Package Development Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/atom-ui/development" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/62059668-f2494b80-b223-11e9-892b-b53cbe012e06.png" alt="Preview: Nord Atom UI Package Development Guide Page" />
+  </a>
+</p>
 
 ## Bug Fixes
 
@@ -297,7 +413,7 @@ Please see the [corresponding issue in the Nord Atom UI repository][nord-atom-ui
 
 # 0.18.0
 
-![Release Date: 2019-06-21](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.18.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/20) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.18.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/18)
+![Release Date: 2019-06-21](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.18.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.18.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/nordtheme/web/milestones/18)
 
 This version mainly focused on the [transition of the „Nord dircolors“ port project][gh-159]. The implementation includes port specific [landing][home-ports-dircolors] and [docs][home-docs-ports-dircolors] page, the [installation & activation guide][home-docs-ports-dircolors-install] and [supported data and node types][home-docs-ports-dircolors-type_support] page.
 
@@ -308,20 +424,36 @@ This version mainly focused on the [transition of the „Nord dircolors“ port 
 Please see the [corresponding issue in the Nord dircolors repository][nord-dircolors#13] to get an overview of what has changed for Nord dircolors and what has been done to migrate to Nord Docs.
 
 <p align="center">Landing Page</p>
-<p align="center"><a href="https://www.nordtheme.com/ports/dircolors" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942887-25e4c900-9461-11e9-8532-50f3032c9ff6.png" alt="Preview: Nord dircolors Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/dircolors" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/59942887-25e4c900-9461-11e9-8532-50f3032c9ff6.png" alt="Preview: Nord dircolors Port Project Landing Page" />
+  </a>
+</p>
 
 <p align="center">Docs Page</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/dircolors" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942885-25e4c900-9461-11e9-80d4-aeb06c17bf42.png" alt="Preview: Nord dircolors Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/dircolors" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/59942885-25e4c900-9461-11e9-80d4-aeb06c17bf42.png" alt="Preview: Nord dircolors Docs Page" />
+  </a>
+</p>
 
 <p align="center">Installation & Activation Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/dircolors/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942884-25e4c900-9461-11e9-899f-37e80ca1d7db.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/dircolors/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/59942884-25e4c900-9461-11e9-899f-37e80ca1d7db.png" alt="Preview: Installation & Activation Guide Page" />
+  </a>
+</p>
 
 <p align="center">Type Support</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/dircolors/type-support" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59942886-25e4c900-9461-11e9-98bd-ddd164ca2447.png" alt="Preview: Configuration Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/dircolors/type-support" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/59942886-25e4c900-9461-11e9-98bd-ddd164ca2447.png" alt="Preview: Configuration Guide Page" />
+  </a>
+</p>
 
 # 0.17.0
 
-![Release Date: 2019-06-16](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-16&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/projects/19) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/arcticicestudio/nord-docs/milestone/17)
+![Release Date: 2019-06-16](https://img.shields.io/static/v1.svg?style=flat-square&label=Release%20Date&message=2019-06-16&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1.svg?style=flat-square&label=Project%20Board&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/static/v1.svg?style=flat-square&label=Milestone&message=0.17.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/nordtheme/web/milestones/17)
 
 This version mainly focused on the [transition of the „Nord Emacs“ port project][gh-155]. The implementation includes port specific [landing][home-ports-emacs] and [docs][home-docs-ports-emacs] page, the [installation & activation guide][home-docs-ports-emacs-install] and [configuration][home-docs-ports-emacs-config] page.
 
@@ -332,26 +464,42 @@ This version mainly focused on the [transition of the „Nord Emacs“ port proj
 Please see the [corresponding issue in the Nord Emacs repository][nord-emacs#76] to get an overview of what has changed for Nord Emacs and what has been done to migrate to Nord Docs.
 
 <p align="center">Landing Page</p>
-<p align="center"><a href="https://www.nordtheme.com/ports/emacs" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59565380-2f31f800-9053-11e9-8963-7d0ca40b0f43.jpg" alt="Preview: Nord Emacs Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/emacs" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/59565380-2f31f800-9053-11e9-8963-7d0ca40b0f43.jpg" alt="Preview: Nord Emacs Port Project Landing Page" />
+  </a>
+</p>
 
 <p align="center">Docs Page</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/emacs" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59565381-2f31f800-9053-11e9-8351-2dcdcd9757e2.png" alt="Preview: Nord Emacs Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/emacs" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/59565381-2f31f800-9053-11e9-8351-2dcdcd9757e2.png" alt="Preview: Nord Emacs Docs Page" />
+  </a>
+</p>
 
 <p align="center">Installation & Activation Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/emacs/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59565379-2f31f800-9053-11e9-802d-8c75cb93382a.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/emacs/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/59565379-2f31f800-9053-11e9-802d-8c75cb93382a.png" alt="Preview: Installation & Activation Guide Page" />
+  </a>
+</p>
 
 <p align="center">Configuration Guide</p>
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/emacs/configuration" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/59565378-2f31f800-9053-11e9-9b40-32a0c7d83adf.png" alt="Preview: Configuration Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/emacs/configuration" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/59565378-2f31f800-9053-11e9-9b40-32a0c7d83adf.png" alt="Preview: Configuration Guide Page" />
+  </a>
+</p>
 
 ## Bug Fixes
 
 **Missing Video Metadata In Docs Page Template** — #157 (⊶ ce1f5768)
-↠ The [`Video`][gh-nord-docs-blob-mdx-video-component#l93-94] component maps the video file metadata received from `props.sources` (array of objects) to the `<source>` HTML tag, but for docs pages the MDX [`DocsPage`][gh-nord-docs-blob-template-docs_page#l48] component only passed down the `publicUrl` metadata field resulting in a array of strings. This caused the `Video` component failing to load the video file(s) for MDX docs pages.
+↠ The [`Video`][gh-web-blob-mdx-video-component#l93-94] component maps the video file metadata received from `props.sources` (array of objects) to the `<source>` HTML tag, but for docs pages the MDX [`DocsPage`][gh-web-blob-template-docs_page#l48] component only passed down the `publicUrl` metadata field resulting in a array of strings. This caused the `Video` component failing to load the video file(s) for MDX docs pages.
 To fix the invalid mapping the `DocsPage` component now passes down the whole video file metadata object instead of only the `publicUrl` (string) field.
 
 # 0.16.0
 
-![Release Date: 2019-06-02](https://img.shields.io/badge/Release_Date-2019--06--02-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.16.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/18) [![Milestone](https://img.shields.io/badge/Milestone-0.16.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/16)
+![Release Date: 2019-06-02](https://img.shields.io/badge/Release_Date-2019--06--02-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.16.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.16.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/16)
 
 This version mainly focused on the [transition of the „Nord tmux“ port project][gh-152]. The implementation include port specific [landing][home-ports-tmux] and [docs][home-docs-ports-tmux] page, the [installation & activation guide][home-docs-ports-tmux-install], [configuration][home-docs-ports-tmux-config] guide and [plugin support][home-docs-ports-tmux-plugins] pages.
 
@@ -363,30 +511,50 @@ Please see the [corresponding issue in the Nord tmux repository][nord-tmux#36] t
 
 ### Landing Page
 
-<p align="center"><a href="https://www.nordtheme.com/ports/tmux" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762743-23bed700-8553-11e9-8094-dc82e8eea6bd.png" alt="Preview: Nord tmux Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/tmux" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58762743-23bed700-8553-11e9-8094-dc82e8eea6bd.png" alt="Preview: Nord tmux Port Project Landing Page" />
+  </a>
+</p>
 
 ### Docs Page
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/tmux" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762745-29b4b800-8553-11e9-9b2c-076577593a9c.png" alt="Preview: Nord tmux Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/tmux" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58762745-29b4b800-8553-11e9-9b2c-076577593a9c.png" alt="Preview: Nord tmux Docs Page" />
+  </a>
+</p>
 
 ### Installation & Activation Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/tmux/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762754-3f29e200-8553-11e9-88ae-336f7a1ed999.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/tmux/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58762754-3f29e200-8553-11e9-88ae-336f7a1ed999.png" alt="Preview: Installation & Activation Guide Page" />
+  </a>
+</p>
 
 ### Configuration Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/tmux/configuration" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762760-451fc300-8553-11e9-861c-1a0925d20d66.png" alt="Preview: Configuration Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/tmux/configuration" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58762760-451fc300-8553-11e9-861c-1a0925d20d66.png" alt="Preview: Configuration Guide Page" />
+  </a>
+</p>
 
 ### Plugin Support Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/tmux/plugin-support" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58762761-4ea92b00-8553-11e9-929a-14dfd6690b36.png" alt="Preview: Plugin Support Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/tmux/plugin-support" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58762761-4ea92b00-8553-11e9-929a-14dfd6690b36.png" alt="Preview: Plugin Support Guide Page" />
+  </a>
+</p>
 
 **Screenshot showing Go syntax highlighting** — #151 (⊶ 42b2b609)
-↠ Added a new screenshot asset for the „Nord Visual Studio Code“ port project showing the Go syntax in order to fix the bug described in [arcticicestudio/nord-visual-studio-code#140][gh-arcticicestudio/nord-visual-studio-code#140] regarding the usage of duplicate assets.
+↠ Added a new screenshot asset for the „Nord Visual Studio Code“ port project showing the Go syntax in order to fix the bug described in [nordtheme/visual-studio-code#140][gh-nordtheme/visual-studio-code#140] regarding the usage of duplicate assets.
 
 # 0.15.0
 
-![Release Date: 2019-05-31](https://img.shields.io/badge/Release_Date-2019--05--31-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/17) [![Milestone](https://img.shields.io/badge/Milestone-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/15)
+![Release Date: 2019-05-31](https://img.shields.io/badge/Release_Date-2019--05--31-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.15.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/15)
 
 This version mainly focused on the [transition of the „Nord Visual Studio Code“ port project][gh-149]. The implementation include port specific [landing][home-ports-vscode] and [docs][home-docs-ports-vscode] page, the [installation & activation guide][home-docs-ports-vscode-install], [customization][home-docs-ports-vscode-custom] and [development][home-docs-ports-vscode-develop] guide.
 
@@ -398,38 +566,58 @@ Please see the [corresponding issue in the Nord Visual Studio Code repository][n
 
 ### Landing Page
 
-<p align="center"><a href="https://www.nordtheme.com/ports/visual-studio-code" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706701-14a12300-83b3-11e9-8bad-d652e7d910d1.png" alt="Preview: Nord Visual Studio Code Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/visual-studio-code" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58706701-14a12300-83b3-11e9-8bad-d652e7d910d1.png" alt="Preview: Nord Visual Studio Code Port Project Landing Page" />
+  </a>
+</p>
 
 ### Docs Page
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/visual-studio-code" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706700-14a12300-83b3-11e9-8bd4-1f3f29f61775.png" alt="Preview: Nord Visual Studio Code Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/visual-studio-code" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58706700-14a12300-83b3-11e9-8bd4-1f3f29f61775.png" alt="Preview: Nord Visual Studio Code Docs Page" />
+  </a>
+</p>
 
 ### Installation & Activation Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/visual-studio-code/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706699-14a12300-83b3-11e9-8700-27fa215ae6e9.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/visual-studio-code/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58706699-14a12300-83b3-11e9-8700-27fa215ae6e9.png" alt="Preview: Installation & Activation Guide Page" />
+  </a>
+</p>
 
 ### Customization Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/visual-studio-code/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706697-14088c80-83b3-11e9-8dc9-3b13cb8ab9e3.png" alt="Preview: Customization Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/visual-studio-code/development" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58706697-14088c80-83b3-11e9-8dc9-3b13cb8ab9e3.png" alt="Preview: Customization Guide Page" />
+  </a>
+</p>
 
 ### Development Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/visual-studio-code/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58706698-14a12300-83b3-11e9-9fb6-b1b61cfa1cad.png" alt="Preview: Development Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/visual-studio-code/development" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58706698-14a12300-83b3-11e9-9fb6-b1b61cfa1cad.png" alt="Preview: Development Guide Page" />
+  </a>
+</p>
 
 # 0.14.0
 
-![Release Date: 2019-05-25](https://img.shields.io/badge/Release_Date-2019--05--25-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.14.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/16) [![Milestone](https://img.shields.io/badge/Milestone-0.14.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/14)
+![Release Date: 2019-05-25](https://img.shields.io/badge/Release_Date-2019--05--25-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.14.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.14.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/14)
 
 # Features
 
 **Nord Vim „bold font rendering“ configuration** — #147 ⇄ #148 (⊶ ef0cb597)
-↠ Added [documentations for Nord Vim's new `nord_bold` configuration][home-docs-ports-vim-config-font-bold] implemented in [arcticicestudio/nord-vim#161][].
+↠ Added [documentations for Nord Vim's new `nord_bold` configuration][home-docs-ports-vim-config-font-bold] implemented in [nordtheme/vim#161][].
 
 # 0.13.0
 
-![Release Date: 2019-05-21](https://img.shields.io/badge/Release_Date-2019--05--21-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/15) [![Milestone](https://img.shields.io/badge/Milestone-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/13)
+![Release Date: 2019-05-21](https://img.shields.io/badge/Release_Date-2019--05--21-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.13.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/13)
 
-This version mainly focused on the [transition of the „Nord Vim“ port project][gh-143]. The implementation include port specific [landing][home-ports-vim] and [docs][home-docs-ports-vim] page, the [installation & activation guide][home-docs-ports-vim-install], [configuration][home-docs-ports-vim-config] and [customization][home-docs-ports-vim-custom] guide.
+This version mainly focused on the [transition of the „Nord Vim“ port project][gh-143]. The implementation include port specific [landing][port-vim] and [docs][home-docs-ports-vim] page, the [installation & activation guide][home-docs-ports-vim-install], [configuration][home-docs-ports-vim-config] and [customization][home-docs-ports-vim-custom] guide.
 
 ## Features
 
@@ -439,23 +627,43 @@ Please see the [corresponding issue in the Nord Vim repository][nord-vim#158] to
 
 ### Landing Page
 
-<p align="center"><a href="https://www.nordtheme.com/ports/vim" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123747-d1092500-7c0c-11e9-8ea1-d8a97b592acb.png" alt="Preview: Nord Vim Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/vim" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58123747-d1092500-7c0c-11e9-8ea1-d8a97b592acb.png" alt="Preview: Nord Vim Port Project Landing Page" />
+  </a>
+</p>
 
 ### Docs Page
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/vim" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123746-d1092500-7c0c-11e9-990d-6e65d20cd935.png" alt="Preview: Nord Vim Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/vim" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58123746-d1092500-7c0c-11e9-990d-6e65d20cd935.png" alt="Preview: Nord Vim Docs Page" />
+  </a>
+</p>
 
 ### Installation & Activation Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/vim/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123745-d1092500-7c0c-11e9-82d8-e1d60fc0d725.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/vim/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58123745-d1092500-7c0c-11e9-82d8-e1d60fc0d725.png" alt="Preview: Installation & Activation Guide Page" />
+  </a>
+</p>
 
 ### Configuration Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/vim/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123743-d0708e80-7c0c-11e9-9149-a3f023104b1c.png" alt="Preview: Configuration Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/vim/development" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58123743-d0708e80-7c0c-11e9-9149-a3f023104b1c.png" alt="Preview: Configuration Guide Page" />
+  </a>
+</p>
 
 ### Customization Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/vim/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/58123744-d0708e80-7c0c-11e9-84c7-50275e2696e1.png" alt="Preview: Customization Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/vim/development" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/58123744-d0708e80-7c0c-11e9-84c7-50275e2696e1.png" alt="Preview: Customization Guide Page" />
+  </a>
+</p>
 
 ## Bug Fixes
 
@@ -467,7 +675,7 @@ Therefore, to finish 100% of the migration, both options have been renamed.
 
 # 0.12.0
 
-![Release Date: 2019-05-05](https://img.shields.io/badge/Release_Date-2019--05--05-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/14) [![Milestone](https://img.shields.io/badge/Milestone-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/12)
+![Release Date: 2019-05-05](https://img.shields.io/badge/Release_Date-2019--05--05-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.12.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/12)
 
 This version mainly focused on the [transition of the „Nord JetBrains“ port project][gh-140]. The implementation include port specific [landing][home-ports-jetbrains] and [docs][home-docs-ports-jetbrains] page, the [installation & activation guide][home-docs-ports-jetbrains-install] and [development/contribution guide][home-docs-ports-jetbrains-dev].
 
@@ -479,19 +687,35 @@ Please see the [corresponding issue in the Nord JetBrains repository][nord-jetbr
 
 ### Landing Page
 
-<p align="center"><a href="https://www.nordtheme.com/ports/jetbrains" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/57189976-67530080-6f15-11e9-9938-7ad5feb71d13.png" alt="Preview: Nord JetBrains Port Project Landing Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/ports/jetbrains" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/57189976-67530080-6f15-11e9-9938-7ad5feb71d13.png" alt="Preview: Nord JetBrains Port Project Landing Page" />
+  </a>
+</p>
 
 ### Docs Page
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/jetbrains" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/57189922-ba788380-6f14-11e9-8900-11e96ef98b0a.png" alt="Preview: Nord JetBrains Docs Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/jetbrains" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/57189922-ba788380-6f14-11e9-8900-11e96ef98b0a.png" alt="Preview: Nord JetBrains Docs Page" />
+  </a>
+</p>
 
 ### Installation & Activation Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/jetbrains/installation" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/57189920-ba788380-6f14-11e9-9595-34a3f4effd2d.png" alt="Preview: Installation & Activation Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/jetbrains/installation" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/57189920-ba788380-6f14-11e9-9595-34a3f4effd2d.png" alt="Preview: Installation & Activation Guide Page" />
+  </a>
+</p>
 
 ### Development Guide
 
-<p align="center"><a href="https://www.nordtheme.com/docs/ports/jetbrains/development" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/57189979-6fab3b80-6f15-11e9-9492-e473b244ea36.png" alt="Preview: Installation & Development Guide Page"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/ports/jetbrains/development" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/57189979-6fab3b80-6f15-11e9-9492-e473b244ea36.png" alt="Preview: Installation & Development Guide Page" />
+  </a>
+</p>
 
 ## Bug Fixes
 
@@ -504,7 +728,7 @@ Please see the [corresponding issue in the Nord JetBrains repository][nord-jetbr
 ## Task
 
 **„Nord JetBains“ project renaming** — #138 (⊶ b435e0ef)
-↠ Adapted the port docs, pages and components to the renaming of the „Nord JetBain“ project (`nord-jetbrains-editor` to `nord-jetbrains`) like documented in [arcticicestudio/nord-jetbrains#44][nord-jetbrains#44].
+↠ Adapted the port docs, pages and components to the renaming of the „Nord JetBain“ project (`nord-jetbrains-editor` to `nord-jetbrains`) like documented in [nordtheme/jetbrains#44][nord-jetbrains#44].
 
 **Dependency Update February-April 2019** — #137 ⇄ #139 (⊶ 9de7e7b3)
 ↠ Completed the regular batch update for outdated production and development dependencies.
@@ -599,9 +823,13 @@ Gatsby and all official plugins have been updated to the latest versions. This c
 
 # 0.11.0
 
-![Release Date: 2019-03-16](https://img.shields.io/badge/Release_Date-2019--03--16-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/13) [![Milestone](https://img.shields.io/badge/Milestone-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/11)
+![Release Date: 2019-03-16](https://img.shields.io/badge/Release_Date-2019--03--16-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.11.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/11)
 
-<p align="center"><a href="https://www.nordtheme.com" target="_blank"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/main/assets/images/nord/repository-hero.svg?sanitize=true" width="60%" /></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com" target="_blank">
+    <img src="https://raw.githubusercontent.com/nordtheme/web/main/assets/images/nord/repository-hero.svg?sanitize=true" width="60%" />
+  </a>
+</p>
 
 <p align="center"><strong>Finally emerged from the snowstorm: Nord Docs initially launched!</strong></p>
 
@@ -624,21 +852,37 @@ Please see the [corresponding issue in the Nord repository][nord#112] to get an 
 
 ### Colors and Palettes
 
-<p align="center"><a href="https://www.nordtheme.com/docs/colors-and-palettes" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/54481336-b6dd5000-4833-11e9-887b-61f3cfe0ea23.png" alt="Preview: Colors and Palettes"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/colors-and-palettes" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/54481336-b6dd5000-4833-11e9-887b-61f3cfe0ea23.png" alt="Preview: Colors and Palettes" />
+  </a>
+</p>
 
 ### Installation and Usage
 
-<p align="center"><a href="https://www.nordtheme.com/docs/usage" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/54481345-c2c91200-4833-11e9-82d7-a7852454a906.png" alt="Preview: Installation and Usage"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/usage" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/54481345-c2c91200-4833-11e9-82d7-a7852454a906.png" alt="Preview: Installation and Usage" />
+  </a>
+</p>
 
 ### Color Swatches
 
-<p align="center"><a href="https://www.nordtheme.com/docs/swatches" target="_blank"><img src="https://user-images.githubusercontent.com/7836623/54481344-c2c91200-4833-11e9-8b0b-71625e3816bd.png" alt="Preview: Color Swatches"/></a></p>
+<p align="center">
+  <a href="https://www.nordtheme.com/docs/swatches" target="_blank">
+    <img src="https://user-images.githubusercontent.com/7836623/54481344-c2c91200-4833-11e9-8b0b-71625e3816bd.png" alt="Preview: Color Swatches" />
+  </a>
+</p>
 
 # 0.10.0
 
-![Release Date: 2019-03-10](https://img.shields.io/badge/Release_Date-2019--03--10-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/12) [![Milestone](https://img.shields.io/badge/Milestone-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/10)
+![Release Date: 2019-03-10](https://img.shields.io/badge/Release_Date-2019--03--10-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.10.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/10)
 
-<p align="center"><img src="https://raw.githubusercontent.com/arcticicestudio/nord-docs/main/src/assets/images/metadata-banner.svg?sanitize=true" width="60%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://raw.githubusercontent.com/nordtheme/web/main/src/assets/images/metadata-banner.svg?sanitize=true" width="60%" />
+  </picture>
+</p>
 
 <p align="center"><strong>Initial website launch ahead!</strong></p>
 
@@ -650,7 +894,11 @@ More details and information can also be found in the [tweet thread of the initi
 
 ## Features
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%" />
+  </picture>
+</p>
 
 The following issues are related to the [“Components”][gh-63] and [“Responsive Web”][gh-52] design concepts to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
 
@@ -691,7 +939,11 @@ In order to create great documentations and blog posts with interactive elements
 - `Video` — An `<video>` element that uses the `Image` component to render a `poster` with Gatsby's image rendering mechanism while the media file is being loaded to prevent layout shifting. It is also wrapped in a `<figure>` element with an optional caption.
 - `ShinkedWidth` — An container component that shrinks the maxiumum width for a better visual style and more readable text.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/54077408-019d1c00-42b8-11e9-928a-27e580cd9fc5.gif" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/54077408-019d1c00-42b8-11e9-928a-27e580cd9fc5.gif" />
+  </picture>
+</p>
 
 To reduce the requirement of imports and "logical Markdown" almost all HTML elements supported by the official Markdown as well as the [GitHub Flavored Markdown Specification][gfm] the [`MDXProvider`][mdx-docs-provider] component is used to map the project's base components to their specific HTML elements.
 
@@ -703,14 +955,26 @@ The design of docs pages imitate a paper sheet where the overall styles using a 
 
 The last remaining main page is `/blog` which presents an overview of Nord's blog posts in a three-column grid of card components sorted descending by their publish date.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/54077409-019d1c00-42b8-11e9-916f-c26138947d4e.jpg" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/54077409-019d1c00-42b8-11e9-916f-c26138947d4e.jpg" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/54077410-019d1c00-42b8-11e9-94e3-7ef5466e9f4b.jpg" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/54077410-019d1c00-42b8-11e9-94e3-7ef5466e9f4b.jpg" />
+  </picture>
+</p>
 
 Each card consists of an cover image together with the title of the post. The latest post spans over two columns at the top for a nice visual structure and better recognizability.
 While a one-column card uses a cover image the latest post uses a _banner_ that will either be the same image with a larger width, a variant of it or a completly different one.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/54077411-019d1c00-42b8-11e9-9968-ba1a3a6e4666.gif" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/54077411-019d1c00-42b8-11e9-9968-ba1a3a6e4666.gif" />
+  </picture>
+</p>
 
 A blog post itself makes use of the MDX features and the custom MDX components mentioned in the paragraph above.
 To simplify the usage of the _cover_ and _banner_ image they are be processed with Gatsby's [`onCreateNode`][gatsby-docs-api-node-ocn] API in combination with [Gatsby's `mapping` configuration feature][gatsby-docs-conf-mapping]. This allows to map the paths of images to a `File` node that is then handled by the [Gatsby image processing plugin workflow][gatsby-docs-images] also documented in the [Image Processing](#image-processing) section above.
@@ -737,35 +1001,62 @@ Anyway, they will be removed as soon as there is finally the first blog post and
 ↠ Updated all URLs and references to the new [official Nord Spectrum community][spectrum-nord] that is available as of 2019-03-03.
 Previously the official [Arctic Ice Studio][spectrum-ais] community was used with its channels for Nord projects.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53745393-3a478a80-3e9f-11e9-938b-3758158dbbe0.png" width="45%" /> <img src="https://user-images.githubusercontent.com/7836623/53745380-36b40380-3e9f-11e9-84a7-947eea4e923a.png" width="45%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/53745393-3a478a80-3e9f-11e9-938b-3758158dbbe0.png" width="45%" />
+  </picture>
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/53745380-36b40380-3e9f-11e9-84a7-947eea4e923a.png" width="45%" />
+  </picture>
+</p>
 
 # 0.9.0
 
-![Release Date: 2019-03-03](https://img.shields.io/badge/Release_Date-2019--03--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/11) [![Milestone](https://img.shields.io/badge/Milestone-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/9)
+![Release Date: 2019-03-03](https://img.shields.io/badge/Release_Date-2019--03--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.9.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/9)
 
 This version mainly focused on the [sections of the ports page][gh-119] to represent Nord's port projects. The implementation was limited to the landing page components and currently doesn't include any prot specific pages, but will be implemented later on when the actual documentations are being migrated.
 
 ## Features
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%" />
+  </picture>
+</p>
 
 The following issues are related to the [“Components” design concept][gh-63] and the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/52519841-ee1f7680-2c61-11e9-91fa-b7e41ab30145.png" width="30%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/52519841-ee1f7680-2c61-11e9-91fa-b7e41ab30145.png" width="30%" />
+  </picture>
+</p>
 
 **Ports Page Sections** — #119 ⇄ #126 (⊶ 606f805a)
 ↠ Implemented all port page sections including required changes to involved components and new dependencies.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53166036-83145f00-35d4-11e9-8158-3008657ce4ff.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/53166036-83145f00-35d4-11e9-8158-3008657ce4ff.png" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53166795-96282e80-35d6-11e9-8ed8-5b81ed3fe41f.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/53166795-96282e80-35d6-11e9-8ed8-5b81ed3fe41f.png" />
+  </picture>
+</p>
 
 ### Hero
 
 The first section contains a _feature duo_ container with the pages heading and a summary about Nord's ports.
 Underneath the static vector graphic that was placed in the port section of the landing (`/`) page has been implemented as interactive animated component. It uses a 3D depth effect for the port project's logos by moving against the direction of the current mouse position where the larger logos will move more to give the impression that they are closer.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53166647-33369780-35d6-11e9-9130-fde7e4cdadd1.gif"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/53166647-33369780-35d6-11e9-9130-fde7e4cdadd1.gif" />
+  </picture>
+</p>
 
 ### Grid Filter
 
@@ -774,7 +1065,11 @@ Each card represents one port project and consists of the logo, the name (with t
 
 To prevent UI freezes/frame drops when typing in the input field, while the grid reacts to the change immediately, it was considered to use _debounce_ that waits some milliseconds before actually filtering the grid by the given search term. This hasn't been implemented yet but might be added later on when there are performance problems. To get the best performance [Lodash][] can be used through [gatsby-plugin-lodash][gh-gatsby-p-lodash] which sets up [babel-plugin-lodash][gh-babel-plugin-lodash] and [lodash-webpack-plugin][gh-lodash-webpack-plugin].
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53166646-33369780-35d6-11e9-94ea-b5758691f47f.gif"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/53166646-33369780-35d6-11e9-94ea-b5758691f47f.gif" />
+  </picture>
+</p>
 
 ### GitHub GraphQL API
 
@@ -790,14 +1085,22 @@ It comes with [first-class support for Hooks][react-spring-basic], a great and e
 ↠ Since the [latest stable React version finally comes with the long-awaited Hooks][react-b-16.8.0] the project now added support for the new features.
 To simplify the usage and import of [custom Hooks][react-docs-hooks-ch] a new `hooks` import alias has been added that allows to import custom hooks from the new `src/hooks` Hooks base directory.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48658871-4707b600-ea49-11e8-8a08-39e1a318c442.png" width="25%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48658871-4707b600-ea49-11e8-8a08-39e1a318c442.png" width="25%" />
+  </picture>
+</p>
 
 The ESLint plugin [eslint-plugin-react-hooks][npm-eslint-react-hooks] provided by the React core team has been added to enforce the [rules of Hooks][react-docs-hooks-roh]. This is a temporary integration until the [eslint-config-arcticicestudio][npm-eslint-config-arcticicestudio] package has been updated to support and include the plugin.
 
 The plugin is configured by following the [official documentation about the rules of Hooks][react-docs-hooks-roh].
 Since React Hooks are making use of inline arrow functions the [react/jsx-no-bind][eslint-p-react/jsx-no-bind] rule has been disabled to avoid noisy false-positive errors.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/52774423-6d83c000-303d-11e9-83cb-4704419c63c6.png" width="25%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/52774423-6d83c000-303d-11e9-83cb-4704419c63c6.png" width="25%" />
+  </picture>
+</p>
 
 **git-crypt** — #123 ⇄ #124 (⊶ 475c6956)
 ↠ Integrated [git-crypt][] into the repository to allow to encrypt specific files using [GPG][].
@@ -831,7 +1134,11 @@ The following steps have been performed to integrate git-crypt for the current c
 
 The new component is now also used for the [port section of the landing page][home-ports] replacing the static SVG illustration/image.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/53172428-9da30400-35e5-11e9-96a5-f787247b467a.gif" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/53172428-9da30400-35e5-11e9-96a5-f787247b467a.gif" />
+  </picture>
+</p>
 
 ## Tasks
 
@@ -862,13 +1169,17 @@ This bug fix release version might fix some problems that were encountered durin
 
 # 0.8.0
 
-![Release Date: 2019-02-03](https://img.shields.io/badge/Release_Date-2019--02--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/10) [![Milestone](https://img.shields.io/badge/Milestone-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/8)
+![Release Date: 2019-02-03](https://img.shields.io/badge/Release_Date-2019--02--03-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.8.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/8)
 
 This version mainly focused on the [sections of the docs page][gh-117] to represent Nord's documentation categories and their topics. The implementation was limited to the landing page components and style and currently doesn't include any documentation, the actual docs will be implemented and imported later on using the [GraphQL API and MDX][gh-24].
 
 ## Features
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%" />
+  </picture>
+</p>
 
 The following issues are related to the [“Components” design concept][gh-63].
 
@@ -876,7 +1187,11 @@ The following issues are related to the [“Components” design concept][gh-63]
 ↠ Implemented all docs page sections including required changes to other components.
 All sections follow the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/52166394-eb2a0080-270c-11e9-9979-17aeee02043d.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/52166394-eb2a0080-270c-11e9-9979-17aeee02043d.png" />
+  </picture>
+</p>
 
 ### Hero
 
@@ -890,30 +1205,50 @@ As of now there are two cards for the categories “Getting Started” and “Re
 
 # 0.7.0
 
-![Release Date: 2019-01-26](https://img.shields.io/badge/Release_Date-2019--01--26-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/9) [![Milestone](https://img.shields.io/badge/Milestone-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/7)
+![Release Date: 2019-01-26](https://img.shields.io/badge/Release_Date-2019--01--26-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.7.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/7)
 
 This version mainly focused on the [sections of the community page][gh-115] to represent Nord's community chat channels as well as the content & knowledge bases.
 
 ## Features
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%" />
+  </picture>
+</p>
 
 The following issues are related to the [“Components” design concept][gh-63] and the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
 
 **Community Page Sections** — #115 ⇄ #116 (⊶ 5fb775c7)
 ↠ Implemented all community page sections including required dependencies, components and illustrations.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789079-bb677f80-2185-11e9-8069-782a098c3d50.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/51789079-bb677f80-2185-11e9-8069-782a098c3d50.png" />
+  </picture>
+</p>
 
 ### Hero
 
 The first section is the “hero” of the community page that renders a description about the page's purpose and an animated SVG component.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789084-bb677f80-2185-11e9-8f01-06d2d1b24b5a.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/51789084-bb677f80-2185-11e9-8f01-06d2d1b24b5a.png" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789085-bc001600-2185-11e9-8711-fc6c7a082405.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/51789085-bc001600-2185-11e9-8711-fc6c7a082405.png" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789098-da661180-2185-11e9-86af-cfafc58395f3.gif"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/51789098-da661180-2185-11e9-86af-cfafc58395f3.gif" />
+  </picture>
+</p>
 
 ### Chats
 
@@ -927,9 +1262,17 @@ As of now the following community chats of Nord are represented:
 - Nord's official [Slack][slack-ais] workspace
 - Nord's official [Discord][] space
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789080-bb677f80-2185-11e9-8c28-5d429bfa14e0.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/51789080-bb677f80-2185-11e9-8c28-5d429bfa14e0.png" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789081-bb677f80-2185-11e9-9a81-b00b77af90e9.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/51789081-bb677f80-2185-11e9-9a81-b00b77af90e9.png" />
+  </picture>
+</p>
 
 ### Content
 
@@ -946,19 +1289,31 @@ As of now the following community platforms of Nord are represented:
 All data is fetched from the official REST APIs of the respective platform using [axios][gh-axios].
 The processing of any date/time data is handled with [date-fns][gh-date-fns], a modern and more lightweight ES6+ library with tree-shaking support that'll be used project-wide for Nord Docs to handle any other date/time data like e.g. blog posts metadata.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789082-bb677f80-2185-11e9-99f3-5cb9387fcefa.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/51789082-bb677f80-2185-11e9-99f3-5cb9387fcefa.png" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/51789083-bb677f80-2185-11e9-9920-64914402da26.png"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/51789083-bb677f80-2185-11e9-9920-64914402da26.png" />
+  </picture>
+</p>
 
 # 0.6.0
 
-![Release Date: 2019-01-13](https://img.shields.io/badge/Release_Date-2019--01--13-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/8) [![Milestone](https://img.shields.io/badge/Milestone-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/6)
+![Release Date: 2019-01-13](https://img.shields.io/badge/Release_Date-2019--01--13-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.6.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/6)
 
 This version focused on the [sections of the landing page][gh-112] including the new [`Button` core atom component][gh-110] that represents the `<button>` HTML element.
 
 ## Features
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%" />
+  </picture>
+</p>
 
 The following issues are related to the [“Components” design concept][gh-63] and the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
 
@@ -979,13 +1334,29 @@ Next to variations there are additional props to toggle more styles:
 - `outlined` — uses uses a border in addition to a background color.
 - `quiet` — keeps the initial text colorization on hover.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50845511-50d4d800-136d-11e9-98cf-7906148ff0ef.gif" width="30%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50845511-50d4d800-136d-11e9-98cf-7906148ff0ef.gif" width="30%" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50845521-57634f80-136d-11e9-9c85-68da2e9cab1c.gif" width="30%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50845521-57634f80-136d-11e9-9c85-68da2e9cab1c.gif" width="30%" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50845522-57634f80-136d-11e9-8b7b-f34c5445411c.gif" width="30%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50845522-57634f80-136d-11e9-8b7b-f34c5445411c.gif" width="30%" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50845538-5fbb8a80-136d-11e9-84b0-b81d7d5c2e94.png" width="30%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50845538-5fbb8a80-136d-11e9-84b0-b81d7d5c2e94.png" width="30%" />
+  </picture>
+</p>
 
 **Landing Page Sections** — #112 ⇄ #113 (⊶ 339d3b8f)
 ↠ Implemented all landing page sections including required dependencies, components and illustrations.
@@ -1022,13 +1393,17 @@ The 7th and also last section presents details about Nord's communities. It rend
 
 # 0.5.0
 
-![Release Date: 2018-12-29](https://img.shields.io/badge/Release_Date-2018--12--29-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.5.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/7) [![Milestone](https://img.shields.io/badge/Milestone-0.5.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/5)
+![Release Date: 2018-12-29](https://img.shields.io/badge/Release_Date-2018--12--29-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.5.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.5.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/5)
 
 This version focused on the essential [footer][gh-106] as well as a styled [link component][gh-105]. It also includes the integration of the Webpack [size-plugin][gh-109] to print the gzipped sizes of assets and the changes since the last production build.
 
 ## Features
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="12%" />
+  </picture>
+</p>
 
 The following issues are related to the [“Components” design concept][gh-63] and the [“Responsive Web” design concept][gh-52] to adjust the rendered content based on the available width and provide an optimal UX on smaller viewports.
 
@@ -1070,11 +1445,26 @@ The left-side container also contains the social media & networking links where 
 
 The last elements of the left-side container is a paragraph providing version information about the site like the currently running version (with _commits ahead_ metadata when required) and the build & deployment date. It also has additional Git metadata added as `data-` attributes and a `<time>` HTML element.
 
-<p align="center"><strong>Full Width</strong><br><img src="https://user-images.githubusercontent.com/7836623/50536955-88b47200-0b5a-11e9-9456-00e4253ae206.png" /></p>
+<p align="center">
+  <strong>Full Width</strong><br />
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50536955-88b47200-0b5a-11e9-9456-00e4253ae206.png" />
+  </picture>
+</p>
 
-<p align="center"><strong>Reduced Width</strong><br><img src="https://user-images.githubusercontent.com/7836623/50536956-894d0880-0b5a-11e9-8cff-c8f03d8c2691.png" /></p>
+<p align="center">
+  <strong>Reduced Width</strong><br />
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50536956-894d0880-0b5a-11e9-8cff-c8f03d8c2691.png" />
+  </picture>
+</p>
 
-<p align="center"><strong>Small Width</strong><br><img src="https://user-images.githubusercontent.com/7836623/50536957-894d0880-0b5a-11e9-8328-de4c6efb7d23.png" /></p>
+<p align="center">
+  <strong>Small Width</strong><br />
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50536957-894d0880-0b5a-11e9-8328-de4c6efb7d23.png" />
+  </picture>
+</p>
 
 ### Responsive Design
 
@@ -1083,11 +1473,15 @@ For reduced width views (responsive design) the footer adjusts several styles an
 **Core Organism Component: “Footer”** — #109 (⊶ 75435d07)
 ↠ Integrated the Webpack [size-plugin][gh-sp] that prints the gzipped sizes of assets and the changes since the last build added through [gatsby-plugin-webpack-size][gh-gatsby-p-wps].
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50536175-ea241300-0b51-11e9-85d6-41350ce8017b.png" width="40%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50536175-ea241300-0b51-11e9-85d6-41350ce8017b.png" width="40%" />
+  </picture>
+</p>
 
 # 0.4.0
 
-![Release Date: 2018-12-23](https://img.shields.io/badge/Release_Date-2018--12--23-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.4.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/6) [![Milestone](https://img.shields.io/badge/Milestone-0.4.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/4)
+![Release Date: 2018-12-23](https://img.shields.io/badge/Release_Date-2018--12--23-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.4.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.4.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/4)
 
 This version focused on [analytics & statistics][gh-86] as well as [SEO & social media representation][gh-100]. This includes the integration of [Google Analytics][gh-87], requirements of a [PWA][gdev-web-pwa] ([Progressive Web App][wiki-pwa]) like a [Web App Manifest][gh-91], _offline_ resistance and availability through a [service worker][gh-94] and [improved caching strategies and usage of advanced techniques like HTTP/2 server push][gh-89].
 
@@ -1095,9 +1489,17 @@ Several implementation for SEO have been made with automated generation of web s
 
 ## Features
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50167256-14bbd380-02e9-11e9-8aca-a31baf745cd8.png" width="12%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50167256-14bbd380-02e9-11e9-8aca-a31baf745cd8.png" width="12%" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50167593-c824c800-02e9-11e9-9b70-84b6fc40c05f.png " width="10%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50167593-c824c800-02e9-11e9-9b70-84b6fc40c05f.png " width="10%" />
+  </picture>
+</p>
 
 **Google Analytics** — #87 ⇄ #88 (⊶ 7aed8952)
 ↠ Integrated [Google Analytics][ga-mark] like documented in the [“Analytics & Statistics” design concept][gh-86] through the Gatsby plugin [gatsby-plugin-google-gtag][gh-gatsby-p-gtag].
@@ -1108,7 +1510,11 @@ _Nord Docs_ uses the latest and recommended [gtag.js][gdev-ga-gtag] library that
 
 To protect the privacy of users and to be compatible with various privacy and data legal guidelines all [IP addresses are anonymized][gsup-ga-anonip].
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48661237-35d1a000-ea6f-11e8-8e16-f48948969be6.png" width="12%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48661237-35d1a000-ea6f-11e8-8e16-f48948969be6.png" width="12%" />
+  </picture>
+</p>
 
 **Gatsby Plugin "Netlify"** — #89 ⇄ #90 (⊶ b4a91fd9)
 ↠ Added [gatsby-plugin-netlify][npm-gatsby-plugin-netlify] to automatically generate a `_headers` file and a `_redirects` file at the root of the public folder to configure [HTTP headers][netlify-docs-headers] and [redirects][netlify-docs-rd] on Netlify.
@@ -1116,7 +1522,11 @@ One of the main advantages is that it also enables HTTP/2 server push of critica
 
 See the [“Hosting & Continuous Deployment” design concept][gh-46] for more details.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50234314-aee94d80-03b5-11e9-8eda-e56b9b632b22.png" width="12%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50234314-aee94d80-03b5-11e9-8eda-e56b9b632b22.png" width="12%" />
+  </picture>
+</p>
 
 **Gatsby Plugin "Web App Manifest"** — #91 ⇄ #93 (⊶ 6415ddc5)
 ↠ Integrated [gatsby-plugin-manifest][npm-gatsby-plugin-manifest] that adds support for generating and shipping a [web app (PWA) `manifest.webmanifest`][mdn-web-mf]. It allows users to save _Nord Docs_ as web application to their desktops / task bars and smartphone home screens so it behaves similar to native apps.
@@ -1125,7 +1535,11 @@ See the great Google Developer documentation about [the web app manifest][gdev-f
 
 Note that it is **recommended to use this plugin together with** [gatsby-plugin-offline][npm-gatsby-plugin-offline] ([#94][gh-94]), but ensure that **this plugin is listed before the offline plugin** so that it can cache the created `manifest.webmanifest` file!
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50229928-b86db800-03ab-11e9-89ad-07075d659574.png" width="12%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50229928-b86db800-03ab-11e9-89ad-07075d659574.png" width="12%" />
+  </picture>
+</p>
 
 **Gatsby Plugin "Offline" Service Worker** — #94 ⇄ #95 (⊶ e381f366)
 ↠ Integrated [gatsby-plugin-offline][gh-gatsby-p-offline] that adds drop-in support for making a Gatsby site work offline and more resistant to bad network connections. It creates a service worker for the site using the great [Workbox][] project and loads the service worker into the client.
@@ -1134,21 +1548,36 @@ Note that it is **recommended to use this plugin together with** [gatsby-plugin-
 
 The plugin comes with optimal configurations out-of-the-box™. Note that the offline support can break when changing these options.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50330182-920a6280-04fa-11e9-825d-157168c2eb93.png" width="12%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50330182-920a6280-04fa-11e9-825d-157168c2eb93.png" width="12%" />
+  </picture>
+</p>
 
 **Gatsby Plugin "Sitemap"** — #96 ⇄ #97 (⊶ 1cf69f42)
 ↠ Integrated [gatsby-plugin-sitemap][gh-gatsby-p-sitemap] that automatically generates a [sitemap.xml][wiki-sitemap] file including all of _Nord Docs_ pages, except the ones excluded by default and custom configured routes.
 
 Note that by default the plugin assumes that the default Gatsby config object field `siteMetadata.siteUrl` is set to the site's URL.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50345701-4ecae680-0530-11e9-9cff-7b42a99dd673.png" width="12%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50345701-4ecae680-0530-11e9-9cff-7b42a99dd673.png" width="12%" />
+  </picture>
+</p>
 
 **Gatsby Plugin "robots.txt"** — #98 ⇄ #99 (⊶ ca4ed675)
 ↠ Integrated [gatsby-plugin-robots-txt][gh-gatsby-p-robots-txt] that automatically generates a [robots.txt][wiki-robotstxt] file.
 
 Note that by default the plugin assumes that the default Gatsby config object field `siteMetadata.siteUrl` is used and set to the site's URL. It also uses the default path `${siteMetadata.siteUrl/sitemap.xml}` for the sitemap file ([#96][gh-96]).
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50351078-59da4280-0541-11e9-97ec-b983c43bbedc.png" width="12%" /> <img src="https://user-images.githubusercontent.com/7836623/50351088-6199e700-0541-11e9-831d-0b9200abfbe9.png" width="12%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50351078-59da4280-0541-11e9-97ec-b983c43bbedc.png" width="12%" /><br />
+  </picture>
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50351088-6199e700-0541-11e9-831d-0b9200abfbe9.png" width="12%" />
+  </picture>
+</p>
 
 **Site Metadata Component** — #101 ⇄ #102 (⊶ a8fb8edd)
 ↠ Implemented the core atom `SiteMetadata` that injects global metadata. Next to general data like the page title and canonical URL it will include data for the [Open Graph Protocol][ogp], [Twitter Cards][tw-docs-cards] and the [schema.org][] structured data format [JSON-LD][].
@@ -1201,14 +1630,18 @@ Note that packages marked with an :exclamation: have been affected by the securi
 
 # 0.3.0
 
-![Release Date: 2018-12-18](https://img.shields.io/badge/Release_Date-2018--12--18-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.3.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/5) [![Milestone](https://img.shields.io/badge/Milestone-0.3.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/3)
+![Release Date: 2018-12-18](https://img.shields.io/badge/Release_Date-2018--12--18-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.3.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.3.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/3)
 
 This version focused on the [responsive web design][gh-52], [core & base component][gh-63] as well as [base HTML elements as components][gh-69] of _Nord Docs_. It includes the [base layout][gh-66] which initially consists of the [header][gh-64] that provides the global navigation links.
 Another focus was the handling of exceptional & special states like [empty states][gh-78] and the [404 error state][gh-84].
 
 ## Features
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49325616-f1053900-f545-11e8-9725-0b8f5af8d1e2.png" width="12%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49325616-f1053900-f545-11e8-9725-0b8f5af8d1e2.png" width="12%" />
+  </picture>
+</p>
 
 **Base Media Query Setup** — #61 ⇄ #62 (⊶ 6b78d691)
 ↠ The basic setup for components with responsive styles through media queries has been implemented based on the [“Responsive Web Design” design concept][gh-52].
@@ -1232,7 +1665,11 @@ The following media query template functions have been implemented:
 - `desktop` — `max-width: 1200px`
 - `desktopPlus` — `max-width: 1800px`
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="15%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="15%" />
+  </picture>
+</p>
 
 **Core Layout Component: BaseLayout** — #66 ⇄ #68 (⊶ 208c9ac0)
 ↠ Implemented the `BaseLayout` core layout component, the default layout of _Nord Docs_. It consists of the [`Root` core container][gh-36] as root element and the core components representing the [header][gh-64], the main [page container][gh-65] and in the future the _footer_.
@@ -1287,7 +1724,11 @@ For reduced width views (responsive design) the header adjusts several styles an
 
 The main navigation link list will be hidden and replaced by a user action element (button) that toggles an animated slide down menu containing the navigation links. The drop down starts right below the header and takes up the available height and width to cover the full screen. As soon as the animation starts all scroll events will be removed from the underlying content (body) using the [body-scroll-lock][gh-bsl] project. This prevents users from scrolling the content below the menu when the menu itself overflows the Y-axis and shows a scroll bar.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49829535-fc026980-fd8e-11e8-9cba-d5d6e8149c10.png" width="15%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49829535-fc026980-fd8e-11e8-9cba-d5d6e8149c10.png" width="15%" />
+  </picture>
+</p>
 
 ### Behavior
 
@@ -1299,9 +1740,17 @@ To achieve the resizing animation based on the scroll position the [subscribe-ui
 **Empty State Component** — #78 ⇄ #83 (⊶ 2079c056)
 ↠ Implemented the `EmptyState` molecule component to represent an [empty state][md-com-es]. It consists an vector illustration, a headline and the corresponding subline.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50157534-f696a900-02d1-11e9-9d04-80a813da9e6c.png" width="12%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50157534-f696a900-02d1-11e9-9d04-80a813da9e6c.png" width="12%" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50157551-0615f200-02d2-11e9-898f-611ebd20621e.png" width="12%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50157551-0615f200-02d2-11e9-898f-611ebd20621e.png" width="12%" />
+  </picture>
+</p>
 
 There are initially 3 different illustrations available that can be selected through the `illustrationVariant` prop. The headline informs the user about the purpose of the illustration and the reason why it is currently shown while the subline can include additional information and helpful instructions.
 
@@ -1310,12 +1759,20 @@ The empty state component has been placed within a base HTML component that repr
 **404 Page Components** — #84 ⇄ #85 (⊶ a39649fa)
 ↠ Implemented the [404][wiki-404] page and illustration components to handle requested but non-existing routes and resources.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/50157486-d23acc80-02d1-11e9-9ed9-628174d012c9.png" width="15%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/50157486-d23acc80-02d1-11e9-9ed9-628174d012c9.png" width="15%" />
+  </picture>
+</p>
 
 It aligns with _Nord Docs_ brand and can use a humorous image and tagline that conveys the purpose of the screen, without appearing actionable.
 Also see the [great Gatsby documentation about 404 pages][gatsby-docs-404] for more details.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49604267-bceaa780-f98d-11e8-932a-05ee4b952a83.png" width="15%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49604267-bceaa780-f98d-11e8-932a-05ee4b952a83.png" width="15%" />
+  </picture>
+</p>
 
 **SVGR Integration** — #72 ⇄ #73 (⊶ 39c13041)
 ↠ Integrated [SVGR][], a transformer for SVG into ready to use React components. It is part of [create-react-app][cra] and makes SVG integration into React projects easy.
@@ -1326,8 +1783,16 @@ All configurations are placed in the `svgr.config.js` file instead of passing th
 
 To directly import SVG's as React component the [@svgr/webpack][gh-svgr-wpl] package is used to simply integrate SVGR as Webpack plugin. It has been added through [gatsby-plugin-svgr][npm-gp-svgr] which adjusts the required Webpack configurations by adding the loader and removing the default `.svg` file loader/handler.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48661206-c0fe6600-ea6e-11e8-8142-4c65c82b9927.png" /></p>
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48837384-7ab64900-ed85-11e8-829c-3fd6efe86c60.png" width="15%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48661206-c0fe6600-ea6e-11e8-8142-4c65c82b9927.png" />
+  </picture>
+</p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48837384-7ab64900-ed85-11e8-829c-3fd6efe86c60.png" width="15%" />
+  </picture>
+</p>
 
 **Jest utilities for Styled Components** — #76 ⇄ #77 (⊶ 47010b8c)
 ↠ Integrated [jest-styled-components][gh-jsc], a set of utilities for testing [Styled Components][styled-components] with [Jest][] that improves the snapshot testing experience and provides a brand new matcher to make expectations on the style rules.
@@ -1385,39 +1850,69 @@ The [custom `toHaveStyleRule` matcher][gh-jsc-matcher] is useful to test if a gi
 
 # 0.2.0
 
-![Release Date: 2018-12-04](https://img.shields.io/badge/Release_Date-2018--12--04-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.2.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/4) [![Milestone](https://img.shields.io/badge/Milestone-0.2.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/2)
+![Release Date: 2018-12-04](https://img.shields.io/badge/Release_Date-2018--12--04-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.2.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.2.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/2)
 
 This version focused on the [typography][gh-2], the [brand design & styling][gh-51] and _theme modes_ of _Nord Docs_. It includes the globally used [typefaces][gh-54], a React context [provider and consumer component for the available theme modes][gh-57] as well as some initial [global base styles][gh-59].
 
 ## Features
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48346100-5e762600-e67a-11e8-8f9d-86a633c69043.png" width="60%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48346100-5e762600-e67a-11e8-8f9d-86a633c69043.png" width="60%" />
+  </picture>
+</p>
 
 **Typefaces** — #54 ⇄ #55 (⊶ 81a5b238)
 ↠ Integrated globally available open source typefaces like documented in the [“Typograhpy” design concept][gh-2] and implemented the `typography` module to define style properties and configurations. The font size and units are based on the used [modular scale][modularscale-majorsecond] documented in #2.
 
 [Rubik][gf-rubik] — the main stylistic and visualization sans-serif font installed through through the [typeface-rubik][npm-typeface-rubik] package.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332499-28a7cb80-f5ae-11e8-976f-8dc2bbabaf94.png" width="60%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49332499-28a7cb80-f5ae-11e8-976f-8dc2bbabaf94.png" width="60%" />
+  </picture>
+</p>
 
 [Inter UI][inter-ui] — the sans-serif font for documentations as well as technical and factual content. It is installed through the [inter-ui][npm-inter-ui] package. Note that the font is currently not available through [Google Fonts][gf] yet, but might be added in the future very soon due to its large popularity and perfect implementation.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332633-e9c74500-f5b0-11e8-9690-2f473df739ba.png" width="60%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49332633-e9c74500-f5b0-11e8-9690-2f473df739ba.png" width="60%" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332647-298e2c80-f5b1-11e8-8ba1-bbcc0f72c50d.png" width="60%"/> <img src="hhttps://user-images.githubusercontent.com/7836623/49332648-298e2c80-f5b1-11e8-8c75-29cf754d481e.png" width="60%"/> <img src="https://user-images.githubusercontent.com/7836623/49332649-298e2c80-f5b1-11e8-9fc8-a880fa0c78e1.png" width="60%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49332647-298e2c80-f5b1-11e8-8ba1-bbcc0f72c50d.png" width="60%" /><br />
+  </picture>
+  <picture>
+    <img src="hhttps://user-images.githubusercontent.com/7836623/49332648-298e2c80-f5b1-11e8-8c75-29cf754d481e.png" width="60%" /><br />
+  </picture>
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49332649-298e2c80-f5b1-11e8-9fc8-a880fa0c78e1.png" width="60%" />
+  </picture>
+</p>
 
 [Source Code Pro][gf-source-code-pro] — the main monospace font for all code elements installed through the [typeface-source-code-pro][npm-typeface-source-code-pro] package.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332718-93f39c80-f5b2-11e8-8be6-13755cb333eb.png" width="40%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49332718-93f39c80-f5b2-11e8-8be6-13755cb333eb.png" width="40%" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49332737-ce5d3980-f5b2-11e8-95bb-5b32855f8322.png" width="60%"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49332737-ce5d3980-f5b2-11e8-95bb-5b32855f8322.png" width="60%" />
+  </picture>
+</p>
 
 **Base Style & Theme Setup** — #53 ⇄ #56 (⊶ 85498ca0)
 ↠ Implemented the basic style & theme setup like documented in the [“Brand Design & Styling” design concept][gh-51] using the CSS-in-JS library [styled-components][] for component representations. To use uniform global theme definitions and to simplify CSS styling, the [styled-theming][gh-styled-theming] and [polished][] libraries are also integrated next to some useful and required specific Babel & Gatsby plugins.
 
 ##### Default Browser Style Normalization
 
-Integrated the great project [modern-normalize][gh-modern-normalize] that normalizes the default styles of browsers for a consistent appearance across different modern browsers. For the best usage with _styled-components_ the [npm-styled-modern-normalize][npm-styled-modern-normalize] project is used. It exports the styles via the `css` API and has been added to the created global styles component mentioned below.
+Integrated the great project [modern-normalize][gh-modern-normalize] that normalizes the default styles of browsers for a consistent appearance across different modern browsers. For the best usage with _styled-components_ the [styled-modern-normalize][npm-styled-modern-normalize] project is used. It exports the styles via the `css` API and has been added to the created global styles component mentioned below.
 
 ##### CSS Tools
 
@@ -1429,15 +1924,19 @@ Global and normalization CSS styles have been implemented using _styled-componen
 
 In order to use fonts in _Nord Docs_ style & themes (implemented in #54) the basic properties and values have been added and integrated into this CSS base styles.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48661206-c0fe6600-ea6e-11e8-8142-4c65c82b9927.png" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48661206-c0fe6600-ea6e-11e8-8142-4c65c82b9927.png" />
+  </picture>
+</p>
 
 ##### Global Styles
 
-To inject global styles, _styled-components_ v4 [`createGlobalStyle`][stc-docs-api-cgs] API is used to create a `<GlobalStyle>` component to inject various styles globally.
+To inject global styles, _styled-components_ v4 [`createGlobalStyle`][stc-docs-globstyle] API is used to create a `<GlobalStyle>` component to inject various styles globally.
 
 ##### Global Themes
 
-To [provide the global theme][stc-docs-theming], the [`ThemeProvider`][stc-docs-api-thp] component has been added to the _Nord Docs_ [`Root` core container component][gh-36]. The global theme is now passed to the provider.
+To [provide the global theme][stc-docs-theming], the [`ThemeProvider`][stc-docs-thprov] component has been added to the _Nord Docs_ [`Root` core container component][gh-36]. The global theme is now passed to the provider.
 
 ##### Simplified Theme Usage
 
@@ -1462,7 +1961,11 @@ Since the main [JavaScript implementation of Nord][gh-nord-36] is currently not 
 
 Some basic configurations for motion related styles like animations have been implemented, inspired by [Material Designs][md] great documentation and guide about [motion speed][md-motion-speed]. This includes values for speed like transition durations for the global theme modes. It'll be used to set the CSS transition for the base background and font color within the `globals` CSS style module.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49328407-a4832300-f570-11e8-8613-21c78267b558.png" width="20%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49328407-a4832300-f570-11e8-8613-21c78267b558.png" width="20%" />
+  </picture>
+</p>
 
 **Theme Mode Context** — #57 ⇄ #58 (⊶ 86edb920)
 ↠ Implemented a [`React.Context` provider and consumer][react-docs-context] for the global theme modes. It provides the name of the currently active theme and a function to toggle through available themes.
@@ -1487,7 +1990,7 @@ To simplify the read- and write handling as well as prevent possible errors due 
 
 # 0.1.0
 
-![Release Date: 2018-11-29](https://img.shields.io/badge/Release_Date-2018--11--29-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.1.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/projects/3) [![Milestone](https://img.shields.io/badge/Milestone-0.1.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/arcticicestudio/nord-docs/milestone/1)
+![Release Date: 2018-11-29](https://img.shields.io/badge/Release_Date-2018--11--29-88c0d0.svg?style=flat-square&colorA=4c566a) [![Project Board](https://img.shields.io/badge/Project_Board-0.1.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/orgs/nordtheme/projects/1/views/10) [![Milestone](https://img.shields.io/badge/Milestone-0.1.0-88c0d0.svg?style=flat-square&colorA=4c566a&logo=github&logoColor=eceff4)](https://github.com/nordtheme/web/milestones/1)
 
 This is the initial release version of _Nord Docs_.
 It represents the basic project setup, structure and development workflow with an deployable state. There are many initial implementations and configurations for the documented design concepts. They are covered in the following sections of this version changelog to introduce used technologies and explain why several decisions have been made.
@@ -1498,45 +2001,81 @@ To get an overview of the general project plan, read the [“Design Concept & In
 
 ### Basic Project Setup
 
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg?sanitize=true" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg?sanitize=true" width="100" />
+  </picture>
+</p>
 
 **NPM configuration file** — #4 (⊶ f4df27cb)
 ↠ Added the [NPM `.npmrc` file][npm-docs-rc] to ensure specific configurations are set project-wide for all core team members and contributors. This includes the usage of the [lockfile][npm-docs-lock] and exact (dev)dependency package versions.
 
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" width="100" />
+  </picture>
+</p>
 
 **Git mail mapping** — #9 (⊶ e5629109)
 ↠ Added a Git [mailmap][git-docs-mailmap] file to link to in documentations and allow contributors to send mails regarding security issues. This prevents unnecessary overhead of updating all documents when new core team and members and contributors are added and additionally adds the main functionality of the file: Mapping commits when someone uses a different email address.
 
-<p align="center"><img src="https://editorconfig.org/logo.png" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://editorconfig.org/logo.png" width="100" />
+  </picture>
+</p>
 
 **EditorConfig** — #11 (⊶ 4fa30ce4)
 ↠ Added the [EditorConfig][] file to define and maintain consistent coding styles between different editors and IDEs.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/49230107-35ca8c00-f3ef-11e8-9e83-6f4e5f1fcbfe.png" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/49230107-35ca8c00-f3ef-11e8-9e83-6f4e5f1fcbfe.png" width="100" />
+  </picture>
+</p>
 
 **GitHub code owners** — #7 (⊶ 05ded0c2)
 ↠ Adapted to GitHub's [code owners][gh-blog-intro-code-owners] feature to define matching pattern for project paths to automatically add all required reviewers of the core team and contributors to new PRs. Read the [GitHub Help article][gh-help-code-owners] for more details.
 
-![](https://user-images.githubusercontent.com/2513/27803645-87c9a9c8-5ff8-11e7-91d7-2fa0718e6871.png)
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/2513/27803645-87c9a9c8-5ff8-11e7-91d7-2fa0718e6871.png" />
+  </picture>
+</p>
 
-![](https://user-images.githubusercontent.com/2513/27803663-a4bb073e-5ff8-11e7-9c45-2c3cbdc999cd.png)
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/2513/27803663-a4bb073e-5ff8-11e7-9c45-2c3cbdc999cd.png" />
+  </picture>
+</p>
 
-![](https://user-images.githubusercontent.com/2513/27803610-544ba222-5ff8-11e7-9313-e4062315fb0c.png)
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/2513/27803610-544ba222-5ff8-11e7-9313-e4062315fb0c.png" />
+  </picture>
+</p>
 
 <p align="center"><img src="https://opensource.guide/assets/images/illos/beginners.svg?sanitize=true" width="200" /></p>
 
 **GitHub Open Source community standards** — #8 ⇄ #12 (⊶ 262f731e)
 ↠ Inspired _Nord Docs_ project philosophy using GitHub's features for [recommended community standards][gh-blog-intro-comm-tools]. It adheres to the great [Open Source Guides][ossg] and adapted to the recommendations to complete the projects [community profile][gh-community-profile].
 
-<p align="center"><img src="https://opensource.guide/assets/images/illos/coc.svg?sanitize=true" width="200" /></p>
+<p align="center">
+  <picture>
+    <img src="https://opensource.guide/assets/images/illos/coc.svg?sanitize=true" width="200" />
+  </picture>
+</p>
 
 To facilitate a healthy and constructive community behavior, _Nord Docs_ also introduced and enforces a [code of conduct][gh-help-coc].
 Read the [GitHub Help article][gh-help-coc] for more details about the provided integrations.
 
 The added [contribution guidelines][gh-blog-intro-contrib-gl] help to build a community that [encourages people to use, contribute to][ossg-contrib], and evangelize the project.
 
-<p align="center"><img src="https://opensource.guide/assets/images/illos/contribute.svg?sanitize=true" width="200" /></p>
+<p align="center">
+  <picture>
+    <img src="https://opensource.guide/assets/images/illos/contribute.svg?sanitize=true" width="200" />
+  </picture>
+</p>
 
 It includes sections about
 
@@ -1555,13 +2094,25 @@ Read the [GitHub introduction blog post][gh-blog-intro-contrib-gl] and the [GitH
 **GitHub issue and pull request templates** — #10 ⇄ #13 (⊶ c3c7b8af)
 ↠ Integrated GitHub's feature to define [multiple issue templates][gh-blog-multi-issue-templ] while the [initial template file][gh-blog-intro-issue-templ] is used as a fallback/generic template to link to the specific ones.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7321362/35420642-8e5271e2-01f3-11e8-8109-0d21ddb89011.png" width="80%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7321362/35420642-8e5271e2-01f3-11e8-8109-0d21ddb89011.png" width="80%" />
+  </picture>
+</p>
 
-<p align="center"><img src="https://blog.github.com/assets/img/2018-04-30-issue-templates/new-issue-page-with-multiple-templates.png" width="80%" /></p>
+<p align="center">
+  <picture>
+    <img src="https://blog.github.com/assets/img/2018-04-30-issue-templates/new-issue-page-with-multiple-templates.png" width="80%" />
+  </picture>
+</p>
 
 Read the [GitHub Help article][gh-help-issue-templ] for more details about issue and pull request templates. Also check out how to manually create [issue templates][gh-help-pr-templ], a [pull request template][gh-help-issue-templ-repo]. and the guide on [how to create the (deprecated) fallback/generic issue template][gh-help-issue-templ-depr].
 
-<p align="center"><img src="https://raw.githubusercontent.com/remarkjs/remark-lint/02295bc/logo.svg?sanitize=true" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://raw.githubusercontent.com/remarkjs/remark-lint/02295bc/logo.svg?sanitize=true" width="100" />
+  </picture>
+</p>
 
 **Introducing _remark-lint_** — #14 ⇄ #19 (⊶ 1d2959ca)
 ↠ Integrated [remark-lint][gh-remark-lint], a linter built on [remark][], the powerful Markdown processor powered by plugins such as remark-lint.
@@ -1569,7 +2120,11 @@ It is used through [remark-cli][npm-remark-cli] with [remark-preset-lint-arctici
 
 To lint all Markdown sources within the project the `lint:md` NPM script has been added which will be picked up by the main `lint` script.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48658871-4707b600-ea49-11e8-8a08-39e1a318c442.png" width="400" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48658871-4707b600-ea49-11e8-8a08-39e1a318c442.png" width="400" />
+  </picture>
+</p>
 
 **Introducing _ESLint_** — #15 ⇄ #20 (⊶ d4bd7833)
 ↠ Integrated [ESLint][], the pluggable and de-facto standard linting utility for JavaScript using the configuration preset [eslint-config-arcticicestudio][gh-eslint-config-arcticicestudio] which implements the [Arctic Ice Studio JavaScript Style][styleguide-javascript].
@@ -1577,7 +2132,11 @@ Read #15 for more details about the configuration and setup as well as included 
 
 To lint all JavaScript sources within the project the `lint:js` NPM script has been added which will be picked up by the main `lint` script. The second script `format:js` allows to make use of ESLint's great [auto-fixing][eslint-docs-auto-fix] feature.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48644231-4556d780-e9e2-11e8-862e-e8ce630fd0ba.png" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48644231-4556d780-e9e2-11e8-862e-e8ce630fd0ba.png" width="100" />
+  </picture>
+</p>
 
 **Introducing _Prettier_** — #16 ⇄ #21 (⊶ 39af1daf)
 ↠ Integrated [Prettier][], the opinionated code formatter with support for many languages and integrations with most editors. It ensures that all outputted code conforms to a consistent style and provides the best and recommended style configurations of-out-the-box™.
@@ -1585,14 +2144,22 @@ Read #16 for more details about the configuration and setup as well as included 
 
 To format all compatible sources within the project the `format:pretty` NPM script has been added which will be picked up by the main `format` script.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48658851-01e38400-ea49-11e8-911e-d859eefe6dd5.png" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48658851-01e38400-ea49-11e8-911e-d859eefe6dd5.png" width="100" />
+  </picture>
+</p>
 
 **Introducing _lint-staged_** — #17 ⇄ #22 (⊶ 6ab10911)
 ↠ Integrated [lint-staged][gh-lint-staged] to run linters against staged Git files and prevent adding code that violates any style guide into the code base.
 
 Read #17 for more details about the configuration and setup.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48658801-30ad2a80-ea48-11e8-9323-16bb0b25002b.png" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48658801-30ad2a80-ea48-11e8-9323-16bb0b25002b.png" width="100" />
+  </picture>
+</p>
 
 **Introducing _Husky_** — #18 ⇄ #23 (⊶ 16e90c34)
 ↠ Integrated [Husky][gh-husky], the tool that make Git hooks easy and can prevent bad Git commits, pushes and more _woof_!
@@ -1602,13 +2169,21 @@ Read #18 for more details about the configuration and setup.
 **Project repository README** — #49 (⊶ f8561505)
 ↠ Wrote the project's repository README that initially contains the hero and various badges provided by the great [shields.io][] project. Further documentations about the design concept, architecture and technologies as well as guides for contributions to develop, run and maintain the project will be documented within the docs itself. Minimal instructions might be added later on within a “Getting Started” / “Quick Start” section.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48669288-c5c02a00-eb01-11e8-8dc9-00142b4abce1.png" width="200" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48669288-c5c02a00-eb01-11e8-8dc9-00142b4abce1.png" width="200" />
+  </picture>
+</p>
 
 ### Design Concept: JAMstack
 
 The following sections include details about implemented requirements for the three key criteria of the [“JAMstack” design concept][gh-24].
 
-<p align="center"><img src="https://user-images.githubusercontent.com/74381/34074079-93ac0420-e25c-11e7-9c0a-642986b2aa58.png" width="200"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/74381/34074079-93ac0420-e25c-11e7-9c0a-642986b2aa58.png" width="200" />
+  </picture>
+</p>
 
 The [“Gatsby” design concept][gh-25] defines process steps and aspects for the static site generator that is used to build _Nord Docs_ like the Gatsby core configuration, Gatsby API implementations, required Gatsby plugins, custom configurations for [Babel][] and [Webpack][] and many more.
 
@@ -1617,21 +2192,33 @@ The [“Gatsby” design concept][gh-25] defines process steps and aspects for t
 
 Read #27 for more details about the configuration and setup as well as included plugins. There have also been some tickets for bug fixe
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48694124-c3ca9980-ebdb-11e8-9cc3-1379d9ed4a20.png" width="100"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48694124-c3ca9980-ebdb-11e8-9cc3-1379d9ed4a20.png" width="100" />
+  </picture>
+</p>
 
 **Babel configuration** — #29 ⇄ #30 (⊶ b288befb)
 ↠ Implemented the configuration for [Babel][] even when Gatsby comes with an already optimized setup to create SSR “static” websites and apps, but there are also use cases that require to modify and extend this configuration to e.g. add a new Babel [plugin for the latest syntax feature/proposal][babel-docs-plug] support.
 
 Read #29 for more details about the configuration and setup as well as included plugins.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48711809-761a5500-ec0c-11e8-8ba7-dc4acbd5d64c.png" width="100"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48711809-761a5500-ec0c-11e8-8ba7-dc4acbd5d64c.png" width="100" />
+  </picture>
+</p>
 
 **Webpack configuration** — #31 ⇄ #32 (⊶ 7734d052)
 ↠ Implemented the configuration for [Webpack][] to add useful production bundle plugins and development workflow optimizations by using Gatsby's [Node API][gatsby-docs-api-node].
 
 Read #31 for more details about the configuration and setup as well as included plugins.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48669377-c0fc7580-eb03-11e8-82e8-4853fb0ed52c.png" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48669377-c0fc7580-eb03-11e8-82e8-4853fb0ed52c.png" width="100" />
+  </picture>
+</p>
 
 **Introduce React** — #33 (⊶ 24aecae9)
 ↠ Initially added [React's][react] currently latest stable [version 16.6.3][npm-react-v16.6.3]. Since Gatsby v2, [React][npm-react] and [React DOM][npm-react-dom] are a peer dependencies which allows users to freely choose the version they'd like to use.
@@ -1639,7 +2226,11 @@ Read #31 for more details about the configuration and setup as well as included 
 **Introduce React “prop-types”** — #35 (⊶ 4fe54731)
 ↠ To support type validation and checking, _Nord Docs_ initially uses [React prop types][react-docs-typecheck-pt] through the [prop-types][npm-prop-types] package. This technique is sufficient for the beginning of the project and might be revised and refactored later on by migrating to [TypeScript][] or integrating [Flow][].
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="100"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48676311-39475300-eb65-11e8-9654-16c24c1c9a94.png" width="100" />
+  </picture>
+</p>
 
 ### Design Concept: Component & Project Structure
 
@@ -1654,7 +2245,11 @@ The following sections include details about implemented requirements for the [�
 
 This initial implementation only renders a `React.Fragment`.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48822935-24ceaa80-ed5f-11e8-8328-eec53dfc68f9.png" width="100"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48822935-24ceaa80-ed5f-11e8-8328-eec53dfc68f9.png" width="100" />
+  </picture>
+</p>
 
 ### Design Concept: Testing
 
@@ -1665,7 +2260,11 @@ The following sections include details about implemented requirements for the [�
 
 Read #39 for more details about the configuration and setup as well as included plugins.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48966346-26eb7000-efd0-11e8-818b-80035dd538ca.png" width="100"/></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48966346-26eb7000-efd0-11e8-818b-80035dd538ca.png" width="100" />
+  </picture>
+</p>
 
 ### Design Concept: Continuous Integration & Testing
 
@@ -1676,7 +2275,11 @@ The following sections include details about implemented requirements of the wor
 
 Read #44 for more details about the configuration and setup as well as available automated pipelines.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/7836623/48661237-35d1a000-ea6f-11e8-8e16-f48948969be6.png" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://user-images.githubusercontent.com/7836623/48661237-35d1a000-ea6f-11e8-8e16-f48948969be6.png" width="100" />
+  </picture>
+</p>
 
 ### Design Concept: Hosting & Continuous Deployment
 
@@ -1703,7 +2306,11 @@ It has been fixed by importing the paths defined in the preset from the [eslint-
 
 ## Tasks
 
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg?sanitize=true" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg?sanitize=true" width="100" />
+  </picture>
+</p>
 
 **NPM package initialization** — #3 (⊶ ff99b861)
 ↠ Initialized the [NPM `package.json` file][npm-docs-pkg] that contains the project's metadata and dependency definitions.
@@ -1724,12 +2331,20 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 - lint-staged `8.0.5` ➔ `8.1.0`
 - ‼ npm-run-all `4.1.3` ➔ `4.1.50`
 
-<p align="center"><img src="https://opensource.org/files/osi_symbol.png" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://opensource.org/files/osi_symbol.png" width="100" />
+  </picture>
+</p>
 
 **MIT license** — #5 (⊶ a6b4e4e1)
 ↠ Added the `LICENSE.md` file for the [MIT license][mit-lic].
 
-<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" width="100" /></p>
+<p align="center">
+  <picture>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" width="100" />
+  </picture>
+</p>
 
 **Git ignore and attribute pattern** — #6 (⊶ 6b265454)
 ↠ Added the [`.gitattributes`][git-docs-gitattributes] and [`.gitignore`][git-docs-gitignore] configuration files to define the pattern.
@@ -1737,7 +2352,26 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 **Using `binary` Git attribute for “Adobe Illustrator” artwork project files** — #50 (⊶ f524be00)
 ↠ [“Adobe Illustrator“][wikip-ai] `.ai` artwork project files have been changed to be handled with the `binary` Git attribute instead of “normal” plain text to prevent encoding problems and noisy diff views.
 
----
+<p align="center">
+  <picture>
+    <source srcset="https://raw.githubusercontent.com/nordtheme/assets/main/static/images/elements/separators/iceberg/footer/dark/spaced.svg" width="100%" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+    <source srcset="https://raw.githubusercontent.com/nordtheme/assets/main/static/images/elements/separators/iceberg/footer/light/spaced.svg" width="100%" media="(prefers-color-scheme: dark)" />
+    <img src="https://raw.githubusercontent.com/nordtheme/assets/main/static/images/elements/separators/iceberg/footer/dark/spaced.svg" width="100%" />
+  </picture>
+</p>
+
+<p align="center">
+  Copyright &copy; 2016-present <a href="https://www.svengreb.de" target="_blank">Sven Greb</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/nordtheme/web/blob/main/license" target="_blank">
+    <img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/>
+  </a>
+  <a href="https://www.svengreb.de">
+    <img src="https://img.shields.io/static/v1.svg?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAABMklEQVQ4jcWQvUoDQRRGz52s5IfVIiDWPkGKFFaCIVaGdIagjcFAwICFb7DvIK6QQlNpY2UQLMQVBbEQ0SewFkGbKCQmOzaTJay7/lR+zTAf9xwuF/47Mv45rdezqWEq72v/RWZnHgqOMwDwHMfSj085JSqb6Pu38we7r18E3nqzhmYbsE11rxKsAvhDfQiSM30XYbOw57YDwfnaRl6U3ABWaMNn806H+oGPzBX3d+4UgChZiYBHYBgGsBLoKoAyhR0x9G20Zmpc4P1ZoMQDcwMNclFrdhBKv6M5WWi7ZQGtjEUn35IV4OwnVjSX/WGmKqCDDUa5rmyle3bvGFiMg3WGUsF1u0EXHoqTRMGRgkAy2eugKZrqijRLYThWANBpNDL2h3UE0J0YLJdbrfe42f/NJ0wqY7/KcXKPAAAAAElFTkSuQmCC&label=lovely%20crafted%20in&message=Germany&colorA=4c566a&colorB=88c0d0"/>
+  </a>
+</p>
 
 <!--
 +------------------+
@@ -1792,53 +2426,53 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gf-rubik]: https://fonts.google.com/specimen/Rubik
 [gf-source-code-pro]: https://fonts.google.com/specimen/Source+Code+Pro
 [gfm]: https://github.github.com/gfm
-[gh-1]: https://github.com/arcticicestudio/nord-docs/issues/1
-[gh-100]: https://github.com/arcticicestudio/nord-docs/issues/100
-[gh-101]: https://github.com/arcticicestudio/nord-docs/issues/101
-[gh-105]: https://github.com/arcticicestudio/nord-docs/issues/105
-[gh-106]: https://github.com/arcticicestudio/nord-docs/issues/106
-[gh-109]: https://github.com/arcticicestudio/nord-docs/issues/109
-[gh-110]: https://github.com/arcticicestudio/nord-docs/issues/110
-[gh-112]: https://github.com/arcticicestudio/nord-docs/issues/112
-[gh-115]: https://github.com/arcticicestudio/nord-docs/issues/112
-[gh-117]: https://github.com/arcticicestudio/nord-docs/issues/117
-[gh-119]: https://github.com/arcticicestudio/nord-docs/issues/119
-[gh-129]: https://github.com/arcticicestudio/nord-docs/issues/129
-[gh-2]: https://github.com/arcticicestudio/nord-docs/issues/2
-[gh-24]: https://github.com/arcticicestudio/nord-docs/issues/24
-[gh-25]: https://github.com/arcticicestudio/nord-docs/issues/25
-[gh-26]: https://github.com/arcticicestudio/nord-docs/issues/26
-[gh-36]: https://github.com/arcticicestudio/nord-docs/issues/36
-[gh-38]: https://github.com/arcticicestudio/nord-docs/issues/38
-[gh-43]: https://github.com/arcticicestudio/nord-docs/issues/43
-[gh-46]: https://github.com/arcticicestudio/nord-docs/issues/46
-[gh-51]: https://github.com/arcticicestudio/nord-docs/issues/51
-[gh-52]: https://github.com/arcticicestudio/nord-docs/issues/52
-[gh-54]: https://github.com/arcticicestudio/nord-docs/issues/54
-[gh-57]: https://github.com/arcticicestudio/nord-docs/issues/57
-[gh-59]: https://github.com/arcticicestudio/nord-docs/issues/59
-[gh-63]: https://github.com/arcticicestudio/nord-docs/issues/63
-[gh-64]: https://github.com/arcticicestudio/nord-docs/issues/64
-[gh-65]: https://github.com/arcticicestudio/nord-docs/issues/65
-[gh-66]: https://github.com/arcticicestudio/nord-docs/issues/66
-[gh-69]: https://github.com/arcticicestudio/nord-docs/issues/69
-[gh-70]: https://github.com/arcticicestudio/nord-docs/issues/70
-[gh-74]: https://github.com/arcticicestudio/nord-docs/issues/74
-[gh-78]: https://github.com/arcticicestudio/nord-docs/issues/78
-[gh-84]: https://github.com/arcticicestudio/nord-docs/issues/84
-[gh-86]: https://github.com/arcticicestudio/nord-docs/issues/86
-[gh-87]: https://github.com/arcticicestudio/nord-docs/issues/87
-[gh-89]: https://github.com/arcticicestudio/nord-docs/issues/89
-[gh-91]: https://github.com/arcticicestudio/nord-docs/issues/91
-[gh-94]: https://github.com/arcticicestudio/nord-docs/issues/94
-[gh-96]: https://github.com/arcticicestudio/nord-docs/issues/96
-[gh-98]: https://github.com/arcticicestudio/nord-docs/issues/98
+[gh-1]: https://github.com/nordtheme/web/issues/1
+[gh-100]: https://github.com/nordtheme/web/issues/100
+[gh-101]: https://github.com/nordtheme/web/issues/101
+[gh-105]: https://github.com/nordtheme/web/issues/105
+[gh-106]: https://github.com/nordtheme/web/issues/106
+[gh-109]: https://github.com/nordtheme/web/issues/109
+[gh-110]: https://github.com/nordtheme/web/issues/110
+[gh-112]: https://github.com/nordtheme/web/issues/112
+[gh-115]: https://github.com/nordtheme/web/issues/115
+[gh-117]: https://github.com/nordtheme/web/issues/117
+[gh-119]: https://github.com/nordtheme/web/issues/119
+[gh-129]: https://github.com/nordtheme/web/issues/129
+[gh-2]: https://github.com/nordtheme/web/issues/2
+[gh-24]: https://github.com/nordtheme/web/issues/24
+[gh-25]: https://github.com/nordtheme/web/issues/25
+[gh-26]: https://github.com/nordtheme/web/issues/26
+[gh-36]: https://github.com/nordtheme/web/issues/36
+[gh-38]: https://github.com/nordtheme/web/issues/38
+[gh-43]: https://github.com/nordtheme/web/issues/43
+[gh-46]: https://github.com/nordtheme/web/issues/46
+[gh-51]: https://github.com/nordtheme/web/issues/51
+[gh-52]: https://github.com/nordtheme/web/issues/52
+[gh-54]: https://github.com/nordtheme/web/issues/54
+[gh-57]: https://github.com/nordtheme/web/issues/57
+[gh-59]: https://github.com/nordtheme/web/issues/59
+[gh-63]: https://github.com/nordtheme/web/issues/63
+[gh-64]: https://github.com/nordtheme/web/issues/64
+[gh-65]: https://github.com/nordtheme/web/issues/65
+[gh-66]: https://github.com/nordtheme/web/issues/66
+[gh-69]: https://github.com/nordtheme/web/issues/69
+[gh-70]: https://github.com/nordtheme/web/issues/70
+[gh-74]: https://github.com/nordtheme/web/issues/74
+[gh-78]: https://github.com/nordtheme/web/issues/78
+[gh-84]: https://github.com/nordtheme/web/issues/84
+[gh-86]: https://github.com/nordtheme/web/issues/86
+[gh-87]: https://github.com/nordtheme/web/issues/87
+[gh-89]: https://github.com/nordtheme/web/issues/89
+[gh-91]: https://github.com/nordtheme/web/issues/91
+[gh-94]: https://github.com/nordtheme/web/issues/94
+[gh-96]: https://github.com/nordtheme/web/issues/96
+[gh-98]: https://github.com/nordtheme/web/issues/98
 [gh-arcland]: https://github.com/arcticicestudio/arctic-landscape
 [gh-arcocfrac]: https://www.npmjs.com/package/arctic-ocean-fractal
 [gh-axios]: https://github.com/axios/axios
 [gh-babel-plugin-lodash]: https://github.com/lodash/babel-plugin-lodash
 [gh-bsl]: https://github.com/willmcpo/body-scroll-lock
-[gh-community-profile]: https://github.com/arcticicestudio/nord-docs/community
+[gh-community-profile]: https://github.com/nordtheme/web/community
 [gh-date-fns]: https://github.com/date-fns/date-fns
 [gh-eslint-config-arcticicestudio]: https://github.com/arcticicestudio/eslint-config-arcticicestudio
 [gh-gatsby-plugin-image]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-image
@@ -1923,8 +2557,8 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [npm-docs-lock]: https://docs.npmjs.com/files/package-locks
 [npm-docs-pkg]: https://docs.npmjs.com/files/package.json
 [npm-docs-rc]: https://docs.npmjs.com/files/npmrc
-[npm-eslint-config-arcticicestudio-base]: https://www.npmjs.com/package/eslint-config-arcticicestudio-base
-[npm-eslint-config-arcticicestudio]: https://www.npmjs.com/package/eslint-config-arcticicestudio
+[npm-eslint-config-arcticicestudio-base]: https://www.npmjs.com/package/@arcticicestudio/eslint-config-base
+[npm-eslint-config-arcticicestudio]: https://www.npmjs.com/package/@arcticicestudio/eslint-config
 [npm-eslint-react-hooks]: https://www.npmjs.com/package/eslint-plugin-react-hooks
 [npm-gatsby-plugin-react-helmet]: https://www.npmjs.com/package/gatsby-plugin-react-helmet
 [npm-npm-run-all]: https://www.npmjs.com/package/npm-run-all
@@ -1954,7 +2588,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [schema.org]: https://schema.org
 [slack-ais]: https://arcticicestudio.slack.com
 [spectrum-ais]: https://spectrum.chat/arcticicestudio
-[spectrum-nord]: https://spectrum.chat/arcticicestudio
+[spectrum-nord]: https://spectrum.chat/nordtheme
 [stc-docs-globstyle]: https://www.styled-components.com/docs/api#createglobalstyle
 [stc-docs-mqt]: https://www.styled-components.com/docs/advanced#media-templates
 [stc-docs-thprov]: https://www.styled-components.com/docs/api#themeprovider
@@ -1993,7 +2627,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 [gf]: https://fonts.google.com
 [gh-modern-normalize]: https://github.com/sindresorhus/modern-normalize
-[gh-nord-36]: https://github.com/arcticicestudio/nord/issues/36
+[gh-nord-36]: https://github.com/nordtheme/nord/issues/36
 [gh-stth-api-th]: https://github.com/styled-components/styled-theming#themename-values
 [gh-styled-theming]: https://github.com/styled-components/styled-theming
 [modularscale-majorsecond]: https://www.modularscale.com/?1&em&1.125
@@ -2002,14 +2636,12 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [npm-styled-modern-normalize]: https://www.npmjs.com/package/styled-modern-normalize
 [npm-typeface-rubik]: https://www.npmjs.com/package/typeface-rubik
 [npm-typeface-source-code-pro]: https://www.npmjs.com/package/typeface-source-code-pro
-[stc-docs-api-cgs]: https://www.styled-components.com/docs/api#createglobalstyle
-[stc-docs-api-thp]: https://www.styled-components.com/docs/api#themeprovider
 [stc-docs-theming]: https://www.styled-components.com/docs/advanced#theming
 [stc-docs-tool-babel]: https://www.styled-components.com/docs/tooling#babel-plugin
 
 <!-- v0.3.0 -->
 
-[gh-55-diff-r49]: https://github.com/arcticicestudio/nord-docs/pull/55/files#diff-90a2aa45c339ce4720a7fbbd23c65e3eR49
+[gh-55-diff-r49]: https://github.com/nordtheme/web/pull/55/files#diff-90a2aa45c339ce4720a7fbbd23c65e3eR49
 [gh-jsc-matcher]: https://github.com/styled-components/jest-styled-components#tohavestylerule
 [gh-svgr-wpl]: https://github.com/smooth-code/svgr/tree/main/packages/webpack
 [npm-gp-svgr]: https://www.npmjs.com/package/gatsby-plugin-svgr
@@ -2047,11 +2679,11 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 <!-- v0.11.0 -->
 
-[nord#112]: https://github.com/arcticicestudio/nord/issues/112
+[nord#112]: https://github.com/nordtheme/nord/issues/112
 
 <!-- v0.12.0 -->
 
-[arcticicestudio/nord-vim#161]: https://github.com/arcticicestudio/nord-vim/issues/161
+[nordtheme/vim#161]: https://github.com/nordtheme/vim/issues/161
 [babel-polyfill]: https://babeljs.io/docs/en/next/babel-polyfill.html
 [brigade/react-waypoint-v9]: https://github.com/brigade/react-waypoint/releases/tag/v9.0.0
 [facebook/prop-types#211]: https://github.com/facebook/prop-types/pull/211
@@ -2060,16 +2692,16 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gatsbyjs/gatsby#10565]: https://github.com/gatsbyjs/gatsby/pull/10565
 [gatsbyjs/gatsby#12081]: https://github.com/gatsbyjs/gatsby/pull/12081
 [gatsbyjs/gatsby#13566]: https://github.com/gatsbyjs/gatsby/pull/13566
-[gh-135]: https://github.com/arcticicestudio/nord-docs/issues/135
-[gh-140]: https://github.com/arcticicestudio/nord-docs/issues/140
+[gh-135]: https://github.com/nordtheme/web/issues/135
+[gh-140]: https://github.com/nordtheme/web/issues/140
 [home-docs-ports-jetbrains-dev]: https://www.nordtheme.com/docs/ports/jetbrains/development
 [home-docs-ports-jetbrains-install]: https://www.nordtheme.com/docs/ports/jetbrains/installation
 [home-docs-ports-jetbrains]: https://www.nordtheme.com/docs/ports/jetbrains
 [home-ports-jetbrains]: https://www.nordtheme.com/ports/jetbrains
 [kentcdodds/react-testing-library-v6.0.0]: https://github.com/kentcdodds/react-testing-library/releases/tag/v6.0.0
 [mdx-blog-v1-mig]: https://mdxjs.com/migrating/v1
-[nord-jetbrains#44]: https://github.com/arcticicestudio/nord-jetbrains/issues/44
-[nord-jetbrains#48]: https://github.com/arcticicestudio/nord-jetbrains/issues/48
+[nord-jetbrains#44]: https://github.com/nordtheme/jetbrains/issues/44
+[nord-jetbrains#48]: https://github.com/nordtheme/jetbrains/issues/48
 [npm-core-js]: https://www.npmjs.com/package/core-js
 [npm-react-hooks-testing-library]: https://www.npmjs.com/package/react-hooks-testing-library
 [prettier-v1.17.0-md-table-struct]: https://prettier.io/blog/2019/04/12/1.17.0.html#do-not-align-table-contents-if-it-exceeds-the-print-width-and-prose-wrap-never-is-set-5701-by-chenshuai2144
@@ -2079,65 +2711,64 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 
 <!-- v0.13.0 -->
 
-[gh-137]: https://github.com/arcticicestudio/nord-docs/issues/140
-[gh-143]: https://github.com/arcticicestudio/nord-docs/issues/140
+[gh-137]: https://github.com/nordtheme/web/issues/137
+[gh-143]: https://github.com/nordtheme/web/issues/143
 [home-docs-ports-vim-custom]: https://www.nordtheme.com/docs/ports/vim/customization
 [home-docs-ports-vim-install]: https://www.nordtheme.com/docs/ports/vim/installation
 [home-docs-ports-vim]: https://www.nordtheme.com/docs/ports/vim
-[home-ports-vim]: https://www.nordtheme.com/ports/vim
 [mdx-blog-v1-depr]: https://mdxjs.com/blog/v1/#deprecations
-[nord-vim#158]: https://github.com/arcticicestudio/nord-vim/issues/158
+[nord-vim#158]: https://github.com/nordtheme/vim/issues/158
 
 <!-- v0.14.0 -->
 
-[arcticicestudio/nord-vim#161][]https://github.com/arcticicestudio/nord-vim/pull/161
+[nordtheme/vim#161][]https://github.com/nordtheme/vim/pull/161
 
 <!-- v0.15.0 -->
 
-[gh-149]: https://github.com/arcticicestudio/nord-docs/issues/149
+[gh-149]: https://github.com/nordtheme/web/issues/149
 [home-docs-ports-vscode-custom]: https://www.nordtheme.com/docs/ports/visual-studio-code/customization
 [home-docs-ports-vscode-develop]: https://www.nordtheme.com/docs/ports/visual-studio-code/development
 [home-docs-ports-vscode-install]: https://www.nordtheme.com/docs/ports/visual-studio-code/installation
 [home-docs-ports-vscode]: https://www.nordtheme.com/docs/ports/visual-studio-code
 [home-ports-vscode]: https://www.nordtheme.com/ports/visual-studio-code
-[nord-visual-studio-code#138]: https://github.com/arcticicestudio/nord-visual-studio-code/issues/138
+[nord-visual-studio-code#138]: https://github.com/nordtheme/visual-studio-code/issues/138
 
 <!-- v0.16.0 -->
 
-[gh-152]: https://github.com/arcticicestudio/nord-docs/issues/152
-[gh-arcticicestudio/nord-visual-studio-code#140]: https://github.com/arcticicestudio/nord-visual-studio-code/issues/140
+[gh-152]: https://github.com/nordtheme/web/issues/152
+[gh-nordtheme/visual-studio-code#140]: https://github.com/nordtheme/visual-studio-code/issues/140
 [home-docs-ports-tmux-config]: https://www.nordtheme.com/docs/ports/tmux/configuration
 [home-docs-ports-tmux-install]: https://www.nordtheme.com/docs/ports/tmux/installation
 [home-docs-ports-tmux-plugins]: https://www.nordtheme.com/docs/ports/visual-studio-code/plugin-support
-[home-docs-ports-tmux]: https://www.nordtheme.com/docs/ports/visual-studio-code
+[home-docs-ports-tmux]: https://www.nordtheme.com/docs/ports/tmux
 [home-ports-tmux]: https://www.nordtheme.com/ports/tmux
-[nord-tmux#36]: https://github.com/arcticicestudio/nord-tmux/issues/36
+[nord-tmux#36]: https://github.com/nordtheme/tmux/issues/36
 
 <!-- v0.17.0 -->
 
-[gh-155]: https://github.com/arcticicestudio/nord-docs/issues/155
-[gh-nord-docs-blob-mdx-video-component#l93-94]: https://github.com/arcticicestudio/nord-docs/blob/3b4f7273e00532c2a7506030e604f56492886acf/src/components/atoms/core/mdx-elements/Video.jsx#L93-L94
-[gh-nord-docs-blob-template-docs_page#l48]: https://github.com/arcticicestudio/nord-docs/blob/eda9240912dc8005e3297ee82471f9da8da10980/src/components/templates/docs/DocsPage.jsx#L48
+[gh-155]: https://github.com/nordtheme/web/issues/155
+[gh-web-blob-mdx-video-component#l93-94]: https://github.com/nordtheme/web/blob/3b4f7273e00532c2a7506030e604f56492886acf/src/components/atoms/core/mdx-elements/Video.jsx#L93-L94
+[gh-web-blob-template-docs_page#l48]: https://github.com/nordtheme/web/blob/eda9240912dc8005e3297ee82471f9da8da10980/src/components/templates/docs/DocsPage.jsx#L48
 [home-docs-ports-emacs-config]: https://www.nordtheme.com/docs/ports/emacs/configuration
 [home-docs-ports-emacs-install]: https://www.nordtheme.com/docs/ports/emacs/installation
 [home-docs-ports-emacs]: https://www.nordtheme.com/docs/ports/emacs
 [home-ports-emacs]: https://www.nordtheme.com/ports/emacs
-[nord-emacs#76]: https://github.com/arcticicestudio/nord-emacs/issues/76
+[nord-emacs#76]: https://github.com/nordtheme/emacs/issues/76
 
 <!-- v0.18.0 -->
 
-[gh-159]: https://github.com/arcticicestudio/nord-docs/issues/159
+[gh-159]: https://github.com/nordtheme/web/issues/159
 [home-docs-ports-dircolors-type_support]: https://www.nordtheme.com/docs/ports/dircolors/type-support
 [home-docs-ports-dircolors-install]: https://www.nordtheme.com/docs/ports/dircolors/installation
 [home-docs-ports-dircolors]: https://www.nordtheme.com/docs/ports/dircolors
 [home-ports-dircolors]: https://www.nordtheme.com/ports/dircolors
-[nord-dircolors#13]: https://github.com/arcticicestudio/nord-dircolors/issues/13
+[nord-dircolors#13]: https://github.com/nordtheme/dircolors/issues/13
 
 <!-- v0.19.0 -->
 
-[gh-166]: https://github.com/arcticicestudio/nord-docs/issues/166
-[gh-168]: https://github.com/arcticicestudio/nord-docs/issues/168
-[gh-tree-config-route-mapping-gh-169]: https://github.com/arcticicestudio/nord-docs/blob/53b712c02342b76516b918adb0b3c181d624c6fc/src/config/routes/mappings.js#L364-L412
+[gh-166]: https://github.com/nordtheme/web/issues/166
+[gh-168]: https://github.com/nordtheme/web/issues/168
+[gh-tree-config-route-mapping-gh-169]: https://github.com/nordtheme/web/blob/53b712c02342b76516b918adb0b3c181d624c6fc/src/config/routes/mappings.js#L364-L412
 [gh-user-jmurinello]: https://github.com/jmurinello
 [gh-user-mosn]: https://github.com/mosn
 [gh-user-mrymtsk]: https://github.com/mrymtsk
@@ -2149,40 +2780,40 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [home-docs-ports-atom-ui]: https://www.nordtheme.com/docs/ports/atom-ui
 [home-ports-atom-syntax]: https://www.nordtheme.com/ports/atom-syntax
 [home-ports-atom-ui]: https://www.nordtheme.com/ports/atom-ui
-[nord-atom-syntax#63]: https://github.com/arcticicestudio/nord-atom-syntax/issues/63
-[nord-atom-ui#82]: https://github.com/arcticicestudio/nord-atom-ui/issues/82
+[nord-atom-syntax#63]: https://github.com/nordtheme/atom-syntax/issues/63
+[nord-atom-ui#82]: https://github.com/nordtheme/atom-ui/issues/82
 
 <!-- v0.20.0 -->
 
-[gh-171]: https://github.com/arcticicestudio/nord-docs/issues/171
+[gh-171]: https://github.com/nordtheme/web/issues/171
 [gh-user-impulse]: https://github.com/impulse
 [home-docs-ports-sublime-text-develop]: https://www.nordtheme.com/docs/ports/sublime-text/development
 [home-docs-ports-sublime-text-install]: https://www.nordtheme.com/docs/ports/sublime-text/installation
 [home-docs-ports-sublime-text]: https://www.nordtheme.com/docs/ports/sublime-text
 [home-ports-sublime-text]: https://www.nordtheme.com/ports/sublime-text
-[nord-sublime-text#21]: https://github.com/arcticicestudio/nord-sublime-text/issues/21
+[nord-sublime-text#21]: https://github.com/nordtheme/sublime-text/issues/21
 
 <!-- v0.21.0 -->
 
-[gh-175]: https://github.com/arcticicestudio/nord-docs/issues/175
+[gh-175]: https://github.com/nordtheme/web/issues/175
 [home-docs-ports-slack-install]: https://www.nordtheme.com/docs/ports/slack/installation
 [home-docs-ports-slack]: https://www.nordtheme.com/docs/ports/slack
 [home-ports-slack]: https://www.nordtheme.com/ports/slack
-[nord-slack#5]: https://github.com/arcticicestudio/nord-slack/issues/5
+[nord-slack#5]: https://github.com/nordtheme/slack/issues/5
 
 <!-- v0.22.0 -->
 
-[gh-182]: https://github.com/arcticicestudio/nord-docs/issues/182
+[gh-182]: https://github.com/nordtheme/web/issues/182
 [home-docs-ports-xcode-asset_catalog]: https://www.nordtheme.com/docs/ports/slack/asset_catalog
-[home-docs-ports-xcode-install]: https://www.nordtheme.com/docs/ports/slack/installation
+[home-docs-ports-xcode-install]: https://www.nordtheme.com/docs/ports/xcode/installation
 [home-docs-ports-xcode]: https://www.nordtheme.com/docs/ports/xcode
 [home-ports-xcode]: https://www.nordtheme.com/ports/xcode
-[nord-xcode#9]: https://github.com/arcticicestudio/nord-xcode/issues/9
+[nord-xcode#9]: https://github.com/nordtheme/xcode/issues/9
 
 <!-- v0.23.0 -->
 
-[gh-188]: https://github.com/arcticicestudio/nord-docs/issues/188
-[home-docs-ports-highlightjs-install]: https://www.nordtheme.com/docs/ports/slack/installation
+[gh-188]: https://github.com/nordtheme/web/issues/188
+[home-docs-ports-highlightjs-install]: https://www.nordtheme.com/docs/ports/highlightjs/installation
 [home-docs-ports-highlightjs]: https://www.nordtheme.com/docs/ports/highlightjs
 [home-ports-highlightjs]: https://www.nordtheme.com/ports/highlightjs
-[nord-highlightjs#13]: https://github.com/arcticicestudio/nord-highlightjs/issues/13
+[nord-highlightjs#13]: https://github.com/nordtheme/highlightjs/issues/13

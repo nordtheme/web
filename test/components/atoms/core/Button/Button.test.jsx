@@ -1,23 +1,19 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
 import { waitForElement } from "@testing-library/react";
 
-import { renderWithTheme } from "nord-docs-test-utils";
+import { renderWithTheme } from "nord-web-test-utils";
 import Button from "atoms/core/Button";
 import { ROUTE_DOCS } from "config/routes/mappings";
 import { metadataNordDocs } from "data/project";
 
 const handleOnClickMock = jest.fn();
 
-const assertBaseButtonStyles = element => {
+const assertBaseButtonStyles = (element) => {
   const { color } = getComputedStyle(element);
 
   expect(element).toHaveStyleRule("display", "inline-flex");
@@ -29,30 +25,30 @@ const assertBaseButtonStyles = element => {
   expect(element).toHaveStyleRule("padding", expect.stringContaining("em"));
   expect(element).toHaveStyleRule("user-select", "none");
   expect(element).toHaveStyleRule("cursor", "pointer", {
-    modifier: ":hover:not(:disabled)"
+    modifier: ":hover:not(:disabled)",
   });
   expect(element).toHaveStyleRule("outline", "none", {
-    modifier: ":active"
+    modifier: ":active",
   });
   expect(element).toHaveStyleRule("outline", "none", {
-    modifier: ":focus"
+    modifier: ":focus",
   });
   expect(element).toHaveStyleRule("cursor", "not-allowed", {
-    modifier: ":disabled"
+    modifier: ":disabled",
   });
   expect(element).toHaveStyleRule("color", expect.not.stringMatching(color), {
-    modifier: ":disabled"
+    modifier: ":disabled",
   });
 };
 
-const assertBackgroundColorStyle = element => {
+const assertBackgroundColorStyle = (element) => {
   const { backgroundColor } = getComputedStyle(element);
 
   expect(element).toHaveStyleRule("background-color", expect.not.stringMatching(backgroundColor), {
-    modifier: ":active:not(:disabled)"
+    modifier: ":active:not(:disabled)",
   });
   expect(element).toHaveStyleRule("background-color", expect.not.stringMatching(backgroundColor), {
-    modifier: ":hover:not(:disabled)"
+    modifier: ":hover:not(:disabled)",
   });
 };
 

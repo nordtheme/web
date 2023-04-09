@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -18,28 +14,25 @@ import DividerSvg from "./DividerSvg";
 
 const fillColorWave1 = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: lighten(0.025, colors.nord6),
-  [MODE_DARK_NIGHT_FROST]: darken(0.02, colors.nord1)
+  [MODE_DARK_NIGHT_FROST]: darken(0.02, colors.nord1),
 });
 
 const fillColorWave2 = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: lighten(0.035, colors.nord6),
-  [MODE_DARK_NIGHT_FROST]: darken(0.01, colors.nord1)
+  [MODE_DARK_NIGHT_FROST]: darken(0.01, colors.nord1),
 });
 
 const fillColorWave3 = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.background.sectioning.primary[MODE_BRIGHT_SNOW_FLURRY],
-  [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.primary[MODE_DARK_NIGHT_FROST]
+  [MODE_DARK_NIGHT_FROST]: colors.background.sectioning.primary[MODE_DARK_NIGHT_FROST],
 });
 
 /**
  * A SVG vector graphic divider component consisting of three overlapping waves.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/de/docs/Web/SVG
  * @since 0.5.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/SVG
  */
-const WaveFooter = props => (
+const WaveFooter = (props) => (
   <DividerSvg {...props} viewBox="0 0 1920 250" xmlns="http://www.w3.org/2000/svg">
     <path
       css={css`

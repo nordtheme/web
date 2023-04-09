@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -20,9 +16,6 @@ import { emptyStateIllustrationStyles } from "../../shared/styles";
 
 /**
  * The component that represents the landing section of the blog posts page.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
 const SectionBlogPostsCardGrid = ({ blogPosts, ...passProps }) => (
@@ -30,23 +23,18 @@ const SectionBlogPostsCardGrid = ({ blogPosts, ...passProps }) => (
     <Content centered>
       {blogPosts.length ? (
         <Grid>
-          {blogPosts.map(
-            (
-              { frontmatter: { title, coverTitleColor }, fields: { bannerImage, coverImage, slugParentRoute, slug } },
-              idx
-            ) => (
-              <BlogPostCard
-                key={title}
-                blogPostUrl={`${slugParentRoute}${slug}`}
-                coverTitleColor={coverTitleColor}
-                fluid={idx === 0 ? bannerImage?.childImageSharp?.fluid : coverImage?.childImageSharp?.fluid}
-                large={idx === 0}
-                single={blogPosts.length === 1}
-              >
-                {title}
-              </BlogPostCard>
-            )
-          )}
+          {blogPosts.map(({ frontmatter: { title, coverTitleColor }, fields: { bannerImage, coverImage, slugParentRoute, slug } }, idx) => (
+            <BlogPostCard
+              key={title}
+              blogPostUrl={`${slugParentRoute}${slug}`}
+              coverTitleColor={coverTitleColor}
+              fluid={idx === 0 ? bannerImage?.childImageSharp?.fluid : coverImage?.childImageSharp?.fluid}
+              large={idx === 0}
+              single={blogPosts.length === 1}
+            >
+              {title}
+            </BlogPostCard>
+          ))}
         </Grid>
       ) : (
         <EmptyState
@@ -63,9 +51,9 @@ const SectionBlogPostsCardGrid = ({ blogPosts, ...passProps }) => (
 SectionBlogPostsCardGrid.propTypes = {
   blogPosts: PropTypes.arrayOf(
     PropTypes.shape({
-      ...contentBlogPostPropTypes
+      ...contentBlogPostPropTypes,
     })
-  ).isRequired
+  ).isRequired,
 };
 
 export default SectionBlogPostsCardGrid;

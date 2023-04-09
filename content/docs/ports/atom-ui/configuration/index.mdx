@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox, Video } from "atoms/core/mdx-elements";
 import { Code } from "atoms/core/html-elements";
@@ -8,8 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Configuration",
-  subline:
-    "From UI element layout up to animations and effects — configure the theme to match your personal preferences"
+  subline: "From UI element layout up to animations and effects — configure the theme to match your personal preferences",
 };
 
 <ShrinkedWidth value={25}>
@@ -41,12 +45,7 @@ All theme configurations are available through the _Settings_ by switching to th
 
 This will open the available configurations of the active UI theme.
 
-<Image
-  alt="Screenshot showing Nord Atom UI's available theme configurations"
-  dropShadow
-  fluid={props.images["settings-theme-overview.png"]}
-  rounded
->
+<Image alt="Screenshot showing Nord Atom UI's available theme configurations" dropShadow fluid={props.images["settings-theme-overview.png"]} rounded>
   <span>Nord Atom UI&apos;s available theme configurations.</span>
 </Image>
 
@@ -56,12 +55,7 @@ This will open the available configurations of the active UI theme.
 
 By default, tabs are using a minimal width required to display the content like titles and allow to keep a better overview when having a large number of open tabs.
 
-<Image
-  alt="Screenshot showing Atom's default tab style"
-  dropShadow
-  fluid={props.images["full-width-tabs-disabled.png"]}
-  rounded
->
+<Image alt="Screenshot showing Atom's default tab style" dropShadow fluid={props.images["full-width-tabs-disabled.png"]} rounded>
   <span>Default tab style.</span>
 </Image>
 
@@ -80,25 +74,13 @@ This can be changed to use the full tab bar width, where the available size is e
 
 By default, form components like a text field using bright styles when focused like a light background color with a dark foreground color to better emphasize the focus state of the currently active UI component.
 
-<Video
-  dropShadow
-  loop
-  poster={props.images["darker-form-focus-disabled.mp4.png"]}
-  rounded
-  sources={[props.videos["darker-form-focus-disabled.mp4"]]}
->
+<Video dropShadow loop poster={props.images["darker-form-focus-disabled.mp4.png"]} rounded sources={[props.videos["darker-form-focus-disabled.mp4"]]}>
   <span>Default bright form focusing effect.</span>
 </Video>
 
 This can be changed to use darker styles with `nord2` as background and `nord4` as foreground color by enabling the „Darker Form-Focusing Effect“ theme configuration.
 
-<Video
-  dropShadow
-  loop
-  poster={props.images["darker-form-focus-enabled.mp4.png"]}
-  rounded
-  sources={[props.videos["darker-form-focus-enabled.mp4"]]}
->
+<Video dropShadow loop poster={props.images["darker-form-focus-enabled.mp4.png"]} rounded sources={[props.videos["darker-form-focus-enabled.mp4"]]}>
   <span>Form focusing effect with enabled „Darker Form-Focusing Effect“ theme configuration.</span>
 </Video>
 

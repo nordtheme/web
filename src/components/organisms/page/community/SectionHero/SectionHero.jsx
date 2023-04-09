@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -22,9 +18,6 @@ const SECTION_ID = sectionIdFor(ROUTE_COMMUNITY, 0);
 
 /**
  * The component that represents the hero section of the community page.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.3.0
  */
 const SectionHero = () => (
@@ -36,9 +29,8 @@ const SectionHero = () => (
             Join the growing Nord community.
           </Headline>
           <Subline>
-            Keep up to date with upcoming releases and events, community-built projects, helpful resources and the
-            latest news. Join chat channels like Slack or browse content and knowledge bases like Stack Overflow for
-            help with any Nord questions you might have.
+            Keep up to date with upcoming releases and events, community-built projects, helpful resources and the latest news. Join chat channels like Slack or
+            browse content and knowledge bases like Stack Overflow for help with any Nord questions you might have.
           </Subline>
         </Text>
         <Visualization>

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React, { Fragment } from "react";
@@ -21,15 +17,7 @@ import Section, { Content } from "containers/core/Section";
 import { isRoutePartiallyMatch } from "utils";
 import sitemapCategories from "data/components/organisms/core/Footer/sitemapCategories";
 import { links as projectLinks } from "data/project";
-import {
-  COPYRIGHT_YEAR,
-  GIT_BRANCH,
-  GIT_COMMITHASH,
-  GIT_COMMITS_AHEAD,
-  VERSION,
-  VERSION_CHANNEL,
-  VERSION_STABILITY_STATUS
-} from "config/project/constants";
+import { COPYRIGHT_YEAR, GIT_BRANCH, GIT_COMMITHASH, GIT_COMMITS_AHEAD, VERSION, VERSION_CHANNEL, VERSION_STABILITY_STATUS } from "config/project/constants";
 
 import { heartIconStyles, organizationBrandLogoHeight, socialNetworkingIconStyles } from "./styles";
 import {
@@ -43,14 +31,11 @@ import {
   SitemapCategory,
   SitemapLink,
   SitemapList,
-  SocialNetworking
+  SocialNetworking,
 } from "./styled";
 
 /**
  * Renders the sitemap category links.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.5.0
  */
 const renderSitemapCategories = sitemapCategories.map(({ name, url = "", links }, idx) => (
@@ -82,11 +67,8 @@ const renderSitemapCategories = sitemapCategories.map(({ name, url = "", links }
 /**
  * The essential footer component that provides the Arctic Ice Studio's organization branding logo and caption,
  * networking & social media links as well as the copyright paragraph including version information.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer
  * @since 0.5.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer
  */
 const Footer = () => (
   <StaticQuery
@@ -98,7 +80,7 @@ const Footer = () => (
       }
     `}
     /* eslint-disable react/jsx-no-bind */
-    render={data => (
+    render={(data) => (
       <Section as="footer" variant="primary">
         <Content centered>
           <Grid categoryCount={sitemapCategories.length}>
@@ -166,8 +148,7 @@ const Footer = () => (
                 <Copyright categoryCount={sitemapCategories.length}>
                   <div>
                     &copy; 2016-
-                    {COPYRIGHT_YEAR} <Link href={projectLinks.organization.url}>Arctic Ice Studio</Link> &amp;{" "}
-                    <Link href="https://svengreb.de">Sven Greb</Link>
+                    {COPYRIGHT_YEAR} <Link href={projectLinks.organization.url}>Arctic Ice Studio</Link> &amp; <Link href="https://svengreb.de">Sven Greb</Link>
                   </div>
                   <div>
                     Made with{" "}

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -13,9 +9,6 @@ import Helmet from "react-helmet";
 
 /**
  * Provides the linked data schema using the JSON-LD specification.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.4.0
  * @see https://json-ld.org
  * @see https://schema.org
@@ -33,25 +26,25 @@ const JsonLd = ({ author, canonicalUrl, defaultTitle, description, imageUrl, key
       author: {
         "@type": "Person",
         name: author.name,
-        url: author.url
+        url: author.url,
       },
       publisher: {
         "@type": "Organization",
         name: author.name,
         url: author.url,
-        logo: imageUrl
+        logo: imageUrl,
       },
       creator: {
         "@type": "Person",
         name: author.name,
-        url: author.url
+        url: author.url,
       },
       image: {
         "@type": "ImageObject",
-        url: imageUrl
+        url: imageUrl,
       },
-      keywords
-    }
+      keywords,
+    },
   ];
 
   return (
@@ -64,7 +57,7 @@ const JsonLd = ({ author, canonicalUrl, defaultTitle, description, imageUrl, key
 JsonLd.propTypes = {
   author: PropTypes.shape({
     name: PropTypes.string,
-    url: PropTypes.string
+    url: PropTypes.string,
   }).isRequired,
   canonicalUrl: PropTypes.string.isRequired,
   defaultTitle: PropTypes.string.isRequired,
@@ -72,7 +65,7 @@ JsonLd.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   keywords: PropTypes.arrayOf(PropTypes.string).isRequired,
   title: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 export default React.memo(JsonLd);

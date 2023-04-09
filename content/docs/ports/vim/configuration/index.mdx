@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { Code } from "atoms/core/html-elements";
@@ -8,8 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Configuration",
-  subline:
-    "From UI elements to syntax highlighting up to font rendering — configure the theme to match your personal preferences"
+  subline: "From UI elements to syntax highlighting up to font rendering — configure the theme to match your personal preferences",
 };
 
 <ShrinkedWidth value={25}>
@@ -38,8 +42,8 @@ All theme configuration variables must be added to either Vim's user-level or sy
     </>
   }
 >
-  This ensures the configurations are applied correctly when the color scheme file gets loaded, otherwise the theme will
-  load without taking these configurations into account.
+  This ensures the configurations are applied correctly when the color scheme file gets loaded, otherwise the theme will load without taking these
+  configurations into account.
 </Banner>
 
 ## UI Elements
@@ -104,12 +108,7 @@ let g:nord_uniform_status_lines = 1
 
 To provide a lightweight and uncluttered overall appearance for split views the [vertical split lines][vimhelp-vertsplit], only the separator characters are styled while the background color is equal to the theme's base background.
 
-<Image
-  dropShadow
-  fluid={props.images["bold-vertical-split-lines-disabled.png"]}
-  rounded
-  alt="Screenshot showing the default style of vertical split lines"
->
+<Image dropShadow fluid={props.images["bold-vertical-split-lines-disabled.png"]} rounded alt="Screenshot showing the default style of vertical split lines">
   <span>Default style of vertical split lines.</span>
 </Image>
 
@@ -119,12 +118,7 @@ To use also highlight the background of separators, making them appear more bold
 let g:nord_bold_vertical_split_line = 1
 ```
 
-<Image
-  dropShadow
-  fluid={props.images["bold-vertical-split-lines-enabled.png"]}
-  rounded
-  alt="Screenshot showing vertical split lines with a bolder style"
->
+<Image dropShadow fluid={props.images["bold-vertical-split-lines-enabled.png"]} rounded alt="Screenshot showing vertical split lines with a bolder style">
   <span>Vertical split lines with a bolder style.</span>
 </Image>
 
@@ -183,14 +177,12 @@ Next to color highlighting Nord Vim makes use of <strong>bold</strong> font styl
 <Banner
   title={
     <>
-      <strong>Bold</strong> font styles are enabled (<Code>g:nord_bold = 1</Code>) by default in both GUI and terminal
-      mode.
+      <strong>Bold</strong> font styles are enabled (<Code>g:nord_bold = 1</Code>) by default in both GUI and terminal mode.
     </>
   }
 >
-  Almost every common and still actively used terminal supports <strong>bold</strong> font styles while in GUI mode
-  Vim's runtime ensures the rendering compatibility for special font styles without the risk to break the overall
-  appearance.
+  Almost every common and still actively used terminal supports <strong>bold</strong> font styles while in GUI mode Vim's runtime ensures the rendering
+  compatibility for special font styles without the risk to break the overall appearance.
 </Banner>
 
 The theme includes **bold** font styles for specific syntax elements. To **disable bold font styles**, set the `nord_bold` theme configuration variable:
@@ -199,12 +191,7 @@ The theme includes **bold** font styles for specific syntax elements. To **disab
 let g:nord_bold = 0
 ```
 
-<Image
-  dropShadow
-  fluid={props.images["font-rendering-bold.png"]}
-  rounded
-  alt="Screenshot showing the Markdown code syntax with bold font style rendering"
->
+<Image dropShadow fluid={props.images["font-rendering-bold.png"]} rounded alt="Screenshot showing the Markdown code syntax with bold font style rendering">
   <span>
     Markdown code syntax with <strong>bold</strong> font style rendering.
   </span>
@@ -223,8 +210,8 @@ In terminal mode Nord Vim doesn't make use of <em>italic</em> font styles in ord
     </>
   }
 >
-  Since Vim's runtime should ensure the rendering compatibility for special font styles Nord Vim can make use of{" "}
-  <em>italics</em> without the risk to break the overall appearance.
+  Since Vim's runtime should ensure the rendering compatibility for special font styles Nord Vim can make use of <em>italics</em> without the risk to break the
+  overall appearance.
 </Banner>
 
 The theme includes <em>italic</em> font styles for specific syntax elements, but requires to set the `nord_italic` theme configuration variable:
@@ -233,12 +220,7 @@ The theme includes <em>italic</em> font styles for specific syntax elements, but
 let g:nord_italic = 1
 ```
 
-<Image
-  dropShadow
-  fluid={props.images["font-rendering-italic.png"]}
-  rounded
-  alt="Screenshot showing the Markdown code syntax with italic font style rendering"
->
+<Image dropShadow fluid={props.images["font-rendering-italic.png"]} rounded alt="Screenshot showing the Markdown code syntax with italic font style rendering">
   <span>
     Markdown code syntax with <em>italic</em> font style rendering.
   </span>
@@ -255,8 +237,7 @@ let g:nord_italic = 1
     </>
   }
 >
-  It wont' have any effect if the requirement is not fulfilled since theme is not configured to render <em>italic</em>{" "}
-  font styles at all.
+  It wont' have any effect if the requirement is not fulfilled since theme is not configured to render <em>italic</em> font styles at all.
 </Banner>
 
 For uncluttered and clearly readable comments, Nord Vim uses normal font styles for comments, but it is a common design pattern for syntax themes to use <em>italic</em> font styles instead.
@@ -298,8 +279,8 @@ In terminal mode Nord Vim doesn't make use of <u>underline</u> font styles in or
     </>
   }
 >
-  Since Vim's runtime should ensure the rendering compatibility for special font styles Nord Vim can make use of{" "}
-  <em>italics</em> without the risk to break the overall appearance.
+  Since Vim's runtime should ensure the rendering compatibility for special font styles Nord Vim can make use of <em>italics</em> without the risk to break the
+  overall appearance.
 </Banner>
 
 The theme includes <<u>underline</u> font styles for specific syntax elements, but requires to set the `nord_underline` theme configuration variable:

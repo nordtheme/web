@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import styled from "styled-components";
@@ -16,20 +12,17 @@ import Ul from "./Ul";
 
 const fontColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.font.base[MODE_BRIGHT_SNOW_FLURRY],
-  [MODE_DARK_NIGHT_FROST]: colors.nord4
+  [MODE_DARK_NIGHT_FROST]: colors.nord4,
 });
 
 const backgroundColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.nord6,
-  [MODE_DARK_NIGHT_FROST]: colors.nord3
+  [MODE_DARK_NIGHT_FROST]: colors.nord3,
 });
 
 /**
  * A base HTML component that represents the `<li>` element as item in a list.
  * It is composed with the `Ol` (`<ol>`) and `Ul` (`<ul>`) components.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol

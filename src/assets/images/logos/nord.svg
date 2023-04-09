@@ -1,4 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
 <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-  <path d="M87.102 118.131L42.667 61.255V45.473l49.247 63.665h26.463V19.492H73.87l-9.623-9.623H128v108.262z"/>
-  <path d="M40.899 9.869l44.434 56.874v15.781L36.087 18.861H9.624v89.646h44.507l9.623 9.623H0V9.869z"/>
+  <path d="M87.102 118.131L42.667 61.255V45.473l49.247 63.665h26.463V19.492H73.87l-9.623-9.623H128v108.262z" />
+  <path d="M40.899 9.869l44.434 56.874v15.781L36.087 18.861H9.624v89.646h44.507l9.623 9.623H0V9.869z" />
 </svg>

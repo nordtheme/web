@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React, { Fragment } from "react";
@@ -23,7 +19,7 @@ import {
   CardItems as Posts,
   CardLine as Line,
   CardLogo as Logo,
-  cardBasePropTypes
+  cardBasePropTypes,
 } from "../../../shared";
 import MetadataAuthor from "./MetadataAuthor";
 import MetadataCreationDate from "./MetadataCreationDate";
@@ -31,9 +27,6 @@ import MetadataWrapper from "./MetadataWrapper";
 
 /**
  * A card component that renders information about Nord's Reddit platform community.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.7.0
  */
 const RedditCard = ({ brandColor, children, logoColor, logoComponent: SvgLogo, posts, title, url, ...passProps }) => {
@@ -45,8 +38,7 @@ const RedditCard = ({ brandColor, children, logoColor, logoComponent: SvgLogo, p
           {postTitle}
         </PostLink>
         <MetadataWrapper>
-          by<MetadataAuthor color={brandColor}> {author}</MetadataAuthor>{" "}
-          <MetadataCreationDate>{created}</MetadataCreationDate>
+          by<MetadataAuthor color={brandColor}> {author}</MetadataAuthor> <MetadataCreationDate>{created}</MetadataCreationDate>
         </MetadataWrapper>
       </Post>
     </PostWrapper>
@@ -84,8 +76,8 @@ RedditCard.propTypes = {
     created: PropTypes.string,
     numComments: PropTypes.number,
     title: PropTypes.string,
-    url: PropTypes.string
-  }).isRequired
+    url: PropTypes.string,
+  }).isRequired,
 };
 
 export default RedditCard;

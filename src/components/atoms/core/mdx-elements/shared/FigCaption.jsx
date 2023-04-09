@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import styled from "styled-components";
@@ -13,15 +9,12 @@ import { colors, themedMode, MODE_BRIGHT_SNOW_FLURRY, MODE_DARK_NIGHT_FROST } fr
 
 const figcaptionFontColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.font.faded[MODE_BRIGHT_SNOW_FLURRY],
-  [MODE_DARK_NIGHT_FROST]: colors.font.faded[MODE_DARK_NIGHT_FROST]
+  [MODE_DARK_NIGHT_FROST]: colors.font.faded[MODE_DARK_NIGHT_FROST],
 });
 
 /**
- * A base HTML component that represents the `<figcaption>` element for a caption or legend describing the rest of the
- * contents of its parent `<figure>` element.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * A base HTML component that represents the `<figcaption>` element for a caption or legend describing the rest of the contents of its parent `<figure>`
+ * element.
  * @since 0.10.0
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption

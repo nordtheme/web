@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,14 +22,11 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_EMACS, 5);
 
 /**
  * The component that represents the setup section for the landing page of the "Nord Emacs" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.17.0
  */
 const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl } = portMetadata.find(port => port.name === "nord-emacs");
+  const { gitHubRepositoryUrl } = portMetadata.find((port) => port.name === "emacs");
 
   return (
     <Section id={SECTION_ID} variant="secondary">
@@ -42,8 +35,8 @@ const SectionSetup = ({ assets }) => {
           <Text verticalOnly>
             <Headline>Installation and updates with one command.</Headline>
             <Subline>
-              Install and update Nord with Emacs builtin package manager from{" "}
-              <Link href="https://melpa.org">MELPA</Link> with one command or simply set it up manually.
+              Install and update Nord with Emacs builtin package manager from <Link href="https://melpa.org">MELPA</Link> with one command or simply set it up
+              manually.
             </Subline>
             <Actions>
               <Button to={ROUTE_DOCS_PORTS_EMACS} variant="primary">
@@ -61,10 +54,7 @@ const SectionSetup = ({ assets }) => {
               fluid={assets.images["ui-installation-package-manager.png"]}
               rounded
             >
-              <span>
-                Emacs package listing and installation command to setup and update Nord through the builtin package
-                manager.
-              </span>
+              <span>Emacs package listing and installation command to setup and update Nord through the builtin package manager.</span>
             </Image>
           </Visualization>
         </FeatureDuo>

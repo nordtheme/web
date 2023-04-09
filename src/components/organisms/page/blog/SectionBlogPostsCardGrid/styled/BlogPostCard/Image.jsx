@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import styled from "styled-components";
@@ -15,11 +11,8 @@ import { transitionThemedModeSwitch } from "styles/shared";
 
 /**
  * An styled Gatsby image.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
- * @see https://www.gatsbyjs.org/docs/working-with-images
+ * @see https://www.gatsbyjs.com/docs/how-to/images-and-media
  */
 const Image = styled(GatsbyImage)`
   min-height: ${BLOG_POST_IMAGE_MIN_HEIGHT / 2}px;

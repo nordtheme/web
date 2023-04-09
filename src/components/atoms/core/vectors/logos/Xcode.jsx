@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -14,9 +10,6 @@ import { colors } from "styles/theme";
 
 /**
  * The Xcode logo as SVG vector graphic component.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
 const Xcode = ({ fillColors, svgRef, ...passProps }) => (
@@ -37,10 +30,7 @@ const Xcode = ({ fillColors, svgRef, ...passProps }) => (
       d="M23.4 7.55c.235-.516.124-.887-.341-1.1L19.72 4.926l-3.836-1.75c-.466-.21-.816-.05-1.055.466l-1.278 2.814 2.913 1.328 2.9 1.321 2.759 1.262L23.4 7.55zM6.292 38.777a1.781 1.781 0 0 0-.537.322c-.04.04-.082.082-.121.127l-.007.013h-.004l.008-.01c0-.018 0-.039.003-.057a1.577 1.577 0 0 0-.106-.71 1.585 1.585 0 0 0-.858-.921 1.58 1.58 0 0 0-1.261-.042 1.667 1.667 0 0 0-.531.311 1.87 1.87 0 0 0-.177.193c-.003.01-.003.019-.007.027l-.01-.003-.006-.006.034-.066c.008-.046.011-.097.015-.136a1.486 1.486 0 0 0-.104-.713 1.588 1.588 0 0 0-.859-.913 1.59 1.59 0 0 0-1.255-.052 1.757 1.757 0 0 0-.509.297c0 .018.006.027.01.035a.614.614 0 0 0 .118.303l1.344 4.328c.416.033.852.157 1.294.362.461.208.847.462 1.156.77l4.279-1.884c.033-.012.069-.033.1-.045a.805.805 0 0 0 .208-.179 2.357 2.357 0 0 0-.101-.386 1.59 1.59 0 0 0-.857-.915 1.613 1.613 0 0 0-1.259-.05z"
       fill={fillColors.pencilCanvas}
     />
-    <path
-      d="M21.948 10.747l.175-.38-2.759-1.262-.644 1.404 2.757 1.262.471-1.024z"
-      fill={fillColors.pencilEraserRingRight}
-    />
+    <path d="M21.948 10.747l.175-.38-2.759-1.262-.644 1.404 2.757 1.262.471-1.024z" fill={fillColors.pencilEraserRingRight} />
     <path d="M13.552 6.456l-.645 1.405 2.917 1.328.64-1.405-2.912-1.328z" fill={fillColors.pencilEraserRingLeft} />
     <path d="M16.464 7.784l-.64 1.405 2.896 1.319.644-1.404-2.9-1.32z" fill={fillColors.pencilEraserRingMiddle} />
     <path
@@ -55,10 +45,7 @@ const Xcode = ({ fillColors, svgRef, ...passProps }) => (
       d="M5.755 39.099c.154-.133.331-.244.537-.322.418-.151.842-.14 1.259.051.413.19.696.492.857.915.049.139.082.269.101.386.063-.078.125-.178.182-.308l3.962-8.687 3.978-8.733 4.847-10.631-2.757-1.262L5.634 39.226c.039-.045.081-.087.121-.127z"
       fill={fillColors.pencilStalkRight}
     />
-    <path
-      d="M3.922 42.236a3.878 3.878 0 0 0-1.156-.77 3.824 3.824 0 0 0-1.294-.362l.604 1.944 1.846-.812z"
-      fill={fillColors.pencilMine}
-    />
+    <path d="M3.922 42.236a3.878 3.878 0 0 0-1.156-.77 3.824 3.824 0 0 0-1.294-.362l.604 1.944 1.846-.812z" fill={fillColors.pencilMine} />
     <path
       d="M32.764 14.223c.127-.787-.203-1.241-.986-1.369l-2.002-.326c-.784-.126-1.237.203-1.364.989l-1.337 8.234 3.842 3.845 1.847-11.373z"
       fill={fillColors.screwdriverStalkShade}
@@ -95,9 +82,9 @@ Xcode.propTypes = {
     screwdriverHandle: PropTypes.string,
     screwdriverHandleLines: PropTypes.string,
     screwdriverStalk: PropTypes.string,
-    screwdriverStalkShade: PropTypes.string
+    screwdriverStalkShade: PropTypes.string,
   }),
-  svgRef: PropTypes.func
+  svgRef: PropTypes.func,
 };
 
 Xcode.defaultProps = {
@@ -117,9 +104,9 @@ Xcode.defaultProps = {
     screwdriverHandle: colors.nord9,
     screwdriverHandleLines: colors.nord10,
     screwdriverStalk: colors.nord5,
-    screwdriverStalkShade: colors.nord4
+    screwdriverStalkShade: colors.nord4,
   },
-  svgRef: () => {}
+  svgRef: () => {},
 };
 
 export default Xcode;

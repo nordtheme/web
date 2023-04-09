@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 const { resolve: r } = require("path");
@@ -21,7 +17,7 @@ const mdxQuery = `
     edges {
       node {
         fields {
-          ${Object.keys(nodeFields).map(nf => nf.replace(",", "\n"))}
+          ${Object.keys(nodeFields).map((nf) => nf.replace(",", "\n"))}
         }
         frontmatter {
           draft
@@ -33,19 +29,6 @@ const mdxQuery = `
 }
 `;
 
-/**
- * Implementation of the Gatsby Node "createPages" API which tells plugins to add pages.
- * This extension point is called only after the initial sourcing and transformation of nodes and
- * when the creation of the GraphQL schema is complete to allow to query data in order to create pages.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @since 0.10.0
- * @see https://next.gatsbyjs.org/docs/node-apis/#createPages
- * @see https://next.gatsbyjs.org/docs/node-apis/#createPage
- * @see https://www.gatsbyjs.org/docs/mdx
- * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx
- */
 const createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
   const isProductionMode = process.env.NODE_ENV === "production";
@@ -54,7 +37,7 @@ const createPages = async ({ graphql, actions }) => {
   createRedirect({
     fromPath: ROUTE_LANDING,
     redirectInBrowser: true,
-    toPath: ROUTE_ROOT
+    toPath: ROUTE_ROOT,
   });
 
   const mdxQueryResult = await graphql(mdxQuery);
@@ -98,10 +81,20 @@ const createPages = async ({ graphql, actions }) => {
         publishTime,
         relativeDirectory,
         slug,
-        slugParentRoute
-      }
+        slugParentRoute,
+      },
     });
   });
 };
 
+/**
+ * Implementation of the Gatsby Node "createPages" API which tells plugins to add pages.
+ * This extension point is called only after the initial sourcing and transformation of nodes and
+ * when the creation of the GraphQL schema is complete to allow to query data in order to create pages.
+ * @since 0.10.0
+ * @see https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#createPages
+ * @see https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#createPage
+ * @see https://www.gatsbyjs.com/docs/how-to/routing/mdx
+ * @see https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx
+ */
 module.exports = createPages;

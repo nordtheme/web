@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -17,21 +13,9 @@ import { Card as StyledCard, CardBox, CardLogo, CardMetadata, CardTitle, Icon, I
 
 /**
  * A card component representing a port project and some of its metadata.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
-const Card = ({
-  gitHubRepositoryUrl,
-  name,
-  projectName,
-  releaseLatest,
-  stargazers,
-  svgComponent: SvgLogo,
-  url,
-  ...passProps
-}) => (
+const Card = ({ gitHubRepositoryUrl, name, projectName, releaseLatest, stargazers, svgComponent: SvgLogo, url, ...passProps }) => (
   <StyledCard key={name} {...passProps}>
     <A href={url}>
       <CardBox>
@@ -60,14 +44,14 @@ Card.propTypes = {
   projectName: PropTypes.string.isRequired,
   releaseLatest: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired
+    url: PropTypes.string.isRequired,
   }).isRequired,
   stargazers: PropTypes.shape({
     count: PropTypes.number,
-    url: PropTypes.string
+    url: PropTypes.string,
   }).isRequired,
   svgComponent: PropTypes.node.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 };
 
 export default Card;

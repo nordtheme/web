@@ -1,12 +1,7 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
-
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -14,9 +9,6 @@ import { colors } from "styles/theme";
 
 /**
  * The JetBrains logo as SVG vector graphic component.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
 const JetBrains = ({ fillColors, svgRef, ...passProps }) => (
@@ -34,18 +26,18 @@ JetBrains.propTypes = {
   fillColors: PropTypes.shape({
     characters: PropTypes.string,
     square: PropTypes.string,
-    stripe: PropTypes.string
+    stripe: PropTypes.string,
   }),
-  svgRef: PropTypes.func
+  svgRef: PropTypes.func,
 };
 
 JetBrains.defaultProps = {
   fillColors: {
     characters: colors.nord7,
     square: colors.nord1,
-    stripe: colors.nord4
+    stripe: colors.nord4,
   },
-  svgRef: () => {}
+  svgRef: () => {},
 };
 
 export default JetBrains;

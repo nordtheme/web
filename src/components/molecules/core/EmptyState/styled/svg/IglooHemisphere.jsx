@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,19 +22,11 @@ const Path = styled.path`
 `;
 
 /**
- * A SVG vector illustration component rendering an igloo hemisphere with snowflakes, clouds and thr sun.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * A SVG vector illustration component rendering an igloo hemisphere with snowflakes, clouds and the sun.
  * @since 0.3.0
  */
-const IglooHemisphere = props => (
-  <svg
-    {...props}
-    data-testid="nd-molecules-core-emptystate-styled-svg-igloo-hemisphere"
-    viewBox="0 0 471.096 512"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+const IglooHemisphere = (props) => (
+  <svg {...props} data-testid="nd-molecules-core-emptystate-styled-svg-igloo-hemisphere" viewBox="0 0 471.096 512" xmlns="http://www.w3.org/2000/svg">
     <Snowflakes>
       <circle cx="432.226" cy="179.1" r="9.367" />
       <circle cx="38.866" cy="291.491" r="9.367" />
@@ -69,14 +57,8 @@ const IglooHemisphere = props => (
       d="M284.001 216.212c-62.455 0-113.086 50.634-113.086 113.091v44.956h226.176v-44.956c0-62.456-50.628-113.091-113.09-113.091z"
       fill={lighten(0.1, colors.nord8)}
     />
-    <path
-      d="M264.922 272.758c-31.23 0-56.547 25.316-56.547 56.546v44.956h113.088v-44.956c0-31.23-25.311-56.546-56.541-56.546z"
-      fill={colors.nord8}
-    />
-    <path
-      d="M264.922 310.22c-10.525 0-19.083 8.562-19.083 19.084v44.956h38.162v-44.956c0-10.523-8.562-19.084-19.079-19.084z"
-      fill={colors.nord10}
-    />
+    <path d="M264.922 272.758c-31.23 0-56.547 25.316-56.547 56.546v44.956h113.088v-44.956c0-31.23-25.311-56.546-56.541-56.546z" fill={colors.nord8} />
+    <path d="M264.922 310.22c-10.525 0-19.083 8.562-19.083 19.084v44.956h38.162v-44.956c0-10.523-8.562-19.084-19.079-19.084z" fill={colors.nord10} />
     <path
       d="M235.548 361.77c-16.155 0-16.137-7.49-32.292-7.49s-16.155 7.49-32.312 7.49c-16.157 0-16.157-7.49-32.314-7.49-16.155 0-16.155 7.49-32.313 7.49s-16.157-7.49-32.314-7.49c-16.159 0-16.159 7.49-32.32 7.49-16.158 0-16.158-7.49-32.319-7.49 38.044 87.228 125.105 148.354 226.184 148.354 101.078 0 188.14-61.127 226.187-148.354-16.162 0-16.162 7.49-32.324 7.49-16.157 0-16.157-7.49-32.319-7.49-16.156 0-16.156 7.49-32.309 7.49-16.158 0-16.158-7.49-32.314-7.49-16.158 0-16.158 7.49-32.314 7.49-16.157 0-16.157-7.49-32.314-7.49s-16.14 7.49-32.293 7.49z"
       fill={colors.nord6}

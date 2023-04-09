@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React, { Fragment } from "react";
@@ -27,16 +23,16 @@ const PureSiteMetadata = ({
           keywords: keywordsNord,
           links: {
             organization: {
-              social: { twitter }
-            }
+              social: { twitter },
+            },
           },
-          title
+          title,
         },
-        siteUrl
-      }
-    }
+        siteUrl,
+      },
+    },
   },
-  pathName
+  pathName,
 }) => (
   <Fragment>
     <Helmet defaultTitle={title} titleTemplate={`${title} | %s`}>
@@ -80,16 +76,13 @@ const PureSiteMetadata = ({
 );
 
 /**
- * Provides metadata tags that'll be injected into the `<head>` for SEO & social media purposes including
- * "Twitter Card", "Open Graph Protocol" and "JSON-LD" specification elements.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * Provides metadata tags that'll be injected into the `<head>` for SEO & social media purposes including "Twitter Card", "Open Graph Protocol" and
+ * "JSON-LD" specification elements.
  * @since 0.4.0
- * @see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary-card-with-large-image
- * @see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup
- * @see https://developers.facebook.com/docs/sharing/opengraph/object-properties
- * @see http://ogp.me
+ * @see https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image
+ * @see https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup
+ * @see https://developers.facebook.com/docs/sharing/opengraph
+ * @see https://ogp.me
  * @see https://developers.facebook.com/docs/sharing/best-practices
  * @see https://json-ld.org
  * @see https://schema.org
@@ -128,7 +121,7 @@ const SiteMetadata = ({ pathName, ...passProp }) => (
       }
     `}
     /* eslint-disable-next-line react/jsx-no-bind */
-    render={data => <PureSiteMetadata data={data} pathName={pathName} {...passProp} />}
+    render={(data) => <PureSiteMetadata data={data} pathName={pathName} {...passProp} />}
   />
 );
 
@@ -140,7 +133,7 @@ PureSiteMetadata.propTypes = {
         nord: PropTypes.shape({
           author: PropTypes.shape({
             name: PropTypes.string,
-            url: PropTypes.string
+            url: PropTypes.string,
           }),
           description: PropTypes.string,
           keywords: PropTypes.arrayOf(PropTypes.string),
@@ -148,18 +141,18 @@ PureSiteMetadata.propTypes = {
             organization: PropTypes.shape({
               social: PropTypes.shape({
                 twitter: PropTypes.shape({
-                  id: PropTypes.string
-                })
-              })
-            })
+                  id: PropTypes.string,
+                }),
+              }),
+            }),
           }),
-          title: PropTypes.string
+          title: PropTypes.string,
         }),
-        siteUrl: PropTypes.string
-      })
-    })
+        siteUrl: PropTypes.string,
+      }),
+    }),
   }).isRequired,
-  pathName: PropTypes.string.isRequired
+  pathName: PropTypes.string.isRequired,
 };
 
 SiteMetadata.propTypes = { pathName: PropTypes.string.isRequired };

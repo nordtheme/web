@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import PropTypes from "prop-types";
@@ -18,21 +14,16 @@ const fontColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: ({ isActiveRouteMatch }) =>
     isActiveRouteMatch ? colors.font.base[MODE_BRIGHT_SNOW_FLURRY] : colors.font.faded[MODE_BRIGHT_SNOW_FLURRY],
   [MODE_DARK_NIGHT_FROST]: ({ isActiveRouteMatch }) =>
-    isActiveRouteMatch ? colors.font.base[MODE_DARK_NIGHT_FROST] : colors.font.faded[MODE_DARK_NIGHT_FROST]
+    isActiveRouteMatch ? colors.font.base[MODE_DARK_NIGHT_FROST] : colors.font.faded[MODE_DARK_NIGHT_FROST],
 });
 
 const borderBottomColor = themedMode({
-  [MODE_BRIGHT_SNOW_FLURRY]: ({ isActiveRouteMatch }) =>
-    isActiveRouteMatch ? colors.font.base[MODE_BRIGHT_SNOW_FLURRY] : "transparent",
-  [MODE_DARK_NIGHT_FROST]: ({ isActiveRouteMatch }) =>
-    isActiveRouteMatch ? colors.font.base[MODE_DARK_NIGHT_FROST] : "transparent"
+  [MODE_BRIGHT_SNOW_FLURRY]: ({ isActiveRouteMatch }) => (isActiveRouteMatch ? colors.font.base[MODE_BRIGHT_SNOW_FLURRY] : "transparent"),
+  [MODE_DARK_NIGHT_FROST]: ({ isActiveRouteMatch }) => (isActiveRouteMatch ? colors.font.base[MODE_DARK_NIGHT_FROST] : "transparent"),
 });
 
 /**
  * A container for the heading of a sitemap category.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.5.0
  */
 const Category = styled.div`
@@ -48,11 +39,11 @@ Category.propTypes = {
   /**
    * Indicates if the category matches the currently active route.
    */
-  isActiveRouteMatch: PropTypes.bool
+  isActiveRouteMatch: PropTypes.bool,
 };
 
 Category.defaultProps = {
-  isActiveRouteMatch: false
+  isActiveRouteMatch: false,
 };
 
 export default Category;

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import styled from "styled-components";
@@ -15,16 +11,13 @@ import Summary from "./Summary";
 
 const fontColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: colors.nord9,
-  [MODE_DARK_NIGHT_FROST]: colors.nord8
+  [MODE_DARK_NIGHT_FROST]: colors.nord8,
 });
 
 /**
- * A base HTML component that represents the `<details>` element to create a disclosure widget in which information is
- * visible only when the widget is toggled into an "open" state.
+ * A base HTML component that represents the `<details>` element to create a disclosure widget in which information is visible only when the widget is
+ * toggled into an "open" state.
  * It is used in combination with the `Summary` (`<summary>`) component.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary

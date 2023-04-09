@@ -1,23 +1,16 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file A mock for React components loaded from SVG files via SVGR (webpack loader).
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://jestjs.io/docs/en/manual-mocks
- * @see https://github.com/smooth-code/svgr
- * @since 0.3.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
 
-const MockedSvg = props => <svg {...props} />;
+const MockedSvg = (props) => <svg {...props} />;
 
+/**
+ * A mock for React components loaded from SVG files via SVGR (webpack loader).
+ * @since 0.3.0
+ * @see https://jestjs.io/docs/manual-mocks
+ * @see https://github.com/gregberge/svgr
+ */
 module.exports = { ReactComponent: MockedSvg };

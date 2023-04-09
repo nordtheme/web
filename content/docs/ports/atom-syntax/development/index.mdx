@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox, Video } from "atoms/core/mdx-elements";
@@ -8,7 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Package Development",
-  subline: "Learn how to customize the theme to fit your needs and instantly preview local changes."
+  subline: "Learn how to customize the theme to fit your needs and instantly preview local changes.",
 };
 
 <ShrinkedWidth value={25}>
@@ -39,8 +44,7 @@ Download and install Atom, or [Atom Beta][atom-beta] to use the latest developme
   }
   variant="warn"
 >
-  Otherwise the installed and versioned package will collide with the development package that'll be configured in this
-  guide.
+  Otherwise the installed and versioned package will collide with the development package that'll be configured in this guide.
 </Banner>
 
 ## Download
@@ -48,18 +52,14 @@ Download and install Atom, or [Atom Beta][atom-beta] to use the latest developme
 Clone the [_Nord Atom Syntax_ repository from GitHub][gh-repo] to your local system.
 
 ```sh
-git clone https://github.com/arcticicestudio/nord-atom-syntax.git
+git clone https://github.com/nordtheme/atom-syntax.git
 ```
 
 To get the project without [Git][] download the project as `.zip` archive file from the GitHub repository or click on the download button below and extract the archive to your local system afterwards.
 
-<Button href="https://github.com/arcticicestudio/nord-atom-syntax/archive/develop.zip">Download</Button>
+<Button href="https://github.com/nordtheme/atom-syntax/archive/develop.zip">Download</Button>
 
-<Image
-  alt="Screenshot showing the GitHub repository web UI to download the project repository"
-  fillSize={60}
-  fluid={props.images["github-clone.png"]}
->
+<Image alt="Screenshot showing the GitHub repository web UI to download the project repository" fillSize={60} fluid={props.images["github-clone.png"]}>
   Download the project repository from GitHub.
 </Image>
 
@@ -105,16 +105,8 @@ atom --dev
 
 The theme's source code can now be modified and saved changes will immediately apply to the currently running Atom instance.
 
-<Video
-  dropShadow
-  loop
-  poster={props.images["dev-pkg-hot-reload.mp4.png"]}
-  rounded
-  sources={[props.videos["dev-pkg-hot-reload.mp4"]]}
->
-  <span>
-    Development theme packages changes are immediately applied on save when running in Atom&apos;s „Dev Mode“.
-  </span>
+<Video dropShadow loop poster={props.images["dev-pkg-hot-reload.mp4.png"]} rounded sources={[props.videos["dev-pkg-hot-reload.mp4"]]}>
+  <span>Development theme packages changes are immediately applied on save when running in Atom&apos;s „Dev Mode“.</span>
 </Video>
 
 </ShrinkedWidth>
@@ -128,6 +120,6 @@ The theme's source code can now be modified and saved changes will immediately a
 [atom-docs-hack-debug]: https://flight-manual.atom.io/hacking-atom/sections/debugging
 [atom-docs-hack-dev_workflow]: https://flight-manual.atom.io/hacking-atom/sections/creating-a-theme/#development-workflow
 [atom-docs-hack-theme-syntax]: https://flight-manual.atom.io/hacking-atom/sections/creating-a-theme/#creating-a-syntax-theme
-[gh-repo]: https://github.com/arcticicestudio/nord-atom-syntax
+[gh-repo]: https://github.com/nordtheme/atom-syntax
 [git]: https://git-scm.com
 [wiki-homedir]: https://en.wikipedia.org/wiki/Home_directory

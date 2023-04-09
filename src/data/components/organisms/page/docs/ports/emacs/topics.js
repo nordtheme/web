@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import { Brush, CloudDownload, QuestionMarkCircle, Settings2, Target } from "atoms/core/vectors/icons";
@@ -12,9 +8,6 @@ import { ROUTE_DOCS_PORTS_EMACS_CONFIGURATION, ROUTE_DOCS_PORTS_EMACS_INSTALLATI
 
 /**
  * The mapping of topics for the "Getting Started" contents cards of the "Nord Emacs" docs page.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.17.0
  */
 const topicsGettingStarted = [
@@ -22,36 +15,33 @@ const topicsGettingStarted = [
     iconComponent: CloudDownload,
     iconOutlined: true,
     title: "Install and activate the theme",
-    url: ROUTE_DOCS_PORTS_EMACS_INSTALLATION
+    url: ROUTE_DOCS_PORTS_EMACS_INSTALLATION,
   },
   {
     iconComponent: Settings2,
     title: "Configure the theme to fit your needs",
-    url: ROUTE_DOCS_PORTS_EMACS_CONFIGURATION
+    url: ROUTE_DOCS_PORTS_EMACS_CONFIGURATION,
   },
   {
     iconComponent: Brush,
-    title: "Override styles with customizations"
-  }
+    title: "Override styles with customizations",
+  },
 ];
 
 /**
- * The mapping of topics for the "References" contents cards of the "Nord Emacs" docs page.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ * The mapping of topics for the "References" contents cards of the "Nord Emacs" docs page.>
  * @since 0.17.0
  */
 const topicsReferences = [
   {
     iconComponent: Target,
     svgType: "stroke",
-    title: "Supported languages and packages"
+    title: "Supported languages and packages",
   },
   {
     iconComponent: QuestionMarkCircle,
-    title: "Troubleshooting Guide"
-  }
+    title: "Troubleshooting Guide",
+  },
 ];
 
 export { topicsGettingStarted, topicsReferences };

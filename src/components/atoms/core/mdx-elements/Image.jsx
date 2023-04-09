@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -33,11 +29,8 @@ const Img = styled(GatsbyImage)`
 
 /**
  * An Gatsby image wrapped in a `<figure>` element with an optional caption.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.10.0
- * @see https://www.gatsbyjs.org/docs/working-with-images
+ * @see https://www.gatsbyjs.com/docs/how-to/images-and-media
  * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure
  */
 const Image = ({ children, fillSize, dropShadow, rounded, ...passProps }) =>
@@ -55,14 +48,14 @@ Image.propTypes = {
   dropShadow: PropTypes.bool,
   fillSize: PropTypes.number,
   rounded: PropTypes.bool,
-  ...contentMdxImageFluidPropTypes
+  ...contentMdxImageFluidPropTypes,
 };
 
 Image.defaultProps = {
   children: null,
   dropShadow: false,
   fillSize: 100,
-  rounded: false
+  rounded: false,
 };
 
 export default Image;

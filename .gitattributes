@@ -1,19 +1,17 @@
-# Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (C) 2018-present Sven Greb <development@svengreb.de>
-#
-# Project:    Nord Docs
-# Repository: https://github.com/arcticicestudio/nord-docs
-# License:    MIT
-# References:
-#   https://git-scm.com/docs/gitattributes
-#   https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#Keyword-Expansion
-#   https://github.com/AGWA/git-crypt
-#   https://www.gnupg.org
-#   https://wiki.archlinux.org/index.php/GnuPG
+# Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+# This source code is licensed under the MIT license found in the license file.
 
-# Automatically perform line feed (LF) normalization for files detected as text and leave all files detected as binary
-# untouched.
-* text=auto
+# Configuration to define attributes per path.
+# References:
+#   1. https://git-scm.com/docs/gitattributes
+#   2. https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes#Keyword-Expansion
+#   3. https://github.com/AGWA/git-crypt
+#   4. https://www.gnupg.org
+#   5. https://wiki.archlinux.org/index.php/GnuPG
+
+# Automatically perform line feed (LF) normalization for files detected as text and
+# leave all files detected as binary untouched.
+* text=auto eol=lf
 
 # +--------+
 # + Assets +

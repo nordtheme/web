@@ -1,35 +1,27 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file The ESLint configuration.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://github.com/babel/eslint-plugin-babel#rules
- * @see https://github.com/tc39/proposal-optional-chaining
- * @see https://eslint.org/docs/user-guide/configuring#specifying-environments
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 const { resolve } = require("path");
 
+/**
+ * Configurations for ESLint.
+ * @see https://eslint.org/docs/latest/use/configure
+ * @see https://eslint.org/docs/latest/use/configure/#using-configuration-files
+ * @see https://eslint.org/docs/latest/use/configure/#specifying-environments
+ * @see https://eslint.org/docs/latest/rules
+ * @see https://github.com/babel/eslint-plugin-babel#rules
+ * @see https://github.com/tc39/proposal-optional-chaining
+ */
 module.exports = {
   parser: "babel-eslint",
-  extends: [
-    "@arcticicestudio/eslint-config",
-    "@arcticicestudio/eslint-config/react-hooks",
-    "@arcticicestudio/eslint-config/prettier"
-  ],
+  extends: ["@arcticicestudio/eslint-config", "@arcticicestudio/eslint-config/react-hooks", "@arcticicestudio/eslint-config-base/prettier"],
   plugins: ["babel"],
   env: {
     browser: true,
     jest: true,
-    node: true
+    node: true,
   },
   settings: {
     "import/resolver": {
@@ -47,55 +39,52 @@ module.exports = {
           ["pages", resolve(__dirname, "src", "pages")],
           ["styles", resolve(__dirname, "src", "styles")],
           ["templates", resolve(__dirname, "src", "components", "templates")],
-          ["utils", resolve(__dirname, "src", "utils")]
-        ]
+          ["utils", resolve(__dirname, "src", "utils")],
+        ],
       },
       jest: {
-        jestConfigFile: resolve(__dirname, "jest.config.js")
+        jestConfigFile: resolve(__dirname, "jest.config.js"),
       },
       node: {
         /* Resolve Webpack alias imports */
-        paths: [resolve(__dirname, "src"), resolve(__dirname, "src", "components")]
-      }
-    }
+        paths: [resolve(__dirname, "src"), resolve(__dirname, "src", "components")],
+      },
+    },
   },
   rules: {
     /*
      * Enable support for experimental features:
-     *
-     * - `babel/camelcase` - doesn't complain about optional chaining (`let foo = bar?.a_b;`).
-     * - `babel/no-unused-expressions` - doesn't fail when using `do` expressions or optional chaining (`a?.b()`).
+     *   - `babel/camelcase` - doesn't complain about optional chaining (`let foo = bar?.a_b;`).
+     *   - `babel/no-unused-expressions` - doesn't fail when using `do` expressions or optional chaining (`a?.b()`).
      */
     camelcase: "off",
     "babel/camelcase": "error",
     "no-unused-expressions": "off",
-    "babel/no-unused-expressions": "error"
+    "babel/no-unused-expressions": "error",
   },
   overrides: [
     {
       files: ["*.jsx"],
       rules: {
         /*
-         * Defining multiple components per file is common when using CSS-in-JS, especially for scoped components
-         * that are only used once.
+         * Defining multiple components per file is common when using CSS-in-JS, especially for scoped components that are only used once.
          */
         "react/no-multi-comp": "off",
         /*
-         * Spreading props reduces prop cluttering and can prevent bugs due to transitive/implicit props not being
-         * passed to the target component
+         * Spreading props reduces prop cluttering and can prevent bugs due to transitive/implicit props not being passed to the target component.
          */
-        "react/jsx-props-no-spreading": "off"
-      }
+        "react/jsx-props-no-spreading": "off",
+      },
     },
     {
       /*
-       * Allow to use development dependencies in Gatsby configuration files since these are necessary and will
-       * be provided by either Gatsby itself or another without being explicitly defined as package dependency.
+       * Allow to use development dependencies in Gatsby configuration files since these are necessary and will be provided by either Gatsby itself or
+       * another without being explicitly defined as package dependency.
        */
       files: ["**/.gatsby/**/*.js"],
       rules: {
-        "import/no-extraneous-dependencies": "off"
-      }
-    }
-  ]
+        "import/no-extraneous-dependencies": "off",
+      },
+    },
+  ],
 };

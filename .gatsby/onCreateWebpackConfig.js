@@ -1,19 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
- */
-
-/**
- * @file Implementation of Gatsby Node `onCreateWebpackConfig` API.
- * Allows to let plugins extend/mutate the project's webpack configuration.
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://webpack.js.org
- * @since 0.1.0
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 const webpack = require("webpack");
@@ -23,32 +10,31 @@ const { resolve: resolvePath } = require("path");
 
 const { BASE_DIR_BUILD_REPORTS } = require("../src/config/internal/constants");
 
-const r = m => resolvePath(__dirname, m);
+const r = (m) => resolvePath(__dirname, m);
 
 /**
  * Configuration for the `webpack-bundle-analyzer` plugin.
- *
  * @type {object}
- * @see https://github.com/webpack-contrib/webpack-bundle-analyzer
  * @since 0.1.0
+ * @see https://github.com/webpack-contrib/webpack-bundle-analyzer
  */
 const bundleAnalyzerPluginConfig = {
   analyzerMode: "static",
   generateStatsFile: true,
   openAnalyzer: false,
   reportFilename: r(`../${BASE_DIR_BUILD_REPORTS}/webpack-bundle-analyzer/index.html`),
-  statsFilename: r(`../${BASE_DIR_BUILD_REPORTS}/webpack-bundle-analyzer/stats.json`)
+  statsFilename: r(`../${BASE_DIR_BUILD_REPORTS}/webpack-bundle-analyzer/stats.json`),
 };
 
 /**
  * Configuration for the `git-revision-webpack-plugin` plugin.
  *
  * @type {object}
- * @see https://github.com/pirelenito/git-revision-webpack-plugin
  * @since 0.1.0
+ * @see https://github.com/pirelenito/git-revision-webpack-plugin
  */
 const gitRevisionPluginConfig = {
-  branch: true
+  branch: true,
 };
 
 const gitRevisionPlugin = new GitRevisionPlugin(gitRevisionPluginConfig);
@@ -57,24 +43,23 @@ const gitRevisionPlugin = new GitRevisionPlugin(gitRevisionPluginConfig);
  * Configuration for `webpack.DefinePlugin`.
  *
  * @type {object}
- * @see https://webpack.js.org/plugins/define-plugin
  * @since 0.1.0
+ * @see https://webpack.js.org/plugins/define-plugin
  */
 const definePluginConfig = {
   "process.env.NORD_DOCS_GIT_VERSION": JSON.stringify(gitRevisionPlugin.version()),
   "process.env.NORD_DOCS_GIT_COMMITHASH": JSON.stringify(gitRevisionPlugin.commithash()),
-  "process.env.NORD_DOCS_GIT_BRANCH": JSON.stringify(gitRevisionPlugin.branch())
+  "process.env.NORD_DOCS_GIT_BRANCH": JSON.stringify(gitRevisionPlugin.branch()),
 };
 
 /**
  * Implementation of the Gatsby Node `onCreateWebpackConfig` API.
- *
  * @method onCreateWebpackConfig
- * @param  {object} actions Collection of functions provided by Gatsby used to manipulate the state of the build
- * @param  {string} stage The name of the current Gatsby build process stage.
- * @see https://gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
- * @see https://gatsbyjs.org/docs/actions/#setWebpackConfig
+ * @param {object} actions Collection of functions provided by Gatsby used to manipulate the state of the build
+ * @param {string} stage The name of the current Gatsby build process stage.
  * @since 0.1.0
+ * @see https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#onCreateWebpackConfig
+ * @see https://webpack.js.org/plugins/define-plugin/
  */
 const onCreateWebpackConfig = ({ actions, stage }) => {
   actions.setWebpackConfig({
@@ -93,28 +78,30 @@ const onCreateWebpackConfig = ({ actions, stage }) => {
         stores: r("../src/stores/"),
         styles: r("../src/styles/"),
         templates: r("../src/components/templates/"),
-        utils: r("../src/utils/")
-      }
-    }
+        utils: r("../src/utils/"),
+      },
+    },
   });
 
   switch (stage) {
     case "build-html":
     case "build-javascript":
       actions.setWebpackConfig({
-        plugins: [
-          new BundleAnalyzerPlugin(bundleAnalyzerPluginConfig),
-          new GitRevisionPlugin(),
-          new webpack.DefinePlugin(definePluginConfig)
-        ]
+        plugins: [new BundleAnalyzerPlugin(bundleAnalyzerPluginConfig), new GitRevisionPlugin(), new webpack.DefinePlugin(definePluginConfig)],
       });
       break;
     case "develop":
       actions.setWebpackConfig({
-        plugins: [new webpack.DefinePlugin(definePluginConfig)]
+        plugins: [new webpack.DefinePlugin(definePluginConfig)],
       });
       break;
   }
 };
 
+/**
+ * Implementation of Gatsby Node `onCreateWebpackConfig` API.
+ * Allows to let plugins extend/mutate the project's webpack configuration.
+ * @see https://webpack.js.org
+ * @since 0.1.0
+ */
 module.exports = onCreateWebpackConfig;

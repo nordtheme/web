@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { Code, Kbd } from "atoms/core/html-elements";
@@ -8,7 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Installation & Activation",
-  subline: "Get up and running with one command through the builtin package manager or manual setup"
+  subline: "Get up and running with one command through the builtin package manager or manual setup",
 };
 
 <ShrinkedWidth value={25}>
@@ -56,9 +61,7 @@ To install or update Nord Emacs
   fluid={props.images["package-manager.png"]}
   rounded
 >
-  <span>
-    Emacs package listing and installation command to setup and update Nord through the builtin package manager.
-  </span>
+  <span>Emacs package listing and installation command to setup and update Nord through the builtin package manager.</span>
 </Image>
 
 See Emacs [official package install documentations][emacs-man-pack_inst] for more details how to use the builtin package management.
@@ -68,11 +71,7 @@ See Emacs [official package install documentations][emacs-man-pack_inst] for mor
 To install Nord Emacs manually, [download the latest version][repo-down-master] or [clone the repository][repo].
 Afterwards copy the [`nord-theme.el`][repo-tree-master-nord-theme.el] file into the [`.emacs.d/themes` folder][emacs-man-custom_themes] located in your [home directory][wiki-home_dir].
 
-<Image
-  alt="Screenshot showing the GitHub repository web UI to download the project repository"
-  fillSize={60}
-  fluid={props.images["github-clone.png"]}
-/>
+<Image alt="Screenshot showing the GitHub repository web UI to download the project repository" fillSize={60} fluid={props.images["github-clone.png"]} />
 
 ## Activation
 
@@ -100,7 +99,7 @@ To switch to the theme on-the-fly
 [emacs-man-init_file]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html
 [emacs-man-pack_inst]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Package-Installation.html#Package-Installation
 [gh-gist-terminal-colors]: https://gist.github.com/XVilka/8346728
-[repo-down-master]: https://github.com/arcticicestudio/nord-emacs/archive/master.zip
-[repo-tree-master-nord-theme.el]: https://github.com/arcticicestudio/nord-emacs/blob/master/nord-theme.el
-[repo]: https://github.com/arcticicestudio/nord-emacs
+[repo-down-master]: https://github.com/nordtheme/emacs/archive/master.zip
+[repo-tree-master-nord-theme.el]: https://github.com/nordtheme/emacs/blob/master/nord-theme.el
+[repo]: https://github.com/nordtheme/emacs
 [wiki-home_dir]: https://en.wikipedia.org/wiki/Home_directory

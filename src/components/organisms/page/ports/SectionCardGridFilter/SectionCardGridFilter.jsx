@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React, { useState } from "react";
@@ -26,9 +22,6 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS, 1);
 
 /**
  * The section component that renders a filterable grid of port project cards.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.9.0
  */
 export default function SectionCardGridFilter(props) {
@@ -37,7 +30,7 @@ export default function SectionCardGridFilter(props) {
   const [ports, setPorts] = useState(portsMetadata);
 
   function filter(term) {
-    return portsMetadata.filter(port => port.searchTerms.some(portTerm => portTerm.includes(term.toLowerCase())));
+    return portsMetadata.filter((port) => port.searchTerms.some((portTerm) => portTerm.includes(term.toLowerCase())));
   }
 
   function handleSearchTokenChange({ target: { value: term } }) {
@@ -51,46 +44,27 @@ export default function SectionCardGridFilter(props) {
         <FeatureDuo verticalOnly>
           <Text verticalOnly>
             <Headline large>All ports at a glance</Headline>
-            <Subline>
-              Find the port project for your beloved applications and libraries from Nord&lsquo;s large selection of
-              supported tech stacks.
-            </Subline>
+            <Subline>Find the port project for your beloved applications and libraries from Nord&lsquo;s large selection of supported tech stacks.</Subline>
           </Text>
           <Visualization>
             <SearchInputBox>
               <SearchIcon svgComponent={Search} />
-              <SearchInput
-                onChange={handleSearchTokenChange}
-                placeholder="Search…"
-                type="text"
-                value={searchTerm}
-                {...props}
-              />
+              <SearchInput onChange={handleSearchTokenChange} placeholder="Search…" type="text" value={searchTerm} {...props} />
             </SearchInputBox>
             <Grid>
               <PoseGroup>
-                {ports.map(
-                  ({
-                    gitHubRepositoryUrl,
-                    logoComponent: SvgLogo,
-                    name,
-                    projectName,
-                    releaseLatest,
-                    stargazers,
-                    url
-                  }) => (
-                    <Card
-                      key={name}
-                      gitHubRepositoryUrl={gitHubRepositoryUrl}
-                      name={name}
-                      projectName={projectName}
-                      releaseLatest={releaseLatest}
-                      stargazers={stargazers}
-                      svgComponent={SvgLogo}
-                      url={url}
-                    />
-                  )
-                )}
+                {ports.map(({ gitHubRepositoryUrl, logoComponent: SvgLogo, name, projectName, releaseLatest, stargazers, url }) => (
+                  <Card
+                    key={name}
+                    gitHubRepositoryUrl={gitHubRepositoryUrl}
+                    name={name}
+                    projectName={projectName}
+                    releaseLatest={releaseLatest}
+                    stargazers={stargazers}
+                    svgComponent={SvgLogo}
+                    url={url}
+                  />
+                ))}
               </PoseGroup>
             </Grid>
           </Visualization>

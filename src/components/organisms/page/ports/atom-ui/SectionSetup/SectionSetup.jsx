@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -26,14 +22,11 @@ const SECTION_ID = sectionIdFor(ROUTE_PORTS_ATOM_UI, 5);
 
 /**
  * The component that represents the setup section for the landing page of the "Nord Atom UI" port project.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
  * @since 0.19.0
  */
 const SectionSetup = ({ assets }) => {
   const portMetadata = usePortsMetadata();
-  const { gitHubRepositoryUrl, packageThemeRegistryUrl } = portMetadata.find(port => port.name === "nord-atom-ui");
+  const { gitHubRepositoryUrl, packageThemeRegistryUrl } = portMetadata.find((port) => port.name === "atom-ui");
 
   return (
     <Section id={SECTION_ID} variant="secondary">
@@ -42,8 +35,8 @@ const SectionSetup = ({ assets }) => {
           <Text verticalOnly>
             <Headline>Installation and updates with one click.</Headline>
             <Subline>
-              Install Nord from the <Link href={packageThemeRegistryUrl}>official theme package registry</Link> with one
-              click including automatic updates to always use the latest Nord version.
+              Install Nord from the <Link href={packageThemeRegistryUrl}>official theme package registry</Link> with one click including automatic updates to
+              always use the latest Nord version.
             </Subline>
             <Actions>
               <Button to={packageThemeRegistryUrl} variant="primary">
@@ -58,12 +51,7 @@ const SectionSetup = ({ assets }) => {
             </Actions>
           </Text>
           <Visualization>
-            <Image
-              alt="Screenshot showing the builtin theme package registry view"
-              dropShadow
-              fluid={assets.images["settings-package-registry.png"]}
-              rounded
-            >
+            <Image alt="Screenshot showing the builtin theme package registry view" dropShadow fluid={assets.images["settings-package-registry.png"]} rounded>
               <span>
                 The builtin <Link href="https://atom.io/themes">theme package registry</Link> view.
               </span>

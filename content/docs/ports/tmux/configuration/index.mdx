@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Link from "atoms/core/Link";
 import { Banner, Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
 import { Code } from "atoms/core/html-elements";
@@ -8,7 +13,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Configuration",
-  subline: "From UI elements to font rendering — configure the theme to match your personal preferences"
+  subline: "From UI elements to font rendering — configure the theme to match your personal preferences",
 };
 
 <ShrinkedWidth value={25}>
@@ -37,8 +42,8 @@ All theme configuration variables must be added to either tmux's user-level, by 
     </>
   }
 >
-  This ensures the configurations are applied correctly when the scheme file gets loaded, otherwise the theme might be
-  loaded without taking these configurations into account.
+  This ensures the configurations are applied correctly when the scheme file gets loaded, otherwise the theme might be loaded without taking these
+  configurations into account.
 </Banner>
 
 ## UI Elements
@@ -47,12 +52,7 @@ All theme configuration variables must be added to either tmux's user-level, by 
 
 By default, this theme provides status bar content including patched „powerline“ styled characters like separator arrows.
 
-<Image
-  alt="Screenshot showing the status bar with default content."
-  dropShadow
-  fluid={props.images["ui-default-status-bar-content.png"]}
-  rounded
->
+<Image alt="Screenshot showing the status bar with default content." dropShadow fluid={props.images["ui-default-status-bar-content.png"]} rounded>
   <span>Default status bar content.</span>
 </Image>
 
@@ -64,31 +64,17 @@ set -g @nord_tmux_show_status_content "0"
 
 ## Font Rendering
 
-<Banner
-  title={
-    <>
-      Disable specific font rendering theme configurations when facing rendering problems with incompatible terminals or
-      fonts!
-    </>
-  }
-  variant="warn"
->
-  Special font rendering styles like the usage of special characters (patched „powerline“ arrows) require support from
-  the side of the used terminal and font family in order to work properly. Please check if your used terminal and font
-  supports any of the theme styles in this section, otherwise there might be unexpected rendering issues or the
-  configuration won't have any effect at all.
+<Banner title={<>Disable specific font rendering theme configurations when facing rendering problems with incompatible terminals or fonts!</>} variant="warn">
+  Special font rendering styles like the usage of special characters (patched „powerline“ arrows) require support from the side of the used terminal and font
+  family in order to work properly. Please check if your used terminal and font supports any of the theme styles in this section, otherwise there might be
+  unexpected rendering issues or the configuration won't have any effect at all.
 </Banner>
 
 ### Patched Font Characters
 
 The provided default status bar content makes use of patched „powerline“ styled characters like the separator arrows for a more modern UI and fluidly merged appearance with other applications like the status bars of Vim or Emacs.
 
-<Image
-  alt="Screenshot showing the tmux status bar with patched font elements"
-  dropShadow
-  fluid={props.images["font-rendering-patched-font.png"]}
-  rounded
->
+<Image alt="Screenshot showing the tmux status bar with patched font elements" dropShadow fluid={props.images["font-rendering-patched-font.png"]} rounded>
   <span>The status bar with patched font elements.</span>
 </Image>
 

@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -16,12 +12,9 @@ import { illustrationPropTypes } from "./shared/propTypes";
 /**
  * A component that represents an 404 HTTP error state through a vector illustration with a headline and subline.
  * The illustration can be styled with styled-component's `css` API passed to the `illustrationStyles` prop.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://en.wikipedia.org/wiki/HTTP_404
- * @see https://www.gatsbyjs.org/docs/add-404-page
  * @since 0.3.0
+ * @see https://en.wikipedia.org/wiki/HTTP_404
+ * @see https://www.gatsbyjs.com/docs/how-to/adding-common-features/add-404-page/
  */
 const ErrorState404 = ({ headline, illustrationStyles, subline, ...passProps }) => (
   <Wrapper {...passProps}>
@@ -36,7 +29,7 @@ const ErrorState404 = ({ headline, illustrationStyles, subline, ...passProps }) 
 ErrorState404.propTypes = {
   ...illustrationPropTypes,
   headline: PropTypes.string.isRequired,
-  subline: PropTypes.string.isRequired
+  subline: PropTypes.string.isRequired,
 };
 
 export default ErrorState404;

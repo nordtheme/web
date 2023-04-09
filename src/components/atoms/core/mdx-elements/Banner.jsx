@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import React from "react";
@@ -19,30 +15,30 @@ import { transitionThemedModeSwitch } from "styles/shared";
 
 const backgroundColorInfo = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: rgba(colors.nord4, 0.2),
-  [MODE_DARK_NIGHT_FROST]: rgba(colors.nord3, 0.35)
+  [MODE_DARK_NIGHT_FROST]: rgba(colors.nord3, 0.35),
 });
 
 const backgroundColorWarning = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: rgba(colors.nord13, 0.2),
-  [MODE_DARK_NIGHT_FROST]: rgba(colors.nord13, 0.35)
+  [MODE_DARK_NIGHT_FROST]: rgba(colors.nord13, 0.35),
 });
 
 const dropShadowColor = themedMode({
   [MODE_BRIGHT_SNOW_FLURRY]: rgba(colors.shadow.base[MODE_BRIGHT_SNOW_FLURRY], 0.35),
-  [MODE_DARK_NIGHT_FROST]: rgba(colors.shadow.base[MODE_DARK_NIGHT_FROST], 0.35)
+  [MODE_DARK_NIGHT_FROST]: rgba(colors.shadow.base[MODE_DARK_NIGHT_FROST], 0.35),
 });
 
 const variants = {
   info: {
     background: backgroundColorInfo,
     icon: Bulb,
-    stripe: colors.nord9
+    stripe: colors.nord9,
   },
   warn: {
     background: backgroundColorWarning,
     icon: AlertCircle,
-    stripe: colors.nord13
-  }
+    stripe: colors.nord13,
+  },
 };
 
 const Container = styled.div`
@@ -77,12 +73,8 @@ const Title = styled(P)`
 /**
  * An banner box that allows to highlight more important or context specific content.
  * The `variant` prop can be specified to use specific style:
- *
- * - `info` (default)
- * - `warn`
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
+ *   - `info` (default)
+ *   - `warn`
  * @since 0.12.0
  */
 const Banner = ({ children, title, variant }) => {
@@ -107,11 +99,11 @@ const Banner = ({ children, title, variant }) => {
 Banner.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  variant: PropTypes.oneOf(["info", "warn"])
+  variant: PropTypes.oneOf(["info", "warn"]),
 };
 
 Banner.defaultProps = {
-  variant: "info"
+  variant: "info",
 };
 
 export default Banner;

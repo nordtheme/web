@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+This source code is licensed under the MIT license found in the license file.
+-->
+
 import Button from "atoms/core/Button";
 import Link from "atoms/core/Link";
 import { Image, ShrinkedWidth, SpaceBox } from "atoms/core/mdx-elements";
@@ -9,7 +14,7 @@ import WIPNotice from "../../../../shared/docs/wip-notice";
 
 export const frontmatter = {
   title: "Plugin Development",
-  subline: "Learn how to customize the theme to fit your needs, preview changes and export the plugin."
+  subline: "Learn how to customize the theme to fit your needs, preview changes and export the plugin.",
 };
 
 <ShrinkedWidth value={25}>
@@ -43,18 +48,14 @@ To develop IntelliJ platform plugins the [DevKit][jb-docs-sdk-devkit] plugin (bu
 Clone the [_Nord JetBrains_ repository from GitHub][gh-repo] to any path:
 
 ```sh
-git clone https://github.com/arcticicestudio/nord-jetbrains.git
+git clone https://github.com/nordtheme/jetbrains.git
 ```
 
 To get the project without [Git][] download the project as `.zip` archive file from the GitHub repository or click on the download button below. Afterwards extract the archive to any path.
 
-<Button href="https://github.com/arcticicestudio/nord-jetbrains/archive/develop.zip">Download</Button>
+<Button href="https://github.com/nordtheme/jetbrains/archive/develop.zip">Download</Button>
 
-<Image
-  alt="Screenshot showing the GitHub repository web UI to download the project repository"
-  fillSize={60}
-  fluid={props.images["github-clone.png"]}
->
+<Image alt="Screenshot showing the GitHub repository web UI to download the project repository" fillSize={60} fluid={props.images["github-clone.png"]}>
   Download the project repository from GitHub
 </Image>
 
@@ -112,13 +113,7 @@ idea.is.internal=true
 
 Restart IntelliJ to enable the new property.
 
-<Image
-  dropShadow
-  fillSize={50}
-  alt="Screenshot showing the menu entry to edit the IDE properties"
-  fluid={props.images["ide-props.png"]}
-  rounded
->
+<Image dropShadow fillSize={50} alt="Screenshot showing the menu entry to edit the IDE properties" fluid={props.images["ide-props.png"]} rounded>
   Menu entry to edit the IDE properties
 </Image>
 
@@ -144,12 +139,7 @@ IntelliJ comes with builtin tools to build and deploy plugins.
 A generated JAR file can be locally installed to use the theme without uploading it to the JetBrains plugin repository.
 Go to [Settings / Preferences][jb-docs-sett_prefs] ➜ **Plugins**, click on the gear icon and select „Install Plugin From Disk...“.
 
-<Image
-  dropShadow
-  alt="Screenshot showing the menu to install plugins locally"
-  fluid={props.images["install-local.png"]}
-  rounded
->
+<Image dropShadow alt="Screenshot showing the menu to install plugins locally" fluid={props.images["install-local.png"]} rounded>
   Local plugin installation
 </Image>
 
@@ -159,8 +149,8 @@ Follow the <Link to={ROUTE_DOCS_PORTS_JETBRAINS_INSTALLATION}>Installation & Act
 
 </ShrinkedWidth>
 
-[gh-repo-tree-dev-ui-theme]: https://github.com/arcticicestudio/nord-jetbrains/blob/develop/src/nord.theme.json
-[gh-repo]: https://github.com/arcticicestudio/nord-jetbrains
+[gh-repo-tree-dev-ui-theme]: https://github.com/nordtheme/jetbrains/blob/develop/src/nord.theme.json
+[gh-repo]: https://github.com/nordtheme/jetbrains
 [git]: https://git-scm.com
 [jb-docs-ide_props]: https://www.jetbrains.com/help/idea/tuning-the-ide.html
 [jb-docs-sdk-deployment]: https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/deploying_plugin.html

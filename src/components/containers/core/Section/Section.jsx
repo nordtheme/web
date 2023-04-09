@@ -1,10 +1,6 @@
 /*
- * Copyright (C) 2018-present Arctic Ice Studio <development@arcticicestudio.com>
- * Copyright (C) 2018-present Sven Greb <development@svengreb.de>
- *
- * Project:    Nord Docs
- * Repository: https://github.com/arcticicestudio/nord-docs
- * License:    MIT
+ * Copyright (c) 2016-present Sven Greb <development@svengreb.de>
+ * This source code is licensed under the MIT license found in the license file.
  */
 
 import PropTypes from "prop-types";
@@ -12,28 +8,20 @@ import styled from "styled-components";
 
 import { motion } from "styles/theme";
 
-import {
-  baseBackgroundColor,
-  primaryBackgroundColor,
-  secondaryBackgroundColor,
-  tertiaryBackgroundColor
-} from "../shared/styles";
+import { baseBackgroundColor, primaryBackgroundColor, secondaryBackgroundColor, tertiaryBackgroundColor } from "../shared/styles";
 
 const variants = {
   base: baseBackgroundColor,
   primary: primaryBackgroundColor,
   secondary: secondaryBackgroundColor,
-  tertiary: tertiaryBackgroundColor
+  tertiary: tertiaryBackgroundColor,
 };
 
 /**
  * A base HTML component that represents a `<section>` with multiple base style variants.
- *
- * @author Arctic Ice Studio <development@arcticicestudio.com>
- * @author Sven Greb <development@svengreb.de>
- * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
- * @see https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
  * @since 0.3.0
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
  */
 const Section = styled.section`
   background-color: ${({ variant }) => variants[variant]};
@@ -42,11 +30,11 @@ const Section = styled.section`
 `;
 
 Section.propTypes = {
-  variant: PropTypes.oneOf(Object.keys(variants))
+  variant: PropTypes.oneOf(Object.keys(variants)),
 };
 
 Section.defaultProps = {
-  variant: "base"
+  variant: "base",
 };
 
 export default Section;
