@@ -9,7 +9,7 @@
  */
 module.exports = {
   "*.{json,mdx,svg,yaml,yml}": "prettier --check --ignore-unknown --no-editorconfig",
-  "*.{js,jsx}": ["eslint --ext .js,.jsx", "prettier --check --ignore-unknown --no-editorconfig"],
+  "*.{js,jsx,mjs}": ["eslint --ext .js,.jsx", "prettier --check --ignore-unknown --no-editorconfig"],
   "*.md": ["remark --no-stdout", "prettier --check --ignore-unknown --no-editorconfig"],
   ".husky/pre-*": "prettier --check --ignore-unknown --no-editorconfig",
 };

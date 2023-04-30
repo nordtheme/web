@@ -16,7 +16,16 @@ const { resolve } = require("path");
  */
 module.exports = {
   parser: "babel-eslint",
-  extends: ["@arcticicestudio/eslint-config", "@arcticicestudio/eslint-config/react-hooks", "@arcticicestudio/eslint-config-base/prettier"],
+  extends: [
+    "@svengreb/eslint-config",
+    "@svengreb/eslint-config/react-hooks",
+    /*
+     * Enable support for projects using Prettier.
+     * Note that this must always be placed after the `@svengreb/eslint-config-base` preset to take precedence, otherwise it won't prevent errors
+     * due to useless and possibly conflicting rules!
+     */
+    "@svengreb/eslint-config-base/prettier",
+  ],
   plugins: ["babel"],
   env: {
     browser: true,

@@ -2084,9 +2084,9 @@ It includes sections about
 - enhancement suggestions
 - pull requests
 - style guides
-  - [JavaScript Style Guide][gh-styleguide-js]
-  - [Markdown Style Guide][gh-styleguide-md]
-  - [Git Style Guide][gh-styleguide-git]
+  - [JavaScript Style Guide][styleguide-javascript]
+  - [Markdown Style Guide][styleguide-markdown]
+  - [Git Style Guide][styleguide-git]
 - credits
 
 Read the [GitHub introduction blog post][gh-blog-intro-contrib-gl] and the [GitHub Help article][gh-help-contrib-gl] for more details about the provided integrations.
@@ -2467,7 +2467,7 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-94]: https://github.com/nordtheme/web/issues/94
 [gh-96]: https://github.com/nordtheme/web/issues/96
 [gh-98]: https://github.com/nordtheme/web/issues/98
-[gh-arcland]: https://github.com/arcticicestudio/arctic-landscape
+[gh-arcland]: https://github.com/svengreb/arctic-landscape
 [gh-arcocfrac]: https://www.npmjs.com/package/arctic-ocean-fractal
 [gh-axios]: https://github.com/axios/axios
 [gh-babel-plugin-lodash]: https://github.com/lodash/babel-plugin-lodash
@@ -2502,9 +2502,6 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [gh-rtl]: https://github.com/kentcdodds/react-testing-library
 [gh-rw]: https://github.com/brigade/react-waypoint
 [gh-sp]: https://github.com/GoogleChromeLabs/size-plugin
-[gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
-[gh-styleguide-js]: https://github.com/arcticicestudio/styleguide-javascript
-[gh-styleguide-md]: https://github.com/arcticicestudio/styleguide-markdown
 [gh-sue]: https://github.com/yahoo/subscribe-ui-event
 [git-crypt]: https://github.com/AGWA/git-crypt
 [git-docs-gitattributes]: https://git-scm.com/docs/gitattributes
@@ -2595,8 +2592,9 @@ Note that packages marked with an double exclamation mark `‼` have been affect
 [stc-docs-tooling-jest]: https://www.styled-components.com/docs/tooling#jest-integration
 [stof-nord-tagged]: https://stackoverflow.com/questions/tagged/nord+or+nordtheme
 [styled-components]: https://styled-components.com
-[styleguide-javascript]: https://arcticicestudio.github.io/styleguide-javascript
-[styleguide-markdown]: https://arcticicestudio.github.io/styleguide-markdown
+[styleguide-javascript]: https://github.com/svengreb/styleguide-javascript
+[styleguide-markdown]: https://github.com/svengreb/styleguide-markdown
+[styleguide-git]: https://github.com/svengreb/styleguide-git
 [svgr]: https://www.smooth-code.com/open-source/svgr
 [tw-docs-cards]: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html
 [typescript]: https://www.typescriptlang.org
