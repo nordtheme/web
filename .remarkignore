@@ -9,3 +9,4 @@ build/
 node_modules/
 public/
 static/
+license
